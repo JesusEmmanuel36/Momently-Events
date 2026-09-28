@@ -1,0 +1,13 @@
+.catalog { min-height: 100svh; padding: clamp(2rem, 6vw, 6rem); background: #f8f3ee; color: #452f35; }
+.header { max-width: 780px; margin-bottom: clamp(3rem, 7vw, 6rem); }
+.header span, .copy small { text-transform: uppercase; letter-spacing: .24em; font-size: .65rem; font-weight: 700; color: #a16f7a; }
+.header h1 { margin: 1rem 0; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .95; }
+.header p { max-width: 570px; font-size: 1rem; color: #7a6468; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1.5rem; max-width: 1200px; }
+.card { position: relative; min-height: 620px; overflow: hidden; border-radius: 2px; box-shadow: 0 30px 80px rgba(69,47,53,.16); }
+.card img { object-fit: cover; transition: transform 1.2s ease; }
+.card:hover img { transform: scale(1.04); }
+.overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(34,18,23,.86), rgba(34,18,23,.02) 70%); }
+.copy { position: absolute; inset: auto 0 0; padding: clamp(2rem, 5vw, 4rem); color: #fffaf5; }
+.copy small { color: #e9c6bd; }.copy h2 { margin: .55rem 0 0; font-size: clamp(3.5rem, 8vw, 6rem); }.copy p { color: rgba(255,250,245,.72); margin-bottom: 1.5rem; }.copy strong { font-size: .7rem; text-transform: uppercase; letter-spacing: .16em; }.copy strong span { margin-left: .5rem; }
+@media (max-width: 600px) { .catalog { padding: 1.25rem; }.header { padding-top: 3rem; }.card { min-height: 520px; } }

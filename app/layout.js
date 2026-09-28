@@ -6,6 +6,7 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 const allura = Allura({ subsets: ["latin"], variable: "--font-script", weight: "400" });
 
 export const metadata = {
+  metadataBase: new URL(process.env.APP_URL || "http://localhost:3000"),
   title: { default: "Momently Events", template: "%s | Momently Events" },
   description: "Crea y administra invitaciones digitales para momentos inolvidables.",
 };
