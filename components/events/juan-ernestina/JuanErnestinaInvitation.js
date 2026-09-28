@@ -65,7 +65,8 @@ export function JuanErnestinaInvitation({ wedding }) {
       <div className={styles.envelopeScene}>
         <div className={styles.envelopeStage}>
           <div className={styles.letter}><Image src="/images/events/juan-ernestina/floral.png" fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2>Juan <i>y</i> Ernestina</h2><small>30 · 12 · 2026</small></div>
-          <Image className={styles.envelopeOpen} src="/images/events/juan-ernestina/envelope-open.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre floral abierto" />
+          <Image className={styles.envelopeOpenBack} src="/images/events/juan-ernestina/envelope-open.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre floral abierto" />
+          <Image className={styles.envelopeOpenFront} src="/images/events/juan-ernestina/envelope-open.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="" aria-hidden="true" />
           <Image className={styles.envelopeClosed} src="/images/events/juan-ernestina/envelope-closed.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre floral cerrado con sello J y E" />
           <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación" />
         </div>
