@@ -1,0 +1,6 @@
+import { redirect } from "next/navigation";
+import { DashboardShell } from "@/components/dashboard/DashboardShell";
+import { GuestManager } from "@/components/panel/GuestManager";
+import { requireEventOwner } from "@/lib/auth/session";
+export const runtime = "nodejs"; export const dynamic = "force-dynamic";
+export default async function Guests({ params }) { const { eventId } = await params; let context; try { context = await requireEventOwner(eventId); } catch { redirect("/panel/login"); } const snapshot = await context.ref.collection("guests").orderBy("createdAt", "desc").limit(500).get(); const guests = snapshot.docs.map((doc) => ({ id: doc.id, displayName: doc.data().displayName, phone: doc.data().phone, groupName: doc.data().groupName, allowedSeats: doc.data().allowedSeats, notes: doc.data().notes })); return <DashboardShell area="panel" user={context.session}><header className="dashboard-header"><div><span className="dashboard-eyebrow">Organización</span><h1>Invitados</h1><p>Prepara tu lista para futuros pases, mesas y códigos QR.</p></div><a className="button button--outline" href={`/panel/evento/${eventId}`}>Volver</a></header><GuestManager eventId={eventId} initialGuests={guests} /></DashboardShell>; }

@@ -1,0 +1,38 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function ownsEvent(eventId) {
+      return signedIn()
+        && request.auth.uid in get(/databases/$(database)/documents/events/$(eventId)).data.ownerUids;
+    }
+
+    match /events/{eventId} {
+      allow get: if ownsEvent(eventId);
+      allow list: if signedIn() && request.auth.uid in resource.data.ownerUids;
+      allow create, update, delete: if false;
+
+      match /rsvps/{rsvpId} {
+        allow get, list: if ownsEvent(eventId);
+        allow create, update, delete: if false;
+      }
+
+      match /guests/{guestId} {
+        allow get, list: if ownsEvent(eventId);
+        allow create, update, delete: if false;
+      }
+    }
+
+    match /users/{uid} {
+      allow get: if signedIn() && request.auth.uid == uid;
+      allow list, create, update, delete: if false;
+    }
+
+    match /slugs/{slug} { allow read, write: if false; }
+    match /ownerInvites/{inviteId} { allow read, write: if false; }
+    match /auditLogs/{logId} { allow read, write: if false; }
+    match /rateLimits/{rateLimitId} { allow read, write: if false; }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

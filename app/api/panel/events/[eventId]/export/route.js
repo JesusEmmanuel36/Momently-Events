@@ -1,0 +1,5 @@
+import { requireEventOwner } from "@/lib/auth/session";
+import { apiError } from "@/lib/errors";
+export const runtime = "nodejs";
+const csv = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
+export async function GET(_request, { params }) { try { const { eventId } = await params; const { ref } = await requireEventOwner(eventId); const docs = await ref.collection("rsvps").orderBy("createdAt", "desc").get(); const rows = [["Nombre", "Asistencia", "Acompañantes", "Total", "Menú", "Alergias", "Mensaje", "Canción", "Artista", "Fecha"], ...docs.docs.map((doc) => { const d = doc.data(); return [d.name, d.attending === "yes" ? "Sí" : "No", d.companions, d.totalPeople, d.menuPreference, d.allergies, d.message, d.songSuggestion?.title, d.songSuggestion?.artist, d.createdAt?.toDate?.().toISOString() || ""]; })]; const body = `\uFEFF${rows.map((row) => row.map(csv).join(",")).join("\r\n")}`; return new Response(body, { headers: { "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": `attachment; filename="confirmaciones-${eventId}.csv"` } }); } catch (error) { return apiError(error); } }

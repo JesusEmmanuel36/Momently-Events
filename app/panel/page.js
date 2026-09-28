@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { DashboardShell } from "@/components/dashboard/DashboardShell";
+import { requireSession } from "@/lib/auth/session";
+import { getAdminDb, isFirebaseAdminConfigured } from "@/lib/firebase/admin";
+import { eventStatusLabel } from "@/lib/wedding/status";
+export const runtime = "nodejs"; export const dynamic = "force-dynamic";
+export default async function PanelHome() { if (!isFirebaseAdminConfigured()) return <main className="setup-required"><h1>Configura Firebase</h1><p>Consulta `FIREBASE_SETUP.md` para conectar tu proyecto.</p></main>; let user; try { user = await requireSession(); } catch { redirect("/panel/login"); } const snapshot = await getAdminDb().collection("events").where("ownerUids", "array-contains", user.uid).get(); const events = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })); if (events.length === 1) redirect(`/panel/evento/${events[0].id}`); return <DashboardShell area="panel" user={user}><header className="dashboard-header"><div><span className="dashboard-eyebrow">Mi panel</span><h1>Mis eventos</h1><p>Elige el evento que quieres consultar.</p></div></header><div className="event-picker">{events.map((event) => <Link className="event-card" href={`/panel/evento/${event.id}`} key={event.id}><span className={`status status--${event.status}`}>{eventStatusLabel(event.status)}</span><h2>{event.publicData?.couple?.partner1} & {event.publicData?.couple?.partner2}</h2><p>{event.publicData?.weddingDate?.iso?.slice(0, 10)}</p></Link>)}{!events.length && <div className="empty-state"><h3>Aún no tienes un evento asignado</h3><p>Pide a tu asesor de Momently Events un nuevo enlace de acceso.</p></div>}</div></DashboardShell>; }

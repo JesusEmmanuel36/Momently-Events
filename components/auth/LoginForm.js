@@ -1,0 +1,11 @@
+"use client";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { firebaseAuth, isFirebaseClientConfigured } from "@/lib/firebase/client";
+
+export function LoginForm({ destination, title, description }) {
+  const router = useRouter(); const [error, setError] = useState(""); const [loading, setLoading] = useState(false);
+  const submit = async (event) => { event.preventDefault(); if (!firebaseAuth) return setError("Firebase aún no está configurado. Revisa FIREBASE_SETUP.md."); setLoading(true); setError(""); try { const form = new FormData(event.currentTarget); const credential = await signInWithEmailAndPassword(firebaseAuth, String(form.get("email")), String(form.get("password"))); const idToken = await credential.user.getIdToken(true); const response = await fetch("/api/auth/session", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ idToken }) }); const result = await response.json(); if (!response.ok) throw new Error(result.error); router.replace(destination); router.refresh(); } catch { setError("No pudimos iniciar sesión. Revisa tus datos e intenta nuevamente."); } finally { setLoading(false); } };
+  return <main className="auth-page"><div className="auth-brand"><span className="auth-brand__mark">M</span><strong>Momently Events</strong><p>Historias que merecen celebrarse.</p></div><section className="auth-card"><span className="dashboard-eyebrow">Acceso privado</span><h1>{title}</h1><p>{description}</p>{!isFirebaseClientConfigured && <div className="config-warning">Configura las variables `NEXT_PUBLIC_FIREBASE_*` para habilitar el acceso.</div>}<form onSubmit={submit}><label>Correo electrónico<input name="email" type="email" autoComplete="email" required /></label><label>Contraseña<input name="password" type="password" autoComplete="current-password" required minLength="6" /></label>{error && <p className="form__error" role="alert">{error}</p>}<button className="button" disabled={loading}>{loading ? "Iniciando…" : "Iniciar sesión"}</button></form><small>Tu sesión se protege mediante una cookie segura y HTTP-only.</small></section></main>;
+}

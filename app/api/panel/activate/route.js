@@ -1,0 +1,8 @@
+import { FieldValue } from "firebase-admin/firestore";
+import { getAdminDb } from "@/lib/firebase/admin";
+import { requireSession } from "@/lib/auth/session";
+import { apiError, AppError, ValidationError } from "@/lib/errors";
+import { safeCompareHash } from "@/lib/security/crypto";
+import { assertSameOrigin } from "@/lib/security/same-origin";
+export const runtime = "nodejs";
+export async function POST(request) { try { assertSameOrigin(request); const session = await requireSession(); const { inviteId, token } = await request.json(); if (!inviteId || !token) throw new ValidationError("Este enlace ya no es válido."); const db = getAdminDb(); const inviteRef = db.collection("ownerInvites").doc(String(inviteId)); let eventId = ""; await db.runTransaction(async (transaction) => { const inviteSnap = await transaction.get(inviteRef); const invite = inviteSnap.data(); if (!inviteSnap.exists || invite.usedAt || invite.expiresAt.toMillis() < Date.now() || !safeCompareHash(token, invite.tokenHash) || (invite.emailNormalized && invite.emailNormalized !== session.email?.toLowerCase())) throw new AppError("Este enlace ya no es válido.", 403, "invalid_invite"); eventId = invite.eventId; transaction.update(db.collection("events").doc(eventId), { ownerUids: FieldValue.arrayUnion(session.uid), updatedAt: FieldValue.serverTimestamp() }); transaction.update(inviteRef, { usedAt: FieldValue.serverTimestamp() }); }); await db.collection("auditLogs").add({ actorUid: session.uid, eventId, action: "owner.activated", createdAt: FieldValue.serverTimestamp(), metadata: { inviteId } }); return Response.json({ ok: true, eventId }); } catch (error) { return apiError(error); } }
