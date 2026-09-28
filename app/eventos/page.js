@@ -15,6 +15,11 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/juan-y-ernestina" className={styles.card}>
+        <Image src="/images/events/juan-ernestina/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Juan y Ernestina" />
+        <div className={styles.overlay} />
+        <div className={styles.copy}><small>Invitación personalizada</small><h2>Juan & Ernestina</h2><p>Coral · Olivo · Dorado</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/quince-anos" className={styles.card}>
         <Image src="/images/events/quince-anos/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación premium para quince años" />
         <div className={styles.overlay} />

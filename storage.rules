@@ -8,7 +8,7 @@ service firebase.storage {
       allow read: if true;
       allow create, update: if isAdmin() && request.resource.size < 15 * 1024 * 1024 && request.resource.contentType.matches('image/(jpeg|png|webp|avif)');
       allow delete: if isAdmin();
-    }
+    } 
     match /events/{eventId}/public/audio/{fileName} {
       allow read: if true;
       allow create, update: if isAdmin() && request.resource.size < 25 * 1024 * 1024 && request.resource.contentType.matches('audio/.*');

@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "set-admin": "node scripts/set-admin.js"
+    "set-admin": "node scripts/set-admin.js",
+    "provision-event": "node scripts/provision-event.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
