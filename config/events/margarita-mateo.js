@@ -16,23 +16,29 @@ export const margaritaMateo = {
   hero: {
     subtitle: "Nuestra boda",
     quote: "Hay momentos que se vuelven inolvidables cuando se comparten con las personas que queremos. Nos encantará celebrar este día contigo.",
-    image: "/images/events/margarita-mateo/hero.png",
+    image: "/images/events/margarita-mateo/foto-1.webp",
   },
   ceremony: {
     name: "Iglesia San Juan Bautista",
     time: "10:00 a. m.",
     address: "Iglesia San Juan Bautista, Coscomatepec, Veracruz",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Iglesia+San+Juan+Bautista+Coscomatepec+Veracruz",
-    image: "/images/events/margarita-mateo/hero.png",
+    image: "/images/events/margarita-mateo/foto-2.webp",
   },
   reception: {
     name: "Salón La Terraza",
-    time: "Después de la ceremonia · horario por confirmar",
+    time: "3:00 p. m.",
     address: "Col. Nicanor Espejo, Coscomatepec, Veracruz",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salon+La+Terraza+Nicanor+Espejo+Coscomatepec+Veracruz",
-    image: "/images/events/margarita-mateo/hero.png",
+    image: "/images/events/margarita-mateo/foto-3.jpg",
   },
-  gallery: [],
+  gallery: [
+    { src: "/images/events/margarita-mateo/foto-1.webp", alt: "Margarita y Mateo compartiendo un momento especial" },
+    { src: "/images/events/margarita-mateo/foto-2.webp", alt: "Retrato de Margarita y Mateo" },
+    { src: "/images/events/margarita-mateo/foto-3.jpg", alt: "Margarita y Mateo celebrando su historia" },
+    { src: "/images/events/margarita-mateo/foto-4.jpg", alt: "Margarita y Mateo juntos" },
+    { src: "/images/events/margarita-mateo/foto-5.jpg", alt: "Un recuerdo de Margarita y Mateo" },
+  ],
   dressCode: {
     title: "Formal · Casual",
     text: "Elige un atuendo formal-casual con el que te sientas cómodo para celebrar con nosotros.",
@@ -54,7 +60,7 @@ export const margaritaMateo = {
   },
   itinerary: [
     { time: "10:00", title: "Ceremonia", description: "Iglesia San Juan Bautista", icon: "heart" },
-    { time: "Por confirmar", title: "Recepción", description: "Salón La Terraza", icon: "glass" },
+    { time: "15:00", title: "Recepción", description: "Salón La Terraza", icon: "glass" },
   ],
   theme: { primary: "#123b8f", dark: "#0b1d43", champagne: "#b9c2cf", cream: "#e8ecf3", ivory: "#fffdfa", rose: "#688bd1", sage: "#71858b" },
 };

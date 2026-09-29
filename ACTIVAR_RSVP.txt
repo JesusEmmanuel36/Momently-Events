@@ -61,7 +61,7 @@ Enlace público:
 https://momentlyevents.vercel.app/eventos/lesly-y-marcelino
 
 
-EVENTO DE ANDREA ANAHIS
+EVENTO DE ANDREA ANAHIS - YA ESTA
 -----------------------
 
 Para publicar sus XV años y generar el acceso al panel usa:
@@ -73,12 +73,12 @@ Enlace público:
 https://momentlyevents.vercel.app/eventos/xv-andrea-anahis
 
 
-EVENTO DE ROXANA · 50 AÑOS
+EVENTO DE ROXANA · 50 AÑOS - YA ESTA
 --------------------------
 
 Para publicar el evento y generar el acceso al panel usa:
 
-   npm run provision-event -- roxana-50 correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+   npm run provision-event -- roxana-50 lizetcast@hotmail.com https://momentlyevents.vercel.app
 
 Enlace público:
 

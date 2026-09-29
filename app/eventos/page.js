@@ -16,7 +16,7 @@ export default function EventsPage() {
     </header>
     <section className={styles.grid}>
       <Link href="/eventos/margarita-y-mateo" className={styles.card}>
-        <Image src="/images/events/margarita-mateo/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Margarita y Mateo" />
+        <Image src="/images/events/margarita-mateo/foto-1.webp" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Margarita y Mateo" />
         <div className={styles.overlay} />
         <div className={styles.copy}><small>Invitación personalizada</small><h2>Margarita & Mateo</h2><p>Azul rey · Plata · Marfil</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>

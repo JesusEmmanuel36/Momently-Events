@@ -9,9 +9,8 @@ foto-3.jpg
 foto-4.jpg
 foto-5.jpg
 
-También pueden ser .webp. Cuando estén listas, actualiza sus extensiones y la
-galería en config/events/margarita-mateo.js. La foto elegida como portada puede
-reemplazar hero.png o configurarse directamente como hero.image.
+También pueden ser .webp. Las cinco fotografías actuales ya están conectadas a
+la portada, las secciones de ubicaciones y la galería de la invitación.
 
 Para la canción coloca un archivo de audio autorizado en:
 
