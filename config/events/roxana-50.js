@@ -3,7 +3,8 @@ export const roxana50 = {
   templateKey: "roxana-50-rose-gold",
   eventTitle: "Los 50 de Roxana",
   couple: { partner1: "Roxana", partner2: "50 años" },
-  date: "2026-11-14T00:00:00-06:00",
+  date: "2026-11-14T18:00:00-06:00",
+  endDate: "2026-11-15T00:00:00-06:00",
   timezone: "America/Monterrey",
   rsvpDeadline: "2026-11-13T23:59:00-06:00",
   maxCompanions: 5,
@@ -14,19 +15,22 @@ export const roxana50 = {
   },
   reception: {
     enabled: true,
-    name: "Up Town Centro Comercial",
-    time: "Horario por confirmar",
+    name: "Sparty Divas",
+    time: "6:00 p. m.",
     address: "Av. Puerta de Hierro 500, Residencial Puerta de Hierro, 64346 Monterrey, N.L.",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Up+Town+Centro+Comercial+Av.+Puerta+de+Hierro+500+Monterrey+Nuevo+Leon",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sparty+Divas+Up+Town+Centro+Comercial+Av.+Puerta+de+Hierro+500+Monterrey+Nuevo+Leon",
     image: "/images/events/roxana-50/hero.png",
   },
-  itinerary: [],
+  itinerary: [
+    { time: "18:00", title: "Recepción", description: "Sparty Divas", icon: "glass" },
+    { time: "19:00", title: "Show", description: "Comienza el espectáculo", icon: "star" },
+  ],
   dressCode: {
     title: "Negro",
     text: "Para acompañar la elegancia de esta noche, el código de vestimenta será formal en color negro.",
   },
-  gifts: [{ name: "Sobre de regalo", description: "Tu presencia es lo más importante. Si deseas tener un detalle conmigo, habrá una opción de sobre de regalo completamente voluntaria.", url: "", type: "cash" }],
-  gallery: Array.from({ length: 4 }, (_, index) => ({
+  gifts: [{ name: "Sobre de regalo", description: "Tu presencia es lo más importante. Si deseas obsequiarme un detalle, agradeceré que sea en sobre.", url: "", type: "cash" }],
+  gallery: Array.from({ length: 5 }, (_, index) => ({
     src: `/images/events/roxana-50/foto-${index + 1}.jpg`,
     alt: `Celebración de Roxana ${index + 1}`,
   })),
