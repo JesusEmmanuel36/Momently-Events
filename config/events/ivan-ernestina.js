@@ -29,10 +29,10 @@ export const ivanErnestina = {
     parents: ["Domingo Morales", "Albertina Hernández", "Ignacio Pérez Z.", "Eva Romero V."],
     godparents: ["Ma. Angélica Zapata F.", "Guillermo Hernández"],
   },
-  gallery: Array.from({ length: 5 }, (_, index) => ({
-    src: `/images/events/ivan-ernestina/foto-${index + 1}.webp`,
-    alt: `Momento de Iván y Ernestina ${index + 1}`,
-  })),
+  gallery: [{
+    src: "/images/events/ivan-ernestina/foto-5.webp",
+    alt: "Fotografía de Iván y Ernestina",
+  }],
   registry: {
     number: "60037225",
     url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60037225",
