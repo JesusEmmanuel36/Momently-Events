@@ -106,7 +106,7 @@ export function IvanErnestinaInvitation({ wedding }) {
       <div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}>
         <div className={styles.envelopeStage}>
-          <div className={styles.letter}><Image src="/images/events/ivan-ernestina/floral.png" fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2>Iván <i>y</i> Ernestina</h2><small>30 · 12 · 2026</small></div>
+          <div className={styles.letter}><Image src="/images/events/ivan-ernestina/floral.png" fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2 className={styles.ivanLetterName}>Iván <i>y</i> Ernestina</h2><small>30 · 12 · 2026</small></div>
           <Image className={styles.envelopeOpenBack} src="/images/events/ivan-ernestina/envelope-open.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre floral abierto" />
           <Image className={styles.envelopeOpenFront} src="/images/events/ivan-ernestina/envelope-open.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="" aria-hidden="true" />
           <Image className={styles.envelopeClosed} src="/images/events/ivan-ernestina/envelope-closed.png" fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre floral cerrado con sello I y E" />
@@ -117,7 +117,7 @@ export function IvanErnestinaInvitation({ wedding }) {
     </div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>
-      <section className={styles.hero}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Celebración de Iván y Ernestina" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src="/images/events/ivan-ernestina/floral.png" width={700} height={470} alt="" aria-hidden="true" /><div className={styles.heroCopy}><span>{wedding.hero.subtitle}</span><h1><b>Iván</b><i>y</i><b>Ernestina</b></h1><p>Miércoles · 30 de diciembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={styles.hero}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Celebración de Iván y Ernestina" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src="/images/events/ivan-ernestina/floral.png" width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${styles.ivanHeroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={styles.ivanHeroName}><b>Iván</b><i>y</i><b>Ernestina</b></h1><p>Miércoles · 30 de diciembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
 
       <section className={styles.welcome} id="bienvenida" data-je-reveal><span>Con enorme alegría</span><h2>Queremos compartir contigo<br />el comienzo de nuestra historia.</h2><p>{wedding.hero.quote}</p><div className={styles.signature}>Iván <i>&</i> Ernestina</div></section>
 

@@ -6,5 +6,12 @@ imagen decorativa generada:
 
 hero.png
 
-Cuando tengas su fotografía, puedes enviarla para adaptar correctamente el
-encuadre y reemplazar esta portada sin afectar el sobre ni las animaciones.
+Para utilizar fotografías reales de Andrea, colócalas en esta carpeta como:
+
+foto-1.jpg
+foto-2.jpg
+foto-3.jpg
+
+Después se asignará una a la portada, otra a la sección de la misa y otra a
+la recepción, además de preparar la galería. El sobre y sus animaciones no se
+verán afectados.

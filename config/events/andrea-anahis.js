@@ -32,6 +32,10 @@ export const andreaAnahis = {
     { time: "18:00", title: "Misa", description: "Parroquia del Perpetuo Socorro", icon: "heart" },
     { time: "20:00", title: "Recepción", description: "Jardín Arias", icon: "sparkles" },
   ],
+  family: {
+    parents: ["Jacqueline Castro y Sergio Luis Barraza"],
+    godparents: ["Alberto Castro y Ana Lucía Parra", "Lauren López y Minerva Castro"],
+  },
   dressCode: {
     title: "Formal",
     text: "Te invitamos a acompañarnos con vestimenta formal para celebrar esta noche tan especial.",

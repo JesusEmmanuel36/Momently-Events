@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CalendarDays, Check, ChevronDown, Heart, MapPin, Pause, Play, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
+import localStyles from "./LeslyMarcelinoInvitation.module.css";
 
 const floral = "/images/events/lesly-marcelino/floral.png";
 const envelopeClosed = "/images/events/lesly-marcelino/envelope-closed.png";
@@ -74,7 +75,7 @@ export function LeslyMarcelinoInvitation({ wedding }) {
       <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Lesly y Marcelino" /></div><div className={styles.introShade} />
       <div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
-        <div className={styles.letter}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2>Lesly <i>y</i> Marcelino</h2><small>27 · 12 · 2026</small></div>
+        <div className={styles.letter}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2 className={localStyles.letterName}>Lesly <i>y</i> Marcelino</h2><small>27 · 12 · 2026</small></div>
         <Image className={styles.envelopeOpenBack} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre pastel abierto" />
         <Image className={styles.envelopeOpenFront} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt="" aria-hidden="true" />
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width: 700px) 96vw, 680px" alt="Sobre pastel cerrado con sello L y M" />
@@ -83,7 +84,7 @@ export function LeslyMarcelinoInvitation({ wedding }) {
     </div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>
-      <section className={styles.hero}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Lesly y Marcelino" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={styles.heroCopy}><span>{wedding.hero.subtitle}</span><h1><b>Lesly</b><i>y</i><b>Marcelino</b></h1><p>Domingo · 27 de diciembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={styles.hero}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Lesly y Marcelino" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={localStyles.heroName}><b>Lesly</b><i>y</i><b>Marcelino</b></h1><p>Domingo · 27 de diciembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
       <section className={styles.welcome} id="bienvenida" data-je-reveal><span>Con todo nuestro amor</span><h2>Queremos compartir contigo<br />el comienzo de nuestra historia.</h2><p>{wedding.hero.quote}</p><div className={styles.signature}>Lesly <i>&</i> Marcelino</div></section>
       <section className={styles.countdown} data-je-reveal><span>Cada vez falta menos</span><h2>Para nuestro gran día</h2>{countdown === undefined ? <div className={styles.numbers}>{["Días", "Horas", "Minutos", "Segundos"].map((label) => <div key={label}><strong>--</strong><small>{label}</small></div>)}</div> : countdown ? <div className={styles.numbers}>{countdown.map(([label, value]) => <div key={label}><strong>{String(value).padStart(2, "0")}</strong><small>{label}</small></div>)}</div> : <h3>¡Hoy celebramos nuestro amor!</h3>}</section>
       <section className={styles.location} data-je-reveal><div className={styles.locationImage}><Image src={wedding.hero.image} fill sizes="(max-width: 800px) 100vw, 55vw" alt="Lesly y Marcelino" /></div><article><Sparkles /><span>Recepción</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>27 de diciembre de 2026</p><a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></article></section>
