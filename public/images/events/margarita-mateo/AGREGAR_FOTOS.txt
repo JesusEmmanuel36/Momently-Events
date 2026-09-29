@@ -1,0 +1,21 @@
+FOTOS DE MARGARITA Y MATEO
+===========================
+
+Puedes colocar aquí las fotografías con estos nombres:
+
+foto-1.jpg
+foto-2.jpg
+foto-3.jpg
+foto-4.jpg
+foto-5.jpg
+
+También pueden ser .webp. Cuando estén listas, actualiza sus extensiones y la
+galería en config/events/margarita-mateo.js. La foto elegida como portada puede
+reemplazar hero.png o configurarse directamente como hero.image.
+
+Para la canción coloca un archivo de audio autorizado en:
+
+public/audio/margarita-mateo-perfect-espanol.mp3
+
+La invitación ya está configurada para intentar reproducir ese archivo al abrir
+el sobre.

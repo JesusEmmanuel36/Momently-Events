@@ -1,0 +1,35 @@
+h2.compactNames {
+  padding-inline: 1rem;
+  font-size: clamp(1.35rem, 4.5vw, 2.5rem) !important;
+  line-height: .95 !important;
+}
+
+h1.compactNames {
+  padding-inline: .5rem;
+  font-size: clamp(3.2rem, 9vw, 7.2rem) !important;
+  line-height: .78 !important;
+}
+
+.compactNames b {
+  max-width: min(94vw, 900px);
+  font-size: .62em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  h2.compactNames {
+    font-size: clamp(1.15rem, 5.8vw, 1.65rem) !important;
+  }
+
+  h1.compactNames {
+    font-size: clamp(2.9rem, 15vw, 4.4rem) !important;
+    line-height: .72 !important;
+  }
+
+  .compactNames b {
+    max-width: 96vw;
+    font-size: .56em;
+    line-height: 1.12;
+  }
+}
