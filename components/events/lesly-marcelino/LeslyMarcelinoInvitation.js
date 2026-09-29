@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, Check, ChevronDown, Heart, MapPin, Pause, Play, Share2, Sparkles } from "lucide-react";
+import { CalendarDays, Check, ChevronDown, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./LeslyMarcelinoInvitation.module.css";
@@ -28,8 +28,6 @@ export function LeslyMarcelinoInvitation({ wedding }) {
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
   const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
   const audioRef = useRef(null);
 
@@ -52,17 +50,29 @@ export function LeslyMarcelinoInvitation({ wedding }) {
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
   const openInvitation = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); window.setTimeout(() => setOpened(true), 2300); };
   const toggleMusic = () => { if (!audioRef.current) return; if (playing) audioRef.current.pause(); else audioRef.current.play().catch(() => notify("Agrega el archivo de la canción para reproducirla")); };
-  const submit = async (event) => {
-    event.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: Number(form.get("companions") || 0), menuPreference: "normal", allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    try {
-      const key = `momently:rsvp:${wedding.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? { ok: true } : await response.json(); if (!response.ok) throw new Error(result.error || "No fue posible enviar tu confirmación.");
-      if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload })); else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
+  const submit = (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const name = String(form.get("name") || "").trim();
+    const attending = form.get("attendance") === "yes";
+    const companions = Number(form.get("companions") || 0);
+    const notes = String(form.get("notes") || "").trim();
+    const personalMessage = String(form.get("message") || "").trim();
+    const lines = [
+      "Hola, quiero confirmar mi asistencia a la boda de Lesly y Marcelino.",
+      "",
+      `Nombre: ${name}`,
+      `Asistencia: ${attending ? "Sí, asistiré" : "No podré asistir"}`,
+      `Acompañantes: ${attending ? companions : 0}`,
+      ...(notes ? [`Comentarios o consideraciones: ${notes}`] : []),
+      ...(personalMessage ? [`Mensaje para los novios: ${personalMessage}`] : []),
+    ];
+    const whatsappUrl = new URL(wedding.contact.whatsapp);
+    whatsappUrl.searchParams.set("text", lines.join("\n"));
+    const whatsappWindow = window.open(whatsappUrl.toString(), "_blank");
+    if (whatsappWindow) whatsappWindow.opener = null;
+    else window.location.assign(whatsappUrl.toString());
+    setSuccess(name.split(" ")[0]);
   };
   const addCalendar = () => {
     openGoogleCalendar({ title: "Boda de Lesly y Marcelino", start: wedding.date, end: wedding.endDate, location: wedding.reception.address, details: wedding.hero.quote });
@@ -90,8 +100,8 @@ export function LeslyMarcelinoInvitation({ wedding }) {
       <section className={styles.countdown} data-je-reveal><span>Cada vez falta menos</span><h2>Para nuestro gran día</h2>{countdown === undefined ? <div className={styles.numbers}>{["Días", "Horas", "Minutos", "Segundos"].map((label) => <div key={label}><strong>--</strong><small>{label}</small></div>)}</div> : countdown ? <div className={styles.numbers}>{countdown.map(([label, value]) => <div key={label}><strong>{String(value).padStart(2, "0")}</strong><small>{label}</small></div>)}</div> : <h3>¡Hoy celebramos nuestro amor!</h3>}</section>
       <section className={styles.location} data-je-reveal><div className={styles.locationImage}><Image src={wedding.hero.image} fill sizes="(max-width: 800px) 100vw, 55vw" alt="Lesly y Marcelino" /></div><article><Sparkles /><span>Recepción</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>27 de diciembre de 2026</p><a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></article></section>
       <section className={styles.dress} data-je-reveal><span>Código de vestimenta</span><h2>{wedding.dressCode.title}</h2><p>{wedding.dressCode.text}</p><div className={styles.swatches} aria-label="Paleta pastel sugerida"><i /><i /><i /><i /><i /></div></section>
-      <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>27 de diciembre de 2026</h2><button onClick={addCalendar}>Agregar a mi calendario</button></section>
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Nos acompañas?</h2><p>Por favor confirma tu asistencia antes del 20 de diciembre.</p><a href={wedding.contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {wedding.contact.phone}</a><div>L <i>&</i> M</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibimos tu respuesta. Nos dará mucha alegría compartir este día contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Número de acompañantes<input name="companions" type="number" min="0" max={wedding.maxCompanions} defaultValue="0" /></label><label>Comentarios o consideraciones<textarea name="notes" rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para los novios<textarea name="message" rows="4" placeholder="Déjanos unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
+      <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>27 de diciembre de 2026</h2><div className={styles.calendarActions}><button onClick={addCalendar}>Agregar a mi calendario</button><a href="/eventos/lesly-y-marcelino/imprimir">Versión para imprimir</a></div></section>
+      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Nos acompañas?</h2><p>Por favor confirma tu asistencia antes del 20 de diciembre. Tu respuesta se enviará directamente por WhatsApp.</p><a href={wedding.contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {wedding.contact.phone}</a><div>L <i>&</i> M</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>WhatsApp se abrió con tu respuesta preparada. Pulsa “Enviar” en la conversación para completar tu confirmación.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Número de acompañantes<input name="companions" type="number" min="0" max={wedding.maxCompanions} defaultValue="0" /></label><label>Comentarios o consideraciones<textarea name="notes" rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para los novios<textarea name="message" rows="4" placeholder="Déjanos unas palabras…" /></label><button><MessageCircle size={16} /> Confirmar por WhatsApp</button></form>}</section>
       <section className={styles.closing} data-je-reveal><Image src={wedding.hero.image} fill sizes="100vw" alt="Lesly y Marcelino" /><div /><Heart /><span>Gracias, de todo corazón</span><h2 className={localStyles.farewell}>{wedding.farewell}</h2><p>Lesly <i>&</i> Marcelino</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
     {opened && <button className={styles.music} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}>{playing ? <Pause /> : <Play />}<span>{playing ? "Reproduciendo" : wedding.music.label}</span></button>}
