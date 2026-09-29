@@ -1,0 +1,40 @@
+.letterName {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 .35rem;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 4rem) !important;
+}
+
+.heroCopy {
+  width: 100%;
+  max-width: 100vw;
+  padding-inline: 1rem !important;
+  overflow-wrap: anywhere;
+}
+
+.heroImage { object-position: center 43%; }
+
+.heroName {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  justify-items: center;
+  font-size: clamp(4.2rem, 13vw, 10rem) !important;
+}
+
+.heroName b {
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .letterName { font-size: clamp(1.65rem, 8vw, 2.2rem) !important; }
+  .heroCopy { padding-inline: .65rem !important; }
+  .heroName { font-size: clamp(3.8rem, 18vw, 5rem) !important; line-height: .7 !important; }
+  .heroImage { object-position: center center; }
+}
+
+@media (max-width: 370px) {
+  .heroName { font-size: 3.45rem !important; }
+}

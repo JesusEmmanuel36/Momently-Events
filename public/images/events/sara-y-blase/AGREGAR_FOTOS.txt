@@ -1,0 +1,25 @@
+FOTOS DE SARA Y BLASE
+=====================
+
+Las fotos finales ya están conectadas con estos nombres:
+
+  foto-1.webp
+  foto-2.webp
+  foto-3.webp
+  foto-4.webp
+  foto-5.webp
+  foto-6.webp
+  foto-7.webp
+  foto-8.webp
+  foto-9.webp
+  foto-10.webp
+
+La portada principal utiliza foto-9.webp y las diez fotografías aparecen en
+la galería. La imagen hero.png queda conservada como respaldo decorativo.
+
+MÚSICA
+======
+
+El audio está conectado en:
+
+  public/audio/sara-blase-yellow.mp3

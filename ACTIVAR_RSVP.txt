@@ -83,3 +83,15 @@ Para publicar el evento y generar el acceso al panel usa:
 Enlace público:
 
 https://momentlyevents.vercel.app/eventos/roxana-50
+
+
+EVENTO DE SARA Y BLASE
+----------------------
+
+Para publicar su boda y generar el acceso al panel usa:
+
+   npm run provision-event -- sara-y-blase correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+
+Enlace público:
+
+https://momentlyevents.vercel.app/eventos/sara-y-blase
