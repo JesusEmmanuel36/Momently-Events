@@ -29,14 +29,44 @@ export function JuanErnestinaInvitation({ wedding }) {
 
   useEffect(() => { const update = () => setCountdown(getCountdown(wedding.date)); update(); const timer = setInterval(update, 1000); return () => clearInterval(timer); }, [wedding.date]);
   useEffect(() => {
+    if (audioRef.current) audioRef.current.volume = 0.65;
+  }, [wedding.music.url]);
+  useEffect(() => {
     if (!opened) return;
     const nodes = document.querySelectorAll("[data-je-reveal]");
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add(styles.revealed); observer.unobserve(entry.target); } }), { threshold: 0.12 });
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
   }, [opened]);
+  useEffect(() => {
+    if (!opened) return;
+
+    // La pantalla del sobre ocupa todo el viewport. Al retirarla, elimina
+    // cualquier bloqueo de scroll que pudiera quedar en la página y espera a
+    // que el contenido abierto ya esté maquetado antes de volver al inicio.
+    document.documentElement.style.removeProperty("overflow");
+    document.documentElement.style.removeProperty("overflow-y");
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("overflow-y");
+
+    let secondFrame;
+    const firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      if (secondFrame) window.cancelAnimationFrame(secondFrame);
+    };
+  }, [opened]);
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
-  const openInvitation = () => { if (opening) return; setOpening(true); if (wedding.music.enabled) audioRef.current?.play().then(() => setPlaying(true)).catch(() => {}); window.setTimeout(() => { setOpened(true); window.scrollTo(0, 0); }, 2300); };
+  const startMusic = () => {
+    if (!wedding.music.enabled || !audioRef.current) return;
+    audioRef.current.play().catch(() => setPlaying(false));
+  };
+  const openInvitation = () => { if (opening) return; setOpening(true); startMusic(); window.setTimeout(() => setOpened(true), 2300); };
   const toggleMusic = () => { if (!audioRef.current) return; if (playing) { audioRef.current.pause(); setPlaying(false); } else audioRef.current.play().then(() => setPlaying(true)).catch(() => notify("La canción estará disponible próximamente")); };
   const submit = async (event) => {
     event.preventDefault(); setError(""); setSaving(true);
@@ -57,7 +87,7 @@ export function JuanErnestinaInvitation({ wedding }) {
   const share = async () => { const data = { title: "Boda de Juan y Ernestina", text: wedding.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 
   return <div className={styles.wedding}>
-    {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="none" />}
+    {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}>
       <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Jardín preparado para la boda" /></div>
       <div className={styles.introShade} />
@@ -96,7 +126,7 @@ export function JuanErnestinaInvitation({ wedding }) {
 
       <section className={styles.closing} data-je-reveal><Image src={wedding.hero.image} fill sizes="100vw" alt="Jardín de la celebración" /><div /><Heart /><span>Gracias por ser parte de</span><h2>nuestra historia.</h2><p>Juan <i>&</i> Ernestina</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
-    {opened && wedding.music.enabled && <button className={styles.music} onClick={toggleMusic}>{playing ? <Pause /> : <Play />}<span>{wedding.music.label}</span></button>}
+    {opened && wedding.music.enabled && <button className={styles.music} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}>{playing ? <Pause /> : <Play />}<span>{playing ? "Reproduciendo" : wedding.music.label}</span></button>}
     <div className={`${styles.toast} ${toast ? styles.toastVisible : ""}`}>{toast}</div>
   </div>;
 }

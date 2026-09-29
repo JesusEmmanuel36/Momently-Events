@@ -33,5 +33,9 @@ export const juanErnestina = {
     number: "60037225",
     url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60037225",
   },
-  music: { enabled: false, url: "", label: "Nuestra canción" },
+  music: {
+    enabled: true,
+    url: "/audio/juan-ernestina.mp3",
+    label: "Nuestra canción",
+  },
 };
