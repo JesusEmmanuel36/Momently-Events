@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CalendarDays, Check, ChevronDown, Heart, MapPin, Pause, Play, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import styles from "@/components/events/juan-ernestina/JuanErnestinaInvitation.module.css";
+import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 
 const floral = "/images/events/lesly-marcelino/floral.png";
 const envelopeClosed = "/images/events/lesly-marcelino/envelope-closed.png";

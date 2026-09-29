@@ -11,11 +11,11 @@ ACTIVAR EL RSVP Y EL PANEL DE LOS NOVIOS
 
 4. Ejecuta este comando, cambiando el correo por el correo real de los novios:
 
-   npm run provision-event -- juan-y-ernestina correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+   npm run provision-event -- ivan-y-ernestina correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
 
 Ejemplo:
 
-   npm run provision-event -- juan-y-ernestina juan@example.com https://momentlyevents.vercel.app
+   npm run provision-event -- ivan-y-ernestina ivan@example.com https://momentlyevents.vercel.app
 
 5. Al terminar aparecerán dos direcciones:
 
@@ -46,7 +46,7 @@ IMPORTANTE
 ENLACE PÚBLICO DE ESTA INVITACIÓN
 ---------------------------------
 
-https://momentlyevents.vercel.app/eventos/juan-y-ernestina
+https://momentlyevents.vercel.app/eventos/ivan-y-ernestina
 
 
 EVENTO DE LESLY Y MARCELINO

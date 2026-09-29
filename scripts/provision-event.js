@@ -2,12 +2,12 @@ import { createHash, randomBytes } from "node:crypto";
 import { cert, getApps, initializeApp } from "firebase-admin/app";
 import { FieldValue, Timestamp, getFirestore } from "firebase-admin/firestore";
 import nextEnv from "@next/env";
-import { juanErnestina } from "../config/events/juan-ernestina.js";
+import { ivanErnestina } from "../config/events/ivan-ernestina.js";
 import { leslyMarcelino } from "../config/events/lesly-marcelino.js";
 
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [juanErnestina.slug]: juanErnestina, [leslyMarcelino.slug]: leslyMarcelino };
+const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
@@ -33,7 +33,11 @@ const db = getFirestore(firebaseApp);
 const event = templates[slug];
 const slugRef = db.collection("slugs").doc(slug);
 const slugSnapshot = await slugRef.get();
-const eventRef = slugSnapshot.exists ? db.collection("events").doc(slugSnapshot.data().eventId) : db.collection("events").doc();
+const legacySlug = slug === "ivan-y-ernestina" ? "juan-y-ernestina" : "";
+const legacySlugRef = legacySlug ? db.collection("slugs").doc(legacySlug) : null;
+const legacySlugSnapshot = !slugSnapshot.exists && legacySlugRef ? await legacySlugRef.get() : null;
+const existingEventId = slugSnapshot.data()?.eventId || legacySlugSnapshot?.data()?.eventId;
+const eventRef = existingEventId ? db.collection("events").doc(existingEventId) : db.collection("events").doc();
 const existing = await eventRef.get();
 const now = FieldValue.serverTimestamp();
 const ceremony = event.ceremony || { enabled: false, name: "", time: "", address: "", mapsUrl: "", image: "" };
@@ -83,6 +87,7 @@ if (!existing.exists) document.createdAt = now;
 
 await eventRef.set(document, { merge: true });
 await slugRef.set({ eventId: eventRef.id, updatedAt: now, ...(slugSnapshot.exists ? {} : { createdAt: now }) }, { merge: true });
+if (legacySlugSnapshot?.exists) await legacySlugRef.delete();
 
 const token = randomBytes(32).toString("base64url");
 const inviteRef = db.collection("ownerInvites").doc();
