@@ -41,10 +41,10 @@ export const margaritaMateo = {
     { src: "/images/events/margarita-mateo/foto-6.webp", alt: "Margarita y Mateo compartiendo su felicidad" },
   ],
   family: {
-    brideParents: ["Gabriela Laureano Torres", "José Pedro Laureano Torres †"],
+    brideParents: ["Gabriela Laureano Torres", "José Pedro Laureano Salinas †"],
     groomParents: ["Natividad García Dorantes", "José Aquino Lucas †"],
     godparents: ["Gabriela Reyes Guzmán", "José Emilio López Rivera"],
-    memorial: "Con amor, recordamos a José Pedro Laureano Torres y José Aquino Lucas, quienes nos acompañan desde el cielo.",
+    memorial: "Con amor, recordamos a José Pedro Laureano Salinas y José Aquino Lucas, quienes nos acompañan desde el cielo.",
   },
   dressCode: {
     title: "Formal · Casual",
