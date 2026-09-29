@@ -1,0 +1,18 @@
+FOTOGRAFÍAS DE ROXANA
+=====================
+
+La invitación utiliza fotografías JPG de Roxana. Actualmente están registradas
+foto-1.jpg, foto-2.jpg, foto-3.jpg y foto-4.jpg.
+
+Cuando tengas las fotos, colócalas aquí con nombres como:
+
+foto-1.jpg
+foto-2.jpg
+foto-3.jpg
+foto-4.jpg
+
+foto-2.jpg se utiliza como portada y las cuatro aparecen en la galería.
+
+La canción debe colocarse en:
+
+public/audio/roxana-unstoppable-sia.mp3

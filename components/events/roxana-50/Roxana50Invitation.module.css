@@ -1,0 +1,7 @@
+.envelopeClosedArt { object-fit:cover!important; transform:scale(1.08); }
+.envelopeOpenArt { object-fit:contain!important; }
+.photoNotice { padding:1rem 1.25rem; border:1px solid var(--gold-soft); color:var(--muted); font-size:.7rem; letter-spacing:.08em; }
+.ageMark { font-family:var(--font-serif),serif!important; font-size:clamp(2.2rem,7vw,5rem)!important; color:var(--gold-soft); letter-spacing:.08em; }
+.whatsapp { display:inline-flex; align-items:center; gap:.55rem; margin-top:1rem; color:white; text-decoration:underline; text-underline-offset:.3rem; font-size:.72rem; }
+.whatsapp svg { width:17px; }
+@media(max-width:600px){ .envelopeClosedArt { transform:scale(1.12); } }

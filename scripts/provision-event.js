@@ -5,10 +5,11 @@ import nextEnv from "@next/env";
 import { ivanErnestina } from "../config/events/ivan-ernestina.js";
 import { leslyMarcelino } from "../config/events/lesly-marcelino.js";
 import { andreaAnahis } from "../config/events/andrea-anahis.js";
+import { roxana50 } from "../config/events/roxana-50.js";
 
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis };
+const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50 };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();

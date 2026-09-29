@@ -15,6 +15,11 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/roxana-50" className={styles.card}>
+        <Image src="/images/events/roxana-50/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de cumpleaños de Roxana" />
+        <div className={styles.overlay} />
+        <div className={styles.copy}><small>Invitación personalizada</small><h2>Roxana · 50</h2><p>Rose gold · Dorado · Negro</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/xv-andrea-anahis" className={styles.card}>
         <Image src="/images/events/andrea-anahis/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Andrea Anahis" />
         <div className={styles.overlay} />

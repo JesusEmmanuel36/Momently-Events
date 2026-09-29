@@ -1,30 +1,9 @@
-.page { min-height:100vh; padding:2rem 1rem 3rem; background:#e9e5df; color:#4d4b42; display:grid; justify-items:center; gap:1.25rem; }
-.toolbar { width:min(100%,720px); display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap; }
-.toolbar a,.toolbar button { min-height:44px; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border:1px solid #7a7f58; background:#fffaf2; color:#555b3d; font:600 .72rem/1 sans-serif; letter-spacing:.06em; cursor:pointer; }
+.page { min-height:100vh; padding:2rem 1rem 3rem; background:#e9e5df; display:grid; justify-items:center; gap:1.25rem; }
+.toolbar { width:min(100%,760px); display:flex; justify-content:center; gap:.8rem; flex-wrap:wrap; }
+.toolbar a,.toolbar button { min-height:44px; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border:1px solid #7a7f58; background:#fffaf2; color:#555b3d; font:600 .72rem/1 sans-serif; letter-spacing:.04em; cursor:pointer; }
 .toolbar svg { width:17px; height:17px; }
-.sheet { width:min(5in,calc(100vw - 2rem)); aspect-ratio:5/7; position:relative; overflow:hidden; background:#fffaf2 url("/images/events/ivan-ernestina/print-background.png") center/cover no-repeat; box-shadow:0 20px 55px rgba(46,40,29,.2); print-color-adjust:exact; -webkit-print-color-adjust:exact; }
-.content { position:absolute; inset:7.2% 8.5% 6.2%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
-.content header { width:68%; margin-left:10%; }
-.content header > span { text-transform:uppercase; letter-spacing:.32em; color:#966b30; font:600 clamp(.42rem,1.55vw,.62rem)/1.2 Georgia,serif; }
-.content h1 { margin:.35rem 0 .48rem; color:#525840; font:400 clamp(2.3rem,8.8vw,4.1rem)/.82 var(--font-script),cursive; }
-.content h1 i { display:block; color:#d17765; font-size:.42em; line-height:.8; }
-.content header p { margin:0; color:#6d685e; font:italic clamp(.48rem,1.65vw,.67rem)/1.45 Georgia,serif; }
-.family { width:72%; margin:.65rem 0 .25rem 9%; }
-.family h2 { margin:.22rem 0; color:#a36f39; text-transform:uppercase; letter-spacing:.13em; font:600 clamp(.39rem,1.35vw,.54rem)/1.25 Georgia,serif; }
-.family p { margin:.12rem 0; font:clamp(.43rem,1.45vw,.59rem)/1.35 Georgia,serif; }
-.family > div { display:grid; grid-template-columns:1fr 1fr; gap:.65rem; }
-.date { margin:.2rem 0 .35rem 8%; display:grid; grid-template-columns:auto auto; align-items:center; color:#555b3d; }
-.date small { grid-column:1/-1; text-transform:uppercase; letter-spacing:.27em; font:600 clamp(.42rem,1.4vw,.56rem)/1 Georgia,serif; }
-.date strong { font:400 clamp(2.1rem,7vw,3.25rem)/.9 Georgia,serif; color:#d17765; }
-.date span { max-width:5.5rem; text-align:left; padding-left:.45rem; text-transform:uppercase; letter-spacing:.09em; font:600 clamp(.43rem,1.5vw,.6rem)/1.35 Georgia,serif; }
-.places { width:77%; margin-left:8%; display:grid; gap:.32rem; }
-.places i { display:block; width:50px; height:1px; margin:auto; background:#c9a25b; }
-.places article span { color:#a36f39; text-transform:uppercase; letter-spacing:.12em; font:700 clamp(.39rem,1.32vw,.53rem)/1.2 Georgia,serif; }
-.places h3 { margin:.1rem 0; color:#555b3d; font:600 clamp(.5rem,1.65vw,.68rem)/1.2 Georgia,serif; }
-.places p { margin:0; color:#706b61; font:clamp(.38rem,1.2vw,.49rem)/1.35 Georgia,serif; }
-.content footer { width:70%; margin:.5rem 0 0 8%; padding-top:.38rem; border-top:1px solid rgba(185,147,85,.45); }
-.content footer strong { color:#555b3d; font:italic 600 clamp(.43rem,1.45vw,.59rem)/1.2 Georgia,serif; }
-.content footer p { margin:.15rem 0 0; color:#7a7164; font:clamp(.37rem,1.2vw,.49rem)/1.35 Georgia,serif; }
+.sheet { width:min(5in,calc(100vw - 2rem)); aspect-ratio:5/7; overflow:hidden; background:#fffaf2; box-shadow:0 20px 55px rgba(46,40,29,.22); }
+.sheet img { display:block; width:100%; height:100%; object-fit:cover; }
 .help { max-width:620px; margin:0; text-align:center; color:#656158; font:.78rem/1.55 sans-serif; }
 
 @page { size:5in 7in; margin:0; }
