@@ -9,7 +9,7 @@ export const runtime = "nodejs";
 export async function PATCH(request, { params }) {
   try {
     assertSameOrigin(request); const admin = await requireAdmin(); const { eventId } = await params; const parsed = eventInputSchema.safeParse(await request.json());
-    if (!parsed.success) throw new ValidationError("Revisa la información de la boda.", parsed.error.flatten().fieldErrors);
+    if (!parsed.success) throw new ValidationError("Revisa la información del evento.", parsed.error.flatten().fieldErrors);
     const db = getAdminDb(); const ref = db.collection("events").doc(eventId); const next = buildEventDocument(parsed.data, admin.uid); if (next.settings.rsvp.deadline) next.settings.rsvp.deadline = Timestamp.fromDate(new Date(next.settings.rsvp.deadline)); const now = FieldValue.serverTimestamp();
     await db.runTransaction(async (transaction) => {
       const currentSnapshot = await transaction.get(ref); if (!currentSnapshot.exists) throw new NotFoundError(); const current = currentSnapshot.data();

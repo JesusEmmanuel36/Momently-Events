@@ -9,7 +9,7 @@ export const runtime = "nodejs";
 export async function POST(request) {
   try {
     assertSameOrigin(request); const admin = await requireAdmin(); const parsed = eventInputSchema.safeParse(await request.json());
-    if (!parsed.success) throw new ValidationError("Revisa la información de la boda.", parsed.error.flatten().fieldErrors);
+    if (!parsed.success) throw new ValidationError("Revisa la información del evento.", parsed.error.flatten().fieldErrors);
     const db = getAdminDb(); const eventRef = db.collection("events").doc(); const slugRef = db.collection("slugs").doc(parsed.data.slug); const now = FieldValue.serverTimestamp(); const eventDocument = buildEventDocument(parsed.data, admin.uid); if (eventDocument.settings.rsvp.deadline) eventDocument.settings.rsvp.deadline = Timestamp.fromDate(new Date(eventDocument.settings.rsvp.deadline));
     await db.runTransaction(async (transaction) => {
       if ((await transaction.get(slugRef)).exists) throw new ConflictError("Este enlace ya está siendo utilizado.");
