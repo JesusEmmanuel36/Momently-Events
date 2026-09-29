@@ -1,0 +1,14 @@
+FOTOS DE KRYSTEL
+================
+
+Cuando estén disponibles, coloca las fotografías en esta carpeta:
+
+foto-1.webp
+foto-2.webp
+foto-3.webp
+foto-4.webp
+foto-5.webp
+
+También pueden ser archivos .jpg. La invitación utiliza por ahora hero.png como
+portada provisional. Después se conectarán las fotos a la portada, ceremonia,
+recepción y galería desde config/events/krystel-xv.js.

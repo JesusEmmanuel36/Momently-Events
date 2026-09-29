@@ -15,6 +15,11 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/xv-krystel" className={styles.card}>
+        <Image src="/images/events/krystel-xv/hero.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Krystel" />
+        <div className={styles.overlay} />
+        <div className={styles.copy}><small>Invitación personalizada</small><h2>Krystel · XV</h2><p>Verde azulado · Sage · Dorado</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/margarita-y-mateo" className={styles.card}>
         <Image src="/images/events/margarita-mateo/foto-1.webp" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Margarita y Mateo" />
         <div className={styles.overlay} />

@@ -107,3 +107,15 @@ Para publicar su boda y generar el acceso al panel usa:
 Enlace público:
 
 https://momentlyevents.vercel.app/eventos/margarita-y-mateo
+
+
+EVENTO DE KRYSTEL · XV AÑOS
+---------------------------
+
+Para publicar el evento y generar el acceso al panel usa:
+
+   npm run provision-event -- xv-krystel correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+
+Enlace público:
+
+https://momentlyevents.vercel.app/eventos/xv-krystel

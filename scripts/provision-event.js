@@ -8,10 +8,11 @@ import { andreaAnahis } from "../config/events/andrea-anahis.js";
 import { roxana50 } from "../config/events/roxana-50.js";
 import { saraBlase } from "../config/events/sara-blase.js";
 import { margaritaMateo } from "../config/events/margarita-mateo.js";
+import { krystelXv } from "../config/events/krystel-xv.js";
 
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo };
+const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();

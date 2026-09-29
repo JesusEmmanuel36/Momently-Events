@@ -3,13 +3,14 @@ FOTOS DE MARGARITA Y MATEO
 
 Puedes colocar aquí las fotografías con estos nombres:
 
-foto-1.jpg
-foto-2.jpg
-foto-3.jpg
-foto-4.jpg
-foto-5.jpg
+foto-1.webp
+foto-2.webp
+foto-3.webp
+foto-4.webp
+foto-5.webp
+foto-6.webp
 
-También pueden ser .webp. Las cinco fotografías actuales ya están conectadas a
+Las seis fotografías actuales ya están conectadas a
 la portada, las secciones de ubicaciones y la galería de la invitación.
 
 Para la canción coloca un archivo de audio autorizado en:
