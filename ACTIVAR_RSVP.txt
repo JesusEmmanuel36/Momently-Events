@@ -1,0 +1,61 @@
+ACTIVAR EL RSVP Y EL PANEL DE LOS NOVIOS
+========================================
+
+1. Abre el proyecto MomentlyEvents en Visual Studio Code.
+
+2. Abre la terminal integrada:
+
+   Menú Terminal > New Terminal
+
+3. Comprueba que la terminal esté dentro de la carpeta MomentlyEvents.
+
+4. Ejecuta este comando, cambiando el correo por el correo real de los novios:
+
+   npm run provision-event -- juan-y-ernestina correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+
+Ejemplo:
+
+   npm run provision-event -- juan-y-ernestina juan@example.com https://momentlyevents.vercel.app
+
+5. Al terminar aparecerán dos direcciones:
+
+   - Evento publicado: es el enlace público de la invitación.
+   - Panel de activación: es el enlace privado que debes enviar a los novios.
+
+6. Los novios deben abrir el enlace de activación e iniciar sesión o crear su
+   cuenta usando exactamente el mismo correo que se escribió en el comando.
+
+7. Después podrán entrar a:
+
+   https://momentlyevents.vercel.app/panel
+
+   Ahí podrán consultar las confirmaciones RSVP y exportarlas.
+
+IMPORTANTE
+----------
+
+- El enlace de activación vence después de 48 horas.
+- Si vence, vuelve a ejecutar el mismo comando para generar uno nuevo.
+- El comando también crea o actualiza el evento en Firestore, lo publica y
+  deja habilitado el formulario RSVP.
+- Las respuestas se guardan en Firestore.
+- No compartas el enlace de activación públicamente; envíalo solo a los novios.
+- Para ejecutar el comando, las variables de Firebase Admin deben existir en
+  el archivo .env.local.
+
+ENLACE PÚBLICO DE ESTA INVITACIÓN
+---------------------------------
+
+https://momentlyevents.vercel.app/eventos/juan-y-ernestina
+
+
+EVENTO DE LESLY Y MARCELINO
+---------------------------
+
+Para publicar su evento y generar el acceso al panel usa:
+
+   npm run provision-event -- lesly-y-marcelino correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+
+Enlace público:
+
+https://momentlyevents.vercel.app/eventos/lesly-y-marcelino

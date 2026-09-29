@@ -1,0 +1,20 @@
+FOTO DE PAREJA
+==============
+
+Coloca aquí la foto de Lesly y Marcelino con este nombre exacto:
+
+foto-pareja.jpg
+
+Se recomienda una fotografía vertical o de cuerpo completo, de buena calidad.
+Esta única fotografía se usa en la portada, la ubicación y el cierre.
+
+
+CANCIÓN
+=======
+
+Coloca el archivo de audio en:
+
+public/audio/lesly-marcelino-perfect.mp3
+
+La invitación está configurada para mostrar:
+Perfect · Ed Sheeran
