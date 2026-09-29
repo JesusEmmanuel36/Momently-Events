@@ -1,0 +1,27 @@
+GALERÍA DE IVÁN Y ERNESTINA
+===========================
+
+Copia las fotografías dentro de esta misma carpeta usando exactamente estos
+nombres:
+
+foto-1.webp
+foto-2.webp
+foto-3.webp
+foto-4.webp
+foto-5.webp
+
+La galería conserva la estructura de la invitación original de Valeria y
+Mateo: mosaico de fotografías y visor a pantalla completa.
+
+Recomendaciones:
+
+- Usa archivos WebP de buena calidad.
+- Procura que cada imagen pese menos de 2 MB para que la invitación cargue
+  rápidamente en celulares.
+- Puedes mezclar fotografías verticales y horizontales.
+- foto-1.webp y foto-5.webp tendrán mayor protagonismo.
+- Para cambiar el orden, intercambia los nombres de los archivos.
+
+La portada principal sigue usando:
+
+hero.png

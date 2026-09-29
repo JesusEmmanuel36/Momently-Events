@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, Check, ChevronDown, Church, Copy, ExternalLink, Gift, Heart, MapPin, Pause, Play, Share2, Sparkles } from "lucide-react";
+import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Church, Copy, ExternalLink, Gift, Heart, MapPin, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./IvanErnestinaInvitation.module.css";
 
@@ -25,6 +25,7 @@ export function IvanErnestinaInvitation({ wedding }) {
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
+  const [activePhoto, setActivePhoto] = useState(null);
   const audioRef = useRef(null);
 
   useEffect(() => { const update = () => setCountdown(getCountdown(wedding.date)); update(); const timer = setInterval(update, 1000); return () => clearInterval(timer); }, [wedding.date]);
@@ -38,6 +39,17 @@ export function IvanErnestinaInvitation({ wedding }) {
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
   }, [opened]);
+  useEffect(() => {
+    if (activePhoto === null) return;
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setActivePhoto(null);
+      if (event.key === "ArrowLeft") setActivePhoto((current) => (current - 1 + wedding.gallery.length) % wedding.gallery.length);
+      if (event.key === "ArrowRight") setActivePhoto((current) => (current + 1) % wedding.gallery.length);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKeyDown); document.body.style.removeProperty("overflow"); };
+  }, [activePhoto, wedding.gallery.length]);
   useEffect(() => {
     if (!opened) return;
 
@@ -113,6 +125,8 @@ export function IvanErnestinaInvitation({ wedding }) {
 
       <section className={styles.family} data-je-reveal><Image src="/images/events/ivan-ernestina/floral.png" width={560} height={373} alt="" aria-hidden="true" /><span>Con la bendición de nuestros padres y padrinos</span><div className={styles.familyGrid}><article><small>Padres</small>{wedding.families.parents.map((name) => <p key={name}>{name}</p>)}</article><i /><article><small>Padrinos</small>{wedding.families.godparents.map((name) => <p key={name}>{name}</p>)}</article></div></section>
 
+      <section className={styles.photoGallery} data-je-reveal><span>Nuestros momentos</span><h2>Donde vive el amor</h2><p>Un vistazo a las memorias que nos trajeron hasta aquí.</p><div className={styles.photoGrid}>{wedding.gallery.map((photo, index) => <button key={photo.src} onClick={() => setActivePhoto(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={photo.src} fill sizes="(max-width: 700px) 50vw, 33vw" alt={photo.alt} /></button>)}</div></section>
+
       <section className={styles.location} data-je-reveal><div className={styles.locationImage}><Image src={wedding.ceremony.image} fill sizes="(max-width: 800px) 100vw, 55vw" alt={wedding.ceremony.name} /></div><article><Church /><span>Ceremonia religiosa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p><a href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <ExternalLink /></a></article></section>
       <section className={`${styles.location} ${styles.locationReverse}`} data-je-reveal><div className={styles.locationImage}><Image src={wedding.reception.image} fill sizes="(max-width: 800px) 100vw, 55vw" alt={wedding.reception.name} /></div><article><Sparkles /><span>Recepción</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p><a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></article></section>
 
@@ -127,6 +141,7 @@ export function IvanErnestinaInvitation({ wedding }) {
       <section className={styles.closing} data-je-reveal><Image src={wedding.hero.image} fill sizes="100vw" alt="Jardín de la celebración" /><div /><Heart /><span>Gracias por ser parte de</span><h2>nuestra historia.</h2><p>Iván <i>&</i> Ernestina</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
     {opened && wedding.music.enabled && <button className={styles.music} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}>{playing ? <Pause /> : <Play />}<span>{playing ? "Reproduciendo" : wedding.music.label}</span></button>}
+    {activePhoto !== null && <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label="Galería de Iván y Ernestina" onClick={() => setActivePhoto(null)}><button className={styles.lightboxClose} onClick={() => setActivePhoto(null)} aria-label="Cerrar galería"><X /></button><button className={styles.lightboxPrevious} onClick={(event) => { event.stopPropagation(); setActivePhoto((activePhoto - 1 + wedding.gallery.length) % wedding.gallery.length); }} aria-label="Fotografía anterior"><ChevronLeft /></button><div className={styles.lightboxImage} onClick={(event) => event.stopPropagation()}><Image src={wedding.gallery[activePhoto].src} fill sizes="95vw" alt={wedding.gallery[activePhoto].alt} /></div><button className={styles.lightboxNext} onClick={(event) => { event.stopPropagation(); setActivePhoto((activePhoto + 1) % wedding.gallery.length); }} aria-label="Fotografía siguiente"><ChevronRight /></button><span>{String(activePhoto + 1).padStart(2, "0")} / {String(wedding.gallery.length).padStart(2, "0")}</span></div>}
     <div className={`${styles.toast} ${toast ? styles.toastVisible : ""}`}>{toast}</div>
   </div>;
 }
