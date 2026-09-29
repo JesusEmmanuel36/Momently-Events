@@ -66,7 +66,7 @@ EVENTO DE ANDREA ANAHIS
 
 Para publicar sus XV años y generar el acceso al panel usa:
 
-   npm run provision-event -- xv-andrea-anahis correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+   npm run provision-event -- xv-andrea-anahis jacquelinecastro@activa.edu.mx https://momentlyevents.vercel.app
 
 Enlace público:
 
@@ -90,7 +90,7 @@ EVENTO DE SARA Y BLASE
 
 Para publicar su boda y generar el acceso al panel usa:
 
-   npm run provision-event -- sara-y-blase correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+   npm run provision-event -- sara-y-blase sarareyesxd@gmail.com https://momentlyevents.vercel.app
 
 Enlace público:
 

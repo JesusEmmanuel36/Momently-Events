@@ -9,9 +9,16 @@ export const leslyMarcelino = {
   maxCompanions: 5,
   hero: {
     subtitle: "Nuestra boda",
-    quote: "Hay momentos que se vuelven eternos cuando se comparten con las personas que queremos. Nos encantará celebrar este día contigo.",
+    quote: "Nos conocimos, nos enamoramos y nos casaremos. A ustedes los conocemos y los queremos con nosotros en nuestro gran día.",
     image: "/images/events/lesly-marcelino/foto-pareja.jpg",
   },
+  family: {
+    brideParents: ["Claudia Ramírez", "Rutilio Manríquez"],
+    groomParents: ["Oralia García", "Juan Domingo García"],
+    announcement: "Hay viajes que se disfrutan el doble cuando se comparten con la gente correcta. Ven a nuestra mayor aventura.",
+    invitation: "Tenemos el honor de compartir el enlace matrimonial de nuestros hijos.",
+  },
+  farewell: "Gracias, de todo corazón, por acompañarnos en el día más importante de nuestras vidas. Tu presencia hizo que este momento fuera inolvidable.",
   reception: {
     name: "Anacleta Jardín de Eventos",
     time: "7:00 p. m. – 1:00 a. m.",
