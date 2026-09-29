@@ -26,10 +26,10 @@ export const margaritaMateo = {
     image: "/images/events/margarita-mateo/foto-2.webp",
   },
   reception: {
-    name: "Salón La Terraza",
+    name: "Salón Campestre El Terreno",
     time: "3:00 p. m.",
-    address: "Col. Nicanor Espejo, Coscomatepec, Veracruz",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salon+La+Terraza+Nicanor+Espejo+Coscomatepec+Veracruz",
+    address: "Salón Campestre El Terreno, Coscomatepec, Veracruz",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salon+Campestre+El+Terreno+Coscomatepec+Veracruz",
     image: "/images/events/margarita-mateo/foto-3.webp",
   },
   gallery: [
@@ -41,9 +41,10 @@ export const margaritaMateo = {
     { src: "/images/events/margarita-mateo/foto-6.webp", alt: "Margarita y Mateo compartiendo su felicidad" },
   ],
   family: {
-    parents: ["Gabriela Laureano Torres", "Natividad García Dorantes", "José Aquino Lucas †"],
+    brideParents: ["Gabriela Laureano Torres", "José Pedro Laureano Torres †"],
+    groomParents: ["Natividad García Dorantes", "José Aquino Lucas †"],
     godparents: ["Gabriela Reyes Guzmán", "José Emilio López Rivera"],
-    memorial: "Con amor, recordamos a José Aquino Lucas, quien nos acompaña desde el cielo.",
+    memorial: "Con amor, recordamos a José Pedro Laureano Torres y José Aquino Lucas, quienes nos acompañan desde el cielo.",
   },
   dressCode: {
     title: "Formal · Casual",
@@ -66,7 +67,7 @@ export const margaritaMateo = {
   },
   itinerary: [
     { time: "10:00", title: "Ceremonia", description: "Iglesia San Juan Bautista", icon: "heart" },
-    { time: "15:00", title: "Recepción", description: "Salón La Terraza", icon: "glass" },
+    { time: "15:00", title: "Recepción", description: "Salón Campestre El Terreno", icon: "glass" },
   ],
   theme: { primary: "#123b8f", dark: "#0b1d43", champagne: "#b9c2cf", cream: "#e8ecf3", ivory: "#fffdfa", rose: "#688bd1", sage: "#71858b" },
 };

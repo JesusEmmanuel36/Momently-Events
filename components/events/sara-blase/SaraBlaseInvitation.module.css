@@ -36,6 +36,10 @@
   line-height: 1.8;
 }
 
+.parentGroup + .parentGroup {
+  margin-top: 2.2rem;
+}
+
 @media (max-width: 600px) {
   .letterName { font-size: clamp(1.65rem, 8vw, 2.2rem) !important; }
   .heroCopy { padding-inline: .65rem !important; }
