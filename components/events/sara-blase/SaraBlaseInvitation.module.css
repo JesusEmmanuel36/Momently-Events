@@ -28,6 +28,14 @@
   text-align: center;
 }
 
+.memorial {
+  max-width: 580px;
+  margin: 2.5rem auto 0;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.8;
+}
+
 @media (max-width: 600px) {
   .letterName { font-size: clamp(1.65rem, 8vw, 2.2rem) !important; }
   .heroCopy { padding-inline: .65rem !important; }

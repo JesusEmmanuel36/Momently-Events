@@ -40,6 +40,11 @@ export const margaritaMateo = {
     { src: "/images/events/margarita-mateo/foto-5.webp", alt: "Un recuerdo de Margarita y Mateo" },
     { src: "/images/events/margarita-mateo/foto-6.webp", alt: "Margarita y Mateo compartiendo su felicidad" },
   ],
+  family: {
+    parents: ["Gabriela Laureano Torres", "Natividad García Dorantes", "José Aquino Lucas †"],
+    godparents: ["Gabriela Reyes Guzmán", "José Emilio López Rivera"],
+    memorial: "Con amor, recordamos a José Aquino Lucas, quien nos acompaña desde el cielo.",
+  },
   dressCode: {
     title: "Formal · Casual",
     text: "Elige un atuendo formal-casual con el que te sientas cómodo para celebrar con nosotros.",
