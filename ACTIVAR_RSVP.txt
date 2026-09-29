@@ -59,3 +59,15 @@ Para publicar su evento y generar el acceso al panel usa:
 Enlace público:
 
 https://momentlyevents.vercel.app/eventos/lesly-y-marcelino
+
+
+EVENTO DE ANDREA ANAHIS
+-----------------------
+
+Para publicar sus XV años y generar el acceso al panel usa:
+
+   npm run provision-event -- xv-andrea-anahis correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+
+Enlace público:
+
+https://momentlyevents.vercel.app/eventos/xv-andrea-anahis

@@ -1,0 +1,47 @@
+export const andreaAnahis = {
+  slug: "xv-andrea-anahis",
+  templateKey: "andrea-anahis-pastel-pink",
+  eventTitle: "XV años de Andrea Anahis",
+  couple: { partner1: "Andrea Anahis", partner2: "Mis XV" },
+  date: "2026-11-14T18:00:00-06:00",
+  timezone: "America/Mazatlan",
+  rsvpDeadline: "2026-11-07T23:59:00-06:00",
+  maxCompanions: 3,
+  hero: {
+    subtitle: "Mis XV años",
+    quote: "Hay momentos inolvidables que se guardan para siempre en el corazón. Me hará muy feliz compartir contigo esta noche tan especial.",
+    image: "/images/events/andrea-anahis/hero.png",
+  },
+  ceremony: {
+    enabled: true,
+    name: "Parroquia del Perpetuo Socorro",
+    time: "6:00 p. m.",
+    address: "Puerto Progreso 2043, El Vallado, 80110 Culiacán Rosales, Sin.",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Parroquia+del+Perpetuo+Socorro+Puerto+Progreso+2043+El+Vallado+Culiacan+Sinaloa",
+    image: "/images/events/andrea-anahis/hero.png",
+  },
+  reception: {
+    enabled: true,
+    name: "Jardín Arias",
+    time: "8:00 p. m.",
+    address: "Magnolias, Prados de Occidente, 80050 Culiacán Rosales, Sin.",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jardin+Arias+Magnolias+Prados+de+Occidente+Culiacan+Sinaloa",
+    image: "/images/events/andrea-anahis/hero.png",
+  },
+  itinerary: [
+    { time: "18:00", title: "Misa", description: "Parroquia del Perpetuo Socorro", icon: "heart" },
+    { time: "20:00", title: "Recepción", description: "Jardín Arias", icon: "sparkles" },
+  ],
+  dressCode: {
+    title: "Formal",
+    text: "Te invitamos a acompañarnos con vestimenta formal para celebrar esta noche tan especial.",
+  },
+  gifts: [{ name: "Regalo en efectivo", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, agradeceré mucho que sea en efectivo.", url: "", type: "cash" }],
+  importantInfo: [{ title: "Celebración solo para adultos", description: "Para disfrutar plenamente de esta noche, hemos preparado una celebración sin niños. Agradecemos de corazón su comprensión.", icon: "users" }],
+  contact: {
+    phone: "6672029825",
+    whatsapp: "https://wa.me/526672029825",
+  },
+  music: { enabled: false, url: "", label: "Mi canción" },
+  theme: { primary: "#c88fa2", dark: "#704654", champagne: "#d7b578", cream: "#f8e8ec", ivory: "#fffaf9", rose: "#e8b5c2", sage: "#9aaa8c" },
+};
