@@ -5,6 +5,7 @@ import { CalendarDays, Check, ChevronDown, Heart, MapPin, Pause, Play, Share2, S
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./LeslyMarcelinoInvitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 const floral = "/images/events/lesly-marcelino/floral.png";
 const envelopeClosed = "/images/events/lesly-marcelino/envelope-closed.png";
@@ -64,8 +65,7 @@ export function LeslyMarcelinoInvitation({ wedding }) {
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
   };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20261228T010000Z", "DTEND:20261228T070000Z", "SUMMARY:Boda de Lesly y Marcelino", `LOCATION:${wedding.reception.address}`, `DESCRIPTION:${wedding.hero.quote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const link = document.createElement("a"); link.href = url; link.download = "boda-lesly-y-marcelino.ics"; link.click(); URL.revokeObjectURL(url); notify("Fecha agregada a tu calendario");
+    openGoogleCalendar({ title: "Boda de Lesly y Marcelino", start: wedding.date, end: wedding.endDate, location: wedding.reception.address, details: wedding.hero.quote });
   };
   const share = async () => { const data = { title: "Boda de Lesly y Marcelino", text: wedding.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 

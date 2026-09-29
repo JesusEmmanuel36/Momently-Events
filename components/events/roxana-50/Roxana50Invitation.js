@@ -5,6 +5,7 @@ import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Gift, Hear
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./Roxana50Invitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 const ornament = "/images/events/roxana-50/ornament.png";
 const envelopeClosed = "/images/events/roxana-50/envelope-closed.png";
@@ -76,8 +77,7 @@ export function Roxana50Invitation({ event }) {
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
   };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20261115T000000Z", "DTEND:20261115T060000Z", "SUMMARY:50 años de Roxana", `LOCATION:${event.reception.name}, ${event.reception.address}`, `DESCRIPTION:${event.hero.quote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const link = document.createElement("a"); link.href = url; link.download = "cumpleanos-roxana-50.ics"; link.click(); URL.revokeObjectURL(url); notify("Fecha agregada a tu calendario");
+    openGoogleCalendar({ title: "50 años de Roxana", start: event.date, end: event.endDate, location: `${event.reception.name}, ${event.reception.address}`, details: event.hero.quote });
   };
   const share = async () => { const data = { title: "Los 50 de Roxana", text: event.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 

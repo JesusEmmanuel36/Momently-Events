@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CalendarDays, Check, ChevronDown, Church, Crown, ExternalLink, Gift, Heart, MapPin, Music2, Pause, Play, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./QuinceInvitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 const eventDate = "2027-06-12T18:00:00-06:00";
 const schedule = [
@@ -38,8 +39,7 @@ export function QuinceInvitation() {
   const toggleAudio = () => { if (!audioRef.current) return; if (playing) { audioRef.current.pause(); setPlaying(false); } else audioRef.current.play().then(() => setPlaying(true)).catch(() => {}); };
   const submit = (event) => { event.preventDefault(); const data = new FormData(event.currentTarget); setConfirmed(String(data.get("name") || "Invitado").split(" ")[0]); };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20270613T000000Z", "DTEND:20270613T060000Z", "SUMMARY:XV años de Isabella", "LOCATION:Hacienda San Gabriel", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const anchor = document.createElement("a"); anchor.href = url; anchor.download = "xv-isabella.ics"; anchor.click(); URL.revokeObjectURL(url);
+    openGoogleCalendar({ title: "XV años de Isabella", start: eventDate, durationHours: 6, location: "Hacienda San Gabriel", details: "Acompáñame a celebrar mis XV años." });
   };
   const share = async () => { if (navigator.share) await navigator.share({ title: "Los XV de Isabella", text: "Acompáñame a celebrar mis XV años", url: window.location.href }); else await navigator.clipboard.writeText(window.location.href); };
 

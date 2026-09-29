@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { CalendarDays, Camera, Car, Clock, ExternalLink, GlassWater, Heart, MapPin, Music, Navigation, Sparkles, Trees, Umbrella, Users } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/ui";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 export function LocationsSection({ wedding }) {
   return <section className="locations" id="detalles">{[wedding.ceremony, wedding.reception].filter((place) => place.enabled !== false).map((place, index) => <article className={`location ${index ? "location--reverse" : ""}`} key={place.label}>
@@ -40,11 +41,9 @@ export function HotelsSection({ wedding }) {
 }
 
 export function CalendarSection({ wedding, onToast }) {
-  const downloadIcs = () => {
-    const start = new Date(wedding.date); const end = new Date(start.getTime() + 8 * 3600000);
-    const format = (date) => date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", `DTSTART:${format(start)}`, `DTEND:${format(end)}`, `SUMMARY:Boda de ${wedding.couple.bride} y ${wedding.couple.groom}`, `LOCATION:${wedding.ceremony.address}`, `DESCRIPTION:${wedding.heroQuote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const link = document.createElement("a"); link.href = url; link.download = `boda-${wedding.couple.bride}-${wedding.couple.groom}.ics`.toLowerCase().replace(/[^a-z0-9.-]+/g, "-"); link.click(); URL.revokeObjectURL(url); onToast("Fecha guardada en tu calendario");
+  const addCalendar = () => {
+    openGoogleCalendar({ title: `Boda de ${wedding.couple.bride} y ${wedding.couple.groom}`, start: wedding.date, durationHours: 8, location: wedding.ceremony.address, details: wedding.heroQuote });
+    onToast("Abriendo Google Calendar");
   };
-  return <section className="calendar"><Reveal><CalendarDays strokeWidth={1} /><span className="eyebrow">Reserva la fecha</span><h2>{wedding.dateDisplay}</h2><p>No queremos celebrar este momento sin ti.</p><button className="button button--ivory" onClick={downloadIcs}>Agregar a mi calendario</button></Reveal></section>;
+  return <section className="calendar"><Reveal><CalendarDays strokeWidth={1} /><span className="eyebrow">Reserva la fecha</span><h2>{wedding.dateDisplay}</h2><p>No queremos celebrar este momento sin ti.</p><button className="button button--ivory" onClick={addCalendar}>Agregar a mi calendario</button></Reveal></section>;
 }

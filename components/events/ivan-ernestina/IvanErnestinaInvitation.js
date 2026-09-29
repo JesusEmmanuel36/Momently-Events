@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Church, Copy, ExternalLink, Gift, Heart, MapPin, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./IvanErnestinaInvitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 function getCountdown(date) {
   const remaining = new Date(date).getTime() - Date.now();
@@ -93,8 +94,7 @@ export function IvanErnestinaInvitation({ wedding }) {
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
   };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20261230T190000Z", "DTEND:20261231T050000Z", "SUMMARY:Boda de Iván y Ernestina", `LOCATION:${wedding.ceremony.address}`, `DESCRIPTION:${wedding.hero.quote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const link = document.createElement("a"); link.href = url; link.download = "boda-ivan-y-ernestina.ics"; link.click(); URL.revokeObjectURL(url); notify("Fecha agregada a tu calendario");
+    openGoogleCalendar({ title: "Boda de Iván y Ernestina", start: wedding.date, durationHours: 10, location: wedding.ceremony.address, details: wedding.hero.quote });
   };
   const share = async () => { const data = { title: "Boda de Iván y Ernestina", text: wedding.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 

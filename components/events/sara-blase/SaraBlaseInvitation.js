@@ -5,6 +5,7 @@ import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Church, Ex
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./SaraBlaseInvitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 const floral = "/images/events/sara-y-blase/floral.png";
 const envelopeClosed = "/images/events/sara-y-blase/envelope-closed.png";
@@ -103,9 +104,7 @@ export function SaraBlaseInvitation({ wedding }) {
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
   };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20261107T220000Z", "DTEND:20261108T060000Z", "SUMMARY:Boda de Sara y Blase", `LOCATION:${wedding.ceremony.name}`, `DESCRIPTION:${wedding.hero.quote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" }));
-    const link = document.createElement("a"); link.href = url; link.download = "boda-sara-y-blase.ics"; link.click(); URL.revokeObjectURL(url); notify("Fecha agregada a tu calendario");
+    openGoogleCalendar({ title: "Boda de Sara y Blase", start: wedding.date, end: wedding.endDate, location: wedding.ceremony.name, details: wedding.hero.quote });
   };
   const share = async () => {
     const data = { title: "Boda de Sara y Blase", text: wedding.hero.quote, url: window.location.href };

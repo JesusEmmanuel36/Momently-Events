@@ -5,6 +5,7 @@ import { Baby, CalendarDays, Check, ChevronDown, Church, Crown, ExternalLink, Gi
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./AndreaAnahisInvitation.module.css";
+import { openGoogleCalendar } from "@/lib/calendar";
 
 const floral = "/images/events/andrea-anahis/floral.png";
 const envelopeClosed = "/images/events/andrea-anahis/envelope-closed.png";
@@ -62,8 +63,7 @@ export function AndreaAnahisInvitation({ event }) {
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
   };
   const addCalendar = () => {
-    const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "DTSTART:20261115T000000Z", "DTEND:20261115T055900Z", "SUMMARY:XV años de Andrea Anahis", `LOCATION:${event.ceremony.address}`, `DESCRIPTION:${event.hero.quote}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/calendar" })); const link = document.createElement("a"); link.href = url; link.download = "xv-andrea-anahis.ics"; link.click(); URL.revokeObjectURL(url); notify("Fecha agregada a tu calendario");
+    openGoogleCalendar({ title: "XV años de Andrea Anahis", start: event.date, durationHours: 6, location: event.ceremony.address, details: event.hero.quote });
   };
   const share = async () => { const data = { title: "XV años de Andrea Anahis", text: event.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 
