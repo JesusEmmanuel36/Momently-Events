@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Car, Check, ChevronDown, Church, Disc3, ExternalLink, Gift, Heart, MapPin, MessageCircle, Music2, Pause, Play, Sparkles, Star } from "lucide-react";
+import { Car, Check, ChevronDown, Church, Disc3, ExternalLink, Gift, Heart, MapPin, MessageCircle, Pause, Play, Sparkles, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./keyla.module.css";
 
@@ -93,7 +93,7 @@ export function KeylaInvitation() {
 
       <section className={styles.dress}><Sparkles /><span>Código de vestimenta</span><h2>Formal / elegante</h2><p>El color azul está reservado para la quinceañera y el beige para las damas. Gracias por elegir otros tonos para tu vestimenta.</p><div><i /><i /></div></section>
 
-      <section className={styles.gifts}><Gift /><span>El mejor regalo</span><h2>Tu presencia hará brillar mi noche</h2><p>Lo más importante para mí es compartir este momento contigo.</p><div><Music2 /><strong>Dancing Queen</strong><small>ABBA · Canción elegida</small></div></section>
+      <section className={styles.gifts}><Gift /><span>El mejor regalo</span><h2>Tu presencia hará brillar mi noche</h2><p>Lo más importante para mí es compartir este momento contigo.</p></section>
 
       <section className={styles.rsvp}>
         {confirmed ? <div className={styles.success}><Check /><h2>¡Gracias!</h2><p>Tu respuesta quedó registrada en esta vista previa.</p><button onClick={() => setConfirmed(false)}>Cambiar respuesta</button></div> : <form onSubmit={(event) => { event.preventDefault(); setConfirmed(true); }}><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><label>Nombre completo<input required placeholder="Escribe tu nombre" /></label><label>¿Asistirás?<select defaultValue="Sí, ahí estaré"><option>Sí, ahí estaré</option><option>No podré asistir</option></select></label><button>Confirmar asistencia</button><a href="https://wa.me/523122002067" target="_blank" rel="noreferrer">Confirmar por WhatsApp · 312 200 2067</a></form>}

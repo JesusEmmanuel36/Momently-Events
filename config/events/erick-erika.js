@@ -45,7 +45,7 @@ export const erickErika = {
     time: "1:00 p. m.",
     address: "Palomares, Matías Romero Avendaño, Oaxaca",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+San+Isidro+Labrador%2C+Palomares%2C+Mat%C3%ADas+Romero+Avenda%C3%B1o%2C+Oaxaca",
-    image: "/images/events/erick-erika/foto-7.jpeg",
+    image: "/images/events/erick-erika/foto-9.jpeg",
   },
   itinerary: [
     { time: "11:00", title: "Ceremonia religiosa", description: "Parroquia de Nuestra Señora de la Candelaria", icon: "heart" },
