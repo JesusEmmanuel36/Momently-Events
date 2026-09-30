@@ -30,7 +30,7 @@ function displayTime(value) {
   return [`${hours % 12 || 12}:${String(minutes).padStart(2, "0")}`, hours >= 12 ? "p. m." : "a. m."];
 }
 
-export function SaraBlaseInvitation({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "" }) {
+export function SaraBlaseInvitation({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
   const floral = assets.floral;
   const envelopeClosed = assets.envelopeClosed;
   const envelopeOpen = assets.envelopeOpen;
@@ -145,7 +145,7 @@ export function SaraBlaseInvitation({ wedding, assets = defaultAssets, customThe
     </div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>
-      <section className={styles.hero}><Image className={localStyles.heroImage} src={wedding.hero.image} fill priority sizes="100vw" alt={`Celebración de ${names}`} /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={`${localStyles.heroName} ${nameClassName}`}><b>{wedding.couple.partner1}</b><i>y</i><b>{wedding.couple.partner2}</b></h1><p>{wedding.dateDisplay || "Sábado · 7 de noviembre · 2026"}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={`${styles.hero} ${heroFramed ? localStyles.heroFramed : ""}`}><Image className={localStyles.heroImage} src={wedding.hero.image} fill priority sizes="100vw" alt={`Celebración de ${names}`} /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={`${localStyles.heroName} ${nameClassName}`}><b>{wedding.couple.partner1}</b><i>y</i><b>{wedding.couple.partner2}</b></h1><p>{wedding.dateDisplay || "Sábado · 7 de noviembre · 2026"}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
 
       <section className={styles.welcome} id="bienvenida" data-je-reveal><span>Con todo nuestro amor</span><h2>Queremos compartir contigo<br />el comienzo de nuestra historia.</h2><p>{wedding.hero.quote}</p><div className={styles.signature}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</div></section>
 

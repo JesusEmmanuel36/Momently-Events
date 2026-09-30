@@ -21,9 +21,9 @@ export default function EventsPage() {
         <div className={styles.copy}><small>Invitación personalizada</small><h2>Keyla · XV</h2><p>Disco · Plata · Azul plumbago</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
       <Link href="/eventos/erick-y-erika" className={styles.card}>
-        <Image src="/images/events/erick-erika/foto-4.jpeg" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Erick y Erika" />
+        <Image src="/images/events/erick-erika/foto-8.jpeg" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de Erick y Erika" />
         <div className={styles.overlay} />
-        <div className={styles.copy}><small>Invitación personalizada</small><h2>Erick & Erika</h2><p>Champagne · Beige · Café</p><strong>Ver invitación <span>→</span></strong></div>
+        <div className={styles.copy}><small>Invitación personalizada</small><h2>Erick & Erika</h2><p>Verde salvia · Dorado · Beige</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
       <Link href="/eventos/xv-krystel" className={styles.card}>
         <Image src="/images/events/krystel-xv/foto-2.webp" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Krystel" />

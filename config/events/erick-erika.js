@@ -14,7 +14,7 @@ export const erickErika = {
   hero: {
     subtitle: "Nuestra boda",
     quote: "Con la bendición de Dios y de nuestros padres, queremos compartir contigo el día en que uniremos nuestras vidas para siempre.",
-    image: "/images/events/erick-erika/foto-4.jpeg",
+    image: "/images/events/erick-erika/foto-8.jpeg",
   },
   thought: [
     "No fue casualidad,\nfue el destino escribiéndonos despacio.\nDos nombres que riman\npara dos almas que encajan.",
@@ -68,6 +68,7 @@ export const erickErika = {
     { src: "/images/events/erick-erika/foto-6.jpeg", alt: "Erick y Erika juntos" },
     { src: "/images/events/erick-erika/foto-7.jpeg", alt: "La historia de amor de Erick y Erika" },
     { src: "/images/events/erick-erika/foto-8.jpeg", alt: "Erick y Erika, una vida juntos" },
+    { src: "/images/events/erick-erika/foto-9.jpeg", alt: "Ilustración de Erick y Erika en la iglesia" },
   ],
   contact: {
     phone: "972 109 7645",
@@ -83,12 +84,12 @@ export const erickErika = {
     label: "Nuestra canción",
   },
   theme: {
-    primary: "#8b674d",
-    dark: "#3f2c24",
-    champagne: "#c5a476",
-    cream: "#eee0cf",
-    ivory: "#fffaf2",
-    rose: "#b59072",
-    sage: "#786354",
+    primary: "#7f9478",
+    dark: "#435344",
+    champagne: "#b58a3c",
+    cream: "#eee6d9",
+    ivory: "#fffaf1",
+    rose: "#d7bd82",
+    sage: "#7f9478",
   },
 };

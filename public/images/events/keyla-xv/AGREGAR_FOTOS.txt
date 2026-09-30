@@ -3,14 +3,16 @@ FOTOS DE KEYLA
 
 Fotografías conectadas:
 
-foto-1.webp - portada
-foto-2.webp - misa
-foto-3.webp - recepción
-foto-4.webp - galería
-foto-5.webp - galería
+foto-1.webp - galería
+foto-2.webp - portada
+foto-3.webp - galería
+foto-4.webp - misa
+foto-5.webp - recepción
+foto-6.jpg - galería
+keyla-7.jpg - galería
 
-Las cinco fotografías aparecen en la galería. La foto 2 se usa en portada,
-la foto 4 acompaña la misa y la foto 5 acompaña la recepción.
+Cada fotografía aparece una sola vez. La foto 2 se usa en portada, la foto 4
+acompaña la misa, la foto 5 acompaña la recepción y las demás forman la galería.
 
 CANCIÓN
 =======

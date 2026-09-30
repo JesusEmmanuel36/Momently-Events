@@ -73,7 +73,12 @@ export function KeylaInvitation() {
 
       <section className={styles.family}><Image src={assets.disco} width={520} height={422} alt="" aria-hidden="true" /><span>Con el amor y la bendición de</span><h2>Mi familia</h2><div><article><Heart /><small>Mis papás</small><p>Rafael López</p><p>Nadia López</p></article><i /><article><Star /><small>Mis padrinos</small><p>Rodrigo Morales</p><p>Patricia López</p></article></div></section>
 
-      <section className={styles.gallery}><span>Mis momentos</span><h2>Una etapa para recordar</h2><div>{[1, 2, 3, 4, 5].map((number) => <figure key={number}><Image src={`/images/events/keyla-xv/foto-${number}.webp`} fill sizes="(max-width:720px) 50vw, 33vw" alt={`Sesión de quince años de Keyla, fotografía ${number}`} /></figure>)}</div></section>
+      <section className={styles.gallery}><span>Mis momentos</span><h2>Una etapa para recordar</h2><div>{[
+        { src: "/images/events/keyla-xv/foto-1.webp", alt: "Keyla celebrando sus quince años frente al mar" },
+        { src: "/images/events/keyla-xv/foto-3.webp", alt: "Keyla en la playa junto al número quince" },
+        { src: "/images/events/keyla-xv/foto-6.jpg", alt: "Pastel disco con la fecha de los XV años de Keyla" },
+        { src: "/images/events/keyla-xv/keyla-7.jpg", alt: "Keyla leyendo el anuncio de sus próximos XV años" },
+      ].map((photo) => <figure key={photo.src}><Image src={photo.src} fill sizes="(max-width:720px) 50vw, 42vw" alt={photo.alt} /></figure>)}</div></section>
 
       <section className={styles.locations}>
         <header><span>Los momentos de mi celebración</span><h2>Misa y recepción</h2></header>
@@ -86,12 +91,12 @@ export function KeylaInvitation() {
 
       <section className={styles.timeline}><span>Programa</span><h2>Una noche para recordar</h2><div><article><time>6:00</time><small>p. m.</small><h3>Misa</h3></article><article><time>8:00</time><small>p. m.</small><h3>Recepción</h3></article><article><time>9:00</time><small>p. m.</small><h3>Cena</h3></article><article><time>10:00</time><small>p. m.</small><h3>Baile</h3></article></div></section>
 
-      <section className={styles.dress}><Sparkles /><span>Código de vestimenta</span><h2>Formal / elegante</h2><p>El color azul está reservado para la quinceañera y el beige para las damas. Gracias por elegir otros tonos para tu vestimenta.</p><div><i /><i /><i /><i /></div></section>
+      <section className={styles.dress}><Sparkles /><span>Código de vestimenta</span><h2>Formal / elegante</h2><p>El color azul está reservado para la quinceañera y el beige para las damas. Gracias por elegir otros tonos para tu vestimenta.</p><div><i /><i /></div></section>
 
       <section className={styles.gifts}><Gift /><span>El mejor regalo</span><h2>Tu presencia hará brillar mi noche</h2><p>Lo más importante para mí es compartir este momento contigo.</p><div><Music2 /><strong>Dancing Queen</strong><small>ABBA · Canción elegida</small></div></section>
 
       <section className={styles.rsvp}>
-        {confirmed ? <div className={styles.success}><Check /><h2>¡Gracias!</h2><p>Tu respuesta quedó registrada en esta vista previa.</p><button onClick={() => setConfirmed(false)}>Cambiar respuesta</button></div> : <form onSubmit={(event) => { event.preventDefault(); setConfirmed(true); }}><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><label>Nombre completo<input required placeholder="Escribe tu nombre" /></label><label>¿Asistirás?<select defaultValue="Sí, ahí estaré"><option>Sí, ahí estaré</option><option>No podré asistir</option></select></label><label>Acompañantes<select defaultValue="0"><option value="0">Solo yo</option><option value="1">1 acompañante</option><option value="2">2 acompañantes</option><option value="3">3 acompañantes</option></select></label><button>Confirmar asistencia</button><a href="https://wa.me/523122002067" target="_blank" rel="noreferrer">Confirmar por WhatsApp · 312 200 2067</a></form>}
+        {confirmed ? <div className={styles.success}><Check /><h2>¡Gracias!</h2><p>Tu respuesta quedó registrada en esta vista previa.</p><button onClick={() => setConfirmed(false)}>Cambiar respuesta</button></div> : <form onSubmit={(event) => { event.preventDefault(); setConfirmed(true); }}><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><label>Nombre completo<input required placeholder="Escribe tu nombre" /></label><label>¿Asistirás?<select defaultValue="Sí, ahí estaré"><option>Sí, ahí estaré</option><option>No podré asistir</option></select></label><button>Confirmar asistencia</button><a href="https://wa.me/523122002067" target="_blank" rel="noreferrer">Confirmar por WhatsApp · 312 200 2067</a></form>}
       </section>
 
       <section className={styles.closing}><Image src={assets.disco} width={750} height={609} alt="" aria-hidden="true" /><Disc3 /><span>Nos vemos en la pista</span><h2>Keyla</h2><p>05 · 12 · 2026</p></section>
