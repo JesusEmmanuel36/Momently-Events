@@ -19,6 +19,9 @@
 .locationCopy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:clamp(2.4rem,5vw,4.5rem)}
 .locationCopy>svg{width:38px;height:38px;color:var(--blue);stroke-width:1}
 .locationCopy>span{margin-top:1.5rem;color:#596c99;text-transform:uppercase;letter-spacing:.3em;font-size:.61rem;font-weight:700}
+.heroCopy>span,.heroCopy>p{display:inline-block;color:#fff;text-shadow:0 2px 5px #000,0 5px 22px #000;background:rgba(5,7,11,.48);box-shadow:0 0 24px rgba(5,7,11,.34);border-radius:2px}
+.heroCopy>span{padding:.55rem .8rem}
+.heroCopy>p{padding:.55rem 1rem}
 
 @media(max-width:720px){
   .gallery>div{grid-template-columns:1fr 1fr;grid-auto-rows:210px;gap:.45rem}

@@ -6,8 +6,6 @@ export const erickErika = {
   date: "2026-11-14T11:00:00-06:00",
   endDate: "2026-11-15T18:00:00-06:00",
   timezone: "America/Mexico_City",
-  rsvpDeadline: "2026-11-07T23:59:00-06:00",
-  rsvpDeadlineDisplay: "7 de noviembre",
   maxCompanions: 5,
   dateStamp: "14 · 11 · 2026",
   dateDisplay: "Sábado · 14 de noviembre · 2026",
