@@ -1,6 +1,6 @@
 export const krystelXv = {
   slug: "xv-krystel",
-  templateKey: "krystel-xv-aqua-pink-gold",
+  templateKey: "krystel-xv-aqua-champagne-gold",
   eventTitle: "XV años de Krystel",
   couple: { partner1: "Krystel", partner2: "Mis XV" },
   date: "2026-12-27T17:00:00-06:00",
@@ -35,10 +35,10 @@ export const krystelXv = {
     { time: "21:00", title: "Baile", description: "Auditorio Municipal", icon: "music" },
   ],
   family: { parents: ["Luis Carlos Hernández P.", "Élida Bustillos S."], godparents: [] },
-  dressCode: { title: "Aqua, rosa pastel y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
+  dressCode: { title: "Aqua, champagne y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
   gifts: [{ name: "Regalo o sobre", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un regalo o un sobre.", url: "", type: "cash" }],
   gallery: [],
   contact: { phone: "6491180778", whatsapp: "https://wa.me/526491180778" },
   music: { enabled: true, url: "/audio/margarita-mateo-perfect-espanol.mp3", label: "Perfect · Ed Sheeran" },
-  theme: { primary: "#78b8ca", dark: "#3f7180", champagne: "#b59045", cream: "#eef8fa", ivory: "#fffdf9", rose: "#f3cad7", sage: "#9ed1dd" },
+  theme: { primary: "#78b8ca", dark: "#3f7180", champagne: "#d8c3a5", cream: "#eef8fa", ivory: "#fffdf9", rose: "#eadcc5", sage: "#9ed1dd" },
 };
