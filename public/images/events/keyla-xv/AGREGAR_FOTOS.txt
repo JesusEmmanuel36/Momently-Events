@@ -1,0 +1,20 @@
+FOTOS DE KEYLA
+===============
+
+Fotografías conectadas:
+
+foto-1.webp - portada
+foto-2.webp - misa
+foto-3.webp - recepción
+foto-4.webp - galería
+foto-5.webp - galería
+
+Las cinco fotografías aparecen en la galería. La foto 2 se usa en portada,
+la foto 4 acompaña la misa y la foto 5 acompaña la recepción.
+
+CANCIÓN
+=======
+
+La canción Dancing Queen de ABBA ya está conectada desde:
+
+public/audio/keyla-dancing-queen.mp3
