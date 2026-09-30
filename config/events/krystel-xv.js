@@ -19,7 +19,7 @@ export const krystelXv = {
     time: "5:00 p. m.",
     address: "Santa María Magdalena, Balleza, Chihuahua",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Santa+Maria+Magdalena+Balleza+Chihuahua",
-    image: "/images/events/krystel-xv/foto-1.webp",
+    image: "/images/events/krystel-xv/foto-2.webp",
   },
   reception: {
     enabled: true,
@@ -38,7 +38,6 @@ export const krystelXv = {
   dressCode: { title: "Aqua, champagne y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
   gifts: [{ name: "Regalo o sobre", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un regalo o un sobre.", url: "", type: "cash" }],
   gallery: [
-    { src: "/images/events/krystel-xv/foto-1.webp", alt: "Krystel con vestido plateado frente a una puerta de madera" },
     { src: "/images/events/krystel-xv/foto-2.webp", alt: "Krystel con su vestido aqua de quinceañera" },
     { src: "/images/events/krystel-xv/foto-3.webp", alt: "Retrato de Krystel en un jardín" },
   ],

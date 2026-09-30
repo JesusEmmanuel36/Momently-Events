@@ -25,7 +25,7 @@
 .familyGrid { max-width:860px; margin:3.5rem auto 0; display:grid; grid-template-columns:1fr 1px 1fr; gap:clamp(1.5rem,5vw,4rem); align-items:start; }
 .familyGrid > i { width:1px; min-height:100%; background:linear-gradient(transparent,var(--gold-soft),transparent); }
 .familyGrid h3 { margin:0 0 1rem; color:var(--coral); text-transform:uppercase; letter-spacing:.24em; font-size:.65rem; }
-.familyGrid p { margin:.45rem 0; color:var(--charcoal); font-family:var(--font-serif),serif; font-size:clamp(1rem,2.4vw,1.3rem); line-height:1.55; }
+.familyGrid p { margin:.55rem 0; color:var(--charcoal); font-family:var(--font-serif),serif; font-size:clamp(1.65rem,3.8vw,2.25rem); line-height:1.35; }
 .familyGridSingle { display:block; max-width:680px; }
 .photoGridStatic > div { position:relative; overflow:hidden; background:var(--paper); }
 .photoGridStatic > div img { object-fit:cover; transition:transform .8s ease,filter .8s ease; }
