@@ -1,0 +1,26 @@
+FOTOS DE ERICK Y ERIKA
+======================
+
+Las fotografías de la pareja están conectadas en formato JPEG:
+
+foto-1.jpeg
+foto-2.jpeg
+foto-3.jpeg
+foto-4.jpeg
+foto-5.jpeg
+foto-6.jpeg
+foto-7.jpeg
+foto-8.jpeg
+
+Pueden agregarse más fotografías siguiendo la misma numeración.
+
+La portada y la galería se administran desde config/events/erick-erika.js.
+
+MÚSICA
+======
+
+Guarda la canción personalizada en:
+
+public/audio/erick-erika-cancion.mpeg
+
+Debe conservar exactamente ese nombre para que comience al abrir el sobre.

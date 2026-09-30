@@ -119,3 +119,15 @@ Para publicar el evento y generar el acceso al panel usa:
 Enlace público:
 
 https://momentlyevents.vercel.app/eventos/xv-krystel
+
+
+EVENTO DE ERICK Y ERIKA
+-----------------------
+
+Para publicar su boda y generar el acceso al panel usa:
+
+   npm run provision-event -- erick-y-erika correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+
+Enlace público:
+
+https://momentlyevents.vercel.app/eventos/erick-y-erika

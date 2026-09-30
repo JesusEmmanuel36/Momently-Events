@@ -40,11 +40,50 @@
   margin-top: 2.2rem;
 }
 
+.thought,
+.verse,
+.nextDay {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(6rem, 11vw, 10rem) max(1.2rem, calc((100vw - 980px) / 2));
+  text-align: center;
+}
+
+.thought { background: var(--paper); }
+.thought > img { position: absolute; width: min(58vw, 680px); height: auto; right: -15%; bottom: -28%; opacity: .2; transform: rotate(155deg); }
+.thought > span,
+.nextDay > span { position: relative; color: var(--coral); text-transform: uppercase; letter-spacing: .3em; font-size: .62rem; font-weight: 700; }
+.thought blockquote { position: relative; margin: 2.2rem auto; max-width: 720px; }
+.thought blockquote p { margin: 1.45rem 0; color: var(--charcoal); font-family: var(--font-serif), serif; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.55; white-space: pre-line; }
+.thought > div { position: relative; color: var(--gold); font-family: var(--font-script), cursive; font-size: clamp(4.5rem, 11vw, 8rem); }
+.thought > div i { font-size: .6em; }
+
+.verse { background: linear-gradient(135deg, var(--dark), var(--olive)); color: white; }
+.verse > span { color: var(--accent-light); text-transform: uppercase; letter-spacing: .3em; font-size: .65rem; font-weight: 700; }
+.verse > p { max-width: 780px; margin: 2rem auto 0; color: white; font-family: var(--font-serif), serif; font-size: clamp(1.7rem, 4vw, 3.2rem); line-height: 1.4; }
+
+.familyGroups { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; max-width: 1100px; margin: 3.5rem auto 0; background: var(--gold-soft); }
+.familyGroups article { padding: 2.5rem 1.5rem; background: var(--paper); }
+.familyGroups small { display: block; min-height: 2.5rem; margin-bottom: 1.2rem; color: var(--olive); text-transform: uppercase; letter-spacing: .2em; font-size: .58rem; font-weight: 700; }
+.familyGroups p { margin: .45rem 0; color: var(--charcoal); font-family: var(--font-serif), serif; font-size: 1.12rem; line-height: 1.5; }
+
+.nextDay { background: var(--ivory); }
+.nextDay > img { position: absolute; width: min(55vw, 720px); height: auto; left: -20%; top: -32%; opacity: .18; transform: rotate(-15deg); }
+.nextDay h2 { position: relative; margin: 1.1rem 0 .8rem; font-size: clamp(3rem, 7vw, 6rem); font-weight: 500; }
+.nextDay strong { position: relative; display: block; color: var(--olive); text-transform: uppercase; letter-spacing: .2em; font-size: .72rem; }
+.nextDay p { position: relative; margin: 1.8rem 0 .4rem; color: var(--charcoal); font-family: var(--font-serif), serif; font-size: 1.4rem; }
+.nextDay > small { position: relative; display: block; color: var(--muted); font-size: .9rem; }
+.nextDay a { position: relative; display: inline-flex; align-items: center; gap: .5rem; margin-top: 2rem; border-bottom: 1px solid var(--gold); padding-bottom: .45rem; text-transform: uppercase; letter-spacing: .14em; font-size: .6rem; }
+.nextDay a svg { width: 15px; }
+
 @media (max-width: 600px) {
   .letterName { font-size: clamp(1.65rem, 8vw, 2.2rem) !important; }
   .heroCopy { padding-inline: .65rem !important; }
   .heroName { font-size: clamp(3.8rem, 18vw, 5rem) !important; line-height: .7 !important; }
   .heroImage { object-position: center center; }
+  .familyGroups { grid-template-columns: 1fr; }
+  .familyGroups small { min-height: 0; }
+  .thought > img { width: 95vw; right: -48%; }
 }
 
 @media (max-width: 370px) {
