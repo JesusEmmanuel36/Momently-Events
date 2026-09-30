@@ -1,14 +1,10 @@
 FOTOS DE KRYSTEL
 ================
 
-Cuando estén disponibles, coloca las fotografías en esta carpeta:
+Fotografías conectadas actualmente:
 
-foto-1.webp
-foto-2.webp
-foto-3.webp
-foto-4.webp
-foto-5.webp
+foto-1.webp - sección de misa y galería
+foto-2.webp - portada, cierre y tarjeta del catálogo
+foto-3.webp - sección de recepción y galería
 
-También pueden ser archivos .jpg. La invitación utiliza por ahora hero.png como
-portada provisional. Después se conectarán las fotos a la portada, ceremonia,
-recepción y galería desde config/events/krystel-xv.js.
+Si después agregas foto-4.webp y foto-5.webp, se pueden incorporar a la galería.

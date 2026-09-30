@@ -38,15 +38,15 @@ export const erickErika = {
   ceremony: {
     name: "Parroquia de Nuestra Señora de la Candelaria",
     time: "11:00 a. m.",
-    address: "Parroquia de Nuestra Señora de la Candelaria",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Parroquia+de+Nuestra+Se%C3%B1ora+de+la+Candelaria",
+    address: "Ignacio Zaragoza y Francisco Villa, C.P. 70312, Palomares, Matías Romero Avendaño, Oaxaca",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Parroquia+de+Nuestra+Se%C3%B1ora+de+la+Candelaria%2C+Palomares%2C+Mat%C3%ADas+Romero+Avenda%C3%B1o%2C+Oaxaca",
     image: "/images/events/erick-erika/foto-2.jpeg",
   },
   reception: {
     name: "Salón San Isidro Labrador",
     time: "1:00 p. m.",
-    address: "Boda civil, baile y brindis",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salon+San+Isidro+Labrador",
+    address: "Palomares, Matías Romero Avendaño, Oaxaca",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+San+Isidro+Labrador%2C+Palomares%2C+Mat%C3%ADas+Romero+Avenda%C3%B1o%2C+Oaxaca",
     image: "/images/events/erick-erika/foto-7.jpeg",
   },
   itinerary: [
@@ -59,7 +59,7 @@ export const erickErika = {
     date: "Domingo 15 de noviembre de 2026",
     time: "2:00 p. m.",
     place: "Salón San Isidro Labrador",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salon+San+Isidro+Labrador",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+San+Isidro+Labrador%2C+Palomares%2C+Mat%C3%ADas+Romero+Avenda%C3%B1o%2C+Oaxaca",
   },
   gallery: [
     { src: "/images/events/erick-erika/foto-1.jpeg", alt: "Erick y Erika compartiendo un momento juntos" },
@@ -71,7 +71,14 @@ export const erickErika = {
     { src: "/images/events/erick-erika/foto-7.jpeg", alt: "La historia de amor de Erick y Erika" },
     { src: "/images/events/erick-erika/foto-8.jpeg", alt: "Erick y Erika, una vida juntos" },
   ],
-  contact: { phone: "", whatsapp: "" },
+  contact: {
+    phone: "972 109 7645",
+    whatsapp: "https://wa.me/529721097645",
+    whatsapps: [
+      { phone: "972 109 7645", whatsapp: "https://wa.me/529721097645" },
+      { phone: "625 322 3533", whatsapp: "https://wa.me/526253223533" },
+    ],
+  },
   music: {
     enabled: true,
     url: "/audio/erick-erika-cancion.mpeg",

@@ -1,6 +1,6 @@
 export const krystelXv = {
   slug: "xv-krystel",
-  templateKey: "krystel-xv-aqua-champagne-gold",
+  templateKey: "krystel-xv-muted-aqua-champagne-gold",
   eventTitle: "XV años de Krystel",
   couple: { partner1: "Krystel", partner2: "Mis XV" },
   date: "2026-12-27T17:00:00-06:00",
@@ -11,7 +11,7 @@ export const krystelXv = {
   hero: {
     subtitle: "Mis XV años",
     quote: "Hay momentos inolvidables que se guardan para siempre en el corazón. Me hará muy feliz compartir contigo esta noche tan especial.",
-    image: "/images/events/krystel-xv/hero.png",
+    image: "/images/events/krystel-xv/foto-2.webp",
   },
   ceremony: {
     enabled: true,
@@ -19,7 +19,7 @@ export const krystelXv = {
     time: "5:00 p. m.",
     address: "Santa María Magdalena, Balleza, Chihuahua",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Santa+Maria+Magdalena+Balleza+Chihuahua",
-    image: "/images/events/krystel-xv/hero.png",
+    image: "/images/events/krystel-xv/foto-1.webp",
   },
   reception: {
     enabled: true,
@@ -27,7 +27,7 @@ export const krystelXv = {
     time: "6:30 p. m.",
     address: "Auditorio Municipal, Balleza, Chihuahua",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Auditorio+Municipal+Balleza+Chihuahua",
-    image: "/images/events/krystel-xv/hero.png",
+    image: "/images/events/krystel-xv/foto-3.webp",
   },
   itinerary: [
     { time: "17:00", title: "Ceremonia", description: "Santa María Magdalena", icon: "heart" },
@@ -37,8 +37,12 @@ export const krystelXv = {
   family: { parents: ["Luis Carlos Hernández P.", "Élida Bustillos S."], godparents: [] },
   dressCode: { title: "Aqua, champagne y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
   gifts: [{ name: "Regalo o sobre", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un regalo o un sobre.", url: "", type: "cash" }],
-  gallery: [],
+  gallery: [
+    { src: "/images/events/krystel-xv/foto-1.webp", alt: "Krystel con vestido plateado frente a una puerta de madera" },
+    { src: "/images/events/krystel-xv/foto-2.webp", alt: "Krystel con su vestido aqua de quinceañera" },
+    { src: "/images/events/krystel-xv/foto-3.webp", alt: "Retrato de Krystel en un jardín" },
+  ],
   contact: { phone: "6491180778", whatsapp: "https://wa.me/526491180778" },
   music: { enabled: true, url: "/audio/margarita-mateo-perfect-espanol.mp3", label: "Perfect · Ed Sheeran" },
-  theme: { primary: "#78b8ca", dark: "#3f7180", champagne: "#d8c3a5", cream: "#eef8fa", ivory: "#fffdf9", rose: "#eadcc5", sage: "#9ed1dd" },
+  theme: { primary: "#5fa6aa", dark: "#3f7378", champagne: "#d8c3a5", cream: "#edf6f5", ivory: "#fffdf8", rose: "#dfc98d", sage: "#8fc4c2" },
 };
