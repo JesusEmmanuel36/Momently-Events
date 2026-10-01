@@ -79,12 +79,6 @@ export const marianaXv = {
       "height": 853
     },
     {
-      "src": "/images/events/marianajoseline-xv/foto-5.webp",
-      "alt": "Mariana Joseline, recuerdo 5",
-      "width": 480,
-      "height": 853
-    },
-    {
       "src": "/images/events/marianajoseline-xv/foto-6.webp",
       "alt": "Mariana Joseline, recuerdo 6",
       "width": 480,
@@ -109,5 +103,9 @@ export const marianaXv = {
     "ivory": "#fffdf8",
     "rose": "#b59045",
     "sage": "#244bb8"
+  },
+  "dressCode": {
+    "title": "Azul rey reservado",
+    "text": "El color azul rey está reservado para la quinceañera. Gracias por elegir otros tonos para tu vestimenta."
   }
 };
