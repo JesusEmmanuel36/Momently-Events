@@ -55,7 +55,7 @@ export const amadayXv = {
     "godparents": [
       [
         "Mariana Salomón",
-        "Juan Abril Cruz"
+        "Juan Abril"
       ],
       [
         "Karen Zambrano",
