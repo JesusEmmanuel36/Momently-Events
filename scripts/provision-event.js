@@ -10,10 +10,11 @@ import { saraBlase } from "../config/events/sara-blase.js";
 import { margaritaMateo } from "../config/events/margarita-mateo.js";
 import { krystelXv } from "../config/events/krystel-xv.js";
 import { erickErika } from "../config/events/erick-erika.js";
+import { keylaXv } from "../config/events/keyla-xv.js";
 
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika };
+const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
@@ -53,6 +54,10 @@ const itinerary = event.itinerary || [
   ...(reception.enabled === false ? [] : [{ time: event.slug === "lesly-y-marcelino" ? "19:00" : "15:00", title: "Recepción", description: reception.name, icon: "glass" }]),
 ];
 const gifts = event.gifts || (event.registry?.number ? [{ name: "Liverpool", description: `Mesa de regalos ${event.registry.number}`, url: event.registry.url, type: "link" }] : []);
+const rsvpDeadline = event.rsvpDeadline ? new Date(event.rsvpDeadline) : null;
+if (rsvpDeadline && Number.isNaN(rsvpDeadline.getTime())) {
+  throw new Error(`La fecha límite de RSVP no es válida para ${event.slug}: ${event.rsvpDeadline}`);
+}
 
 const document = {
   schemaVersion: 2,
@@ -85,7 +90,7 @@ const document = {
     theme: event.theme || (event.slug === "lesly-y-marcelino" ? { primary: "#7f91ae", dark: "#5d607d", champagne: "#d8c5a5", cream: "#f7f2f8", ivory: "#fffdfb", rose: "#b494c5", sage: "#a7b6a0" } : { primary: "#65724b", dark: "#494747", champagne: "#dfc777", cream: "#f6f1e9", ivory: "#fffdf9", rose: "#df897c", sage: "#65724b" }),
   },
   settings: {
-    rsvp: { enabled: true, deadline: Timestamp.fromDate(new Date(event.rsvpDeadline)), maxCompanions: event.maxCompanions, askMenuPreference: false, askAllergies: true, askMessage: true, askSongSuggestion: false },
+    rsvp: { enabled: true, deadline: rsvpDeadline ? Timestamp.fromDate(rsvpDeadline) : null, maxCompanions: event.maxCompanions, askMenuPreference: false, askAllergies: true, askMessage: true, askSongSuggestion: false },
     invitation: { passwordProtected: false },
   },
   updatedAt: now,

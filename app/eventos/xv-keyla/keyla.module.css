@@ -28,3 +28,5 @@
   .gallery>div{gap:.45rem}
   .locationPhoto{min-height:390px}
 }
+
+.formError{margin:0;color:#a23b3b;font-size:.75rem;line-height:1.5}

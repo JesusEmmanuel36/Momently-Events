@@ -126,8 +126,14 @@ EVENTO DE ERICK Y ERIKA
 
 Para publicar su boda y generar el acceso al panel usa:
 
-   npm run provision-event -- erick-y-erika correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+   npm run provision-event -- erick-y-erika ronzoneduardo74@gmail.com https://momentlyevents.vercel.app
 
 Enlace público:
 
 https://momentlyevents.vercel.app/eventos/erick-y-erika
+
+
+
+lopezjatzel4@gmail.com
+
+npm run provision-event -- erick-y-erika ronzoneduardo74@gmail.com https://momentlyevents.vercel.app

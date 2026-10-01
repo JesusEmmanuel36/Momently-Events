@@ -22,7 +22,9 @@ export function KeylaInvitation() {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
-  const [confirmed, setConfirmed] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [saving, setSaving] = useState(false);
   const [playing, setPlaying] = useState(false);
   const timerRef = useRef(null);
   const audioRef = useRef(null);
@@ -39,6 +41,43 @@ export function KeylaInvitation() {
   const toggleMusic = () => {
     if (!audioRef.current) return;
     if (playing) audioRef.current.pause(); else audioRef.current.play().catch(() => setPlaying(false));
+  };
+  const submitRsvp = async (event) => {
+    event.preventDefault();
+    setError("");
+    setSaving(true);
+    const form = new FormData(event.currentTarget);
+    const name = String(form.get("name") || "").trim();
+    const payload = {
+      name,
+      attending: form.get("attendance"),
+      companions: 0,
+      menuPreference: "normal",
+      allergies: "",
+      message: "",
+      songTitle: "",
+      artist: "",
+      website: "",
+    };
+    try {
+      const storageKey = "momently:rsvp:xv-keyla";
+      const stored = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const editing = Boolean(stored?.rsvpId && stored?.editToken);
+      const response = await fetch("/api/public/weddings/xv-keyla/rsvp", {
+        method: editing ? "PATCH" : "POST",
+        headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) },
+        body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }),
+      });
+      const result = response.status === 204 ? { ok: true } : await response.json();
+      if (!response.ok) throw new Error(result.error || "No fue posible enviar tu confirmación.");
+      if (result.rsvpId && result.editToken) localStorage.setItem(storageKey, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload }));
+      else if (stored) localStorage.setItem(storageKey, JSON.stringify({ ...stored, data: payload }));
+      setSuccess(name.split(" ")[0]);
+    } catch (cause) {
+      setError(cause.message);
+    } finally {
+      setSaving(false);
+    }
   };
 
   return <main className={styles.page}>
@@ -96,7 +135,7 @@ export function KeylaInvitation() {
       <section className={styles.gifts}><Gift /><span>El mejor regalo</span><h2>Tu presencia hará brillar mi noche</h2><p>Lo más importante para mí es compartir este momento contigo.</p></section>
 
       <section className={styles.rsvp}>
-        {confirmed ? <div className={styles.success}><Check /><h2>¡Gracias!</h2><p>Tu respuesta quedó registrada en esta vista previa.</p><button onClick={() => setConfirmed(false)}>Cambiar respuesta</button></div> : <form onSubmit={(event) => { event.preventDefault(); setConfirmed(true); }}><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><label>Nombre completo<input required placeholder="Escribe tu nombre" /></label><label>¿Asistirás?<select defaultValue="Sí, ahí estaré"><option>Sí, ahí estaré</option><option>No podré asistir</option></select></label><button>Confirmar asistencia</button><a href="https://wa.me/523122002067" target="_blank" rel="noreferrer">Confirmar por WhatsApp · 312 200 2067</a></form>}
+        {success ? <div className={styles.success}><Check /><h2>¡Gracias, {success}!</h2><p>Tu confirmación fue recibida correctamente.</p><button onClick={() => setSuccess("")}>Cambiar respuesta</button></div> : <form onSubmit={submitRsvp}><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><label>Nombre completo<input name="name" required placeholder="Escribe tu nombre" /></label><label>¿Asistirás?<select name="attendance" defaultValue="yes"><option value="yes">Sí, ahí estaré</option><option value="no">No podré asistir</option></select></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button><a href="https://wa.me/523122002067" target="_blank" rel="noreferrer">Confirmar por WhatsApp · 312 200 2067</a></form>}
       </section>
 
       <section className={styles.closing}><Image src={assets.disco} width={750} height={609} alt="" aria-hidden="true" /><Disc3 /><span>Nos vemos en la pista</span><h2>Keyla</h2><p>05 · 12 · 2026</p></section>
