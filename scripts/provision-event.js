@@ -12,9 +12,11 @@ import { krystelXv } from "../config/events/krystel-xv.js";
 import { erickErika } from "../config/events/erick-erika.js";
 import { keylaXv } from "../config/events/keyla-xv.js";
 
+import { amadayXv } from "../config/events/amaday-xv.js";
+
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+const templates = { [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
@@ -38,6 +40,7 @@ const firebaseApp = getApps()[0] || initializeApp({ credential: cert({
 }) });
 const db = getFirestore(firebaseApp);
 const event = templates[slug];
+if (!event.date || Number.isNaN(new Date(event.date).getTime())) throw new Error(`Confirma la fecha del evento ${slug} antes de activar su panel.`);
 const slugRef = db.collection("slugs").doc(slug);
 const slugSnapshot = await slugRef.get();
 const legacySlug = slug === "ivan-y-ernestina" ? "juan-y-ernestina" : "";

@@ -15,6 +15,11 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/xv-amaday" className={styles.card}>
+        <Image src="/images/events/amaday-xv/envelope-closed.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Amaday Guadalupe" />
+        <div className={styles.overlay} />
+        <div className={styles.copy}><small>Invitación personalizada</small><h2>Amaday Guadalupe · XV</h2><p>Rojo vino · Dorado · Champaña</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/xv-keyla" className={styles.card}>
         <Image src="/images/events/keyla-xv/envelope-closed.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación disco de XV años de Keyla" />
         <div className={styles.overlay} />
