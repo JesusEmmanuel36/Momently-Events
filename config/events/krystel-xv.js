@@ -42,6 +42,6 @@ export const krystelXv = {
   gifts: [{ name: "Regalo o sobre", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un regalo o un sobre.", url: "", type: "cash" }],
   gallery: [],
   contact: { phone: "6491180778", whatsapp: "https://wa.me/526491180778" },
-  music: { enabled: true, url: "/audio/roxana-unstoppable-sia.mp3", label: "Unstoppable · Sia" },
+  music: { enabled: true, url: "/audio/krystel.mp3", label: "Mi canción" },
   theme: { primary: "#5fa6aa", dark: "#3f7378", champagne: "#d8c3a5", cream: "#edf6f5", ivory: "#fffdf8", rose: "#dfc98d", sage: "#8fc4c2" },
 };
