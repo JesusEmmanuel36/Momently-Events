@@ -145,5 +145,5 @@ Enlace: https://momentlyevents.vercel.app/eventos/xv-amaday
 Fecha: 10 de octubre de 2026, 7:00 p. m. (hora de Sonora).
 Activar panel: npm run provision-event -- xv-amaday correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 Fotos integradas: foto-1.webp a foto-6.webp en public/images/events/amaday-xv/.
-Audio integrado: HA-ASH - Cree Y Atrévete (from TinkerBell) Letra.mp3.
+Audio integrado: public/audio/amaday-cree-y-atrevete.mp3.
 Pendientes: WhatsApp, correo para activar panel y ubicación exacta del salón INSEN.

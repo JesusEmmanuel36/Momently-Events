@@ -64,7 +64,7 @@ export function AmadayInvitation({ event }) {
 
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
   const openInvitation = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); openingTimer.current = window.setTimeout(() => setOpened(true), 2300); };
-  const toggleMusic = () => { if (!audioRef.current) return; if (playing) audioRef.current.pause(); else audioRef.current.play().catch(() => notify("La canción estará disponible próximamente")); };
+  const toggleMusic = () => { if (!audioRef.current) return; if (playing) audioRef.current.pause(); else audioRef.current.play().catch(() => notify("No se pudo reproducir el audio. Toca el botón para intentarlo de nuevo.")); };
   const submit = async (formEvent) => {
     formEvent.preventDefault(); setError(""); setSaving(true);
     const form = new FormData(formEvent.currentTarget); const name = String(form.get("name") || "").trim();

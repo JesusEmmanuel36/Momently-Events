@@ -167,7 +167,7 @@ export const amadayXv = {
   },
   "music": {
     "enabled": true,
-    "url": "/audio/HA-ASH - Cree Y Atrévete (from TinkerBell) Letra.mp3",
+    "url": "/audio/amaday-cree-y-atrevete.mp3",
     "label": "Cree y atrévete · Tinker Bell"
   },
   "theme": {
