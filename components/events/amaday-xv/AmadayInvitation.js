@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, X, Church, Crown, ExternalLink, Gift, Heart, MapPin, Pause, Play, Share2, Sparkles } from "lucide-react";
+import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, X, Church, Crown, ExternalLink, Gift, Heart, Pause, Play, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./AmadayInvitation.module.css";
@@ -103,7 +103,7 @@ export function AmadayInvitation({ event }) {
           </article>
           <article className={`${localStyles.eventCard} ${localStyles.eventCardReverse}`}>
             <div className={`${localStyles.eventCardImage} ${!event.reception.image ? localStyles.locationFallback : ""}`}>{event.reception.image && <Image src={event.reception.image} fill sizes="(max-width:800px) 100vw,50vw" alt="Amaday Guadalupe en un jardín" />}</div>
-            <div className={localStyles.eventCardCopy}><Sparkles /><span>Recepción</span><h3>{event.reception.name}</h3><strong>{event.reception.time}</strong><p>{event.reception.address}</p><a href={event.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></div>
+            <div className={localStyles.eventCardCopy}><Sparkles /><span>Recepción</span><h3>{event.reception.name}</h3><strong>{event.reception.time}</strong><p>{event.reception.address}</p></div>
           </article>
         </div>
       </section>
