@@ -157,3 +157,20 @@ Recepción: 3:30 p. m., Quinta San Juan.
 Activar panel: npm run provision-event -- xv-mariana-joseline correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 Fotos: public/images/events/marianajoseline-xv/
 Audio: public/audio/marianajoseline.mp3
+
+
+BODA DE KARINA Y DANIEL
+----------------------
+Enlace: https://momentlyevents.vercel.app/eventos/karina-y-daniel
+Panel: npm run provision-event -- karina-y-daniel correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+Confirmar año antes de activar panel. Recepción: de 3:00 a 6:00 p. m.
+Pendientes: año, WhatsApp y significado de + en nombres de padres.
+Audio: public/audio/karina-daniel.mp3; activar music.enabled en config/events/karina-daniel.js al agregarlo.
+
+
+BAUTIZO DE PATRICIA VALENTINA
+----------------------------
+Enlace: https://momentlyevents.vercel.app/eventos/bautizo-patricia-valentina
+Panel: npm run provision-event -- bautizo-patricia-valentina correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+Confirmación sin fecha límite.
+Audio integrado: public/audio/patricia-valentina-como-pagarte.mp3.
