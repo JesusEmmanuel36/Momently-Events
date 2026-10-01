@@ -83,7 +83,7 @@ export const amadayXv = {
       ],
       [
         "Elizabeth Montalvo",
-        "Jorge Medina"
+        "Jorge Mares"
       ],
       [
         "Bibiana Zambrano",
