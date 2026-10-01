@@ -61,9 +61,9 @@ export const karinaDaniel = {
     "whatsapp": "https://wa.me/525531181392"
   },
   "music": {
-    "enabled": false,
-    "url": "/audio/karina-daniel.mp3",
-    "label": "Nuestra canción"
+    "enabled": true,
+    "url": "/audio/cancion pacto con dios.MP3",
+    "label": "Un Pacto Con Dios · Rabito"
   },
   "itinerary": [
     {

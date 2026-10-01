@@ -166,7 +166,7 @@ Panel: npm run provision-event -- karina-y-daniel correo-del-cliente@gmail.com h
 Fecha configurada: 5 de diciembre de 2026, misa a las 12:30 p. m. Recepción: de 3:00 a 6:00 p. m.
 WhatsApp: 5531181392.
 Pendiente: significado de + en nombres de padres.
-Audio: public/audio/karina-daniel.mp3; activar music.enabled en config/events/karina-daniel.js al agregarlo.
+Audio integrado: public/audio/cancion pacto con dios.MP3.
 
 
 BAUTIZO DE PATRICIA VALENTINA
