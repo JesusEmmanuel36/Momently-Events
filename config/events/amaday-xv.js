@@ -135,7 +135,7 @@ export const amadayXv = {
       ],
       [
         "Gloria Fernández",
-        "Icela Noriela"
+        "Icela Noriega"
       ]
     ]
   },
