@@ -14,9 +14,11 @@ import { keylaXv } from "../config/events/keyla-xv.js";
 
 import { amadayXv } from "../config/events/amaday-xv.js";
 
+import { marianaXv } from "../config/events/mariana-xv.js";
+
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+const templates = { [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();

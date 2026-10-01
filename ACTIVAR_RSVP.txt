@@ -147,3 +147,13 @@ Activar panel: npm run provision-event -- xv-amaday correo-del-cliente@gmail.com
 Fotos integradas: foto-1.webp a foto-6.webp en public/images/events/amaday-xv/.
 Audio integrado: public/audio/amaday-cree-y-atrevete.mp3.
 Pendientes: WhatsApp, correo para activar panel y ubicación exacta del salón INSEN.
+
+
+XV DE MARIANA JOSELINE
+---------------------
+Enlace: https://momentlyevents.vercel.app/eventos/xv-mariana-joseline
+Fecha: 21 de noviembre de 2026, misa a las 2:00 p. m.
+Recepción: 3:30 p. m., Quinta San Juan.
+Activar panel: npm run provision-event -- xv-mariana-joseline correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+Fotos: public/images/events/marianajoseline-xv/
+Audio: public/audio/marianajoseline.mp3
