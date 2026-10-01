@@ -57,8 +57,8 @@ export const karinaDaniel = {
   },
   "gifts": [],
   "contact": {
-    "phone": "",
-    "whatsapp": ""
+    "phone": "5531181392",
+    "whatsapp": "https://wa.me/525531181392"
   },
   "music": {
     "enabled": false,

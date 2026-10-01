@@ -164,7 +164,8 @@ BODA DE KARINA Y DANIEL
 Enlace: https://momentlyevents.vercel.app/eventos/karina-y-daniel
 Panel: npm run provision-event -- karina-y-daniel correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 Confirmar año antes de activar panel. Recepción: de 3:00 a 6:00 p. m.
-Pendientes: año, WhatsApp y significado de + en nombres de padres.
+WhatsApp: 5531181392.
+Pendientes: año y significado de + en nombres de padres.
 Audio: public/audio/karina-daniel.mp3; activar music.enabled en config/events/karina-daniel.js al agregarlo.
 
 
