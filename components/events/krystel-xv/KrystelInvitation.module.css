@@ -67,3 +67,10 @@
   .eventCardCopy,.eventCardReverse .eventCardCopy { grid-column:1; grid-row:2; }
   .timeline > div { grid-template-columns:1fr; }
 }
+
+.eventDetails { position:relative; isolation:isolate; }
+.eventCardCopy { min-width:0; overflow-wrap:anywhere; }
+.heroName b { color:#fffdf8; text-shadow:0 3px 20px rgba(21,57,60,.65); }
+
+.timeline > div { row-gap:2rem; }
+.timeline article { min-width:0; overflow-wrap:anywhere; }

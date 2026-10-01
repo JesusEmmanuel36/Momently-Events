@@ -59,7 +59,8 @@ export function KrystelInvitation({ event }) {
     try {
       const key = `momently:rsvp:${event.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
       const response = await fetch(`/api/public/weddings/${event.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? { ok: true } : await response.json(); if (!response.ok) throw new Error(result.error || "No fue posible enviar tu confirmación.");
+      const result = response.status === 204 ? {} : await response.json();
+      if (!response.ok || result.ok !== true || !result.rsvpId) throw new Error(result.error || "No fue posible guardar tu confirmación. Inténtalo de nuevo.");
       if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload })); else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
       setSuccess(name.split(" ")[0]);
     } catch (cause) { setError(cause.message); } finally { setSaving(false); }
@@ -83,16 +84,16 @@ export function KrystelInvitation({ event }) {
         <header><span>Los momentos de mi celebración</span><h2>Misa y recepción</h2><p>Estos son los lugares y horarios para acompañarme en este día tan especial.</p></header>
         <div className={localStyles.eventDetailsGrid}>
           <article className={localStyles.eventCard}>
-            <div className={`${localStyles.eventCardImage} ${!event.ceremony.image ? localStyles.locationFallback : ""}`}>{event.ceremony.image && <Image src={event.ceremony.image} fill sizes="(max-width:800px) 100vw,50vw" alt="Krystel en su sesión de quince años" />}</div>
+            <div className={`${localStyles.eventCardImage} ${!event.ceremony.image ? localStyles.locationFallback : ""}`}>{event.ceremony.image && <Image src={event.ceremony.image} fill sizes="(max-width:800px) 100vw,50vw" alt="Arreglo floral champaña y aqua con detalles dorados para la ceremonia" />}</div>
             <div className={localStyles.eventCardCopy}><Church /><span>Misa</span><h3>{event.ceremony.name}</h3><strong>{event.ceremony.time}</strong><p>{event.ceremony.address}</p><a href={event.ceremony.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <ExternalLink /></a></div>
           </article>
           <article className={`${localStyles.eventCard} ${localStyles.eventCardReverse}`}>
-            <div className={`${localStyles.eventCardImage} ${!event.reception.image ? localStyles.locationFallback : ""}`}>{event.reception.image && <Image src={event.reception.image} fill sizes="(max-width:800px) 100vw,50vw" alt="Krystel en un jardín" />}</div>
+            <div className={`${localStyles.eventCardImage} ${!event.reception.image ? localStyles.locationFallback : ""}`}>{event.reception.image && <Image src={event.reception.image} fill sizes="(max-width:800px) 100vw,50vw" alt="Flores y velas en aqua, champaña y dorado para la recepción" />}</div>
             <div className={localStyles.eventCardCopy}><Sparkles /><span>Recepción</span><h3>{event.reception.name}</h3><strong>{event.reception.time}</strong><p>{event.reception.address}</p><a href={event.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></div>
           </article>
         </div>
       </section>
-      <section className={`${styles.timeline} ${localStyles.timeline}`} data-je-reveal><span>27 de diciembre</span><h2>Una noche inolvidable</h2><div><article><time>5:00</time><small>p. m.</small><i /><h3>Ceremonia</h3><p>Santa María Magdalena</p></article><article><time>6:30</time><small>p. m.</small><i /><h3>Cena</h3><p>Hasta las 8:30 p. m.</p></article><article><time>9:00</time><small>p. m.</small><i /><h3>Baile</h3><p>Hasta las 2:00 a. m.</p></article></div></section>
+      <section className={`${styles.timeline} ${localStyles.timeline}`} data-je-reveal><span>27 de diciembre</span><h2>Itinerario de mi celebración</h2><div>{event.itinerary.map((item) => <article key={item.title}><time>{item.displayTime}</time><small>p. m.</small><i /><h3>{item.title}</h3>{item.description && <p>{item.description}</p>}</article>)}</div></section>
       <section className={styles.dress} data-je-reveal><span>Colores reservados</span><h2>Aqua, champagne y dorado</h2><p>Estos colores están reservados para la quinceañera y los detalles especiales de su celebración. Gracias por elegir otros tonos para tu vestimenta.</p></section>
       <section className={styles.gifts} data-je-reveal><Gift /><span>Un detalle especial</span><h2>Tu presencia es mi mejor regalo</h2><p>Si además deseas tener un detalle conmigo, puedes obsequiar un regalo o un sobre. Lo recibiré con mucho cariño, sin que sea una obligación.</p></section>
       <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>27 de diciembre de 2026</h2><button onClick={addCalendar}>Agregar a mi calendario</button></section>

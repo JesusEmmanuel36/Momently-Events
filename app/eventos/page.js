@@ -31,7 +31,7 @@ export default function EventsPage() {
         <div className={styles.copy}><small>Invitación personalizada</small><h2>Erick & Erika</h2><p>Verde salvia · Dorado · Beige</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
       <Link href="/eventos/xv-krystel" className={styles.card}>
-        <Image src="/images/events/krystel-xv/foto-2.webp" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Krystel" />
+        <Image src="/images/events/krystel-xv/hero-floral.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Krystel" />
         <div className={styles.overlay} />
         <div className={styles.copy}><small>Invitación personalizada</small><h2>Krystel · XV</h2><p>Aqua apagado · Champagne · Dorado</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
