@@ -49,13 +49,13 @@ export const patriciaBautizo = {
   ],
   "family": {
     "parents": [
-      "Evelyn Mendoza",
-      "Santos Zárate"
+      "Evelyn Fernanda Mendoza Luna",
+      "Santos Abimael Zárate Díaz"
     ],
     "godparents": [
       [
-        "Efraín Ortiz",
-        "Karla Montes"
+        "Karla Liliana Montes Mendoza",
+        "Efraín Ortiz Ávila"
       ]
     ]
   },
