@@ -30,7 +30,7 @@ export const karinaDaniel = {
   "reception": {
     "enabled": true,
     "name": "Nuestra recepción",
-    "time": "3:00 a 6:00 p. m.",
+    "time": "3:00 p. m.",
     "address": "Calle Micuani, Atacaxco, La Magdalena Contreras, Ciudad de México",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Calle%20Micuani%20Atacaxco%20La%20Magdalena%20Contreras%20Ciudad%20de%20Mexico",
     "image": "/images/events/karina-daniel/rings.png"
@@ -38,12 +38,12 @@ export const karinaDaniel = {
   "gallery": [],
   "family": {
     "brideParents": [
-      "Eduardo Martin Rodríguez P. +",
-      "María Inés Pliego G. A. +"
-    ],
-    "groomParents": [
       "Juan José Nájera J.",
       "Carmen Olga Ávila G."
+    ],
+    "groomParents": [
+      "Eduardo Martin Rodríguez P. +",
+      "María Inés Pliego G. +"
     ],
     "godparents": [
       "Juana Troncoso Gutierrez",
@@ -75,7 +75,7 @@ export const karinaDaniel = {
     {
       "time": "15:00",
       "title": "Recepción y comida",
-      "description": "De 3:00 a 6:00 p. m. · Calle Micuani, Atacaxco",
+      "description": "Calle Micuani, Atacaxco",
       "icon": "glass"
     }
   ],

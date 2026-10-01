@@ -163,7 +163,7 @@ BODA DE KARINA Y DANIEL
 ----------------------
 Enlace: https://momentlyevents.vercel.app/eventos/karina-y-daniel
 Panel: npm run provision-event -- karina-y-daniel correo-del-cliente@gmail.com https://momentlyevents.vercel.app
-Fecha configurada: 5 de diciembre de 2026, misa a las 12:30 p. m. Recepción: de 3:00 a 6:00 p. m.
+Fecha configurada: 5 de diciembre de 2026, misa a las 12:30 p. m. Recepción: 3:00 p. m.
 WhatsApp: 5531181392.
 Pendiente: significado de + en nombres de padres.
 Audio integrado: public/audio/cancion pacto con dios.MP3.
