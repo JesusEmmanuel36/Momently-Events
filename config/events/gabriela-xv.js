@@ -71,12 +71,6 @@ export const gabrielaXv = {
       "width": 480,
       "height": 853,
       "alt": "Gabriela Elizabeth, fotografía 2"
-    },
-    {
-      "src": "/images/events/gabriela-xv/829554282_1810537463281369_3385969953023606553_n.webp",
-      "width": 480,
-      "height": 640,
-      "alt": "Gabriela Elizabeth, fotografía 3"
     }
   ],
   "gifts": [],

@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, X, Church, Crown, ExternalLink, Heart, Pause, Play, Share2, Sparkles } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, X, Church, Crown, ExternalLink, Heart, Pause, Play, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./GabrielaInvitation.module.css";
-import { openGoogleCalendar } from "@/lib/calendar";
 
 const floral = "/images/events/gabriela-xv/floral.png";
 const envelopeClosed = "/images/events/gabriela-xv/envelope-closed.png";
@@ -27,9 +26,6 @@ export function GabrielaInvitation({ event }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [toast, setToast] = useState("");
   const [activePhoto, setActivePhoto] = useState(null);
@@ -65,24 +61,6 @@ export function GabrielaInvitation({ event }) {
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
   const openInvitation = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); openingTimer.current = window.setTimeout(() => setOpened(true), 2300); };
   const toggleMusic = () => { if (!audioRef.current) return; if (playing) audioRef.current.pause(); else audioRef.current.play().catch(() => notify("No se pudo reproducir el audio. Toca el botón para intentarlo de nuevo.")); };
-  const submit = async (formEvent) => {
-    formEvent.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(formEvent.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: Number(form.get("companions") || 0), menuPreference: "normal", allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    try {
-      const key = `momently:rsvp:${event.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${event.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? {} : await response.json();
-      if (!response.ok || result.ok !== true || !result.rsvpId) throw new Error(result.error || "No fue posible guardar tu confirmación. Inténtalo de nuevo.");
-      if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload })); else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
-  };
-  const addCalendar = () => {
-    if (!event.date) return;
-    openGoogleCalendar({ title: "XV años de Gabriela Elizabeth", start: event.date, end: event.endDate, location: event.ceremony.address, details: event.hero.quote });
-  };
-  const share = async () => { const data = { title: "XV años de Gabriela Elizabeth", text: event.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 
   return <div className={styles.wedding} style={theme}>
     {event.music.enabled && <audio ref={audioRef} src={event.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
@@ -108,10 +86,6 @@ export function GabrielaInvitation({ event }) {
         </div>
       </section>
       <section className={localStyles.godparents} data-je-reveal><Heart /><span>Con mucho cariño</span><h2>Mis padrinos</h2><div>{event.family.godparents.map((pair) => <article key={pair.join(" & ")}><p>{pair[0]}</p><i>&</i><p>{pair[1]}</p></article>)}</div></section>
-      <section className={`${styles.timeline} ${localStyles.timeline}`} data-je-reveal><span>{event.dateDisplay}</span><h2>Los momentos de mi celebración</h2><div><article><time>2:00</time><small>p. m.</small><i /><h3>Ceremonia religiosa</h3><p>{event.ceremony.name}</p></article><article><time>{event.reception.time}</time><i /><h3>Recepción</h3><p>{event.reception.name}</p></article></div></section>
-      <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{event.dateDisplay}</h2><button onClick={addCalendar} disabled={!event.date}>Agregar a mi calendario</button></section>
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Me acompañas?</h2><p>Confirma tu asistencia para compartir conmigo esta noche especial.</p>{event.contact.whatsapp && <a href={event.contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {event.contact.phone}</a>}<div>G</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibí tu respuesta. Me dará mucha alegría compartir esta noche contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Comentarios o consideraciones<textarea name="notes" rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para Gabriela Elizabeth<textarea name="message" rows="4" placeholder="Déjame unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
-      <section className={`${styles.closing} ${!event.hero.image ? localStyles.closingFallback : ""}`} data-je-reveal>{event.hero.image && <Image src={event.hero.image} fill sizes="100vw" alt="Celebración de Gabriela Elizabeth" />}<div /><Heart /><span>Gracias por ser parte de</span><h2>mi noche soñada.</h2><p>Gabriela Elizabeth</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
     {activePhoto !== null && <dialog ref={galleryDialog} className={`${styles.lightbox} ${localStyles.galleryDialog}`} aria-label="Galería de Gabriela Elizabeth" onCancel={() => setActivePhoto(null)} onClose={() => setActivePhoto(null)} onClick={(e) => { if (e.target === e.currentTarget) setActivePhoto(null); }} onKeyDown={(e) => { if (e.key === "ArrowLeft") { e.preventDefault(); setActivePhoto((activePhoto - 1 + event.gallery.length) % event.gallery.length); } if (e.key === "ArrowRight") { e.preventDefault(); setActivePhoto((activePhoto + 1) % event.gallery.length); } }}>
       <button type="button" className={styles.lightboxClose} onClick={() => setActivePhoto(null)} aria-label="Cerrar galería" autoFocus><X /></button>
