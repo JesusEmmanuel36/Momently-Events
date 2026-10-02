@@ -6,10 +6,10 @@ export const danishaXv = {
     "partner1": "Danisha Jatziri",
     "partner2": "Mis XV"
   },
-  "date": "2027-01-27T18:00:00-06:00",
+  "date": "2027-01-23T18:00:00-06:00",
   "endDate": null,
-  "dateShort": "27 · 01 · 2027",
-  "dateDisplay": "Miércoles · 27 de enero · 2027",
+  "dateShort": "23 · 01 · 2027",
+  "dateDisplay": "Sábado · 23 de enero · 2027",
   "timezone": "America/Mexico_City",
   "maxCompanions": 5,
   "hero": {
