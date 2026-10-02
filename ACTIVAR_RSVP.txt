@@ -209,5 +209,5 @@ RSVP sin fecha límite. Activar el panel antes de compartir la invitación.
 BODA DE OMAR Y LILIANA
 Enlace: https://momentlyevents.vercel.app/eventos/omar-y-liliana
 Panel: npm run provision-event -- omar-y-liliana correo-del-cliente@gmail.com https://momentlyevents.vercel.app
-Lunes 26 de octubre de 2026. Solo recepción, 8:00 p. m.
+Sábado 24 de octubre de 2026. Solo recepción, 8:00 p. m.
 Audio: public/audio/omarliliana.mp3

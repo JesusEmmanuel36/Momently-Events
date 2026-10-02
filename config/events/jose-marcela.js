@@ -63,6 +63,7 @@ export const joseMarcela = {
     "title": "Formal",
     "text": "Los colores blanco y verde están reservados. Te agradecemos elegir otros colores para tu vestimenta."
   },
+  "attendanceNote": "Celebración solo para adultos. Sin niños. Gracias por su comprensión.",
   "gifts": [
     {
       "name": "Transferencia bancaria",

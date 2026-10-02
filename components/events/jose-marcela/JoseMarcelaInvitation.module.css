@@ -119,3 +119,5 @@
 .bank dt { font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; margin-top:1rem; color:var(--muted); }
 .bank dd { margin:.4rem 0 0; font-size:1rem; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
 @media(max-width:600px){ .photoGrid { grid-template-columns:1fr; } }
+
+.adultsOnly { margin:1.5rem auto 0; color:var(--charcoal)!important; font-weight:600; }
