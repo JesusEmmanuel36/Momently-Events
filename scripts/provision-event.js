@@ -24,9 +24,11 @@ import { danishaXv } from "../config/events/danisha-xv.js";
 
 import { gabrielaXv } from "../config/events/gabriela-xv.js";
 
+import { joseMarcela } from "../config/events/jose-marcela.js";
+
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+const templates = { [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
@@ -96,7 +98,7 @@ const document = {
     dressCode: { enabled: Boolean(event.dressCode), title: event.dressCode?.title || "", text: event.dressCode?.text || "", colors: [] },
     gifts,
     hotels: [], importantInfo: event.importantInfo || [], faqs: [],
-    bank: { enabled: false, bank: "", holder: "", clabe: "", account: "" },
+    bank: event.bank || { enabled: false, bank: "", holder: "", clabe: "", account: "" },
     sections: { story: false, gallery: Boolean(event.gallery?.length), itinerary: itinerary.length > 0, gifts: gifts.length > 0, hotels: false, important: Boolean(event.importantInfo?.length), calendar: true, songRequest: false, faqs: false },
     contact: { whatsapp: event.contact?.phone || "" },
     seo: { title: event.eventTitle || `${event.couple.partner1} y ${event.couple.partner2} | Nuestra boda`, description: event.hero.quote, ogImageUrl: event.hero.image },

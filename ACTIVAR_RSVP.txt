@@ -198,3 +198,10 @@ Audio: margarita-mateo-perfect-espanol.mp3
 CORREGIR CORREO DEL PANEL DE DANISHA
 npm run change-event-owner-email -- xv-danisha-jatziri lilianpamela280112@gmail.com lilianpame280112@gmail.com https://momentlyevents.vercel.app
 El comando conserva confirmaciones, retira el acceso del correo anterior y muestra un nuevo enlace de activación para el correo correcto.
+
+BODA DE JOSÉ BRUNO Y MARCELA
+Enlace: https://momentlyevents.vercel.app/eventos/jose-y-marcela
+Panel: npm run provision-event -- jose-y-marcela correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+Fecha: 23 de enero de 2027. Ceremonia: 1:00 p. m. Recepción: 3:00 p. m.
+Audio: public/audio/joseymarcela.mp3
+RSVP sin fecha límite. Activar el panel antes de compartir la invitación.
