@@ -1,0 +1,14 @@
+.page { min-height:100vh; padding:2rem 1rem 3rem; background:#e9e5df; display:grid; justify-items:center; gap:1.25rem; }
+.toolbar { width:min(100%,760px); display:flex; justify-content:center; gap:.8rem; flex-wrap:wrap; }
+.toolbar a,.toolbar button { min-height:44px; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border:1px solid #b77972; background:#fbf5eb; color:#754842; font:600 .72rem/1 sans-serif; letter-spacing:.04em; cursor:pointer; }
+.toolbar svg { width:17px; height:17px; }
+.sheet { width:min(5in,calc(100vw - 2rem)); aspect-ratio:5/7; overflow:hidden; background:#fbf5eb; box-shadow:0 20px 55px rgba(46,40,29,.22); }
+.sheet img { display:block; width:100%; height:100%; object-fit:cover; }
+.help { max-width:620px; margin:0; text-align:center; color:#656158; font:.78rem/1.55 sans-serif; }
+
+@page { size:5in 7in; margin:0; }
+@media print {
+  .page { min-height:0; display:block; padding:0; background:white; }
+  .toolbar,.help { display:none!important; }
+  .sheet { width:5in; height:7in; box-shadow:none; }
+}

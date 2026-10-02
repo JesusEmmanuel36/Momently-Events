@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "set-admin": "node scripts/set-admin.js",
-    "provision-event": "node scripts/provision-event.js"
+    "provision-event": "node scripts/provision-event.js",
+    "change-event-owner-email": "node scripts/change-event-owner-email.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

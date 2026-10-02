@@ -184,3 +184,17 @@ Panel: npm run provision-event -- xv-danisha-jatziri correo-del-cliente@gmail.co
 RSVP sin fecha límite. Selector de 0 a 5 invitados adicionales por persona.
 Solo recepción: 23 de enero de 2027 a las 6:00 p. m.
 Audio pendiente: public/audio/danisha-young-and-beautiful.mp3; activar music.enabled en config/events/danisha-xv.js al agregarlo.
+
+ROXANA: VERSIÓN PARA IMPRIMIR
+https://momentlyevents.vercel.app/eventos/roxana-50/imprimir
+Descargar PNG o imprimir/guardar en PDF. Tamaño 5 × 7 pulgadas, vertical, sin márgenes.
+
+XV DE GABRIELA ELIZABETH
+Enlace: https://momentlyevents.vercel.app/eventos/xv-gabriela-elizabeth
+Panel: npm run provision-event -- xv-gabriela-elizabeth correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+31 de octubre de 2026. Ceremonia: 2:00 p. m. Recepción: 3:00 p. m.
+Audio: margarita-mateo-perfect-espanol.mp3
+
+CORREGIR CORREO DEL PANEL DE DANISHA
+npm run change-event-owner-email -- xv-danisha-jatziri lilianpamela280112@gmail.com lilianpame280112@gmail.com https://momentlyevents.vercel.app
+El comando conserva confirmaciones, retira el acceso del correo anterior y muestra un nuevo enlace de activación para el correo correcto.
