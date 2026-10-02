@@ -38,7 +38,7 @@ export const krystelXv = {
     { time: "21:00", displayTime: "9:00", title: "Baile", description: "9:00 p. m. – 2:00 a. m.", icon: "music" },
   ],
   family: { parents: ["Luis Carlos Hernández P.", "Élida Bustillos S."], godparents: [] },
-  dressCode: { title: "Aqua, champagne y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
+  dressCode: { title: "Teal Green, champagne y dorado reservados", text: "Agradecemos elegir otros tonos para tu vestimenta." },
   gifts: [{ name: "Regalo o sobre", description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un regalo o un sobre.", url: "", type: "cash" }],
   gallery: [],
   contact: { phone: "6491180778", whatsapp: "https://wa.me/526491180778" },
