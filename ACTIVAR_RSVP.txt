@@ -211,3 +211,10 @@ Enlace: https://momentlyevents.vercel.app/eventos/omar-y-liliana
 Panel: npm run provision-event -- omar-y-liliana correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 Sábado 24 de octubre de 2026. Solo recepción, 8:00 p. m.
 Audio: public/audio/omarliliana.mp3
+
+BODA DE FERNANDA Y ALEJANDRO
+Enlace: https://momentlyevents.vercel.app/eventos/fernanda-y-alejandro
+Panel: npm run provision-event -- fernanda-y-alejandro correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+7 de noviembre de 2026, 4 a 10 p. m. Horario de Ajax, Ontario (America/Toronto).
+Audio: public/audio/fernandaAlejandro.mp3
+Confirmaciones sin fecha límite. Activar el panel antes de compartir.
