@@ -205,3 +205,9 @@ Panel: npm run provision-event -- jose-y-marcela correo-del-cliente@gmail.com ht
 Fecha: 23 de enero de 2027. Ceremonia: 1:00 p. m. Recepción: 3:00 p. m.
 Audio: public/audio/joseymarcela.mp3
 RSVP sin fecha límite. Activar el panel antes de compartir la invitación.
+
+BODA DE OMAR Y LILIANA
+Enlace: https://momentlyevents.vercel.app/eventos/omar-y-liliana
+Panel: npm run provision-event -- omar-y-liliana correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+Lunes 26 de octubre de 2026. Solo recepción, 8:00 p. m.
+Audio: public/audio/omarliliana.mp3

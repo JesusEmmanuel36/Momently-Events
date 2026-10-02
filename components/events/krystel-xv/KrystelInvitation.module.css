@@ -74,3 +74,13 @@
 
 .timeline > div { row-gap:2rem; }
 .timeline article { min-width:0; overflow-wrap:anywhere; }
+
+.familyGrid p { font-family:var(--font-script),cursive; font-weight:700; }
+.reservedColors { list-style:none; padding:0; margin:3rem auto 0; max-width:680px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(.75rem,3vw,2rem); }
+.reservedColors li { min-width:0; display:grid; justify-items:center; gap:1.25rem; }
+.reservedColors strong { color:var(--charcoal); font-family:var(--font-serif),serif; font-size:clamp(.9rem,2.5vw,1.3rem); font-weight:500; }
+.colorCircle { display:block; width:100%; max-width:170px; aspect-ratio:1; border-radius:50%; border:5px double var(--gold); box-shadow:0 0 0 5px var(--paper),0 0 0 6px var(--gold-soft),0 8px 24px rgba(64,83,86,.14); }
+.aqua { background:radial-gradient(circle at 28% 25%,#edf6f5 0%,#8fc4c2 25%,#5fa6aa 62%,#3f7378 100%); }
+.champagne { background:radial-gradient(circle at 28% 25%,#fffdf8 0%,#e8dcc6 28%,#d8c3a5 68%,#bfa382 100%); }
+.gold { background:radial-gradient(circle at 28% 25%,#fff4cf 0%,#dfc98d 25%,#b59045 65%,#896324 100%); }
+@media(max-width:600px){ .reservedColors { margin-top:2.25rem; } .colorCircle { border-width:3px; } }
