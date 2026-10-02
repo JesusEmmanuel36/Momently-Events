@@ -175,3 +175,12 @@ Enlace: https://momentlyevents.vercel.app/eventos/bautizo-patricia-valentina
 Panel: npm run provision-event -- bautizo-patricia-valentina correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 Confirmación sin fecha límite.
 Audio integrado: public/audio/patricia-valentina-como-pagarte.mp3.
+
+
+XV DE DANISHA JATZIRI
+--------------------
+Enlace: https://momentlyevents.vercel.app/eventos/xv-danisha-jatziri
+Panel: npm run provision-event -- xv-danisha-jatziri correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+RSVP sin fecha límite. Selector de 0 a 5 invitados adicionales por persona.
+Solo recepción: 27 de enero de 2027 a las 6:00 p. m.
+Audio pendiente: public/audio/danisha-young-and-beautiful.mp3; activar music.enabled en config/events/danisha-xv.js al agregarlo.

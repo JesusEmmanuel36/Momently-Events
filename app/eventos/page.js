@@ -15,6 +15,10 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/xv-danisha-jatziri" className={styles.card}>
+        <Image src="/images/events/danisha-xv/envelope-closed.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Danisha Jatziri" />
+        <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>Danisha Jatziri · XV</h2><p>Noche estrellada · Azul marino</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/bautizo-patricia-valentina" className={styles.card}>
         <Image src="/images/events/bautizo-patricia-valentina/foto-9.webp" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación al bautizo de Patricia Valentina" />
         <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>Patricia Valentina</h2><p>Bautizo · Café · Champaña · Marfil</p><strong>Ver invitación <span>→</span></strong></div>

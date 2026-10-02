@@ -20,9 +20,11 @@ import { karinaDaniel } from "../config/events/karina-daniel.js";
 
 import { patriciaBautizo } from "../config/events/patricia-bautizo.js";
 
+import { danishaXv } from "../config/events/danisha-xv.js";
+
 nextEnv.loadEnvConfig(process.cwd());
 
-const templates = { [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+const templates = { [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
