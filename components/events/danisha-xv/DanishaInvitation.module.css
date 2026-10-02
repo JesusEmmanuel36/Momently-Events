@@ -102,3 +102,5 @@
 .night input::placeholder,.night textarea::placeholder { color:#aebed4; opacity:1; }
 
 @media(max-width:600px){ .photoGridStatic { grid-template-columns:1fr; } }
+
+.night .openLabel { color:#102a47; background:#fffdf9; font-weight:700; }
