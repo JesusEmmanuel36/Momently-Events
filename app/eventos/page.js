@@ -24,8 +24,8 @@ export default function EventsPage() {
         <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>Omar & Liliana</h2><p>Perlas · Champaña · Marfil</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
       <Link href="/eventos/jose-y-marcela" className={styles.card}>
-        <Image src="/images/events/jose-marcela/envelope-closed.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de José Bruno y Marcela" />
-        <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>José Bruno & Marcela</h2><p>Blanco · Verde</p><strong>Ver invitación <span>→</span></strong></div>
+        <Image src="/images/events/jose-marcela/envelope-closed-cream.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de boda de José Bruno y Marcela" />
+        <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>José Bruno & Marcela</h2><p>Crema · Verde</p><strong>Ver invitación <span>→</span></strong></div>
       </Link>
       <Link href="/eventos/xv-gabriela-elizabeth" className={styles.card}>
         <Image src="/images/events/gabriela-xv/envelope-closed.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Invitación de XV años de Gabriela Elizabeth" />

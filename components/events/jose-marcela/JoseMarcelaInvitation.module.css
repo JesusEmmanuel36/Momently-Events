@@ -108,7 +108,7 @@
   .heroName { font-size: 3.45rem !important; }
 }
 
-.floralPanel { background:radial-gradient(ellipse at center,#fff 0%,#edf4ee 60%,#c5d9cc 100%); }
+.floralPanel { background:radial-gradient(ellipse at center,#fbf3e4 0%,#f1e3cb 60%,#e4d1b4 100%); }
 .floralPanel img { object-fit:contain!important; padding:clamp(1.5rem,4vw,3rem); }
 .photoGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; align-items:start; }
 .photoGrid button { width:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
@@ -121,3 +121,16 @@
 @media(max-width:600px){ .photoGrid { grid-template-columns:1fr; } }
 
 .adultsOnly { margin:1.5rem auto 0; color:var(--charcoal)!important; font-weight:600; }
+
+.fullNames.fullNames { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:clamp(.6rem,2vw,1.5rem); width:min(100%,820px); margin:2.5rem auto 0; font-size:clamp(1.35rem,4.5vw,2.7rem); letter-spacing:0; text-transform:none; font-family:var(--font-script),cursive; line-height:1.3; }
+.fullNames > span { display:grid; justify-items:center; gap:.4rem; min-width:0; }
+.fullNames b { font-weight:400; }
+.fullNames small { font-size:clamp(.8rem,3.3vw,1.7rem); white-space:nowrap; }
+.fullNames i { font-style:normal; font-size:1.2em; padding:0; }
+.heroName.heroName { font-family:var(--font-script),cursive; font-size:clamp(3.5rem,11vw,8rem)!important; line-height:1!important; }
+.heroName b { font-family:inherit; }
+.letterName.letterName { font-family:var(--font-script),cursive; font-size:clamp(1.7rem,5vw,3rem)!important; line-height:1!important; }
+
+.openLabel.openLabel { background:#fbf3e4; border-color:#f1e3cb; }
+.heroName b { color:#fbf3e4; }
+.closing .fullNames { color:#fbf3e4; }

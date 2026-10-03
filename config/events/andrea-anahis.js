@@ -10,7 +10,7 @@ export const andreaAnahis = {
   hero: {
     subtitle: "Mis XV años",
     quote: "Hay momentos inolvidables que se guardan para siempre en el corazón. Me hará muy feliz compartir contigo esta noche tan especial.",
-    image: "/images/events/andrea-anahis/hero.png",
+    image: "/images/events/andrea-anahis/foto1.png",
   },
   ceremony: {
     enabled: true,
@@ -18,7 +18,7 @@ export const andreaAnahis = {
     time: "6:00 p. m.",
     address: "Puerto Progreso 2043, El Vallado, 80110 Culiacán Rosales, Sin.",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Parroquia+del+Perpetuo+Socorro+Puerto+Progreso+2043+El+Vallado+Culiacan+Sinaloa",
-    image: "/images/events/andrea-anahis/hero.png",
+    image: "/images/events/andrea-anahis/foto2.png",
   },
   reception: {
     enabled: true,
@@ -26,8 +26,19 @@ export const andreaAnahis = {
     time: "8:00 p. m.",
     address: "Magnolias, Prados de Occidente, 80050 Culiacán Rosales, Sin.",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jardin+Arias+Magnolias+Prados+de+Occidente+Culiacan+Sinaloa",
-    image: "/images/events/andrea-anahis/hero.png",
+    image: "/images/events/andrea-anahis/foto3.png",
   },
+  gallery: [
+    { src: "/images/events/andrea-anahis/foto1.png", width: 1066, height: 1600, alt: "Andrea Anahis · fotografía 1" },
+    { src: "/images/events/andrea-anahis/foto2.png", width: 1600, height: 1066, alt: "Andrea Anahis · fotografía 2" },
+    { src: "/images/events/andrea-anahis/foto3.png", width: 1600, height: 1066, alt: "Andrea Anahis · fotografía 3" },
+    { src: "/images/events/andrea-anahis/foto4.png", width: 1066, height: 1600, alt: "Andrea Anahis · fotografía 4" },
+    { src: "/images/events/andrea-anahis/foto5.webp", width: 480, height: 720, alt: "Andrea Anahis · fotografía 5" },
+    { src: "/images/events/andrea-anahis/foto6.webp", width: 480, height: 720, alt: "Andrea Anahis · fotografía 6" },
+    { src: "/images/events/andrea-anahis/foto7.webp", width: 720, height: 480, alt: "Andrea Anahis · fotografía 7" },
+    { src: "/images/events/andrea-anahis/foto8.webp", width: 480, height: 720, alt: "Andrea Anahis · fotografía 8" },
+    { src: "/images/events/andrea-anahis/foto9.webp", width: 480, height: 720, alt: "Andrea Anahis · fotografía 9" },
+  ],
   itinerary: [
     { time: "18:00", title: "Misa", description: "Parroquia del Perpetuo Socorro", icon: "heart" },
     { time: "20:00", title: "Recepción", description: "Jardín Arias", icon: "sparkles" },

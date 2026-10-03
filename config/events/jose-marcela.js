@@ -20,15 +20,15 @@ export const joseMarcela = {
   "calendarDate": "23 de enero de 2027",
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Con mucha alegría queremos compartir contigo el comienzo de nuestra vida juntos. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos para siempre.",
-    "image": "/images/events/jose-marcela/foto1.jpg"
+    "quote": "Hace casi once años decidimos empezar una vida juntos. Hoy, con la familia que hemos construido y la mirada cómplice de nuestro hijo, por fin nos damos el «sí, acepto».",
+    "image": "/images/events/jose-marcela/foto4.jpg"
   },
   "ceremony": {
     "enabled": true,
     "name": "Templo Cristo Sacerdote",
     "time": "1:00 p. m.",
     "address": "Avenida Conchita 3015, Loma Bonita, Zapopan, Jalisco",
-    "image": "/images/events/jose-marcela/floral.png",
+    "image": "/images/events/jose-marcela/floral-cream.png",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Templo%20Cristo%20Sacerdote%20Avenida%20Conchita%203015%2C%20Loma%20Bonita%2C%20Zapopan%2C%20Jalisco"
   },
   "reception": {
@@ -36,7 +36,7 @@ export const joseMarcela = {
     "name": "Hacienda Campestre",
     "time": "3:00 p. m.",
     "address": "Avenida Dr. Mateo del Regil 77, colonia El Briseño, Zapopan, Jalisco",
-    "image": "/images/events/jose-marcela/floral.png",
+    "image": "/images/events/jose-marcela/floral-cream.png",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hacienda%20Campestre%20Avenida%20Dr.%20Mateo%20del%20Regil%2077%2C%20colonia%20El%20Brise%C3%B1o%2C%20Zapopan%2C%20Jalisco"
   },
   "gallery": [
@@ -57,6 +57,24 @@ export const joseMarcela = {
       "alt": "José Bruno y Marcela, fotografía 3",
       "width": 720,
       "height": 1280
+    },
+    {
+      "src": "/images/events/jose-marcela/foto5.webp",
+      "alt": "José Bruno y Marcela, fotografía 5",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "src": "/images/events/jose-marcela/foto6.webp",
+      "alt": "José Bruno y Marcela, fotografía 6",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "src": "/images/events/jose-marcela/foto7.webp",
+      "alt": "José Bruno y Marcela, fotografía 7",
+      "width": 497,
+      "height": 480
     }
   ],
   "dressCode": {
@@ -67,7 +85,7 @@ export const joseMarcela = {
   "gifts": [
     {
       "name": "Transferencia bancaria",
-      "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, puedes hacerlo por transferencia bancaria.",
+      "description": "El mejor regalo para nosotros es contar con tu presencia en este día tan especial. Sin embargo, como ya tenemos nuestro hogar equipado, si deseas hacernos un obsequio, agradeceremos enormemente tu aportación en efectivo o por transferencia para ayudarnos a construir nuevos proyectos.",
       "url": "",
       "type": "cash"
     }
@@ -117,8 +135,8 @@ export const joseMarcela = {
     "primary": "#386548",
     "dark": "#183a29",
     "champagne": "#a9c6ad",
-    "cream": "#edf4ee",
-    "ivory": "#ffffff",
+    "cream": "#f1e3cb",
+    "ivory": "#fbf3e4",
     "rose": "#73977b",
     "sage": "#527c61"
   }

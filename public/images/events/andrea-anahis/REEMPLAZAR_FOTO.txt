@@ -1,17 +1,8 @@
-FOTO DE ANDREA ANAHIS
-=====================
+FOTOS DE ANDREA ANAHIS
 
-Mientras no exista una fotografía de la quinceañera, la invitación usa la
-imagen decorativa generada:
-
-hero.png
-
-Para utilizar fotografías reales de Andrea, colócalas en esta carpeta como:
-
-foto-1.jpg
-foto-2.jpg
-foto-3.jpg
-
-Después se asignará una a la portada, otra a la sección de la misa y otra a
-la recepción, además de preparar la galería. El sobre y sus animaciones no se
-verán afectados.
+Portada: foto1.png
+Misa: foto2.png
+Recepción: foto3.png
+Galería: foto1.png a foto4.png y foto5.webp a foto9.webp.
+Las fotografías se pueden ampliar al tocarlas.
+El sobre conserva su diseño y animaciones.

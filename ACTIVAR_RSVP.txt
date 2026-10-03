@@ -218,3 +218,5 @@ Panel: npm run provision-event -- fernanda-y-alejandro correo-del-cliente@gmail.
 7 de noviembre de 2026, 4 a 10 p. m. Horario de Ajax, Ontario (America/Toronto).
 Audio: public/audio/fernandaAlejandro.mp3
 Confirmaciones sin fecha límite. Activar el panel antes de compartir.
+
+JOSÉ BRUNO Y MARCELA: las confirmaciones serán por teléfono al 3312290847 o 3318434864; la invitación no muestra formulario RSVP.
