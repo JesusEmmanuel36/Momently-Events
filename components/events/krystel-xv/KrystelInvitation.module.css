@@ -81,10 +81,12 @@
 .reservedColors strong { color:var(--charcoal); font-family:var(--font-serif),serif; font-size:clamp(.9rem,2.5vw,1.3rem); font-weight:500; }
 .colorCircle { display:block; width:100%; max-width:170px; aspect-ratio:1; border-radius:50%; border:5px double var(--gold); box-shadow:0 0 0 5px var(--paper),0 0 0 6px var(--gold-soft),0 8px 24px rgba(64,83,86,.14); }
 .tealGreen { background:radial-gradient(circle at 28% 25%,#edf6f5 0%,#8fc4c2 25%,#5fa6aa 62%,#3f7378 100%); }
-.champagne { background:radial-gradient(circle at 28% 25%,#fffdf8 0%,#e8dcc6 28%,#d8c3a5 68%,#bfa382 100%); }
+.champagne { background:#d8c3a5; }
 .gold { background:radial-gradient(circle at 28% 25%,#fff4cf 0%,#dfc98d 25%,#b59045 65%,#896324 100%); }
 @media(max-width:600px){ .reservedColors { margin-top:2.25rem; } .colorCircle { border-width:3px; } }
 
 .colorCircle { position:relative; overflow:hidden; }
 .colorCircle::before { content:""; position:absolute; inset:0; border-radius:inherit; background-image:radial-gradient(circle,#fffdf8 0 .7px,transparent 1.2px),radial-gradient(circle,#ffffffb3 0 .9px,transparent 1.5px),radial-gradient(circle,#493c2d55 0 .6px,transparent 1px); background-size:7px 9px,13px 11px,5px 7px; background-position:0 0,4px 3px,2px 4px; opacity:.8; }
 .colorCircle::after { content:""; position:absolute; inset:0; border-radius:inherit; background:radial-gradient(ellipse 13px 2px at 28% 30%,white,transparent),radial-gradient(ellipse 2px 13px at 28% 30%,white,transparent),radial-gradient(ellipse 10px 1px at 70% 66%,white,transparent),radial-gradient(ellipse 1px 10px at 70% 66%,white,transparent),radial-gradient(circle at 28% 30%,#ffffffaa,transparent 12%),radial-gradient(circle at 70% 66%,#ffffff99,transparent 10%); }
+
+.champagne::before,.champagne::after { content:none; }
