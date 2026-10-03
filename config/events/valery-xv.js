@@ -50,6 +50,12 @@ export const valeryXv = {
       "icon": "music"
     }
   ],
+  "mother": {
+    "name": "Yazmin Torres Linares",
+    "image": "/images/events/xv-valery-jatziry/image.png",
+    "width": 720,
+    "height": 1281
+  },
   "dressCode": {
     "title": "Vestimenta vaquera",
     "text": "Botas, sombrero y tu mejor estilo vaquero para acompañarme en esta celebración."
