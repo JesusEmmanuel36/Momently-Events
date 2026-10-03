@@ -1,0 +1,13 @@
+Recursos generados con imagegen (herramienta integrada).
+
+envelope-closed.png
+Photorealistic 3D luxury quinceañera invitation envelope, rich ruby red textured paper, fine champagne-gold floral embossing, ivory and deep red roses at lower corners, gold wax seal with letter G. CLOSED envelope, perfectly frontal and symmetric, no angled perspective. Entire envelope visible centered, landscape 3:2 canvas. Genuine transparent alpha background. No text except G.
+
+envelope-open.png
+Photorealistic 3D luxury quinceañera invitation envelope, rich ruby red textured paper, fine champagne-gold floral embossing, ivory and deep red roses at lower corners. OPEN envelope with raised triangular flap, empty interior without a card, perfectly frontal and symmetric. Entire envelope visible centered, landscape 3:2 canvas. Genuine transparent alpha background. No text.
+
+floral.png
+Photorealistic floral decorative arrangement for an elegant red quinceañera: ruby red roses, ivory roses, delicate champagne foliage and a small elegant gold tiara nestled among the flowers. Airy asymmetrical horizontal corner arrangement, premium studio realism, genuine transparent alpha background, no text, no people.
+
+hero.png
+Elegant photorealistic quinceañera invitation backdrop, deep ruby red silk draping at the top and side corners, luxurious red roses and a few ivory roses with delicate champagne-gold foliage framing the edges, a small gold tiara low in a corner, softly lit rich crimson velvet background with generous clean dark-red center for website text overlay, no text no people no watermark, landscape composition, realistic premium editorial photography.
