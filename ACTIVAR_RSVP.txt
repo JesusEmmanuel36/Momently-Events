@@ -220,3 +220,10 @@ Audio: public/audio/fernandaAlejandro.mp3
 Confirmaciones sin fecha límite. Activar el panel antes de compartir.
 
 JOSÉ BRUNO Y MARCELA: las confirmaciones serán por teléfono al 3312290847 o 3318434864; la invitación no muestra formulario RSVP.
+
+XV DE VALERY JATZIRY
+Enlace: https://momentlyevents.vercel.app/eventos/xv-valery-jatziry
+Panel: npm run provision-event -- xv-valery-jatziry correo-del-cliente@gmail.com https://momentlyevents.vercel.app
+7 de noviembre de 2026. Recepción: 5 p. m. Comida: 7 p. m. Baile: 10 p. m. Sin misa.
+Audio: public/audio/valeryxv.mp3
+Confirmaciones sin fecha límite. Activar el panel antes de compartir.

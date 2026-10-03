@@ -1,0 +1,15 @@
+Recursos generados con imagegen (herramienta integrada).
+
+Sobre cerrado:
+Photorealistic premium quinceañera western invitation envelope, beige textured paper and metallic gold filigree, small gold horseshoe wax seal with letter V, tasteful cream roses and pampas at bottom corners, closed envelope centered straight front view, entirely visible landscape shape, no perspective tilt, isolated transparent background, luxurious realistic 3D product studio render, no text except V.
+
+Sobre abierto:
+Photorealistic premium quinceañera western invitation envelope, beige textured paper and metallic gold filigree, matching cream rose and pampas accents at bottom corners, OPEN envelope with raised triangular flap and empty interior, no card, centered straight front view, entirely visible landscape shape, isolated transparent background, luxurious realistic 3D product studio render, no text.
+
+Arreglo:
+Photorealistic decorative floral arrangement for elegant western quinceañera in beige champagne and gold: ivory roses, dried pampas, delicate golden eucalyptus, small elegant gold horseshoe and beige cowgirl hat, horizontal corner decoration isolated transparent background, no letters, premium studio realism.
+
+Edición de los sobres:
+Remove the entire studio background and surrounding shadow halo outside the envelope. Preserve exactly the beige gold envelope, roses, pampas and frontal orientation unchanged. Make all areas outside the envelope genuinely transparent alpha. No background, no rectangular canvas. Preserve original framing and envelope size.
+
+Archivos finales: envelope-closed.png, envelope-open.png, floral.png.
