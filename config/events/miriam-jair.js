@@ -47,7 +47,7 @@ export const miriamJair = {
     text: "Los colores blanco y vino están reservados para la novia. Gracias por elegir otros tonos para tu vestimenta.",
     colors: [{ name: "Blanco", color: "#ffffff" }, { name: "Vino", color: "#702739" }],
   },
-  music: { enabled: true, url: "/audio/miriamjair.mp3", label: "Nuestra canción" },
+  music: { enabled: true, url: "/audio/miriamyjair.mp3", label: "Nuestra canción" },
   contact: { phone: "", whatsapp: "" },
   theme: { wine: "#702739", dark: "#482030", beige: "#f4e9d8", champagne: "#c1a078" },
 };

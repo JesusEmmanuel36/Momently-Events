@@ -234,7 +234,7 @@ Fecha preparada: 19 de diciembre de 2026 (año por confirmar).
 Ceremonia: 2 p. m. Iglesia del Divino Niño, Tizayuca, Hidalgo.
 Recepción: 4 p. m. Ciudad Natura 1, Olivo 26.
 Invitación compacta sin formulario RSVP. Teléfono pendiente. Las dos fotos y el audio ya están integrados.
-Audio: public/audio/miriamjair.mp3
+Audio: public/audio/miriamyjair.mp3
 Fotos: public/images/events/miriam-jair/ (registrarlas en gallery del mismo archivo de configuración).
 
 XV DE GERALDINE
