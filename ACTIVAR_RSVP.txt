@@ -273,3 +273,10 @@ npm run provision-event -- eufra-y-lety CORREO_DEL_CLIENTE https://momentlyevent
 Sin fecha límite de confirmación. Hasta 5 acompañantes. Sin mesa de regalos.
 Audio: public/audio/eufraylety.mp3
 Mapas: búsquedas por nombre y dirección proporcionados.
+
+GALILEA PÉREZ DÍAZ · XV AÑOS
+Invitación: /eventos/xv-galilea-perez
+Activar panel (reemplazar CORREO_DEL_CLIENTE):
+npm run provision-event -- xv-galilea-perez CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Audio: public/audio/galileaperez.mp3
+Sin fecha límite para confirmar asistencia.

@@ -54,7 +54,7 @@ export const geraldineXv = {
       "Lorena Monsalvo Flores"
     ]
   },
-  "gallery": [{ "src": "/images/events/geraldine-xv/image.png", "width": 720, "height": 968, "alt": "Vestido rojo para los XV años de Geraldine" }],
+  "gallery": [{ "src": "/images/events/geraldine-xv/fotovestido.png", "width": 720, "height": 1080, "alt": "Vestido rojo para los XV años de Geraldine" }],
   "dressCode": {
     "title": "Rojo reservado para la quinceañera",
     "text": "El color rojo está reservado para Geraldine. Gracias por elegir otros tonos para acompañarme en este día tan especial.",

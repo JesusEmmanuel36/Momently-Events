@@ -15,6 +15,10 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/xv-galilea-perez" className={styles.card}>
+        <Image src="/images/events/xv-galilea-perez/image.png" fill sizes="(max-width:800px) 100vw,50vw" alt="XV años de Galilea Pérez Díaz" />
+        <div className={styles.overlay} /><div className={styles.copy}><small>Mis XV años</small><h2>Galilea Pérez Díaz</h2><p>Verde salvia · Verde bosque</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/eufra-y-lety" className={styles.card}>
         <Image src="/images/events/eufra-y-lety/foto1.png" fill sizes="(max-width:800px) 100vw,50vw" alt="Eufra y Lety" />
         <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>Eufra & Lety</h2><p>Azul marino · Marfil</p><strong>Ver invitación <span>→</span></strong></div>
