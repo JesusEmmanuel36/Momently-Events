@@ -20,7 +20,7 @@ export const galileaXv = {
     "time": "12:00 p. m.",
     "address": "Col. Vicente Guerrero, Ocozocoautla de Espinosa, Chiapas",
     "mapsUrl": "https://maps.app.goo.gl/YTRrexDVGHRN1WSX7",
-    "image": "/images/events/xv-galilea-perez/floral.png"
+    "image": "/images/events/xv-galilea-perez/floral-transparente.png"
   },
   "reception": {
     "enabled": true,
@@ -28,7 +28,7 @@ export const galileaXv = {
     "time": "2:00 p. m.",
     "address": "Col. Emiliano Zapata, Tuxtla Gutiérrez, Chiapas",
     "mapsUrl": "https://maps.app.goo.gl/zC3octjFm8uwoRwS6",
-    "image": "/images/events/xv-galilea-perez/floral.png"
+    "image": "/images/events/xv-galilea-perez/floral-transparente.png"
   },
   "itinerary": [],
   "family": {

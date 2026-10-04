@@ -9,7 +9,7 @@ import { Botanical } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";
 
 const assetFolder = "/images/events/xv-galilea-perez";
-const floral = "/images/events/xv-galilea-perez/floral.png";
+const floral = "/images/events/xv-galilea-perez/floral-transparente.png";
 const theme = {
   "--coral": "#526958", "--peach": "#c8d2c6", "--olive": "#526958", "--dark": "#304a3a",
   "--gold": "#526958", "--gold-soft": "#b8c7b0", "--paper": "#fbfcf7", "--ivory": "#e8eee4",
