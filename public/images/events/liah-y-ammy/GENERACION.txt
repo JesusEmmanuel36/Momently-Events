@@ -1,0 +1,9 @@
+Imágenes generadas con la herramienta integrada imagegen.
+Destinos: envelope-closed.png y envelope-open.png en esta carpeta.
+Referencia: sobre rosa de Andrea Anahis. floral.png reutiliza su arreglo floral.
+
+Prompt sobre cerrado:
+Edit this photorealistic 3D invitation envelope. Preserve the frontal camera, ivory paper, blush pink satin bow, pink floral arrangement and overall dimensions and framing. Replace the gold wax seal's letter A and crown with a small simple embossed Christian cross, suitable for two girls' baptism. No names or other text. Make the background genuinely transparent outside the envelope and floral embellishments, no backdrop. Keep the envelope fully closed and centered with all edges visible.
+
+Prompt sobre abierto:
+Edit the reference envelope into its OPEN version for a web invitation opening animation. Preserve the exact frontal camera, horizontal body width, paper texture, blush pink satin ribbon bow, all rose arrangements, colors, lower body silhouette and central gold Christian-cross seal. Lift ONLY the triangular envelope flap upright above the body, exposing an empty inner pocket. No letter or card inside, no text. Envelope centered, viewed directly from front, not angled. Entire open envelope fully visible with generous margin. True transparent background outside the object. Photorealistic luxurious 3D product rendering.

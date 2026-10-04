@@ -254,3 +254,13 @@ Sin fecha límite de confirmación. Hasta 5 acompañantes.
 Pendiente: correo del panel.
 Mesa de regalos: sobre o regalo.
 Iglesia y recepción muestran únicamente la dirección, sin enlaces de mapas.
+
+
+LIAH NICOLLE Y AMMY SOPHIA
+Invitación: /eventos/liah-y-ammy
+Bautizo de ambas y cumpleaños número 2 de Liah Nicolle.
+Activar panel (sustituye CORREO_DEL_CLIENTE):
+npm run provision-event -- liah-y-ammy CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Sin fecha límite de confirmación. Hasta 3 acompañantes.
+Audio: public/audio/liahyammy.mp3
+Mapas: búsquedas por las direcciones proporcionadas, sin afirmar una ubicación verificada.
