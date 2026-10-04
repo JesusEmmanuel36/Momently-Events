@@ -244,3 +244,13 @@ Panel: npm run provision-event -- xv-geraldine correo-del-cliente@gmail.com http
 Activar el panel antes de compartir para guardar confirmaciones. Sin fecha límite de confirmación.
 Audio: public/audio/geraldine.mp3
 WhatsApp y fotos por confirmar.
+
+
+SARAI Y ERICK
+Invitación: /eventos/sarai-y-erick
+Activar panel (sustituye CORREO_DEL_CLIENTE):
+npm run provision-event -- sarai-y-erick CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Sin fecha límite de confirmación. Hasta 5 acompañantes.
+Pendiente: correo del panel.
+Mesa de regalos: sobre o regalo.
+Iglesia y recepción muestran únicamente la dirección, sin enlaces de mapas.

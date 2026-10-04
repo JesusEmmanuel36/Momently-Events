@@ -1,0 +1,17 @@
+@media(max-width:767px){
+  .invitation :global(.hero__copy) { width:calc(100% - 2rem); }
+  .invitation :global(.hero h1) { font-size:clamp(2rem,10vw,4.2rem); line-height:.95; margin:1.25rem 0 1.5rem; }
+  .invitation :global(.hero h1 span) { max-width:100%; }
+  .invitation :global(.hero h1 i) { margin-block:.1em; line-height:1; }
+  .invitation :global(.signature),.invitation :global(.closing p) { font-size:clamp(.85rem,3.8vw,1.2rem); letter-spacing:.06em; overflow-wrap:break-word; }
+}
+
+.invitation :global(.intro__content) { width: min(620px, 100%); }
+.invitation :global(.envelope-scene) { max-width: 100%; }
+.invitation :global(.location__image .cover) { object-fit: contain; }
+.invitation :global(.location__image) { background: var(--cream); }
+.invitation :global(.choice-row label) { position: relative; }
+.invitation :global(.choice-row input) { width: 1px; height: 1px; padding: 0; clip-path: inset(50%); }
+.invitation :global(.rsvp__form-wrap), .invitation :global(.form__two label) { min-width: 0; }
+.invitation :global(.hero__quote-reference) { display: block; margin-top: 1.2rem; color: var(--champagne); font-family: var(--font-serif), serif; font-size: 1rem; letter-spacing: .08em; }
+.invitation :global(.hero__quote-reference + p) { margin-top: .5rem; }

@@ -1,0 +1,5 @@
+Recurso generado con la herramienta integrada imagegen: floral.png.
+El sobre cerrado y abierto reutiliza la plantilla principal en /images/wedding/envelope/.
+
+Prompt final:
+Use case: product-mockup. Asset type: wedding invitation floral decoration for Sarai and Erick, ivory and champagne coffee palette. A photorealistic luxurious arrangement of ivory roses, beige champagne roses, delicate tiny white flowers and muted sage eucalyptus leaves, silk champagne ribbon, elegant wedding styling. Centered horizontal floral arrangement, all flowers completely visible with generous empty margin, on a warm cream seamless background, soft realistic studio light, refined 3D photographic detail. No letters, words, monograms, people, frames or watermark. This is decorative floral art, not a photo of an actual venue.

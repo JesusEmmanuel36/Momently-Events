@@ -44,6 +44,7 @@ export function HeroSection({ wedding }) {
       <span className="eyebrow">{wedding.heroSubtitle}</span>
       <h1><span>{wedding.couple.bride}</span><i>&</i><span>{wedding.couple.groom}</span></h1>
       <div className="hero__rule"><span />{wedding.dateLong}<span /></div>
+      {wedding.heroQuoteReference && <span className="hero__quote-reference">{wedding.heroQuoteReference}</span>}
       <p>{wedding.heroQuote}</p>
     </Reveal>
     <a className="hero__scroll" href="#bienvenida" aria-label="Continuar hacia la invitación"><ChevronDown /></a>

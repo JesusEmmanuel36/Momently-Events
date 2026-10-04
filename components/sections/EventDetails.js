@@ -9,7 +9,7 @@ export function LocationsSection({ wedding }) {
   return <section className="locations" id="detalles">{[wedding.ceremony, wedding.reception].filter((place) => place.enabled !== false).map((place, index) => <article className={`location ${index ? "location--reverse" : ""}`} key={place.label}>
     <div className="location__image"><Image src={place.image} fill sizes="(max-width: 768px) 100vw, 50vw" alt={place.name} className="cover" /></div>
     <Reveal className="location__content"><span className="eyebrow">{place.label}</span><MapPin className="location__icon" strokeWidth={1} /><h2>{place.name}</h2><strong>{place.time}</strong><p>{place.address}</p>
-      <div className="button-row"><a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <ExternalLink size={15} /></a><a className="text-link" href={place.wazeUrl} target="_blank" rel="noreferrer"><Navigation size={15} /> Abrir en Waze</a></div>
+      {!place.hideMapLinks && <div className="button-row"><a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <ExternalLink size={15} /></a><a className="text-link" href={place.wazeUrl} target="_blank" rel="noreferrer"><Navigation size={15} /> Abrir en Waze</a></div>}
     </Reveal>
   </article>)}</section>;
 }
