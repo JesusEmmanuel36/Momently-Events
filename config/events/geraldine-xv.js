@@ -71,8 +71,8 @@ export const geraldineXv = {
     "whatsapp": ""
   },
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/geraldine.mp3",
     "label": "Mi canción"
   },
   "theme": {

@@ -36,3 +36,6 @@
 .photoDialog img { display:block; width:auto; height:auto; max-width:94vw; max-height:90dvh; object-fit:contain; }
 .photoDialog button { position:absolute; right:.5rem; top:.5rem; border:0; border-radius:50%; background:#fff8f2; width:44px; height:44px; display:grid; place-items:center; cursor:pointer; }
 @media(max-width:600px){ .invitation :global(.envelope-scene) { width:100%; margin-left:0; } .invitation :global(.envelope) { width:100%; max-width:590px; } .photoGrid { columns:1; } }
+
+.gratitude { background:linear-gradient(135deg,var(--paper),var(--ivory)); max-width:none; }
+.gratitude > svg { width:32px; height:32px; margin:0 auto 1rem; color:var(--coral); stroke-width:1; }

@@ -242,4 +242,5 @@ Enlace: https://momentlyevents.vercel.app/eventos/xv-geraldine
 Panel: npm run provision-event -- xv-geraldine correo-del-cliente@gmail.com https://momentlyevents.vercel.app
 24 de octubre de 2026. Misa: 4 p. m. Recepción: 5:30 p. m. Horario de Texcoco.
 Activar el panel antes de compartir para guardar confirmaciones. Sin fecha límite de confirmación.
-Canción, WhatsApp y fotos por confirmar.
+Audio: public/audio/geraldine.mp3
+WhatsApp y fotos por confirmar.
