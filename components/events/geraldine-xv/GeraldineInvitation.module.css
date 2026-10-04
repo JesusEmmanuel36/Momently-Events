@@ -24,7 +24,7 @@
 .invitation :global(.intro--leaving .envelope__letter) { transform:translateY(-110%) scale(1.05); }
 .invitation :global(.intro__heading),.invitation :global(.intro__content > .eyebrow) { transition:opacity .25s; }
 .invitation :global(.intro--leaving .intro__heading),.invitation :global(.intro--leaving .intro__content > .eyebrow) { opacity:0; }
-.heroName { display:block!important; font-size:clamp(4rem,22vw,13rem)!important; font-weight:600!important; -webkit-text-stroke:.35px currentColor; text-shadow:0 2px 8px rgba(72,23,36,.5); line-height:1!important; overflow-wrap:normal; }
+.heroName { display:block!important; font-size:clamp(4rem,22vw,13rem)!important; font-weight:700!important; -webkit-text-stroke:1px currentColor; text-shadow:0 2px 8px rgba(72,23,36,.5); line-height:1!important; overflow-wrap:normal; }
 .family p { font-family:var(--font-serif),serif; font-size:1.4rem; line-height:1.5; }
 .reservedColor { display:grid; justify-items:center; gap:.6rem; margin:1.5rem 0; font-size:.75rem; color:var(--dark); }
 .reservedColor i { width:54px; height:54px; border:2px solid var(--gold); border-radius:50%; background:#b51d35; box-shadow:0 4px 12px #48172422; }
