@@ -1,0 +1,37 @@
+@media(max-width:767px){
+  .invitation :global(.hero__copy) { width:calc(100% - 2rem); }
+  .invitation :global(.hero h1) { font-size:clamp(2rem,10vw,4.2rem); line-height:.95; margin:1.25rem 0 1.5rem; }
+  .invitation :global(.hero h1 span) { max-width:100%; }
+  .invitation :global(.hero h1 i) { margin-block:.1em; line-height:1; }
+  .invitation :global(.signature),.invitation :global(.closing p) { font-size:clamp(.85rem,3.8vw,1.2rem); letter-spacing:.06em; overflow-wrap:break-word; }
+}
+
+.invitation :global(.intro__content) { width: min(620px, 100%); }
+.invitation :global(.envelope-scene) { max-width: 100%; }
+.invitation :global(.location__image .cover) { object-fit: contain; }
+.invitation :global(.location__image) { background: var(--cream); }
+.invitation :global(.choice-row label) { position: relative; }
+.invitation :global(.choice-row input) { width: 1px; height: 1px; padding: 0; clip-path: inset(50%); }
+.invitation :global(.rsvp__form-wrap), .invitation :global(.form__two label) { min-width: 0; }
+.invitation :global(.hero__quote-reference) { display: block; margin-top: 1.2rem; color: var(--champagne); font-family: var(--font-serif), serif; font-size: 1rem; letter-spacing: .08em; }
+.invitation :global(.hero__quote-reference + p) { margin-top: .5rem; }
+
+.invitation { --coffee-dark:#10243e; --coffee:#203856; --mocha:#4b6280; --taupe:#8390a2; --champagne:#c7ccd6; --sand:#e1e3e8; --cream:#f3f3f1; --ivory:#fcfaf6; --rose:#8798b1; --sage:#a6b1a5; --text:#192b43; --text-soft:#566477; }
+.invitation :global(.hero h1) { text-shadow:0 2px 8px rgba(12,27,47,.45); }
+.invitation :global(.hero__wash) { background:linear-gradient(180deg,rgba(16,36,62,.08) 20%,rgba(16,36,62,.82)); }
+.invitation :global(.intro__overlay) { background:linear-gradient(180deg,rgba(16,36,62,.45),rgba(16,36,62,.72)); }
+.invitation :global(.music-player) { background:rgba(16,36,62,.94); border-color:rgba(199,204,214,.65); }
+.invitation { color:var(--text); background:var(--ivory); }
+.invitation :global(.dress) { background:linear-gradient(130deg,#10243e,#203856); }
+.invitation :global(.dress__panel) { border-color:rgba(199,204,214,.35); }
+.invitation :global(.closing__overlay) { background:rgba(16,36,62,.72); }
+.invitation :global(.envelope__seal span) { background:rgba(16,36,62,.9); border-color:rgba(199,204,214,.5); }
+.invitation :global(.icon-button) { background:rgba(16,36,62,.65); }
+.invitation :global(.lightbox) { background:rgba(10,22,39,.96); }
+.family { padding-top:0; text-align:center; }
+.familyGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2.5rem; }
+.familyGrid h2 { font-size:1.6rem; color:var(--coffee); margin-bottom:1.25rem; }
+.familyGrid p { margin:.5rem 0; font-family:var(--font-serif),serif; font-size:1.2rem; line-height:1.5; }
+.invitation :global(.gallery__grid) { grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:auto; }
+.invitation :global(.gallery__grid .gallery__item) { grid-column:auto!important; grid-row:auto!important; aspect-ratio:4/5; }
+@media(max-width:767px){ .familyGrid {grid-template-columns:1fr;gap:2rem;} .invitation :global(.gallery__grid) {grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;} }

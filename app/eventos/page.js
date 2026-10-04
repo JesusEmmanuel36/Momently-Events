@@ -15,6 +15,10 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+      <Link href="/eventos/eufra-y-lety" className={styles.card}>
+        <Image src="/images/events/eufra-y-lety/foto1.png" fill sizes="(max-width:800px) 100vw,50vw" alt="Eufra y Lety" />
+        <div className={styles.overlay} /><div className={styles.copy}><small>Invitación personalizada</small><h2>Eufra & Lety</h2><p>Azul marino · Marfil</p><strong>Ver invitación <span>→</span></strong></div>
+      </Link>
       <Link href="/eventos/liah-y-ammy" className={styles.card}>
         <Image src="/images/events/liah-y-ammy/image.png" fill sizes="(max-width:800px) 100vw,50vw" alt="Liah Nicolle y Ammy Sophia" />
         <div className={styles.overlay} /><div className={styles.copy}><small>Bautizo y cumpleaños</small><h2>Liah Nicolle & Ammy Sophia</h2><p>Rosa pastel · Champaña</p><strong>Ver invitación <span>→</span></strong></div>

@@ -1,0 +1,17 @@
+Imágenes generadas con la herramienta integrada imagegen.
+Destinos: envelope-closed.png, envelope-open.png y floral.png en esta carpeta.
+Referencia del sobre: plantilla principal /images/wedding/envelope/envelope-closed.png.
+
+Prompt cerrado:
+Edit this photorealistic frontal 3D wedding envelope. Preserve the exact centered front-facing camera, horizontal envelope dimensions, flap, textured ivory paper and satin bow placement. Change the ribbon and bow to elegant dark navy blue. Change the brown wax seal to navy blue with a single embossed silver serif capital letter E instead of the heart. Keep only that letter. Background outside the envelope genuinely transparent with soft shadow, all envelope edges visible. No other text, no people, no additional cards.
+
+Prompt abierto:
+Edit the reference into its open-envelope version for a website animation. Preserve the exact frontal camera, ivory textured paper, navy satin bow and ribbon, navy wax seal with silver capital E, and width/silhouette of the bottom envelope body. Lift the top triangular flap upright to reveal an EMPTY pocket with no card or letter. Body centered horizontally, entire open flap visible. No angle or perspective shift. Genuine transparent background and minimal soft shadow only. No additional text or people. Photorealistic luxurious 3D wedding envelope.
+
+Prompt floral:
+Use case: product-mockup. Asset type: decorative floral artwork for a wedding invitation with navy blue accents and ivory palette. Photorealistic sophisticated arrangement of ivory roses, a few deep navy blue roses, small white blossoms, muted sage eucalyptus leaves, navy satin ribbon and subtle silver accents. Entire horizontal arrangement visible, centered with generous margins on a seamless ivory background. Soft studio lighting, luxurious natural textures, no text, no people, no frames, no watermark. This is decorative artwork rather than a photograph of a venue.
+
+
+Corrección: iniciales de ambos novios. Recursos finales: envelope-closed-el.png y envelope-open-el.png. Herramienta integrada imagegen.
+Prompt final:
+Edit ONLY the embossed monogram inside the navy wax seal: replace the single letter E with the exact text "E & L", two uppercase silver serif initials with a small ampersand between, centered and legible within the same seal. Preserve every other detail exactly: canvas size, envelope position, paper, navy ribbon and bow, open or closed flap state, lighting, shadow, transparency and framing. Do not change the envelope geometry or add anything else.

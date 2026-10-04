@@ -46,8 +46,8 @@ export const geraldineXv = {
   ],
   "family": {
     "parents": [
-      "Miriam Vázquez Godínez",
-      "Oscar Hernández Ayala"
+      "Oscar Hernández Ayala",
+      "Miriam Vázquez Godínez"
     ],
     "godparents": [
       "José René Vázquez Godínez",
