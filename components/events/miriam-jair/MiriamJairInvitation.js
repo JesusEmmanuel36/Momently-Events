@@ -75,7 +75,7 @@ export function MiriamJairInvitation({ event }) {
 
     {opened && <main className="invitation">
       <div className={gallery.length ? "" : styles.heroWithoutPhoto}><HeroSection wedding={pageData} /></div>
-      <section className="section welcome" id="bienvenida"><Reveal><span className="script">Con la bendición de nuestras familias</span><p>{event.hero.quote}</p><div className={styles.fullNames}>{event.fullNames.bride}<i>&</i>{event.fullNames.groom}</div><div className={styles.familyGrid}>
+      <section className="section welcome" id="bienvenida"><Reveal><div className={styles.fullNames}>{event.fullNames.bride}<i>&</i>{event.fullNames.groom}</div><div className={styles.familyGrid}>
         <article><h3>Papás de la novia</h3>{event.family.brideParents.map(name => <p key={name}>{name}</p>)}</article>
         <article><h3>Papás del novio</h3>{event.family.groomParents.map(name => <p key={name}>{name}</p>)}</article>
         <article><h3>Padrinos</h3>{event.family.godparents.map(name => <p key={name}>{name}</p>)}</article>
