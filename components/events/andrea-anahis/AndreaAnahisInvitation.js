@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Baby, CalendarDays, Check, ChevronDown, Church, Crown, ExternalLink, Gift, Heart, MapPin, Share2, Sparkles } from "lucide-react";
+import { Baby, CalendarDays, Check, ChevronDown, Church, Crown, ExternalLink, Gift, Heart, MapPin, Share2, Sparkles, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./AndreaAnahisInvitation.module.css";
@@ -31,6 +31,8 @@ export function AndreaAnahisInvitation({ event }) {
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
+  const [playing, setPlaying] = useState(false);
+  const audioRef = useRef(null);
   const openingTimer = useRef(null);
   const photoDialog = useRef(null);
   const [activePhoto, setActivePhoto] = useState(null);
@@ -59,7 +61,12 @@ export function AndreaAnahisInvitation({ event }) {
   useEffect(() => () => { if (openingTimer.current) clearTimeout(openingTimer.current); }, []);
 
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
-  const openInvitation = () => { if (opening) return; setOpening(true); openingTimer.current = window.setTimeout(() => setOpened(true), 2300); };
+  const playMusic = () => {
+    if (!event.music.enabled || !audioRef.current) return;
+    audioRef.current.play().catch(() => { setToast("Toca el botón de música para escuchar la canción."); window.setTimeout(() => setToast(""), 3000); });
+  };
+  const toggleMusic = () => { if (audioRef.current?.paused) playMusic(); else audioRef.current?.pause(); };
+  const openInvitation = () => { if (opening) return; setOpening(true); playMusic(); openingTimer.current = window.setTimeout(() => setOpened(true), 2300); };
   const submit = async (formEvent) => {
     formEvent.preventDefault(); setError(""); setSaving(true);
     const form = new FormData(formEvent.currentTarget); const name = String(form.get("name") || "").trim();
@@ -78,6 +85,8 @@ export function AndreaAnahisInvitation({ event }) {
   const share = async () => { const data = { title: "XV años de Andrea Anahis", text: event.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 
   return <div className={styles.wedding} style={theme}>
+    {event.music.enabled && <audio ref={audioRef} src={event.music.url} loop preload="none" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onError={() => { setPlaying(false); setToast("No se pudo cargar la música. Intenta de nuevo."); window.setTimeout(() => setToast(""), 3000); }} />}
+    {opened && event.music.enabled && <button className={styles.music} type="button" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}>{playing ? <Pause /> : <Play />}<span>{playing ? "Pausar música" : "Escuchar música"}</span></button>}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}><div className={styles.introBackdrop}><Image src={event.hero.image} fill priority sizes="100vw" alt="Decoración para los XV años de Andrea Anahis" /></div><div className={styles.introShade} /><div className={styles.introTitle}><span>Mis XV años</span><h1>Una invitación para ti</h1></div><div className={styles.envelopeScene}><div className={styles.envelopeStage}><div className={styles.letter}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Mis XV años</span><h2 className={localStyles.letterName}>Andrea Anahis</h2><small>14 · 11 · 2026</small></div><Image className={styles.envelopeOpenBack} src={envelopeOpen} fill priority sizes="(max-width:700px) 96vw,680px" alt="Sobre rosa abierto" /><Image className={styles.envelopeOpenFront} src={envelopeOpen} fill priority sizes="(max-width:700px) 96vw,680px" alt="" aria-hidden="true" /><Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width:700px) 96vw,680px" alt="Sobre rosa cerrado con sello A" /><button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación" /></div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div></div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>

@@ -57,6 +57,6 @@ export const andreaAnahis = {
     phone: "6672029825",
     whatsapp: "https://wa.me/526672029825",
   },
-  music: { enabled: false, url: "", label: "Mi canción" },
+  music: { enabled: true, url: "/audio/andrea-anahis.mp3", label: "Mi canción" },
   theme: { primary: "#c88fa2", dark: "#704654", champagne: "#d7b578", cream: "#f8e8ec", ivory: "#fffaf9", rose: "#e8b5c2", sage: "#9aaa8c" },
 };
