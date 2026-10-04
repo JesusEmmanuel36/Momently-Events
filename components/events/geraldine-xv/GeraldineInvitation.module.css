@@ -39,3 +39,6 @@
 
 .gratitude { background:linear-gradient(135deg,var(--paper),var(--ivory)); max-width:none; }
 .gratitude > svg { width:32px; height:32px; margin:0 auto 1rem; color:var(--coral); stroke-width:1; }
+
+.heroInitial { font-family:var(--font-serif),serif; font-style:italic; font-weight:600; font-size:.86em; letter-spacing:-.07em; }
+.photoGrid:has(> button:only-child) { columns:1; max-width:480px; margin-inline:auto; }

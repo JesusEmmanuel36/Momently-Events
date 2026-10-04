@@ -12,7 +12,7 @@ export const geraldineXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión y el corazón lleno de alegría, te invito a celebrar mis quince años. Será un día muy especial y me encantará compartirlo contigo.",
-    "image": "/images/events/geraldine-xv/hero.png"
+    "image": "/images/events/geraldine-xv/image.png"
   },
   "ceremony": {
     "enabled": true,
@@ -54,7 +54,7 @@ export const geraldineXv = {
       "Lorena Monsalvo Flores"
     ]
   },
-  "gallery": [],
+  "gallery": [{ "src": "/images/events/geraldine-xv/image.png", "width": 720, "height": 968, "alt": "Vestido rojo para los XV años de Geraldine" }],
   "dressCode": {
     "title": "Rojo reservado para la quinceañera",
     "text": "El color rojo está reservado para Geraldine. Gracias por elegir otros tonos para acompañarme en este día tan especial.",
