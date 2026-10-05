@@ -1,10 +1,10 @@
 export const saraiErick = {
   "slug": "sarai-y-erick",
   "templateKey": "sarai-erick-classic",
-  "eventTitle": "Boda de Sarai y Erick",
+  "eventTitle": "Boda de Erick y Sarai",
   "couple": {
-    "partner1": "Sarai Monroy Martínez",
-    "partner2": "Erick Eduardo Coria Hernández"
+    "partner1": "Erick Eduardo Coria Hernández",
+    "partner2": "Sarai Monroy Martínez"
   },
   "date": "2027-06-19T10:00:00-06:00",
   "timezone": "America/Mexico_City",
@@ -39,13 +39,13 @@ export const saraiErick = {
     "hideMapLinks": false
   },
   "family": {
-    "groomParents": ["María Hernández López", "José Valentín Coria Casas"],
-    "brideParents": ["Reyna Martínez Montes", "Gregorio Monroy San Agustín"]
+    "groomParents": ["José Valentín Coria Casas", "María Hernández López"],
+    "brideParents": ["Gregorio Monroy San Agustín", "Reyna Martínez Montes"]
   },
   "gallery": [
     {
       "src": "/images/events/sarai-y-erick/image.png",
-      "alt": "Sarai y Erick"
+      "alt": "Erick y Sarai"
     }
   ],
   "music": {
@@ -105,7 +105,7 @@ export const saraiErickPageData = {
   heroQuoteReference: "Mateo 19:6",
   introQuote: saraiErick.hero.quote,
   welcomeTitle: "Con todo nuestro amor",
-  welcome: ["Mateo 19:6", "Sarai Monroy Martínez y Erick Eduardo Coria Hernández", "Con alegría y gratitud a Dios, te invitamos a celebrar nuestra unión y compartir con nosotros este día tan especial."],
+  welcome: ["Mateo 19:6", "Erick Eduardo Coria Hernández y Sarai Monroy Martínez", "Con alegría y gratitud a Dios, te invitamos a celebrar nuestra unión y compartir con nosotros este día tan especial."],
   images: { hero: saraiErick.hero.image, couple: saraiErick.hero.image, gallery: [] },
   music: { src: saraiErick.music.url, label: saraiErick.music.label },
   features: { music: true, story: false, gallery: false, video: false, ceremony: true, reception: true, itinerary: true, dressCode: true, gifts: true, hotels: false, important: false, calendar: true, rsvp: true, songRequest: false, faqs: false },

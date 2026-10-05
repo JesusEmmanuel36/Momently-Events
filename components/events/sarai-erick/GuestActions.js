@@ -33,7 +33,7 @@ export function RSVPSection({ wedding }) {
     } catch (cause) { setError(cause.message); } finally { setSubmitting(false); }
   };
   const brideInitial = wedding.couple.bride.trim().charAt(0).toUpperCase(); const groomInitial = wedding.couple.groom.trim().charAt(0).toUpperCase();
-  return <section className="rsvp" id="rsvp"><div className="rsvp__aside"><span className="eyebrow">R S V P</span><h2>¿Nos acompañas?</h2><p>Es muy importante que confirmes tu asistencia para acompañarnos en este día tan especial.</p><div className="rsvp__initials">{brideInitial} <i>&</i> {groomInitial}</div></div>
+  return <section className="rsvp" id="rsvp"><div className="rsvp__aside"><span className="eyebrow">R S V P</span><h2>¿Nos acompañas?</h2><p>Es muy importante que confirmes tu asistencia para acompañarnos en este día tan especial.</p><div className="rsvp__initials">{groomInitial} <i>&</i> {brideInitial}</div></div>
     <Reveal className="rsvp__form-wrap">{success ? <div className="success"><span><Check /></span><h3>¡Gracias, {success}!</h3><p>Tu respuesta ha sido registrada. Nos llena de alegría compartir este momento contigo.</p><button className="text-link" onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form className="form" onSubmit={handleRSVPSubmit} noValidate>
       <label>Nombre completo<input name="name" placeholder="Escribe tu nombre" defaultValue={saved?.data?.name || ""} maxLength={100} required /></label>
       <fieldset><legend>¿Asistirás?</legend><div className="choice-row"><label><input type="radio" name="attendance" value="yes" defaultChecked={saved?.data?.attending === "yes"} /><span>Sí, ahí estaré</span></label><label><input type="radio" name="attendance" value="no" defaultChecked={saved?.data?.attending === "no"} /><span>No podré asistir</span></label></div></fieldset>
@@ -48,7 +48,7 @@ export function RSVPSection({ wedding }) {
 
 export function ShareContact({ wedding, onToast }) {
   const share = async () => {
-    const data = { title: `Boda de ${wedding.couple.bride} y ${wedding.couple.groom}`, text: wedding.heroQuote, url: window.location.href };
+    const data = { title: `Boda de ${wedding.couple.groom} y ${wedding.couple.bride}`, text: wedding.heroQuote, url: window.location.href };
     try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); onToast("Enlace copiado"); } } catch (error) { if (error?.name !== "AbortError") onToast("No fue posible compartir el enlace"); }
   };
   return <section className="share"><Reveal><Heart strokeWidth={1} /><h2>¿Tienes alguna duda?</h2><p>Estamos felices de ayudarte con cualquier detalle.</p><div className="button-row"><button className="button" onClick={share}><Share2 size={16} /> Compartir invitación</button>{wedding.whatsapp && <a className="text-link" href={wedding.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Contactar por WhatsApp</a>}</div></Reveal></section>;

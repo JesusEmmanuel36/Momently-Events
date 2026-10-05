@@ -4,12 +4,12 @@ import Image from "next/image";
 import localStyles from "./SaraiErickInvitation.module.css";
 import { Pause, Play, Volume2, MapPin, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { IntroScreen, HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
+import { IntroScreen, HeroSection, WelcomeSection } from "./IntroHero";
 import { CountdownSection, StorySection } from "@/components/sections/CountdownStory";
 import { GallerySection, VideoSection } from "@/components/sections/Gallery";
 import { DressCodeSection, HotelsSection, ImportantSection, ScheduleSection } from "@/components/sections/EventDetails";
 import { GiftRegistrySection, RSVPSection, ShareContact } from "./GuestActions";
-import { CalendarSection } from "@/components/sections/EventDetails";
+import { CalendarSection } from "./CalendarSection";
 import { Botanical, Reveal } from "@/components/ui";
 
 export function SaraiErickInvitation({ wedding, previewMode = false }) {
@@ -33,7 +33,7 @@ export function SaraiErickInvitation({ wedding, previewMode = false }) {
       {(wedding.features.ceremony || wedding.features.reception) && <LocationsSection wedding={wedding} />}{wedding.features.itinerary && <ScheduleSection wedding={wedding} />}{wedding.features.dressCode && <DressCodeSection wedding={wedding} />}
       {wedding.features.gifts && <GiftRegistrySection wedding={wedding} onToast={showToast} />}{wedding.features.hotels && <HotelsSection wedding={wedding} />}{wedding.features.important && <ImportantSection wedding={wedding} />}{wedding.features.calendar && <CalendarSection wedding={wedding} onToast={showToast} />}
       {wedding.features.rsvp && <RSVPSection wedding={wedding} />}<ShareContact wedding={wedding} onToast={showToast} />
-      <section className="closing"><Image src={wedding.images.hero} fill sizes="100vw" alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /><div className="closing__overlay" /><Botanical /><Reveal><span className="script">Gracias por formar parte</span><h2>de nuestra historia.</h2><p>{wedding.couple.bride} <i>&</i> {wedding.couple.groom}</p><small>{wedding.dateDisplay}</small></Reveal></section>
+      <section className="closing"><Image src={wedding.images.hero} fill sizes="100vw" alt={`${wedding.couple.groom} y ${wedding.couple.bride}`} className="cover" /><div className="closing__overlay" /><Botanical /><Reveal><span className="script">Gracias por formar parte</span><h2>de nuestra historia.</h2><p>{wedding.couple.groom} <i>&</i> {wedding.couple.bride}</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>
     {opened && !previewMode && wedding.features.music && <button className={`music-player ${playing ? "is-playing" : ""}`} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause /> : <Play />}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span><Volume2 className="music-player__wave" /></button>}
     <div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

@@ -88,9 +88,9 @@ export function CarlosComunionInvitation({ event }) {
 
   return <div className={`${styles.wedding} ${localStyles.invitation}`} style={theme}>
     {!opened && <div className={`intro ${opening ? "intro--leaving" : ""}`}>
-      <Image src={event.hero.image} fill priority sizes="100vw" alt="Decoración de los primera comunión de Carlos" className={`cover ${localStyles.introBackground}`} />
+      <Image src={event.hero.image} fill priority sizes="100vw" alt="Decoración de la primera comunión de Carlos" className={`cover ${localStyles.introBackground}`} />
       <div className="intro__overlay" /><Botanical className="intro__branch intro__branch--left" /><Botanical className="intro__branch intro__branch--right" />
-      <div className="intro__content"><span className="eyebrow">Mis primera comunión</span><h1 className="intro__heading">Una invitación para ti</h1>
+      <div className="intro__content"><span className="eyebrow">Mi primera comunión</span><h1 className="intro__heading">Una invitación para ti</h1>
         <div className="envelope-scene" aria-live="polite"><div className="envelope envelope--photoreal">
           <div className="envelope__letter"><span className="envelope__monogram">C</span><strong>Carlos</strong><small>28 · 11 · 2026</small><Heart size={14} fill="currentColor" /></div>
           <Image className={`envelope__asset envelope__asset--open-back ${localStyles.openEnvelope}`} src={`${assetFolder}/envelope-open.png`} fill priority draggable={false} sizes="(max-width:600px) 96vw,590px" alt="Sobre dorado abierto" />
@@ -102,7 +102,7 @@ export function CarlosComunionInvitation({ event }) {
     </div>}
 
     {opened && <main className={styles.unlocked}>
-      <section className={styles.hero}><Image src={event.hero.image} fill priority sizes="100vw" alt="Celebración de los primera comunión de Carlos" /><div className={`${styles.heroShade} ${localStyles.heroShade}`} /><Image className={styles.heroFlower} src={floral} width={700} height={350} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopyCentered}`}><span>Mis primera comunión</span><h1 className={localStyles.heroName}>Carlos</h1><p>Sábado · 28 de noviembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={styles.hero}><Image src={event.hero.image} fill priority sizes="100vw" alt="Celebración de la primera comunión de Carlos" /><div className={`${styles.heroShade} ${localStyles.heroShade}`} /><Image className={styles.heroFlower} src={floral} width={700} height={350} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopyCentered}`}><span>Mi primera comunión</span><h1 className={localStyles.heroName}>Carlos</h1><p>Sábado · 28 de noviembre · 2026</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
       <section className={styles.welcome} id="bienvenida" data-je-reveal><Cross /><span>Un día para recordar</span><h2>Hoy recibo a Jesús<br />con alegría en mi corazón.</h2><p>{event.hero.quote}</p><div className={styles.signature}>Carlos</div></section>
       <section className={styles.countdown} data-je-reveal><span>La espera casi termina</span><h2>Faltan</h2>{countdown === undefined ? <div className={styles.numbers}>{["Días", "Horas", "Minutos", "Segundos"].map((label) => <div key={label}><strong>--</strong><small>{label}</small></div>)}</div> : countdown ? <div className={styles.numbers}>{countdown.map(([label, value]) => <div key={label}><strong>{String(value).padStart(2, "0")}</strong><small>{label}</small></div>)}</div> : <h3>¡Hoy es mi gran día!</h3>}</section>
       <section className={`${styles.family} ${localStyles.family}`} data-je-reveal><Image src={floral} width={700} height={470} alt="" aria-hidden="true" /><span>Con la bendición de</span><h2>Mis papás y padrinos</h2><div className={styles.familyGrid}><article><small>Mis papás</small>{event.family.parents.map(name => <p key={name}>{name}</p>)}</article><i /><article><small>Mis padrinos</small>{event.family.godparents.map(name => <p key={name}>{name}</p>)}</article></div></section>
