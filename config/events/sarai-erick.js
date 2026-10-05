@@ -32,9 +32,9 @@ export const saraiErick = {
     "name": "Santa Cruz",
     "label": "Recepción",
     "time": "4:00 p. m.",
-    "address": "Santa Cruz, municipio de Soledad de Doblado",
+    "address": "94248 Soledad de Doblado, Veracruz",
     "image": "/images/events/sarai-y-erick/floral.png",
-    "mapsUrl": "https://maps.app.goo.gl/t64g42i18BbfoLX29",
+    "mapsUrl": "https://maps.app.goo.gl/Nu3cqpLcaMV528aM8",
     "wazeUrl": "",
     "hideMapLinks": false
   },
