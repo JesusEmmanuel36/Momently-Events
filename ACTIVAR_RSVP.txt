@@ -280,3 +280,10 @@ Activar panel (reemplazar CORREO_DEL_CLIENTE):
 npm run provision-event -- xv-galilea-perez CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/galileaperez.mp3
 Sin fecha límite para confirmar asistencia.
+
+ADRIANA Y FRANCISCO
+Invitación: /eventos/adriana-y-francisco
+Panel (reemplazar CORREO_DEL_CLIENTE):
+npm run provision-event -- adriana-y-francisco CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Audio: public/audio/adrianayfrancisco.MP3
+Sin fecha límite de confirmación. Falta pin exacto de la terraza para habilitar mapas.

@@ -44,7 +44,9 @@ import { eufraLety } from "../config/events/eufra-lety.js";
 
 import { galileaXv } from "../config/events/galilea-xv.js";
 
-const templates = { [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+import { adrianaFrancisco } from "../config/events/adriana-francisco.js";
+
+const templates = { [adrianaFrancisco.slug]:adrianaFrancisco, [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
