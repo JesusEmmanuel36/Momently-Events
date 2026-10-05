@@ -14,7 +14,7 @@ export const eufraLety = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Nos encantaría compartir contigo la alegría de nuestra unión y celebrar juntos el comienzo de esta nueva etapa.",
-    "image": "/images/events/eufra-y-lety/foto1.png"
+    "image": "/images/events/eufra-y-lety/image.png"
   },
   "ceremony": {
     "enabled": true,
@@ -90,7 +90,7 @@ export const eufraLety = {
   },
   "dressCode": {
     "title": "Formal",
-    "text": "Te invitamos a acompañarnos con vestimenta formal para celebrar este día tan especial."
+    "text": "Los colores azul y blanco están reservados para los novios. Gracias por elegir otros tonos para acompañarnos en este día tan especial."
   },
   "gifts": [],
   "contact": {
@@ -148,7 +148,7 @@ export const eufraLetyPageData = {
   ceremony: eufraLety.ceremony,
   reception: eufraLety.reception,
   itinerary: [{ time: "2:00 p. m.", title: "Ceremonia religiosa", icon: "heart" }, { time: "4:00 p. m.", title: "Recepción", icon: "glass" }],
-  dressCode: { title: eufraLety.dressCode.title, note: eufraLety.dressCode.text, colors: [] },
+  dressCode: { title: eufraLety.dressCode.title, note: eufraLety.dressCode.text, colors: [{ name: "Azul", color: "#203856" }, { name: "Blanco", color: "#ffffff" }] },
   contacts: [{label:"Novio: Eufra",phone:eufraLety.contact.phone,url:eufraLety.contact.whatsapp},{label:"Novia: Lety",phone:eufraLety.contact.bridePhone,url:eufraLety.contact.brideWhatsapp}],
   rsvpSettings: { maxCompanions: eufraLety.maxCompanions, askSongSuggestion: false },
 };

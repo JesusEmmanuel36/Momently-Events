@@ -8,10 +8,10 @@ import { useEffect, useRef, useState } from "react";
 import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection, StorySection } from "@/components/sections/CountdownStory";
 import { GallerySection, VideoSection } from "@/components/sections/Gallery";
-import { DressCodeSection, HotelsSection, ImportantSection, LocationsSection, ScheduleSection } from "@/components/sections/EventDetails";
+import { HotelsSection, ImportantSection, LocationsSection, ScheduleSection } from "@/components/sections/EventDetails";
 import { RSVPSection, ShareContact } from "./GuestActions";
 import { CalendarSection } from "@/components/sections/EventDetails";
-import { Botanical, Reveal } from "@/components/ui";
+import { Botanical, Reveal, SectionHeading } from "@/components/ui";
 
 export function EufraLetyInvitation({ wedding, previewMode = false }) {
   const [opened, setOpened] = useState(previewMode); const [leaving, setLeaving] = useState(false); const [playing, setPlaying] = useState(false); const [toast, setToast] = useState(""); const audioRef = useRef(null);
@@ -43,4 +43,11 @@ export function EufraLetyInvitation({ wedding, previewMode = false }) {
     {opened && !previewMode && wedding.features.music && <button className={`music-player ${playing ? "is-playing" : ""}`} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause /> : <Play />}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span><Volume2 className="music-player__wave" /></button>}
     <div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;
+}
+
+function DressCodeSection({ wedding }) {
+  return <section className="dress"><div className="dress__panel">
+    <Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} light /></Reveal>
+    <Reveal><h3 className={localStyles.reservedTitle}>Colores reservados para los novios</h3><div className={localStyles.reservedColors}>{wedding.dressCode.colors.map(({ name, color }) => <div key={name}><span style={{ backgroundColor: color }} aria-hidden="true" /><p>{name}</p></div>)}</div><p className="dress__note">{wedding.dressCode.note}</p></Reveal>
+  </div></section>;
 }
