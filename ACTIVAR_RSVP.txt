@@ -294,3 +294,10 @@ Panel (reemplazar CORREO_DEL_CLIENTE):
 npm run provision-event -- carlos-comunion CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/carloscomunion.mp3
 Sin fecha límite de confirmación. Pendientes: ciudad, ubicaciones exactas y WhatsApp.
+
+CAMILA ZOE · XV AÑOS
+Invitación: /eventos/xv-camila-zoe
+Panel: npm run provision-event -- xv-camila-zoe CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Audio: public/audio/camilazoe.mp3
+Máximo cinco personas en total (invitado + cuatro acompañantes). Sin fecha límite.
+Pendiente: hora de recepción.
