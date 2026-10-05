@@ -15,6 +15,7 @@ export default function EventsPage() {
       <p>Una colección de experiencias digitales creadas para cada tipo de evento.</p>
     </header>
     <section className={styles.grid}>
+<Link href="/eventos/carlos-comunion" className={styles.card}><Image src="/images/events/carlos-comunion/image.png" fill sizes="(max-width:800px) 100vw,50vw" alt="Primera comunión de Carlos"/><div className={styles.overlay}/><div className={styles.copy}><small>Primera comunión</small><h2>Carlos</h2><p>Dorado · Marfil</p><strong>Ver invitación <span>→</span></strong></div></Link>
  <Link href="/eventos/adriana-y-francisco" className={styles.card}><Image src="/images/events/adriana-y-francisco/FOTOPRINCIPAL.png" fill sizes="(max-width:800px) 100vw,50vw" alt="Adriana y Francisco"/><div className={styles.overlay}/><div className={styles.copy}><small>Nuestra boda</small><h2>Adriana & Francisco</h2><p>Vino · Dorado · Rosas</p><strong>Ver invitación <span>→</span></strong></div></Link>
       <Link href="/eventos/xv-galilea-perez" className={styles.card}>
         <Image src="/images/events/xv-galilea-perez/image.png" fill sizes="(max-width:800px) 100vw,50vw" alt="XV años de Galilea Pérez Díaz" />

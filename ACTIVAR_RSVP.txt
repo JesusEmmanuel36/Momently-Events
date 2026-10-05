@@ -287,3 +287,10 @@ Panel (reemplazar CORREO_DEL_CLIENTE):
 npm run provision-event -- adriana-y-francisco CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/adrianayfrancisco.MP3
 Sin fecha límite de confirmación. Falta pin exacto de la terraza para habilitar mapas.
+
+CARLOS · PRIMERA COMUNIÓN
+Invitación: /eventos/carlos-comunion
+Panel (reemplazar CORREO_DEL_CLIENTE):
+npm run provision-event -- carlos-comunion CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Audio: public/audio/carloscomunion.mp3
+Sin fecha límite de confirmación. Pendientes: ciudad, ubicaciones exactas y WhatsApp.
