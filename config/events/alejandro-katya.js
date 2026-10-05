@@ -16,7 +16,7 @@ export const alejandroKatya = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Dios, en su tiempo perfecto, permitió que nuestros caminos se encontraran. Desde entonces, no contamos los días, sino las razones que cada día nos recuerdan que nacimos para caminar de la mano. Porque el amor verdadero no se mide por el tiempo, sino por la certeza de haber encontrado a la persona con quien quieres compartir toda una vida. Con el corazón lleno de gratitud y amor, hemos decidido decir «sí» para siempre.",
-    "image": "/images/events/alejandro-y-katya/image.png"
+    "image": "/images/events/alejandro-y-katya/image copy 3.png"
   },
   "ceremony": {
     "enabled": false,
@@ -44,7 +44,7 @@ export const alejandroKatya = {
       "alt": "Alejandro y Katya — recuerdo 2"
     },
     {
-      "src": "/images/events/alejandro-y-katya/image copy 3.png",
+      "src": "/images/events/alejandro-y-katya/image.png",
       "alt": "Alejandro y Katya — recuerdo 3"
     },
     {
@@ -62,10 +62,6 @@ export const alejandroKatya = {
     {
       "src": "/images/events/alejandro-y-katya/image copy 7.png",
       "alt": "Alejandro y Katya — recuerdo 7"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 8.png",
-      "alt": "Alejandro y Katya — recuerdo 8"
     },
     {
       "src": "/images/events/alejandro-y-katya/image copy 9.png",
