@@ -9,5 +9,5 @@ con este nombre exacto:
 
 `lesly-marcelino-perfect.mp3`
 
-Para el bautizo de Ana Paula, el archivo será `ana-paula.mp3`.
-La música está desactivada hasta recibir la canción y agregar el archivo.
+Para el bautizo de Ana Paula, el archivo es `anapaula.MP3`.
+La música está activada. Conserva las mayúsculas de la extensión.

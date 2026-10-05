@@ -103,8 +103,8 @@ export const anaPaula = {
     "whatsapp": ""
   },
   "music": {
-    "enabled": false,
-    "url": "/audio/ana-paula.mp3",
+    "enabled": true,
+    "url": "/audio/anapaula.MP3",
     "label": "Mi canción"
   },
   "theme": {
