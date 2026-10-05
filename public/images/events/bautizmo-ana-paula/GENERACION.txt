@@ -1,0 +1,3 @@
+Sobre cerrado: envelope-closed.png. Editado con image_gen integrada.
+Prompt: Edit this baptism envelope. Change ONLY the embossed initials on the central wax seal from PV to AP (Ana Paula). Keep the same front-facing composition, cross, botanical embossing, beige taupe coffee paper, champagne satin bow, photorealistic 3D materials, proportions and lighting. Preserve genuine transparency around the envelope. No added text or background.
+Sobre abierto y arreglo floral: copias de los assets de bautizo-patricia-valentina para conservar la paleta y el diseño solicitados.

@@ -313,3 +313,9 @@ Invitación: https://momentlyevents.vercel.app/eventos/alejandro-y-katya
 Activar RSVP y panel (reemplaza el correo):
 npm run provision-event -- alejandro-y-katya correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
 Sin fecha límite de confirmación.
+
+BAUTIZO DE ANA PAULA
+Invitación: https://momentlyevents.vercel.app/eventos/bautizo-ana-paula
+Activar RSVP y panel (reemplaza el correo):
+npm run provision-event -- bautizo-ana-paula correo-de-los-papas@gmail.com https://momentlyevents.vercel.app
+Sin fecha límite de confirmación.
