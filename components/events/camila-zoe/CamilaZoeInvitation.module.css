@@ -32,3 +32,8 @@
 .invitation :global(select) { display:block; width:100%; padding:1rem; background:var(--paper); border:1px solid var(--gold-soft); color:var(--charcoal); font:inherit; }
 .gifts > svg { display:block; margin:0 auto 1rem; color:var(--coral); }
 .gifts > small { color:var(--muted); letter-spacing:.15em; }
+
+.whatsappConfirmation { background:var(--ivory); }
+.whatsappConfirmation > svg { display:block; margin:0 auto 1rem; color:var(--coral); }
+.whatsappConfirmation > small { display:block; color:var(--muted); font-size:.8rem; }
+.whatsappConfirmation > a { display:flex; align-items:center; justify-content:center; gap:.6rem; width:fit-content; max-width:100%; padding:1rem 1.5rem; margin:1.5rem auto 0; background:var(--dark); color:var(--paper); text-decoration:none; font-size:.9rem; }

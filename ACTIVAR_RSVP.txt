@@ -299,5 +299,11 @@ CAMILA ZOE · XV AÑOS
 Invitación: /eventos/xv-camila-zoe
 Panel: npm run provision-event -- xv-camila-zoe CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/camilazoe.mp3
-Máximo cinco personas en total (invitado + cuatro acompañantes). Sin fecha límite.
+Confirmaciones únicamente por WhatsApp al 7713325939. Máximo cinco personas en total.
 Recepción: 19 de diciembre de 2026, 2:00 p. m. Comida: 3:00 p. m.
+
+HANS TADEO POZAS RUBIO · XV AÑOS
+Invitación: /eventos/xv-hans-tadeo
+Panel: npm run provision-event -- xv-hans-tadeo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Audio: public/audio/xv-hans-tadeo.mp3
+Sin fecha límite de confirmación. Pendientes: fotos y WhatsApp.

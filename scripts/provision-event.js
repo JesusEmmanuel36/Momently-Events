@@ -50,7 +50,9 @@ import { carlosComunion } from "../config/events/carlos-comunion.js";
 
 import { camilaZoe } from "../config/events/camila-zoe.js";
 
-const templates = { [camilaZoe.slug]:camilaZoe, [carlosComunion.slug]:carlosComunion, [adrianaFrancisco.slug]:adrianaFrancisco, [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+import { hansTadeo } from "../config/events/hans-tadeo.js";
+
+const templates = { [hansTadeo.slug]:hansTadeo, [camilaZoe.slug]:camilaZoe, [carlosComunion.slug]:carlosComunion, [adrianaFrancisco.slug]:adrianaFrancisco, [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();
@@ -127,7 +129,7 @@ const document = {
     theme: event.theme || (event.slug === "lesly-y-marcelino" ? { primary: "#7f91ae", dark: "#5d607d", champagne: "#d8c5a5", cream: "#f7f2f8", ivory: "#fffdfb", rose: "#b494c5", sage: "#a7b6a0" } : { primary: "#65724b", dark: "#494747", champagne: "#dfc777", cream: "#f6f1e9", ivory: "#fffdf9", rose: "#df897c", sage: "#65724b" }),
   },
   settings: {
-    rsvp: { enabled: true, deadline: rsvpDeadline ? Timestamp.fromDate(rsvpDeadline) : null, maxCompanions: event.maxCompanions, askMenuPreference: false, askAllergies: true, askMessage: true, askSongSuggestion: Boolean(event.askSongSuggestion) },
+    rsvp: { enabled: event.rsvpEnabled !== false, deadline: rsvpDeadline ? Timestamp.fromDate(rsvpDeadline) : null, maxCompanions: event.maxCompanions, askMenuPreference: false, askAllergies: true, askMessage: true, askSongSuggestion: Boolean(event.askSongSuggestion) },
     invitation: { passwordProtected: false },
   },
   updatedAt: now,

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Check, ChevronDown, Crown, Gift, X, Heart, Volume2, VolumeX, MapPin, Share2, Sparkles } from "lucide-react";
+import { MessageCircle, ChevronDown, Crown, Gift, X, Heart, Volume2, VolumeX, MapPin, Share2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "./CamilaZoeInvitation.module.css";
@@ -26,14 +26,10 @@ export function CamilaZoeInvitation({ event }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
   const openingTimer = useRef(null);
   const photoDialog = useRef(null);
   const [activePhoto, setActivePhoto] = useState(null);
-  const [savedResponse, setSavedResponse] = useState(null);
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const playMusic = () => { if (!event.music.enabled) return; audioRef.current?.play().catch(() => notify("Toca el botón de música para escuchar la canción")); };
@@ -55,9 +51,6 @@ export function CamilaZoeInvitation({ event }) {
   useEffect(() => () => { if (openingTimer.current) clearTimeout(openingTimer.current); }, []);
 
   useEffect(() => {
-    try { const stored = JSON.parse(localStorage.getItem(`momently:rsvp:${event.slug}`) || "null"); if (stored?.rsvpId && stored?.editToken) setSavedResponse(stored); } catch { /* A damaged cache must not prevent confirmation. */ }
-  }, [event.slug]);
-  useEffect(() => {
     if (activePhoto === null) return;
     photoDialog.current?.showModal();
     const previousOverflow = document.body.style.overflow;
@@ -67,21 +60,6 @@ export function CamilaZoeInvitation({ event }) {
 
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
   const openInvitation = () => { if (opening) return; setOpening(true); playMusic(); openingTimer.current = window.setTimeout(() => setOpened(true), window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 50 : 1900); };
-  const submit = async (formEvent) => {
-    formEvent.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(formEvent.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: form.get("attendance") === "yes" ? Number(form.get("totalPeople") || 1) - 1 : 0, allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    if (!Number.isInteger(payload.companions) || payload.companions < 0 || payload.companions > event.maxCompanions) { setError("Selecciona de una a cinco personas."); setSaving(false); return; }
-    try {
-      const key = `momently:rsvp:${event.slug}`; const stored = savedResponse; const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${event.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? { ok: true } : await response.json().catch(() => ({ error: "No fue posible enviar tu confirmación. Intenta de nuevo." })); if (!response.ok || result.ok !== true || !result.rsvpId || (!editing && !result.editToken)) throw new Error(result.error || "No fue posible enviar tu confirmación.");
-      const nextSaved = { rsvpId: result.rsvpId, editToken: result.editToken || stored?.editToken, data: payload };
-      setSavedResponse(nextSaved);
-      try { localStorage.setItem(key, JSON.stringify(nextSaved)); } catch { /* The server has already saved the confirmation. */ }
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
-  };
   const share = async () => { const data = { title: "XV años de Camila Zoe", text: event.hero.quote, url: window.location.href }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); notify("Enlace copiado"); } } catch (cause) { if (cause?.name !== "AbortError") notify("No fue posible compartir"); } };
 
   return <div className={`${styles.wedding} ${localStyles.invitation}`} style={theme}>
@@ -110,7 +88,7 @@ export function CamilaZoeInvitation({ event }) {
       <section className={styles.timeline} data-je-reveal><span>El gran día</span><h2>Itinerario</h2><div>{event.itinerary.map(item => <article key={item.time}><Sparkles /><strong>{item.time === "14:00" ? "2:00 p. m." : "3:00 p. m."}</strong><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
       <section className={styles.dress} data-je-reveal><span>Código de vestimenta</span><h2>{event.dressCode.title}</h2><div className={localStyles.reservedColor}><i/><span>Azul marino</span></div><p>{event.dressCode.text}</p></section>
       <section className={`${styles.welcome} ${localStyles.gifts}`} data-je-reveal><Gift/><span>Un detalle para mi futuro</span><h2>Fondo de sueños</h2><p>{event.gifts[0].description}</p><small>Lluvia de sobres</small></section>
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Me acompañas?</h2><p>Me dará mucha alegría contar contigo. Por favor confirma tu asistencia.</p>{event.contacts.map(contact => <a key={contact.phone} href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp: {contact.phone}</a>)}<div>CZ</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibí tu respuesta. Me dará mucha alegría compartir este día contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" required minLength={2} maxLength={100} placeholder="Escribe tu nombre" defaultValue={savedResponse?.data?.name || ""} /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required defaultChecked={savedResponse?.data?.attending === "yes"} /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required defaultChecked={savedResponse?.data?.attending === "no"} /> No podré asistir</label></fieldset><label>Personas que asistirán, incluyéndote<select name="totalPeople" defaultValue={(savedResponse?.data?.companions ?? 0) + 1}>{[1,2,3,4,5].map(total => <option key={total} value={total}>{total} {total === 1 ? "persona" : "personas"}</option>)}</select><small>Máximo cinco personas por confirmación, contando al invitado.</small></label><label>Comentarios o consideraciones<textarea name="notes" maxLength={500} defaultValue={savedResponse?.data?.allergies || ""} rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para Camila Zoe<textarea name="message" maxLength={1000} defaultValue={savedResponse?.data?.message || ""} rows="4" placeholder="Déjame unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
+      <section className={`${styles.welcome} ${localStyles.whatsappConfirmation}`} data-je-reveal><MessageCircle /><span>Confirmación de asistencia</span><h2>¿Me acompañas?</h2><p>Confirma tu asistencia por WhatsApp e indica tu nombre y cuántas personas asistirán contigo.</p><small>Máximo cinco personas en total, incluyéndote.</small><a href={`${event.contact.whatsapp}?text=${encodeURIComponent("Hola, quiero confirmar mi asistencia a los XV años de Camila Zoe el 19 de diciembre de 2026. Mi nombre es: ____. Asistiremos ____ personas en total.")}`} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Confirmar por WhatsApp</a></section>
       <section className={styles.closing} data-je-reveal><Image src={floral} fill sizes="100vw" alt="Arreglo floral en tonos azul marino" /><div className={localStyles.closingShade} /><Heart /><span>Gracias por ser parte de</span><h2>mi día soñado.</h2><p>Camila Zoe</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>}
     {event.music.enabled && <audio ref={audioRef} src={event.music.url} loop preload="none" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onError={() => { setPlaying(false); notify("No se pudo cargar la música. Intenta de nuevo."); }} />}

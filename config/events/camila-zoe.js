@@ -10,6 +10,7 @@ export const camilaZoe = {
   "timePending": false,
   "timezone": "America/Mexico_City",
   "maxCompanions": 4,
+  "rsvpEnabled": false,
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Una nueva etapa comienza, llena de sueños e ilusión. Me encantará compartir contigo la alegría de mis quince años.",
