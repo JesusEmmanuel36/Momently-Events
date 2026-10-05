@@ -11,7 +11,7 @@ export const carlosComunion = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mi primera comunión",
-    "quote": "Con mucha alegría recibiré a Jesús por primera vez. Te invito a acompañarme en este día de fe, amor y bendiciones, y a celebrarlo junto a mi familia.",
+    "quote": "Te invito a acompañarme en este día de fe, amor y bendiciones.",
     "image": "/images/events/carlos-comunion/image.png"
   },
   "ceremony": {
@@ -26,7 +26,7 @@ export const carlosComunion = {
     "enabled": true,
     "name": "Casa de la familia Ocañas Valencia",
     "time": "Después de la ceremonia",
-    "address": "Familia Ocañas Valencia",
+    "address": "",
     "mapsUrl": "",
     "image": "/images/events/carlos-comunion/floral.png"
   },

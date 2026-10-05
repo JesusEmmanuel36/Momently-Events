@@ -300,4 +300,4 @@ Invitación: /eventos/xv-camila-zoe
 Panel: npm run provision-event -- xv-camila-zoe CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/camilazoe.mp3
 Máximo cinco personas en total (invitado + cuatro acompañantes). Sin fecha límite.
-Pendiente: hora de recepción.
+Recepción: 19 de diciembre de 2026, 2:00 p. m. Comida: 3:00 p. m.

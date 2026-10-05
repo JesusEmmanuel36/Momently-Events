@@ -6,8 +6,8 @@ export const camilaZoe = {
     "partner1": "Camila Zoe",
     "partner2": "Mis XV"
   },
-  "date": "2026-12-19T00:00:00-06:00",
-  "timePending": true,
+  "date": "2026-12-19T14:00:00-06:00",
+  "timePending": false,
   "timezone": "America/Mexico_City",
   "maxCompanions": 4,
   "hero": {
@@ -26,7 +26,7 @@ export const camilaZoe = {
   "reception": {
     "enabled": true,
     "name": "Salón Jardín Zapata",
-    "time": "Horario por confirmar",
+    "time": "2:00 p. m.",
     "address": "Venustiano Carranza, El Saucillo Fraccionamiento, C. P. 42186, Hidalgo",
     "mapsUrl": "https://maps.app.goo.gl/yvDcwurA9XnZsVcJA",
     "image": "/images/events/xv-camila-zoe/floral.png"
@@ -36,7 +36,20 @@ export const camilaZoe = {
     "godparents": []
   },
   "gallery": [],
-  "itinerary": [],
+  "itinerary": [
+    {
+      "time": "14:00",
+      "title": "Recepción",
+      "description": "Salón Jardín Zapata",
+      "icon": "glass"
+    },
+    {
+      "time": "15:00",
+      "title": "Comida",
+      "description": "Compartamos este momento",
+      "icon": "sparkles"
+    }
+  ],
   "dressCode": {
     "title": "Formal / Casual",
     "text": "El azul marino está reservado para la quinceañera. Gracias por elegir otros tonos para acompañarme en este día tan especial."
