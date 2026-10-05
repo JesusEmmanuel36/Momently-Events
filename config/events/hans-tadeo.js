@@ -12,7 +12,7 @@ export const hansTadeo = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión, te invito a celebrar mis quince años. Me encantará compartir contigo este momento y el comienzo de una nueva etapa.",
-    "image": "/images/events/xv-hans-tadeo/hero.png"
+    "image": "/images/events/xv-hans-tadeo/image.png"
   },
   "ceremony": {
     "enabled": false,
@@ -36,7 +36,14 @@ export const hansTadeo = {
     ],
     "godparents": []
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/xv-hans-tadeo/image copy.png",
+      "width": 720,
+      "height": 1600,
+      "alt": "Hans Tadeo Pozas Rubio"
+    }
+  ],
   "itinerary": [
     {
       "time": "15:00",

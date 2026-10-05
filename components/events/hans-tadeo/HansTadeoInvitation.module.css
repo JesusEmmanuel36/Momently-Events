@@ -12,6 +12,7 @@
 .invitation .venueArtwork { background:linear-gradient(140deg,#151515,#c7c7c7); }
 .invitation .venueArtwork img { object-fit:contain; padding:1.5rem; }
 .photoGrid { columns:3; column-gap:1rem; }
+.photoGrid:has(> button:only-child) { columns:1; max-width:420px; margin-inline:auto; }
 .photoGrid button { display:block; width:100%; margin:0 0 1rem; padding:0; border:0; background:none; cursor:zoom-in; break-inside:avoid; }
 .photoGrid img { display:block; width:100%; height:auto; }
 .photoDialog { inset:0; margin:auto; padding:0; border:0; max-width:94vw; max-height:94dvh; background:none; overflow:visible; }
