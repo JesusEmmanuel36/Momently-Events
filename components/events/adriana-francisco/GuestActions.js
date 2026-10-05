@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Gift, Heart, MessageCircle, Share2 } from "lucide-react";
+import { Check, Gift, Heart, MessageCircle, Music2, Share2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Reveal, SectionHeading } from "@/components/ui";
 
@@ -19,11 +19,13 @@ export function RSVPSection({ wedding }) {
   const handleRSVPSubmit = async (event) => {
     event.preventDefault(); const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim(); const attendance = form.get("attendance");
     if (name.length < 2 || name.length > 100 || !["yes", "no"].includes(attendance)) { setError("Por favor completa tu nombre e indica si asistirás."); return; }
-    const payload = { name, attending: attendance, companions: 0, allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: String(form.get("songTitle") || ""), artist: String(form.get("artist") || ""), website: String(form.get("website") || "") };
+    const payload = { name, attending: attendance, companions: 0, allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: String(form.get("songTitle") ?? saved?.data?.songTitle ?? ""), artist: String(form.get("artist") ?? saved?.data?.artist ?? ""), website: String(form.get("website") || "") };
     setSubmitting(true); setError("");
     try {
       {
-        const storageKey = `momently:rsvp:${wedding.slug}`; const stored = saved; const isEditing = Boolean(stored?.rsvpId && stored?.editToken); const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: isEditing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(isEditing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(isEditing ? { rsvpId: stored.rsvpId } : {}) }) });
+        const storageKey = `momently:rsvp:${wedding.slug}`; const stored = saved;
+        try { const latest = JSON.parse(localStorage.getItem(storageKey) || "null"); if (latest?.rsvpId === stored?.rsvpId && latest?.data) { payload.songTitle = latest.data.songTitle || ""; payload.artist = latest.data.artist || ""; } } catch {}
+        const isEditing = Boolean(stored?.rsvpId && stored?.editToken); const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: isEditing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(isEditing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(isEditing ? { rsvpId: stored.rsvpId } : {}) }) });
         const result = response.status === 204 ? {} : await response.json(); if (!response.ok || result.ok !== true || !result.rsvpId || (!isEditing && !result.editToken)) throw new Error(result.error || "No pudimos registrar tu respuesta.");
         const confirmation = { rsvpId: result.rsvpId, editToken: result.editToken || stored?.editToken, data: payload };
         setSaved(confirmation);
@@ -51,4 +53,35 @@ export function ShareContact({ wedding, onToast }) {
     try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); onToast("Enlace copiado"); } } catch (error) { if (error?.name !== "AbortError") onToast("No fue posible compartir el enlace"); }
   };
   return <section className="share"><Reveal><Heart strokeWidth={1} /><h2>¿Tienes alguna duda?</h2><p>Estamos felices de ayudarte con cualquier detalle.</p><div className="button-row"><button className="button" onClick={share}><Share2 size={16} /> Compartir invitación</button>{wedding.whatsapp && <a className="text-link" href={wedding.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Contactar por WhatsApp</a>}</div></Reveal></section>;
+}
+
+export function SongSection({ wedding }) {
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [done, setDone] = useState(false);
+  const submit = async (event) => {
+    event.preventDefault();
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
+    setError(""); setDone(false); setSaving(true);
+    try {
+      const key = `momently:rsvp:${wedding.slug}`;
+      let stored;
+      try { stored = JSON.parse(localStorage.getItem(key) || "null"); } catch {}
+      if (!stored?.rsvpId || !stored?.editToken || !stored?.data) throw new Error("Primero confirma tu asistencia para sugerir una canción.");
+      const songTitle = String(form.get("songTitle") || "").trim();
+      const artist = String(form.get("artist") || "").trim();
+      if (!songTitle || !artist) throw new Error("Escribe el nombre de la canción y el artista.");
+      const data = { ...stored.data, songTitle, artist };
+      const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, {
+        method:"PATCH", headers:{"Content-Type":"application/json","X-RSVP-Edit-Token":stored.editToken},
+        body:JSON.stringify({...data,rsvpId:stored.rsvpId}),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok !== true || !result.rsvpId) throw new Error(result.error || "No pudimos guardar tu canción. Intenta de nuevo.");
+      try { localStorage.setItem(key,JSON.stringify({...stored,data})); } catch {}
+      setDone(true); formElement.reset();
+    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
+  };
+  return <section className="section song"><Reveal><Music2 strokeWidth={1} /><SectionHeading eyebrow="Ayúdanos con la música" title="¿Qué canción no puede faltar?" copy="Después de confirmar tu asistencia, comparte esa canción que te hace levantarte a bailar." /></Reveal><Reveal><form onSubmit={submit} className="song__form"><input name="songTitle" aria-label="Nombre de la canción" placeholder="Nombre de la canción" maxLength={120} required /><input name="artist" aria-label="Artista" placeholder="Artista" maxLength={120} required /><button className="button" disabled={saving}>{saving ? "Guardando…" : "Sugerir canción"}</button></form>{error && <p className="form__error" role="alert">{error}</p>}{done && <p className="inline-success" role="status"><Check size={16} /> ¡Guardamos tu sugerencia!</p>}</Reveal></section>;
 }

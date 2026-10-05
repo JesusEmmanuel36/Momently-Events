@@ -9,7 +9,7 @@ import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection, StorySection } from "@/components/sections/CountdownStory";
 import { GallerySection, VideoSection } from "@/components/sections/Gallery";
 import { DressCodeSection, HotelsSection, ImportantSection, LocationsSection, ScheduleSection } from "@/components/sections/EventDetails";
-import { GiftRegistrySection, RSVPSection, ShareContact } from "./GuestActions";
+import { GiftRegistrySection, RSVPSection, ShareContact, SongSection } from "./GuestActions";
 import { CalendarSection } from "@/components/sections/EventDetails";
 import { Botanical, Reveal } from "@/components/ui";
 
@@ -33,7 +33,7 @@ export function AdrianaFranciscoInvitation({ wedding, previewMode = false }) {
       {wedding.features.story && <StorySection wedding={wedding} />}{wedding.features.gallery && <GallerySection wedding={wedding} />}{wedding.features.video && <VideoSection wedding={wedding} />}
       {(wedding.features.ceremony || wedding.features.reception) && <LocationsSection wedding={wedding} />}{wedding.features.itinerary && <ScheduleSection wedding={wedding} />}{wedding.features.dressCode && <DressCodeSection wedding={wedding} />}
       {wedding.features.gifts && <GiftRegistrySection wedding={wedding} onToast={showToast} />}{wedding.features.hotels && <HotelsSection wedding={wedding} />}{wedding.features.important && <ImportantSection wedding={wedding} />}{wedding.features.calendar && <CalendarSection wedding={wedding} onToast={showToast} />}
-      {wedding.features.rsvp && <RSVPSection wedding={wedding} />}<ShareContact wedding={wedding} onToast={showToast} />
+      {wedding.features.rsvp && <RSVPSection wedding={wedding} />}{wedding.features.songRequest && <SongSection wedding={wedding} />}<ShareContact wedding={wedding} onToast={showToast} />
       <section className="closing"><Image src={wedding.images.hero} fill sizes="100vw" alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /><div className="closing__overlay" /><Botanical /><Reveal><span className="script">Gracias por formar parte</span><h2>de nuestra historia.</h2><p>{wedding.couple.bride} <i>&</i> {wedding.couple.groom}</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>
     {opened && !previewMode && wedding.features.music && <button className={`music-player ${playing ? "is-playing" : ""}`} onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause /> : <Play />}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span><Volume2 className="music-player__wave" /></button>}

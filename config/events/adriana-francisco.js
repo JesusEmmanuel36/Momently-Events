@@ -9,6 +9,7 @@ export const adrianaFrancisco = {
   "date": "2026-11-14T17:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
+  "askSongSuggestion": true,
   "dateDisplay": "14 · NOVIEMBRE · 2026",
   "dateLong": "Sábado, 14 de noviembre de 2026",
   "hero": {
@@ -99,7 +100,7 @@ export const adrianaFrancisco = {
     "label": "Nuestra canción"
   },
   "dressCode": {
-    "title": "Formal",
+    "title": "Formal / Elegante",
     "text": "Los colores dorado, vino, rojo y blanco están reservados para los novios. Gracias por elegir otros tonos para acompañarnos en este día tan especial."
   },
   "gifts": [
@@ -170,7 +171,7 @@ export const adrianaFranciscoPageData = {
  welcomeTitle:"Un amor que florece",welcome:["Con mucha alegría, te invitamos a celebrar nuestra unión civil y compartir con nosotros este día tan especial."],
  images:{hero:adrianaFrancisco.hero.image,couple:adrianaFrancisco.hero.image,gallery:adrianaFrancisco.gallery.slice(1).map(photo=>photo.src)},galleryItems:adrianaFrancisco.gallery.slice(1),
  music:{src:adrianaFrancisco.music.url,label:adrianaFrancisco.music.label},
- features:{music:true,story:false,gallery:true,video:false,ceremony:true,reception:false,itinerary:true,dressCode:true,gifts:true,hotels:false,important:false,calendar:true,rsvp:true,songRequest:false,faqs:false},
+ features:{music:true,story:false,gallery:true,video:false,ceremony:true,reception:false,itinerary:true,dressCode:true,gifts:true,hotels:false,important:false,calendar:true,rsvp:true,songRequest:true,faqs:false},
  ceremony:adrianaFrancisco.ceremony,reception:adrianaFrancisco.reception,
  itinerary:[{"time": "5:00 p. m.", "title": "Ceremonia civil", "icon": "heart"}, {"time": "6:00 p. m.", "title": "Primer baile", "icon": "music"}, {"time": "6:30 p. m.", "title": "Brindis", "icon": "glass"}, {"time": "7:00 p. m.", "title": "Cena", "icon": "sparkles"}, {"time": "9:00 p. m.", "title": "Comienza el descontrol", "icon": "music"}, {"time": "", "title": "Pastel", "icon": "sparkles"}],
  dressCode:{title:adrianaFrancisco.dressCode.title,note:adrianaFrancisco.dressCode.text,colors:["#d6b369","#76243b","#bd2338","#ffffff"]},
