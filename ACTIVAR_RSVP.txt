@@ -307,3 +307,9 @@ Invitación: /eventos/xv-hans-tadeo
 Panel: npm run provision-event -- xv-hans-tadeo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Audio: public/audio/xv-hans-tadeo.mp3
 Sin fecha límite de confirmación. Pendientes: fotos y WhatsApp.
+
+ALEJANDRO Y KATYA
+Invitación: https://momentlyevents.vercel.app/eventos/alejandro-y-katya
+Activar RSVP y panel (reemplaza el correo):
+npm run provision-event -- alejandro-y-katya correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+Sin fecha límite de confirmación.

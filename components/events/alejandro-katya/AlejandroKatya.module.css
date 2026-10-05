@@ -1,0 +1,11 @@
+.invitation .photoGrid { display:block; columns:3; column-gap:1rem; }
+.invitation .photoGrid button { display:block; width:100%; aspect-ratio:3/4; margin:0 0 1rem; break-inside:avoid; }
+.invitation .venueArtwork { background:linear-gradient(140deg,#ede2ce,#d6dcc3); }
+.invitation .venueArtwork img { object-fit:contain; padding:1.5rem; }
+@media(max-width:900px){.invitation .photoGrid{columns:2}}
+@media(max-width:600px){.invitation .photoGrid{columns:1;max-width:420px;margin-inline:auto}}
+
+.invitation .openEnvelope { width:118%!important; height:118%!important; max-width:none; inset:-26% auto auto -9%!important; }
+.invitation .openFront { clip-path:inset(55% 0 0 0); }
+
+@media(max-width:600px){.invitation .letter{height:62%;bottom:18%;}.invitation .letter h2{font-size:clamp(1.65rem,6vw,2.1rem)!important;line-height:.9!important;margin:.4rem 0;}.invitation .letter small{font-size:.5rem;}}
