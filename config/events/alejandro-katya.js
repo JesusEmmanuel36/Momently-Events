@@ -108,6 +108,13 @@ export const alejandroKatya = {
       "url": ""
     }
   ],
+  "bank": {
+    "enabled": true,
+    "bank": "",
+    "holder": "Jorge Alejandro Araujo Vazque",
+    "account": "1552623946",
+    "clabe": "012690015526239463"
+  },
   "contact": {
     "phone": "9831338973",
     "whatsapp": "https://wa.me/529831338973"
