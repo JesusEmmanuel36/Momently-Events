@@ -12,7 +12,7 @@ export const galileaXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con el corazón lleno de ilusión, te invito a celebrar mis quince años. Me encantará compartir contigo este día tan especial y el comienzo de una nueva etapa.",
-    "image": "/images/events/xv-galilea-perez/image.png"
+    "image": "/images/events/xv-galilea-perez/image copy.png"
   },
   "ceremony": {
     "enabled": true,
@@ -43,12 +43,6 @@ export const galileaXv = {
   },
   "gallery": [
     {
-      "src": "/images/events/xv-galilea-perez/image copy.png",
-      "width": 480,
-      "height": 853,
-      "alt": "Galilea Pérez Díaz · fotografía 2"
-    },
-    {
       "src": "/images/events/xv-galilea-perez/image copy 2.png",
       "width": 480,
       "height": 640,
@@ -65,12 +59,6 @@ export const galileaXv = {
       "width": 480,
       "height": 1039,
       "alt": "Galilea Pérez Díaz · fotografía 5"
-    },
-    {
-      "src": "/images/events/xv-galilea-perez/image copy 5.png",
-      "width": 480,
-      "height": 852,
-      "alt": "Galilea Pérez Díaz · fotografía 6"
     },
     {
       "src": "/images/events/xv-galilea-perez/image copy 6.png",
@@ -95,12 +83,6 @@ export const galileaXv = {
       "width": 480,
       "height": 480,
       "alt": "Galilea Pérez Díaz · fotografía 10"
-    },
-    {
-      "src": "/images/events/xv-galilea-perez/image copy 10.png",
-      "width": 480,
-      "height": 852,
-      "alt": "Galilea Pérez Díaz · fotografía 11"
     },
     {
       "src": "/images/events/xv-galilea-perez/image copy 11.png",
