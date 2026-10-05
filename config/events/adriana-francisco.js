@@ -8,13 +8,13 @@ export const adrianaFrancisco = {
   },
   "date": "2026-11-14T17:00:00-06:00",
   "timezone": "America/Mexico_City",
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "dateDisplay": "14 · NOVIEMBRE · 2026",
   "dateLong": "Sábado, 14 de noviembre de 2026",
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Nuestro amor florece y comienza un nuevo capítulo. Nos hará muy felices compartirlo contigo.",
-    "image": "/images/events/adriana-y-francisco/image.png"
+    "image": "/images/events/adriana-y-francisco/FOTOPRINCIPAL.png"
   },
   "ceremony": {
     "enabled": true,
@@ -37,7 +37,7 @@ export const adrianaFrancisco = {
   },
   "gallery": [
     {
-      "src": "/images/events/adriana-y-francisco/image.png",
+      "src": "/images/events/adriana-y-francisco/FOTOPRINCIPAL.png",
       "alt": "Adriana y Francisco · fotografía 1"
     },
     {

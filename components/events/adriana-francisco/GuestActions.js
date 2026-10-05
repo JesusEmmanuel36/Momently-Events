@@ -17,9 +17,9 @@ export function RSVPSection({ wedding }) {
     try { const value = JSON.parse(localStorage.getItem(`momently:rsvp:${wedding.slug}`) || "null"); if (value?.rsvpId && value?.editToken) setSaved(value); } catch {}
   }, [wedding.slug]);
   const handleRSVPSubmit = async (event) => {
-    event.preventDefault(); const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim(); const attendance = form.get("attendance"); const guests = Number(form.get("guests"));
-    if (name.length < 2 || name.length > 100 || !attendance || !Number.isInteger(guests) || guests < 0 || guests > wedding.rsvpSettings.maxCompanions) { setError("Por favor completa tu nombre, asistencia y número de acompañantes."); return; }
-    const payload = { name, attending: attendance, companions: attendance === "yes" ? guests : 0, allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: String(form.get("songTitle") || ""), artist: String(form.get("artist") || ""), website: String(form.get("website") || "") };
+    event.preventDefault(); const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim(); const attendance = form.get("attendance");
+    if (name.length < 2 || name.length > 100 || !["yes", "no"].includes(attendance)) { setError("Por favor completa tu nombre e indica si asistirás."); return; }
+    const payload = { name, attending: attendance, companions: 0, allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: String(form.get("songTitle") || ""), artist: String(form.get("artist") || ""), website: String(form.get("website") || "") };
     setSubmitting(true); setError("");
     try {
       {
@@ -37,7 +37,6 @@ export function RSVPSection({ wedding }) {
     <Reveal className="rsvp__form-wrap">{success ? <div className="success"><span><Check /></span><h3>¡Gracias, {success}!</h3><p>Tu respuesta ha sido registrada. Nos llena de alegría compartir este momento contigo.</p><button className="text-link" onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form className="form" onSubmit={handleRSVPSubmit} noValidate>
       <label>Nombre completo<input name="name" placeholder="Escribe tu nombre" defaultValue={saved?.data?.name || ""} maxLength={100} required /></label>
       <fieldset><legend>¿Asistirás?</legend><div className="choice-row"><label><input type="radio" name="attendance" value="yes" defaultChecked={saved?.data?.attending === "yes"} /><span>Sí, ahí estaré</span></label><label><input type="radio" name="attendance" value="no" defaultChecked={saved?.data?.attending === "no"} /><span>No podré asistir</span></label></div></fieldset>
-      <label>Número de acompañantes<input type="number" name="guests" min="0" max={wedding.rsvpSettings?.maxCompanions ?? 5} defaultValue={saved?.data?.companions ?? 0} /></label>
       <label>Alergias o comentarios<textarea name="notes" defaultValue={saved?.data?.allergies || ""} maxLength={500} placeholder="Cuéntanos si debemos considerar algo" rows="3" /></label><label>Mensaje para los novios <small>Opcional</small><textarea name="message" defaultValue={saved?.data?.message || ""} maxLength={1000} placeholder="Déjanos unas palabras para nuestro gran día…" rows="4" /></label>
       {wedding.rsvpSettings?.askSongSuggestion && <div className="form__two"><label>Canción sugerida <small>Opcional</small><input name="songTitle" placeholder="Nombre de la canción" /></label><label>Artista<input name="artist" placeholder="Artista" /></label></div>}
       <label className="honeypot" aria-hidden="true">Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>
