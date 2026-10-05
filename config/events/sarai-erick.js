@@ -34,9 +34,13 @@ export const saraiErick = {
     "time": "4:00 p. m.",
     "address": "Santa Cruz, municipio de Soledad de Doblado",
     "image": "/images/events/sarai-y-erick/floral.png",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/t64g42i18BbfoLX29",
     "wazeUrl": "",
-    "hideMapLinks": true
+    "hideMapLinks": false
+  },
+  "family": {
+    "groomParents": ["María Hernández López", "José Valentín Coria Casas"],
+    "brideParents": ["Reyna Martínez Montes", "Gregorio Monroy San Agustín"]
   },
   "gallery": [
     {
@@ -105,6 +109,7 @@ export const saraiErickPageData = {
   images: { hero: saraiErick.hero.image, couple: saraiErick.hero.image, gallery: [] },
   music: { src: saraiErick.music.url, label: saraiErick.music.label },
   features: { music: true, story: false, gallery: false, video: false, ceremony: true, reception: true, itinerary: true, dressCode: true, gifts: true, hotels: false, important: false, calendar: true, rsvp: true, songRequest: false, faqs: false },
+  family: saraiErick.family,
   ceremony: saraiErick.ceremony,
   reception: saraiErick.reception,
   itinerary: [{ time: "10:00 a. m.", title: "Ceremonia religiosa", icon: "heart" }, { time: "4:00 p. m.", title: "Recepción", icon: "glass" }],
