@@ -337,3 +337,8 @@ Invitación: https://momentlyevents.vercel.app/eventos/andrea-y-arturo
 Activar RSVP y panel (reemplaza el correo):
 npm run provision-event -- andrea-y-arturo correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
 Sin fecha límite de confirmación. Pendiente confirmar la hora de la misa.
+
+CALEB Y CIRIAM
+Invitación: https://momentlyevents.vercel.app/eventos/caleb-y-ciriam
+Sin formulario RSVP. No necesita activar un panel para compartirla.
+Contacto: 3121130167.

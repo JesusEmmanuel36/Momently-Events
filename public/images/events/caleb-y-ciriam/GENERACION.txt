@@ -1,0 +1,3 @@
+Herramienta: image_gen integrada. Sobres editados de Andrea y Arturo; floral.png reutilizado de esa invitación para conservar la paleta.
+
+Prompts: cambiar únicamente el monograma A & A a C & C en los sobres cerrado y abierto, conservar geometría frontal, papel verde olivo, motivos dorados, lazo champaña y transparencia. Sobre abierto sin hoja para animación independiente.
