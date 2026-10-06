@@ -115,6 +115,17 @@ export const patriciaBautizo = {
       "height": 960
     }
   ],
+  "dressCode": {
+    "text": "Te invitamos a elegir colores de esta gama (preferentemente en tonos claros).",
+    "colors": [
+      { "name": "Marfil", "hex": "#faf6ef" },
+      { "name": "Crema", "hex": "#f2e7d9" },
+      { "name": "Beige claro", "hex": "#e7d5bd" },
+      { "name": "Arena", "hex": "#cfbba3" },
+      { "name": "Café claro", "hex": "#b39a83" },
+      { "name": "Taupe", "hex": "#927a64" }
+    ]
+  },
   "gifts": [],
   "contact": {
     "phone": "3320352913",

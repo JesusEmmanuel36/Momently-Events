@@ -94,3 +94,6 @@
 
 .photoGridStatic { grid-template-columns:repeat(3,minmax(0,1fr)); }
 @media(max-width:600px){ .photoGridStatic { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+.dressPalette { display:flex; justify-content:center; flex-wrap:wrap; gap:clamp(.65rem,2vw,1.4rem); margin:2rem auto 0; max-width:720px; }
+.dressSwatch { width:clamp(64px,12vw,95px); height:clamp(64px,12vw,95px); border-radius:50%; border:1px solid #c7b6a455; box-shadow:0 4px 8px #59423826; }
