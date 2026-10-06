@@ -13,13 +13,12 @@ export const zukyAdali = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
-    "quote": "Andrea Longoria y Alejandro Aguilar te invitan cordialmente a la celebración de los XV años de su hija Zuky Adali.",
+    "quote": "Andrea Longoria te invita cordialmente a la celebración de los XV años de su hija Zuky Adali.",
     "image": "/images/events/zuky-adali-xv/image copy 6.png"
   },
   "family": {
     "parents": [
-      "Andrea Longoria",
-      "Alejandro Aguilar"
+      "Andrea Longoria"
     ],
     "godparents": [
       "Itzadinana Morales Rivera",
@@ -124,8 +123,8 @@ export const zukyAdali = {
   },
   "gifts": [
     {
-      "name": "Lluvia de sobres o un regalo",
-      "description": "Tu presencia es más que suficiente. Si deseas darme un detalle, puedes elegir un regalo o sumarte a la lluvia de sobres. ¡Lo dejo a tu imaginación!",
+      "name": "Lluvia de sobres",
+      "description": "Con tu presencia es más que suficiente, pero si gustas tener un detalle conmigo, habrá lluvia de sobres.",
       "type": "cash",
       "url": ""
     }
@@ -135,9 +134,9 @@ export const zukyAdali = {
     "whatsapp": ""
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/lesly-marcelino-perfect.mp3",
+    "label": "Perfect · Ed Sheeran"
   },
   "theme": {
     "primary": "#b32638",
