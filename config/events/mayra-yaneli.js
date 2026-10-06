@@ -26,7 +26,7 @@ export const mayraYaneli = {
   },
   "reception": {
     "enabled": true,
-    "name": "Mi recepción",
+    "name": "Jardín de Eventos El Tío Nico",
     "time": "4:00 p. m.",
     "address": "Av. Cuautitlán, esquina con Galeana, San Pedro de la Laguna, Zumpango, Estado de México",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Av.%20Cuautitl%C3%A1n%2C%20esquina%20con%20Galeana%2C%20San%20Pedro%20de%20la%20Laguna%2C%20Zumpango%2C%20Estado%20de%20M%C3%A9xico",
@@ -42,36 +42,11 @@ export const mayraYaneli = {
     {
       "time": "16:00",
       "title": "Recepción",
-      "description": "Av. Cuautitlán, esquina con Galeana",
+      "description": "Jardín de Eventos El Tío Nico",
       "icon": "glass"
     }
   ],
-  "gallery": [
-    {
-      "src": "/images/events/mayra-yaneli-xv/image copy.png",
-      "alt": "Mayra Yaneli, fotografía 1",
-      "width": 480,
-      "height": 1066
-    },
-    {
-      "src": "/images/events/mayra-yaneli-xv/image copy 2.png",
-      "alt": "Mayra Yaneli, fotografía 2",
-      "width": 480,
-      "height": 1066
-    },
-    {
-      "src": "/images/events/mayra-yaneli-xv/image copy 3.png",
-      "alt": "Mayra Yaneli, fotografía 3",
-      "width": 480,
-      "height": 1066
-    },
-    {
-      "src": "/images/events/mayra-yaneli-xv/image copy 4.png",
-      "alt": "Mayra Yaneli, fotografía 4",
-      "width": 720,
-      "height": 1599
-    }
-  ],
+  "gallery": [],
   "gifts": [],
   "contact": {
     "phone": "7295133734",
@@ -89,5 +64,18 @@ export const mayraYaneli = {
     "cream": "#fff6f3",
     "ivory": "#f6e2e4",
     "rose": "#945b66"
+  },
+  "family": {
+    "mother": "Leticia Villegas Monroy",
+    "stepfather": "Arturo de la Rosa Avelar",
+    "godparents": [
+      "Fernando Quijada Revilla",
+      "Ma. Isabel Monroy García"
+    ]
+  },
+  "dressCode": {
+    "reservedColor": "Rosa gold",
+    "color": "#a96c78",
+    "text": "El color rosa gold está reservado para la quinceañera. Gracias por elegir otro tono para tu vestimenta."
   }
 };
