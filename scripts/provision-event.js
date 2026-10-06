@@ -1,3 +1,4 @@
+import { mayraYaneli } from "../config/events/mayra-yaneli.js";
 import { fabiolaDaniel } from "../config/events/fabiola-daniel.js";
 import { anaPaula } from "../config/events/ana-paula.js";
 import { alejandroKatya } from "../config/events/alejandro-katya.js";
@@ -55,7 +56,7 @@ import { camilaZoe } from "../config/events/camila-zoe.js";
 
 import { hansTadeo } from "../config/events/hans-tadeo.js";
 
-const templates = { [fabiolaDaniel.slug]: fabiolaDaniel, [anaPaula.slug]: anaPaula, [alejandroKatya.slug]: alejandroKatya, [hansTadeo.slug]:hansTadeo, [camilaZoe.slug]:camilaZoe, [carlosComunion.slug]:carlosComunion, [adrianaFrancisco.slug]:adrianaFrancisco, [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
+const templates = { [mayraYaneli.slug]: mayraYaneli, [fabiolaDaniel.slug]: fabiolaDaniel, [anaPaula.slug]: anaPaula, [alejandroKatya.slug]: alejandroKatya, [hansTadeo.slug]:hansTadeo, [camilaZoe.slug]:camilaZoe, [carlosComunion.slug]:carlosComunion, [adrianaFrancisco.slug]:adrianaFrancisco, [galileaXv.slug]: galileaXv, [eufraLety.slug]: eufraLety, [liahAmmy.slug]: liahAmmy, [saraiErick.slug]: saraiErick, [geraldineXv.slug]: geraldineXv, [valeryXv.slug]: valeryXv, [fernandaAlejandro.slug]: fernandaAlejandro, [omarLiliana.slug]: omarLiliana, [joseMarcela.slug]: joseMarcela, [gabrielaXv.slug]: gabrielaXv, [danishaXv.slug]: danishaXv, [patriciaBautizo.slug]: patriciaBautizo, [karinaDaniel.slug]: karinaDaniel, [marianaXv.slug]: marianaXv, [amadayXv.slug]: amadayXv, [ivanErnestina.slug]: ivanErnestina, [leslyMarcelino.slug]: leslyMarcelino, [andreaAnahis.slug]: andreaAnahis, [roxana50.slug]: roxana50, [saraBlase.slug]: saraBlase, [margaritaMateo.slug]: margaritaMateo, [krystelXv.slug]: krystelXv, [erickErika.slug]: erickErika, [keylaXv.slug]: keylaXv };
 const slug = String(process.argv[2] || "").trim();
 const email = String(process.argv[3] || "").trim().toLowerCase();
 const requestedUrl = String(process.argv[4] || "").trim();

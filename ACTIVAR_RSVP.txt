@@ -325,3 +325,9 @@ Invitación: https://momentlyevents.vercel.app/eventos/fabiola-y-daniel
 Activar RSVP y panel (reemplaza el correo):
 npm run provision-event -- fabiola-y-daniel correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
 Sin fecha límite de confirmación.
+
+XV DE MAYRA YANELI
+Invitación: https://momentlyevents.vercel.app/eventos/xv-mayra-yaneli
+Activar RSVP y panel (reemplaza el correo):
+npm run provision-event -- xv-mayra-yaneli correo-de-la-familia@gmail.com https://momentlyevents.vercel.app
+Sin fecha límite de confirmación.
