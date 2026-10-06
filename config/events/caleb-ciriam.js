@@ -10,14 +10,14 @@ export const calebCiriam = {
     "partner1": "Caleb",
     "partner2": "Ciriam"
   },
-  "date": "2027-06-14T13:00:00-06:00",
+  "date": "2026-11-14T13:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "rsvpEnabled": false,
-  "dateStamp": "14 · 06 · 2027",
-  "dateDisplay": "Lunes · 14 de junio · 2027",
-  "timelineDate": "14 de junio",
-  "calendarDate": "14 de junio de 2027",
+  "dateStamp": "14 · 11 · 2026",
+  "dateDisplay": "Sábado · 14 de noviembre · 2026",
+  "timelineDate": "14 de noviembre",
+  "calendarDate": "14 de noviembre de 2026",
   "hero": {
     "subtitle": "Nuestro enlace matrimonial",
     "quote": "Con el corazón lleno de amor y gratitud, queremos compartir contigo nuestro enlace matrimonial. Tu compañía hará aún más especial este día y el comienzo de nuestra vida juntos.",
@@ -80,6 +80,7 @@ export const calebCiriam = {
     }
   ],
   "dressCode": {
+    "gardenNote": "Celebraremos una boda de jardín. Te recomendamos elegir ropa fresca y cómoda para disfrutar del día.",
     "title": "Gama de colores para las damas",
     "text": "La novia agradece a las damas que, de preferencia, elijan vestidos de esta gama de colores.",
     "colors": [
@@ -118,9 +119,9 @@ export const calebCiriam = {
     "whatsapp": "https://wa.me/523121130167"
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/caleb-y-ciriam.mp3",
+    "label": "Nuestra canción"
   },
   "itinerary": [
     {
