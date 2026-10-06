@@ -34,11 +34,12 @@ export const luJuan = {
     "time": "A partir de las 4:00 p. m.",
     "address": "Av. Cerro del Mercado #23, Col. Malintzi, C. P. 72210, Heroica Puebla de Zaragoza, Puebla",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Av.+Cerro+del+Mercado+23+Malintzi+72210+Heroica+Puebla+de+Zaragoza+Puebla",
-    "image": "/images/events/lu-y-juan/floral.png"
+    "image": "/images/events/lu-y-juan/image copy 2.png"
   },
   "gallery": [],
   "dressCode": {
     "title": "Boda con estilo mexicano",
+    "image": "/images/events/lu-y-juan/image copy.png",
     "text": "Te invitamos a llevar contigo algún atuendo con bordados, colores, diseños o accesorios inspirados en nuestra cultura. ¡Hagamos una fiesta llena de tradiciones!",
     "reservedColors": [
       {

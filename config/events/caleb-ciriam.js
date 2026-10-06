@@ -67,16 +67,28 @@ export const calebCiriam = {
       "alt": "Caleb y Ciriam, recuerdo 2"
     },
     {
-      "src": "/images/events/caleb-y-ciriam/image copy 3.png",
-      "alt": "Caleb y Ciriam, recuerdo 3"
+      "src": "/images/events/caleb-y-ciriam/image copy 5.png",
+      "alt": "Caleb y Ciriam, recuerdo 5"
     },
     {
-      "src": "/images/events/caleb-y-ciriam/image copy 4.png",
+      "src": "/images/events/caleb-y-ciriam/image copy 6.png",
       "alt": "Caleb y Ciriam, recuerdo 4"
     },
     {
-      "src": "/images/events/caleb-y-ciriam/image copy 5.png",
+      "src": "/images/events/caleb-y-ciriam/image copy 7.png",
       "alt": "Caleb y Ciriam, recuerdo 5"
+    },
+    {
+      "src": "/images/events/caleb-y-ciriam/image copy 8.png",
+      "alt": "Caleb y Ciriam, recuerdo 6"
+    },
+    {
+      "src": "/images/events/caleb-y-ciriam/image copy 9.png",
+      "alt": "Caleb y Ciriam, recuerdo 7"
+    },
+    {
+      "src": "/images/events/caleb-y-ciriam/image copy 10.png",
+      "alt": "Caleb y Ciriam, recuerdo 8"
     }
   ],
   "dressCode": {

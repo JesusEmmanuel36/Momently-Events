@@ -1,7 +1,7 @@
 .invitation .photoGrid { display:block; columns:3; column-gap:1rem; }
 .invitation .photoGrid button { display:block; width:100%; aspect-ratio:3/4; margin:0 0 1rem; break-inside:avoid; }
 .invitation .venueArtwork { background:linear-gradient(140deg,#fff3e9,#ffe9bb); }
-.invitation .venueArtwork img { object-fit:contain; padding:1.5rem; }
+.invitation .venueArtwork img { object-fit:cover; padding:0; }
 @media(max-width:900px){.invitation .photoGrid{columns:2}}
 @media(max-width:600px){.invitation .photoGrid{columns:1;max-width:420px;margin-inline:auto}}
 
@@ -43,3 +43,5 @@
 .reservedColors figure>span {display:block;width:clamp(42px,9vw,72px);aspect-ratio:1;border-radius:50%;box-shadow:0 1px 4px #67352120;}
 .reservedColors figcaption {font-family:var(--font-serif),serif;text-transform:uppercase;font-size:.7rem;color:var(--dark);}
 @media(max-width:360px){.invitation .heroCopy h1{font-size:3.2rem!important;}.reservedColors>div{gap:.6rem}.reservedColors figcaption{font-size:.6rem;}}
+
+.dressIllustration {display:block;width:min(75vw,300px);height:auto;margin:2rem auto;border-radius:12px;mix-blend-mode:multiply;}
