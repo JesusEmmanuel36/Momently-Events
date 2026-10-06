@@ -13,13 +13,15 @@ export const luisManuelNancy = {
   "date": "2026-11-14T13:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
+  "rsvpEnabled": false,
   "dateStamp": "14 · 11 · 2026",
   "dateDisplay": "Sábado · 14 de noviembre · 2026",
   "timelineDate": "14 de noviembre",
   "calendarDate": "14 de noviembre de 2026",
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Con el corazón lleno de amor y alegría, queremos compartir contigo el comienzo de nuestra vida juntos. Tu compañía hará aún más especial este día.",
+    "quote": "El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda circunstancia.",
+    "quoteReference": "1 Corintios 13:7",
     "image": "/images/events/luis-manuel-y-nancy/image.png"
   },
   "closingImage": "/images/events/luis-manuel-y-nancy/image copy.png",
