@@ -331,3 +331,9 @@ Invitación: https://momentlyevents.vercel.app/eventos/xv-mayra-yaneli
 Activar RSVP y panel (reemplaza el correo):
 npm run provision-event -- xv-mayra-yaneli correo-de-la-familia@gmail.com https://momentlyevents.vercel.app
 Sin fecha límite de confirmación.
+
+ANDREA Y ARTURO
+Invitación: https://momentlyevents.vercel.app/eventos/andrea-y-arturo
+Activar RSVP y panel (reemplaza el correo):
+npm run provision-event -- andrea-y-arturo correo-de-los-novios@gmail.com https://momentlyevents.vercel.app
+Sin fecha límite de confirmación. Pendiente confirmar la hora de la misa.
