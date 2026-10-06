@@ -10,6 +10,7 @@ export const armandoYamilet = {
   "dateOnly": "2026-11-20",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
+  "rsvpEnabled": false,
   "dateStamp": "20 · 11 · 2026",
   "dateDisplay": "Viernes · 20 de noviembre · 2026",
   "timelineDate": "20 de noviembre",
