@@ -371,3 +371,8 @@ Luis Manuel y Nancy
 Invitación: https://momentlyevents.vercel.app/eventos/luis-manuel-y-nancy
 Sin formulario de confirmación RSVP; no requiere activación del panel.
 Pendiente: WhatsApp, vestimenta y regalos.
+
+Boda de Fátima y Javier
+Invitación: https://momentlyevents.vercel.app/eventos/fatima-y-javier
+Activar: npm run provision-event -- fatima-y-javier CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel.
