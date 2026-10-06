@@ -27,3 +27,22 @@
 .anniversaryBadge { display:block; margin:1.2rem 0; color:#fff4dc; text-transform:uppercase; letter-spacing:.18em; font-size:.85rem; }
 .invitation h1 { font-size:clamp(3rem,12vw,7rem)!important; line-height:1.05!important; }
 .invitation h1 i { margin:.4rem 0; }
+
+.invitation .hero {min-height:max(100svh,740px);}
+.heroSubtitle {position:absolute;z-index:2;top:clamp(1.5rem,4vh,3rem);left:1rem;right:1rem;text-align:center;text-transform:uppercase;letter-spacing:.2em;font-size:clamp(.65rem,1.3vw,.95rem);font-weight:700;text-shadow:0 2px 8px #25121b;}
+.invitation .heroCopy {position:absolute;bottom:5rem;left:0;right:0;padding:0 1rem!important;}
+.invitation .heroCopy h1 {font-size:clamp(2.4rem,8vw,5rem)!important;margin:0 0 1.1rem;line-height:1.05!important;}
+.invitation .heroCopy h1 i {margin:.15rem 0;line-height:.7;}
+.invitation .fullNames {display:flex;flex-direction:column;align-items:center;gap:.3rem;margin-inline:auto;}
+.invitation .fullNames i {display:block;font-style:italic;font-size:.8em;}
+.invitation .photoGrid button {aspect-ratio:3/4;}
+.invitation .photoGrid button img {object-position:var(--photo-position,center);transform:scale(var(--photo-zoom,1));}
+.invitation .photoGrid button:hover img {transform:scale(calc(var(--photo-zoom,1)*1.04));}
+.formalAttire {display:block;width:clamp(180px,35vw,250px);height:auto;margin:2rem auto 0;color:var(--dark);}
+.giftIcons {display:flex;justify-content:center;gap:1rem;margin-bottom:1.6rem;color:var(--gold);}
+.giftIcons svg {width:38px;height:38px;stroke-width:1.2;}
+@media(max-width:600px){.invitation .heroCopy{bottom:5rem;}.invitation .heroCopy h1{font-size:clamp(2.4rem,10vw,3.2rem)!important;}.invitation .heroCopy p{font-size:.6rem;letter-spacing:.16em;}}
+
+@media(min-width:901px){.invitation .hero{background:#491926;}.invitation .hero>img:first-child{object-fit:contain;object-position:center;}}
+
+.invitation .closingNames {margin-top:clamp(3rem,8vw,6rem);}
