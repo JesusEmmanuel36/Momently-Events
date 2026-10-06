@@ -10,7 +10,7 @@ export const andreaArturo = {
     "partner1": "Andrea",
     "partner2": "Arturo"
   },
-  "date": "2026-11-14T20:30:00-06:00",
+  "date": "2026-11-14T17:00:00-06:00",
   "timezone": "America/Monterrey",
   "maxCompanions": 0,
   "dateStamp": "14 · 11 · 2026",
@@ -25,7 +25,7 @@ export const andreaArturo = {
   "ceremony": {
     "enabled": true,
     "name": "Parroquia Santiago Apóstol",
-    "time": "Horario por confirmar",
+    "time": "5:00 p. m.",
     "address": "Zona Centro, Monclova, Coahuila",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Parroquia%20Santiago%20Ap%C3%B3stol%20Zona%20Centro%2C%20Monclova%2C%20Coahuila",
     "image": "/images/events/andrea-y-arturo/floral.png"
@@ -33,7 +33,7 @@ export const andreaArturo = {
   "reception": {
     "enabled": true,
     "name": "Balcones Eventos",
-    "time": "8:30 p. m.",
+    "time": "9:00 p. m.",
     "address": "Blvd. Benito Juárez 909, Tecnológico, C.P. 25750, Monclova, Coahuila",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Balcones%20Eventos%20Blvd.%20Benito%20Ju%C3%A1rez%20909%2C%20Tecnol%C3%B3gico%2C%20C.P.%2025750%2C%20Monclova%2C%20Coahuila",
     "image": "/images/events/andrea-y-arturo/floral.png"
@@ -62,13 +62,19 @@ export const andreaArturo = {
   },
   "itinerary": [
     {
-      "time": "Por confirmar",
+      "time": "17:00",
       "title": "Ceremonia religiosa",
       "description": "Parroquia Santiago Apóstol",
       "icon": "heart"
     },
     {
       "time": "20:30",
+      "title": "Ceremonia civil",
+      "description": "",
+      "icon": "heart"
+    },
+    {
+      "time": "21:00",
       "title": "Recepción",
       "description": "Balcones Eventos",
       "icon": "glass"
