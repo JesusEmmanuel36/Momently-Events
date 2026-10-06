@@ -376,3 +376,8 @@ Boda de Fátima y Javier
 Invitación: https://momentlyevents.vercel.app/eventos/fatima-y-javier
 Activar: npm run provision-event -- fatima-y-javier CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Pendiente: correo del panel.
+
+Boda civil de Lu y Juan
+Invitación: https://momentlyevents.vercel.app/eventos/lu-y-juan
+Activar: npm run provision-event -- lu-y-juan CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel.
