@@ -1,0 +1,12 @@
+Herramienta: image_gen integrada. Archivos: hero.png, envelope-closed.png, envelope-open.png, floral.png.
+Hero:
+High resolution portrait 2:3 first holy communion illustration, polished delicate hand-painted storybook style. Sweet young girl with long brown wavy hair half up, white flower crown, modest ivory communion dress, eyes gently closed, hands together in prayer holding a fine golden rosary. Girl centered in lower half. Graceful oval wreath of pastel blush pink roses, cream peonies, soft sage leaves and subtle gold stems. Warm ivory beige background, luminous soft colors, elegant tender Catholic celebration. Generous uncluttered upper third for website title added separately. No lettering, no ribbons with text, no watermark. Beautiful detailed clean illustration inspired by supplied reference, not a photograph.
+
+Closed:
+Photorealistic luxury 3D first communion envelope product cutout, landscape 3:2, front-facing perfectly centered symmetrical, entire object visible with margins. CLOSED blush pastel pink textured paper envelope triangular flap, fine embossed gold botanical sprigs, champagne beige satin bow, round blush wax seal with gold initials R J. Delicate elegant refined design, realistic studio lighting, genuinely transparent background around envelope, no table, no scene, no glow, no other text. Front horizontal rectangular envelope fills 88 percent canvas width.
+
+Open:
+Edit this envelope into its OPEN state for animated invitation. Preserve pastel blush paper, gold botanical embossing, champagne bow, pink wax seal RJ, perfectly straight front facing symmetrical geometry. Raise the triangular flap fully upward, empty ivory interior, no paper card. Keep lower front pocket width matching closed reference and ample visible margins. Genuine transparent background preserve alpha, no scene or floor or glow. Entire open envelope visible landscape3:2.
+
+Floral:
+Photorealistic elegant floral arrangement PNG cutout for girl's first communion invitation. Graceful centered horizontal bouquet of pastel pink roses, cream beige peonies, delicate golden botanical sprigs, sage foliage. Luxury pastel pink gold beige palette. Fully visible flowers with clear margins and natural leaves, soft studio light, fine realistic detail. Genuinely transparent background around and between leaves, no vase, no ribbon, no floor, no backdrop, no glow, no text or watermark. Landscape3:2.
