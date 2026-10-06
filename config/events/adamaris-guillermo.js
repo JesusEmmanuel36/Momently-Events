@@ -20,6 +20,22 @@ export const adamarisGuillermo = {
     "image": "/images/adamaris-y-guillermo/image copy 3.png"
   },
   "closingImage": "/images/adamaris-y-guillermo/image copy 8.png",
+  "family": {
+    "groups": [
+      {
+        "title": "Padres de la novia",
+        "names": ["Lidia Hernández Pérez", "Adrián Sánchez Cruz"]
+      },
+      {
+        "title": "Padres del novio",
+        "names": ["Rufina Larrea Toscano", "Guillermo Acevedo Torres †"]
+      },
+      {
+        "title": "Padrinos de velación",
+        "names": ["Evelyn Pérez Balderrama", "Óscar Juárez Castro"]
+      }
+    ]
+  },
   "ceremony": {
     "enabled": true,
     "name": "Parroquia San Agustín de Hipona",
