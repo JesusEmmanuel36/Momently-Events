@@ -366,3 +366,8 @@ Boda de Adamaris y Guillermo
 Invitación: https://momentlyevents.vercel.app/eventos/adamaris-y-guillermo
 Activar: npm run provision-event -- adamaris-y-guillermo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Pendiente: correo del panel.
+
+Luis Manuel y Nancy
+Invitación: https://momentlyevents.vercel.app/eventos/luis-manuel-y-nancy
+Activar: npm run provision-event -- luis-manuel-y-nancy CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel, WhatsApp, vestimenta y regalos.

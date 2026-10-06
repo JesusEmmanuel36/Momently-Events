@@ -1,0 +1,12 @@
+Herramienta: imagegen integrada. Imágenes con transparencia.
+Closed:
+Use case: product-mockup. Photorealistic 3D wedding invitation asset, perfectly straight front view, no perspective tilt, isolated on true transparent background, landscape 1536x1024. Pearl ivory luxurious paper, deep burgundy guinda #78243f satin ribbon, delicate pearl details and restrained pale silver botanical embossing. No scenery or text except wax monogram L&N. One CLOSED horizontal envelope centered, front facing viewer, rectangular body, beautiful burgundy ribbon bow across bottom third and central pearl wax seal L&N, crisp detailed paper folds. Entire object visible with narrow equal margins.
+
+Open:
+Use case: product-mockup. Photorealistic 3D wedding invitation asset, perfectly straight front view, no perspective tilt, isolated on true transparent background, landscape 1536x1024. Pearl ivory luxurious paper, deep burgundy guinda #78243f satin ribbon, delicate pearl details and restrained pale silver botanical embossing. No scenery or text except wax monogram L&N. One OPEN horizontal envelope with triangular flap raised straight upward behind, empty interior, no card or inserted paper, body front fully visible with burgundy ribbon bow and pearl wax seal L&N across bottom third. Entire object centered and visible with narrow margins.
+
+Floral:
+Use case: photorealistic-natural. Transparent background cutout of a graceful wide wedding floral arrangement, pearl white roses and deep burgundy guinda roses #78243f, small ivory blossoms, muted eucalyptus, delicate pale silver leaves. Photorealistic luxurious flowers, horizontal cascading crescent, 1536x1024, no vase, no text, no backdrop, all edges isolated and true alpha transparency.
+
+Fuente de dirección de iglesia: https://sitiosymonumentos.cultura.gob.mx/monumentos-inmuebles-de-propiedad-federal/san-pedro-32/
+Recepción: enlace proporcionado por el cliente; dirección exacta pendiente.
