@@ -80,7 +80,6 @@ export const calebCiriam = {
     }
   ],
   "dressCode": {
-    "gardenNote": "Celebraremos una boda de jardín. Te recomendamos elegir ropa fresca y cómoda para disfrutar del día.",
     "title": "Gama de colores para las damas",
     "text": "La novia agradece a las damas que, de preferencia, elijan vestidos de esta gama de colores.",
     "colors": [
