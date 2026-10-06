@@ -95,6 +95,12 @@ export const anaPaula = {
       "alt": "Ana Paula, fotografía 6",
       "width": 1024,
       "height": 1024
+    },
+    {
+      "src": "/images/events/bautizmo-ana-paula/image copy 6.png",
+      "alt": "Ana Paula, fotografía 7",
+      "width": 896,
+      "height": 1200
     }
   ],
   "gifts": [],
