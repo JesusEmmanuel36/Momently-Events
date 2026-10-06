@@ -16,7 +16,7 @@ export const alejandroKatya = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Dios, en su tiempo perfecto, permitió que nuestros caminos se encontraran. Desde entonces, no contamos los días, sino las razones que cada día nos recuerdan que nacimos para caminar de la mano. Porque el amor verdadero no se mide por el tiempo, sino por la certeza de haber encontrado a la persona con quien quieres compartir toda una vida. Con el corazón lleno de gratitud y amor, hemos decidido decir «sí» para siempre.",
-    "image": "/images/events/alejandro-y-katya/image copy 3.png"
+    "image": "/images/events/alejandro-y-katya/image.png"
   },
   "ceremony": {
     "enabled": false,
@@ -34,64 +34,7 @@ export const alejandroKatya = {
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Calle+Gral.+Francisco+J.+Mujica+454+77010+Chetumal+Quintana+Roo",
     "image": "/images/events/alejandro-y-katya/floral.png"
   },
-  "gallery": [
-    {
-      "src": "/images/events/alejandro-y-katya/image copy.png",
-      "alt": "Alejandro y Katya — recuerdo 1"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 2.png",
-      "alt": "Alejandro y Katya — recuerdo 2"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image.png",
-      "alt": "Alejandro y Katya — recuerdo 3"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 4.png",
-      "alt": "Alejandro y Katya — recuerdo 4"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 5.png",
-      "alt": "Alejandro y Katya — recuerdo 5"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 6.png",
-      "alt": "Alejandro y Katya — recuerdo 6"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 7.png",
-      "alt": "Alejandro y Katya — recuerdo 7"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 9.png",
-      "alt": "Alejandro y Katya — recuerdo 9"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 10.png",
-      "alt": "Alejandro y Katya — recuerdo 10"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 11.png",
-      "alt": "Alejandro y Katya — recuerdo 11"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 12.png",
-      "alt": "Alejandro y Katya — recuerdo 12"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 13.png",
-      "alt": "Alejandro y Katya — recuerdo 13"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 14.png",
-      "alt": "Alejandro y Katya — recuerdo 14"
-    },
-    {
-      "src": "/images/events/alejandro-y-katya/image copy 15.png",
-      "alt": "Alejandro y Katya — recuerdo 15"
-    }
-  ],
+  "gallery": [],
   "dressCode": {
     "title": "Negro y verde olivo",
     "text": "Te invitamos a acompañarnos con vestimenta en tonos negro y verde olivo."
@@ -106,8 +49,8 @@ export const alejandroKatya = {
   ],
   "bank": {
     "enabled": true,
-    "bank": "",
-    "holder": "Jorge Alejandro Araujo Vazque",
+    "bank": "BBVA",
+    "holder": "Jorge Alejandro Araujo Vazquez",
     "account": "1552623946",
     "clabe": "012690015526239463"
   },
@@ -135,5 +78,6 @@ export const alejandroKatya = {
     "cream": "#f8f1e6",
     "ivory": "#ede2ce",
     "rose": "#c6cbb4"
-  }
+  },
+  "closingImage": "/images/events/alejandro-y-katya/image copy.png"
 };
