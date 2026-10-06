@@ -28,8 +28,8 @@ export const mayraYaneli = {
     "enabled": true,
     "name": "Jardín de Eventos El Tío Nico",
     "time": "4:00 p. m.",
-    "address": "Av. Cuautitlán, esquina con Galeana, San Pedro de la Laguna, Zumpango, Estado de México",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Av.%20Cuautitl%C3%A1n%2C%20esquina%20con%20Galeana%2C%20San%20Pedro%20de%20la%20Laguna%2C%20Zumpango%2C%20Estado%20de%20M%C3%A9xico",
+    "address": "Mecánicos, San Pedro de la Laguna, C.P. 55609, Zumpango de Ocampo, Estado de México",
+    "mapsUrl": "https://maps.app.goo.gl/qmHUKu5kAHfez9c88",
     "image": "/images/events/mayra-yaneli-xv/floral.png"
   },
   "itinerary": [
