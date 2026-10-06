@@ -1,0 +1,9 @@
+Herramienta: image_gen integrada. Archivos: envelope-closed.png, envelope-open.png, floral.png.
+Closed:
+Photorealistic luxury wedding envelope cutout landscape3:2 front facing centered symmetrical CLOSED horizontal rectangular envelope in elegant soft powder blue textured paper, delicate silver and champagne gold embossed botanical sprigs, ivory beige satin ribbon bow, circular pale blue wax seal gold initials A & Y. Entire envelope visible with margins, refined realistic3D studio lighting, genuine transparent background, no scene floor surface glow or words except A & Y.
+
+Open:
+Edit this pale powder blue elegant wedding envelope into OPEN state. Preserve exact colors, gold and silver botanical embossing, ivory satin bow and wax seal A & Y. Raise triangular flap fully upward, show empty ivory interior NO card inside, frontfacing perfectly symmetrical centered, entire object visible margins landscape3:2. Lower front pocket samewidthasclosed reference. Genuine transparent background preservealpha, no floor scene glow or otherwords.
+
+Floral:
+Photorealistic luxurious wedding floral PNG cutout horizontal3:2. Elegant graceful centered bouquet ivory cream roses and peonies, soft powder blue hydrangeas and delicate blue flowers, muted sage eucalyptus leaves, subtle champagne gold botanical sprigs. Romantic light blue elegant palette, whole arrangement visible generous margins. Genuine transparent background around and between stems, no vase floor wall table backdrop glow mist text or watermark.
