@@ -53,9 +53,9 @@ export const mayraYaneli = {
     "whatsapp": "https://wa.me/527295133734"
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/mayrayaneli.mp3",
+    "label": "Mi canción"
   },
   "theme": {
     "primary": "#a96c78",
