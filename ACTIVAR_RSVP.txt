@@ -361,3 +361,8 @@ Bodas de rubí de Homero y Norma
 Invitación: https://momentlyevents.vercel.app/eventos/homero-y-norma
 Activar: npm run provision-event -- homero-y-norma CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Pendiente: correo del panel y confirmar dirección exacta de la iglesia.
+
+Boda de Adamaris y Guillermo
+Invitación: https://momentlyevents.vercel.app/eventos/adamaris-y-guillermo
+Activar: npm run provision-event -- adamaris-y-guillermo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel.
