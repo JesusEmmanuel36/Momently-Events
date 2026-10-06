@@ -36,14 +36,7 @@ export const hansTadeo = {
     ],
     "godparents": []
   },
-  "gallery": [
-    {
-      "src": "/images/events/xv-hans-tadeo/image copy.png",
-      "width": 720,
-      "height": 1600,
-      "alt": "Hans Tadeo Pozas Rubio"
-    }
-  ],
+  "gallery": [],
   "itinerary": [
     {
       "time": "15:00",
