@@ -356,3 +356,8 @@ Boda de Armando y Yamilet
 Invitación: https://momentlyevents.vercel.app/eventos/armando-y-yamilet
 Civil: horario por confirmar. Comida a las 2:00 p. m. WhatsApp: 7776051032. Pendiente: correo del panel.
 Activar: npm run provision-event -- armando-y-yamilet CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Bodas de rubí de Homero y Norma
+Invitación: https://momentlyevents.vercel.app/eventos/homero-y-norma
+Activar: npm run provision-event -- homero-y-norma CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel y confirmar dirección exacta de la iglesia.
