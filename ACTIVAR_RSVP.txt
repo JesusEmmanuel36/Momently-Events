@@ -346,3 +346,8 @@ Contacto: 3121130167.
 Primera comunión de Romina Jahori
 Invitación: https://momentlyevents.vercel.app/eventos/romina-comunion
 Pendiente: fecha y correo del panel; agregar fecha antes de activar el evento.
+
+XV de Zuky Adali
+Invitación: https://momentlyevents.vercel.app/eventos/xv-zuky-adali
+Activar: npm run provision-event -- xv-zuky-adali CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: WhatsApp y correo del panel. Sin música por ahora.
