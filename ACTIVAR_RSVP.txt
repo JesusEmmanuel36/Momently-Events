@@ -405,3 +405,9 @@ Subir: /eventos/alejandra-y-david/fotos
 Descargar QR: /eventos/alejandra-y-david/fotos/qr?download=1
 Cloudinary: momently-events/alejandra-y-david/guest-photos
 La invitación incluye la galería de invitados. Carga bloqueada hasta el 27 de diciembre de 2026 a las 00:00, hora de Monterrey. Usa la configuración Cloudinary y Firebase existente, sin activar el RSVP para las fotos.
+
+ALEJANDRA Y DAVID — PASES PERSONALIZADOS
+Con el panel ya activado: Evento -> Invitados -> crear pase con nombre y lugares totales -> Copiar enlace.
+Cada lugar incluye a la persona titular. El pase limita y guarda la confirmación en el panel, sin duplicarla si vuelven a responder.
+El enlace general de la invitación pide el pase personal para confirmar.
+Guía completa: PASES_ALEJANDRA_DAVID.md

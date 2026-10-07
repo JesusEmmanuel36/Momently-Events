@@ -14,6 +14,7 @@ export const alejandraDavid = {
   "endDate": "2026-12-28T01:00:00-06:00",
   "timezone": "America/Monterrey",
   "maxCompanions": 0,
+  "personalizedPasses": true,
   "dateStamp": "27 · 12 · 2026",
   "dateDisplay": "Domingo · 27 de diciembre · 2026",
   "timelineDate": "27 de diciembre",

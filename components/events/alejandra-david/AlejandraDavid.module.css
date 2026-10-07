@@ -34,3 +34,12 @@
 .guestPhotos>div:first-of-type {display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;}
 .guestPhotos a {display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;text-decoration:none;background:var(--olive);color:var(--paper);border-radius:5px;font-size:.85rem;}
 .guestPhotos a:last-child {background:transparent;border:1px solid var(--olive);color:var(--olive);}
+
+.passIntro{display:grid;gap:.35rem;max-width:90vw;margin:1rem auto 0;color:white;text-align:center;}
+.passIntro strong{font-family:var(--font-serif),serif;font-size:clamp(1rem,4vw,1.5rem);overflow-wrap:anywhere;}
+.passIntro small{font-size:.75rem;letter-spacing:.1em;}
+
+.generalPassNotice{padding:4rem 1.5rem;background:var(--paper);text-align:center;color:var(--dark);}
+.generalPassNotice span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+.generalPassNotice h2{font-family:var(--font-serif),serif;font-size:clamp(2rem,6vw,3rem);line-height:1.2;margin:1.5rem auto;max-width:600px;}
+.generalPassNotice p{line-height:1.8;max-width:550px;margin:auto;color:var(--muted);}

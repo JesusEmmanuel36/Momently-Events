@@ -1,0 +1,4 @@
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:1.5rem;align-items:start}
+.layout p{line-height:1.6}.list article{padding:1.2rem 0;border-top:1px solid #e7dfd5;overflow-wrap:anywhere}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap}.link{display:grid;gap:.5rem;margin-top:1rem;font-size:.85rem}.link input{padding:.7rem;border:1px solid #d5c7af;border-radius:6px;width:100%;font:inherit}
+@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}}

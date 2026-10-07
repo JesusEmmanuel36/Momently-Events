@@ -1,0 +1,9 @@
+.section{padding:clamp(4rem,8vw,7rem) 1.5rem;text-align:center;background:var(--paper);color:var(--dark)}
+.section>span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.section h2{font-family:var(--font-serif),serif;font-size:clamp(2rem,7vw,3.6rem);font-weight:500;line-height:1.2;overflow-wrap:anywhere;margin:1.5rem auto;max-width:700px}
+.section p{line-height:1.8}.section>small{display:block;max-width:500px;margin:1rem auto;line-height:1.7;color:var(--muted)}
+.section form,.success{width:min(100%,500px);margin:2rem auto;text-align:left;border:1px solid var(--gold-soft);border-radius:12px;padding:1.5rem;background:var(--ivory)}
+.section form>label{display:grid;gap:.7rem;margin:1.2rem 0;font-size:.9rem}.section fieldset{border:0;padding:0;display:grid;gap:.8rem}.section fieldset label{display:flex;align-items:center;gap:.6rem}
+.section select,.section textarea{width:100%;padding:.8rem;border:1px solid var(--gold-soft);border-radius:6px;background:var(--paper);color:var(--dark);font:inherit}
+.section button{padding:1rem 1.25rem;background:var(--olive);color:var(--paper);border:0;border-radius:6px;font:inherit;cursor:pointer}.section button:disabled{opacity:.6;cursor:wait}
+.success{text-align:center}.error{color:#a23434;font-size:.85rem}
