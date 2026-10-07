@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { guestPhotos } from "@/lib/event-photos/config";
 import styles from "./GuestPhotoGallery.module.css";
 
-export function GuestPhotoGallery() {
+export function GuestPhotoGallery({ event = guestPhotos }) {
   const [photos, setPhotos] = useState([]);
   const [cursor, setCursor] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -21,7 +21,7 @@ export function GuestPhotoGallery() {
     if (inFlight.current) return;
     inFlight.current = true; setBusy(true); setError("");
     try {
-      const response = await fetch(guestPhotos.apiPath + (next ? `?cursor=${encodeURIComponent(next)}` : ""));
+      const response = await fetch(event.apiPath + (next ? `?cursor=${encodeURIComponent(next)}` : ""));
       const result = await response.json();
       if (!response.ok || !Array.isArray(result.photos)) throw new Error(result.error || "No pudimos cargar las fotos.");
       setPhotos(current => next ? [...new Map([...current, ...result.photos].map(photo => [photo.id, photo])).values()] : result.photos);

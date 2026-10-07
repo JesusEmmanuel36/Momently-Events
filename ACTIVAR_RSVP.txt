@@ -393,3 +393,15 @@ Se optimizan las imágenes a JPG de hasta 2400 px. Permite seleccionar hasta cin
 Caleb y Ciriam: el QR de fotos permanece visible, pero la carga se habilita automáticamente el 14 de noviembre de 2026 a las 00:00 (hora de México central). Antes de esa fecha se muestra un aviso y el servidor rechaza las cargas.
 
 Caleb y Ciriam: la sección «Recuerdos compartidos» incluye «Ver fotos del evento», miniaturas, vista ampliada, actualización y paginación. Muestra únicamente las fotos de invitados de su carpeta de Cloudinary; las fotos son visibles para quienes tengan el enlace de la invitación.
+
+ALEJANDRA Y DAVID
+Invitación: /eventos/alejandra-y-david
+Activar panel: npm run provision-event -- alejandra-y-david CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Sin fecha límite de confirmación. WhatsApp pendiente; no se muestra por ahora.
+Música: public/audio/alejandraydavid.mp3
+
+ALEJANDRA Y DAVID — FOTOS DE INVITADOS
+Subir: /eventos/alejandra-y-david/fotos
+Descargar QR: /eventos/alejandra-y-david/fotos/qr?download=1
+Cloudinary: momently-events/alejandra-y-david/guest-photos
+La invitación incluye la galería de invitados. Carga bloqueada hasta el 27 de diciembre de 2026 a las 00:00, hora de Monterrey. Usa la configuración Cloudinary y Firebase existente, sin activar el RSVP para las fotos.

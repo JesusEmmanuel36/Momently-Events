@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash, randomUUID } from "node:crypto";
 import sharp from "sharp";
-import { guestPhotos, guestPhotosAreOpen } from "../lib/event-photos/config.js";
+import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos } from "../lib/event-photos/config.js";
 import { enforcePhotoRateLimit, processGuestPhoto, uploadPhotoToCloudinary, validatePhotoFile } from "../lib/event-photos/server.js";
 
 const env = { CLOUDINARY_CLOUD_NAME: "test-cloud", CLOUDINARY_API_KEY: "test-key", CLOUDINARY_API_SECRET: "test-secret" };
@@ -102,4 +102,37 @@ test("gallery lists only this event's photos and does not expose credentials", a
   assert.ok(!JSON.stringify(result).includes("test-secret"));
   await assert.rejects(listGuestPhotos("invalid/cursor", { env }), error => error.status === 400);
   await assert.rejects(listGuestPhotos("", { env, fetcher: async () => Response.json({}, { status: 401 }) }), error => error.status === 502);
+});
+
+
+test("Alejandra's date, upload folder, gallery and limits stay separate from Caleb's", async () => {
+  const { listGuestPhotos } = await import("../lib/event-photos/gallery.js");
+  const event = alejandraDavidPhotos;
+  const opening = Date.parse(event.opensAt);
+  assert.equal(guestPhotosAreOpen(opening - 1, event), false);
+  assert.equal(guestPhotosAreOpen(opening, event), true);
+  assert.equal(guestPhotosAreOpen(Date.parse("2026-11-14T06:00:00Z")), true);
+  assert.equal(guestPhotosAreOpen(Date.parse("2026-11-14T06:00:00Z"), event), false);
+  let touched = false;
+  const deps = { env, event, now: opening - 1, rateLimit: async () => { touched = true; }, upload: async () => { touched = true; } };
+  await assert.rejects(processGuestPhoto(request(new Blob(["test"])), deps), error => error.status === 403 && error.message.includes("27 de diciembre"));
+  assert.equal(touched, false);
+  const photo = new Blob([await picture()], { type: "image/png" });
+  assert.deepEqual(await processGuestPhoto(request(photo), { ...deps, now: opening, upload: async (file, id, options) => {
+    assert.equal(options.event, event); return { ok: true, id: "alejandra-asset" };
+  }}), { ok: true, id: "alejandra-asset" });
+  await uploadPhotoToCloudinary(Buffer.from("test"), "photo-uuid", { env, event, fetcher: async (url, options) => {
+    assert.equal(options.body.get("folder"), event.folder);
+    assert.equal(options.body.get("tags"), "alejandra-y-david,guest-photos");
+    return Response.json({ asset_id: "alejandra-asset", public_id: event.folder + "/photo-uuid", resource_type: "image" });
+  }});
+  const gallery = await listGuestPhotos("", { env, event, fetcher: async url => {
+    assert.equal(url.searchParams.get("prefix"), event.folder + "/");
+    return Response.json({ resources: [event, guestPhotos].map((config, i) => ({ asset_id: String(i), public_id: config.folder + "/1", resource_type: "image", secure_url: "https://res.cloudinary.com/test-cloud/image/upload/v1/photo.jpg" })) });
+  }});
+  assert.equal(gallery.photos.length, 1); assert.equal(gallery.photos[0].id, "0");
+  const ids = [];
+  const db = { collection: name => { assert.equal(name, "guestPhotoRateLimits"); return { doc: id => { ids.push(id); return id; } }; }, runTransaction: async callback => callback({ get: async () => ({ data: () => undefined }), set: () => {} }) };
+  await enforcePhotoRateLimit(request(photo), { db, event });
+  assert.ok(ids.includes(event.slug)); assert.ok(!ids.includes(guestPhotos.slug));
 });
