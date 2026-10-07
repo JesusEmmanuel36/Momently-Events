@@ -381,3 +381,13 @@ Boda civil de Lu y Juan
 Invitación: https://momentlyevents.vercel.app/eventos/lu-y-juan
 Activar: npm run provision-event -- lu-y-juan CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Pendiente: correo del panel.
+
+FOTOS CON QR — CALEB Y CIRIAM
+Página: https://momentlyevents.vercel.app/eventos/caleb-y-ciriam/fotos
+Descargar QR para imprimir: https://momentlyevents.vercel.app/eventos/caleb-y-ciriam/fotos/qr?download=1
+Las fotos quedan en Cloudinary > Media Library > momently-events/caleb-y-ciriam/guest-photos.
+Requiere CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY y CLOUDINARY_API_SECRET en Vercel y las variables de Firebase Admin existentes para limitar abusos.
+No requiere ejecutar provision-event ni activar RSVP. Solo está habilitado para Caleb y Ciriam.
+Se optimizan las imágenes a JPG de hasta 2400 px. Permite seleccionar hasta cinco fotos por envío.
+
+Caleb y Ciriam: el QR de fotos permanece visible, pero la carga se habilita automáticamente el 14 de noviembre de 2026 a las 00:00 (hora de México central). Antes de esa fecha se muestra un aviso y el servidor rechaza las cargas.

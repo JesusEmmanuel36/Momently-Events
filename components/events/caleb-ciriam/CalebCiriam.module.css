@@ -30,3 +30,13 @@
 .colorSwatch { display:block; width:84px; height:84px; border-radius:50%; border:4px solid var(--gold-soft); box-shadow:0 4px 12px #30382226; margin:0 auto .75rem; }
 .colorPalette figcaption { color:var(--charcoal); font-size:.85rem; }
 @media(max-width:600px){.familyGroups{grid-template-columns:1fr;}.colorPalette{gap:1rem}.colorPalette figure{width:95px}}
+
+.guestPhotos {padding:clamp(4rem,8vw,7rem) 1.5rem;text-align:center;background:var(--ivory);color:var(--dark);}
+.guestPhotos>svg {width:38px;height:38px;color:var(--olive);margin-bottom:1rem;}
+.guestPhotos>span {display:block;text-transform:uppercase;letter-spacing:.18em;color:var(--olive);font-size:.65rem;}
+.guestPhotos h2 {font-family:var(--font-serif),serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:500;line-height:1.1;margin:1.5rem auto;max-width:700px;}
+.guestPhotos p {max-width:550px;margin:0 auto 2rem;color:var(--muted);line-height:1.8;}
+.guestPhotos>img {display:block;width:220px;height:220px;margin:auto;background:#fff;border:1px solid var(--gold-soft);border-radius:12px;}
+.guestPhotos>div {display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;}
+.guestPhotos a {display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;text-decoration:none;background:var(--olive);color:var(--paper);border-radius:5px;font-size:.85rem;}
+.guestPhotos a:last-child {background:transparent;border:1px solid var(--olive);color:var(--olive);}
