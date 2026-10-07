@@ -424,3 +424,7 @@ npm run provision-event -- xv-fergie CORREO_DEL_CLIENTE https://momentlyevents.v
 Isamara y Wsbaldo — /eventos/isamara-y-wsbaldo
 5 de diciembre de 2026. Misa 18:00; recepción 21:00. RSVP normal, sin límite de fecha.
 npm run provision-event -- isamara-y-wsbaldo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Diana y José — /eventos/diana-y-jose
+28 de noviembre de 2026. Ceremonia civil 16:00; recepción 17:00. RSVP normal.
+npm run provision-event -- diana-y-jose CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
