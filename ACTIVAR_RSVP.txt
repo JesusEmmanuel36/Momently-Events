@@ -420,3 +420,7 @@ Pendiente: correo del panel, banco/titular de la transferencia y ubicación exac
 XV años de Fergie — /eventos/xv-fergie
 RSVP normal; sin QR de fotos ni pases personalizados. Recepción 28/11/2026 14:30; misa 15:00, mismo jardín. Confirmar antes del 13/11/2026 (cierre al comenzar ese día, hora de México).
 npm run provision-event -- xv-fergie CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Isamara y Wsbaldo — /eventos/isamara-y-wsbaldo
+5 de diciembre de 2026. Misa 18:00; recepción 21:00. RSVP normal, sin límite de fecha.
+npm run provision-event -- isamara-y-wsbaldo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
