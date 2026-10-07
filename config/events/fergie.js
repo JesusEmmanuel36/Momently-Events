@@ -22,16 +22,16 @@ export const fergieXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión, te invito a celebrar mis quince años. Me hará muy feliz compartir contigo este día tan especial y comenzar una nueva etapa rodeada de cariño.",
-    "image": "/images/events/xv-fergie/hero.png"
+    "image": "/images/events/xv-fergie/hero-no-dress.png"
   },
-  "closingImage": "/images/events/xv-fergie/hero.png",
+  "closingImage": "/images/events/xv-fergie/hero-no-dress.png",
   "ceremony": {
     "enabled": true,
     "name": "Jardín de Eventos Ahuehuetes",
-    "time": "3:30 p. m.",
+    "time": "3:00 p. m.",
     "address": "Av. San Mateo Nopala, km 71.5, col. Rincón Verde, C.P. 53219, Naucalpan de Juárez, Estado de México",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20de%20Eventos%20Ahuehuetes%20Av.%20San%20Mateo%20Nopala%2C%20km%2071.5%2C%20col.%20Rinc%C3%B3n%20Verde%2C%20C.P.%2053219%2C%20Naucalpan%20de%20Ju%C3%A1rez%2C%20Estado%20de%20M%C3%A9xico",
-    "image": "/images/events/xv-fergie/floral.png"
+    "image": "/images/events/xv-fergie/lilies-sage.png"
   },
   "reception": {
     "enabled": true,
@@ -39,13 +39,13 @@ export const fergieXv = {
     "time": "2:30 p. m.",
     "address": "Av. San Mateo Nopala, km 71.5, col. Rincón Verde, C.P. 53219, Naucalpan de Juárez, Estado de México",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20de%20Eventos%20Ahuehuetes%20Av.%20San%20Mateo%20Nopala%2C%20km%2071.5%2C%20col.%20Rinc%C3%B3n%20Verde%2C%20C.P.%2053219%2C%20Naucalpan%20de%20Ju%C3%A1rez%2C%20Estado%20de%20M%C3%A9xico",
-    "image": "/images/events/xv-fergie/floral.png"
+    "image": "/images/events/xv-fergie/lilies-sage.png"
   },
   "gallery": [],
   "gifts": [
     {
       "title": "Lluvia de sobres",
-      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, te sugiero una lluvia de sobres."
+      "description": "Si deseas tener un detalle conmigo, te sugiero una lluvia de sobres."
     }
   ],
   "contact": {
@@ -65,7 +65,7 @@ export const fergieXv = {
       "icon": "glass"
     },
     {
-      "time": "15:30",
+      "time": "15:00",
       "title": "Ceremonia religiosa",
       "description": "En el mismo jardín.",
       "icon": "heart"

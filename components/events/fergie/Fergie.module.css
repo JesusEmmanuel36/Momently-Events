@@ -66,5 +66,9 @@
 .invitation .venueArtwork {background:linear-gradient(140deg,var(--ivory),#c8d6c8);}
 .invitation .openEnvelope {width:110.12%!important;height:110.12%!important;inset:-15.9% auto auto -5.06%!important;}
 
-.invitation .heroFloral {top:-1rem;left:-3rem;width:min(58vw,620px);height:auto;opacity:.95;pointer-events:none;}
-@media(max-width:600px){.invitation .heroFloral {top:0;left:-2rem;width:82vw;}}
+
+.reserved,.floralGifts {position:relative;isolation:isolate;overflow:hidden;}
+.lilyAccent,.blossomAccent {position:absolute;z-index:-1;pointer-events:none;object-fit:contain;height:auto;}
+.lilyAccent {width:clamp(150px,22vw,240px);top:1rem;right:-1rem;opacity:.8;}
+.blossomAccent {width:clamp(140px,20vw,220px);bottom:1rem;left:-1rem;opacity:.8;}
+@media(max-width:600px){.reserved,.floralGifts {padding-top:8rem;padding-bottom:8rem;}.lilyAccent {width:150px;top:.5rem;right:-.25rem;}.blossomAccent {width:140px;bottom:.5rem;left:-.25rem;}}
