@@ -416,3 +416,7 @@ Luis Enrique e Irma — /eventos/luis-y-irma
 RSVP normal, sin pases personalizados ni QR de fotos. Activar con:
 npm run provision-event -- luis-y-irma CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 Pendiente: correo del panel, banco/titular de la transferencia y ubicación exacta de la ermita.
+
+XV años de Fergie — /eventos/xv-fergie
+RSVP normal; sin QR de fotos ni pases personalizados. Recepción 28/11/2026 14:30; misa 15:30, mismo jardín. Confirmar antes del 13/11/2026 (cierre al comenzar ese día, hora de México).
+npm run provision-event -- xv-fergie CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
