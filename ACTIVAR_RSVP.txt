@@ -437,3 +437,8 @@ ALMA KARINA — /eventos/alma-karina-50
 27 de diciembre de 2026. Misa 4:30 p. m.; recepción 6:30 p. m. Zona: America/Hermosillo.
 Confirmación solo por WhatsApp: 6624300941. Sin formulario RSVP. Música: /audio/almakarina.mp3.
 No requiere activar panel: las confirmaciones se realizan por WhatsApp.
+
+ALEJANDRA REYES HERNÁNDEZ — /eventos/xv-alejandra-reyes
+28 de noviembre de 2026. Misa: Templo La Merced, 10:00 a. m. Pool party: Salón Finca Imperial, 6:00 p. m.
+Sin direcciones ni enlaces de Maps. Audio: /audio/xvalejandrareyes.mp3. RSVP normal, nombre y asistencia. WhatsApp pendiente.
+npm run provision-event -- xv-alejandra-reyes CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
