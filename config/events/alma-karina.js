@@ -14,7 +14,7 @@ export const almaKarina = {
   "endDate": "2026-12-28T02:00:00-07:00",
   "timezone": "America/Hermosillo",
   "maxCompanions": 5,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "askAllergies": false,
   "askMessage": false,
   "dateStamp": "27 · 12 · 2026",
@@ -59,7 +59,7 @@ export const almaKarina = {
       "displayTime": "6:30 p. m.",
       "title": "Recepción",
       "description": "Cancha del ejido 24 de Febrero",
-      "icon": "glass"
+      "icon": "house"
     },
     {
       "time": "19:00",
@@ -73,7 +73,7 @@ export const almaKarina = {
       "displayTime": "9:00 p. m. a 2:00 a. m.",
       "title": "Baile",
       "description": "",
-      "icon": "music"
+      "icon": "dance"
     }
   ],
   "gallery": [
@@ -137,11 +137,11 @@ export const almaKarina = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/almakarina.mp3",
+    "label": "Mi canción"
   },
-  "contact": {},
+  "contact": {"phone": "6624300941", "whatsapp": "https://wa.me/526624300941?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%2050%20a%C3%B1os%20de%20Alma%20Karina."},
   "theme": {
     "primary": "#ad8547",
     "dark": "#42352a",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Church, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
+import { CalendarDays, House, UtensilsCrossed, Footprints, ChevronDown, ChevronLeft, ChevronRight, Church, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
@@ -18,6 +18,8 @@ const defaultTheme = {
   "--gold": "#b48a4e", "--gold-soft": "#d9bc91", "--paper": "#fffaf4", "--ivory": "#f3e2d5",
   "--charcoal": "#4b3730", "--muted": "#7d6961", "--accent-light": "#f0c4ae",
 };
+
+const itineraryIcons = { church: Church, house: House, dinner: UtensilsCrossed, dance: Footprints };
 
 function getCountdown(date) {
   if (!date) return undefined;
@@ -38,18 +40,10 @@ export function AlmaKarinaTemplate({ wedding, assets = defaultAssets, customThem
   const envelopeOpen = assets.envelopeOpen;
   const theme = { ...defaultTheme, ...customTheme, "--floral-image": `url('${floral}')` };
   const names = wedding.couple.partner1;
-  const whatsappContacts = wedding.contact?.whatsapps?.length
-    ? wedding.contact.whatsapps
-    : wedding.contact?.whatsapp
-      ? [{ phone: wedding.contact.phone, whatsapp: wedding.contact.whatsapp }]
-      : [];
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
   const [activePhoto, setActivePhoto] = useState(null);
   const audioRef = useRef(null);
@@ -109,20 +103,6 @@ export function AlmaKarinaTemplate({ wedding, assets = defaultAssets, customThem
     if (playing) audioRef.current.pause();
     else audioRef.current.play().catch(() => notify("Agrega el archivo de la canción para reproducirla"));
   };
-  const submit = async (event) => {
-    event.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: Number(form.get("companions") || 0), menuPreference: "normal", allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    try {
-      const key = `momently:rsvp:${wedding.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? {} : await response.json();
-      if (!response.ok || result.ok !== true || !result.rsvpId || (!editing && !result.editToken)) throw new Error(result.error || "No fue posible enviar tu confirmación.");
-      if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload }));
-      else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
-  };
   const addCalendar = () => {
     if (!wedding.date) return;
     openGoogleCalendar({ title: `50 años de ${names}`, start: wedding.date, end: wedding.endDate, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote });
@@ -165,15 +145,15 @@ export function AlmaKarinaTemplate({ wedding, assets = defaultAssets, customThem
 
       <section className={styles.location} data-je-reveal><div className={styles.locationImage}><Image src={wedding.ceremony.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Cuasiparroquia de los Sagrados Corazones de Jesús y María" /></div><article><Church /><span>Ceremonia religiosa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p><a href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></article></section>
       <section className={`${styles.location} ${styles.locationReverse}`} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={floral} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral blanco, beige y dorado" /></div><article><Sparkles /><span>Recepción</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p><a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a></article></section>
-      <section className={customStyles.itinerary} data-je-reveal><span>Los momentos de mi celebración</span><h2>Itinerario</h2><div>{wedding.itinerary.map(item => <article key={item.title}><strong>{item.displayTime}</strong><h3>{item.title}</h3></article>)}</div></section>
+      <section className={customStyles.itinerary} data-je-reveal><span>Los momentos de mi celebración</span><h2>Itinerario</h2><div>{wedding.itinerary.map(item => { const Icon = itineraryIcons[item.icon] || Sparkles; return <article key={item.title}><Icon aria-hidden="true" /><strong>{item.displayTime}</strong><h3>{item.title}</h3></article>; })}</div></section>
 
       {wedding.nextDayEvent && <section className={localStyles.nextDay} data-je-reveal><Image src={floral} width={760} height={507} alt="" aria-hidden="true" /><span>La celebración continúa</span><h2>{wedding.nextDayEvent.title}</h2><strong>{wedding.nextDayEvent.date}</strong><p>A partir de las {wedding.nextDayEvent.time}</p><small>{wedding.nextDayEvent.place}</small><a href={wedding.nextDayEvent.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin /></a></section>}
 
       {wedding.dressCode && <section className={styles.dress} data-je-reveal><span>Código de vestimenta</span><h2>{wedding.dressCode.title}</h2><p>{wedding.dressCode.text}</p><div className={customStyles.reservedColors}>{wedding.dressCode.reservedColors?.map(({ name, color }) => <figure key={name}><span style={{ backgroundColor: color }} aria-hidden="true" /><figcaption>{name}</figcaption></figure>)}</div></section>}
       {wedding.gifts?.length > 0 && <section className={styles.gifts} data-je-reveal><Heart /><span>Un detalle con cariño</span><h2>Tu presencia es mi mejor regalo</h2><h3 className={customStyles.giftTitle}>{wedding.gifts[0].title}</h3><p>{wedding.gifts[0].description}</p>{wedding.bank?.enabled && <div className={customStyles.bankDetails}><h3>Datos para transferencia</h3><dl>{wedding.bank.bank && <div><dt>Banco</dt><dd>{wedding.bank.bank}</dd></div>}{wedding.bank.holder && <div><dt>A nombre de</dt><dd>{wedding.bank.holder}</dd></div>}{[["Cuenta", wedding.bank.account], ["CLABE", wedding.bank.clabe]].filter(([, value]) => value).map(([label, value]) => <div key={label}><dt>{label}</dt><dd className={customStyles.bankNumber}>{value}</dd><button type="button" aria-label={`Copiar ${label}`} onClick={async () => { try { await navigator.clipboard.writeText(value); notify(`${label} copiada`); } catch { notify("No fue posible copiar. Puedes seleccionar el número."); } }}>Copiar</button></div>)}</dl></div>}</section>}
-      <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{wedding.calendarDate || "7 de noviembre de 2026"}</h2><div className={styles.calendarActions}><button onClick={addCalendar} disabled={!wedding.date}>Agregar a mi calendario</button>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp {contact.phone}</a>)}</div></section>
+      <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{wedding.calendarDate || "7 de noviembre de 2026"}</h2><div className={styles.calendarActions}><button onClick={addCalendar} disabled={!wedding.date}>Agregar a mi calendario</button></div></section>
 
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>Confirma tu asistencia</span><h2>¿Me acompañas?</h2><p>Me encantará celebrar contigo. Puedes registrar hasta 5 acompañantes.</p></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibimos tu respuesta.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" minLength={2} maxLength={100} required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Número de acompañantes<select className={customStyles.companionsSelect} name="companions" defaultValue="0">{Array.from({length: wedding.maxCompanions + 1}, (_, number) => <option key={number} value={number}>{number === 0 ? "Sin acompañantes" : `${number} ${number === 1 ? "acompañante" : "acompañantes"}`}</option>)}</select></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
+      <section className={`${styles.calendar} ${customStyles.whatsappConfirmation}`} data-je-reveal><MessageCircle /><span>Confirma tu asistencia</span><h2>¿Me acompañas?</h2><p>Me encantará celebrar contigo. Confirma tu asistencia por WhatsApp.</p><div className={styles.calendarActions}><a href={wedding.contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Confirmar por WhatsApp</a></div></section>
 
       <section className={styles.closing} data-je-reveal><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt={`Celebración de ${names}`} /><div /><Heart /><span>Gracias por ser parte de</span><h2>mi historia.</h2><p className={customStyles.fullNames}>{wedding.couple.partner1}</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>

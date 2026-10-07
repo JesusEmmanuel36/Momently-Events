@@ -435,5 +435,5 @@ Solo confirmación por WhatsApp: 4871487301. Sin formulario RSVP ni activación 
 
 ALMA KARINA — /eventos/alma-karina-50
 27 de diciembre de 2026. Misa 4:30 p. m.; recepción 6:30 p. m. Zona: America/Hermosillo.
-RSVP: nombre, asistencia y hasta 5 acompañantes. Sin comentarios ni mensaje. Música pendiente.
-npm run provision-event -- alma-karina-50 CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Confirmación solo por WhatsApp: 6624300941. Sin formulario RSVP. Música: /audio/almakarina.mp3.
+No requiere activar panel: las confirmaciones se realizan por WhatsApp.
