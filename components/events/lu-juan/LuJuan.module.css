@@ -60,3 +60,38 @@
 @media(max-width:600px){.invitation .ornamented{padding-top:8rem;padding-bottom:4rem;}.ornamented::before{inset:.7rem;}.ornamented::after{width:180px;height:120px;right:-1.5rem;top:.5rem;}.invitation .heroCopy h1{font-size:clamp(3.2rem,14vw,4.6rem)!important;}.invitation .ornamented h2{max-width:90%;margin-inline:auto;}.invitation .ornamented>p{max-width:90%;margin-inline:auto;}}
 .invitation .ornamented::before {width:auto;height:auto;background:none;opacity:1;transform:none;}
 .invitation .ornamented::before {aspect-ratio:auto;}
+
+/* Tres motivos artesanales alternan con las flores existentes. */
+.papelPicado::after {
+  background-image: url('/images/events/lu-y-juan/papel-picado.png');
+  top: .75rem;
+  right: 50%;
+  transform: translateX(50%);
+  width: clamp(230px, 36vw, 380px);
+  height: 115px;
+  opacity: 1;
+}
+.birds::after {
+  background-image: url('/images/events/lu-y-juan/aves-bordadas.png');
+  top: .5rem;
+  right: 50%;
+  transform: translateX(50%);
+  width: clamp(200px, 30vw, 300px);
+  height: 115px;
+  opacity: 1;
+}
+.tinHeart::after {
+  background-image: url('/images/events/lu-y-juan/corazon-hojalata.png');
+  top: .75rem;
+  right: 1.75rem;
+  transform: rotate(10deg);
+  width: 105px;
+  height: 115px;
+  opacity: 1;
+}
+.invitation .papelPicado, .invitation .birds, .invitation .tinHeart { padding-top: 9rem; }
+@media(max-width:600px) {
+  .papelPicado::after { width: 240px; height: 105px; }
+  .birds::after { width: 220px; height: 105px; }
+  .tinHeart::after { right: 1rem; width: 90px; height: 105px; }
+}

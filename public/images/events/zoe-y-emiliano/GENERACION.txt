@@ -1,0 +1,10 @@
+Modo: herramienta integrada imagegen. Assets con transparencia real.
+Sobre cerrado: envelope-closed.png
+Sobre abierto: envelope-open.png
+Arreglo floral: floral.png
+
+Use case: product-mockup. Asset: closed envelope for interactive wedding invitation. Photorealistic front-facing luxurious beige champagne paper envelope, symmetrical closed triangular flap, champagne satin ribbon horizontal and elegant bow, blank circular gold wax seal centered at 64% canvas height for HTML initials. Small ivory roses, champagne flowers, soft olive eucalyptus and fine gold leaves decorating lower corners. Entire object centered within landscape 1536x1024 canvas, clear margins, no text, no letters, no background, actual transparent alpha. Strict frontal flat view, no tilt.
+
+Use case: product-mockup. Asset: transparent floral ornament for wedding webpage. Elegant asymmetrical corner bouquet of ivory and champagne roses, pale beige peonies, delicate olive eucalyptus and fine gold foliage. Photorealistic flowers with natural texture, soft light. Landscape composition, airy fine stems. Only botanical arrangement, no vase, no text, no frame, actual transparent background.
+
+Use case: precise-object-edit. Edit target: closed champagne envelope. Create open state of EXACT same envelope, same width, same front body, flowers, ribbon and blank gold seal. Only raise triangular top flap upright exposing empty dark champagne interior. No paper/card inside (HTML card added separately). Strict same frontal camera, no perspective tilt. Entire envelope fits landscape canvas with margins, real transparent background remove all surrounding backdrop. No letters/text.

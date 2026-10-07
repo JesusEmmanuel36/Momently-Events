@@ -428,3 +428,7 @@ npm run provision-event -- isamara-y-wsbaldo CORREO_DEL_CLIENTE https://momently
 Diana y José — /eventos/diana-y-jose
 28 de noviembre de 2026. Ceremonia civil 16:00; recepción 17:00. RSVP normal.
 npm run provision-event -- diana-y-jose CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+ZOÉ Y EMILIANO — /eventos/zoe-y-emiliano
+24 de octubre de 2026, 2:00 p. m. Ceremonia y recepción: Jardín de Eventos Pozo de Luna.
+Solo confirmación por WhatsApp: 4871487301. Sin formulario RSVP ni activación de panel. Música pendiente.
