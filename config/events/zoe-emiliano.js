@@ -27,14 +27,14 @@ export const zoeEmiliano = {
     "name": "Jardín de Eventos Pozo de Luna",
     "time": "2:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/r2wWY7K9cngfxgKD7"
   },
   "reception": {
     "enabled": true,
     "name": "Jardín de Eventos Pozo de Luna",
     "time": "2:00 p. m.",
     "address": "",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/r2wWY7K9cngfxgKD7",
     "image": "/images/events/zoe-y-emiliano/floral.png"
   },
   "gallery": [
@@ -93,7 +93,7 @@ export const zoeEmiliano = {
   "theme": {
     "primary": "#b48a4e",
     "secondary": "#f2e5d2",
-    "background": "#fffaf2",
+    "background": "#f2e5d2",
     "text": "#40362b"
   }
 };
