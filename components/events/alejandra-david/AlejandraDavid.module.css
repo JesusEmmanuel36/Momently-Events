@@ -43,3 +43,6 @@
 .generalPassNotice span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
 .generalPassNotice h2{font-family:var(--font-serif),serif;font-size:clamp(2rem,6vw,3rem);line-height:1.2;margin:1.5rem auto;max-width:600px;}
 .generalPassNotice p{line-height:1.8;max-width:550px;margin:auto;color:var(--muted);}
+
+.featuredPhoto {padding:0 1.5rem 3rem;background:var(--paper);}
+.featuredPhoto img {display:block;width:100%;max-width:800px;height:auto;margin:auto;border:1px solid var(--gold-soft);border-radius:12px;padding:.4rem;background:var(--ivory);box-shadow:0 8px 24px #61401615;}

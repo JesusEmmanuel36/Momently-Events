@@ -139,6 +139,8 @@ export function AlejandraDavidTemplate({ wedding, pass, passToken, assets = defa
 
       <section className={styles.welcome} id="bienvenida" data-je-reveal><span>Con todo nuestro amor</span><h2>Queremos compartir contigo<br />el comienzo de nuestra historia.</h2><p>{wedding.hero.quote}</p><div className={`${styles.signature} ${customStyles.fullNames}`}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</div></section>
 
+      {wedding.featuredPhoto && <section className={customStyles.featuredPhoto} data-je-reveal aria-label="Un recuerdo de Alejandra y David"><Image src={wedding.featuredPhoto.src} width={wedding.featuredPhoto.width} height={wedding.featuredPhoto.height} sizes="(max-width: 800px) 90vw, 800px" alt={wedding.featuredPhoto.alt} /></section>}
+
       {wedding.thought && <section className={localStyles.thought} data-je-reveal><Image src={floral} width={680} height={453} alt="" aria-hidden="true" /><span>Un pensamiento de amor</span><blockquote>{wedding.thought.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</blockquote><div>{wedding.couple.partner1.slice(0, 1)} <i>&</i> {wedding.couple.partner2.slice(0, 1)}</div></section>}
 
       {wedding.bibleVerse && <section className={localStyles.verse} data-je-reveal><span>{wedding.bibleVerse.reference}</span><p>“{wedding.bibleVerse.text}”</p></section>}

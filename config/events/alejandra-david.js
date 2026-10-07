@@ -59,6 +59,12 @@ export const alejandraDavid = {
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Casa%20Ambar%20Mariano%20Arista%20901%20Monterrey",
     "image": "/images/events/alejandra-y-david/floral.png"
   },
+  "featuredPhoto": {
+    "src": "/images/events/alejandra-y-david/image copy 6.png",
+    "alt": "Alejandra y David vestidos de negro, sentados en las escaleras",
+    "width": 1505,
+    "height": 1045
+  },
   "gallery": [
     {
       "src": "/images/events/alejandra-y-david/image copy 2.png",
@@ -83,12 +89,6 @@ export const alejandraDavid = {
       "alt": "Alejandra y David, recuerdo 4",
       "width": 1083,
       "height": 1600
-    },
-    {
-      "src": "/images/events/alejandra-y-david/image copy 6.png",
-      "alt": "Alejandra y David, recuerdo 5",
-      "width": 1505,
-      "height": 1045
     },
     {
       "src": "/images/events/alejandra-y-david/image copy.png",
