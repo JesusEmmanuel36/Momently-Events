@@ -448,3 +448,8 @@ Original: /eventos/alma-karina-50
 Con transferencia: /eventos/alma-karina-50/transferencia
 Las dos vistas usan el mismo slug alma-karina-50 y comparten cuenta/evento. No crear un segundo evento.
 Banco: BBVA Bancomer. Titular: Alma Karina Balderrama Romero. Número de tarjeta proporcionado: 638180010187157925.
+
+FABIOLA Y JUAN PABLO — /eventos/fabiola-y-juan-pablo
+6 de diciembre de 2026, 1:00 p. m. Boda civil y recepción: Finca Los Arcos, Villas de Pachuca.
+WhatsApp: 7711814039. RSVP normal. Música y número de mesa Liverpool pendientes.
+npm run provision-event -- fabiola-y-juan-pablo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
