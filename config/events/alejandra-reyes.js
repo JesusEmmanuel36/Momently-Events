@@ -22,7 +22,7 @@ export const alejandraReyes = {
   "hero": {
     "subtitle": "Pool party urbana · Mis XV",
     "quote": "Mis quince se celebran a mi manera: buena música, estilo urbano y una pool party para recordar. ¡Ven a vivir este día conmigo!",
-    "image": "/images/events/xv-alejandra-reyes/graffiti.png"
+    "image": "/images/events/xv-alejandra-reyes/graffiti-blue-white.png"
   },
   "ceremony": {
     "enabled": true,
@@ -38,7 +38,7 @@ export const alejandraReyes = {
     "time": "6:00 p. m.",
     "address": "",
     "mapsUrl": "",
-    "image": "/images/events/xv-alejandra-reyes/streetwear.png"
+    "image": "/images/events/xv-alejandra-reyes/streetwear-blue-white.png"
   },
   "itinerary": [
     {
@@ -72,7 +72,7 @@ export const alejandraReyes = {
     "champagne": "#345490",
     "cream": "#152139",
     "ivory": "#0d1422",
-    "rose": "#ea3d53",
+    "rose": "#85aaff",
     "text": "#f2f5ff"
   }
 };

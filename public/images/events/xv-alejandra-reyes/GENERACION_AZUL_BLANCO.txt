@@ -1,0 +1,8 @@
+Modo: imagegen integrado, edición de los originales. Versiones *-blue-white.png.
+envelope-closed: Edit ONLY referenced closed envelope. Replace all red painted crowns/splashes with crisp white paint. Preserve exact black envelope geometry, blue paint, blue ribbon, silver rim, viewpoint and alignment. Engrave one uppercase 'A' deeply in the black circular seal, photorealistic embossed silver-highlighted relief with realistic shadows, integrated material, clearly readable at small size, not printed floating text. Remove red glow; blue glow only. Actual transparent background, no rectangle.
+
+envelope-open: Edit ONLY referenced open envelope. Replace all red painted crowns/splashes with crisp white paint. Keep exact open shape, width, position, black paper, cobalt ribbon and silver-rim seal. Add one uppercase 'A' engraved in the circular black seal, photorealistic 3D relief with silver highlights. No red or pink glow, blue shadows only. Empty pocket, no card insert. Actual transparent background.
+
+graffiti: Edit ONLY referenced transparent graffiti. Remove every red splash, stroke and glow, recolor those accents cobalt blue. Preserve exact letters 'MIS XV AÑOS' and 'ALE', existing white text, blue XV and crowns. No new white backdrop, transparent background unchanged. Palette only blue white black, no red/pink/purple.
+
+streetwear: Edit ONLY referenced transparent sneakers artwork. Replace all red laces and red splashes with white laces and cobalt blue splashes. Keep black/cobalt shoes, white soles, silver crown, shape and arrangement. Remove red/pink glow entirely, blue lighting only. Actual transparent background. No text or logos.

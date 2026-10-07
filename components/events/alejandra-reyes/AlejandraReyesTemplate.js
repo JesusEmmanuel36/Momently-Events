@@ -9,13 +9,13 @@ import { openGoogleCalendar } from "@/lib/calendar";
 
 const defaultAssets = {
   floral: "/images/events/xv-alejandra-reyes/floral.png",
-  envelopeClosed: "/images/events/xv-alejandra-reyes/envelope-closed.png",
-  envelopeOpen: "/images/events/xv-alejandra-reyes/envelope-open.png",
+  envelopeClosed: "/images/events/xv-alejandra-reyes/envelope-closed-blue-white.png",
+  envelopeOpen: "/images/events/xv-alejandra-reyes/envelope-open-blue-white.png",
 };
 const defaultTheme = {
-  "--coral": "#b7654d", "--peach": "#df9a7e", "--olive": "#73785e", "--dark": "#432d27",
-  "--gold": "#b48a4e", "--gold-soft": "#d9bc91", "--paper": "#fffaf4", "--ivory": "#f3e2d5",
-  "--charcoal": "#4b3730", "--muted": "#7d6961", "--accent-light": "#f0c4ae",
+  "--coral":"#85aaff", "--peach":"#85aaff", "--olive":"#2864ed", "--dark":"#070b13",
+  "--gold":"#85aaff", "--gold-soft":"#345490", "--paper":"#152139", "--ivory":"#0d1422",
+  "--charcoal":"#f2f5ff", "--muted":"#c6d2e8", "--accent-light":"#a9c2ff"
 };
 
 function getCountdown(date) {
@@ -124,12 +124,12 @@ export function AlejandraReyesTemplate({ wedding, assets = defaultAssets, custom
         <Image className={`${styles.envelopeOpenBack} ${customStyles.openEnvelope}`} src={envelopeOpen} fill priority sizes="(max-width:700px) 96vw,680px" alt="Sobre abierto de Alejandra" />
         <Image className={`${styles.envelopeOpenFront} ${customStyles.openEnvelope} ${customStyles.openFront}`} src={envelopeOpen} fill priority sizes="(max-width:700px) 96vw,680px" alt="" aria-hidden="true" />
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width:700px) 96vw,680px" alt="Sobre cerrado de Alejandra" />
-        <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"><span className={customStyles.sealInitial}>A</span></button>
+        <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"></button>
       </div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div>
     </div>}
     <main className={!opened ? styles.locked : styles.unlocked}>
-      <section className={customStyles.hero}><span className={customStyles.eyebrow}>Pool party urbana</span><Image className={customStyles.graffiti} src={wedding.hero.image} width={1024} height={1536} priority sizes="(max-width:600px) 90vw,580px" alt="Mis XV años, Ale, graffiti azul y rojo" /><div className={customStyles.heroCopy}><h1>Alejandra<br /><small>Reyes Hernández</small></h1><p>{wedding.dateDisplay}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
-      <section className={customStyles.welcome} id="bienvenida" data-je-reveal><span className={customStyles.eyebrow}>Mis quince, mi estilo</span><h2>Una noche con toda la actitud</h2><p>{wedding.hero.quote}</p><Image src={floral} width={720} height={480} sizes="(max-width:600px) 80vw,400px" alt="Tenis urbanos negros y azules con detalles rojos" /></section>
+      <section className={customStyles.hero}><span className={customStyles.eyebrow}>Pool party urbana</span><Image className={customStyles.graffiti} src={wedding.hero.image} width={1024} height={1536} priority sizes="(max-width:600px) 90vw,580px" alt="Mis XV años, Ale, graffiti azul y blanco" /><div className={customStyles.heroCopy}><h1>Alejandra<br /><small>Reyes Hernández</small></h1><p>{wedding.dateDisplay}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={customStyles.welcome} id="bienvenida" data-je-reveal><span className={customStyles.eyebrow}>Mis quince, mi estilo</span><h2>Una noche con toda la actitud</h2><p>{wedding.hero.quote}</p><Image src={floral} width={720} height={480} sizes="(max-width:600px) 80vw,400px" alt="Tenis urbanos negros y azules con detalles blancos" /></section>
       <section className={customStyles.countdown} data-je-reveal><span className={customStyles.eyebrow}>Cuenta regresiva</span><h2>¡Ya casi es la fiesta!</h2>{countdown ? <div className={styles.numbers}>{countdown.map(([label,value]) => <div key={label}><strong>{String(value).padStart(2,"0")}</strong><small>{label}</small></div>)}</div> : <p>{countdown === null ? "¡Llegó mi gran día!" : "Preparando la cuenta regresiva…"}</p>}</section>
       <section className={customStyles.venues} data-je-reveal><span className={customStyles.eyebrow}>El plan</span><h2>Nos vemos aquí</h2><div><article><Church aria-hidden="true" /><span>Misa</span><h3>{wedding.ceremony.name}</h3><strong>{wedding.ceremony.time}</strong></article><article><Waves aria-hidden="true" /><span>Pool party · Recepción</span><h3>{wedding.reception.name}</h3><strong>{wedding.reception.time}</strong></article></div></section>
       <section className={customStyles.streetwear} data-je-reveal><Crown aria-hidden="true" /><span className={customStyles.eyebrow}>La vibra</span><h2>Urban streetwear</h2><p>Trae tu mejor look urbano y toda la actitud para celebrar conmigo.</p></section>
