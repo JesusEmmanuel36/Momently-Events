@@ -1,0 +1,6 @@
+Modo: imagegen integrado. Sobre cerrado, abierto y floral con transparencia.
+Use case: product-mockup. Asset: closed interactive invitation envelope for Alma Karina 50th birthday. Luxury photorealistic champagne beige paper envelope, front-facing symmetrical closed triangular flap, satin ivory bow and blank round golden wax seal centered 64% height for HTML initials. White roses, beige peonies and gold foliage at bottom corners, restrained olive leaves. Entire silhouette on real transparent alpha background, landscape 1536x1024 with safe margins. No letters, no numbers, no text. No perspective tilt.
+
+Use case: precise-object-edit. Edit target closed ivory champagne envelope. Open the triangular top flap upward revealing empty inner pocket. Preserve exact same width, lower front body, gold seal, ribbon, flowers, frontal view. No card or paper insert. No text. Entire object visible with margin on landscape canvas. Real transparent alpha background.
+
+Use case: product-mockup. Transparent floral corner bouquet for elegant 50th birthday invitation: ivory roses, champagne beige peonies, fine gold foliage, delicate olive leaves. Photorealistic airy asymmetric botanical ornament, no vase, no lettering, no backdrop, real transparent alpha. Landscape canvas with margins.

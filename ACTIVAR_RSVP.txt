@@ -432,3 +432,8 @@ npm run provision-event -- diana-y-jose CORREO_DEL_CLIENTE https://momentlyevent
 ZOÉ Y EMILIANO — /eventos/zoe-y-emiliano
 24 de octubre de 2026, 2:00 p. m. Ceremonia y recepción: Jardín de Eventos Pozo de Luna.
 Solo confirmación por WhatsApp: 4871487301. Sin formulario RSVP ni activación de panel. Música pendiente.
+
+ALMA KARINA — /eventos/alma-karina-50
+27 de diciembre de 2026. Misa 4:30 p. m.; recepción 6:30 p. m. Zona: America/Hermosillo.
+RSVP: nombre, asistencia y hasta 5 acompañantes. Sin comentarios ni mensaje. Música pendiente.
+npm run provision-event -- alma-karina-50 CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
