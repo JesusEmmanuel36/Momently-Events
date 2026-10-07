@@ -12,7 +12,7 @@ export const isamaraWsbaldo = {
   },
   "date": "2026-12-05T18:00:00-06:00",
   "timezone": "America/Monterrey",
-  "maxCompanions": 0,
+  "maxCompanions": 2,
   "rsvpEnabled": true,
   "dateStamp": "05 · 12 · 2026",
   "dateDisplay": "Sábado · 5 de diciembre · 2026",
