@@ -391,3 +391,5 @@ No requiere ejecutar provision-event ni activar RSVP. Solo está habilitado para
 Se optimizan las imágenes a JPG de hasta 2400 px. Permite seleccionar hasta cinco fotos por envío.
 
 Caleb y Ciriam: el QR de fotos permanece visible, pero la carga se habilita automáticamente el 14 de noviembre de 2026 a las 00:00 (hora de México central). Antes de esa fecha se muestra un aviso y el servidor rechaza las cargas.
+
+Caleb y Ciriam: la sección «Recuerdos compartidos» incluye «Ver fotos del evento», miniaturas, vista ampliada, actualización y paginación. Muestra únicamente las fotos de invitados de su carpeta de Cloudinary; las fotos son visibles para quienes tengan el enlace de la invitación.

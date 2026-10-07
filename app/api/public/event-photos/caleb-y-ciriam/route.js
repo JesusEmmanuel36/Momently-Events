@@ -8,3 +8,10 @@ export async function POST(request) {
   try { return Response.json(await processGuestPhoto(request), { headers: { "Cache-Control": "no-store" } }); }
   catch (error) { return apiError(error); }
 }
+
+export async function GET(request) {
+  try {
+    const { listGuestPhotos } = await import("@/lib/event-photos/gallery");
+    return Response.json(await listGuestPhotos(new URL(request.url).searchParams.get("cursor") || ""), { headers: { "Cache-Control": "public, max-age=30, s-maxage=60" } });
+  } catch (error) { return apiError(error); }
+}

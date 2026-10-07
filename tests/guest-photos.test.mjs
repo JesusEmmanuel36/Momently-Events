@@ -83,3 +83,23 @@ test("uploads stay blocked until midnight of the event in Mexico, without contac
   }), error => error.status === 403 && error.code === "photos_not_open" && error.message.includes("14 de noviembre de 2026"));
   assert.equal(touched, false);
 });
+
+
+test("gallery lists only this event's photos and does not expose credentials", async () => {
+  const { listGuestPhotos } = await import("../lib/event-photos/gallery.js");
+  const result = await listGuestPhotos("", { env, fetcher: async (url, options) => {
+    assert.equal(url.searchParams.get("prefix"), guestPhotos.folder + "/");
+    assert.equal(url.searchParams.get("max_results"), "30");
+    assert.equal(options.headers.Authorization, "Basic " + Buffer.from("test-key:test-secret").toString("base64"));
+    return Response.json({ resources: [
+      { asset_id: "photo-1", public_id: guestPhotos.folder + "/1", resource_type: "image", secure_url: "https://res.cloudinary.com/test-cloud/image/upload/v1/photo.jpg" },
+      { asset_id: "other", public_id: "other-event/1", resource_type: "image", secure_url: "https://res.cloudinary.com/test-cloud/image/upload/other.jpg" },
+    ], next_cursor: "next123" });
+  }});
+  assert.equal(result.photos.length, 1);
+  assert.equal(result.nextCursor, "next123");
+  assert.match(result.photos[0].thumbnail, /c_fill,w_500/);
+  assert.ok(!JSON.stringify(result).includes("test-secret"));
+  await assert.rejects(listGuestPhotos("invalid/cursor", { env }), error => error.status === 400);
+  await assert.rejects(listGuestPhotos("", { env, fetcher: async () => Response.json({}, { status: 401 }) }), error => error.status === 502);
+});

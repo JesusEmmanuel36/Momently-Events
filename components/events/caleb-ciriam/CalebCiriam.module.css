@@ -37,6 +37,6 @@
 .guestPhotos h2 {font-family:var(--font-serif),serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:500;line-height:1.1;margin:1.5rem auto;max-width:700px;}
 .guestPhotos p {max-width:550px;margin:0 auto 2rem;color:var(--muted);line-height:1.8;}
 .guestPhotos>img {display:block;width:220px;height:220px;margin:auto;background:#fff;border:1px solid var(--gold-soft);border-radius:12px;}
-.guestPhotos>div {display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;}
+.guestPhotos>div:first-of-type {display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;}
 .guestPhotos a {display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;text-decoration:none;background:var(--olive);color:var(--paper);border-radius:5px;font-size:.85rem;}
 .guestPhotos a:last-child {background:transparent;border:1px solid var(--olive);color:var(--olive);}
