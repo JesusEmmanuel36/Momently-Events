@@ -1,0 +1,1 @@
+Paleta champaña, dorado y blanco. Se reutilizan los tres recursos fotorealistas con transparencia generados para Alejandra y David, por solicitud de conservar la misma apariencia. Iniciales L & I sobrepuestas en HTML. Animación de hoja y sobre en CSS. Fotos originales en ../luisyirma.

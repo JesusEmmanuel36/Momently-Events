@@ -411,3 +411,8 @@ Con el panel ya activado: Evento -> Invitados -> crear pase con nombre y lugares
 Cada lugar incluye a la persona titular. El pase limita y guarda la confirmación en el panel, sin duplicarla si vuelven a responder.
 El enlace general de la invitación pide el pase personal para confirmar.
 Guía completa: PASES_ALEJANDRA_DAVID.md
+
+Luis Enrique e Irma — /eventos/luis-y-irma
+RSVP normal, sin pases personalizados ni QR de fotos. Activar con:
+npm run provision-event -- luis-y-irma CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+Pendiente: correo del panel, banco/titular de la transferencia y ubicación exacta de la ermita.
