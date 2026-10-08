@@ -25,18 +25,18 @@ export const esmeraldaAntonio = {
   "closingImage": "/images/events/esmeralda-y-antonio/image copy 5.png",
   "ceremony": {
     "enabled": true,
-    "name": "Nuestra misa",
+    "name": "Parroquia San Francisco de Asís",
     "time": "2:00 p. m.",
-    "address": "Próximamente compartiremos el nombre y la ubicación de la iglesia.",
-    "mapsUrl": "",
+    "address": "",
+    "mapsUrl": "https://maps.app.goo.gl/m1Hoo1VfLVCCwqvH7",
     "image": "/images/events/esmeralda-y-antonio/floral.png"
   },
   "reception": {
-    "enabled": false,
-    "name": "",
+    "enabled": true,
+    "name": "Los Cipres",
     "time": "",
     "address": "",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/zDZByvTfbKDBMjEB8",
     "image": "/images/events/esmeralda-y-antonio/floral.png"
   },
   "gallery": [
