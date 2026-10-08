@@ -19,13 +19,13 @@ export const fabiolaJuanPablo = {
   "calendarDate": "6 de diciembre de 2026",
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Con el corazón lleno de amor, hemos decidido unir nuestras vidas. Nos hará muy felices compartir contigo este día tan especial.",
+    "quote": "Hay momentos que se atesoran en nuestro corazón para siempre. Por eso, queremos compartir este momento especial contigo.",
     "image": "/images/events/fabiola-y-juan-pablo/hero.png"
   },
   "ceremony": {
     "enabled": true,
     "name": "Finca Los Arcos",
-    "time": "1:00 p. m.",
+    "time": "2:00 p. m.",
     "address": "Villas de Pachuca",
     "mapsUrl": "",
     "image": "/images/events/fabiola-y-juan-pablo/floral.png"
@@ -56,15 +56,10 @@ export const fabiolaJuanPablo = {
   },
   "gifts": [
     {
-      "title": "Mesa de regalos",
-      "description": "Tu compañía es el mejor obsequio para nosotros. Si deseas hacernos un regalo, te compartiremos algunas opciones que recibiremos con mucho aprecio."
+      "title": "Lluvia de sobres",
+      "description": "Si deseas tener un detalle con nosotros, agradeceremos de corazón tu obsequio en un sobre o mediante transferencia."
     }
   ],
-  "registry": {
-    "store": "Liverpool",
-    "number": "",
-    "url": ""
-  },
   "music": {
     "enabled": false,
     "url": "",
@@ -77,9 +72,45 @@ export const fabiolaJuanPablo = {
   "itinerary": [
     {
       "time": "13:00",
-      "title": "Boda civil y recepción",
-      "description": "Finca Los Arcos, Villas de Pachuca",
+      "title": "Recepción",
+      "description": "Bienvenida a nuestros invitados.",
+      "icon": "house"
+    },
+    {
+      "time": "14:00",
+      "title": "Boda civil",
+      "description": "Unimos nuestras vidas.",
+      "icon": "rings"
+    },
+    {
+      "time": "15:30",
+      "title": "Comida",
+      "description": "Disfrutemos juntos.",
+      "icon": "dinner"
+    },
+    {
+      "time": "18:30",
+      "title": "Brindis",
+      "description": "Brindemos por nuestro amor.",
       "icon": "glass"
+    },
+    {
+      "time": "19:00",
+      "title": "Baile",
+      "description": "¡A celebrar!",
+      "icon": "dance"
+    },
+    {
+      "time": "20:00",
+      "title": "Pastel",
+      "description": "Un momento dulce para compartir.",
+      "icon": "cake"
+    },
+    {
+      "time": "23:00",
+      "title": "Fin del evento",
+      "description": "Gracias por acompañarnos.",
+      "icon": "heart"
     }
   ],
   "theme": {
@@ -89,5 +120,19 @@ export const fabiolaJuanPablo = {
     "cream": "#ffffff",
     "ivory": "#f2f5ef",
     "text": "#273c30"
+  },
+  "endDate": "2026-12-06T23:00:00-06:00",
+  "importantNotice": "Te recomendamos llegar puntualmente para no perderte ninguno de los momentos especiales que hemos preparado para ti.",
+  "family": {
+    "brideParents": [],
+    "groomParents": [],
+    "godparents": []
+  },
+  "bank": {
+    "enabled": true,
+    "bank": "BBVA",
+    "holder": "Rosa Velasquez",
+    "transferLabel": "Número para transferencia",
+    "transferNumber": "768498398"
   }
 };
