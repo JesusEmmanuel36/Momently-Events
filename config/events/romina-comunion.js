@@ -6,7 +6,7 @@ export const rominaComunion = {
     "partner1": "Romina Jahori",
     "partner2": "Mi primera comunión"
   },
-  "date": null,
+  "date": "2026-12-12T14:30:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "hero": {
@@ -56,6 +56,6 @@ export const rominaComunion = {
     "ivory": "#f8e7e6",
     "rose": "#e0b1b5"
   },
-  "dateShort": "",
-  "dateDisplay": ""
+  "dateShort": "12 · 12 · 2026",
+  "dateDisplay": "Sábado · 12 de diciembre · 2026"
 };
