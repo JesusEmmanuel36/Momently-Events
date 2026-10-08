@@ -42,44 +42,26 @@ export const fabiolaJuanPablo = {
     {
       "src": "/images/events/fabiola-y-juan-pablo/image.png",
       "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 480,
-      "height": 483
+      "width": 482,
+      "height": 480
     },
     {
       "src": "/images/events/fabiola-y-juan-pablo/image copy.png",
       "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 505,
-      "height": 480
+      "width": 480,
+      "height": 827
     },
     {
       "src": "/images/events/fabiola-y-juan-pablo/image copy 2.png",
       "alt": "Recuerdo de Fabiola y Juan Pablo",
       "width": 480,
-      "height": 480
+      "height": 777
     },
     {
       "src": "/images/events/fabiola-y-juan-pablo/image copy 3.png",
       "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 480,
-      "height": 486
-    },
-    {
-      "src": "/images/events/fabiola-y-juan-pablo/image copy 4.png",
-      "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 396,
-      "height": 505
-    },
-    {
-      "src": "/images/events/fabiola-y-juan-pablo/image copy 5.png",
-      "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 480,
+      "width": 627,
       "height": 480
-    },
-    {
-      "src": "/images/events/fabiola-y-juan-pablo/image copy 6.png",
-      "alt": "Recuerdo de Fabiola y Juan Pablo",
-      "width": 941,
-      "height": 720
     }
   ],
   "dressCode": {
@@ -172,8 +154,8 @@ export const fabiolaJuanPablo = {
       "Melania Vera Martínez †"
     ],
     "groomParents": [
-      "Fernando Torres Collado",
-      "María Griselda Guerrero Álvarez"
+      "Álvaro Islas Díaz †",
+      "Patricia Coronado Sánchez"
     ],
     "godparents": [
       "Laura Alicia Gómez Pérez",
