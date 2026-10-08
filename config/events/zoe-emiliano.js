@@ -27,14 +27,14 @@ export const zoeEmiliano = {
     "name": "Jardín de Eventos Pozo de Luna",
     "time": "2:00 p. m.",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/r2wWY7K9cngfxgKD7"
+    "mapsUrl": "https://maps.app.goo.gl/4BJY71pHuz5JqJKL6?g_st=ac"
   },
   "reception": {
     "enabled": true,
     "name": "Jardín de Eventos Pozo de Luna",
     "time": "2:00 p. m.",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/r2wWY7K9cngfxgKD7",
+    "mapsUrl": "https://maps.app.goo.gl/4BJY71pHuz5JqJKL6?g_st=ac",
     "image": "/images/events/zoe-y-emiliano/floral.png"
   },
   "gallery": [
@@ -86,9 +86,9 @@ export const zoeEmiliano = {
     "whatsapp": "https://wa.me/524871487301?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Zo%C3%A9%20y%20Emiliano."
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/zoeyemiliano.mp3",
+    "label": "Nuestra canción"
   },
   "theme": {
     "primary": "#b48a4e",

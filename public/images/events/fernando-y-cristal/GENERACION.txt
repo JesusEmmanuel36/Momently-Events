@@ -1,0 +1,12 @@
+Modo: imagegen integrado (built-in).
+Recursos: envelope-closed.png, envelope-open.png, floral.png.
+Iniciales grabadas: F & C. Paleta: rojo y blanco con sello dorado.
+
+Sobre cerrado:
+Use case: product-mockup. Asset type: photorealistic 3D wedding envelope cutout for web animation. A front-facing CLOSED elegant ivory white wedding envelope with fine deep red rose embossed vines, deep ruby red satin bow across the lower center, circular polished gold seal with engraved initials F & C clearly centered. Luxurious realistic paper grain and satin folds. Entire envelope and ornaments visible, perfectly frontal flat composition, landscape 3:2, envelope body nearly fills frame with small margin, no perspective tilt. Soft realistic studio light. Actual transparent background, no backdrop rectangle, no text except engraved F & C. No loose invitation card, closed triangular flap, white and red palette.
+
+Sobre abierto:
+Use case: precise-object-edit. Asset type: OPEN state of same photorealistic 3D wedding envelope for web animation. Edit reference envelope to open the triangular flap upwards. Keep exactly the ivory paper, ruby red rose embroidery, red satin bow and gold engraved F & C seal on the lower front pocket. Keep perfect frontal camera, same horizontal width and body proportions, lower pocket and seal centered. Flap fully raised above back pocket, empty visible interior ready for a separate animated invitation sheet. No paper or card sticking out. Landscape composition showing complete open flap, whole envelope, all edges, actual transparent background. Remove all backdrop and background rectangle. Preserve realistic paper and embroidered vines. No extra text.
+
+Arreglo floral:
+Use case: photorealistic-natural. Asset type: wedding floral web decorative cutout. An elegant asymmetrical corner arrangement of rich red and ivory white roses with tiny white baby's breath and restrained dark green eucalyptus foliage, luxurious realistic flowers. Diagonal composition from upper left to lower right with beautifully isolated curved edges. Actual transparent background. No vase, no box, no text, no background, no frame. Landscape composition suitable for wedding invitation corner and venue artwork.

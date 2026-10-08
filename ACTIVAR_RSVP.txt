@@ -431,7 +431,7 @@ npm run provision-event -- diana-y-jose CORREO_DEL_CLIENTE https://momentlyevent
 
 ZOÉ Y EMILIANO — /eventos/zoe-y-emiliano
 24 de octubre de 2026, 2:00 p. m. Ceremonia y recepción: Jardín de Eventos Pozo de Luna.
-Solo confirmación por WhatsApp: 4871487301. Sin formulario RSVP ni activación de panel. Música pendiente.
+Solo confirmación por WhatsApp: 4871487301. Sin formulario RSVP ni activación de panel. Audio: /audio/zoeyemiliano.mp3.
 
 ALMA KARINA — /eventos/alma-karina-50
 27 de diciembre de 2026. Misa 4:30 p. m.; recepción 6:30 p. m. Zona: America/Hermosillo.
@@ -463,3 +463,10 @@ Activar antes de compartir para guardar confirmaciones.
 
 Esmeralda y Antonio: acompañantes sin límite por confirmación, también al editar en el panel.
 Fabiola y Daniel: fotos renovadas; audio /audio/fabiola-y-daniel.mp3.
+
+FERNANDO Y CRISTAL
+Invitación: https://momentlyevents.vercel.app/eventos/fernando-y-cristal
+23 de diciembre de 2026. Misa 12:00 p. m., Templo de la Virgen de Guadalupe, San Miguel. Fiesta 3:00 p. m., Cancha de Casas Viejas.
+WhatsApp: 4381230310. Audio: /audio/fernando-y-cristal.mp3. RSVP normal, sin fecha límite.
+Activar antes de compartir para guardar confirmaciones; falta correo del panel:
+npm run provision-event -- fernando-y-cristal CORREO_DEL_PANEL https://momentlyevents.vercel.app
