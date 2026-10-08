@@ -1,10 +1,10 @@
 export const annaIsabella = {
   "slug": "anna-isabella",
   "templateKey": "anna-isabella-cielito-lindo-pink",
-  "eventTitle": "Celebración de Anna Isabella",
+  "eventTitle": "Bautismo de Anna Isabella",
   "couple": {
     "partner1": "Anna Isabella",
-    "partner2": "Mi celebración"
+    "partner2": "Mi bautismo"
   },
   "displayNames": {
     "partner1": "Anna Isabella",
@@ -18,8 +18,8 @@ export const annaIsabella = {
   "dateDisplay": "Sábado · 24 de octubre · 2026",
   "calendarDate": "24 de octubre de 2026",
   "hero": {
-    "subtitle": "Mi celebración",
-    "quote": "Con mucha alegría te invito a compartir un día lleno de cariño, sonrisas y momentos especiales. ¡Me encantará que me acompañes!",
+    "subtitle": "Mi bautismo",
+    "quote": "Después de un año de bendiciones, celebraremos su bautismo en familia, dando gracias a Dios por cada día compartido. Será un honor para nosotros contar con tu presencia en este día tan especial.",
     "image": "/images/events/anna-isabella/image copy 6.png"
   },
   "closingImage": "/images/events/anna-isabella/image copy 9.png",
@@ -119,8 +119,8 @@ export const annaIsabella = {
   },
   "gifts": [],
   "contact": {
-    "phone": "9383874896",
-    "whatsapp": "https://wa.me/529383874896"
+    "phone": "9383874895",
+    "whatsapp": "https://wa.me/529383874895"
   },
   "music": {
     "enabled": true,
