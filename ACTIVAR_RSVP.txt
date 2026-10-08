@@ -457,6 +457,6 @@ npm run provision-event -- fabiola-y-juan-pablo CORREO_DEL_CLIENTE https://momen
 ESMERALDA Y ANTONIO
 Invitación: https://momentlyevents.vercel.app/eventos/esmeralda-y-antonio
 5 de diciembre de 2026. Misa: 2:00 p. m. WhatsApp: 7775904538.
-Iglesia: Parroquia San Francisco de Asís, 2:00 p. m. Recepción: Los Cipres. Ambos con enlace de Maps. Pendientes: horario de recepción, música y correo del panel.
+Iglesia: Parroquia San Francisco de Asís, 2:00 p. m. Recepción: Los Cipres, 4:00 p. m. Ambos con enlace de Maps. Blanco y vino reservados para los novios. Audio: /audio/esmeraldayantonio.mp3. Pendiente: correo del panel.
 npm run provision-event -- esmeralda-y-antonio CORREO_DEL_PANEL https://momentlyevents.vercel.app
 Activar antes de compartir para guardar confirmaciones.

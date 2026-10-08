@@ -34,7 +34,7 @@ export const esmeraldaAntonio = {
   "reception": {
     "enabled": true,
     "name": "Los Cipres",
-    "time": "",
+    "time": "4:00 p. m.",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/zDZByvTfbKDBMjEB8",
     "image": "/images/events/esmeralda-y-antonio/floral.png"
@@ -79,7 +79,19 @@ export const esmeraldaAntonio = {
   ],
   "dressCode": {
     "title": "Código de vestimenta",
-    "text": "El color blanco está reservado para la novia. Gracias por elegir otros tonos para acompañarnos en este día especial."
+    "text": "Los colores blanco y vino están reservados para los novios. Gracias por elegir otros tonos para acompañarnos en este día especial."
+  },
+  "family": {
+    "groups": [
+      {
+        "title": "Papás de la novia",
+        "names": ["Josefina Jiménez Mata", "Pedro Gómez Estrada"]
+      },
+      {
+        "title": "Papás del novio",
+        "names": ["María Luisa Tavira Cruz", "Ricardo Márquez Salvatierra"]
+      }
+    ]
   },
   "gifts": [
     {
@@ -92,9 +104,9 @@ export const esmeraldaAntonio = {
     "whatsapp": "https://wa.me/527775904538"
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/esmeraldayantonio.mp3",
+    "label": "Nuestra canción"
   },
   "itinerary": [],
   "theme": {
