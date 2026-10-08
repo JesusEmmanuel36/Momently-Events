@@ -1,0 +1,12 @@
+Modo: imagegen integrado (built-in).
+Recursos: envelope-closed.png, envelope-open.png, floral.png.
+Iniciales grabadas: AI. Paleta: rosa, beige y blanco; detalles mexicanos delicados Cielito Lindo.
+
+Sobre cerrado:
+Use case: product-mockup. Asset type: closed photorealistic 3D celebration envelope cutout for a little girl's Mexican Cielito Lindo themed digital invitation. Frontal ivory white and warm beige textured paper envelope, triangular flap CLOSED, delicate embossed blush pink floral embroidery, soft pink satin ribbon bow, centered circular gold wax seal engraved clearly with A I. Tiny delicate Mexican papel picado floral edge details, elegant tender and sweet, no cartoon. Entire envelope visible, front flat camera no angle, landscape 3:2, body nearly fills frame small margin. Realistic paper texture, soft studio light. Actual transparent background. No card, no text except A I engraving, no rectangular backdrop.
+
+Sobre abierto:
+undefined
+
+Arreglo floral:
+Use case: photorealistic-natural. Asset type: delicate Cielito Lindo Mexican floral corner cutout for a baby girl's celebration invitation. Asymmetrical corner arrangement of pastel blush pink roses, ivory dahlias, white baby breath, beige dried small blossoms, restrained sage foliage. A small elegant blush pink papel picado floral lace ribbon woven into the arrangement, delicate Mexican embroidered flower details, tender realistic botanical beauty. Landscape diagonal corner composition, authentic flowers and textures, actual transparent background. No vase, no text, no frame, no background.

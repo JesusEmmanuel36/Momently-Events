@@ -107,7 +107,13 @@ export const fernandoCristal = {
     "url": "/audio/fernando-y-cristal.mp3",
     "label": "Nuestra canción"
   },
-  "itinerary": [],
+  "itinerary": [
+    { "time": "12:00", "title": "Misa", "description": "" },
+    { "time": "15:00", "title": "Comida", "description": "" },
+    { "time": "16:30", "title": "Brindis", "description": "" },
+    { "time": "19:30", "title": "Vals", "description": "" },
+    { "time": "21:30", "title": "Baile", "description": "" }
+  ],
   "theme": {
     "primary": "#a32a3a",
     "dark": "#491b24",

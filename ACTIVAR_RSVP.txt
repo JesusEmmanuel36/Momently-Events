@@ -470,3 +470,10 @@ Invitación: https://momentlyevents.vercel.app/eventos/fernando-y-cristal
 WhatsApp: 4381230310. Audio: /audio/fernando-y-cristal.mp3. RSVP normal, sin fecha límite.
 Activar antes de compartir para guardar confirmaciones; falta correo del panel:
 npm run provision-event -- fernando-y-cristal CORREO_DEL_PANEL https://momentlyevents.vercel.app
+
+ANNA ISABELLA
+Invitación: https://momentlyevents.vercel.app/eventos/anna-isabella
+24 de octubre de 2026. Misa 7:00 a. m., Parroquia Sagrado Corazón de Jesús, Sabancuy. Fiesta 2:00 p. m., Salón de Fiestas Margaritas.
+WhatsApp: 9383874896. Audio: /audio/anna-isabella.mp3. RSVP normal. Pendiente: tipo de celebración y correo del panel.
+Activar antes de compartir para guardar confirmaciones:
+npm run provision-event -- anna-isabella CORREO_DEL_PANEL https://momentlyevents.vercel.app
