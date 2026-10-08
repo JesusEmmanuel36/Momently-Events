@@ -29,7 +29,7 @@ export const lolisCesar = {
     "name": "Capilla de la Merced",
     "time": "1:00 p. m.",
     "address": "Juárez Sur 317, Tulancingo, Hidalgo",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/BCr3ufeNUoSTCRJYA",
     "image": "/images/events/lolis-y-cesar/floral.png"
   },
   "reception": {
@@ -37,7 +37,7 @@ export const lolisCesar = {
     "name": "Salón Real de Arcos",
     "time": "3:00 p. m.",
     "address": "Calle Morelos, Tepantitla, Cuautepec, Hidalgo",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/NUAy5rZmgZGBw1k6A",
     "image": "/images/events/lolis-y-cesar/floral.png"
   },
   "gallery": [
