@@ -28,7 +28,7 @@ export const alejandraReyes = {
     "enabled": true,
     "name": "Templo La Merced",
     "time": "10:00 a. m.",
-    "address": "",
+    "address": "Manuel Doblado #213, Col. Centro, Celaya, Guanajuato",
     "mapsUrl": "",
     "image": ""
   },
@@ -36,7 +36,7 @@ export const alejandraReyes = {
     "enabled": true,
     "name": "Salón Finca Imperial",
     "time": "6:00 p. m.",
-    "address": "",
+    "address": "Pedro Infante #200, Col. Imperial, Celaya, Guanajuato",
     "mapsUrl": "",
     "image": "/images/events/xv-alejandra-reyes/streetwear-blue-white.png"
   },
@@ -55,7 +55,12 @@ export const alejandraReyes = {
     }
   ],
   "gallery": [],
-  "gifts": [],
+  "gifts": [
+    {
+      "title": "Regalo",
+      "description": "Tu presencia es el mejor regalo. Si deseas obsequiarme algo, habrá un sobre blanco para tu regalo."
+    }
+  ],
   "contact": {},
   "dressCode": {
     "title": "Urban streetwear",
