@@ -38,7 +38,50 @@ export const fabiolaJuanPablo = {
     "mapsUrl": "",
     "image": "/images/events/fabiola-y-juan-pablo/floral.png"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 480,
+      "height": 483
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 505,
+      "height": 480
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy 2.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy 3.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 480,
+      "height": 486
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy 4.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 396,
+      "height": 505
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy 5.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "src": "/images/events/fabiola-y-juan-pablo/image copy 6.png",
+      "alt": "Recuerdo de Fabiola y Juan Pablo",
+      "width": 941,
+      "height": 720
+    }
+  ],
   "dressCode": {
     "title": "Formal",
     "text": "El blanco, el beige y los tonos similares están reservados para la novia. Gracias por elegir otros colores para acompañarnos en este día especial.",
@@ -61,9 +104,9 @@ export const fabiolaJuanPablo = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/fabiola-y-juanpablo.mp3",
+    "label": "Nuestra canción"
   },
   "contact": {
     "phone": "7711814039",
@@ -124,9 +167,18 @@ export const fabiolaJuanPablo = {
   "endDate": "2026-12-06T23:00:00-06:00",
   "importantNotice": "Te recomendamos llegar puntualmente para no perderte ninguno de los momentos especiales que hemos preparado para ti.",
   "family": {
-    "brideParents": [],
-    "groomParents": [],
-    "godparents": []
+    "brideParents": [
+      "Francisco Javier Aguilar Arvizu",
+      "Melania Vera Martínez †"
+    ],
+    "groomParents": [
+      "Fernando Torres Collado",
+      "María Griselda Guerrero Álvarez"
+    ],
+    "godparents": [
+      "Laura Alicia Gómez Pérez",
+      "Clara Alejandra Gutiérrez"
+    ]
   },
   "bank": {
     "enabled": true,

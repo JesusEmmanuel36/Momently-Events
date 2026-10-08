@@ -451,7 +451,7 @@ Banco: BBVA Bancomer. Titular: Alma Karina Balderrama Romero. Número de tarjeta
 
 FABIOLA Y JUAN PABLO — /eventos/fabiola-y-juan-pablo
 6 de diciembre de 2026. Recepción: 1:00 p. m.; boda civil: 2:00 p. m. Finca Los Arcos, Villas de Pachuca.
-WhatsApp: 7711814039. RSVP normal. Lluvia de sobres y transferencia BBVA a Rosa Velasquez, número 768498398 (tipo de cuenta por confirmar). Música y nombres de padres y padrinos pendientes.
+WhatsApp: 7711814039. RSVP normal. Lluvia de sobres y transferencia BBVA a Rosa Velasquez, número 768498398 (tipo de cuenta por confirmar). Audio: /audio/fabiola-y-juanpablo.mp3. Fotos, padres y padrinos integrados.
 npm run provision-event -- fabiola-y-juan-pablo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 
 ESMERALDA Y ANTONIO
