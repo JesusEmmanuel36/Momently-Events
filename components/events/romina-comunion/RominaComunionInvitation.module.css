@@ -29,6 +29,7 @@
 .invitation .heroCopyCentered { align-self:start; padding-top:4rem!important; padding-bottom:0!important; color:var(--dark); }
 .invitation .heroCopyCentered h1 { color:var(--dark)!important; text-shadow:0 2px 8px #fff9f3; }
 .invitation .heroCopyCentered > span { color:var(--dark); }
+.invitation .heroCopyCentered > p { color:var(--coffee-dark); }
 .invitation .heroShade { background:linear-gradient(180deg,#fff9f333,transparent 60%)!important; }
 .invitation .openEnvelope { width:124%!important; height:124%!important; left:-12%!important; top:-29%!important; }
 .invitation :global(.envelope__asset--open-front) { clip-path:polygon(0 44%,100% 44%,100% 100%,0 100%); }
