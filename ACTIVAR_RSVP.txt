@@ -477,3 +477,10 @@ Invitación: https://momentlyevents.vercel.app/eventos/anna-isabella
 WhatsApp: 9383874895. Audio: /audio/anna-isabella.mp3. Bautismo. RSVP normal. Correo del panel: Fanrejon@gmail.com.
 Activar antes de compartir para guardar confirmaciones:
 npm run provision-event -- anna-isabella CORREO_DEL_PANEL https://momentlyevents.vercel.app
+
+LOLIS Y CÉSAR
+Ruta: /eventos/lolis-y-cesar
+5 de diciembre de 2026. Capilla de la Merced, Juárez Sur 317, Tulancingo, Hidalgo, 1:00 p. m.
+Recepción: Salón Real de Arcos, Calle Morelos, Tepantitla, Cuautepec, Hidalgo, 3:00 p. m.
+Audio: /audio/lolisycesar.mp3. RSVP normal. Pendiente: correo del panel.
+npm run provision-event -- lolis-y-cesar CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
