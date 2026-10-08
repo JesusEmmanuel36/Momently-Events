@@ -82,7 +82,7 @@ export const fabiolaJuanPablo = {
   "gifts": [
     {
       "title": "Lluvia de sobres",
-      "description": "Si deseas tener un detalle con nosotros, agradeceremos de corazón tu obsequio en un sobre o mediante transferencia."
+      "description": "Si deseas tener un detalle con nosotros, agradeceremos de corazón tu obsequio en un sobre."
     }
   ],
   "music": {
@@ -161,12 +161,5 @@ export const fabiolaJuanPablo = {
       "Laura Alicia Gómez Pérez",
       "Clara Alejandra Gutiérrez"
     ]
-  },
-  "bank": {
-    "enabled": true,
-    "bank": "BBVA",
-    "holder": "Rosa Velasquez",
-    "transferLabel": "Número para transferencia",
-    "transferNumber": "768498398"
   }
 };

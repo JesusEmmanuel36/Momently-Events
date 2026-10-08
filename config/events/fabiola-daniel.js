@@ -42,23 +42,27 @@ export const fabiolaDaniel = {
   "gallery": [
     {
       "src": "/images/events/fabiola-y-daniel/image.png",
-      "alt": "Fabiola y Daniel, recuerdo 1"
+      "alt": "Recuerdo de Fabiola y Daniel",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "src": "/images/events/fabiola-y-daniel/image copy.png",
+      "alt": "Recuerdo de Fabiola y Daniel",
+      "width": 480,
+      "height": 640
     },
     {
       "src": "/images/events/fabiola-y-daniel/image copy 2.png",
-      "alt": "Fabiola y Daniel, recuerdo 2"
+      "alt": "Recuerdo de Fabiola y Daniel",
+      "width": 640,
+      "height": 480
     },
     {
       "src": "/images/events/fabiola-y-daniel/image copy 3.png",
-      "alt": "Fabiola y Daniel, recuerdo 3"
-    },
-    {
-      "src": "/images/events/fabiola-y-daniel/image copy 4.png",
-      "alt": "Fabiola y Daniel, recuerdo 4"
-    },
-    {
-      "src": "/images/events/fabiola-y-daniel/image copy 5.png",
-      "alt": "Fabiola y Daniel, recuerdo 5"
+      "alt": "Recuerdo de Fabiola y Daniel",
+      "width": 640,
+      "height": 480
     }
   ],
   "gifts": [],
@@ -67,9 +71,9 @@ export const fabiolaDaniel = {
     "whatsapp": "https://wa.me/527225178211"
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/fabiola-y-daniel.mp3",
+    "label": "Nuestra canción"
   },
   "itinerary": [
     {

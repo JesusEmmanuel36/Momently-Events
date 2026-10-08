@@ -451,12 +451,15 @@ Banco: BBVA Bancomer. Titular: Alma Karina Balderrama Romero. Número de tarjeta
 
 FABIOLA Y JUAN PABLO — /eventos/fabiola-y-juan-pablo
 6 de diciembre de 2026. Recepción: 1:00 p. m.; boda civil: 2:00 p. m. Finca Los Arcos, Villas de Pachuca.
-WhatsApp: 7711814039. RSVP normal. Lluvia de sobres y transferencia BBVA a Rosa Velasquez, número 768498398 (tipo de cuenta por confirmar). Audio: /audio/fabiola-y-juanpablo.mp3. Fotos, padres y padrinos integrados.
+WhatsApp: 7711814039. RSVP normal. Lluvia de sobres, sin transferencia. Audio: /audio/fabiola-y-juanpablo.mp3. Fotos, padres y padrinos integrados.
 npm run provision-event -- fabiola-y-juan-pablo CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 
 ESMERALDA Y ANTONIO
 Invitación: https://momentlyevents.vercel.app/eventos/esmeralda-y-antonio
-5 de diciembre de 2026. Misa: 2:00 p. m. WhatsApp: 7775904538.
+5 de diciembre de 2026. Misa: 2:00 p. m. WhatsApp: 7776051978.
 Iglesia: Parroquia San Francisco de Asís, 2:00 p. m. Recepción: Los Cipres, 4:00 p. m. Ambos con enlace de Maps. Blanco y vino reservados para los novios. Audio: /audio/esmeraldayantonio.mp3. Pendiente: correo del panel.
 npm run provision-event -- esmeralda-y-antonio CORREO_DEL_PANEL https://momentlyevents.vercel.app
 Activar antes de compartir para guardar confirmaciones.
+
+Esmeralda y Antonio: acompañantes sin límite por confirmación, también al editar en el panel.
+Fabiola y Daniel: fotos renovadas; audio /audio/fabiola-y-daniel.mp3.

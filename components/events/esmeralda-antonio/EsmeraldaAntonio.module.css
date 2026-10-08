@@ -34,3 +34,9 @@
 .invitation .heroCopy {align-self:end;padding-bottom:6rem!important;}
 .invitation .heroCopy h1 {font-size:clamp(3.5rem,11vw,7rem)!important;color:var(--paper);text-shadow:0 2px 12px #21180ed9;}
 .invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 6px #21180e;}
+
+.invitation .hero {background:radial-gradient(ellipse at 15% 20%,#e6d4af,transparent 60%),linear-gradient(135deg,#fffdf9,#f8f1e5);color:var(--dark);}
+.invitation .heroBackdrop {object-fit:contain;opacity:.16;}
+.invitation .hero > div:first-of-type {background:linear-gradient(0deg,#f8f1e5e6,transparent 75%);}
+.invitation .heroCopy h1,.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--dark);text-shadow:0 2px 10px #fffdf9;}
+.invitation .hero > a {color:var(--dark);border-color:var(--gold);}

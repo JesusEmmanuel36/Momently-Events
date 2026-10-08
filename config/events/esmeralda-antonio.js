@@ -20,7 +20,7 @@ export const esmeraldaAntonio = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Con el corazón lleno de amor, hemos decidido unir nuestras vidas. Nos hará muy felices compartir contigo este día tan especial.",
-    "image": "/images/events/esmeralda-y-antonio/image copy 3.png"
+    "image": "/images/events/esmeralda-y-antonio/floral.png"
   },
   "closingImage": "/images/events/esmeralda-y-antonio/image copy 5.png",
   "ceremony": {
@@ -40,6 +40,12 @@ export const esmeraldaAntonio = {
     "image": "/images/events/esmeralda-y-antonio/floral.png"
   },
   "gallery": [
+    {
+      "src": "/images/events/esmeralda-y-antonio/image copy 3.png",
+      "alt": "Esmeralda y Antonio, un recuerdo juntos",
+      "width": 480,
+      "height": 648
+    },
     {
       "src": "/images/events/esmeralda-y-antonio/image.png",
       "alt": "Esmeralda y Antonio, un recuerdo juntos",
@@ -85,11 +91,17 @@ export const esmeraldaAntonio = {
     "groups": [
       {
         "title": "Papás de la novia",
-        "names": ["Josefina Jiménez Mata", "Pedro Gómez Estrada"]
+        "names": [
+          "Josefina Jiménez Mata",
+          "Pedro Gómez Estrada"
+        ]
       },
       {
         "title": "Papás del novio",
-        "names": ["María Luisa Tavira Cruz", "Ricardo Márquez Salvatierra"]
+        "names": [
+          "María Luisa Tavira Cruz",
+          "Ricardo Márquez Salvatierra"
+        ]
       }
     ]
   },
@@ -100,8 +112,8 @@ export const esmeraldaAntonio = {
     }
   ],
   "contact": {
-    "phone": "7775904538",
-    "whatsapp": "https://wa.me/527775904538"
+    "phone": "7776051978",
+    "whatsapp": "https://wa.me/527776051978"
   },
   "music": {
     "enabled": true,
@@ -115,5 +127,6 @@ export const esmeraldaAntonio = {
     "champagne": "#e6d4af",
     "cream": "#fffdf9",
     "ivory": "#f8f1e5"
-  }
+  },
+  "unlimitedCompanions": true
 };
