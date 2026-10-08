@@ -491,3 +491,9 @@ Ruta: /eventos/carolina-y-pavel
 Confirmación obligatoria: hasta el 20 de diciembre de 2026. RSVP normal. Sin niños.
 Pendiente: correo del panel, WhatsApp y música.
 npm run provision-event -- carolina-y-pavel CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+LILIANA 53 AÑOS
+Ruta: /eventos/liliana-53
+28 de noviembre de 2026, 3:00 p. m. Av. San Fernando, condominio 125, casa 2, Fraccionamiento Santa Elena, Cuautitlán.
+Audio: /audio/liliana-53.mp3. RSVP normal. Pendiente: correo del panel.
+npm run provision-event -- liliana-53 CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
