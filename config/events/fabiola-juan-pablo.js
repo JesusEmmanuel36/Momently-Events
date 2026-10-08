@@ -158,8 +158,8 @@ export const fabiolaJuanPablo = {
       "Patricia Coronado Sánchez"
     ],
     "godparents": [
-      "Laura Alicia Gómez Pérez",
-      "Clara Alejandra Gutiérrez"
+      "Saúl Muñoz Zapata",
+      "María Georgina Islas Miranda"
     ]
   }
 };
