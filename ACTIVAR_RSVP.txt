@@ -497,3 +497,10 @@ Ruta: /eventos/liliana-53
 28 de noviembre de 2026, 3:00 p. m. Av. San Fernando, condominio 125, casa 2, Fraccionamiento Santa Elena, Cuautitlán.
 Audio: /audio/liliana-53.mp3. RSVP normal. Pendiente: correo del panel.
 npm run provision-event -- liliana-53 CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+JIMENA JIMÉNEZ CRUZ — XV AÑOS
+Ruta: /eventos/xv-jimena-jimenez
+28 de noviembre de 2026. Misa: Parroquia San Juan Diego, 1:00 p. m.
+Recepción: Salón Pista, Av. Tecoloapan s/n, Col. San José del Jaral, Atizapán de Zaragoza, Estado de México. Hora pendiente.
+WhatsApp: 5643828871. RSVP normal. Sin música ni fotos personales por ahora. Pendiente: correo del panel.
+npm run provision-event -- xv-jimena-jimenez CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
