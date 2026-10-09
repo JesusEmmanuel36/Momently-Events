@@ -22,7 +22,7 @@ export const davidReyna = {
     "quote": "Con el corazón lleno de alegría, hemos decidido dar el siguiente paso y unir nuestras vidas.",
     "image": "/images/events/david-y-reyna/hero.png"
   },
-  "closingImage": "/images/events/david-y-reyna/hero.png",
+  "closingImage": "/images/events/david-y-reyna/image copy.png",
   "presentation": [
     "Hay momentos en la vida que se quedan grabados para siempre, y este es uno de ellos.",
     "Con el corazón lleno de alegría, hemos decidido dar el siguiente paso y unir nuestras vidas.",
@@ -70,7 +70,20 @@ export const davidReyna = {
       }
     ]
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/david-y-reyna/image copy.png",
+      "alt": "David y Reyna, un momento juntos",
+      "width": 942,
+      "height": 1600
+    },
+    {
+      "src": "/images/events/david-y-reyna/image.png",
+      "alt": "David y Reyna, un recuerdo juntos",
+      "width": 920,
+      "height": 1600
+    }
+  ],
   "gifts": [
     {
       "title": "Lluvia de sobres",
@@ -80,7 +93,7 @@ export const davidReyna = {
   "contact": {},
   "music": {
     "enabled": true,
-    "url": "/audio/mayra-y-hector.mp3",
+    "url": "/audio/davidyreyna.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [],
