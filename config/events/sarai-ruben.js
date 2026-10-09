@@ -86,13 +86,15 @@ export const saraiRuben = {
   "gifts": [
     {
       "title": "Mesa de regalos · Liverpool",
+      "eventNumber": "60053663",
+      "url": "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60053663",
       "description": "Si deseas tener un detalle con nosotros, tendremos mesa de regalos en Liverpool."
     }
   ],
   "contact": {},
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/sarairuben.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [],
