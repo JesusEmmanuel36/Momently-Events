@@ -504,3 +504,10 @@ Ruta: /eventos/xv-jimena-jimenez
 Recepción: Salón Pista, Av. Tecoloapan s/n, Col. San José del Jaral, Atizapán de Zaragoza, Estado de México. Hora: 3:00 p. m.
 WhatsApp: 5643828871. RSVP normal. Audio: /audio/lesly-marcelino-perfect.mp3. Sin fotos personales por ahora. Pendiente: correo del panel.
 npm run provision-event -- xv-jimena-jimenez CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+JOSÉ DELFINO Y MONSERRAT — BODA
+Ruta: /eventos/jose-y-monserrat
+20 de diciembre de 2026. Misa: Parroquia de la Preciosa Sangre de Cristo, San Francisco Curungueo, 12:00 p. m.
+Recepción: Salón Monroy, Calle Nueva. Sin horario por solicitud.
+WhatsApp: 7152179259. Regalos libres. RSVP normal. Pendiente: audio y correo del panel.
+npm run provision-event -- jose-y-monserrat CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
