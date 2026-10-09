@@ -1,26 +1,33 @@
-.invitation .hero {background:#3a2a24;}
+.invitation .hero {background:#5d4148;}
 .invitation .heroImage {object-fit:cover;object-position:center;}
 .invitation .heroCopy {align-self:start;padding-top:6rem!important;padding-bottom:0!important;}
-.invitation .heroCopy h1 {font-size:clamp(4rem,13vw,8rem)!important;color:var(--paper);text-shadow:0 2px 14px #3a2a24;}
-.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 8px #3a2a24;}
-.invitation .hero > div:first-of-type {background:linear-gradient(180deg,#3a2a2440,transparent 65%);}
+.invitation .heroCopy h1 {font-size:clamp(4rem,13vw,8rem)!important;color:var(--paper);text-shadow:0 2px 14px #5d4148;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 8px #5d4148;}
+.invitation .hero > div:first-of-type {background:linear-gradient(180deg,#5d414840,transparent 65%);}
 .invitation .fullNames {font-size:clamp(1.8rem,6vw,3rem);line-height:1.4;}
 .invitation .fullNames i {display:block;}
-.invitation .venueArtwork {background:linear-gradient(135deg,#fbf8f3,#f5eee6);}
+.invitation .venueArtwork {background:linear-gradient(135deg,#fff8f9,#f5e9eb);}
 .invitation .venueArtwork img {object-fit:contain;padding:1.5rem;}
-.invitation .letter {width:62%;left:19%;background:linear-gradient(145deg,#fbf8f3,#f5eee6);}
+.invitation .letter {width:62%;left:19%;background:linear-gradient(145deg,#fff8f9,#f5e9eb);}
 .invitation .letter h2 {line-height:1.1!important;font-size:clamp(2rem,6vw,4rem)!important;}
-.invitation .letter::after {border-color:#d8c3a5;}
-.invitation button[class*="openLabel"] {background:#fbf8f3;color:#594238;}
+.invitation .letter::after {border-color:#d9bdc2;}
+.invitation button[class*="openLabel"] {background:#fff8f9;color:#75535a;}
 .invitation .openEnvelope {width:100%!important;height:100%!important;inset:0!important;}
 .invitation .openFront {clip-path:inset(55% 0 0 0);}
 .invitation button[class*="sealAction"] {left:50%;top:54%;}
 .invitation .photoGrid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;}
 .invitation .photoGrid button {grid-column:auto!important;grid-row:auto!important;}
 .closingMessage {font-family:var(--font-sans),sans-serif!important;font-size:clamp(1rem,3vw,1.3rem)!important;line-height:1.8;max-width:600px;margin:1.5rem auto;}
+.invitation section[id="bienvenida"] h2 {font-size:clamp(2rem,5vw,3.4rem);max-width:780px;margin-inline:auto;line-height:1.2;}
+.featuredPhoto {padding:5rem 1.5rem 6rem;text-align:center;background:var(--ivory);}
+.featuredPhoto > span {display:block;text-transform:uppercase;letter-spacing:.22em;font-size:.62rem;color:var(--muted);}
+.featuredPhoto h2 {font:400 clamp(2.4rem,6vw,4.2rem)/1.1 var(--font-script),cursive;color:var(--olive);margin:1rem 0 2rem;}
+.featuredPhoto img {display:block;width:min(100%,760px);height:auto;margin:auto;border:1px solid var(--gold-soft);padding:.45rem;background:var(--paper);box-shadow:0 18px 45px #5d414824;}
+.venueQuote {display:grid;place-items:center;padding:clamp(3rem,8vw,7rem);background:linear-gradient(145deg,#75535a,#9c7f84);}
+.venueQuote blockquote {max-width:680px;margin:0;color:#fff8f9;text-align:center;font:400 clamp(2.2rem,5vw,4.3rem)/1.25 var(--font-script),cursive;text-wrap:balance;}
 @media(max-width:600px){.invitation .heroCopy{padding-top:5rem!important}.invitation .letter{height:55%;bottom:18%;}.invitation .letter h2{font-size:2rem!important;}}
-.invitation .openEnvelope {width:103.5%!important;height:138%!important;inset:-42.1% auto auto -1.75%!important;object-fit:fill;}
-.invitation .openFront {clip-path:inset(67% 0 0 0);}
+.invitation .openEnvelope {width:100%!important;height:146%!important;inset:-46% 0 auto!important;object-fit:contain;object-position:center;}
+.invitation .openFront {clip-path:inset(68% 0 0 0);}
 
 @media (min-width: 900px) {
   .invitation .heroImage { object-fit: contain; }

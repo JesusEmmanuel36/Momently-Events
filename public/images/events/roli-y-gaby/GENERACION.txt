@@ -12,3 +12,19 @@ Use case: product-mockup. Photorealistic corner floral arrangement for coffee br
 
 open
 Use case: precise-object-edit. Open this exact coffee-brown wedding envelope. Keep exact straight-on front camera, paper color and texture, gold edging, both corner floral decorations, same horizontal body proportions. Raise triangular top flap to show empty brown interior. Remove wax seal and center bow, keep bottom front pocket and champagne ribbon across front. True transparent background. No letter inserted, no words. Landscape 3:2 canvas with margins for raised flap. Keep body width unchanged and body bottom aligned near original; do not make envelope wider.
+
+CAMBIO DE PALETA · 9 de octubre de 2026
+Modo: herramienta integrada imagegen. Sobre cerrado/abierto y floral con transparencia.
+Paleta: malva oscuro #75535A, rosa viejo #9C7F84, rosa empolvado #C19DA5, blush #D9BDC2 y oro rosado.
+
+envelope-closed-v2.png
+Use case: product-mockup. Photorealistic 3D wedding envelope, straight-on front view, horizontal 3:2 canvas. Dusty mauve textured paper #75535A and #9C7F84, old rose satin ribbon #C19DA5, delicate rose-gold edging, restrained dusty rose and blush flowers with muted eucalyptus at the corners. Exact centered round rose-gold wax seal engraved clearly “R & G”. True transparent background, isolated cutout, generous margins. No text beyond the monogram, no backdrop, no hands.
+
+envelope-open-v2.png
+Use case: product-mockup. Matching photorealistic open wedding envelope, straight-on front view on a square canvas with enough room for the raised triangular flap. Dusty mauve textured paper #75535A and #9C7F84, blush interior #D9BDC2, rose-gold edging, old rose satin ribbon, dusty rose floral accents and muted eucalyptus. Empty interior, no invitation card, no seal, no monogram, no words. True transparent background, isolated cutout, centered and symmetrical, full envelope visible without cropping or distortion.
+
+floral-v2.png
+Use case: product-mockup. Elegant photorealistic horizontal floral arrangement in the palette dusty mauve #75535A, old rose #9C7F84, dusty pink #C19DA5 and blush #D9BDC2, with restrained rose-gold botanical accents and muted eucalyptus. Ranunculus, garden roses and lisianthus in an airy diagonal composition, realistic petals and refined wedding styling. True transparent background, isolated cutout, generous padding, landscape 3:2. No vase, no fabric, no text, no scene.
+
+hero-v2.png
+Use case: product-mockup. Portrait 2:3 photorealistic wedding still life in dusty mauve, old rose and blush. A pair of polished rose-gold wedding rings rests near the lower third on softly draped dusty pink satin, framed by restrained mauve and blush flowers. The upper half has elegant smooth mauve fabric and generous calm negative space for invitation typography. Romantic studio lighting, refined and luxurious, no brown or coffee tones, no text, no people, no logos.
