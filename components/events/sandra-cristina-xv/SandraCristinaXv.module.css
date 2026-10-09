@@ -74,3 +74,10 @@
 
 .invitation .openEnvelope {width:101.5%!important;height:101.5%!important;inset:-14.1% auto auto -.75%!important;}
 .invitation button[class*="sealAction"] {left:50%;top:53.5%;}
+
+.invitation .heroCopy {align-self:end!important;padding:0 1rem 4rem!important;}
+.invitation .heroCopy h1 {color:#fbfdff!important;text-shadow:0 2px 12px #172b46!important;}
+.invitation .heroCopy > p {color:#fbfdff!important;text-shadow:0 2px 8px #172b46!important;}
+.invitation .age {color:#fbfdff;text-shadow:0 2px 8px #172b46;}
+.invitation .heroShade {background:linear-gradient(180deg,transparent 35%,#172b4670 75%,#172b46b3)!important;}
+.invitation .heroImage {object-position:center 25%;}

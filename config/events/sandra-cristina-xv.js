@@ -20,7 +20,7 @@ export const sandraCristinaXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión, te invito a celebrar mis quince años y compartir conmigo un día lleno de alegría, sueños y momentos especiales. ¡Me encantará que me acompañes!",
-    "image": "/images/events/xv-sandra-cristina/hero.png"
+    "image": "/images/events/sandra-cristina/image.png"
   },
   "closingImage": "/images/events/xv-sandra-cristina/hero.png",
   "ceremony": {
@@ -34,12 +34,19 @@ export const sandraCristinaXv = {
   "reception": {
     "enabled": true,
     "name": "Finca Poncho Álvarez",
-    "time": "",
+    "time": "6:00 p. m.",
     "address": "",
     "mapsUrl": "",
     "image": "/images/events/xv-sandra-cristina/floral.png"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/sandra-cristina/image.png",
+      "alt": "Sandra Cristina con su vestido de quinceañera al atardecer",
+      "width": 1086,
+      "height": 1448
+    }
+  ],
   "gifts": [
     {
       "title": "Lluvia de sobres",
@@ -56,6 +63,16 @@ export const sandraCristinaXv = {
     "label": "Quinceañera · Timbiriche"
   },
   "itinerary": [],
+  "family": {
+    "parents": [
+      "José Pilar Álvarez Ángeles",
+      "Sandra Amelia Aldaba Piedra"
+    ],
+    "godparents": [
+      "Kuquis Jiménez Piedra",
+      "Sergio Salazar Martínez"
+    ]
+  },
   "theme": {
     "primary": "#3c6493",
     "dark": "#263e60",
