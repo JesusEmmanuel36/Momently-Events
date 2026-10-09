@@ -489,7 +489,7 @@ CAROLINA Y PAVEL
 Ruta: /eventos/carolina-y-pavel
 27 de febrero de 2027. La Carreta Eventos, Cielo, 45220, Zapopan, Jalisco. Inicio 5:00 p. m., civil 5:30 p. m., recepción 7:00 p. m.
 Confirmación obligatoria: hasta el 20 de diciembre de 2026. RSVP normal. Sin niños.
-Pendiente: correo del panel, WhatsApp y música.
+Audio: /audio/carolinaypavel.mp3. Mesa de regalos de Amazon y dos enlaces de hospedaje. Pendiente: correo del panel y WhatsApp.
 npm run provision-event -- carolina-y-pavel CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 
 LILIANA 53 AÑOS

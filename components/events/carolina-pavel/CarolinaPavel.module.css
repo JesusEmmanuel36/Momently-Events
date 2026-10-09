@@ -63,3 +63,5 @@
 .bankDetails dt {margin-top:1rem;}
 .bankDetails button {margin-top:1rem;}
 @media(max-width:600px){.accountGrid{grid-template-columns:1fr;}.invitation .letter{height:70%;}.invitation .letter > .letterLogo{width:55px!important;height:30px!important;}.swatches{gap:.7rem;}.swatches i{width:42px;height:42px;}.invitation .heroCopy h1{font-size:clamp(3rem,12vw,4rem)!important;}}
+
+.lodgingLinks {display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}

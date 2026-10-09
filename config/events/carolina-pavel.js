@@ -30,7 +30,7 @@ export const carolinaPavel = {
     "time": "5:30 p. m.",
     "address": "Cielo, calle sin nombre, C. P. 45220, Zapopan, Jalisco",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Carreta%20Eventos%20Cielo%2045220%20Zapopan%20Jalisco",
-    "image": "/images/events/carolina-y-pavel/floral.png"
+    "image": "/images/events/carolina-y-pavel/western.png"
   },
   "reception": {
     "enabled": false,
@@ -38,7 +38,7 @@ export const carolinaPavel = {
     "time": "7:00 p. m.",
     "address": "Cielo, calle sin nombre, C. P. 45220, Zapopan, Jalisco",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Carreta%20Eventos%20Cielo%2045220%20Zapopan%20Jalisco",
-    "image": "/images/events/carolina-y-pavel/floral.png"
+    "image": "/images/events/carolina-y-pavel/western.png"
   },
   "gallery": [
     {
@@ -98,8 +98,8 @@ export const carolinaPavel = {
   ],
   "contact": {},
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/carolinaypavel.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [
@@ -174,7 +174,9 @@ export const carolinaPavel = {
     "title": "Celebración solo para adultos",
     "text": "Aunque queremos mucho a los pequeños, esta celebración ha sido planeada exclusivamente para adultos. Gracias por comprender y respetar nuestra decisión."
   },
+  "registryUrl": "https://www.amazon.com.mx/wedding/guest-view/35J08KMHEIZIR",
   "lodging": {
+    "additionalUrl": "https://www.airbnb.mx/rooms/1713116404445594973?unique_share_id=5e413825-c53d-40cf-80d7-7e760754412f&viralityEntryPoint=1&s=76",
     "title": "Quédate cerca",
     "text": "Sabemos que el lugar está un poco retirado. Para tu comodidad, te compartimos algunas opciones de Airbnb cercanas. Hay pocas opciones disponibles; te sugerimos reservar con anticipación.",
     "url": "https://www.airbnb.com/l/b4Yp4JNZ"
