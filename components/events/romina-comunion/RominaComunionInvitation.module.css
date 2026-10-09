@@ -30,6 +30,7 @@
 .invitation .heroCopyCentered h1 { color:var(--dark)!important; text-shadow:0 2px 8px #fff9f3; }
 .invitation .heroCopyCentered > span { display:block; color:var(--dark); font-size:clamp(1.1rem,3.8vw,1.8rem); line-height:1.4; letter-spacing:.12em; }
 .invitation .heroCopyCentered > p { color:var(--coffee-dark); }
+.communionCross { display:block; width:clamp(3rem,9vw,4.5rem); height:auto; margin:0 auto .8rem; color:var(--coffee); filter:drop-shadow(0 2px 3px #fff9f3); }
 .invitation .heroShade { background:linear-gradient(180deg,#fff9f333,transparent 60%)!important; }
 .invitation .openEnvelope { width:124%!important; height:124%!important; left:-12%!important; top:-29%!important; }
 .invitation :global(.envelope__asset--open-front) { clip-path:polygon(0 44%,100% 44%,100% 100%,0 100%); }
