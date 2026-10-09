@@ -1,0 +1,13 @@
+Modo: herramienta integrada imagegen.
+Paleta: espresso #2B1C14, café #6B4A32, camel #C5A57A, marfil #FFFAF1 y dorado antiguo #B58A45.
+
+envelope-closed.png
+Use case: product mockup. Photorealistic 3D wedding envelope for Xóchitl and Rubén, front-facing orthographic closed horizontal rectangular envelope. Vintage elegant cinematic style inspired by classic 1940s Italian formal drama, without using any copyrighted characters, logos, titles, or recognizable film imagery. Deep espresso brown textured paper, warm camel brown panels, antique gold fine edging, ivory satin ribbon. Round antique-gold wax seal exactly centered and clearly engraved “X & R”. Refined ivory roses, dried cappuccino roses, dark olive leaves and subtle golden botanical accents at two corners. True transparent background, isolated cutout, generous margins, landscape 3:2. No words except the monogram, no hands, no table, no backdrop.
+
+envelope-open.png
+Use case: product mockup. Photorealistic open wedding envelope for Xóchitl and Rubén, straight-on front view on a square canvas with ample room for the raised triangular flap. Vintage elegant cinematic style inspired by classic 1940s Italian formal drama, without copyrighted characters, logos, titles, or recognizable film imagery. Deep espresso brown textured paper, camel brown and warm ivory interior, antique gold edging, ivory satin ribbon, refined ivory and cappuccino roses with dark olive leaves. Empty interior, no invitation card, no seal, no monogram, no text. True transparent background, isolated cutout, centered and symmetrical, full envelope visible without cropping or distortion.
+
+floral.png
+Use case: decorative asset. Elegant photorealistic horizontal floral arrangement for a vintage wedding invitation: ivory garden roses, cappuccino roses, dried beige hydrangea, dark olive eucalyptus, deep brown leaves and delicate antique-gold botanical branches. Sophisticated classic 1940s cinematic mood, restrained and luxurious, detailed realistic petals. True transparent background, isolated cutout with generous padding, landscape 3:2. No vase, no fabric, no text, no scene, no backdrop.
+
+Las fotografías originales se conservaron intactas. Las copias portada.png y recuerdo-1.png a recuerdo-3.png eliminan exclusivamente las barras negras, fechas y controles de la galería del teléfono.
