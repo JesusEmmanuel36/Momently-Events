@@ -13,6 +13,8 @@ export const fabiolaDaniel = {
   "date": "2026-12-26T13:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
+  "rsvpEnabled": false,
+  "godparents": ["Rigoberto Morales Rivera", "Ibett Villarreal San Juan"],
   "dateStamp": "26 · 12 · 2026",
   "dateDisplay": "Sábado · 26 de diciembre · 2026",
   "timelineDate": "26 de diciembre",

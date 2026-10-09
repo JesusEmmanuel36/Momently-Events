@@ -20,3 +20,6 @@
 .bankDetails button { padding:.45rem .85rem; border:1px solid var(--olive); border-radius:5px; background:var(--ivory); color:var(--dark); cursor:pointer; }
 
 .invitation .fullNames { font-size:clamp(1.6rem,5vw,3rem); line-height:1.35; overflow-wrap:anywhere; }
+
+.godparents > div {position:relative;max-width:650px;margin:2rem auto 0;}
+.godparents > div p {font-family:var(--font-serif),serif;font-size:clamp(1.35rem,4vw,2rem);line-height:1.6;color:var(--dark);margin:.5rem 0;}
