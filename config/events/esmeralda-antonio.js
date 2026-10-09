@@ -92,15 +92,15 @@ export const esmeraldaAntonio = {
       {
         "title": "Papás de la novia",
         "names": [
-          "Josefina Jiménez Mata",
-          "Pedro Gómez Estrada"
+          "† Josefina Jiménez Mata",
+          "† Pedro Gómez Estrada"
         ]
       },
       {
         "title": "Papás del novio",
         "names": [
-          "María Luisa Tavira Cruz",
-          "Ricardo Márquez Salvatierra"
+          "† María Luisa Tavira Cruz",
+          "† Ricardo Márquez Salvatierra"
         ]
       }
     ]
