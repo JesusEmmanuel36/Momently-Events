@@ -1,14 +1,14 @@
-export const mayraHector = {
-  "slug": "mayra-y-hector",
-  "templateKey": "mayra-hector-sage",
-  "eventTitle": "Boda de Mayra y Héctor",
+export const mayraHugo = {
+  "slug": "mayra-y-hugo",
+  "templateKey": "mayra-hugo-sage",
+  "eventTitle": "Boda de Mayra y Hugo",
   "couple": {
     "partner1": "Mayra Karina Lara Reyna",
-    "partner2": "Héctor"
+    "partner2": "José Hugo Aburto Hernández"
   },
   "displayNames": {
     "partner1": "Mayra",
-    "partner2": "Héctor"
+    "partner2": "Hugo"
   },
   "date": "2027-03-13T12:00:00-06:00",
   "timezone": "America/Mexico_City",
@@ -24,16 +24,16 @@ export const mayraHector = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Hay encuentros que florecen para toda la vida. El nuestro nos trajo hasta aquí.",
-    "image": "/images/events/mayra-y-hector/portada.png"
+    "image": "/images/events/mayra-y-hugo/portada.png"
   },
-  "closingImage": "/images/events/mayra-y-hector/image.png",
+  "closingImage": "/images/events/mayra-y-hugo/image.png",
   "ceremony": {
     "enabled": true,
     "name": "Templo Expiatorio del Sagrado Corazón de Jesús",
     "time": "12:00 p. m.",
     "address": "",
     "mapsUrl": "https://share.google/LJeazRJ3nVo45Y5GD",
-    "image": "/images/events/mayra-y-hector/iglesia.png"
+    "image": "/images/events/mayra-y-hugo/iglesia.png"
   },
   "reception": {
     "enabled": true,
@@ -41,7 +41,7 @@ export const mayraHector = {
     "time": "2:30 p. m.",
     "address": "",
     "mapsUrl": "https://share.google/mslMjxKHyi4DPWxM2",
-    "image": "/images/events/mayra-y-hector/salon.png"
+    "image": "/images/events/mayra-y-hugo/salon.png"
   },
   "gallery": [],
   "gifts": [
@@ -55,7 +55,7 @@ export const mayraHector = {
   },
   "music": {
     "enabled": true,
-    "url": "/audio/mayra-y-hector.mp3",
+    "url": "/audio/mayra-y-hugo.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [

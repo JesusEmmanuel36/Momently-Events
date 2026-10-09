@@ -5,13 +5,13 @@ import { Check, Church, Hotel, Gift, Gem, CalendarDays, ChevronDown, ChevronLeft
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
-import customStyles from "./MayraHector.module.css";
+import customStyles from "./MayraHugo.module.css";
 import { openGoogleCalendar } from "@/lib/calendar";
 
 const defaultAssets = {
-  floral: "/images/events/mayra-y-hector/floral.png",
-  envelopeClosed: "/images/events/mayra-y-hector/envelope-closed-mh.png",
-  envelopeOpen: "/images/events/mayra-y-hector/envelope-open-v2.png",
+  floral: "/images/events/mayra-y-hugo/floral.png",
+  envelopeClosed: "/images/events/mayra-y-hugo/envelope-closed-mh.png",
+  envelopeOpen: "/images/events/mayra-y-hugo/envelope-open-v2.png",
 };
 const defaultTheme = {
   "--coral": "#b7654d", "--peach": "#df9a7e", "--olive": "#73785e", "--dark": "#432d27",
@@ -32,7 +32,7 @@ function displayTime(value) {
   return [`${hours % 12 || 12}:${String(minutes).padStart(2, "0")}`, hours >= 12 ? "p. m." : "a. m."];
 }
 
-export function MayraHectorTemplate({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
+export function MayraHugoTemplate({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
   const floral = assets.floral;
   const envelopeClosed = assets.envelopeClosed;
   const envelopeOpen = assets.envelopeOpen;
@@ -136,7 +136,7 @@ export function MayraHectorTemplate({ wedding, assets = defaultAssets, customThe
   return <div className={`${styles.wedding} ${customStyles.invitation}`} style={theme}>
     {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}>
-      <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Boda de Mayra y Héctor" /></div><div className={styles.introShade} />
+      <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Boda de Mayra y Hugo" /></div><div className={styles.introShade} />
       <div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
         <div className={`${styles.letter} ${customStyles.letter}`}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2 className={`${localStyles.letterName} ${nameClassName}`}>{wedding.displayNames.partner1} <i>&</i> {wedding.displayNames.partner2}</h2><small>{wedding.dateStamp}</small></div>
@@ -148,12 +148,12 @@ export function MayraHectorTemplate({ wedding, assets = defaultAssets, customThe
     </div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>
-      <section className={`${styles.hero} ${customStyles.hero} ${heroFramed ? localStyles.heroFramed : ""}`}><Image className={`${localStyles.heroImage} ${customStyles.heroImage}`} src={wedding.hero.image} fill priority sizes="100vw" alt="Boda de Mayra y Héctor" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopy} ${customStyles.heroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={`${localStyles.heroName} ${nameClassName}`}><b>{wedding.displayNames.partner1}</b><i>&</i><b>{wedding.displayNames.partner2}</b></h1><p>{wedding.dateDisplay}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
+      <section className={`${styles.hero} ${customStyles.hero} ${heroFramed ? localStyles.heroFramed : ""}`}><Image className={`${localStyles.heroImage} ${customStyles.heroImage}`} src={wedding.hero.image} fill priority sizes="100vw" alt="Boda de Mayra y Hugo" /><div className={styles.heroShade} /><Image className={styles.heroFlower} src={floral} width={700} height={470} alt="" aria-hidden="true" /><div className={`${styles.heroCopy} ${localStyles.heroCopy} ${customStyles.heroCopy}`}><span>{wedding.hero.subtitle}</span><h1 className={`${localStyles.heroName} ${nameClassName}`}><b>{wedding.displayNames.partner1}</b><i>&</i><b>{wedding.displayNames.partner2}</b></h1><p>{wedding.dateDisplay}</p></div><a href="#bienvenida" aria-label="Continuar"><ChevronDown /></a></section>
 
       <section className={styles.welcome} id="bienvenida" data-je-reveal><h2>{wedding.hero.quote}</h2><span>Nosotros</span><div className={`${styles.signature} ${customStyles.fullNames}`}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</div><p>Nos encantará compartir contigo este día tan especial.</p></section>
 
-      <section className={customStyles.vineyard} data-je-reveal><div><span>Donde comenzó todo</span><h2>Entre viñedos, nos encontramos</h2><p>En un viñedo comenzó nuestra historia. Hoy, con ese recuerdo en el corazón, elegimos seguir creciendo juntos.</p></div><div className={customStyles.vineyardPhotos}><Image src="/images/events/mayra-y-hector/image.png" width={1280} height={960} sizes="(max-width:800px) 90vw,50vw" alt="Mayra y Héctor juntos en el viñedo"/><Image src="/images/events/mayra-y-hector/viñedo.png" width={1280} height={960} sizes="(max-width:800px) 90vw,50vw" alt="El viñedo donde se conocieron"/></div></section>
-      {wedding.featuredPhoto && <section className={customStyles.featuredPhoto} data-je-reveal aria-label="Un recuerdo de Mayra y Héctor"><Image src={wedding.featuredPhoto.src} width={wedding.featuredPhoto.width} height={wedding.featuredPhoto.height} sizes="(max-width: 800px) 90vw, 800px" alt={wedding.featuredPhoto.alt} /></section>}
+      <section className={customStyles.vineyard} data-je-reveal><div><span>Donde comenzó todo</span><h2>Entre viñedos, nos encontramos</h2><p>En un viñedo comenzó nuestra historia. Hoy, con ese recuerdo en el corazón, elegimos seguir creciendo juntos.</p></div><div className={customStyles.vineyardPhotos}><Image src="/images/events/mayra-y-hugo/image.png" width={1280} height={960} sizes="(max-width:800px) 90vw,50vw" alt="Mayra y Hugo juntos en el viñedo"/><Image src="/images/events/mayra-y-hugo/viñedo.png" width={1280} height={960} sizes="(max-width:800px) 90vw,50vw" alt="El viñedo donde se conocieron"/></div></section>
+      {wedding.featuredPhoto && <section className={customStyles.featuredPhoto} data-je-reveal aria-label="Un recuerdo de Mayra y Hugo"><Image src={wedding.featuredPhoto.src} width={wedding.featuredPhoto.width} height={wedding.featuredPhoto.height} sizes="(max-width: 800px) 90vw, 800px" alt={wedding.featuredPhoto.alt} /></section>}
 
       {wedding.thought && <section className={localStyles.thought} data-je-reveal><Image src={floral} width={680} height={453} alt="" aria-hidden="true" /><span>Un pensamiento de amor</span><blockquote>{wedding.thought.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</blockquote><div>{wedding.couple.partner1.slice(0, 1)} <i>&</i> {wedding.couple.partner2.slice(0, 1)}</div></section>}
 
@@ -183,7 +183,7 @@ export function MayraHectorTemplate({ wedding, assets = defaultAssets, customThe
 
       <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Nos acompañas?</h2><p>{wedding.rsvpDeadlineDisplay ? `Por favor confirma tu asistencia antes del ${wedding.rsvpDeadlineDisplay}.` : "Confirma tu asistencia para acompañarnos en este día tan especial."}</p>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {contact.phone}</a>)}<div>{wedding.couple.partner1.slice(0, 1)} <i>&</i> {wedding.couple.partner2.slice(0, 1)}</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibimos tu respuesta. Nos dará mucha alegría compartir este día contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" minLength={2} maxLength={100} required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Número de acompañantes<input name="companions" type="number" min="0" max={wedding.maxCompanions} defaultValue="0" required/><small>Sin contarte a ti. Hasta {wedding.maxCompanions} acompañantes.</small></label><label>Comentarios o consideraciones<textarea name="notes" maxLength={500} rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para los novios<textarea name="message" maxLength={1000} rows="4" placeholder="Déjanos unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
 
-      <section className={styles.closing} data-je-reveal><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt="Boda de Mayra y Héctor" /><div /><Heart /><span>Te esperamos con mucho cariño</span><h2>Un día para recordar.</h2><p className={customStyles.closingMessage}>Gracias por acompañarnos y compartir la alegría de este día tan especial.</p><p className={customStyles.fullNames}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
+      <section className={styles.closing} data-je-reveal><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt="Boda de Mayra y Hugo" /><div /><Heart /><span>Te esperamos con mucho cariño</span><h2>Un día para recordar.</h2><p className={customStyles.closingMessage}>Gracias por acompañarnos y compartir la alegría de este día tan especial.</p><p className={customStyles.fullNames}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
 
     {activePhoto !== null && wedding.gallery[activePhoto] && <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label={`Galería de ${names}`}><button className={styles.lightboxClose} onClick={() => setActivePhoto(null)} aria-label="Cerrar"><X /></button><button className={styles.lightboxPrevious} onClick={() => setActivePhoto((activePhoto - 1 + wedding.gallery.length) % wedding.gallery.length)} aria-label="Fotografía anterior"><ChevronLeft /></button><div className={styles.lightboxImage}><Image src={wedding.gallery[activePhoto].src} fill sizes="100vw" alt={wedding.gallery[activePhoto].alt} /></div><button className={styles.lightboxNext} onClick={() => setActivePhoto((activePhoto + 1) % wedding.gallery.length)} aria-label="Fotografía siguiente"><ChevronRight /></button><span>{activePhoto + 1} / {wedding.gallery.length}</span></div>}
