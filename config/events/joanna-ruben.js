@@ -43,8 +43,8 @@ export const joannaRuben = {
   "gifts": [],
   "contact": {},
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/joannayruben.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [
