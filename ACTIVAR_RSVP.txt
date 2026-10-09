@@ -546,3 +546,7 @@ WhatsApp: 9992727227. Música: /audio/rolandoygaby.mp3.
 Paleta café, champaña y marfil, como la plantilla principal. RSVP normal; sin pases personalizados ni fotos con QR.
 Para activar el panel cuando se tenga el correo del cliente:
 npm run provision-event -- roli-y-gaby CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Mayra y José: /eventos/mayra-y-jose
+RSVP con hasta 5 acompañantes y fecha límite 20 de febrero de 2027.
+npm run provision-event -- mayra-y-jose CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

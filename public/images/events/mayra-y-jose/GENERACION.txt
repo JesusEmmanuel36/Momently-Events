@@ -1,0 +1,10 @@
+Modo: image_gen integrado. PNG originales con transparencia preservada.
+
+Sobre cerrado:
+Use case: product-mockup. Wedding invitation asset, horizontal 1536x1024. Photorealistic elegant closed sage green paper envelope viewed straight top-down, centered wide rectangle with generous transparent margins. Muted sage #9baa94 cotton paper, ivory satin ribbon, small champagne gold wax seal centered at 54% height with deeply engraved exact initials "M & J". Delicate ivory magnolias and sage eucalyptus in two corners. Premium tactile 3D paper, soft natural shadows. Entire outside genuinely transparent; no background, no other text, no watermark.
+
+Arreglo floral:
+Use case: photorealistic-natural. Transparent wedding floral decoration, horizontal 1536x1024. Elegant airy diagonal arrangement of white magnolia blossoms, ivory garden roses, muted sage eucalyptus and subtle fine champagne gold branches. Mostly sage green #9baa94 with ivory petals. Fine realistic details and soft light. Genuine transparent background, no vase, no text, no border or watermark. Sparse gracefully curved composition suitable for corner decoration.
+
+Sobre abierto (edición del cerrado):
+Use case: precise-object-edit. Edit target: supplied sage-green wedding envelope. Make matching OPEN envelope for invitation animation. Keep same horizontal canvas 1536x1024, same muted sage cotton paper, ivory magnolia flowers at top left and bottom right, champagne ribbon, soft lighting and frontal top-down perspective. Envelope body must remain same physical width, open triangular upper flap points upwards; empty interior ready for separate HTML letter. Remove wax seal as it has been broken, part ribbon gently but keep delicate ribbon details. No letter, no text, no hands. Genuine transparent background and generous margins around the whole open flap. Sharp photorealistic tactile 3D paper. Keep main body rectangular, do not make it wider than original.
