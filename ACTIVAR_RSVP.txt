@@ -527,7 +527,14 @@ npm run provision-event -- xv-sandra-cristina CORREO_DEL_CLIENTE https://momentl
 
 JOANNA Y RUBÉN — BODA CIVIL
 Ruta: /eventos/joanna-y-ruben
-16 de enero de 2027. Salón Las Orquídeas: recepción 5:40 p. m., ceremonia civil 6:00 p. m.
+16 de enero de 2027. Salón Las Orquídeas: recepción 5:30 p. m., ceremonia civil 6:00 p. m., cena 7:00 p. m. y primer baile 9:00 p. m. RSVP sin alergias, con sugerencia de canción y artista visible en su panel.
 Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.
 Sin fotos ni música. Portada decorativa generada. RSVP normal. Sin WhatsApp por ahora. Pendiente: correo del panel.
 npm run provision-event -- joanna-y-ruben CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Sarai y Rubén — boda civil
+Ruta: /eventos/sarai-y-ruben
+16 de enero, año pendiente de confirmar. Cortijo Sevilla, Calle Nieto #825C, Fracc. Modelo, Aguascalientes, Ags. 2:00 p. m.
+Vestimenta formal. Mesa de regalos Liverpool: número y enlace pendientes. Sin música. WhatsApp pendiente de aclarar.
+El panel requiere confirmar el año y proporcionar el correo del cliente antes de activarlo.
+npm run provision-event -- sarai-y-ruben CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

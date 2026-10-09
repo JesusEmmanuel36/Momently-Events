@@ -10,7 +10,7 @@ export const joannaRuben = {
     "partner1": "Joanna",
     "partner2": "Rubén"
   },
-  "date": "2027-01-16T17:40:00-06:00",
+  "date": "2027-01-16T17:30:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "rsvpEnabled": true,
@@ -28,15 +28,15 @@ export const joannaRuben = {
     "name": "Salón Las Orquídeas",
     "time": "6:00 p. m.",
     "address": "Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/aSu2jQ1pFyZc4spg7",
     "image": "/images/events/joanna-y-ruben/floral.png"
   },
   "reception": {
     "enabled": false,
     "name": "Salón Las Orquídeas",
-    "time": "5:40 p. m.",
+    "time": "5:30 p. m.",
     "address": "Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/aSu2jQ1pFyZc4spg7",
     "image": "/images/events/joanna-y-ruben/floral.png"
   },
   "gallery": [],
@@ -47,12 +47,35 @@ export const joannaRuben = {
     "url": "",
     "label": "Nuestra canción"
   },
-  "itinerary": [],
+  "itinerary": [
+    {
+      "time": "17:30",
+      "title": "Recepción de invitados",
+      "description": ""
+    },
+    {
+      "time": "18:00",
+      "title": "Ceremonia civil",
+      "description": ""
+    },
+    {
+      "time": "19:00",
+      "title": "Cena",
+      "description": ""
+    },
+    {
+      "time": "21:00",
+      "title": "Primer baile",
+      "description": ""
+    }
+  ],
   "theme": {
     "primary": "#792b40",
     "dark": "#462330",
     "champagne": "#e4d3b4",
     "cream": "#fffaf6",
     "ivory": "#f3e6e3"
-  }
+  },
+  "askAllergies": false,
+  "askSongSuggestion": true
 };

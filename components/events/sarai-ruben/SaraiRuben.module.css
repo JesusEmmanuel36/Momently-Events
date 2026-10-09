@@ -61,8 +61,17 @@
 .invitation .letter {width:66%;left:17%;}
 .invitation button[class*="sealAction"] {left:50%;top:58.8%;}
 
-/* A more legible script, applied only to Joanna and Rubén. */
-.invitation .heroCopy h1 {font-size:clamp(3.6rem,12vw,7rem)!important;line-height:1.05;}
-.invitation .heroCopy h1 i {line-height:1.1;}
-.invitation .letter h2 {line-height:1.1!important;}
-.invitation .fullNames {line-height:1.5;}
+/* Photo cover and champagne palette scoped to this invitation. */
+.invitation .hero {background:#4b3e2e;}
+.invitation .heroImage {object-fit:cover;object-position:center 32%;}
+.invitation .heroCopy {align-self:end;padding-top:0!important;padding-bottom:4rem!important;}
+.invitation .heroCopy h1 {font-size:clamp(3.4rem,11vw,6.5rem)!important;}
+.invitation .hero > div:first-of-type {background:linear-gradient(180deg,transparent 30%,#30271e66 68%,#30271eb3);}
+.invitation .venueArtwork {background:linear-gradient(135deg,#fffaf6,#f3eadc);}
+.invitation button[class*="openLabel"] {background:#fffaf6;color:#4b3e2e;}
+.invitation .celebrationTimes {grid-template-columns:1fr;}
+.registryName {display:block;color:var(--dark);margin:1.5rem auto 0;font-family:var(--font-serif),serif;font-size:1.5rem;}
+.invitation .letter {width:62%;left:19%;}
+.invitation .openEnvelope {width:105.8%!important;height:132%!important;inset:-41.2% auto auto -2.9%!important;object-fit:fill;}
+.invitation .openFront {clip-path:inset(67% 0 0 0);}
+.invitation button[class*="sealAction"] {left:50%;top:53%;}
