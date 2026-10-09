@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./PersonalizedPassManager.module.css";
 
-export function PersonalizedPassManager({ eventId, initialGuests }) {
+export function PersonalizedPassManager({ eventId, initialGuests, slug = "alejandra-y-david" }) {
   const router = useRouter();
   const [guests, setGuests] = useState(initialGuests);
   const [editing, setEditing] = useState(null);
@@ -12,7 +12,7 @@ export function PersonalizedPassManager({ eventId, initialGuests }) {
   const [notice, setNotice] = useState("");
   const [copiedLink, setCopiedLink] = useState("");
   const endpoint = `/api/panel/events/${eventId}/passes`;
-  const path = token => `/eventos/alejandra-y-david/pase/${token}`;
+  const path = token => `/eventos/${slug}/pase/${token}`;
   async function save(event) {
     event.preventDefault(); if (busy) return;
     const formElement = event.currentTarget;

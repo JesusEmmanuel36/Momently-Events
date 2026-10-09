@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { PersonalizedPass } from "@/components/events/alejandra-david/passes/PersonalizedPass";
+import { GuestPhotoGallery } from "@/components/events/caleb-ciriam/photos/GuestPhotoGallery";
+import { joannaRubenPhotos } from "@/lib/event-photos/config";
 import { JoannaSongForm } from "./JoannaSongForm";
-import { Check, Gem, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
+import { Camera, Download, Gift, Gem, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
@@ -33,7 +37,7 @@ function displayTime(value) {
   return [`${hours % 12 || 12}:${String(minutes).padStart(2, "0")}`, hours >= 12 ? "p. m." : "a. m."];
 }
 
-export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
+export function JoannaRubenTemplate({ wedding, pass, passToken, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
   const floral = assets.floral;
   const envelopeClosed = assets.envelopeClosed;
   const envelopeOpen = assets.envelopeOpen;
@@ -48,9 +52,6 @@ export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customThe
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
   const [activePhoto, setActivePhoto] = useState(null);
   const audioRef = useRef(null);
@@ -110,20 +111,6 @@ export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customThe
     if (playing) audioRef.current.pause();
     else audioRef.current.play().catch(() => notify("Agrega el archivo de la canción para reproducirla"));
   };
-  const submit = async (event) => {
-    event.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: Number(form.get("companions") || 0), menuPreference: "normal", allergies: "", message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    try {
-      const key = `momently:rsvp:${wedding.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? {} : await response.json();
-      if (!response.ok || result.ok !== true || !result.rsvpId || (!editing && !result.editToken)) throw new Error(result.error || "No fue posible enviar tu confirmación.");
-      if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload }));
-      else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
-  };
   const addCalendar = () => {
     if (!wedding.date) return;
     openGoogleCalendar({ title: `Boda de ${names}`, start: wedding.date, end: wedding.endDate, durationHours: 8, location: wedding.ceremony.address || wedding.ceremony.name, details: wedding.hero.quote });
@@ -138,7 +125,7 @@ export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customThe
     {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}>
       <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Seda vino, rosas, orquídeas y anillos de boda, portada decorativa" /></div><div className={styles.introShade} />
-      <div className={styles.introTitle}><span>Nuestra boda civil</span><h1>Una invitación para ti</h1></div>
+      <div className={styles.introTitle}><span>Nuestra boda civil</span><h1>Una invitación para ti</h1>{pass && <div className={customStyles.passIntro}><strong>{pass.displayName}</strong><small>{pass.allowedSeats} {pass.allowedSeats === 1 ? "lugar reservado" : "lugares reservados"}</small></div>}</div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
         <div className={`${styles.letter} ${customStyles.letter}`}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda civil</span><h2 className={`${localStyles.letterName} ${nameClassName}`}>{wedding.displayNames.partner1} <i>&</i> {wedding.displayNames.partner2}</h2><small>{wedding.dateStamp || "16 · 01 · 2027"}</small></div>
         <Image className={`${styles.envelopeOpenBack} ${customStyles.openEnvelope}`} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre abierto de ${names}`} />
@@ -166,7 +153,7 @@ export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customThe
       {wedding.gallery.length > 0 && <section className={styles.photoGallery} data-je-reveal><span>Nuestros momentos</span><h2>Una historia en fotografías</h2><p>Recuerdos que nos trajeron hasta aquí.</p><div className={`${styles.photoGrid} ${customStyles.photoGrid}`}>{wedding.gallery.map((photo, index) => <button key={photo.src} style={{aspectRatio:`${photo.width}/${photo.height}`}} onClick={() => setActivePhoto(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={photo.src} fill sizes="(max-width: 600px) 50vw, 40vw" alt={photo.alt} /></button>)}</div></section>}
 
 
-      <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={wedding.ceremony.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral para la misa" /></div><article><Gem /><span>Nuestra ceremonia y celebración</span><h2>{wedding.ceremony.name}</h2><div className={customStyles.celebrationTimes}><div><small>Recepción</small><strong>{wedding.reception.time}</strong></div><div><small>Ceremonia civil</small><strong>{wedding.ceremony.time}</strong></div></div><p>{wedding.ceremony.address}</p>{wedding.ceremony.mapsUrl && <a href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a>}</article></section>
+      <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={wedding.ceremony.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral para la misa" /></div><article><Gem /><span>Nuestra ceremonia y celebración se llevará a cabo en</span><h2>{wedding.ceremony.name}</h2><div className={customStyles.celebrationTimes}><div><small>Recepción</small><strong>{wedding.reception.time}</strong></div><div><small>Ceremonia civil</small><strong>{wedding.ceremony.time}</strong></div></div><p>{wedding.ceremony.address}</p>{wedding.ceremony.mapsUrl && <a href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a>}</article></section>
 
       {wedding.reception.enabled && <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={wedding.reception.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral para la recepción" /></div><article><Sparkles /><span>Recepción</span><h2>{wedding.reception.name}</h2>{wedding.reception.time && <strong>{wedding.reception.time}</strong>}{wedding.reception.address && <p>{wedding.reception.address}</p>}{wedding.reception.mapsUrl && <a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a>}</article></section>}
 
@@ -175,13 +162,16 @@ export function JoannaRubenTemplate({ wedding, assets = defaultAssets, customThe
       {wedding.nextDayEvent && <section className={localStyles.nextDay} data-je-reveal><Image src={floral} width={760} height={507} alt="" aria-hidden="true" /><span>La celebración continúa</span><h2>{wedding.nextDayEvent.title}</h2><strong>{wedding.nextDayEvent.date}</strong><p>A partir de las {wedding.nextDayEvent.time}</p><small>{wedding.nextDayEvent.place}</small><a href={wedding.nextDayEvent.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin /></a></section>}
 
       {wedding.dressCode && <section className={styles.dress} data-je-reveal><span>Código de vestimenta</span><h2>{wedding.dressCode.title}</h2><p>{wedding.dressCode.text}</p></section>}
-      {wedding.gifts?.length > 0 && <section className={styles.gifts} data-je-reveal><Heart /><span>Un detalle con cariño</span><h2>Tu presencia es nuestro mejor regalo</h2><p>{wedding.gifts[0].description}</p>{wedding.bank?.enabled && <div className={customStyles.bankDetails}><h3>Datos para transferencia</h3><dl>{wedding.bank.bank && <div><dt>Banco</dt><dd>{wedding.bank.bank}</dd></div>}<div><dt>A nombre de</dt><dd>{wedding.bank.holder}</dd></div>{[["Cuenta", wedding.bank.account], ["CLABE", wedding.bank.clabe]].map(([label, value]) => <div key={label}><dt>{label}</dt><dd className={customStyles.bankNumber}>{value}</dd><button type="button" aria-label={`Copiar ${label}`} onClick={async () => { try { await navigator.clipboard.writeText(value); notify(`${label} copiada`); } catch { notify("No fue posible copiar. Puedes seleccionar el número."); } }}>Copiar</button></div>)}</dl></div>}</section>}
+      {wedding.gifts?.length > 0 && <section className={styles.gifts} data-je-reveal><Gift /><span>Un detalle con cariño</span><h2>Tu presencia es nuestro mejor regalo</h2><p>{wedding.gifts[0].description}</p>{wedding.bank?.enabled && <div className={customStyles.bankDetails}><h3>Datos para transferencia</h3><dl>{wedding.bank.bank && <div><dt>Banco</dt><dd>{wedding.bank.bank}</dd></div>}<div><dt>A nombre de</dt><dd>{wedding.bank.holder}</dd></div>{[["Cuenta", wedding.bank.account], ["CLABE", wedding.bank.clabe]].map(([label, value]) => <div key={label}><dt>{label}</dt><dd className={customStyles.bankNumber}>{value}</dd><button type="button" aria-label={`Copiar ${label}`} onClick={async () => { try { await navigator.clipboard.writeText(value); notify(`${label} copiada`); } catch { notify("No fue posible copiar. Puedes seleccionar el número."); } }}>Copiar</button></div>)}</dl></div>}</section>}
+
+      <section className={customStyles.guestPhotos} data-je-reveal><Camera aria-hidden="true" /><span>Recuerdos compartidos</span><h2>Nuestra boda, a través de tus ojos</h2><p>Nos encantará guardar las fotos que tomes en este día. Escanea el código o toca el botón para compartirlas con nosotros a partir del 16 de enero de 2027.</p><Image src="/eventos/joanna-y-ruben/fotos/qr" width={220} height={220} unoptimized alt="Código QR para subir fotos de la boda de Joanna y Rubén" /><div><Link href={joannaRubenPhotos.path}><Camera size={18} /> Subir fotos</Link><a href="/eventos/joanna-y-ruben/fotos/qr?download=1" download><Download size={18} /> Descargar QR</a></div><GuestPhotoGallery event={joannaRubenPhotos} /></section>
 
       <JoannaSongForm />
 
       <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{wedding.calendarDate || "16 de enero de 2026"}</h2><div className={styles.calendarActions}><button onClick={addCalendar} disabled={!wedding.date}>Agregar a mi calendario</button>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp {contact.phone}</a>)}</div></section>
 
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Nos acompañas?</h2><p>{wedding.rsvpDeadlineDisplay ? `Por favor confirma tu asistencia antes del ${wedding.rsvpDeadlineDisplay}.` : "Confirma tu asistencia para acompañarnos en este día tan especial."}</p>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {contact.phone}</a>)}<div>{wedding.couple.partner1.slice(0, 1)} <i>&</i> {wedding.couple.partner2.slice(0, 1)}</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibimos tu respuesta. Nos dará mucha alegría compartir este día contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" minLength={2} maxLength={100} required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Mensaje para los novios<textarea name="message" maxLength={1000} rows="4" placeholder="Déjanos unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
+      {pass ? <PersonalizedPass pass={pass} token={passToken} slug="joanna-y-ruben" /> : <section className={customStyles.generalPassNotice}><span>Tu pase personal</span><h2>Confirma con tu enlace personalizado</h2><p>Para confirmar tu asistencia, abre el pase que te enviamos con tu nombre y los lugares reservados. Si aún no lo tienes, solicítalo a los novios.</p></section>}
+
 
       <section className={styles.closing} data-je-reveal><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt="Seda vino, rosas, orquídeas y anillos de boda, portada decorativa" /><div /><Heart /><span>Te esperamos con mucho cariño</span><h2>Un día para recordar.</h2><p className={customStyles.closingMessage}>Este momento marca un antes y un después en nuestras vidas, y no imaginamos celebrarlo sin ti.</p><p className={customStyles.fullNames}>{wedding.couple.partner1} <i>&</i> {wedding.couple.partner2}</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>

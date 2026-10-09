@@ -527,7 +527,7 @@ npm run provision-event -- xv-sandra-cristina CORREO_DEL_CLIENTE https://momentl
 
 JOANNA Y RUBÉN — BODA CIVIL
 Ruta: /eventos/joanna-y-ruben
-16 de enero de 2027. Salón Las Orquídeas: recepción 5:30 p. m., ceremonia civil 6:00 p. m., cena 7:00 p. m. y primer baile 9:00 p. m. RSVP sin alergias. Música: /audio/joannayruben.mp3. Sección independiente para sugerir canción y artista; las recomendaciones aparecen en «Canciones sugeridas» de su panel y no cuentan como RSVP.
+16 de enero de 2027. Salón Las Orquídeas: recepción 5:30 p. m., ceremonia civil 6:00 p. m., cena 7:00 p. m. y primer baile 9:00 p. m. Confirmaciones mediante pases personalizados creados en «Invitados y pases», con nombre y total de lugares. Fotos con QR y galería; cargas habilitadas desde el 16 de enero de 2027, 00:00 h de México. Música: /audio/joannayruben.mp3. Sección independiente para sugerir canción y artista; las recomendaciones aparecen en «Canciones sugeridas» de su panel y no cuentan como RSVP.
 Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.
 Sin fotos ni música. Portada decorativa generada. RSVP normal. Sin WhatsApp por ahora. Pendiente: correo del panel.
 npm run provision-event -- joanna-y-ruben CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

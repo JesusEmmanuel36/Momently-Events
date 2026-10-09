@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="empty-state"><h1>Este pase no está disponible</h1><p>Revisa el enlace o solicita tu pase a los novios.</p><a href="/eventos/joanna-y-ruben">Ver invitación</a></main>;}

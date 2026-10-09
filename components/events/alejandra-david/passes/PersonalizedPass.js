@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./PersonalizedPass.module.css";
 
-export function PersonalizedPass({ pass, token }) {
+export function PersonalizedPass({ pass, token, slug = "alejandra-y-david" }) {
   const [attending, setAttending] = useState(pass.response?.attending || "yes");
   const [people, setPeople] = useState(pass.response?.totalPeople || pass.allowedSeats);
   const [message, setMessage] = useState(pass.response?.message || "");
@@ -13,7 +13,7 @@ export function PersonalizedPass({ pass, token }) {
     event.preventDefault(); if (busy) return;
     setBusy(true); setError("");
     try {
-      const response = await fetch(`/api/public/event-passes/alejandra-y-david/${token}`, {
+      const response = await fetch(`/api/public/event-passes/${slug}/${token}`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ attending, totalPeople: attending === "yes" ? Number(people) : 0, message }),
       });

@@ -40,7 +40,12 @@ export const joannaRuben = {
     "image": "/images/events/joanna-y-ruben/floral-cattleya.png"
   },
   "gallery": [],
-  "gifts": [],
+  "gifts": [
+    {
+      "title": "Tu presencia es nuestro mejor regalo",
+      "description": ""
+    }
+  ],
   "contact": {},
   "music": {
     "enabled": true,
@@ -50,23 +55,23 @@ export const joannaRuben = {
   "itinerary": [
     {
       "time": "17:30",
-      "title": "Recepción de invitados",
-      "description": ""
+      "title": "Recepción de invitados a partir de las",
+      "description": "Cóctel de bienvenida"
     },
     {
       "time": "18:00",
       "title": "Ceremonia civil",
-      "description": ""
+      "description": "Unimos nuestras vidas"
     },
     {
       "time": "19:00",
       "title": "Cena",
-      "description": ""
+      "description": "Disfrutemos juntos"
     },
     {
       "time": "21:00",
-      "title": "Primer baile",
-      "description": ""
+      "title": "Nuestro primer baile",
+      "description": "¡A celebrar!"
     }
   ],
   "theme": {
