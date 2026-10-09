@@ -63,7 +63,7 @@
 .invitation .heroShade {background:linear-gradient(180deg,#f1f6fc99,transparent 65%)!important;}
 .invitation .heroImage {object-fit:cover;object-position:center;}
 .invitation .age {color:#5378a3;text-shadow:0 1px 8px #fbfdff;}
-.invitation .letter {background:linear-gradient(145deg,#fbfdff,#eef4fa);}
+.invitation .letter {width:56%;left:22%;background:linear-gradient(145deg,#fbfdff,#eef4fa);}
 .invitation .letter::after {border-color:#ccd5e0;}
 .crownIcon {display:block;width:38px;height:38px;margin:0 auto 1.5rem;color:var(--coral);stroke-width:1.2;}
 .reservedColors {display:flex;justify-content:center;gap:2rem;margin:2rem auto 0;}
