@@ -9,7 +9,7 @@ import customStyles from "./JoannaRuben.module.css";
 import { openGoogleCalendar } from "@/lib/calendar";
 
 const defaultAssets = {
-  floral: "/images/events/joanna-y-ruben/floral-orquideas.png",
+  floral: "/images/events/joanna-y-ruben/floral-cattleya.png",
   envelopeClosed: "/images/events/joanna-y-ruben/envelope-closed.png",
   envelopeOpen: "/images/events/joanna-y-ruben/envelope-open.png",
 };
