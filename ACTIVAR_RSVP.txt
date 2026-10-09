@@ -501,6 +501,6 @@ npm run provision-event -- liliana-53 CORREO_DEL_CLIENTE https://momentlyevents.
 JIMENA JIMÉNEZ CRUZ — XV AÑOS
 Ruta: /eventos/xv-jimena-jimenez
 28 de noviembre de 2026. Misa: Parroquia San Juan Diego, 1:00 p. m.
-Recepción: Salón Pista, Av. Tecoloapan s/n, Col. San José del Jaral, Atizapán de Zaragoza, Estado de México. Hora pendiente.
-WhatsApp: 5643828871. RSVP normal. Sin música ni fotos personales por ahora. Pendiente: correo del panel.
+Recepción: Salón Pista, Av. Tecoloapan s/n, Col. San José del Jaral, Atizapán de Zaragoza, Estado de México. Hora: 3:00 p. m.
+WhatsApp: 5643828871. RSVP normal. Audio: /audio/lesly-marcelino-perfect.mp3. Sin fotos personales por ahora. Pendiente: correo del panel.
 npm run provision-event -- xv-jimena-jimenez CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

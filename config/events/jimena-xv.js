@@ -34,7 +34,7 @@ export const jimenaXv = {
   "reception": {
     "enabled": true,
     "name": "Salón Pista",
-    "time": "",
+    "time": "3:00 p. m.",
     "address": "Av. Tecoloapan, sin número, Col. San José del Jaral, Atizapán de Zaragoza, Estado de México.",
     "mapsUrl": "",
     "image": "/images/events/xv-jimena-jimenez/floral.png"
@@ -46,9 +46,9 @@ export const jimenaXv = {
     "whatsapp": "https://wa.me/525643828871"
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": "Mi canción"
+    "enabled": true,
+    "url": "/audio/lesly-marcelino-perfect.mp3",
+    "label": "Perfect · Ed Sheeran"
   },
   "itinerary": [],
   "theme": {

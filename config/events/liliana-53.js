@@ -13,7 +13,7 @@ export const liliana53 = {
   "date": "2026-11-28T15:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "dateStamp": "28 · 11 · 2026",
   "dateDisplay": "Sábado · 28 de noviembre · 2026",
   "calendarDate": "28 de noviembre de 2026",

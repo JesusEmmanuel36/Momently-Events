@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Check, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
+import { CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
@@ -47,9 +47,6 @@ export function Liliana53Template({ wedding, assets = defaultAssets, customTheme
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState("");
   const [activePhoto, setActivePhoto] = useState(null);
   const audioRef = useRef(null);
@@ -109,20 +106,6 @@ export function Liliana53Template({ wedding, assets = defaultAssets, customTheme
     if (playing) audioRef.current.pause();
     else audioRef.current.play().catch(() => notify("Agrega el archivo de la canción para reproducirla"));
   };
-  const submit = async (event) => {
-    event.preventDefault(); setError(""); setSaving(true);
-    const form = new FormData(event.currentTarget); const name = String(form.get("name") || "").trim();
-    const payload = { name, attending: form.get("attendance"), companions: Number(form.get("companions") || 0), menuPreference: "normal", allergies: String(form.get("notes") || ""), message: String(form.get("message") || ""), songTitle: "", artist: "", website: String(form.get("website") || "") };
-    try {
-      const key = `momently:rsvp:${wedding.slug}`; const stored = JSON.parse(localStorage.getItem(key) || "null"); const editing = Boolean(stored?.rsvpId && stored?.editToken);
-      const response = await fetch(`/api/public/weddings/${wedding.slug}/rsvp`, { method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json", ...(editing ? { "X-RSVP-Edit-Token": stored.editToken } : {}) }, body: JSON.stringify({ ...payload, ...(editing ? { rsvpId: stored.rsvpId } : {}) }) });
-      const result = response.status === 204 ? {} : await response.json();
-      if (!response.ok || result.ok !== true || !result.rsvpId || (!editing && !result.editToken)) throw new Error(result.error || "No fue posible enviar tu confirmación.");
-      if (result.rsvpId && result.editToken) localStorage.setItem(key, JSON.stringify({ rsvpId: result.rsvpId, editToken: result.editToken, data: payload }));
-      else if (stored) localStorage.setItem(key, JSON.stringify({ ...stored, data: payload }));
-      setSuccess(name.split(" ")[0]);
-    } catch (cause) { setError(cause.message); } finally { setSaving(false); }
-  };
   const addCalendar = () => {
     if (!wedding.date) return;
     openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, end: wedding.endDate, durationHours: 8, location: wedding.reception.address || wedding.reception.name, details: wedding.hero.quote });
@@ -175,7 +158,6 @@ export function Liliana53Template({ wedding, assets = defaultAssets, customTheme
 
       <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{wedding.calendarDate || "28 de noviembre de 2026"}</h2><div className={styles.calendarActions}><button onClick={addCalendar} disabled={!wedding.date}>Agregar a mi calendario</button>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp {contact.phone}</a>)}</div></section>
 
-      <section className={styles.rsvp} data-je-reveal><div className={styles.rsvpIntro}><span>R S V P</span><h2>¿Me acompañas?</h2><p>{wedding.rsvpDeadlineDisplay ? `Por favor confirma tu asistencia antes del ${wedding.rsvpDeadlineDisplay}.` : "Confirma tu asistencia para acompañarme en este día tan especial."}</p>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={contact.whatsapp} target="_blank" rel="noreferrer">Dudas por WhatsApp: {contact.phone}</a>)}<div>L</div></div>{success ? <div className={styles.success}><Check /><h3>¡Gracias, {success}!</h3><p>Recibí tu respuesta. Me dará mucha alegría compartir este día contigo.</p><button onClick={() => setSuccess("")}>Editar respuesta</button></div> : <form onSubmit={submit}><label>Nombre completo<input name="name" minLength={2} maxLength={100} required placeholder="Escribe tu nombre" /></label><fieldset><legend>¿Asistirás?</legend><label><input type="radio" name="attendance" value="yes" required /> Sí, ahí estaré</label><label><input type="radio" name="attendance" value="no" required /> No podré asistir</label></fieldset><label>Comentarios o consideraciones<textarea name="notes" maxLength={500} rows="3" placeholder="Alergias o algo que debamos saber" /></label><label>Mensaje para Liliana<textarea name="message" maxLength={1000} rows="4" placeholder="Déjame unas palabras…" /></label><label className={styles.honeypot}>Sitio web<input name="website" tabIndex="-1" autoComplete="off" /></label>{error && <p className={styles.formError}>{error}</p>}<button disabled={saving}>{saving ? "Enviando…" : "Confirmar asistencia"}</button></form>}</section>
 
       <section className={styles.closing} data-je-reveal><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt={`Celebración de ${names}`} /><div /><Heart /><span>Gracias por ser parte de</span><h2>mi historia.</h2><p className={customStyles.fullNames}>{wedding.couple.partner1}</p><button onClick={share}><Share2 /> Compartir invitación</button></section>
     </main>
