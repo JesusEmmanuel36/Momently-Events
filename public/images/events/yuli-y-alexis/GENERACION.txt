@@ -1,0 +1,10 @@
+Modo: herramienta integrada imagegen. Fondo transparente, alfa preservado.
+
+envelope-closed.png
+Photorealistic 3D luxury wedding invitation envelope, closed pointed triangular flap, straight frontal orthographic view, isolated true transparent background. Square canvas, envelope body horizontal centered, around 88% canvas width, body from 28% to 80% canvas height. Dusty steel blue #71899f textured handmade paper, deeper slate blue #456b86 satin ribbon, delicate white embossed botanical relief and refined silver-blue edging. Round champagne-silver wax seal precisely centered engraved monogram 'Y & A', beautifully readable. Premium romantic sophisticated product photography, soft dimensional light, generous transparent margins. No loose flowers, no scene, no hands, no other text, no tilt.
+
+envelope-open.png
+Edit target: produce the OPEN version of this exact wedding envelope. Preserve dusty steel-blue textured paper, slate-blue satin ribbon, white embossed botanical relief, silver edging, frontal orthographic view, same envelope body width and rectangular height. Raise triangular flap upwards exposing blue paper interior and empty opening. Remove wax seal entirely; no card or lettering. Keep envelope body bottom at same vertical position as original as much as possible; fit raised flap within canvas. One coherent realistic 3D object, generous transparent margins, actual transparent background, no scene no tilt no extra decorations.
+
+floral.png
+Premium photorealistic floral cutout for elegant blue wedding invitation. One asymmetrical diagonal corner arrangement of white garden roses, ivory peonies, dusty steel blue hydrangeas #71899f, deeper slate-blue small flowers #456b86, soft muted eucalyptus leaves and delicate pearl white branches. True transparent background, full bouquet inside canvas, airy refined edges, no vase no text no backdrop no checkerboard no paper, no gold or red flowers. Soft studio light, realistic botanical textures, landscape composition. For decorative corners and section artwork, elegant and romantic.

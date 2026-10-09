@@ -1,0 +1,56 @@
+.invitation .photoGrid { display:block; columns:3; column-gap:1rem; }
+.invitation .photoGrid button { display:block; width:100%; aspect-ratio:3/4; margin:0 0 1rem; break-inside:avoid; }
+.invitation .venueArtwork { background:linear-gradient(140deg,#f3f6f9,#dce7ef); }
+.invitation .venueArtwork img { object-fit:contain; padding:1.5rem; }
+@media(max-width:900px){.invitation .photoGrid{columns:2}}
+@media(max-width:600px){.invitation .photoGrid{columns:1;max-width:420px;margin-inline:auto}}
+
+.invitation .openEnvelope { width:100%!important; height:100%!important; max-width:none; inset:-16.6% auto auto 0!important; }
+.invitation .openFront { clip-path:inset(55% 0 0 0); }
+
+@media(max-width:600px){.invitation .letter{height:62%;bottom:18%;}.invitation .letter h2{font-size:clamp(1.65rem,6vw,2.1rem)!important;line-height:.9!important;margin:.4rem 0;}.invitation .letter small{font-size:.5rem;}}
+
+.bankDetails { width:min(100%,560px); margin:2rem auto 0; padding:1.5rem; border:1px solid var(--gold-soft); border-radius:12px; background:var(--paper); text-align:left; }
+.bankDetails h3 { font-family:var(--font-serif),serif; font-size:1.6rem; color:var(--dark); }
+.bankDetails dl { margin:0; }
+.bankDetails dl > div { margin-top:1rem; }
+.bankDetails dt { font-size:.8rem; color:var(--muted); }
+.bankDetails dd { margin:.35rem 0; color:var(--charcoal); overflow-wrap:anywhere; }
+.bankNumber { font-variant-numeric:tabular-nums; user-select:all; }
+.bankDetails button { padding:.45rem .85rem; border:1px solid var(--olive); border-radius:5px; background:var(--ivory); color:var(--dark); cursor:pointer; }
+
+.invitation .fullNames { font-size:clamp(1.6rem,5vw,3rem); line-height:1.35; overflow-wrap:anywhere; }
+
+.invitation .photoGrid {display:grid;columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;}
+.invitation .photoGrid button {margin:0;grid-column:auto!important;grid-row:auto!important;}
+.invitation .sealInitials {display:block;font-family:var(--font-serif),serif;font-size:clamp(.65rem,2.5vw,1.3rem);font-weight:600;color:#614016;text-shadow:0 1px 1px #f7d995;}
+
+.featuredPhoto {padding:0 1.5rem 3rem;background:var(--paper);}
+.featuredPhoto img {display:block;width:100%;max-width:800px;height:auto;margin:auto;border:1px solid var(--gold-soft);border-radius:12px;padding:.4rem;background:var(--ivory);box-shadow:0 8px 24px #61401615;}
+
+.invitation .photoGrid {grid-auto-rows:auto;}
+.giftPending {display:block;margin:1.5rem auto 0;color:var(--muted);max-width:450px;line-height:1.7;}
+
+.invitation .heroCopy {align-self:end;padding-bottom:6rem!important;}
+.invitation .heroCopy h1 {font-size:clamp(3.5rem,11vw,7rem)!important;color:var(--paper);text-shadow:0 2px 12px #21180ed9;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 6px #21180e;}
+
+.invitation .hero {background:linear-gradient(135deg,#71899f,#263e51);}
+.invitation .heroImage {object-fit:contain;object-position:center top;}
+.invitation .heroCopy h1,.invitation .heroCopy > span,.invitation .heroCopy > p {color:#ffffff;text-shadow:0 2px 12px #263e51;}
+.invitation .venueArtwork {background:linear-gradient(135deg,#ffffff,#eef3f7);}
+.invitation button[class*="openLabel"] {background:#ffffff;color:#456b86;text-shadow:none;}
+
+.invitation .heroCopy h1 {font-size:clamp(3.3rem,10vw,6.5rem)!important;}
+.invitation .fullNames i {display:block;}
+.invitation .heroImage {object-position:center 20%;}
+
+.invitation button[class*="sealAction"] {left:50%;top:57.5%;}
+
+.invitation .dressGroups {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:900px;margin:2.5rem auto 0;}
+.dressGroups article {padding:2rem 1rem;border:1px solid var(--gold-soft);border-radius:18px;background:var(--paper);}
+.dressGroups h3 {font-family:var(--font-serif),serif;font-size:1.8rem;color:var(--dark);margin:0 0 1rem;}
+.swatches {display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-top:1.5rem;}
+.swatches figure {margin:0;display:grid;justify-items:center;gap:.6rem;font-size:.72rem;color:var(--muted);}
+.swatches i {width:44px;height:44px;border-radius:50%;border:1px solid #263e5126;box-shadow:0 3px 7px #263e5120;}
+@media(max-width:600px){.invitation .dressGroups{grid-template-columns:1fr;}.invitation .heroImage {object-fit:cover;object-position:center 35%;}}

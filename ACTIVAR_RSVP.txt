@@ -511,3 +511,9 @@ Ruta: /eventos/jose-y-monserrat
 Recepción: Salón Monroy, Calle Nueva. Sin horario por solicitud.
 WhatsApp: 7152179259. Regalos libres. RSVP normal. Pendiente: audio y correo del panel.
 npm run provision-event -- jose-y-monserrat CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+YULI Y ALEXIS — BODA
+Ruta: /eventos/yuli-y-alexis
+7 de noviembre de 2026. Misa 5:30 p. m.; recepción 6:30 p. m.; civil 7:00 p. m.; cena de 8:00 a 10:00 p. m.
+Audio: /audio/yuli-y-alexis.mp3. RSVP normal con máximo 5 acompañantes. Pendiente: correo del panel.
+npm run provision-event -- yuli-y-alexis CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
