@@ -524,3 +524,10 @@ Ruta: /eventos/xv-sandra-cristina
 Azul y plata reservados. Lluvia de sobres. WhatsApp: 6751005974. RSVP normal. Sin botones de ubicación.
 Pendiente: fotos, archivo de Quinceañera de Timbiriche y correo del panel.
 npm run provision-event -- xv-sandra-cristina CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+JOANNA Y RUBÉN — BODA CIVIL
+Ruta: /eventos/joanna-y-ruben
+16 de enero de 2027. Salón Las Orquídeas: recepción 5:40 p. m., ceremonia civil 6:00 p. m.
+Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.
+Sin fotos ni música. Portada decorativa generada. RSVP normal. Sin WhatsApp por ahora. Pendiente: correo del panel.
+npm run provision-event -- joanna-y-ruben CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

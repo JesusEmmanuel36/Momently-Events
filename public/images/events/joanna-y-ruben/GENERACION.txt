@@ -1,0 +1,13 @@
+Modo: herramienta integrada imagegen. Portada decorativa RGB. Sobre y flores con fondo transparente, alfa preservado.
+
+envelope-closed.png
+Photorealistic premium 3D wedding invitation envelope on true transparent background. Closed horizontal rectangular envelope, pointed triangular flap, straight orthographic front view, centered in square canvas with generous clear margins, body about 88% canvas width and between 27% and 80% height. Deep burgundy wine textured paper #6f2439, satin burgundy ribbon, fine champagne metallic botanical embossing and gold edging. Round gold wax seal at exact envelope center engraved monogram 'J & R', clear readable letters, delicate botanical motif. Romantic elegant realistic studio product photography. No scene no hands no other text no loose flowers no perspective tilt.
+
+envelope-open.png
+Edit this exact closed burgundy envelope into its OPEN state. Preserve exact wine textured paper, burgundy satin ribbon, champagne gold embossed botanical relief and thin gold edging, same front orthographic view, same envelope rectangular body width and height. Raise triangular flap upward exposing empty burgundy paper interior, remove J & R wax seal entirely, no letter inserted. Keep envelope body bottom position as close as possible to original, leave enough transparent margin for raised flap. True transparent background, no colored backdrop no scene no hands no text no tilt. One realistic coherent premium 3D object, landscape 3:2 canvas.
+
+hero.png
+Vertical premium romantic wedding invitation cover artwork, photorealistic still life of deep burgundy wine satin draping with soft warm highlights, cream and wine roses along lower corners, a pair of elegant gold wedding rings near bottom center. Refined luxurious composition, champagne and warm ivory accents, dreamy soft light. Upper half calm spacious uncluttered deep wine fabric for overlay names, no text no people no portraits no dress no logo. Portrait 2:3 composition, full depth and detailed fabric.
+
+floral.png
+Photorealistic floral cutout, romantic diagonal corner arrangement of burgundy wine red garden roses, ivory peonies and cream roses, delicate muted eucalyptus, airy champagne gold botanical stems. True transparent background and generous transparent margins, whole arrangement in landscape canvas. Elegant luxurious wedding decoration, realistic petals, soft studio light. No vase no paper no scene no backdrop no checkerboard no text.
