@@ -1,0 +1,6 @@
+Modo: edición con herramienta integrada imagegen.
+Activos: floral-orquideas.png (alfa transparente conservado), hero-orquideas.png.
+
+Use case: precise-object-edit. Edit the supplied floral arrangement: add several clearly recognizable elegant ivory and pale champagne Phalaenopsis orchids with subtle burgundy throats, integrated among existing burgundy garden roses, ivory peonies, cream roses, eucalyptus and gold botanical stems. Preserve existing flowers, diagonal composition, realistic soft light, same landscape proportions and palette. Orchids should be prominent and distinct, not replace all roses. Preserve genuinely transparent background and clean alpha cutout, no vase, no scene, no text.
+
+Use case: precise-object-edit. Edit this exact portrait wedding cover: add prominent ivory and pale champagne Phalaenopsis orchid blossoms with delicate burgundy centers to both existing lower corner floral arrangements, alongside the roses. Keep the deep burgundy satin folds and lighting, gold wedding rings at bottom center, roses and gold foliage. Preserve quiet uncluttered upper half for overlay names. Same photorealistic luxury, portrait 2:3 framing and existing composition. No text, no people, no extra rings, no background replacement.

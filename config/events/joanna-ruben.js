@@ -20,16 +20,16 @@ export const joannaRuben = {
   "hero": {
     "subtitle": "Nuestra boda civil",
     "quote": "Porque juntos somos mejores, hemos decidido caminar de la mano para siempre.",
-    "image": "/images/events/joanna-y-ruben/hero.png"
+    "image": "/images/events/joanna-y-ruben/hero-orquideas.png"
   },
-  "closingImage": "/images/events/joanna-y-ruben/hero.png",
+  "closingImage": "/images/events/joanna-y-ruben/hero-orquideas.png",
   "ceremony": {
     "enabled": true,
     "name": "Salón Las Orquídeas",
     "time": "6:00 p. m.",
     "address": "Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.",
     "mapsUrl": "https://maps.app.goo.gl/aSu2jQ1pFyZc4spg7",
-    "image": "/images/events/joanna-y-ruben/floral.png"
+    "image": "/images/events/joanna-y-ruben/floral-orquideas.png"
   },
   "reception": {
     "enabled": false,
@@ -37,7 +37,7 @@ export const joannaRuben = {
     "time": "5:30 p. m.",
     "address": "Av. Soto y Gama y Poniente 12-B, Col. del Carmen, C.P. 56619, Valle de Chalco Solidaridad.",
     "mapsUrl": "https://maps.app.goo.gl/aSu2jQ1pFyZc4spg7",
-    "image": "/images/events/joanna-y-ruben/floral.png"
+    "image": "/images/events/joanna-y-ruben/floral-orquideas.png"
   },
   "gallery": [],
   "gifts": [],
