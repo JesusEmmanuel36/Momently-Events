@@ -1,0 +1,76 @@
+.invitation .photoGrid { display:block; columns:3; column-gap:1rem; }
+.invitation .photoGrid button { display:block; width:100%; aspect-ratio:3/4; margin:0 0 1rem; break-inside:avoid; }
+.invitation .venueArtwork { background:linear-gradient(140deg,#f1f6fc,#dce9f5); }
+.invitation .venueArtwork img { object-fit:contain; padding:1.5rem; }
+@media(max-width:900px){.invitation .photoGrid{columns:2}}
+@media(max-width:600px){.invitation .photoGrid{columns:1;max-width:420px;margin-inline:auto}}
+
+.invitation .openEnvelope { width:117.5%!important; height:117.5%!important; max-width:none; inset:-18.6% auto auto -8.75%!important; }
+.invitation .openFront { clip-path:inset(55% 0 0 0); }
+
+@media(max-width:600px){.invitation .letter{height:62%;bottom:18%;}.invitation .letter h2{font-size:clamp(1.65rem,6vw,2.1rem)!important;line-height:.9!important;margin:.4rem 0;}.invitation .letter small{font-size:.5rem;}}
+
+.bankDetails { width:min(100%,560px); margin:2rem auto 0; padding:1.5rem; border:1px solid var(--gold-soft); border-radius:12px; background:var(--paper); text-align:left; }
+.bankDetails h3 { font-family:var(--font-serif),serif; font-size:1.6rem; color:var(--dark); }
+.bankDetails dl { margin:0; }
+.bankDetails dl > div { margin-top:1rem; }
+.bankDetails dt { font-size:.8rem; color:var(--muted); }
+.bankDetails dd { margin:.35rem 0; color:var(--charcoal); overflow-wrap:anywhere; }
+.bankNumber { font-variant-numeric:tabular-nums; user-select:all; }
+.bankDetails button { padding:.45rem .85rem; border:1px solid var(--olive); border-radius:5px; background:var(--ivory); color:var(--dark); cursor:pointer; }
+
+.invitation .fullNames { font-size:clamp(1.6rem,5vw,3rem); line-height:1.35; overflow-wrap:anywhere; }
+
+.invitation .photoGrid {display:grid;columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;}
+.invitation .photoGrid button {margin:0;grid-column:auto!important;grid-row:auto!important;}
+.invitation .sealInitials {display:block;font-family:var(--font-serif),serif;font-size:clamp(.65rem,2.5vw,1.3rem);font-weight:600;color:#614016;text-shadow:0 1px 1px #f7d995;}
+
+.featuredPhoto {padding:0 1.5rem 3rem;background:var(--paper);}
+.featuredPhoto img {display:block;width:100%;max-width:800px;height:auto;margin:auto;border:1px solid var(--gold-soft);border-radius:12px;padding:.4rem;background:var(--ivory);box-shadow:0 8px 24px #61401615;}
+
+.invitation .photoGrid {grid-auto-rows:auto;}
+.giftPending {display:block;margin:1.5rem auto 0;color:var(--muted);max-width:450px;line-height:1.7;}
+
+.invitation .heroCopy {align-self:end;padding-bottom:6rem!important;}
+.invitation .heroCopy h1 {font-size:clamp(3.5rem,11vw,7rem)!important;color:var(--paper);text-shadow:0 2px 12px #21180ed9;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 6px #21180e;}
+
+.invitation .hero {background:linear-gradient(135deg,#a7c3df,#3c6493);}
+.invitation .heroImage {object-fit:cover;object-position:center 30%;}
+.invitation .heroCopy h1 {font-size:clamp(3.2rem,12vw,7rem)!important;line-height:1!important;color:var(--paper);text-shadow:0 2px 12px #48351b66;}
+.secondName {display:block;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 8px #48351b66;}
+.invitation .venueArtwork {background:linear-gradient(135deg,#fbfdff,#f2e9d9);}
+.optional {display:block;font-size:.8rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;}
+.invitation button[class*="openLabel"] {background:#fbfdff;color:#263e60;text-shadow:none;}
+
+.invitation .heroCopy {align-self:center!important;padding-top:0!important;padding-bottom:0!important;}
+.invitation .heroCopy h1 {font-size:clamp(4rem,16vw,8rem)!important;color:#263e60!important;text-shadow:0 2px 12px #fbfdff!important;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:#263e60!important;text-shadow:0 1px 8px #fbfdff!important;}
+.invitation .heroImage {object-position:center;}
+.invitation .heroShade {background:linear-gradient(180deg,#ffffff08,#ffffff35)!important;}
+.invitation .openEnvelope {width:108.5%!important;height:108.5%!important;inset:-16.2% auto auto -4.25%!important;}
+
+.age {display:grid;justify-items:center;width:100%;text-align:center;font-family:var(--font-serif),serif;font-size:clamp(3rem,10vw,5.5rem);font-weight:400;color:#6885a7;text-shadow:0 2px 8px #fbfdff;line-height:1.1;margin:0 0 1.2rem;}
+.age small {display:block;font-size:.3em;font-style:italic;margin-top:.25rem;}
+
+.heroSurname {display:block;font-family:var(--font-serif),serif;font-size:clamp(1.2rem,4vw,2rem);font-weight:400;line-height:1.3;letter-spacing:.05em;margin-top:.8rem;}
+.invitation .letter h2{line-height:1.2!important;font-size:clamp(1.5rem,5vw,2.4rem)!important;}
+
+.invitation .heroCopy {align-self:start!important;padding:6rem 1rem 0!important;}
+.invitation .heroCopy h1 {font-size:clamp(3.7rem,14vw,7.5rem)!important;color:#263e60!important;line-height:1.15!important;text-shadow:0 2px 10px #fbfdff!important;margin-bottom:1.1rem;}
+.invitation .heroCopy > p {color:#263e60!important;font-size:.7rem;line-height:1.8;}
+.invitation .heroShade {background:linear-gradient(180deg,#f1f6fc99,transparent 65%)!important;}
+.invitation .heroImage {object-fit:cover;object-position:center;}
+.invitation .age {color:#5378a3;text-shadow:0 1px 8px #fbfdff;}
+.invitation .letter {background:linear-gradient(145deg,#fbfdff,#eef4fa);}
+.invitation .letter::after {border-color:#ccd5e0;}
+.crownIcon {display:block;width:38px;height:38px;margin:0 auto 1.5rem;color:var(--coral);stroke-width:1.2;}
+.reservedColors {display:flex;justify-content:center;gap:2rem;margin:2rem auto 0;}
+.reservedColors figure {display:grid;justify-items:center;gap:.7rem;margin:0;font-size:.85rem;color:var(--dark);}
+.reservedColors i {width:48px;height:48px;border-radius:50%;border:1px solid #263e6026;box-shadow:0 4px 9px #263e6017;}
+.silverSwatch {background:linear-gradient(135deg,#edf0f4,#9ba7b8 42%,#e9edf3 64%,#8796aa);}
+@media(max-width:600px){.invitation .heroCopy {padding-top:4.5rem!important;}.invitation .heroCopy h1 {max-width:350px;margin-inline:auto;}}
+
+.invitation .openEnvelope {width:101.5%!important;height:101.5%!important;inset:-14.1% auto auto -.75%!important;}
+.invitation button[class*="sealAction"] {left:50%;top:53.5%;}

@@ -517,3 +517,10 @@ Ruta: /eventos/yuli-y-alexis
 7 de noviembre de 2026. Misa 5:30 p. m.; recepción 6:30 p. m.; civil 7:00 p. m.; cena de 8:00 a 10:00 p. m.
 Audio: /audio/yuli-y-alexis.mp3. RSVP normal con máximo 5 acompañantes. Pendiente: correo del panel.
 npm run provision-event -- yuli-y-alexis CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+SANDRA CRISTINA — XV AÑOS
+Ruta: /eventos/xv-sandra-cristina
+27 de diciembre de 2026. Misa 5:00 p. m., Parroquia de San Atenógenes, Durango. Recepción: Finca Poncho Álvarez, sin horario.
+Azul y plata reservados. Lluvia de sobres. WhatsApp: 6751005974. RSVP normal. Sin botones de ubicación.
+Pendiente: fotos, archivo de Quinceañera de Timbiriche y correo del panel.
+npm run provision-event -- xv-sandra-cristina CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
