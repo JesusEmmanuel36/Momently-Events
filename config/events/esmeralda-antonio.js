@@ -12,7 +12,7 @@ export const esmeraldaAntonio = {
   },
   "date": "2026-12-05T14:00:00-06:00",
   "timezone": "America/Mexico_City",
-  "maxCompanions": 4,
+  "maxCompanions": 3,
   "dateStamp": "05 · 12 · 2026",
   "dateDisplay": "Sábado · 5 de diciembre · 2026",
   "timelineDate": "5 de diciembre",

@@ -461,7 +461,7 @@ Iglesia: Parroquia San Francisco de Asís, 2:00 p. m. Recepción: Los Cipres, 4:
 npm run provision-event -- esmeralda-y-antonio CORREO_DEL_PANEL https://momentlyevents.vercel.app
 Activar antes de compartir para guardar confirmaciones.
 
-Esmeralda y Antonio: máximo 4 acompañantes por confirmación, también al crear y editar en el panel. Portada: image copy 6.png con recorte visual sin controles. Padrinos de velación: Israel Gómez Jiménez y Ramona Resendiz Hernández. Regalos: lluvia de sobres.
+Esmeralda y Antonio: máximo 3 acompañantes por confirmación, también al crear y editar en el panel. Portada: image copy 6.png con recorte visual sin controles. Padrinos de velación: Israel Gómez Jiménez y Ramona Resendiz Hernández. Regalos: lluvia de sobres.
 Fabiola y Daniel: fotos renovadas; audio /audio/fabiola-y-daniel.mp3.
 
 FERNANDO Y CRISTAL
