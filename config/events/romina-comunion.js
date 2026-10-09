@@ -19,7 +19,7 @@ export const rominaComunion = {
   },
   "reception": {
     "enabled": true,
-    "name": "Mi recepción",
+    "name": "Salón Jardín Villa Saveel",
     "time": "2:30 p. m.",
     "address": "Calle Mina #2, esquina con Camino Viejo al Tenayo, Col. Magisterial, Tlalmanalco de Velázquez, Estado de México",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Calle+Mina+2+Camino+Viejo+al+Tenayo+Magisterial+Tlalmanalco+Estado+de+Mexico",
@@ -44,9 +44,9 @@ export const rominaComunion = {
     "whatsapp": ""
   },
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/rominajahori.mp3",
+    "label": "Mi canción"
   },
   "theme": {
     "primary": "#b18b4d",
