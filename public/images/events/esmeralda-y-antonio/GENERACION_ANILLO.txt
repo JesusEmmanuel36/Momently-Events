@@ -1,0 +1,3 @@
+Modo: herramienta integrada imagegen. Fondo transparente y alfa preservado.
+Archivo: wedding-ring.png
+Prompt: Photorealistic elegant golden wedding ring, one polished 18k yellow gold wedding band lying at a gentle angle, subtle fine engraving and highlights, small ivory rose petals and delicate champagne gold botanical sprig beside it, airy refined composition. True transparent background, no surface or backdrop, no lettering, no hands, no people. Full object within canvas with ample transparent margin. Warm champagne and gold, studio macro photograph, realistic luxury wedding invitation decorative asset.

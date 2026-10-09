@@ -3,7 +3,7 @@ import { getAdminDb } from "@/lib/firebase/admin";
 import { apiError, AppError, NotFoundError, ValidationError } from "@/lib/errors";
 import { createSecureToken, hashToken, safeCompareHash } from "@/lib/security/crypto";
 import { enforceRsvpRateLimit } from "@/lib/security/rate-limit";
-import { publicRsvpSchemaFor, hasUnlimitedCompanions } from "@/lib/rsvp/schema";
+import { publicRsvpSchemaFor } from "@/lib/rsvp/schema";
 import { slugPattern } from "@/lib/wedding/slug";
 
 export const runtime = "nodejs";
@@ -13,8 +13,8 @@ async function getPublishedEvent(slug) {
 }
 function ensureRsvpOpen(event, companions, ignoreDeadline = false, slug = "") {
   const settings = event.settings?.rsvp; if (!settings?.enabled) throw new AppError("Las confirmaciones no están disponibles.", 403, "rsvp_disabled");
-  const maxCompanions = slug === "isamara-y-wsbaldo" ? 1 : Number(settings.maxCompanions || 0);
-  if (!hasUnlimitedCompanions(slug) && companions > maxCompanions) throw new ValidationError(`Puedes registrar hasta ${maxCompanions} acompañantes.`);
+  const maxCompanions = slug === "esmeralda-y-antonio" ? 4 : slug === "isamara-y-wsbaldo" ? 1 : Number(settings.maxCompanions || 0);
+  if (companions > maxCompanions) throw new ValidationError(`Puedes registrar hasta ${maxCompanions} acompañantes.`);
   const deadline = settings.deadline?.toDate?.() || (settings.deadline ? new Date(settings.deadline) : null); if (!ignoreDeadline && deadline && Date.now() > deadline.getTime()) throw new AppError("El periodo de confirmaciones ya terminó.", 403, "rsvp_closed");
 }
 function allowedData(data, source = "web") {

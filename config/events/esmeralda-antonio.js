@@ -12,15 +12,15 @@ export const esmeraldaAntonio = {
   },
   "date": "2026-12-05T14:00:00-06:00",
   "timezone": "America/Mexico_City",
-  "maxCompanions": 0,
+  "maxCompanions": 4,
   "dateStamp": "05 · 12 · 2026",
   "dateDisplay": "Sábado · 5 de diciembre · 2026",
   "timelineDate": "5 de diciembre",
   "calendarDate": "5 de diciembre de 2026",
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Con el corazón lleno de amor, hemos decidido unir nuestras vidas. Nos hará muy felices compartir contigo este día tan especial.",
-    "image": "/images/events/esmeralda-y-antonio/floral.png"
+    "quote": "Después de tantos años juntos, en los que hemos sido sumamente felices, por fin hemos decidido dar el siguiente gran paso.",
+    "image": "/images/events/esmeralda-y-antonio/image copy 6.png"
   },
   "closingImage": "/images/events/esmeralda-y-antonio/image copy 5.png",
   "ceremony": {
@@ -80,7 +80,14 @@ export const esmeraldaAntonio = {
       "src": "/images/events/esmeralda-y-antonio/image copy 6.png",
       "alt": "Esmeralda y Antonio, un recuerdo juntos",
       "width": 480,
-      "height": 1094
+      "height": 840,
+      "crop": true
+    },
+    {
+      "src": "/images/events/esmeralda-y-antonio/image copy 7.png",
+      "alt": "Esmeralda y Antonio, un recuerdo juntos",
+      "width": 720,
+      "height": 972
     }
   ],
   "dressCode": {
@@ -92,23 +99,30 @@ export const esmeraldaAntonio = {
       {
         "title": "Papás de la novia",
         "names": [
-          "† Josefina Jiménez Mata",
-          "† Pedro Gómez Estrada"
+          "Josefina Jiménez Mata †",
+          "Pedro Gómez Estrada †"
         ]
       },
       {
         "title": "Papás del novio",
         "names": [
-          "† María Luisa Tavira Cruz",
-          "† Ricardo Márquez Salvatierra"
+          "María Luisa Tavira Cruz †",
+          "Ricardo Márquez Salvatierra †"
+        ]
+      },
+      {
+        "title": "Padrinos de velación",
+        "names": [
+          "Israel Gómez Jiménez",
+          "Ramona Resendiz Hernández"
         ]
       }
     ]
   },
   "gifts": [
     {
-      "title": "Mesa de regalos y lluvia de sobres",
-      "description": "Tu compañía es nuestro mejor regalo. Si deseas tener un detalle con nosotros, tendremos mesa de regalos y también agradeceremos un obsequio en efectivo. Por favor, colócalo en un sobre con tu nombre para que podamos agradecerte personalmente."
+      "title": "Lluvia de sobres",
+      "description": "Si de todas formas deseas hacernos un detalle, lo recibiremos con total gratitud."
     }
   ],
   "contact": {
@@ -127,6 +141,5 @@ export const esmeraldaAntonio = {
     "champagne": "#e6d4af",
     "cream": "#fffdf9",
     "ivory": "#f8f1e5"
-  },
-  "unlimitedCompanions": true
+  }
 };
