@@ -1,0 +1,14 @@
+Modo: generador image_gen integrado. PNG con transparencia preservada cuando corresponde.
+Elementos western reutilizados desde Carolina y Pavel con copia propia.
+
+drclosed:
+Edit only initials on the bronze wax seal in the reference western wedding envelope: change exact engraved text C & P to D & R. Preserve every other detail, same beige embossed leather scrollwork, dark brown satin ribbon, frontal perspective, exact body proportions and framing. Photorealistic 3D materials, transparent background outside envelope, no extra text.
+
+drhero:
+Elegant western wedding invitation portrait background 1024x1536. Photorealistic still life with two gold wedding rings resting on soft ivory fabric, brown felt cowboy hat and exquisite tan leather embroidered boots at lower corners, small bronze horseshoe, braided lasso rope. Warm earth tones beige sandstone champagne tan and deep coffee #34251e. Soft warm light, premium subtle elegant editorial atmosphere. Top two thirds mostly smooth dark coffee textured backdrop with lots of uncluttered negative space for invitation names rendered later. No people, no words, no logos, no watermark.
+
+Sobre abierto:
+Edit target western beige wedding envelope supplied. Create matching fully OPEN envelope for David and Reyna. Same exact canvas 1536x1024 and frontal straight perspective, centered object with equal side margins. Embossed brown western leather scrollwork on beige cotton paper, dark brown satin ribbon, bronze seal engraved exact "D & R" (no C or P anywhere). Raised triangular top flap with empty interior; no letter. Keep rectangular body properly proportioned, no squashing, no skew, no corner placement. Genuine transparent background outside envelope. No other text, no watermark. Full object inside canvas. Elegant photorealistic 3D materials.
+
+Sobre abierto definitivo: envelope-open-v2.png. Generador integrado, transparencia.
+Edit reference closed envelope into an OPEN envelope. CRITICAL proportions: square canvas 1536x1536. Body is a LARGE TALL RECTANGLE width 92% of canvas, height 53% canvas (aspect ratio 1.74:1); body spans x4% to96%, y37% to90%. Fully raised upper triangular flap apex at y7%, rectangular opening at y37%. This body must be same broad rectangle proportions as CLOSED reference, NOT shallow, NOT flattened. Straight frontal top-down view centered on vertical center axis, no tilt or perspective. Beige cotton paper with same embossed brown leather western scrollwork; dark brown ribbon and bronze seal exact engraved D & R, empty interior for HTML letter. Transparent background around object, full margins, no letter or other text, no hands. Elegant photorealistic 3D material. Do not generate a landscape canvas.

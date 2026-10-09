@@ -547,6 +547,11 @@ Paleta café, champaña y marfil, como la plantilla principal. RSVP normal; sin 
 Para activar el panel cuando se tenga el correo del cliente:
 npm run provision-event -- roli-y-gaby CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
 
-Mayra y José: /eventos/mayra-y-jose
+Mayra y Héctor: /eventos/mayra-y-hector
 RSVP con hasta 5 acompañantes y fecha límite 20 de febrero de 2027.
-npm run provision-event -- mayra-y-jose CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+npm run provision-event -- mayra-y-hector CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+David y Reyna: /eventos/david-y-reyna
+npm run provision-event -- david-y-reyna CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+El enlace anterior /eventos/mayra-y-jose redirige a /eventos/mayra-y-hector.
