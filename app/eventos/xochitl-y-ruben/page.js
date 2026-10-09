@@ -4,7 +4,7 @@ import { xochitlRuben } from "@/config/events/xochitl-ruben";
 export const metadata = {
   title: "Xóchitl y Rubén | Nuestra boda",
   description: "5 de diciembre de 2026 · Apodaca, Nuevo León",
-  openGraph: { title: "Xóchitl y Rubén | Nuestra boda", images: ["/images/events/xochitl-y-ruben/portada.png"] },
+  openGraph: { title: "Xóchitl y Rubén | Nuestra boda", images: ["/images/events/xochitl-y-ruben/recuerdo-1.png"] },
 };
 
 export default function Page() {
