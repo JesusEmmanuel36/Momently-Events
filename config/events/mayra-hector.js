@@ -33,7 +33,7 @@ export const mayraHector = {
     "time": "12:00 p. m.",
     "address": "",
     "mapsUrl": "https://share.google/LJeazRJ3nVo45Y5GD",
-    "image": "/images/events/mayra-y-hector/floral.png"
+    "image": "/images/events/mayra-y-hector/iglesia.png"
   },
   "reception": {
     "enabled": true,
@@ -41,12 +41,12 @@ export const mayraHector = {
     "time": "2:30 p. m.",
     "address": "",
     "mapsUrl": "https://share.google/mslMjxKHyi4DPWxM2",
-    "image": "/images/events/mayra-y-hector/floral.png"
+    "image": "/images/events/mayra-y-hector/salon.png"
   },
   "gallery": [],
   "gifts": [
     {
-      "description": "Nuestro hogar ya cuenta con lo esencial. Si deseas tener un detalle con nosotros, agradeceremos una aportación en efectivo mediante lluvia de sobres, para seguir construyendo nuestros sueños juntos."
+      "description": "Nuestro hogar ya cuenta con lo esencial. Si deseas tener un detalle con nosotros, agradeceremos una aportación en efectivo mediante lluvia de sobres o transferencia, para seguir construyendo nuestros sueños juntos."
     }
   ],
   "contact": {
@@ -123,5 +123,12 @@ export const mayraHector = {
     "champagne": "#d8c8a5",
     "cream": "#f0f3eb",
     "ivory": "#fcfbf6"
+  },
+  "bank": {
+    "enabled": true,
+    "bank": "BBVA",
+    "account": "1556630184",
+    "clabe": "012225015566301849",
+    "card": "4152314069081662"
   }
 };

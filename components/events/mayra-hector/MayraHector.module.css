@@ -49,3 +49,14 @@
 .lodging > svg {display:block;margin:0 auto 1.3rem;}
 .invitation .openEnvelope {width:95.7%!important;height:143.55%!important;inset:-47% auto auto 2.15%!important;object-fit:contain;object-position:center;}
 .invitation .openFront {clip-path:inset(67% 0 0 0);}
+.invitation .venuePhoto {background:var(--ivory);min-height:400px;}
+.invitation .venuePhoto img {object-fit:contain!important;padding:0;}
+.bankDetails {max-width:560px;margin:2rem auto 0;padding:clamp(1.25rem,4vw,2rem);border:1px solid var(--gold-soft);background:var(--ivory);text-align:left;}
+.bankDetails h3 {font:400 1.7rem var(--font-serif),serif;color:var(--dark);margin:0 0 1.5rem;}
+.bankDetails dl {margin:0;display:grid;gap:1.3rem;}
+.bankDetails dl > div {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1rem;align-items:center;}
+.bankDetails dt {grid-column:1/-1;color:var(--muted);font-size:.8rem;}
+.bankDetails dd {margin:0;color:var(--dark);overflow-wrap:anywhere;font-variant-numeric:tabular-nums;}
+.bankNumber {user-select:all;}
+.bankDetails button {border:1px solid var(--olive);background:var(--paper);color:var(--dark);padding:.5rem .8rem;cursor:pointer;}
+@media(max-width:600px){.invitation .venuePhoto{min-height:0;aspect-ratio:3/2;}.invitation .venuePhoto:has(img[alt^="Jardín"]){aspect-ratio:1;}.bankDetails dl > div{grid-template-columns:1fr;}.bankDetails button{justify-self:start;}}
