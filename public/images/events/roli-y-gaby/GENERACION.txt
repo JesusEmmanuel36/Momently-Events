@@ -1,0 +1,14 @@
+Modo: herramienta integrada imagegen. Sobre cerrado/abierto y floral con transparencia conservada.
+Paleta: café #594238, café oscuro #3a2a24, champaña #d8c3a5, marfil #fbf8f3.
+
+closed
+Use case: product-mockup. Photorealistic 3D wedding envelope for Roli and Gaby. Front-facing orthographic closed horizontal rectangular envelope, chocolate coffee brown textured paper #594238, champagne satin ribbon, elegant fine golden edging, round warm gold wax seal at exact center engraved clearly 'R & G'. Restrained ivory rose blossoms and beige foliage decorating two corners. True transparent background, no surface or backdrop, clean isolated cutout, generous margins. Landscape 3:2 canvas, envelope body roughly 88% canvas width. No text except monogram.
+
+hero
+Use case: product-mockup. Portrait 2:3 elegant photorealistic wedding still life for brown coffee and ivory digital wedding invitation. Pair of gold wedding rings at bottom center on softly draped champagne silk with deep warm coffee brown satin behind, ivory and pale beige roses at lower corners, subtle muted sage eucalyptus and warm golden accents. Upper half calm smooth dark coffee fabric with generous negative space for names. Romantic soft lighting, luxurious restrained detailed texture. No text, no people, no logos, no dresses.
+
+floral
+Use case: product-mockup. Photorealistic corner floral arrangement for coffee brown wedding invitation: ivory roses, champagne beige roses, tiny white flowers, soft muted sage eucalyptus leaves and elegant bronze beige botanical branches. Airy diagonal arrangement, rich realistic petal textures, gentle light. Entire arrangement isolated on true transparent background with generous padding, landscape 3:2. No vase, no text, no scene, no fabric or colored background.
+
+open
+Use case: precise-object-edit. Open this exact coffee-brown wedding envelope. Keep exact straight-on front camera, paper color and texture, gold edging, both corner floral decorations, same horizontal body proportions. Raise triangular top flap to show empty brown interior. Remove wax seal and center bow, keep bottom front pocket and champagne ribbon across front. True transparent background. No letter inserted, no words. Landscape 3:2 canvas with margins for raised flap. Keep body width unchanged and body bottom aligned near original; do not make envelope wider.

@@ -1,0 +1,27 @@
+.invitation .hero {background:#3a2a24;}
+.invitation .heroImage {object-fit:cover;object-position:center;}
+.invitation .heroCopy {align-self:start;padding-top:6rem!important;padding-bottom:0!important;}
+.invitation .heroCopy h1 {font-size:clamp(4rem,13vw,8rem)!important;color:var(--paper);text-shadow:0 2px 14px #3a2a24;}
+.invitation .heroCopy > span,.invitation .heroCopy > p {color:var(--paper);text-shadow:0 2px 8px #3a2a24;}
+.invitation .hero > div:first-of-type {background:linear-gradient(180deg,#3a2a2440,transparent 65%);}
+.invitation .fullNames {font-size:clamp(1.8rem,6vw,3rem);line-height:1.4;}
+.invitation .fullNames i {display:block;}
+.invitation .venueArtwork {background:linear-gradient(135deg,#fbf8f3,#f5eee6);}
+.invitation .venueArtwork img {object-fit:contain;padding:1.5rem;}
+.invitation .letter {width:62%;left:19%;background:linear-gradient(145deg,#fbf8f3,#f5eee6);}
+.invitation .letter h2 {line-height:1.1!important;font-size:clamp(2rem,6vw,4rem)!important;}
+.invitation .letter::after {border-color:#d8c3a5;}
+.invitation button[class*="openLabel"] {background:#fbf8f3;color:#594238;}
+.invitation .openEnvelope {width:100%!important;height:100%!important;inset:0!important;}
+.invitation .openFront {clip-path:inset(55% 0 0 0);}
+.invitation button[class*="sealAction"] {left:50%;top:54%;}
+.invitation .photoGrid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;}
+.invitation .photoGrid button {grid-column:auto!important;grid-row:auto!important;}
+.closingMessage {font-family:var(--font-sans),sans-serif!important;font-size:clamp(1rem,3vw,1.3rem)!important;line-height:1.8;max-width:600px;margin:1.5rem auto;}
+@media(max-width:600px){.invitation .heroCopy{padding-top:5rem!important}.invitation .letter{height:55%;bottom:18%;}.invitation .letter h2{font-size:2rem!important;}}
+.invitation .openEnvelope {width:103.5%!important;height:138%!important;inset:-42.1% auto auto -1.75%!important;object-fit:fill;}
+.invitation .openFront {clip-path:inset(67% 0 0 0);}
+
+@media (min-width: 900px) {
+  .invitation .heroImage { object-fit: contain; }
+}

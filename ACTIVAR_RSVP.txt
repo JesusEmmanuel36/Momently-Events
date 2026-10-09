@@ -538,3 +538,11 @@ Ruta: /eventos/sarai-y-ruben
 Vestimenta formal. Mesa de regalos Liverpool: número y enlace pendientes. Sin música. WhatsApp pendiente de aclarar.
 El panel requiere confirmar el año y proporcionar el correo del cliente antes de activarlo.
 npm run provision-event -- sarai-y-ruben CORREO_DEL_CLIENTE https://momentlyevents.vercel.app
+
+Roli y Gaby — matrimonio civil
+Ruta: /eventos/roli-y-gaby
+Sábado 26 de diciembre de 2026. Recepción 8:00 p. m., Sala de fiestas Aryadne, Baca, Yucatán.
+WhatsApp: 9992727227. Música: /audio/rolandoygaby.mp3.
+Paleta café, champaña y marfil, como la plantilla principal. RSVP normal; sin pases personalizados ni fotos con QR.
+Para activar el panel cuando se tenga el correo del cliente:
+npm run provision-event -- roli-y-gaby CORREO_DEL_CLIENTE https://momentlyevents.vercel.app

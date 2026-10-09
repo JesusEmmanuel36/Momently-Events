@@ -86,7 +86,7 @@ export function GuestPhotoUpload({ initialNow, event = guestPhotos }) {
   }
 
   const pendingCount = photos.filter(photo => photo.status !== "done").length;
-  return <main className={styles.page}>
+  return <main className={styles.page} style={event.photoTheme}>
     <div className={styles.card}>
       <Link className={styles.back} href={`/eventos/${event.slug}`}>← Ver invitación</Link>
       <Image className={styles.flowers} src={event.floral} width={560} height={373} alt="" aria-hidden="true" />
