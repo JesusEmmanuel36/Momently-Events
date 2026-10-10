@@ -55,8 +55,8 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
-  const [audioStage, setAudioStage] = useState("intro");
-  const openingTimer = useRef(null);
+  const [introBlocked, setIntroBlocked] = useState(false);
+  const introAudioRef = useRef(null);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -75,7 +75,25 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
   }, [wedding.date]);
 
   useEffect(() => { if (audioRef.current) audioRef.current.volume = 0.65; }, [wedding.music.url]);
-  useEffect(() => () => window.clearTimeout(openingTimer.current), []);
+  useEffect(() => {
+    if (opened || !wedding.music.enabled) return;
+    const intro = introAudioRef.current;
+    if (!intro) return;
+    let active = true;
+    const startIntro = () => {
+      if (intro.ended) return;
+      intro.volume = 0.65;
+      intro.play().then(() => { if (active) setIntroBlocked(false); }).catch(() => { if (active) setIntroBlocked(true); });
+    };
+    startIntro();
+    document.addEventListener("pointerdown", startIntro);
+    document.addEventListener("keydown", startIntro);
+    return () => {
+      active = false;
+      document.removeEventListener("pointerdown", startIntro);
+      document.removeEventListener("keydown", startIntro);
+    };
+  }, [opened, wedding.music.enabled]);
 
   useEffect(() => {
     if (!opened) return;
@@ -138,29 +156,18 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
   };
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
   const beginSong = () => {
-    window.clearTimeout(openingTimer.current);
-    setAudioStage("song");
-    setOpened(true);
+    introAudioRef.current?.pause();
+    // Keep the song source mounted and preloaded: changing src here can cancel play().
     const audio = audioRef.current;
-    if (!audio || !wedding.music.enabled) return;
-    audio.pause();
-    audio.src = wedding.music.url;
-    audio.loop = true;
-    audio.currentTime = 0;
-    audio.play().catch(() => setPlaying(false));
+    if (audio && wedding.music.enabled) {
+      audio.currentTime = 0;
+      audio.play().catch(() => setPlaying(false));
+    }
+    setOpened(true);
   };
   const openInvitation = () => {
     if (opening) return;
     setOpening(true);
-    const audio = audioRef.current;
-    if (!audio || !wedding.music.enabled) {
-      openingTimer.current = window.setTimeout(beginSong, 2300);
-      return;
-    }
-    audio.play().catch(() => {
-      // A blocked or unavailable intro must never leave the invitation locked.
-      openingTimer.current = window.setTimeout(beginSong, 2300);
-    });
   };
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -193,7 +200,10 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
 
   return <div ref={invitationRef} className={`${styles.wedding} ${customStyles.invitation} ${themeClassName}`} style={theme}>
     <div className={customStyles.sparkleOverlay} aria-hidden="true">{[5,12,21,31,42,53,64,76,86,95].map((top,index) => <i key={top} style={{top:`${top}%`,left:index%2?"96%":"3%",animationDelay:`${index*.45}s`}} />)}</div>
-    {wedding.music.enabled && <audio ref={audioRef} src={audioStage === "intro" ? wedding.music.introUrl : wedding.music.url} loop={audioStage === "song"} preload="auto" onEnded={() => { if (audioStage === "intro") beginSong(); }} onError={() => { if (opening && audioStage === "intro") beginSong(); else setPlaying(false); }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
+    {wedding.music.enabled && <>
+      <audio ref={introAudioRef} src={wedding.music.introUrl} autoPlay preload="auto" />
+      <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />
+    </>}
     {!opened && <div className={`${styles.intro} ${opening ? `${styles.opening} ${customStyles.introPlaying}` : ""}`}>
       <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Castillo de cuento entre rosas azules y detalles dorados" /></div><div className={styles.introShade} />
       <div className={styles.introTitle}><span>{wedding.hero.subtitle}</span><h1>Una invitación para ti</h1></div>
@@ -208,6 +218,7 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre cerrado de ${names}`} />
         <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"></button>
       </div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div>
+      {!opening && introBlocked && <button className={customStyles.skipIntro} onClick={() => introAudioRef.current?.play().then(() => setIntroBlocked(false)).catch(() => setIntroBlocked(true))}><Play size={16} /> Activar sonido</button>}
       {opening && <button className={customStyles.skipIntro} onClick={beginSong}>Continuar a mi invitación <ChevronRight size={16} /></button>}
     </div>}
 
