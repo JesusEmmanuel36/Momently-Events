@@ -30,7 +30,7 @@ export const rogelioBlancaBautizo = {
   gallery: [],
   gifts: [],
   contact: {},
-  music: { enabled: false, url: "", label: "Nuestra canción" },
+  music: { enabled: true, url: "/audio/rogelioyblancabautizo.mpeg", label: "Nuestra canción" },
   itinerary: [
     { time: "15:00", title: "Misa", description: "San Isidro La Rosa", icon: "church" },
     { time: "16:30", title: "Celebración", description: "Compartamos juntos esta alegría", icon: "glass" },

@@ -12,7 +12,21 @@
 .invitation .photoGrid button:first-child { grid-column: 1 / -1 !important; width: min(100%, 560px); justify-self: center; }
 .invitation .letter { width: 60%; left: 20%; background: linear-gradient(145deg, #fffdf7, #f4eddf); }
 .invitation .letter h2 { line-height: 1.1 !important; font-size: clamp(1.7rem, 5vw, 3rem) !important; }
-.invitation .openEnvelope { width: 146.5% !important; height: 146.5% !important; inset: -55.5% auto auto -23.25% !important; object-fit: contain; object-position: center; }
+.invitation .openEnvelopeLayer {
+  inset: auto !important;
+  left: 50% !important;
+  bottom: 9% !important;
+  width: 146.5%;
+  height: auto;
+  margin-left: -73.25%;
+  aspect-ratio: 3 / 2;
+}
+.openEnvelopeArtwork {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
 .invitation .openFront { clip-path: inset(59% 0 0 0); }
 .invitation button[class*="openLabel"] { background: var(--paper); color: var(--dark); }
 .invitation button[class*="sealAction"] { left: 50%; top: 59.5%; }

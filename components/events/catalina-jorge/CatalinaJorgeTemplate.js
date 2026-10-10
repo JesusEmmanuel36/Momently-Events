@@ -140,8 +140,12 @@ export function CatalinaJorgeTemplate({ wedding, assets = defaultAssets, customT
       <div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
         <div className={`${styles.letter} ${customStyles.letter}`}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>Nuestra boda</span><h2 className={`${localStyles.letterName} ${nameClassName}`}>{wedding.displayNames.partner1} <i>&</i> {wedding.displayNames.partner2}</h2><small>{wedding.dateStamp || "05 · 12 · 2026"}</small></div>
-        <Image className={`${styles.envelopeOpenBack} ${customStyles.openEnvelope}`} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre abierto de ${names}`} />
-        <Image className={`${styles.envelopeOpenFront} ${customStyles.openEnvelope} ${customStyles.openFront}`} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt="" aria-hidden="true" />
+        <div className={`${styles.envelopeOpenBack} ${customStyles.openEnvelopeLayer}`}>
+          <Image className={customStyles.openEnvelopeArtwork} src={envelopeOpen} width={1536} height={1024} priority sizes="(max-width: 700px) 141vw, 1055px" alt={`Sobre abierto de ${names}`} />
+        </div>
+        <div className={`${styles.envelopeOpenFront} ${customStyles.openEnvelopeLayer} ${customStyles.openFront}`} aria-hidden="true">
+          <Image className={customStyles.openEnvelopeArtwork} src={envelopeOpen} width={1536} height={1024} priority sizes="(max-width: 700px) 141vw, 1055px" alt="" />
+        </div>
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre cerrado de ${names}`} />
         <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"></button>
       </div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div>
