@@ -1,10 +1,11 @@
 .page {min-height:100svh;background:var(--photo-page, #eee4d0);padding:2rem 1rem;color:var(--photo-dark, #303822);font-family:var(--font-sans),sans-serif;}
-.card {position:relative;overflow:hidden;width:min(100%,700px);margin:auto;background:var(--photo-paper, #fbf6eb);border:1px solid var(--photo-border, #dac9a5);border-radius:20px;padding:1.5rem clamp(1rem,4vw,3rem) 2rem;text-align:center;box-shadow:0 15px 50px var(--photo-shadow, #30382212);}
+.page,.page * {box-sizing:border-box;}
+.card {position:relative;overflow:hidden;width:calc(100vw - 2rem);max-width:700px;min-width:0;margin:auto;background:var(--photo-paper, #fbf6eb);border:1px solid var(--photo-border, #dac9a5);border-radius:20px;padding:1.5rem clamp(1rem,4vw,3rem) 2rem;text-align:center;box-shadow:0 15px 50px var(--photo-shadow, #30382212);}
 .back {position:relative;z-index:1;display:block;width:fit-content;color:var(--photo-accent, #657044);font-size:.85rem;text-decoration:none;}
 .flowers {display:block;width:min(100%,400px);height:auto;margin:.5rem auto -1rem;pointer-events:none;}
 .camera {position:relative;width:34px;height:34px;color:var(--photo-accent, #657044);}
 .eyebrow {display:block;margin-top:.75rem;text-transform:uppercase;letter-spacing:.18em;font-size:.65rem;color:var(--photo-accent, #657044);}
-.card h1 {position:relative;font-family:var(--font-script),cursive;font-size:clamp(3.2rem,12vw,5rem);font-weight:400;margin:1rem 0;line-height:1.15;}
+.card h1 {position:relative;font-family:var(--font-script),cursive;font-size:clamp(2.65rem,12vw,5rem);font-weight:400;margin:1rem 0;line-height:1.15;overflow-wrap:anywhere;}
 .card h1 i {font-size:.6em;}
 .intro {max-width:460px;margin:0 auto 2rem;color:var(--photo-muted, #696c56);line-height:1.7;font-size:.95rem;}
 .choose {position:relative;display:grid;justify-items:center;gap:.8rem;padding:2rem 1rem;border:2px dashed var(--photo-border, #a5ab88);border-radius:12px;background:var(--photo-surface, #f0ecdf);cursor:pointer;}

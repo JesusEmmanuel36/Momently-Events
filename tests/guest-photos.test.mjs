@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash, randomUUID } from "node:crypto";
 import sharp from "sharp";
-import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos } from "../lib/event-photos/config.js";
+import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos, zoeValentinaPhotos } from "../lib/event-photos/config.js";
 import { enforcePhotoRateLimit, processGuestPhoto, uploadPhotoToCloudinary, validatePhotoFile } from "../lib/event-photos/server.js";
 
 const env = { CLOUDINARY_CLOUD_NAME: "test-cloud", CLOUDINARY_API_KEY: "test-key", CLOUDINARY_API_SECRET: "test-secret" };
@@ -135,4 +135,22 @@ test("Alejandra's date, upload folder, gallery and limits stay separate from Cal
   const db = { collection: name => { assert.equal(name, "guestPhotoRateLimits"); return { doc: id => { ids.push(id); return id; } }; }, runTransaction: async callback => callback({ get: async () => ({ data: () => undefined }), set: () => {} }) };
   await enforcePhotoRateLimit(request(photo), { db, event });
   assert.ok(ids.includes(event.slug)); assert.ok(!ids.includes(guestPhotos.slug));
+});
+
+test("Zoe's photo uploads remain locked until her event and use an isolated folder", async () => {
+  const event = zoeValentinaPhotos;
+  const opening = Date.parse(event.opensAt);
+  assert.equal(guestPhotosAreOpen(opening - 1, event), false);
+  assert.equal(guestPhotosAreOpen(opening, event), true);
+  assert.notEqual(event.folder, guestPhotos.folder);
+  assert.notEqual(event.folder, alejandraDavidPhotos.folder);
+  let touched = false;
+  await assert.rejects(processGuestPhoto(request(new Blob(["test"])), {
+    env,
+    event,
+    now: opening - 1,
+    rateLimit: async () => { touched = true; },
+    upload: async () => { touched = true; },
+  }), error => error.status === 403 && error.message.includes("21 de noviembre de 2026"));
+  assert.equal(touched, false);
 });

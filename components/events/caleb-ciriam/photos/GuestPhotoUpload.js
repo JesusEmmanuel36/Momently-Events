@@ -91,9 +91,9 @@ export function GuestPhotoUpload({ initialNow, event = guestPhotos }) {
       <Link className={styles.back} href={`/eventos/${event.slug}`}>← Ver invitación</Link>
       <Image className={styles.flowers} src={event.floral} width={560} height={373} alt="" aria-hidden="true" />
       <Camera className={styles.camera} aria-hidden="true" />
-      <span className={styles.eyebrow}>Recuerdos de nuestra boda</span>
-      <h1>{event.partner1} <i>&</i> {event.partner2}</h1>
-      <p className={styles.intro}>Comparte las fotos que tomaste y ayúdanos a guardar cada momento de este día.</p>
+      <span className={styles.eyebrow}>{event.uploadEyebrow || "Recuerdos de nuestra boda"}</span>
+      <h1>{event.partner1}{event.partner2 && <> <i>&</i> {event.partner2}</>}</h1>
+      <p className={styles.intro}>{event.uploadIntro || "Comparte las fotos que tomaste y ayúdanos a guardar cada momento de este día."}</p>
       {!isOpen && <p className={styles.message} role="status">Aún no es la fecha del evento. Podrás compartir tus fotos a partir del <strong>{event.opensDateLabel}</strong>. ¡Vuelve ese día para guardar tus recuerdos con nosotros!</p>}
       {isOpen && <form onSubmit={sendPhotos}>
         <label className={styles.choose} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); selectPhotos(event.dataTransfer.files); }}>

@@ -50,11 +50,11 @@ export function GuestPhotoGallery({ event = guestPhotos }) {
   }, [active, photos.length]);
 
   return <div className={styles.gallery}>
-    <h3>Las fotos de nuestros invitados</h3>
-    <p>Los recuerdos que compartan aparecerán aquí.</p>
+    <h3>{event.galleryTitle || "Las fotos de nuestros invitados"}</h3>
+    <p>{event.galleryIntro || "Los recuerdos que compartan aparecerán aquí."}</p>
     <button type="button" disabled={busy} onClick={() => load()}>{busy ? "Cargando fotos…" : loaded ? "Actualizar galería" : "Ver fotos del evento"}</button>
     {error && <p role="alert">{error}</p>}
-    {loaded && !photos.length && <p role="status">Aún no hay fotos compartidas. ¡Aquí reuniremos los recuerdos de nuestra boda!</p>}
+    {loaded && !photos.length && <p role="status">{event.galleryEmpty || "Aún no hay fotos compartidas. ¡Aquí reuniremos los recuerdos de nuestra boda!"}</p>}
     <div className={styles.grid}>{photos.map((photo, index) => <button type="button" key={photo.id} onClick={event => { trigger.current = event.currentTarget; setActive(index); }} aria-label={`Abrir foto de invitados ${index + 1}`}><Image src={photo.thumbnail} alt={`Recuerdo de la boda ${index + 1}`} fill unoptimized sizes="(max-width:600px) 45vw,240px" /></button>)}</div>
     {cursor && <button type="button" disabled={busy} onClick={() => load(cursor)}>Ver más fotos</button>}
     {active !== null && photos[active] && createPortal(<div className={styles.lightbox} role="dialog" aria-modal="true" aria-label="Fotos de los invitados">
