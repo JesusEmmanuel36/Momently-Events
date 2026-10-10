@@ -1,0 +1,38 @@
+const images = "/images/events/azul-aurora";
+export const azulAuroraXv = {
+  slug: "xv-azul-aurora",
+  templateKey: "azul-aurora-pink-gold",
+  eventTitle: "XV años de Azul Aurora",
+  couple: { partner1: "Azul Aurora", partner2: "XV años" },
+  displayNames: { partner1: "Azul Aurora", partner2: "" },
+  initials: "AA",
+  date: "2027-01-23T17:00:00-06:00",
+  timezone: "America/Mexico_City",
+  maxCompanions: 0,
+  rsvpEnabled: true,
+  dateStamp: "23 · 01 · 2027",
+  dateDisplay: "Sábado · 23 de enero · 2027",
+  calendarDate: "23 de enero de 2027",
+  timelineDate: "23 de enero",
+  hero: {
+    subtitle: "Mis XV años",
+    quote: "Con el corazón lleno de ilusión, quiero compartir contigo la alegría de mis quince años. Tu compañía hará de este día un recuerdo que guardaré para siempre.",
+    image: `${images}/image.png`,
+  },
+  closingImage: `${images}/image.png`,
+  ceremony: { enabled: true, name: "Parroquia de San Francisco Totimehuacán", time: "5:00 p. m.", address: "", mapsUrl: "", image: `${images}/floral.png` },
+  reception: { enabled: true, name: "Misión de San Francisco", time: "", address: "", mapsUrl: "", image: `${images}/floral.png` },
+  family: { groups: [
+    { title: "Mis papás", names: ["Eric Contreras Pérez", "Cynthia Serrano Mejía"] },
+    { title: "Mi madrina", names: ["Lizette Contreras Pérez"] },
+  ] },
+  gallery: [
+    { src: `${images}/image.png`, width: 358, height: 478, alt: "Retrato de Azul Aurora" },
+    { src: `${images}/image copy.png`, width: 480, height: 1423, alt: "Recuerdos de Azul Aurora" },
+  ],
+  gifts: [],
+  contact: { phone: "222 829 7394", whatsapp: "https://wa.me/522228297394?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Azul%20Aurora." },
+  music: { enabled: true, url: "/audio/andrea-anahis.mp3", label: "Mi canción" },
+  itinerary: [],
+  theme: { primary: "#b55078", dark: "#623b4d", champagne: "#d8ba7c", cream: "#fbe9ef", ivory: "#fff9f5", rose: "#eab5c7", sage: "#a9b29a" },
+};

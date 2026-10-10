@@ -1,6 +1,7 @@
 import { jessicaJoan } from "../config/events/jessica-joan.js";
 import { selfida60 } from "../config/events/selfida-60.js";
 import { claraSantiago } from "../config/events/clara-santiago.js";
+import { azulAuroraXv } from "../config/events/azul-aurora-xv.js";
 import { catalinaJorge } from "../config/events/catalina-jorge.js";
 import { rogelioBlancaBautizo } from "../config/events/rogelio-blanca-bautizo.js";
 import { rubiXimenaXv } from "../config/events/rubi-ximena-xv.js";
@@ -105,6 +106,7 @@ templates[xochitlRuben.slug] = xochitlRuben;
 templates[jessicaJoan.slug] = jessicaJoan;
 templates[selfida60.slug] = selfida60;
 templates[claraSantiago.slug] = claraSantiago;
+templates[azulAuroraXv.slug] = azulAuroraXv;
 templates[catalinaJorge.slug] = catalinaJorge;
 templates[rogelioBlancaBautizo.slug] = rogelioBlancaBautizo;
 templates[rubiXimenaXv.slug] = rubiXimenaXv;
