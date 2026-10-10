@@ -52,12 +52,6 @@ export const almaDelia40 = {
     "width": 720,
     "height": 1280,
     "alt": "Alma Delia, recuerdo 2"
-  },
-  {
-    "src": "/images/events/alma-delia-40/image copy 2.png",
-    "width": 720,
-    "height": 1280,
-    "alt": "Alma Delia, recuerdo 3"
   }
 ],
   "dressCode": {
