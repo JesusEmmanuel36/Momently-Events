@@ -55,7 +55,7 @@ export const carlosKarla = {
     "url": "/audio/carlosykarla.mp3",
     "label": "Nuestra canción"
   },
-  "gifts": [],
+  "gifts": [{ "title": "Lluvia de sobres", "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, recibiremos con mucho cariño tu obsequio en efectivo dentro de un sobre." }],
   "contact": {
     "phone": "8120347336",
     "whatsapp": "https://wa.me/528120347336",
