@@ -54,6 +54,7 @@ export const estephanieXv = {
   "music": {
     "enabled": true,
     "url": "/audio/xvestephanie.mp3",
+    "introUrl": "/audio/Disney Intro Full HD 1080p.mp3",
     "label": "Mi canción"
   },
   "itinerary": [

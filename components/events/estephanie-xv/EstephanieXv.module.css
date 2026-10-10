@@ -102,6 +102,8 @@
 .princessSection {background:radial-gradient(ellipse at left,#183c9b55,transparent 65%),#07152d;border:1px solid #c8a25a88;border-radius:16px;margin:3rem auto;}
 .princessSection article h2,.princessSection article span {color:#dfc791;}
 .princessSection article p {color:#edf0f8;}
+.invitation .introPlaying {opacity:1;visibility:visible;transition:none;}
+.skipIntro {position:absolute;z-index:9;bottom:max(1.5rem,env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1rem;border:1px solid #dfc791;border-radius:6px;background:#07152deb;color:#fffaf0;cursor:pointer;font-size:.85rem;}
 
 /* Decorative edges stay outside the text area at every screen width. */
 .invitation .storyFrame {position:relative;max-width:960px;margin:2rem auto;padding:clamp(8rem,16vw,11rem) clamp(3rem,10vw,8rem);background-image:url('/images/events/xv-estephanie/thin-story-frame.png');background-size:100% 100%;background-repeat:no-repeat;}

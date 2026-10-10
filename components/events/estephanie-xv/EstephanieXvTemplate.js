@@ -55,6 +55,8 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
   const [opening, setOpening] = useState(false);
   const [countdown, setCountdown] = useState(undefined);
   const [playing, setPlaying] = useState(false);
+  const [audioStage, setAudioStage] = useState("intro");
+  const openingTimer = useRef(null);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -73,6 +75,7 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
   }, [wedding.date]);
 
   useEffect(() => { if (audioRef.current) audioRef.current.volume = 0.65; }, [wedding.music.url]);
+  useEffect(() => () => window.clearTimeout(openingTimer.current), []);
 
   useEffect(() => {
     if (!opened) return;
@@ -134,11 +137,30 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
     window.location.assign(whatsappUrl(`Buzón de deseos para ${wedding.couple.partner1}\nDe: ${wishName.trim()}\n\n${wishMessage.trim()}`));
   };
   const notify = (message) => { setToast(message); window.setTimeout(() => setToast(""), 2600); };
+  const beginSong = () => {
+    window.clearTimeout(openingTimer.current);
+    setAudioStage("song");
+    setOpened(true);
+    const audio = audioRef.current;
+    if (!audio || !wedding.music.enabled) return;
+    audio.pause();
+    audio.src = wedding.music.url;
+    audio.loop = true;
+    audio.currentTime = 0;
+    audio.play().catch(() => setPlaying(false));
+  };
   const openInvitation = () => {
     if (opening) return;
     setOpening(true);
-    audioRef.current?.play().catch(() => setPlaying(false));
-    window.setTimeout(() => setOpened(true), 2300);
+    const audio = audioRef.current;
+    if (!audio || !wedding.music.enabled) {
+      openingTimer.current = window.setTimeout(beginSong, 2300);
+      return;
+    }
+    audio.play().catch(() => {
+      // A blocked or unavailable intro must never leave the invitation locked.
+      openingTimer.current = window.setTimeout(beginSong, 2300);
+    });
   };
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -171,8 +193,8 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
 
   return <div ref={invitationRef} className={`${styles.wedding} ${customStyles.invitation} ${themeClassName}`} style={theme}>
     <div className={customStyles.sparkleOverlay} aria-hidden="true">{[5,12,21,31,42,53,64,76,86,95].map((top,index) => <i key={top} style={{top:`${top}%`,left:index%2?"96%":"3%",animationDelay:`${index*.45}s`}} />)}</div>
-    {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
-    {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}>
+    {wedding.music.enabled && <audio ref={audioRef} src={audioStage === "intro" ? wedding.music.introUrl : wedding.music.url} loop={audioStage === "song"} preload="auto" onEnded={() => { if (audioStage === "intro") beginSong(); }} onError={() => { if (opening && audioStage === "intro") beginSong(); else setPlaying(false); }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} />}
+    {!opened && <div className={`${styles.intro} ${opening ? `${styles.opening} ${customStyles.introPlaying}` : ""}`}>
       <div className={styles.introBackdrop}><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Castillo de cuento entre rosas azules y detalles dorados" /></div><div className={styles.introShade} />
       <div className={styles.introTitle}><span>{wedding.hero.subtitle}</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
@@ -186,6 +208,7 @@ export function EstephanieXvTemplate({ wedding, assets = defaultAssets, customTh
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre cerrado de ${names}`} />
         <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"></button>
       </div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div>
+      {opening && <button className={customStyles.skipIntro} onClick={beginSong}>Continuar a mi invitación <ChevronRight size={16} /></button>}
     </div>}
 
     <main className={!opened ? styles.locked : styles.unlocked}>
