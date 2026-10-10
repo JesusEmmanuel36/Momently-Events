@@ -14,7 +14,7 @@ export const rubiXimenaXv = {
   date: "2026-11-14T18:00:00-06:00",
   timezone: "America/Mexico_City",
   maxCompanions: 0,
-  rsvpEnabled: false,
+  rsvpEnabled: true,
   dateStamp: "14 · 11 · 2026",
   dateDisplay: "Sábado · 14 de noviembre · 2026",
   calendarDate: "14 de noviembre de 2026",
