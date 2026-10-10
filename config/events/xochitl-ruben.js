@@ -10,13 +10,14 @@ export const xochitlRuben = {
   rsvpEnabled: true,
   dateStamp: "05 · 12 · 2026",
   dateDisplay: "Sábado · 5 de diciembre · 2026",
+  timelineDate: "5 de diciembre",
   calendarDate: "5 de diciembre de 2026",
   hero: {
     subtitle: "Nuestra boda",
     quote: "Hay momentos que cambian nuestra historia para siempre. Queremos compartir contigo la alegría de unir nuestras vidas.",
     image: "/images/events/xochitl-y-ruben/recuerdo-1.png",
   },
-  closingImage: "/images/events/xochitl-y-ruben/portada.png",
+  closingImage: "/images/events/xochitl-y-ruben/recuerdo-2.png",
   ceremony: {
     enabled: true,
     name: "Parroquia Cristo Buen Pastor",
@@ -34,8 +35,8 @@ export const xochitlRuben = {
     image: "/images/events/xochitl-y-ruben/floral.png",
   },
   gallery: [
+    { src: "/images/events/xochitl-y-ruben/recuerdo-2.png", alt: "Xóchitl y Rubén celebrando juntos", width: 720, height: 1168 },
     { src: "/images/events/xochitl-y-ruben/recuerdo-3.png", alt: "Xóchitl y Rubén, un recuerdo juntos", width: 480, height: 779 },
-    { src: "/images/events/xochitl-y-ruben/portada.png", alt: "Xóchitl y Rubén celebrando juntos", width: 449, height: 1034 },
   ],
   adultsOnly: {
     title: "Celebración solo para adultos",
@@ -69,7 +70,9 @@ export const xochitlRuben = {
   bank: { enabled: false, bank: "", holder: "", account: "", clabe: "" },
   contact: { phone: "", whatsapp: "" },
   music: { enabled: true, url: "/audio/XochitlRuben.mp3", label: "Nuestra canción" },
-  itinerary: [],
+  itinerary: [
+    { time: "20:00", title: "Cena", description: "Se servirá la cena." },
+  ],
   theme: {
     primary: "#6b4a32",
     dark: "#2b1c14",

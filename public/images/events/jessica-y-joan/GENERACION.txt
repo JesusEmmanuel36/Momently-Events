@@ -1,0 +1,11 @@
+Modo: herramienta integrada imagegen.
+Paleta: azul rey #174EA6, azul profundo #082B68, blanco #FFFFFF y dorado #C3A35B.
+
+envelope-closed.png
+Use case: product mockup. Photorealistic 3D wedding envelope for Jessica and Joan, front-facing orthographic closed horizontal rectangular envelope. Elegant royal blue and white palette: richly textured royal blue paper, crisp white satin ribbon, refined silver and subtle gold edging. A centered round metallic seal engraved clearly “J & J”. White roses, royal-blue delphinium and delicate silver-green eucalyptus arranged at two corners. True transparent background, isolated cutout, generous margins, landscape 3:2. No text except the monogram, no hands, no table, no backdrop.
+
+envelope-open.png
+Use case: product mockup. Matching photorealistic open wedding envelope for Jessica and Joan, straight-on front view on square canvas with ample room for raised triangular flap. Rich royal blue textured paper, clean white interior, fine silver and subtle gold edging, white satin ribbon, white roses and royal-blue delphinium with silver-green foliage. Empty interior, no invitation card, no seal, no monogram, no words. True transparent background, isolated centered cutout, full envelope visible without cropping or distortion.
+
+floral.png
+Use case: decorative asset. Elegant photorealistic horizontal wedding floral arrangement in royal blue and white: white garden roses, royal-blue delphinium, blue hydrangea, small white blossoms, silver-green eucalyptus and restrained golden botanical accents. Luxurious and romantic, realistic petal texture, airy symmetrical composition. True transparent background, isolated cutout with generous padding, landscape 3:2. No vase, no fabric, no words, no backdrop.

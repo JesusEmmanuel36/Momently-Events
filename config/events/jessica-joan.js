@@ -1,0 +1,78 @@
+export const jessicaJoan = {
+  slug: "jessica-y-joan",
+  templateKey: "jessica-joan-royal-blue",
+  eventTitle: "Boda de Jessica Andrea y Joan Christian",
+  couple: {
+    partner1: "Jessica Andrea Uribe Martínez",
+    partner2: "Joan Christian Díaz Osorio",
+  },
+  displayNames: { partner1: "Jessica", partner2: "Joan" },
+  date: "2026-11-14T13:00:00-06:00",
+  timezone: "America/Monterrey",
+  maxCompanions: 0,
+  rsvpEnabled: true,
+  dateStamp: "14 · 11 · 2026",
+  dateDisplay: "Sábado · 14 de noviembre · 2026",
+  timelineDate: "14 de noviembre",
+  calendarDate: "14 de noviembre de 2026",
+  hero: {
+    subtitle: "Nuestra boda",
+    quote: "El amor nos trajo hasta este momento y queremos celebrarlo rodeados de las personas que forman parte de nuestra historia.",
+    image: "/images/events/jessica-y-joan/image copy 3.png",
+  },
+  closingImage: "/images/events/jessica-y-joan/image copy.png",
+  ceremony: {
+    enabled: true,
+    name: "Parroquia de San Juan Bautista",
+    time: "1:00 p. m.",
+    address: "San Juan del Río, Querétaro",
+    mapsUrl: "",
+    image: "/images/events/jessica-y-joan/floral.png",
+  },
+  reception: {
+    enabled: true,
+    name: "Nuestra celebración",
+    time: "3:30 p. m.",
+    address: "Benito Juárez #46, Santa Cruz Nieto, San Juan del Río, Querétaro",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Benito+Juarez+46+Santa+Cruz+Nieto+San+Juan+del+Rio+Queretaro",
+    image: "/images/events/jessica-y-joan/floral.png",
+  },
+  gallery: [
+    { src: "/images/events/jessica-y-joan/image copy 4.png", alt: "Jessica y Joan, un recuerdo juntos", width: 739, height: 1314 },
+    { src: "/images/events/jessica-y-joan/image copy 2.png", alt: "Jessica y Joan celebrando juntos", width: 720, height: 1280 },
+    { src: "/images/events/jessica-y-joan/image copy.png", alt: "Un momento especial de Jessica y Joan", width: 720, height: 1280 },
+  ],
+  dressCode: {
+    title: "Colores reservados",
+    text: "Agradecemos elegir una tonalidad diferente para acompañarnos en este día especial.",
+  },
+  dressGroups: [{
+    title: "Código de vestimenta",
+    text: "Por favor, evita el rojo, el blanco y cualquier tonalidad similar al blanco.",
+    colors: [
+      { name: "Rojo", hex: "#a21f2d" },
+      { name: "Blanco", hex: "#ffffff" },
+      { name: "Marfil", hex: "#f1eadb" },
+    ],
+  }],
+  gifts: [],
+  bank: { enabled: false, bank: "", holder: "", account: "", clabe: "" },
+  contact: {
+    whatsapps: [
+      { phone: "427 184 4933", whatsapp: "https://wa.me/524271844933" },
+      { phone: "427 106 1944", whatsapp: "https://wa.me/524271061944" },
+    ],
+  },
+  music: { enabled: false, url: "", label: "Nuestra canción" },
+  itinerary: [
+    { time: "13:00", title: "Ceremonia religiosa", description: "Parroquia de San Juan Bautista" },
+    { time: "15:30", title: "Recepción", description: "Santa Cruz Nieto" },
+  ],
+  theme: {
+    primary: "#174ea6",
+    dark: "#082b68",
+    champagne: "#d5b66f",
+    cream: "#e5eefc",
+    ivory: "#ffffff",
+  },
+};
