@@ -25,7 +25,8 @@ export function LuisJavierInvitation({ wedding }) {
     if (opening) return;
     setOpening(true);
     audioRef.current?.play().catch(() => setPlaying(false));
-    timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({ top: 0, behavior: "instant" }); }, 2300);
+    const openingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000;
+    timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({ top: 0, behavior: "instant" }); }, openingDuration);
   };
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -72,9 +73,9 @@ export function LuisJavierInvitation({ wedding }) {
       <HeroSection wedding={view}/><WelcomeSection wedding={view}/><CountdownSection wedding={view}/>
       <section className={styles.venue} id="detalles">
         <Reveal className={styles.venueDecoration}><div className={styles.arch}><Image src={wedding.reception.image} width={1206} height={1487} sizes="(max-width:800px) 85vw, 550px" alt="Vegetación y arquitectura en tonos beige" /></div></Reveal>
-        <Reveal className={styles.venueCopy}><span className="eyebrow">Nuestra celebración</span><MapPin strokeWidth={1}/><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p><a className="button" href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>
+        <Reveal className={styles.venueCopy}><span className="eyebrow">Nuestra celebración</span><MapPin strokeWidth={1}/><h2>{wedding.reception.name}</h2><strong>Boda civil · 5:30 p. m.</strong><p>Nos gustaría contar contigo puntualmente a las 5:00 p. m., media hora antes de la ceremonia.</p><p>{wedding.reception.address}</p><a className="button" href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>
       </section>
-      <div className={styles.itinerary}><ScheduleSection wedding={view}/><Reveal><p className={styles.arrivalNote}>La ceremonia comienza a las 5:30 p. m. Agradecemos tu llegada media hora antes, a las 5:00 p. m.</p></Reveal></div>
+      <div className={styles.itinerary}><ScheduleSection wedding={view}/></div>
       <DressCodeSection wedding={view}/>
       <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Lluvia de sobres" title="Tu presencia es nuestro mejor regalo" copy={wedding.gifts[0].description}/></Reveal></section>
       <section className={`section ${styles.hotels}`}><Reveal><SectionHeading eyebrow="Hospedaje" title="Para tu estancia" copy="Te compartimos estas opciones de hospedaje."/></Reveal><div className={styles.hotelList}>{wedding.hotels.map((hotel) => <Reveal className={styles.hotel} key={hotel.name}><h3>{hotel.name}</h3><span className="eyebrow">Precio de referencia</span><p>{hotel.price}</p></Reveal>)}</div></section>

@@ -12,6 +12,11 @@
 .invitation :global(.dress .section-heading) {margin-bottom:2rem;}
 .invitation :global(.dress__note) {max-width:600px;margin:0 auto;}
 .invitation :global(.calendar),.invitation :global(.rsvp__aside) {background:#0f2d4a;}
+.invitation :global(.rsvp) {grid-template-columns:1fr;}
+.invitation :global(.rsvp__aside) {align-items:center;text-align:center;padding:4rem 1.5rem;min-height:0;}
+.invitation :global(.rsvp__aside h2) {font-size:clamp(3rem,6vw,5rem);}
+.invitation :global(.rsvp__aside p) {max-width:550px;}
+.invitation :global(.rsvp__form-wrap) {width:100%;max-width:850px;margin:0 auto;padding:4rem 1.5rem;}
 .invitation :global(.calendar) {color:#f8f6f1;}
 .invitation :global(.calendar h2),.invitation :global(.calendar .eyebrow),.invitation :global(.calendar svg) {color:#dcd2c6;}
 .invitation :global(.calendar p) {color:#f8f6f1;}
@@ -32,14 +37,13 @@
 .venueCopy p {margin:1.5rem 0 2rem;max-width:420px;}
 .contacts {display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin:1.5rem auto 2.5rem;}
 .itinerary {padding-bottom:4rem;}
-.arrivalNote {max-width:650px;margin:0 auto;padding:0 1.5rem;text-align:center;color:var(--text-soft);line-height:1.8;}
 .hotels {background:#ece5da;}
 .hotelList {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:1000px;margin:auto;}
 .hotel {padding:2.5rem 1.5rem;border:1px solid #a89a8680;background:var(--ivory);text-align:center;}
 .hotel h3 {font-family:var(--font-serif),serif;font-size:2rem;line-height:1.25;margin-bottom:1.5rem;}
 .hotel p {font-size:1.4rem;margin-top:1rem;}
 @media(max-width:800px){.hotelList{grid-template-columns:1fr;}.invitation :global(.schedule__line){flex-wrap:wrap;}}
-.intro {position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .35s ease 1.95s,visibility .35s ease 1.95s;}
+.intro {position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .6s ease 4.4s,visibility .6s ease 4.4s;}
 .introPhoto {object-fit:cover;object-position:center 65%;}
 .introShade {position:absolute;inset:0;background:#0f2d4ab8;backdrop-filter:blur(4px);}
 .introHeading {position:relative;z-index:1;text-align:center;color:#f8f6f1;padding:1rem;}
@@ -61,9 +65,9 @@
 .openButton {display:flex;align-items:center;gap:.8rem;border:1px solid #dcd2c6;background:#f8f6f1;color:#0f2d4a;padding:.9rem 1.5rem;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;}
 .opening {opacity:0;visibility:hidden;}
 .opening .introHeading {opacity:0;}
-.opening .closedEnvelope {animation:closedAway .3s ease forwards;}
-.opening .openEnvelopeLayer {animation:openArrive .3s .3s ease forwards;}
-.opening .letter {animation:letterEmerge 1s .6s ease forwards;}
+.opening .closedEnvelope {animation:closedAway .5s ease forwards;}
+.opening .openEnvelopeLayer {animation:openArrive .6s .5s ease forwards;}
+.opening .letter {animation:letterEmerge 1.8s 1.1s ease forwards;}
 .opening .openButton,.opening .sealButton {opacity:0;pointer-events:none;}
 @keyframes closedAway {to {opacity:0;}}
 @keyframes openArrive {to {opacity:1;}}

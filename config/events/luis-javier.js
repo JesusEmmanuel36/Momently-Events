@@ -38,7 +38,7 @@ export const luisJavier = {
     ],
   },
   itinerary: [
-    { time: "17:30", title: "Ceremonia", icon: "heart" },
+    { time: "17:30", title: "Boda civil", icon: "heart" },
     { time: "18:00", title: "Recepción", icon: "glass" },
     { time: "19:00", title: "Cena", icon: "glass" },
     { time: "20:30", title: "Primer baile", icon: "music" },
