@@ -1,0 +1,22 @@
+Generado con imagegen integrado. Referencias: arquitectura de image copy.png,
+image copy 2.png e image copy 3.png; paleta azul marino #0F2D4A,
+taupe #A89A86, beige #DCD2C6 y marfil #F8F6F1.
+Las referencias de arquitectura no se muestran como fotografías de los novios.
+
+envelope-closed.png
+Use case: product-mockup. Photorealistic luxurious wedding envelope closed, FRONT VIEW straight-on no perspective distortion, centered fully visible with generous transparent margin. Horizontal envelope body ivory textured cotton paper, navy blue #0F2D4A satin ribbon understated, taupe #A89A86 and beige #DCD2C6 subtle botanical debossing, round antique champagne wax seal precisely centered with engraved intertwined L and J monogram. Elegant contemporary architectural minimal wedding stationery, soft realistic shadow. No additional text, no florid clutter. Genuine transparent background, landscape 1536x1024. Envelope physical body about 80 percent canvas width and 58 percent height, center x50 y55.
+
+floral.png
+Use case: stylized-concept. Elegant restrained asymmetric wedding botanical arrangement of ivory white flowers, cream orchids, small beige dried stems, navy blue satin ribbon, delicate muted foliage. Inspired by minimalist warm limestone architecture and arched windows. Navy #0F2D4A taupe #A89A86 beige #DCD2C6 ivory #F8F6F1 palette. Photorealistic premium fine-art flowers, sparse airy natural composition fully visible horizontal 1536x1024, transparent background only, no vase, no text, no background panel.
++
+envelope-open.png (versión final)
+Use case: precise-object-edit. OPEN VERSION of reference wedding envelope. CRITICAL square canvas 1536x1536, NOT landscape. Straight FRONT VIEW centered. Keep SAME rectangular BODY proportions as closed reference: body width 1230px, body height 710px (ratio1.73), body corners approximately x153 y730 and x1383 y1440 on square1536canvas. Tall enough body, NOT flat squashed narrow envelope. Folded-open triangular top flap above body apex around x768 y260. Preserve ivory cotton botanical embossed paper, navy blue satin ribbon across lower body. No wax seal, no inserted card or text. Genuine transparent alpha outside object, no colored background, no haze. Whole envelope visible and centered, light soft shadow only immediately at edges. Square1536x1536.
+Dimensiones finales: cerrado 1536x1024, abierto 1254x1254.
+Cuerpo cerrado aproximadamente x154..1385, y143..858.
+Cuerpo abierto aproximadamente x64..1190, y500..1180.
+Ancho de capa abierta 88.8%, margen izquierdo -44.4%, bottom 0.
+La imagen conserva su proporción con width:100% y height:auto.
+
+Ajuste de posición: capa abierta bajada 41.6% de la altura de la escena.
+La hoja inicia dentro del cuerpo visible (bottom 12%) y se desplaza únicamente hacia arriba.
+Su borde inferior permanece por encima del borde inferior del sobre durante toda la animación.

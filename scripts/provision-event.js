@@ -1,3 +1,4 @@
+import { luisJavier } from "../config/events/luis-javier.js";
 import { lupitaRubenValeria } from "../config/events/lupita-ruben-valeria.js";
 import { estephanieXv } from "../config/events/estephanie-xv.js";
 import { almaDelia40 } from "../config/events/alma-delia-40.js";
@@ -109,6 +110,7 @@ templates[xochitlRuben.slug] = xochitlRuben;
 templates[jessicaJoan.slug] = jessicaJoan;
 templates[selfida60.slug] = selfida60;
 templates[claraSantiago.slug] = claraSantiago;
+templates[luisJavier.slug] = luisJavier;
 templates[azulAuroraXv.slug] = azulAuroraXv;
 templates[almaDelia40.slug] = almaDelia40;
 templates[estephanieXv.slug] = estephanieXv;
