@@ -122,7 +122,7 @@
 .invitation .familyGroups {display:grid;grid-template-columns:1fr;gap:3rem;max-width:680px;margin:3rem auto 0;}
 .familyGroups article + article {border-top:1px solid #c8a25a88;padding-top:3rem;}
 .invitation .familyGroups small {color:#997231;letter-spacing:.18em;}
-.invitation .familyGroups p {font-family:var(--font-script),cursive;font-weight:400;color:#071b49;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.4;text-wrap:balance;}
+.invitation .familyGroups p {font-family:var(--font-serif),serif;color:#071b49;font-size:clamp(1.2rem,3vw,1.8rem);line-height:1.6;text-wrap:balance;}
 .invitation .familyGroups,.invitation .familyGroups article {background:transparent;}
 .invitation .familyGroups article {padding:0;}
 .invitation .familyGroups article + article {padding-top:3rem;}
