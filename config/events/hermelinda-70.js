@@ -41,8 +41,8 @@ export const hermelinda70 = {
   },
   "gallery": [],
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/hermelinda70.mp3",
     "label": "Mi canción"
   },
   "gifts": [

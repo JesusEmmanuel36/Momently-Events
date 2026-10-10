@@ -36,7 +36,7 @@ export const valeriaJorge = {
     "name": "Salón de Eventos Mayo 23",
     "time": "2:00 p. m.",
     "address": "Calle Patos Canadienses #12, colonia Las Aves",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/dEduZZcYeqTqGzHs6?g_st=ic",
     "image": "/images/events/valeria-y-jorge/floral.png"
   },
   "gallery": [],
@@ -49,6 +49,10 @@ export const valeriaJorge = {
     {
       "title": "¿Team niño o team niña?",
       "description": "Si crees que será niño, te invitamos a traer productos de limpieza para bebé o toallitas húmedas. Si crees que será niña, puedes traer pañales. ¡Gracias por compartir esta ilusión con nosotros!"
+    },
+    {
+      "title": "Un detalle para los recién casados",
+      "description": "Tu presencia es nuestro mejor regalo. Si además deseas obsequiarnos algo como recién casados, recibiremos tu detalle con mucho cariño y gratitud."
     }
   ],
   "contact": {
