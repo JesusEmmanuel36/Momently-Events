@@ -45,7 +45,7 @@ export const emilyFernandaXv = {
   gallery: [],
   gifts: [],
   contact: {},
-  music: { enabled: false, url: "", label: "Mi canción" },
+  music: { enabled: true, url: "/audio/emilyfernanda.mp3", label: "Mi canción" },
   itinerary: [
     { time: "16:00", title: "Misa", description: "Templo de Nuestra Señora de la Merced", icon: "heart" },
     { time: "17:00", title: "Festejo", description: "Salón Garden Palace", icon: "glass" },
