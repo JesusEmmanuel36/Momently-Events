@@ -120,3 +120,12 @@
 .invitation .portraitCopy h1{text-transform:none;letter-spacing:normal;}
 @media(max-width:600px){.invitation .portraitCopy h1{font-size:2rem;}}
 .heroDate p{color:#fffcf8;}
+.heroVisual{position:relative;}
+.centeredTitle{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;text-align:center;padding:5rem 1rem 1rem;background:linear-gradient(180deg,transparent 15%,#42162645 45%,#421626b0 100%);}
+.invitation .centeredTitle h1{margin:0;color:#fffcf8;font-size:inherit;line-height:1.15;letter-spacing:normal;text-transform:none;text-shadow:0 2px 18px #421626;}
+.occasion{display:block;font-family:var(--font-serif),serif;font-size:clamp(1.4rem,3vw,2.3rem);}
+.celebrant{display:block;font-family:var(--font-script),cursive;font-size:clamp(3.5rem,8vw,6rem);font-weight:400;}
+.centeredTitle small{display:block;font:400 clamp(.75rem,1.4vw,1rem)/1.5 var(--font-sans),sans-serif;letter-spacing:.08em;}
+.centeredTitle i{display:block;font-family:var(--font-script),cursive;font-size:2rem;color:#d8b78b;margin:.25rem 0;}
+@media(max-width:600px){.portrait{height:560px;}.centeredTitle{padding-top:6rem;}}
+@media(prefers-reduced-motion:no-preference){.heroEntered .centeredTitle h1{animation:heroTextEnter 1.4s .3s both;}}
