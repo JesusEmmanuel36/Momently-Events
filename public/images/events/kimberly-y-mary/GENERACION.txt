@@ -1,0 +1,5 @@
+Herramienta: image_gen integrada; tres recursos individuales con transparencia alfa.
+Sobre cerrado: papel blanco marfil, cinta vino #771F36, relieve botánico y sello KM; vista frontal centrada.
+Sobre abierto: cuerpo rectangular, solapa triangular abierta hacia arriba, papel marfil y forro vino; vacío, sin texto ni carta, proporciones conservadas.
+Flores: rosas vino, dalias rojas oscuras, rosas marfil, eucalipto y brotes champaña; arreglo horizontal aislado con fondo transparente.
+Fotos originales en public/images/kimberly-y-mary/, conservadas sin edición.
