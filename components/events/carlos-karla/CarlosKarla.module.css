@@ -31,7 +31,7 @@
 .arch img {display:block;width:100%;height:100%;object-fit:cover;}
 .arch > span {font-family:var(--font-serif),serif;font-size:3rem;letter-spacing:.2em;margin-top:1rem;}
 .arch i {font-family:var(--font-script),cursive;color:#ad593d;}
-.venueCopy > svg {margin:1.5rem 0;color:#ad593d;}
+.venueCopy > svg {display:block;margin:1.5rem auto;color:#ad593d;}
 .venueCopy h2 {font-size:clamp(3rem,6vw,5rem);line-height:1;margin-bottom:1.5rem;}
 .venueCopy strong {font-size:1rem;letter-spacing:.1em;}
 .venueCopy p {margin:1.5rem 0 2rem;max-width:420px;}
@@ -93,3 +93,7 @@
 .fullNames{text-align:center;padding:0 1.5rem 4rem;font:400 clamp(1.5rem,4vw,2.4rem)/1.4 var(--font-serif),serif;}
 .fullNames i{color:#ad593d;font-family:var(--font-script),cursive;}
 @media(max-width:800px){.photoGrid{grid-template-columns:1fr;}.arch{min-height:280px;}.invitation :global(.hero__image img){object-position:45% center;}}
+
+.openEnvelopeLayer{width:102%;margin-left:-51%;bottom:5%;}
+.sealButton{top:61%;}
+.invitation :global(.hero__image img),.invitation :global(.closing img),.introPhoto{object-position:center top;}
