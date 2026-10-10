@@ -102,3 +102,33 @@
 .princessSection {background:radial-gradient(ellipse at left,#183c9b55,transparent 65%),#07152d;border:1px solid #c8a25a88;border-radius:16px;margin:3rem auto;}
 .princessSection article h2,.princessSection article span {color:#dfc791;}
 .princessSection article p {color:#edf0f8;}
+
+/* Decorative edges stay outside the text area at every screen width. */
+.invitation .storyFrame {position:relative;max-width:960px;margin:2rem auto;padding:clamp(8rem,16vw,11rem) clamp(3rem,10vw,8rem);background-image:url('/images/events/xv-estephanie/thin-story-frame.png');background-size:100% 100%;background-repeat:no-repeat;}
+.invitation .storyFrame::before,.invitation .storyFrame::after {display:none;}
+.invitation .storyFrame h2 {font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;text-wrap:balance;}
+.invitation .familyPortrait {background-color:#fff5df;}
+.invitation .familyGroups {display:grid;grid-template-columns:1fr;gap:3rem;max-width:680px;margin:3rem auto 0;}
+.familyGroups article + article {border-top:1px solid #c8a25a88;padding-top:3rem;}
+.invitation .familyGroups small {color:#997231;letter-spacing:.18em;}
+.invitation .familyGroups p {font-family:var(--font-serif),serif;color:#071b49;font-size:clamp(1.2rem,3vw,1.8rem);line-height:1.6;text-wrap:balance;}
+.invitation .familyGroups,.invitation .familyGroups article {background:transparent;}
+.invitation .familyGroups article {padding:0;}
+.invitation .familyGroups article + article {padding-top:3rem;}
+.invitation .royalSection {background-color:#103a91;color:#fffaf0;text-align:center;}
+.invitation .royalSection {background-image:url('/images/events/xv-estephanie/thin-story-frame.png'),radial-gradient(circle at 20% 30%,#ffe6a0aa 0 1px,transparent 3px),radial-gradient(circle at 80% 65%,#ffe6a088 0 1px,transparent 3px),radial-gradient(ellipse at top,#2456b8,transparent 70%);background-size:100% 100%,73px 113px,127px 149px,100% 100%;background-repeat:no-repeat,repeat,repeat,no-repeat;}
+.invitation .royalSection > span,.invitation .royalSection h2,.invitation .royalSection > strong {color:#f1d28a;}
+.invitation .royalSection > p,.royalSection .reservedColors figcaption {color:#fffaf0;}
+.royalSection > span {text-transform:uppercase;font-size:.7rem;letter-spacing:.25em;}
+.royalSection > p {max-width:650px;margin:1.5rem auto;line-height:1.9;}
+.royalSection > strong {display:block;font-size:1.3rem;}
+.invitation .royalVenue {max-width:none;margin:0;background-size:min(100%,960px) 100%,73px 113px,127px 149px,100% 100%;background-position:center;}
+.dwarfSilhouettes {display:block;width:min(100%,650px);height:auto;margin:1rem auto 0;}
+.invitation .castleCountdown {width:min(100%,900px);min-height:0;aspect-ratio:2/3;margin:0 auto;padding:12% 8% 16%;display:flex;flex-direction:column;justify-content:space-between;background:#0b2c69 url('/images/events/xv-estephanie/countdown-castle.png') center/100% 100% no-repeat;}
+.invitation .castleCountdown::before {display:none;}
+.castleCountdown > span {position:relative;text-shadow:0 2px 12px #07152d;font-size:clamp(.6rem,1.5vw,.9rem);letter-spacing:.2em;}
+.countdownCopy {width:100%;text-shadow:0 2px 12px #07152d;}
+.invitation .countdownCopy h2 {font-size:clamp(2.4rem,6vw,4.5rem);margin:0 0 1.5rem;}
+.invitation .countdownCopy strong {font-size:clamp(2rem,5vw,4rem);color:#f1d28a;}
+.invitation .countdownCopy small {font-size:clamp(.45rem,1vw,.7rem);letter-spacing:.08em;}
+@media(max-width:600px){.invitation .storyFrame{margin:0;padding:7rem 2.5rem;background-size:100% 100%;}.invitation .familyGroups{gap:2rem;margin-top:2rem;}.familyGroups article + article{padding-top:2rem;}.invitation .castleCountdown{padding:13% 8% 17%;}.invitation .countdownCopy h2{font-size:2.1rem;margin-bottom:1rem;}}

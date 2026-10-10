@@ -1,0 +1,14 @@
+Generadas con imagegen integrado para las secciones de XV Estephanie.
+Texto y cronómetro se renderizan en HTML, no forman parte de las imágenes.
+
+thin-story-frame.png
+Portrait decorative invitation frame, slender gold filigree border, small red roses and navy leaves in four corners, small polished red apple under a delicate gold crown at top center and tiny red apple at bottom center. Entire center is transparent, 80 percent width and 75 percent height completely empty for HTML text. Elegant fairytale royal blue gold red palette, fine restrained ornaments, no letters no text no numbers. Transparent background, portrait 1024x1536.
+
+countdown-castle.png
+Portrait elegant fairytale invitation background 1024x1536. Magnificent illuminated castle with royal blue roofs at sunset, castle occupies middle upper half between 18 and 62 percent height. Royal blue sky gold sparkling fairy trail. Bottom 35 percent is plain deep royal blue empty space for live countdown HTML, top 12 percent empty royal blue for heading. Very thin gold frame at edges, small red roses navy leaves at corners, polished red apple at bottom center. No text no letters no numbers no typography. Beautiful refined realistic magical illustration.
+
+seven-dwarfs.png
+Exactly seven distinct fairytale dwarf silhouettes walking in a single horizontal row, each with pointed cap beard short body and boots, varied poses, all seven full bodies separated and visible. Solid antique gold silhouettes only, no internal facial detail, no scene, no other objects, no text, transparent background. Elegant silhouette artwork for royal blue princess invitation. Wide landscape composition.
++
+Edición final del marco:
+Edit this decorative border. Preserve the gold thin border, red roses navy leaves red apples crown exactly. Remove ALL white cream gray gold background haze and gradient behind ornaments. Center and all empty space must have alpha zero, entirely transparent. Only the actual ornaments and fine outline should be opaque. No white backdrop or white center. This will be placed over royal blue CSS background. Transparent background.
