@@ -1,0 +1,7 @@
+Herramienta: imagegen integrada. Castillo y corona dorada independientes, con fondo transparente.
+
+castle.png
+Use case: stylized-concept. One standalone photorealistic fantasy fairytale princess castle matching royal blue and antique gold invitation. Elegant medieval spires with royal blue roofs, richly detailed muted gold trim, warm lit windows, ivory stone walls shaded navy, compact centered entire castle visible from slightly front angle. True transparent background, no sky, no landscape, no frame, no people, no text, no roses. High resolution square, generous empty margins. Sophisticated magical yet realistic miniature architectural cutout.
+
+princess-crown.png
+Use case: product-mockup. One standalone photorealistic princess tiara crown of polished antique gold, elegant delicate symmetrical scrollwork, sparkling small clear diamonds and rich royal blue sapphire accents, regal refined feminine shape, front view with slight visible depth, centered whole crown visible. True transparent background, no cushion, no background, no text, no extra objects, no collage. Landscape high resolution. Soft tiny shadow and realistic fine metal detail.

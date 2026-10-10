@@ -1,0 +1,62 @@
+
+.invitation .hero {position:relative;min-height:100svh;display:grid;place-items:center;background:#07152d;overflow:hidden;text-align:center;}
+.heroImage {object-fit:cover;object-position:center;}
+.heroShade {position:absolute;inset:0;background:linear-gradient(180deg,#07152d33,#07152d1a 60%,#07152d88);}
+.heroCopy {position:relative;z-index:1;padding:3rem 1rem 15rem;width:min(100%,900px);color:#dfc791;}
+.heroCopy > svg {display:block;margin:0 auto 1rem;width:42px;height:42px;stroke-width:1;}
+.heroCopy > span {display:block;text-transform:uppercase;letter-spacing:.25em;font-size:.65rem;}
+.age {display:block;font:400 clamp(4.5rem,13vw,8rem)/1 var(--font-serif),serif;color:#dfc791;margin:1rem auto;text-shadow:0 2px 16px #000;}
+.heroCopy h1 {font:400 clamp(3rem,9vw,6rem)/1.2 var(--font-script),cursive;color:#fffaf0;margin:1rem 0;text-shadow:0 2px 14px #07152d;}
+.heroCopy p {font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.8;color:#dfc791;}
+.heroCopy small {display:block;margin-top:.7rem;letter-spacing:.1em;color:#fffaf0;}
+.invitation .hero > a {color:#dfc791;border-color:#dfc791;}
+.crownIcon {display:block;width:38px;height:38px;margin:0 auto 1.5rem;color:var(--gold);stroke-width:1.2;}
+.invitation .fullNames {font-size:clamp(1.8rem,6vw,3rem);line-height:1.3;}
+.invitation .letter {width:60%;left:20%;background:linear-gradient(145deg,#fffaf0,#eef1f9);}
+.invitation .letter h2 {font-size:clamp(1.6rem,5vw,2.8rem)!important;line-height:1.25!important;}
+.invitation .openEnvelopeLayer {inset:auto!important;left:50%!important;bottom:9.02677%!important;width:112.36863%;height:auto;margin-left:-56.18432%;aspect-ratio:3/2;}
+.openEnvelopeArtwork {display:block;width:100%;height:auto;max-width:none;}
+.invitation .openFront {clip-path:inset(59% 0 0 0);}
+.invitation button[class*="openLabel"] {background:#fffaf0;color:#07152d;}
+.invitation .venueArtwork {background:linear-gradient(135deg,#eef1f9,#fffaf0);}
+.invitation .venueArtwork img {object-fit:contain;padding:1.5rem;}
+.invitation .countdown {background:linear-gradient(140deg,#07152d,#183c9b);color:#fffaf0;}
+.invitation .countdown > span,.invitation .countdown h2,.invitation .countdown strong {color:#dfc791;}
+.invitation .countdown small {color:#fffaf0;}
+.invitation .closing {background:#07152d;}
+.invitation .closing img {object-fit:cover;}
+.invitation .closing > div {background:#07152d99;}
+.invitation .photoGrid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:1rem;}
+.invitation .photoGrid button {aspect-ratio:3/4!important;grid-column:auto!important;grid-row:auto!important;}
+@media(max-width:600px){.heroCopy{padding-bottom:12rem;}.invitation .letter{height:60%;bottom:18%;}.invitation .letter h2{font-size:1.8rem!important;}}
+
+.invitation button[class*="sealAction"] {left:50%;top:55%;}
+
+.heroCrown {display:block;width:clamp(120px,25vw,200px);height:auto;margin:0 auto .75rem;object-fit:contain;}
+.castleArtwork {display:block;width:min(65vw,330px);height:auto;object-fit:contain;margin:0 auto 2rem;}
+.reservedColors {display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;margin:2rem auto 0;}
+.reservedColors figure {display:grid;justify-items:center;gap:.75rem;margin:0;}
+.reservedColors i {display:block;width:52px;height:52px;border-radius:50%;border:2px solid var(--gold-soft);box-shadow:0 4px 12px #07152d20;}
+.reservedColors figcaption {font-size:.75rem;color:var(--charcoal);}
+.invitation section[class*="timeline"] article > svg {display:block;width:38px;height:38px;margin:0 auto 1rem;color:var(--gold);stroke:currentColor;stroke-width:1.3;}
+@media(max-width:600px){.heroCopy{padding-top:1.5rem;padding-bottom:10rem;}.age{font-size:4.5rem;margin:.5rem auto;}.heroCopy h1{margin:.6rem 0;}}
+
+@media (prefers-reduced-motion: no-preference) {
+  .invitation main > [data-je-reveal] > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .85s ease var(--reveal-delay, 0ms), transform .85s cubic-bezier(.2,.72,.2,1) var(--reveal-delay, 0ms);
+  }
+  .invitation main > [data-scroll-visible="true"] > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .invitation main > [data-scroll-visible="true"] .castleArtwork,
+  .invitation main > [data-scroll-visible="true"] .venueArtwork img {
+    animation: decorationReveal 1.4s ease both;
+  }
+}
+@keyframes decorationReveal {
+  from { opacity: 0; transform: translateY(22px) scale(.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

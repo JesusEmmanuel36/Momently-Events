@@ -1,0 +1,13 @@
+Herramienta: imagegen integrada. Boda y tres años, blanco rojo plata. Portada con anillos y pastel; flores y sobres con transparencia.
+
+hero.png
+Use case: product-mockup. High resolution portrait 1024x1536 photorealistic elegant joint WEDDING and THIRD BIRTHDAY invitation cover. White silk backdrop with two polished silver wedding rings at bottom left and a delicate small white birthday cake with red ribbon and elegant silver numeral 3 cake topper at bottom right. Beautiful deep red roses and ivory white flowers frame bottom corners, silver foliage. Sophisticated warm neutral lighting, white ivory background with ample quiet empty space in top two thirds for typography. No people, no other text, no gold, no baptism symbols. Palette white, crimson red #a82336, silver #b8bdc7. One cohesive tasteful photograph, no collage.
+
+floral.png
+Use case: product-mockup. One isolated horizontal photorealistic floral arrangement, luxurious crimson red roses, ivory white roses, delicate silver eucalyptus leaves and fine silver twigs. Compact natural asymmetrical bouquet fully visible with margins. White red silver elegant family celebration palette. True transparent background, no vase, no other objects, no text, no collage. Landscape1536x1024.
+
+envelope-closed.png
+Use case: product-mockup. CLOSED horizontal invitation envelope centered and symmetric front-on. Photorealistic3D pearl white textured paper with crimson red delicate floral corner embossing and silver fine ornamental border. Closed flap, round polished silver wax seal centered engraved LR. Landscape1536x1024 true transparent background, entire envelope with generous margins. No gold, no perspective angle, no tilt, no other text, no scenery, no extra objects.
+
+envelope-open.png
+Use case: product-mockup. OPEN horizontal invitation envelope centered and symmetric front-on. Photorealistic3D pearl white textured paper with crimson red delicate floral corner embossing and silver fine ornamental border, red interior lining. Triangular flap raised behind, empty pocket without card or seal. Landscape1536x1024 true transparent background, entire object and raised flap visible with generous margins, pocket body at lower half. No gold, no perspective angle, no tilt, no text, no scenery, no extra objects.

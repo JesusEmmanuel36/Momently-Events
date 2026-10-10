@@ -1,0 +1,13 @@
+Herramienta: imagegen integrada. Temática princesa, castillo nocturno, rosas azul rey y dorado. Adornos y sobres con transparencia.
+
+hero.png
+Use case: stylized-concept. Portrait high resolution 1024x1536 princess quinceanera invitation cover, sophisticated cinematic photorealistic fantasy. Royal blue and midnight navy enchanted castle on right lower third with warmly lit golden windows, navy blue roses with antique gold leaves framing bottom and corners, tiny warm gold stars scattered subtly in deep blue sky. A subtle golden crown ornament near bottom, fairytale elegance. Central top two thirds is spacious dark blue night sky for overlaid invitation typography. No people, no text, no numbers, no frame cutting center, no collage. Royal blue #183c9b, midnight #07152d, antique gold #c8a25a.
+
+floral.png
+Use case: product-mockup. Isolated premium photorealistic floral decoration for royal blue and gold princess quinceanera. One horizontal organic bouquet of deep royal blue roses, small blue blossoms, antique gold metallic leaves, delicate golden twigs, elegant refined arrangement. Entire bouquet visible with margins, real transparent background, soft tiny shadow. No vase, no background panel, no text, no castle, no collage. Landscape 1536x1024.
+
+envelope-closed.png
+Use case: product-mockup. Photorealistic 3D CLOSED invitation envelope viewed front-on, perfectly centered horizontal symmetrical body, landscape1536x1024, transparent background. Luxurious royal blue paper, midnight blue shadows, exquisite fine antique gold fairytale filigree borders and small crown corner ornaments. Flap closed, round gold wax seal centered on flap engraved exactly EG. No other text, no card, no scenery, no extra objects. Whole envelope visible with transparent padding, no tilt, no perspective angle.
+
+envelope-open.png
+Use case: product-mockup. Photorealistic 3D OPEN invitation envelope viewed front-on, perfectly centered horizontal symmetric pocket body, flap lifted symmetrically upward behind. Landscape1536x1024 transparent background. Luxurious royal blue paper, midnight blue interior, exquisite fine antique gold fairytale filigree borders and small crown corner ornaments. Empty pocket, no card, no wax seal, no text, no scenery, no extra objects. Whole object including raised flap visible with transparent margins. Body occupies lower half of canvas, centered, no tilt, no perspective angle, no squashing.
