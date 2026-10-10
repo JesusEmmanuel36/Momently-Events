@@ -41,8 +41,8 @@ export const valeriaJorge = {
   },
   "gallery": [],
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/valeriayjorge.mp3",
     "label": "Solo para ti · Camila"
   },
   "gifts": [

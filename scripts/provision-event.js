@@ -1,3 +1,4 @@
+import { kendraJoseSury } from "../config/events/kendra-jose-sury.js";
 import { hermelinda70 } from "../config/events/hermelinda-70.js";
 import { valeriaJorge } from "../config/events/valeria-jorge.js";
 import { gabrielBautizo } from "../config/events/gabriel-bautizo.js";
@@ -118,6 +119,7 @@ templates[claraSantiago.slug] = claraSantiago;
 templates[luisJavier.slug] = luisJavier;
 templates[carlosKarla.slug] = carlosKarla;
 templates[hermelinda70.slug] = hermelinda70;
+templates[kendraJoseSury.slug] = kendraJoseSury;
 templates[valeriaJorge.slug] = valeriaJorge;
 templates[gabrielBautizo.slug] = gabrielBautizo;
 templates[kimberlyMary.slug] = kimberlyMary;

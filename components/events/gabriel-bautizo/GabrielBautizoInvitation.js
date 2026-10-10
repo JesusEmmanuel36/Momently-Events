@@ -46,7 +46,7 @@ export function GabrielBautizoInvitation({ wedding }) {
     heroSubtitle: wedding.hero.subtitle, heroQuote: wedding.hero.quote,
     dateLong: wedding.dateDisplay,
     welcomeTitle: "Un día lleno de bendiciones",
-    welcome: ["Con alegría y gratitud a Dios, celebraremos el bautizo de Gabriel Alexandro Robledo García.", "Nos encantará compartir este momento contigo y guardar juntos un recuerdo lleno de amor."],
+    welcome: ["Con alegría y gratitud a Dios, celebraremos el bautizo de nuestro hijo.", "Nos encantará compartir este momento contigo y guardar juntos un recuerdo lleno de amor."],
     itinerary: wedding.itinerary.map((item) => ({ ...item, time: `${Number(item.time.split(":")[0]) - 12}:${item.time.split(":")[1]} p. m.` })),
     rsvpMessageLabel: "Mensaje para Gabriel y su familia",
     rsvpSettings: { maxCompanions: wedding.maxCompanions, askMenuPreference: false, askAllergies: false, askMessage: true },
