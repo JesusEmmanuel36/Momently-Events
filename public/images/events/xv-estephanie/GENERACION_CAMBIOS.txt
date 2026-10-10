@@ -1,0 +1,10 @@
+Herramienta: imagegen integrada. Portada con manzanas rojas y destellos dorados; princesa con manzana y marco de espejo antiguo como recursos independientes.
+
+hero-v2.png
+Use case: stylized-concept. High resolution portrait 1024x1536 cinematic royal blue red and gold fairytale quinceanera background. Midnight blue starry sky with bright tiny golden sparkle lights and glamorous gold glitter bokeh. Dark royal blue castle at lower right with golden lit windows, blue roses and antique gold leaves framing corners. Glossy ruby red apples with gold ornamental leaves along bottom corners as bright red accents. Central upper two thirds spacious dark blue for overlaid readable invitation lettering. No people, no text, no numbers, no collage. Sophisticated photorealistic magical scene, not cartoon.
+
+princess-apple.png
+Use case: stylized-concept. One isolated graceful fairytale princess holding a glossy bright ruby red apple in one hand near her chest. Young adult princess with dark hair in elegant updo, fine gold tiara, royal blue gown with subtle gold embroidery. Full figure visible from head to gown hem, soft dramatic elegant studio light, photorealistic fantasy editorial style. Gold sparkle highlights near apple. Genuine transparent background with no scenery, no frame, no text. Entire figure centered and fully visible, high resolution portrait. Distinct generic princess, no specific actor likeness.
+
+mirror-frame.png
+Use case: product-mockup. Antique ornate GOLD mirror FRAME ONLY, tall rectangular with rounded arch top, baroque fine scrollwork and crown-shaped crest, delicate warm gold polished metal, refined fairytale princess style. Wide clean completely transparent empty interior intended to contain a four-event invitation itinerary in HTML, not a reflective mirror. Entire outer frame visible, slender border occupying only outer 12 percent, portrait 1024x1536. Genuine transparent background and transparent central opening, no glass, no reflections, no text, no extra objects. Symmetric front-on full view.

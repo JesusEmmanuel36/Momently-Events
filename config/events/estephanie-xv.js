@@ -1,13 +1,13 @@
 export const estephanieXv = {
   "slug": "xv-estephanie",
   "templateKey": "estephanie-princess-blue-gold",
-  "eventTitle": "XV años de Estephanie García",
+  "eventTitle": "XV años de Estephanie Sabrina García Franco",
   "couple": {
-    "partner1": "Estephanie García",
+    "partner1": "Estephanie Sabrina García Franco",
     "partner2": "XV años"
   },
   "displayNames": {
-    "partner1": "Estephanie García",
+    "partner1": "Estephanie Sabrina García Franco",
     "partner2": ""
   },
   "initials": "EG",
@@ -21,9 +21,9 @@ export const estephanieXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Será una noche mágica, llena de alegría, sueños cumplidos y personas que hacen mi vida especial. Me encantará compartir contigo este momento tan esperado.",
-    "image": "/images/events/xv-estephanie/hero.png"
+    "image": "/images/events/xv-estephanie/hero-v2.png"
   },
-  "closingImage": "/images/events/xv-estephanie/hero.png",
+  "closingImage": "/images/events/xv-estephanie/hero-v2.png",
   "ceremony": {
     "enabled": false,
     "name": "",
@@ -109,12 +109,8 @@ export const estephanieXv = {
   },
   "dressCode": {
     "title": "Formal",
-    "text": "El rojo, el azul rey y el dorado están reservados exclusivamente para la quinceañera. Gracias por elegir otros tonos para acompañarme en esta noche especial.",
+    "text": "El azul rey y el dorado están reservados exclusivamente para la quinceañera. Gracias por elegir otros tonos para acompañarme en esta noche especial.",
     "reservedColors": [
-      {
-        "name": "Rojo",
-        "value": "#a91729"
-      },
       {
         "name": "Azul rey",
         "value": "#183c9b"

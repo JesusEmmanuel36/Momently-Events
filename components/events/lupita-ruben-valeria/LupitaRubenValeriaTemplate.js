@@ -198,10 +198,10 @@ export function LupitaRubenValeriaTemplate({ wedding, assets = defaultAssets, cu
 
       <section className={customStyles.ceremonySection} data-je-reveal>
         <Image src={floral} width={560} height={373} alt="" aria-hidden="true"/>
-        <article><Church aria-hidden="true"/><span>Misa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p></article>
+        <article><Church aria-hidden="true"/><span>Misa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p>{wedding.ceremony.mapsUrl && <a className={customStyles.locationButton} href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={18}/></a>}</article>
       </section>
 
-      <section className={customStyles.receptionSection} data-je-reveal><Sparkles aria-hidden="true"/><span>Compartamos esta alegría</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong>{wedding.reception.address && <p>{wedding.reception.address}</p>}<p>Dos motivos para dar gracias y un día especial para compartir en familia.</p></section>
+      <section className={customStyles.receptionSection} data-je-reveal><Sparkles aria-hidden="true"/><span>Compartamos esta alegría</span><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong>{wedding.reception.address && <p>{wedding.reception.address}</p>}<p>Dos motivos para dar gracias y un día especial para compartir en familia.</p>{wedding.reception.mapsUrl && <a className={customStyles.locationButton} href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={18}/></a>}</section>
 
       {wedding.itinerary.length > 0 && <section className={styles.timeline} data-je-reveal><span>{wedding.timelineDate || "28 de noviembre"}</span><h2>Un día, dos grandes alegrías</h2><div>{wedding.itinerary.map((item) => { const [time, period] = displayTime(item.time); return <article key={`${item.time}-${item.title}`}><time>{time}</time><small>{period}</small><i /><h3>{item.title}</h3><p>{item.description}</p></article>; })}</div></section>}
 

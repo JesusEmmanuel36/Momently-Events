@@ -66,3 +66,5 @@
 .invitation main > [data-je-reveal] > * {opacity:0;transform:translateY(30px);transition:opacity .85s ease var(--reveal-delay,0ms),transform .85s cubic-bezier(.2,.72,.2,1) var(--reveal-delay,0ms);}
 .invitation main > [data-scroll-visible="true"] > * {opacity:1;transform:translateY(0);}
 }
+
+.locationButton {display:inline-flex;align-items:center;justify-content:center;gap:.7rem;margin-top:1.5rem;padding:1rem 1.5rem;border:1px solid var(--gold);border-radius:5px;color:var(--coral);background:var(--paper);text-decoration:none;}

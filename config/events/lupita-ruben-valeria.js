@@ -1,14 +1,14 @@
 export const lupitaRubenValeria = {
   "slug": "lupita-y-ruben-valeria",
   "templateKey": "lupita-ruben-wedding-valeria-birthday",
-  "eventTitle": "Boda de Lupita y Rubén · 3 años de Valeria",
+  "eventTitle": "Boda de Rubén y Lupita · 3 años de Valeria",
   "couple": {
-    "partner1": "Lupita",
-    "partner2": "Rubén"
+    "partner1": "Rubén",
+    "partner2": "Lupita"
   },
   "displayNames": {
-    "partner1": "Lupita",
-    "partner2": "Rubén"
+    "partner1": "Rubén",
+    "partner2": "Lupita"
   },
   "birthday": {
     "name": "Valeria Muñoz",
@@ -33,7 +33,7 @@ export const lupitaRubenValeria = {
     "name": "Iglesia Virgen de la Luz",
     "time": "12:00 p. m.",
     "address": "Estancia de los Sapos, Guanajuato",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/awTNU9tuRQtq6dnq8",
     "image": "/images/events/lupita-y-ruben-valeria/floral.png"
   },
   "reception": {
@@ -41,7 +41,7 @@ export const lupitaRubenValeria = {
     "name": "Quinta Chayito",
     "time": "Después de misa",
     "address": "Guanajuato",
-    "mapsUrl": "",
+    "mapsUrl": "https://maps.app.goo.gl/eyjQsvJudz6vLffL6",
     "image": "/images/events/lupita-y-ruben-valeria/floral.png"
   },
   "gallery": [],

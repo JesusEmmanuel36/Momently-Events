@@ -1,0 +1,3 @@
+Herramienta: imagegen integrada. Referencia: recorte de princesa compartido por el usuario.
+Prompt: Reproducir princesa ilustrada de perfil hacia la derecha, rostro y piel en silueta casi negra con contorno dorado luminoso, cabello recogido y tiara dorada, vestido azul rey con destellos y mangas cortas abombadas, brazo flexionado sosteniendo una manzana roja brillante frente al rostro. Figura completa, fondo transparente, sin texto ni marco; evitar rostro fotorealista.
+Archivo: princess-apple-v2.png
