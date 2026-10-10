@@ -22,13 +22,13 @@ export const luisJavier = {
   },
   ceremony: { enabled: false, name: "", time: "", address: "", mapsUrl: "", image: "" },
   reception: {
-    enabled: true, name: "Casa Huaipe", time: "5:00 p. m.", address,
+    enabled: true, name: "Casa Huaipe", time: "6:00 p. m.", address,
     mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Casa Huaipe, ${address}`)}`,
-    image: `${images}/floral.png`,
+    image: `${images}/image copy.png`,
   },
   gallery: [],
   music: { enabled: true, url: "/audio/luisyjavier.mp3", label: "A Sky Full of Stars" },
-  dressCode: { title: "Formal elegante", text: "Acompáñanos con tu mejor estilo para celebrar una tarde inolvidable." },
+  dressCode: { title: "Formal elegante", text: "Te sugerimos tonos azul marino, taupe, beige o marfil para acompañarnos con tu mejor estilo.", colors: ["#0F2D4A", "#A89A86", "#DCD2C6", "#F8F6F1"] },
   gifts: [{ title: "Lluvia de sobres", description: "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, recibiremos con mucho cariño tu obsequio en efectivo dentro de un sobre." }],
   contact: {
     phone: "3131123867", whatsapp: "https://wa.me/523131123867",
@@ -37,6 +37,16 @@ export const luisJavier = {
       { phone: "312 594 4529", whatsapp: "https://wa.me/523125944529" },
     ],
   },
-  itinerary: [],
+  itinerary: [
+    { time: "17:30", title: "Ceremonia", icon: "heart" },
+    { time: "18:00", title: "Recepción", icon: "glass" },
+    { time: "19:00", title: "Cena", icon: "glass" },
+    { time: "20:30", title: "Primer baile", icon: "music" },
+    { time: "21:00", title: "¡A celebrar!", icon: "sparkles" },
+  ],
+  hotels: [
+    { name: "Hotel boutique Hacienda del Gobernador", price: "$1,235.00 MXN" },
+    { name: "Concierge Plaza la Villa", price: "$1,387.00 MXN" },
+  ],
   theme: { primary: "#0F2D4A", dark: "#0F2D4A", champagne: "#DCD2C6", cream: "#F8F6F1", ivory: "#F8F6F1", rose: "#A89A86", sage: "#A89A86" },
 };

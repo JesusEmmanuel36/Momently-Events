@@ -7,7 +7,8 @@
 .invitation :global(.welcome) {position:relative;}
 .invitation :global(.welcome)::before {content:"";display:block;width:70px;height:90px;border:1px solid #a89a8688;border-bottom:0;border-radius:60px 60px 0 0;margin:0 auto 2rem;}
 .invitation :global(.dress) {background:linear-gradient(140deg,#0f2d4a,#183b59);}
-.invitation :global(.dress__colors) {display:none;}
+.invitation :global(.dress__colors) {display:flex;justify-content:center;gap:1rem;margin:2rem auto;}
+.invitation :global(.dress__colors span) {border:1px solid #dcd2c6;}
 .invitation :global(.dress .section-heading) {margin-bottom:2rem;}
 .invitation :global(.dress__note) {max-width:600px;margin:0 auto;}
 .invitation :global(.calendar),.invitation :global(.rsvp__aside) {background:#0f2d4a;}
@@ -21,8 +22,8 @@
 .invitation :global(.music-player) {background:#0f2d4af2;border-color:#dcd2c6;}
 .venue {display:grid;grid-template-columns:1fr 1fr;align-items:center;background:linear-gradient(130deg,#ece5da,#f8f6f1);padding:5rem max(1.25rem,calc((100vw - 1200px)/2));gap:4rem;}
 .venueDecoration {min-width:0;}
-.arch {position:relative;min-height:480px;border:1px solid #a89a8677;border-radius:50% 50% 0 0;background:linear-gradient(90deg,#dcd2c644,#f8f6f1);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;}
-.arch img {width:100%;height:auto;object-fit:contain;}
+.arch {position:relative;border:1px solid #a89a8677;border-radius:50% 50% 0 0;overflow:hidden;aspect-ratio:4/5;}
+.arch img {display:block;width:100%;height:100%;object-fit:cover;}
 .arch > span {font-family:var(--font-serif),serif;font-size:3rem;letter-spacing:.2em;margin-top:1rem;}
 .arch i {font-family:var(--font-script),cursive;color:#a89a86;}
 .venueCopy > svg {margin:1.5rem 0;color:#817563;}
@@ -30,6 +31,14 @@
 .venueCopy strong {font-size:1rem;letter-spacing:.1em;}
 .venueCopy p {margin:1.5rem 0 2rem;max-width:420px;}
 .contacts {display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin:1.5rem auto 2.5rem;}
+.itinerary {padding-bottom:4rem;}
+.arrivalNote {max-width:650px;margin:0 auto;padding:0 1.5rem;text-align:center;color:var(--text-soft);line-height:1.8;}
+.hotels {background:#ece5da;}
+.hotelList {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:1000px;margin:auto;}
+.hotel {padding:2.5rem 1.5rem;border:1px solid #a89a8680;background:var(--ivory);text-align:center;}
+.hotel h3 {font-family:var(--font-serif),serif;font-size:2rem;line-height:1.25;margin-bottom:1.5rem;}
+.hotel p {font-size:1.4rem;margin-top:1rem;}
+@media(max-width:800px){.hotelList{grid-template-columns:1fr;}.invitation :global(.schedule__line){flex-wrap:wrap;}}
 .intro {position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .35s ease 1.95s,visibility .35s ease 1.95s;}
 .introPhoto {object-fit:cover;object-position:center 65%;}
 .introShade {position:absolute;inset:0;background:#0f2d4ab8;backdrop-filter:blur(4px);}

@@ -5,7 +5,7 @@ import { CalendarDays, ChevronDown, Heart, Mail, MapPin, MessageCircle, Pause, P
 import { useEffect, useRef, useState } from "react";
 import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection } from "@/components/sections/CountdownStory";
-import { DressCodeSection } from "@/components/sections/EventDetails";
+import { DressCodeSection, ScheduleSection } from "@/components/sections/EventDetails";
 import { RSVPSection } from "@/components/sections/GuestActions";
 import { Reveal, SectionHeading } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";
@@ -47,7 +47,8 @@ export function LuisJavierInvitation({ wedding }) {
     dateLong: wedding.dateDisplay,
     welcomeTitle: "Con todo nuestro amor",
     welcome: ["Hay personas que hacen más especial nuestro camino. Tú eres una de ellas.", "Queremos compartir contigo la alegría de unir nuestras vidas y comenzar este nuevo capítulo juntos."],
-    dressCode: { title: wedding.dressCode.title, note: wedding.dressCode.text, colors: [] },
+    dressCode: { title: wedding.dressCode.title, note: wedding.dressCode.text, colors: wedding.dressCode.colors },
+    itinerary: wedding.itinerary.map((item) => ({ ...item, time: `${Number(item.time.split(":")[0]) - 12}:${item.time.split(":")[1]} p. m.` })),
     rsvpSettings: { maxCompanions: wedding.maxCompanions, askMenuPreference: false, askAllergies: false, askMessage: true },
   };
   return <div className={styles.invitation}>
@@ -70,11 +71,13 @@ export function LuisJavierInvitation({ wedding }) {
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <HeroSection wedding={view}/><WelcomeSection wedding={view}/><CountdownSection wedding={view}/>
       <section className={styles.venue} id="detalles">
-        <Reveal className={styles.venueDecoration}><div className={styles.arch}><Image src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 85vw, 550px" alt="Arreglo floral marfil con detalles azul marino" /><span>L <i>&amp;</i> J</span></div></Reveal>
+        <Reveal className={styles.venueDecoration}><div className={styles.arch}><Image src={wedding.reception.image} width={1206} height={1487} sizes="(max-width:800px) 85vw, 550px" alt="Vegetación y arquitectura en tonos beige" /></div></Reveal>
         <Reveal className={styles.venueCopy}><span className="eyebrow">Nuestra celebración</span><MapPin strokeWidth={1}/><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p><a className="button" href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>
       </section>
+      <div className={styles.itinerary}><ScheduleSection wedding={view}/><Reveal><p className={styles.arrivalNote}>La ceremonia comienza a las 5:30 p. m. Agradecemos tu llegada media hora antes, a las 5:00 p. m.</p></Reveal></div>
       <DressCodeSection wedding={view}/>
       <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Lluvia de sobres" title="Tu presencia es nuestro mejor regalo" copy={wedding.gifts[0].description}/></Reveal></section>
+      <section className={`section ${styles.hotels}`}><Reveal><SectionHeading eyebrow="Hospedaje" title="Para tu estancia" copy="Te compartimos estas opciones de hospedaje."/></Reveal><div className={styles.hotelList}>{wedding.hotels.map((hotel) => <Reveal className={styles.hotel} key={hotel.name}><h3>{hotel.name}</h3><span className="eyebrow">Precio de referencia</span><p>{hotel.price}</p></Reveal>)}</div></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote })}>Agregar a mi calendario</button></Reveal></section>
       <RSVPSection wedding={view}/>
       <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Estamos para ayudarte</h2><p>Si tienes alguna duda, escríbenos.</p><div className={styles.contacts}>{wedding.contact.whatsapps.map((contact) => <a className="text-link" href={contact.whatsapp} target="_blank" rel="noreferrer" key={contact.phone}><MessageCircle size={17}/>{contact.phone}</a>)}</div><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
