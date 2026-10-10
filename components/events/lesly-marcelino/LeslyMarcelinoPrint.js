@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import Image from "next/image";
 import { ArrowLeft, Download, Printer } from "lucide-react";
@@ -9,7 +10,7 @@ const invitationImage = "/images/events/lesly-marcelino/invitacion-impresa-ia.pn
 export function LeslyMarcelinoPrint() {
   return <main className={styles.page}>
     <div className={styles.toolbar}>
-      <a href="/eventos/lesly-y-marcelino"><ArrowLeft /> Volver a la invitación</a>
+      <Link href="/eventos/lesly-y-marcelino"><ArrowLeft /> Volver a la invitación</Link>
       <a href={invitationImage} download="invitacion-lesly-y-marcelino.png"><Download /> Descargar PNG</a>
       <button onClick={() => window.print()}><Printer /> Imprimir o guardar en PDF</button>
     </div>

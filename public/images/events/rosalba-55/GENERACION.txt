@@ -1,0 +1,6 @@
+Decorativos generados con IA para Rosalba: sobre cerrado y abierto rosa pastel con fucsia, bordes plateados y sello R; arreglo de rosas y peonías rosas con follaje plateado. Fuente: exec-6674a492-967c-4caf-b4ec-80bde4e14f63.png.
+
+Corrección: tres imágenes independientes, con transparencia real RGBA.
+Sobre cerrado v2: rosa pastel y fucsia, borde plateado, sello R, vista frontal; exec-442f9867-7b4f-4463-a06c-48028fa968e5.png.
+Sobre abierto v2: mismo estilo, vacío, simétrico, sin carta ni fondo; exec-ea98043a-3893-4cdf-a80b-8406c980950a.png.
+Floral v2: peonías y rosas rosa pastel y fucsia, hojas plateadas y perlas, sin fondo; exec-c0d2e098-b75f-4b98-b4fa-e5135fd10efa.png.

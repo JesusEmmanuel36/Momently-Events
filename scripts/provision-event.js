@@ -1,5 +1,6 @@
 import { jessicaJoan } from "../config/events/jessica-joan.js";
 import { selfida60 } from "../config/events/selfida-60.js";
+import { rosalba55 } from "../config/events/rosalba-55.js";
 import { emilyFernandaXv } from "../config/events/emily-fernanda-xv.js";
 import { zoeValentinaXv } from "../config/events/zoe-valentina.js";
 import { xochitlRuben } from "../config/events/xochitl-ruben.js";
@@ -99,6 +100,7 @@ const templates = { [davidReyna.slug]: davidReyna, [mayraHugo.slug]: mayraHugo, 
 templates[xochitlRuben.slug] = xochitlRuben;
 templates[jessicaJoan.slug] = jessicaJoan;
 templates[selfida60.slug] = selfida60;
+templates[rosalba55.slug] = rosalba55;
 templates[emilyFernandaXv.slug] = emilyFernandaXv;
 templates[zoeValentinaXv.slug] = zoeValentinaXv;
 const slug = String(process.argv[2] || "").trim();

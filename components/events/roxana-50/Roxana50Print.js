@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import Image from "next/image";
 import { ArrowLeft, Download, Printer } from "lucide-react";
@@ -9,7 +10,7 @@ const invitationImage = "/images/events/roxana-50/invitacion-impresa-ia.png";
 export function Roxana50Print() {
   return <main className={styles.page}>
     <div className={styles.toolbar}>
-      <a href="/eventos/roxana-50"><ArrowLeft /> Volver a la invitación</a>
+      <Link href="/eventos/roxana-50"><ArrowLeft /> Volver a la invitación</Link>
       <a href={invitationImage} download="invitacion-roxana-50.png"><Download /> Descargar PNG</a>
       <button onClick={() => window.print()}><Printer /> Imprimir o guardar en PDF</button>
     </div>

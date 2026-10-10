@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { EventActions, PublishControl } from "@/components/admin/EventActions";
 import { OwnerInvite } from "@/components/admin/OwnerInvite";
+import { OwnerAccount } from "@/components/admin/OwnerAccount";
+import { EventForm } from "@/components/admin/EventForm";
 import { DashboardShell } from "@/components/dashboard/DashboardShell";
 import { requireAdmin } from "@/lib/auth/session";
 import { getAdminDb } from "@/lib/firebase/admin";
@@ -23,6 +25,8 @@ export default async function AdminEvent({ params }) {
   const title = event.publicData?.eventTitle || [couple?.partner1, couple?.partner2].filter(Boolean).join(" & ") || "Evento";
   const invitationPath = event.publicPath || `/eventos/${event.slug}`;
   const deadline = event.settings?.rsvp?.deadline?.toDate?.()?.toISOString?.().slice(0, 10) || "Sin fecha límite";
+  const editable = ["flexible-celebration", "brown-romance"].includes(event.templateKey);
+  const editorEvent = editable ? JSON.parse(JSON.stringify({ ...event, settings: { ...event.settings, rsvp: { ...event.settings?.rsvp, deadline: event.settings?.rsvp?.deadline?.toDate?.()?.toISOString?.() || event.settings?.rsvp?.deadline || null } } })) : null;
 
   return <DashboardShell area="admin" user={user}>
     <header className="dashboard-header">
@@ -31,7 +35,7 @@ export default async function AdminEvent({ params }) {
     </header>
 
     <section className="dashboard-card">
-      <div className="dashboard-card__title"><div><h2>Información esencial</h2><p>La invitación se modifica directamente en su plantilla del proyecto.</p></div></div>
+      <div className="dashboard-card__title"><div><h2>Información esencial</h2><p>{editable ? "Edita la invitación y guarda los cambios desde este panel." : "Esta invitación usa una plantilla específica del proyecto."}</p></div></div>
       <dl className="event-summary">
         <div><dt>Enlace público</dt><dd>{invitationPath}</dd></div>
         <div><dt>Fecha</dt><dd>{event.publicData?.weddingDate?.iso?.slice(0, 10) || "Sin fecha"}</dd></div>
@@ -41,6 +45,8 @@ export default async function AdminEvent({ params }) {
       <EventActions showManage={false} event={{ id: event.id, slug: event.slug, status: event.status, publicPath: event.publicPath }} />
     </section>
 
+    {editable && <EventForm event={editorEvent} />}
+    <OwnerAccount eventId={event.id} />
     <OwnerInvite eventId={event.id} ownerUids={event.ownerUids || []} />
   </DashboardShell>;
 }
