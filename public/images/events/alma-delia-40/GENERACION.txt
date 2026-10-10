@@ -1,0 +1,3 @@
+Herramienta: imagegen integrada.
+Prompt: Sobres fotorealistas 3D western, papel beige arena, bordes café con detalles dorados, vista frontal centrada horizontal 1536x1024 y fondo transparente. Cerrado con sello dorado AD; abierto simétrico con solapa elevada, sin hoja ni sello.
+Adornos reutilizados: /images/events/carolina-y-pavel/western.png

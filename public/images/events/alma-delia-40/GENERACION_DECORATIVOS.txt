@@ -1,0 +1,11 @@
+Herramienta: imagegen integrada.
+Portada de rancho al atardecer; herradura con lazo y guitarra con paliacate como adornos independientes transparentes.
+
+hero-western.png
+Use case: photorealistic-natural. Portrait high resolution cover photograph for elegant western 40th birthday invitation. Warm sunset ranch courtyard, rustic carved wood table with an elegant brown leather saddle resting near it, dried wheat and soft golden string lights in background, subtle western leather details. Rich sand beige, caramel brown, antique gold palette. No people, no text or numbers, no hats or boots. Main decorative still life at bottom quarter, top and center with softly blurred uncluttered warm beige backdrop for dark invitation typography. Natural sophisticated photography, not collage, portrait 1024x1536.
+
+horseshoe-lasso.png
+Use case: product-mockup. One isolated photorealistic western decorative cutout: antique brass horseshoe standing upright with natural beige lasso rope looped gently around its base. Elegant realistic metal patina, tan rope fibers, warm brown and muted gold palette, delicate soft shadow. Entire arrangement visible, compact centered composition, high resolution square. True transparent background. No background scene, no hats, no boots, no text, no collage.
+
+guitar-western.png
+Use case: product-mockup. One isolated photorealistic western decorative cutout: beautiful small warm walnut acoustic guitar leaning slightly with a folded sand beige and caramel bandana near base. Refined engraved leather guitar strap, warm wood, antique gold details. Entire arrangement visible, high resolution square, compact centered composition. Genuine transparent background, minimal soft shadow. No other instruments, no hats or boots, no text, no background scenery, no collage.
