@@ -1,0 +1,20 @@
+.rubi[class] :global([class*="openEnvelope"]) {
+  width: 100% !important;
+  height: 100% !important;
+  inset: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.rubi[class] :global([class*="openFront"]) { clip-path: inset(59% 0 0 0); }
+.rubi[class] :global([class*="heroImage"]) { object-position: center 35%; }
+.rubi[class] :global([class*="heroCopy"]) h1 { font-size: clamp(3.6rem, 13vw, 7rem) !important; }
+.rubi[class] :global([class*="venueArtwork"]) { background: linear-gradient(145deg, #fff9f8, #f0d9df); }
+.rubi[class] :global([class*="venueArtwork"]) img { object-fit: contain; padding: 1rem; }
+.rubi[class] :global([class*="photoGrid"]) { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
+.rubi[class] :global([class*="photoGrid"]) button { grid-column: auto !important; grid-row: auto !important; }
+.rubi[class] :global([class*="reservedColors"]) { flex-wrap: wrap; gap: clamp(1rem, 4vw, 2.5rem); }
+
+@media (max-width: 600px) {
+  .rubi[class] :global([class*="heroCopy"]) h1 { font-size: clamp(3.1rem, 14vw, 4.5rem) !important; }
+}
