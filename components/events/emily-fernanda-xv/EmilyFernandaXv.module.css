@@ -86,6 +86,7 @@
 .invitation .heroCopy h1,.invitation .heroCopy>p,.invitation .age {color:#fffaf8!important;text-shadow:0 2px 12px #563b43!important;}
 .invitation .heroShade {background:linear-gradient(180deg,transparent 28%,#563b4366 72%,#563b43b8)!important;}
 .invitation .venueArtwork {background:linear-gradient(140deg,#fffaf8,#f4dce2);}
+.invitation .venueArtwork .churchPhoto {object-fit:cover;padding:0;}
 .invitation button[class*="openLabel"] {background:#fffaf8;color:#563b43;}
 .invitation .letter {background:linear-gradient(145deg,#fffaf8,#f8e8ec);}
 .invitation .letter::after {border-color:#dfc4a5;}

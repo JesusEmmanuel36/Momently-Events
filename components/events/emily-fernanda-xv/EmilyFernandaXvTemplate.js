@@ -1,12 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import { Check, Crown, Church, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
 import customStyles from "./EmilyFernandaXv.module.css";
 import { openGoogleCalendar } from "@/lib/calendar";
+
+function Image(props) { return <NextImage unoptimized {...props} />; }
 
 const defaultAssets = {
   floral: "/images/events/xv-emily-fernanda/floral.png",
@@ -165,7 +167,7 @@ export function EmilyFernandaXvTemplate({ wedding, assets = defaultAssets, custo
       {wedding.gallery.length > 0 && <section className={styles.photoGallery} data-je-reveal><span>Mis recuerdos</span><h2>Una historia en fotografías</h2><p>Pequeños momentos llenos de cariño.</p><div className={`${styles.photoGrid} ${customStyles.photoGrid}`}>{wedding.gallery.map((photo, index) => <button key={photo.src} style={{aspectRatio:`${photo.width}/${photo.height}`}} onClick={() => setActivePhoto(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={photo.src} fill sizes="(max-width: 600px) 50vw, 40vw" alt={photo.alt} /></button>)}</div></section>}
 
 
-      <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={wedding.ceremony.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral para la misa" /></div><article><Church /><span>Misa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p></article></section>
+      <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image className={customStyles.churchPhoto} src={wedding.ceremony.image} fill sizes="(max-width:800px) 100vw,55vw" alt={`Vista del ${wedding.ceremony.name}`} /></div><article><Church /><span>Misa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p></article></section>
 
       {wedding.reception.enabled && <section className={styles.location} data-je-reveal><div className={`${styles.locationImage} ${customStyles.venueArtwork}`}><Image src={wedding.reception.image} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral para la recepción" /></div><article><Sparkles /><span>Mi fiesta</span><h2>{wedding.reception.name}</h2>{wedding.reception.time && <strong>{wedding.reception.time}</strong>}{wedding.reception.address && <p>{wedding.reception.address}</p>}{wedding.reception.mapsUrl && <a href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <MapPin /></a>}</article></section>}
 

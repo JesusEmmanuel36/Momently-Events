@@ -28,7 +28,7 @@ export const emilyFernandaXv = {
     time: "4:00 p. m.",
     address: "",
     mapsUrl: "",
-    image: "/images/events/xv-emily-fernanda/floral.png",
+    image: "/images/events/xv-emily-fernanda/image.png",
   },
   reception: {
     enabled: true,
@@ -40,7 +40,7 @@ export const emilyFernandaXv = {
   },
   family: {
     parents: ["Gerardo Verdín Cruz", "Elia E. Martínez Guzmán"],
-    godparents: ["Laura A. Martínez Guzmán"],
+    godparents: ["Laura A. Martínez Guzmán", "Jaime López Lara"],
   },
   gallery: [],
   gifts: [],
