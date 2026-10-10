@@ -110,6 +110,15 @@
 .invitation .storyFrame::before,.invitation .storyFrame::after {display:none;}
 .invitation .storyFrame h2 {font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;text-wrap:balance;}
 .invitation .familyPortrait {background-color:#fff5df;}
+.invitation .familyPortrait h2 {font-family:var(--font-script),cursive;font-weight:400;font-size:clamp(3rem,7vw,5.5rem);line-height:1.2;}
+.invitation .framedRsvp {grid-template-columns:1fr;gap:2rem;background-color:#fff5df;color:#112444;}
+.framedRsvp > div:first-child {padding:0;text-align:center;align-items:center;}
+.framedRsvp > div:first-child > span {color:#183c9b;}
+.framedRsvp > div:first-child > p {color:#596880;}
+.framedRsvp > div:first-child > div {display:none;}
+.invitation .framedRsvp > form,.invitation .framedRsvp > div:nth-child(2) {width:100%;min-width:0;margin:0;padding:0;background:transparent;}
+.invitation .framedRsvp > form > button {justify-self:center;}
+.invitation .closing > span,.invitation .closing > h2,.invitation .closing > p {color:#f1d28a;text-shadow:0 2px 12px #07152d;}
 .invitation .familyGroups {display:grid;grid-template-columns:1fr;gap:3rem;max-width:680px;margin:3rem auto 0;}
 .familyGroups article + article {border-top:1px solid #c8a25a88;padding-top:3rem;}
 .invitation .familyGroups small {color:#997231;letter-spacing:.18em;}
@@ -134,3 +143,4 @@
 .invitation .countdownCopy strong {font-size:clamp(2rem,5vw,4rem);color:#f1d28a;}
 .invitation .countdownCopy small {font-size:clamp(.45rem,1vw,.7rem);letter-spacing:.08em;}
 @media(max-width:600px){.invitation .storyFrame{margin:0;padding:7rem 2.5rem;background-size:100% 100%;}.invitation .familyGroups{gap:2rem;margin-top:2rem;}.familyGroups article + article{padding-top:2rem;}.invitation .castleCountdown{padding:13% 8% 17%;}.invitation .countdownCopy h2{font-size:2.1rem;margin-bottom:1rem;}}
+.invitation .framedRsvp {padding-block:clamp(12rem,24vw,16rem);}
