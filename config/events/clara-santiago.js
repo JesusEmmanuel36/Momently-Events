@@ -6,7 +6,7 @@ export const claraSantiago = {
   displayNames: { partner1: "Clara", partner2: "Santiago" },
   date: "2026-11-29T17:00:00-06:00",
   timezone: "America/Mexico_City",
-  maxCompanions: 0,
+  maxCompanions: 5,
   rsvpEnabled: true,
   dateStamp: "29 · 11 · 2026",
   dateDisplay: "Domingo · 29 de noviembre · 2026",
