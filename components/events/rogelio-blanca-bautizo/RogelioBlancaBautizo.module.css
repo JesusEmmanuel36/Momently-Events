@@ -1,0 +1,47 @@
+.invitation .hero { background: var(--ivory); min-height: 850px; }
+.invitation .heroImage { object-fit: cover; object-position: center bottom; }
+.invitation .heroCopy { align-self: start; padding: 4.5rem 1rem 0 !important; text-shadow: none; }
+.heroShade { background: linear-gradient(180deg, #fffdf833, transparent 65%) !important; }
+.heroFlower { width: min(30vw, 370px) !important; left: -6rem !important; top: -3rem !important; opacity: .5; }
+.invitation .heroCopy > span { color: var(--dark); letter-spacing: .22em; }
+.invitation .heroCopy h1 { font-size: clamp(2.8rem, 6vw, 5rem) !important; line-height: 1.05; color: var(--dark); margin: 1rem auto; }
+.invitation .heroCopy h1 i { font-size: .55em; color: var(--gold); }
+.invitation .heroCopy > p { color: var(--dark); margin-top: 1.2rem; }
+.baptismHero { display: grid; justify-items: center; gap: .5rem; }
+.baptismHero small { text-transform: uppercase; letter-spacing: .18em; font-size: .65rem; color: var(--muted); }
+.baptismHero strong { font: 400 clamp(1.7rem, 4vw, 2.6rem)/1.15 var(--font-serif), serif; color: var(--dark); }
+.invitation .fullNames { font-size: clamp(1.7rem, 5vw, 3rem); line-height: 1.35; }
+.invitation .fullNames i { display: block; color: var(--gold); }
+.invitation .letter { width: 60%; left: 20%; background: linear-gradient(145deg, #fffdf8, #f5eee1); }
+.invitation .letter h2 { font-size: clamp(1.5rem, 5vw, 2.6rem) !important; line-height: 1.1 !important; }
+.invitation .openEnvelope { width: 130% !important; height: 130% !important; inset: -35% auto auto -15% !important; object-fit: contain; object-position: center; }
+.invitation .openFront { clip-path: inset(59% 0 0 0); }
+.invitation button[class*="openLabel"] { background: var(--paper); color: var(--dark); }
+.invitation button[class*="sealAction"] { left: 50%; top: 59%; }
+.baptismSection { display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); }
+.baptismArt { position: relative; min-height: 540px; overflow: hidden; }
+.baptismArt img { object-fit: cover; object-position: center bottom; }
+.baptismSection article { padding: clamp(2rem, 6vw, 5rem); display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; }
+.baptismSection svg, .ceremonySection svg, .receptionSection svg { width: 38px; height: 38px; color: var(--gold); stroke-width: 1.3; margin-bottom: 1.5rem; }
+.baptismSection span, .ceremonySection span, .receptionSection span { display: block; text-transform: uppercase; letter-spacing: .2em; font-size: .65rem; color: var(--muted); }
+.baptismSection h2, .ceremonySection h2, .receptionSection h2 { font: 400 clamp(2.3rem, 5vw, 3.8rem)/1.15 var(--font-serif), serif; color: var(--dark); margin: 1.2rem 0; }
+.baptismSection p, .receptionSection p { font-size: 1rem; line-height: 1.9; color: var(--muted); max-width: 480px; }
+.baptismSection small { text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .7rem; color: var(--gold); }
+.baptismSection strong { display: block; font: 400 1.5rem/1.5 var(--font-serif), serif; color: var(--dark); }
+.ceremonySection { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 4rem max(1.5rem, 6vw); gap: 2rem; background: var(--ivory); }
+.ceremonySection > img { display: block; max-width: 100%; height: auto; margin: auto; }
+.ceremonySection article { text-align: center; }
+.ceremonySection strong, .receptionSection strong { display: block; font: 400 2rem/1.5 var(--font-serif), serif; color: var(--gold); }
+.receptionSection { padding: 5rem 1.5rem; text-align: center; background: var(--paper); }
+.receptionSection p { margin: 1.5rem auto 0; }
+.closingMessage { font-family: var(--font-sans), sans-serif !important; font-size: 1rem !important; line-height: 1.8; max-width: 650px; margin: 1.5rem auto; }
+@media (max-width: 700px) {
+  .invitation .hero { min-height: 780px; }
+  .invitation .heroCopy { padding-top: 3.5rem !important; }
+  .invitation .heroCopy h1 { font-size: clamp(2.6rem, 10vw, 3.5rem) !important; }
+  .baptismSection, .ceremonySection { grid-template-columns: 1fr; }
+  .baptismArt { min-height: 360px; }
+  .ceremonySection > img { width: min(80%, 360px); }
+  .invitation .letter { height: 60%; bottom: 18%; }
+  .invitation .letter h2 { font-size: 1.65rem !important; }
+}
