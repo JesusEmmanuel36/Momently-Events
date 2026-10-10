@@ -47,7 +47,7 @@
 .invitation .venueQuote blockquote { color:#fff; }
 .invitation button[class*="openLabel"] { background:#fff;color:#102642; }
 .invitation button[class*="sealAction"] { left:50%;top:57%; }
-.invitation .openEnvelope { width:133.5%!important;height:130%!important;inset:-30% auto auto -16.75%!important;object-fit:contain; }
+.invitation .openEnvelope { width:100%!important;height:120%!important;inset:-20% 0 auto 0!important;object-fit:fill;object-position:center; }
 .invitation .openFront { clip-path:inset(61% 0 0 0); }
 @media(min-width:900px){.invitation .heroImage{object-fit:contain;}}
 @media(max-width:600px){.invitation .heroCopy{padding-top:3rem!important;}.invitation .heroCopy h1{font-size:clamp(3rem,13vw,4.5rem)!important;}.invitation .letter h2{font-size:1.8rem!important;}}
