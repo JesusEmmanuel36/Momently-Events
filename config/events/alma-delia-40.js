@@ -35,7 +35,7 @@ export const almaDelia40 = {
   "reception": {
     "enabled": true,
     "name": "Rancho El Rincón",
-    "address": "San Termo, Baja California",
+    "address": "San Telmo, Baja California",
     "time": "A partir de las 6:00 p. m.",
     "mapsUrl": "",
     "image": "/images/events/alma-delia-40/horseshoe-lasso.png"
@@ -72,8 +72,8 @@ export const almaDelia40 = {
   ],
   "contact": {},
   "music": {
-    "enabled": false,
-    "url": "",
+    "enabled": true,
+    "url": "/audio/almadelia.mp3",
     "label": "Mi canción"
   },
   "itinerary": [],
