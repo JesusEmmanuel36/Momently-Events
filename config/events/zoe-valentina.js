@@ -47,6 +47,7 @@ export const zoeValentinaXv = {
     { src: "/images/events/xv-zoe-valentina/image copy.png", alt: "Retrato de Zoé Valentina con vestido rosa", width: 480, height: 540 },
     { src: "/images/events/xv-zoe-valentina/image.png", alt: "Retrato sonriente de Zoé Valentina", width: 480, height: 557 },
     { src: "/images/events/xv-zoe-valentina/image copy 2.png", alt: "Retrato de Zoé Valentina", width: 480, height: 513 },
+    { src: "/images/events/xv-zoe-valentina/image copy 4.png", alt: "Un recuerdo especial de Zoé Valentina", width: 720, height: 742 },
   ],
   gifts: [
     {
