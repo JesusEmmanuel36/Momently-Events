@@ -14,7 +14,21 @@
 .invitation .fullNames i { display: block; color: var(--gold); }
 .invitation .letter { width: 60%; left: 20%; background: linear-gradient(145deg, #fffdf8, #f5eee1); }
 .invitation .letter h2 { font-size: clamp(1.5rem, 5vw, 2.6rem) !important; line-height: 1.1 !important; }
-.invitation .openEnvelope { width: 130% !important; height: 130% !important; inset: -35% auto auto -15% !important; object-fit: contain; object-position: center; }
+.invitation .openEnvelopeLayer {
+  inset: auto !important;
+  left: 50% !important;
+  bottom: 6% !important;
+  width: 130%;
+  height: auto;
+  margin-left: -65%;
+  aspect-ratio: 3 / 2;
+}
+.openEnvelopeArtwork {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
 .invitation .openFront { clip-path: inset(59% 0 0 0); }
 .invitation button[class*="openLabel"] { background: var(--paper); color: var(--dark); }
 .invitation button[class*="sealAction"] { left: 50%; top: 59%; }
