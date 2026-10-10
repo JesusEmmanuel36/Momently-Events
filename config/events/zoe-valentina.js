@@ -7,16 +7,16 @@ export const zoeValentinaXv = {
   date: "2026-11-21T18:00:00-06:00",
   timezone: "America/Mexico_City",
   maxCompanions: 0,
-  rsvpEnabled: true,
+  rsvpEnabled: false,
   dateStamp: "21 · 11 · 2026",
   dateDisplay: "Sábado · 21 de noviembre · 2026",
   calendarDate: "21 de noviembre de 2026",
   hero: {
     subtitle: "Mis XV años",
     quote: "Hay momentos que se sueñan toda la vida. Con mucha ilusión quiero compartir contigo la alegría de celebrar mis quince años.",
-    image: "/images/events/xv-zoe-valentina/hero.png",
+    image: "/images/events/xv-zoe-valentina/image copy 3.png",
   },
-  closingImage: "/images/events/xv-zoe-valentina/hero.png",
+  closingImage: "/images/events/xv-zoe-valentina/image copy 3.png",
   thought: [
     "Hoy comienzo una etapa llena de ilusiones, aprendizajes y nuevos sueños.",
     "Gracias por acompañarme y formar parte de un recuerdo que guardaré siempre en mi corazón.",
@@ -43,17 +43,18 @@ export const zoeValentinaXv = {
       { title: "Mis padrinos", names: ["Andrea Yatzareth Velázquez Valdivia", "Yahel Alonso Velázquez Valdivia"] },
     ],
   },
-  gallery: [],
-  gifts: [],
-  palette: [
-    { name: "Blush", value: "#c8a0a5" },
-    { name: "Evening fern", value: "#3e4b34" },
-    { name: "Dusty sage", value: "#adb999" },
-    { name: "Smoky mauve", value: "#a66c73" },
-    { name: "Butter yellow", value: "#efd17a" },
-    { name: "Cream", value: "#f6efe3" },
+  gallery: [
+    { src: "/images/events/xv-zoe-valentina/image copy.png", alt: "Retrato de Zoé Valentina con vestido rosa", width: 480, height: 540 },
+    { src: "/images/events/xv-zoe-valentina/image.png", alt: "Retrato sonriente de Zoé Valentina", width: 480, height: 557 },
+    { src: "/images/events/xv-zoe-valentina/image copy 2.png", alt: "Retrato de Zoé Valentina", width: 480, height: 513 },
   ],
-  contact: { phone: "476 101 0948", whatsapp: "https://wa.me/524761010948" },
+  gifts: [
+    {
+      title: "Lluvia de sobres",
+      description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, habrá lluvia de sobres.",
+    },
+  ],
+  contact: { phone: "477 816 8915", whatsapp: "https://wa.me/524778168915?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Zo%C3%A9%20Valentina." },
   music: { enabled: false, url: "", label: "Mi canción" },
   itinerary: [
     { time: "18:00", title: "Misa", description: "La Haciendita", icon: "heart" },
