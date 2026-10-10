@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Mail, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import { CalendarDays, ChevronDown, Heart, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection } from "@/components/sections/CountdownStory";
@@ -59,8 +59,8 @@ export function CarlosKarlaInvitation({ wedding }) {
       <div className={styles.envelopeScene}>
         <div className={styles.envelopeStage}>
           <div className={styles.letter}><span className="eyebrow">Nuestra boda</span><h2>Carlos <i>&amp;</i> Karla</h2><small>24 · 10 · 2026</small><Heart size={18}/></div>
-          <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image src={`${images}/envelope-open.png`} width={1024} height={1024} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="Sobre abierto de Carlos y Karla" priority /></div>
-          <div className={`${styles.openEnvelopeLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${images}/envelope-open.png`} width={1024} height={1024} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="" priority /></div>
+          <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image src={`${images}/envelope-open.png`} width={1254} height={1254} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="Sobre abierto de Carlos y Karla" priority /></div>
+          <div className={`${styles.openEnvelopeLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${images}/envelope-open.png`} width={1254} height={1254} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="" priority /></div>
           <Image src={`${images}/envelope-closed.png`} fill sizes="(max-width:700px) 98vw, 720px" className={styles.closedEnvelope} alt="Sobre marfil con listón terracota y sello CK" priority />
           <button className={styles.sealButton} onClick={open} disabled={opening} aria-label="Abrir la invitación de Carlos y Karla" />
         </div>
@@ -73,7 +73,7 @@ export function CarlosKarlaInvitation({ wedding }) {
         <Reveal className={styles.venueDecoration}><div className={styles.arch}><Image src={wedding.reception.image} width={1536} height={1024} sizes="(max-width:800px) 85vw, 550px" alt="Arreglo de flores blancas y terracota" /></div></Reveal>
         <Reveal className={styles.venueCopy}><span className="eyebrow">Nuestra celebración</span><MapPin strokeWidth={1}/><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p><a className="button" href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>
       </section>
-      <section className={`section ${styles.gallery}`}><Reveal><SectionHeading eyebrow="Nuestros recuerdos" title="El amor en cada momento"/></Reveal><div className={styles.photoGrid}>{wedding.gallery.map((photo) => <Reveal key={photo.src}><Image src={photo.src} width={1456} height={1424} sizes="(max-width:800px) 90vw, 550px" alt={photo.alt}/></Reveal>)}</div></section>
+      <section className={`section ${styles.gallery}`}><Reveal><SectionHeading eyebrow="Nuestros recuerdos" title="El amor en cada momento"/></Reveal><div className={styles.photoGrid}>{wedding.gallery.map((photo) => <Reveal key={photo.src}><Image src={photo.src} width={photo.src.endsWith("image copy.png") ? 931 : 1456} height={photo.src.endsWith("image copy.png") ? 941 : 1424} sizes="(max-width:800px) 90vw, 550px" alt={photo.alt}/></Reveal>)}</div></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote })}>Agregar a mi calendario</button></Reveal></section>
       <RSVPSection wedding={view}/>
       <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Estamos para ayudarte</h2><p>Si tienes alguna duda, escríbenos.</p><div className={styles.contacts}>{wedding.contact.whatsapps.map((contact) => <a className="text-link" href={contact.whatsapp} target="_blank" rel="noreferrer" key={contact.phone}><MessageCircle size={17}/>{contact.phone}</a>)}</div><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
