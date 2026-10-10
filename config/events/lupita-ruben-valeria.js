@@ -49,7 +49,7 @@ export const lupitaRubenValeria = {
   "contact": {},
   "music": {
     "enabled": true,
-    "url": "/audio/xvestephanie.mp3",
+    "url": "/audio/lupitayruben.mp3",
     "label": "Nuestra canción"
   },
   "itinerary": [],
