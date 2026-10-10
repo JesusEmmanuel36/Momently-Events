@@ -40,7 +40,26 @@ export const almaDelia40 = {
     "mapsUrl": "",
     "image": "/images/events/alma-delia-40/horseshoe-lasso.png"
   },
-  "gallery": [],
+  "gallery": [
+  {
+    "src": "/images/events/alma-delia-40/image.png",
+    "width": 720,
+    "height": 1600,
+    "alt": "Alma Delia, recuerdo 1"
+  },
+  {
+    "src": "/images/events/alma-delia-40/image copy.png",
+    "width": 720,
+    "height": 1280,
+    "alt": "Alma Delia, recuerdo 2"
+  },
+  {
+    "src": "/images/events/alma-delia-40/image copy 2.png",
+    "width": 720,
+    "height": 1280,
+    "alt": "Alma Delia, recuerdo 3"
+  }
+],
   "dressCode": {
     "title": "Vaquero",
     "text": "Ven con tu mejor estilo vaquero: botas, sombrero y muchas ganas de celebrar."
