@@ -144,3 +144,4 @@
 .invitation .countdownCopy small {font-size:clamp(.45rem,1vw,.7rem);letter-spacing:.08em;}
 @media(max-width:600px){.invitation .storyFrame{margin:0;padding:7rem 2.5rem;background-size:100% 100%;}.invitation .familyGroups{gap:2rem;margin-top:2rem;}.familyGroups article + article{padding-top:2rem;}.invitation .castleCountdown{padding:13% 8% 17%;}.invitation .countdownCopy h2{font-size:2.1rem;margin-bottom:1rem;}}
 .invitation .framedRsvp {padding-block:clamp(12rem,24vw,16rem);}
+.invitation .giftEnvelopeIcon {display:block;margin:0 auto 1.6rem;}

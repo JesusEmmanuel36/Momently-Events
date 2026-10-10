@@ -55,6 +55,10 @@ export const rubiXimenaXv = {
       { name: "Gris", value: "#9a9ca0" },
     ],
   },
+  family: {
+    parents: ["María Yolanda López Cervantes", "Víctor Manuel Chávez Esparza"],
+    godparents: ["Alondra Chávez López", "Luis Ángel Leal Torres"],
+  },
   gifts: [],
   contact: {},
   music: { enabled: true, url: "/audio/Claraysantiago.mp3", label: "Mi canción" },

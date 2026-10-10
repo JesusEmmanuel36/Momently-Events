@@ -12,7 +12,7 @@ export const yuliAlexis = {
   },
   "date": "2026-11-07T17:30:00-06:00",
   "timezone": "America/Mexico_City",
-  "maxCompanions": 5,
+  "maxCompanions": null,
   "rsvpEnabled": true,
   "dateStamp": "07 · 11 · 2026",
   "dateDisplay": "Sábado · 7 de noviembre · 2026",

@@ -55,7 +55,7 @@ export const zoeValentinaXv = {
       description: "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, habrá lluvia de sobres.",
     },
   ],
-  contact: { phone: "476 101 0948", whatsapp: "https://wa.me/524761010948?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Zo%C3%A9%20Valentina." },
+  contact: { phone: "477 816 8915", whatsapp: "https://wa.me/524778168915?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Zo%C3%A9%20Valentina." },
   music: { enabled: false, url: "", label: "Mi canción" },
   itinerary: [
     { time: "18:00", title: "Misa", description: "La Haciendita", icon: "heart" },

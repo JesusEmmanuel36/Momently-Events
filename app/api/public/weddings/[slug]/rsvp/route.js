@@ -15,7 +15,7 @@ async function getPublishedEvent(slug) {
 function ensureRsvpOpen(event, companions, ignoreDeadline = false, slug = "") {
   const settings = event.settings?.rsvp; if (!settings?.enabled) throw new AppError("Las confirmaciones no están disponibles.", 403, "rsvp_disabled");
   const maxCompanions = slug === "esmeralda-y-antonio" ? 3 : slug === "isamara-y-wsbaldo" ? 1 : Number(settings.maxCompanions || 0);
-  if (companions > maxCompanions) throw new ValidationError(`Puedes registrar hasta ${maxCompanions} acompañantes.`);
+  if (slug !== "yuli-y-alexis" && companions > maxCompanions) throw new ValidationError(`Puedes registrar hasta ${maxCompanions} acompañantes.`);
   const deadline = settings.deadline?.toDate?.() || (settings.deadline ? new Date(settings.deadline) : null); if (!ignoreDeadline && deadline && Date.now() > deadline.getTime()) throw new AppError("El periodo de confirmaciones ya terminó.", 403, "rsvp_closed");
 }
 function allowedData(data, source = "web") {
