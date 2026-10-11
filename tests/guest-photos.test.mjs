@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash, randomUUID } from "node:crypto";
 import sharp from "sharp";
-import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos, zoeValentinaPhotos } from "../lib/event-photos/config.js";
+import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos, zoeValentinaPhotos, isabelaPhotos } from "../lib/event-photos/config.js";
 import { enforcePhotoRateLimit, processGuestPhoto, uploadPhotoToCloudinary, validatePhotoFile } from "../lib/event-photos/server.js";
 
 const env = { CLOUDINARY_CLOUD_NAME: "test-cloud", CLOUDINARY_API_KEY: "test-key", CLOUDINARY_API_SECRET: "test-secret" };
@@ -153,4 +153,29 @@ test("Zoe's photo uploads remain locked until her event and use an isolated fold
     upload: async () => { touched = true; },
   }), error => error.status === 403 && error.message.includes("21 de noviembre de 2026"));
   assert.equal(touched, false);
+});
+
+
+test("Isabela opens at local midnight and her gallery excludes other events", async () => {
+  const { listGuestPhotos } = await import("../lib/event-photos/gallery.js");
+  const event = isabelaPhotos;
+  const opening = Date.parse("2027-03-14T06:00:00Z");
+  assert.equal(guestPhotosAreOpen(opening - 1, event), false);
+  assert.equal(guestPhotosAreOpen(opening, event), true);
+  let touched = false;
+  await assert.rejects(processGuestPhoto(request(new Blob(["test"])), {
+    env, event, now: opening - 1,
+    rateLimit: async () => { touched = true; }, upload: async () => { touched = true; },
+  }), error => error.status === 403);
+  assert.equal(touched, false);
+  const photo = new Blob([await picture()], { type: "image/png" });
+  assert.deepEqual(await processGuestPhoto(request(photo), { env, event, now: opening, rateLimit: async () => {}, upload: async (file, id, options) => {
+    assert.equal(options.event.slug, "xv-isabela-lopez"); return { ok: true, id: "isabela-photo" };
+  } }), { ok: true, id: "isabela-photo" });
+  const gallery = await listGuestPhotos("", { env, event, fetcher: async url => {
+    assert.equal(url.searchParams.get("prefix"), event.folder + "/");
+    return Response.json({ resources: [event, guestPhotos, alejandraDavidPhotos, zoeValentinaPhotos].map((config, index) => ({ asset_id: String(index), public_id: config.folder + "/test", resource_type: "image", secure_url: "https://res.cloudinary.com/test-cloud/image/upload/v1/photo.jpg" })) });
+  } });
+  assert.equal(gallery.photos.length, 1);
+  assert.equal(gallery.photos[0].id, "0");
 });

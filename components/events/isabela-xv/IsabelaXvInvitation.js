@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Cross, Gift, Mail, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import Link from "next/link";
+import { GuestPhotoGallery } from "@/components/events/caleb-ciriam/photos/GuestPhotoGallery";
+import { isabelaPhotos } from "@/lib/event-photos/config";
+import { Camera, Download, CalendarDays, ChevronDown, Heart, Cross, Gift, Mail, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection } from "@/components/sections/CountdownStory";
@@ -62,7 +65,7 @@ export function IsabelaXvInvitation({ wedding }) {
       <div className={styles.introHeading}><span className="eyebrow">Mis XV años</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}>
         <div className={styles.envelopeStage}>
-          <div className={styles.letter}><span className="eyebrow">Mis XV años</span><h2>Isabela</h2><small>14 · 03 · 2027</small><Heart size={18}/></div>
+          <div className={styles.letter}><Image className={styles.letterFloral} src={`${images}/floral.png`} width={1536} height={1024} alt="" aria-hidden="true"/><Image className={styles.letterEiffel} src={`${images}/eiffel.png`} width={1024} height={1536} alt="" aria-hidden="true"/><span className="eyebrow">Mis XV años</span><h2>Isabela</h2><small>14 · 03 · 2027</small><Heart size={18}/></div>
           <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image src={`${images}/envelope-open.png`} width={1635} height={962} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="Sobre abierto de Isabela López Gutiérrez" priority /></div>
           <div className={`${styles.openEnvelopeLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${images}/envelope-open.png`} width={1635} height={962} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="" priority /></div>
           <Image src={`${images}/envelope-closed.png`} fill sizes="(max-width:700px) 98vw, 720px" className={styles.closedEnvelope} alt="Sobre marfil con listón dorado y sello I" priority />
@@ -79,6 +82,7 @@ export function IsabelaXvInvitation({ wedding }) {
       <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Tu presencia es mi mejor regalo" title="Lluvia de sobres" copy={wedding.gifts[0].description}/></Reveal></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.ceremony.address, details: `${wedding.hero.quote} Ceremonia: ${wedding.ceremony.time}, ${wedding.ceremony.name}. Recepción: ${wedding.reception.time}, ${wedding.reception.name}, ${wedding.reception.address}.` })}>Agregar a mi calendario</button></Reveal></section>
       <section className="share" id="rsvp"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Me acompañas?</h2><p>Confirma tu asistencia por WhatsApp. Tu compañía hará este día aún más especial.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Isabela. Quiero confirmar mi asistencia a tus XV años.")}`} target="_blank" rel="noreferrer"><MessageCircle size={18}/> Confirmar por WhatsApp</a></Reveal></section>
+      <section className={`section ${styles.guestPhotos}`} id="fotos-invitados"><Reveal><Camera className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Recuerdos compartidos" title="Mis XV años, a través de tus ojos" copy="Escanea el QR o toca el botón para compartir tus fotografías a partir del 14 de marzo de 2027. Aquí podremos revivir juntos cada momento."/><Image src="/eventos/xv-isabela-lopez/fotos/qr" width={220} height={220} unoptimized alt="QR para compartir fotos de los XV años de Isabela" className={styles.photoQr}/><div className={styles.photoActions}><Link className="button" href={isabelaPhotos.path}><Camera size={18}/> Subir fotos</Link><a className="button button--outline" href="/eventos/xv-isabela-lopez/fotos/qr?download=1" download><Download size={18}/> Descargar QR</a></div><GuestPhotoGallery event={isabelaPhotos}/></Reveal></section>
       <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Comparte esta celebración</h2><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Isabela López Gutiérrez" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte</span><h2>de mi historia.</h2><p>Isabela López Gutiérrez</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>

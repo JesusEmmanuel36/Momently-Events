@@ -153,3 +153,11 @@
 .familyGrid p{font:400 clamp(1.15rem,2.5vw,1.55rem)/1.6 var(--font-serif),serif;margin:.4rem 0;}
 @media(max-width:700px){.familyGrid{grid-template-columns:1fr;}}
 @media(prefers-reduced-motion:reduce){.petals span{animation:none;display:none;}}
+
+.letter{overflow:hidden;padding-inline:15%;}
+.letterFloral{position:absolute;left:0;bottom:-5%;width:43%;height:auto;pointer-events:none;opacity:.85;}
+.letterEiffel{position:absolute;right:3%;bottom:2%;height:45%;width:auto;pointer-events:none;opacity:.85;}
+.letter>span,.letter>h2,.letter>small,.letter>svg{position:relative;z-index:1;}
+.guestPhotos{text-align:center;background:#fff4ef;--photo-dark:#684c42;--photo-accent:#b48a46;--photo-border:#e3c88f;--charcoal:#684c42;--olive:#b48a46;}
+.photoQr{display:block;width:220px;height:220px;max-width:100%;margin:2rem auto;background:white;border:1px solid #e3c88f;border-radius:8px;}
+.photoActions{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin:1.5rem auto 3rem;}
