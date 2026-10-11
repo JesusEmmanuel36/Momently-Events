@@ -21,7 +21,7 @@ export const kendraJoseSury = {
   "hero": {
     "subtitle": "Nuestro bautizo",
     "quote": "Señor, bendice a Kendra Alexandra, José Carlos y Sury Shaddai. Que la luz de tu amor ilumine sus pasos, fortalezca su fe y los acompañe siempre. Amén.",
-    "image": "/images/events/kendrajoseysury/image copy 3.png"
+    "image": "/images/events/kendrajoseysury/image copy 4.png"
   },
   "ceremony": {
     "enabled": true,
