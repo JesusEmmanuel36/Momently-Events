@@ -18,6 +18,10 @@ export const gabrielBautizo = {
   "maxCompanions": 5,
   "rsvpEnabled": true,
   "askAllergies": false,
+  "family": {
+    "parents": ["Edgar Alejandro Robledo Gallegos", "Yanin Alejandra García Gudiño"],
+    "godparents": ["Adriana Robledo Gallegos", "Ángel Orta Mediana"]
+  },
   "hero": {
     "subtitle": "Mi bautizo",
     "quote": "Con la bendición de Dios, comienza un camino lleno de luz, amor y esperanza. Me encantará que seas parte de este día tan especial.",
