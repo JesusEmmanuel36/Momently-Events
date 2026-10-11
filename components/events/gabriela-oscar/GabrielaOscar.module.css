@@ -186,3 +186,5 @@
 .invitation :global(.hero__wash){background:linear-gradient(180deg,transparent 25%,#35493d33 40%,#35493d 58%);}
 .invitation :global(.hero__copy){padding-bottom:3rem;}
 }
+
+.verseReference{font:500 .8rem/1.5 var(--font-sans),sans-serif;letter-spacing:.15em;margin-top:1rem;}.guestNotes{background:#cfe8f633;text-align:center;}.notesGrid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:850px;margin:2.5rem auto 0;}.notesGrid article{padding:2rem;border:1px solid #b7aa9a;background:#f8f5eb;}.notesGrid svg{color:#607766;margin-bottom:1rem;}.notesGrid h3{font:400 2rem/1.2 var(--font-serif),serif;color:#35493d;margin-bottom:1rem;}.notesGrid p{line-height:1.8;}@media(max-width:700px){.notesGrid{grid-template-columns:1fr;}}

@@ -20,7 +20,8 @@ export const gabrielaOscar = {
   "askAllergies": false,
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Entre árboles, sueños y el amor que nos une, elegimos caminar juntos para siempre. Nos hará muy felices compartir contigo este día, rodeados de naturaleza y de las personas que más queremos.",
+    "quote": "Las muchas aguas no podrán apagar el amor, Ni lo ahogarán los ríos.",
+    "quoteAttribution": "CANTARES 8:7a",
     "image": "/images/events/gabriela-y-oscar/image copy 3.png"
   },
   "ceremony": {
@@ -124,7 +125,7 @@ export const gabrielaOscar = {
   "dressCode": {
     "title": "Formal",
     "women": "Vestido largo en tonos pastel.",
-    "men": "Traje formal, con pañuelo en tonos de la paleta.",
+    "men": "Traje formal, con pañuelo en tonos pastel.",
     "footwear": "Tenis de estilo casual-formal.",
     "colors": [
       {
