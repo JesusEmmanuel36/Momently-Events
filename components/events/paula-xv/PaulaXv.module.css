@@ -165,3 +165,5 @@
 .openEnvelopeLayer{width:124%;margin-left:-62%;bottom:5%;}.openFront{clip-path:inset(72% 0 0 0);}.sealButton{top:51%;}
 .birthdayAge strong{color:#8A7045;}
 .invitation :global(.hero__copy > p){font-size:clamp(1.3rem,3.8vw,1.6rem);line-height:1.5;}
+
+.family{text-align:center;background:#f3f7ef;}.familyGroup{max-width:750px;margin:2.5rem auto 0;}.familyGroup h3{font:400 2.8rem/1.3 var(--font-script),cursive;color:#71906a;margin-bottom:1rem;}.familyGroup p{font:400 clamp(1.2rem,3.6vw,1.65rem)/1.6 var(--font-serif),serif;color:#435b3f;margin:.6rem 0;}

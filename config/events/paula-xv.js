@@ -38,6 +38,10 @@ export const paulaXv = {
     "address": "Blvd. Camino del Seri #289, Col. Las Praderas, Hermosillo, Sonora.",
     "mapsUrl": ""
   },
+  "family": {
+    "parents": ["Ramón Gerardo Ibarra Valenzuela", "Maribel Álvarez Valenzuela"],
+    "godparents": ["Marco Antonio Canales Valenzuela", "Brenda Alicia Quiñonez Medina", "Ramón Alberto Zamudio Ibarra", "Nancy Noemí Peralta Ramos", "Juan Francisco Barrera Zanzur", "Ana María Robles Esquer"]
+  },
   "gallery": [],
   "music": {
     "enabled": true,

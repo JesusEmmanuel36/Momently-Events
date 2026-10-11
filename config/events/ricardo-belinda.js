@@ -35,7 +35,7 @@ export const ricardoBelinda = {
     "name": "Al Final de la Senda",
     "time": "2:00 p. m.",
     "address": "Chignahuapan, Puebla.",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/hv4sLffTygQ4rcHY6"
   },
   "gallery": [],
   "music": {
