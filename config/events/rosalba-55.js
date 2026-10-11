@@ -158,12 +158,6 @@ export const rosalba55 = {
       "alt": "Un recuerdo especial de Rosalba"
     },
     {
-      "src": "/images/events/rosalba-55/image copy 20.png",
-      "width": 1600,
-      "height": 1333,
-      "alt": "Un recuerdo especial de Rosalba"
-    },
-    {
       "src": "/images/events/rosalba-55/image copy 21.png",
       "width": 1170,
       "height": 1143,
