@@ -46,7 +46,7 @@ export const paulaXv = {
   },
   "gifts": [{
     "title": "Lluvia de sobres",
-    "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, agradeceré de corazón tu obsequio en efectivo dentro de un sobre."
+    "description": "Tu presencia es mi mejor regalo. Sin embargo, si deseas hacerme un regalo adicional, te agradezco que sea en un sobre."
   }],
   "contact": {
     "phone": "6624122393",

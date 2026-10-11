@@ -1,3 +1,4 @@
+import { ricardoBelinda } from "../config/events/ricardo-belinda.js";
 import { reynaDomingo } from "../config/events/reyna-domingo.js";
 import { gabrielaOscar } from "../config/events/gabriela-oscar.js";
 import { paulaXv } from "../config/events/paula-xv.js";
@@ -134,6 +135,7 @@ templates[karlaMichelleXv.slug] = karlaMichelleXv;
 templates[marioJazmin.slug] = marioJazmin;
 templates[heatherXv.slug] = heatherXv;
 templates[paulaXv.slug] = paulaXv;
+templates[ricardoBelinda.slug] = ricardoBelinda;
 templates[reynaDomingo.slug] = reynaDomingo;
 templates[gabrielaOscar.slug] = gabrielaOscar;
 templates[ricardoDaniela.slug] = ricardoDaniela;

@@ -164,3 +164,4 @@
 
 .openEnvelopeLayer{width:124%;margin-left:-62%;bottom:5%;}.openFront{clip-path:inset(72% 0 0 0);}.sealButton{top:51%;}
 .birthdayAge strong{color:#8A7045;}
+.invitation :global(.hero__copy > p){font-size:clamp(1.3rem,3.8vw,1.6rem);line-height:1.5;}
