@@ -1,4 +1,5 @@
 export const sandraCristinaXv = {
+  "publicEnabled": false,
   "slug": "xv-sandra-cristina",
   "templateKey": "sandra-cristina-princess-blue-silver",
   "eventTitle": "XV años de Sandra Cristina",

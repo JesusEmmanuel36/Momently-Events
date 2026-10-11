@@ -1,4 +1,5 @@
 export const joseMonserrat = {
+  "publicEnabled": false,
   "slug": "jose-y-monserrat",
   "templateKey": "jose-monserrat-beige-gold",
   "eventTitle": "Boda de José Delfino y Monserrat",

@@ -1,4 +1,5 @@
 export const jessicaJoan = {
+  "publicEnabled": false,
   slug: "jessica-y-joan",
   templateKey: "jessica-joan-royal-blue",
   eventTitle: "Boda de Jessica Andrea y Joan Christian",

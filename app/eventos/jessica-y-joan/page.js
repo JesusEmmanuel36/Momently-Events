@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { JessicaJoanInvitation } from "@/components/events/jessica-joan/JessicaJoanInvitation";
 import { jessicaJoan } from "@/config/events/jessica-joan";
 
@@ -8,5 +9,6 @@ export const metadata = {
 };
 
 export default function Page() {
+  if (jessicaJoan.publicEnabled === false) notFound();
   return <JessicaJoanInvitation wedding={jessicaJoan} />;
 }

@@ -1,4 +1,5 @@
 export const lolisCesar = {
+  "publicEnabled": false,
   "slug": "lolis-y-cesar",
   "templateKey": "lolis-cesar-beige-navy",
   "eventTitle": "Boda de Lolis y César",

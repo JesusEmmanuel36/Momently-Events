@@ -1,4 +1,5 @@
 export const carolinaPavel = {
+  "publicEnabled": false,
   "slug": "carolina-y-pavel",
   "templateKey": "carolina-pavel-western-earth",
   "eventTitle": "Boda de Carolina y Pavel",
