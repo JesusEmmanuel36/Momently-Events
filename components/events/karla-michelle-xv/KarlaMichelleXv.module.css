@@ -142,3 +142,5 @@
 .openEnvelopeLayer{width:125.3%;margin-left:-62.65%;bottom:6%;}.sealButton{top:65%;}
 
 .openEnvelopeLayer{width:122%;margin-left:-61%;bottom:10%;}.sealButton{top:54%;}
+
+.cashEnvelope{display:block;width:min(75vw,320px);height:auto;margin:0 auto 2rem;}

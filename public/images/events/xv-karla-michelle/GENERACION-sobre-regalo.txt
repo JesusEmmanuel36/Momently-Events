@@ -1,0 +1,3 @@
+Edición con imagegen integrada de la referencia del usuario: eliminación del fondo blanco con transparencia real.
+Archivo: sobre-regalo.png
+Prompt: Edit the supplied image only by removing its white background. Preserve the exact photographed open kraft yellow-brown envelope with Mexican peso banknotes protruding from it, its angle, shapes, colors, original banknote details, and proportions. Do not redesign, replace banknotes, add text or other objects. Remove all white background to genuine transparent alpha; preserve clean natural edges and a subtle soft contact shadow if separable. Output one isolated envelope with Mexican banknotes, transparent background.
