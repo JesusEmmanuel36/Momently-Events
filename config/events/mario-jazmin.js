@@ -21,7 +21,7 @@ export const marioJazmin = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Nos elegimos para caminar juntos, compartir nuestros sueños y construir una vida llena de amor. Nos hará muy felices celebrar este día contigo.",
-    "image": "/images/events/mario-y-jazmin/hero.png"
+    "image": "/images/events/mario-y-jazmin/image copy 2.png"
   },
   "ceremony": {
     "enabled": true,
@@ -37,7 +37,11 @@ export const marioJazmin = {
     "address": "Brisas del Valle, Navojoa, Sonora",
     "mapsUrl": "https://maps.app.goo.gl/uqZU7oQHxJJ1ywRn7"
   },
-  "gallery": [],
+  "gallery": [
+    {"src": "/images/events/mario-y-jazmin/image.png", "alt": "Mario y Jazmin bajo un arco de flores"},
+    {"src": "/images/events/mario-y-jazmin/image copy.png", "alt": "Mario y Jazmin abrazados en el jardín"},
+    {"src": "/images/events/mario-y-jazmin/image copy 2.png", "alt": "Mario y Jazmin sonriendo juntos"}
+  ],
   "music": {
     "enabled": true,
     "url": "/audio/marioyjazmin.mp3",

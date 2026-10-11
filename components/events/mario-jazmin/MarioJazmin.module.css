@@ -165,3 +165,6 @@
 .invitation :global(.hero h1){font-size:clamp(3.3rem,8vw,6.5rem);}.heroAmp{display:block;font:400 .5em/1.3 var(--font-script),cursive;color:#d8c59b;}.letter h2{font-family:var(--font-script),cursive;font-size:clamp(1.8rem,5vw,3.8rem);}.letter{padding-inline:1rem;}.letter h2 i{font-size:.75em;}.invitation :global(.hero__image img){object-position:center center;}.invitation :global(.hero__wash){background:linear-gradient(180deg,#343e2955,#343e2966 45%,#343e29bb);}
 
 .openEnvelopeLayer{width:119%;margin-left:-59.5%;bottom:4%;}.sealButton{top:52%;}
+
+/* Keep both faces visible above the cover titles. */
+.invitation :global(.hero__image img){object-position:center 30%;}
