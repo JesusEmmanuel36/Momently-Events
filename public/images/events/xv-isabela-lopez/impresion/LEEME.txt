@@ -1,0 +1,13 @@
+Tarjeta de mesa · XV de Isabela
+
+Imprimir al 100% / tamaño real, sin ajustar a página.
+PDF individual: 10 × 15 cm.
+PDF carta: dos tarjetas de 10 × 15 cm por hoja.
+PNG: aproximadamente 1200 × 1800 px, 304.8 ppp.
+QR verificado con lector Vision de macOS.
+Destino: https://momentlyevents.vercel.app/eventos/xv-isabela-lopez/fotos
+La subida se habilita el 14 de marzo de 2027 a las 00:00, hora de Ciudad de México.
+
+Fondo generado con la herramienta integrada image_gen; tipografía Allura, Cormorant Garamond y Manrope, como la invitación. QR auténtico compuesto por separado.
+Prompt: fondo de tarjeta parisina plana en marfil, salmón y dorado, marco ornamental delgado, flores de cerezo, rosas y Torre Eiffel, sin texto ni QR, centro limpio para tipografía y código.
+Original: exec-cc254a07-1814-4a9d-983f-f5b64dc6fb96.png

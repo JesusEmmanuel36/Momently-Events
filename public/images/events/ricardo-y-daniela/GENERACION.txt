@@ -1,0 +1,9 @@
+Herramienta integrada image_gen. Paleta verde olivo, marfil y dorado.
+Portada: anillos sobre lino en patio romántico de capilla mexicana, ramas de olivo y rosas blancas, luz cálida, sin personas ni texto.
+Cerrado: sobre oliva con listón marfil y sello dorado R&D, frontal y centrado con fondo transparente.
+Abierto: sobre oliva ancho y frontal, interior marfil, proporciones naturales, vacío y centrado, fondo transparente.
+Floral: arreglo de rosas marfil y ramas de olivo reutilizado de Mario y Jazmin, sin modificar sus archivos.
+Originales:
+hero: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-275f356d-48dd-4f82-ba26-06b1e7289d60.png
+envelope-closed: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-ccb068d8-3520-4bfe-8375-257368368805.png
+envelope-open: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-ecf89650-8271-4daa-b5e4-24c93d4cf62d.png

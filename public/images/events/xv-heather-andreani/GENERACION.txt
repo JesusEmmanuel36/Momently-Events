@@ -1,0 +1,11 @@
+Generadas con herramienta integrada image_gen.
+Paleta rojo vino, marfil y dorado.
+Prompt portada: fotografía editorial de una tiara dorada sobre pedestal de terciopelo vino en jardín de palacio nocturno, rosas vino, luces cálidas y estrellas sutiles, sin personas ni texto.
+Prompt cerrado: sobre de papel vino centrado, listón marfil, detalles botánicos dorados y sello H, fondo transparente.
+Prompt abierto: sobre vino frontal ancho y centrado, interior marfil, bordes dorados, sin hoja ni texto, fondo transparente.
+Prompt floral: rosas vino, flores marfil y hojas doradas, composición horizontal con fondo transparente.
+Originales:
+hero: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-4f983ee1-172a-40dc-af58-5ed743d58767.png
+envelope-closed: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-8df55b55-45a2-4829-b1a5-72eb13ad409c.png
+envelope-open: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-fa9ba970-38a1-4b88-9779-3e4af4bd7287.png
+floral: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-3f4a740e-58b3-4a86-8234-268318d6246e.png

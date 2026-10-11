@@ -1,0 +1,11 @@
+Generadas con image_gen integrado.
+Paleta verde olivo, marfil y dorado.
+Portada: fotografía editorial de anillos en caja de terciopelo sobre lino, jardín de hacienda sin personas ni texto.
+Sobre cerrado: papel verde olivo, listón marfil y sello dorado M&J.
+Sobre abierto: frontal centrado, interior marfil, proporciones naturales y fondo transparente.
+Floral: rosas blancas y ramas de olivo, arreglo horizontal con fondo transparente.
+Originales:
+hero: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-94ac4ab1-2e59-48ee-b6ba-5478c0932a8b.png
+envelope-closed: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-303fda05-9c1a-4176-97e4-3655a91b49ad.png
+envelope-open: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-0193cad1-7cbe-4760-b769-65f477e9bfba.png
+floral: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-8b3c03a3-b87a-47be-86ee-6aab2952b2b9.png
