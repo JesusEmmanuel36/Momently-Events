@@ -63,8 +63,8 @@ export const gabrielaOscar = {
   },
   "gifts": [],
   "contact": {
-    "phone": "7294460574",
-    "whatsapp": "https://wa.me/527294460574"
+    "phone": "7291060844",
+    "whatsapp": "https://wa.me/527291060844"
   },
   "itinerary": [
     {

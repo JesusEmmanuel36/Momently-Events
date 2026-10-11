@@ -1,3 +1,4 @@
+import { novalyXv } from "../config/events/novaly-xv.js";
 import { rigoSinahi } from "../config/events/rigo-sinahi.js";
 import { ricardoBelinda } from "../config/events/ricardo-belinda.js";
 import { reynaDomingo } from "../config/events/reyna-domingo.js";
@@ -135,6 +136,7 @@ templates[isabelaXv.slug] = isabelaXv;
 templates[karlaMichelleXv.slug] = karlaMichelleXv;
 templates[marioJazmin.slug] = marioJazmin;
 templates[heatherXv.slug] = heatherXv;
+templates[novalyXv.slug] = novalyXv;
 templates[paulaXv.slug] = paulaXv;
 templates[rigoSinahi.slug] = rigoSinahi;
 templates[ricardoBelinda.slug] = ricardoBelinda;
