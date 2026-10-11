@@ -1,5 +1,6 @@
 export const hermelinda70 = {
   "slug": "hermelinda-70",
+  "publicEnabled": false,
   "templateKey": "hermelinda-champagne-gold-70",
   "eventTitle": "70 años de Hermelinda Mejía Villa",
   "couple": {
