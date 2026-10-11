@@ -28,14 +28,15 @@ export const karlaMichelleXv = {
     "name": "Parroquia de San Sebastián",
     "time": "4:30 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/c6hdxNsNEVbd3ajU9"
   },
   "reception": {
     "enabled": true,
     "name": "Salón Las Flores",
     "time": "7:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/mYAbisXqLXzVxNZe9",
+    "punctualityNote": "Te agradezco ser puntual para disfrutar juntos desde el inicio."
   },
   "gallery": [],
   "music": {
@@ -65,6 +66,6 @@ export const karlaMichelleXv = {
     "sage": "#A7C1C9"
   },
   "dressCode": {
-    "title": "Ropa cómoda"
+    "title": "Formal"
   }
 };
