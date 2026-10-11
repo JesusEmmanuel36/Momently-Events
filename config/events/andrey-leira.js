@@ -37,6 +37,7 @@ export const andreyLeira = {
     "address": "Calle Ignacio Pérez Sur #95, Querétaro, Qro.",
     "mapsUrl": "https://maps.app.goo.gl/Xfg5Um1hhYe21yts5"
   },
+  "godparents": ["Ulises Hernández", "Lorena Guerrero"],
   "gallery": [],
   "music": {
     "enabled": true,

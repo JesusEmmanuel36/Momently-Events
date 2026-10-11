@@ -1,7 +1,7 @@
 export const ricardoDaniela = {
   "slug": "ricardo-y-daniela",
   "templateKey": "ricardo-daniela-olive-wedding",
-  "eventTitle": "Boda de Ricardo y Daniela",
+  "eventTitle": "Boda de Ricardo y Daniela y bautizo de Ailany Fernanda",
   "couple": {
     "partner1": "Ricardo Araujo Rubio",
     "partner2": "Daniela Campos Sáenz"
@@ -19,7 +19,7 @@ export const ricardoDaniela = {
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
-    "subtitle": "Nuestra boda",
+    "subtitle": "Nuestra boda y el bautizo de nuestra hija",
     "quote": "El amor nos encontró, nos unió y nos enseñó que los mejores sueños se construyen juntos. Queremos compartir contigo la alegría de comenzar nuestra vida como esposos.",
     "image": "/images/events/ricardo-y-daniela/hero.png"
   },
@@ -37,6 +37,7 @@ export const ricardoDaniela = {
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/8jh53iw38T4Y2eZ49?g_st=ac"
   },
+  "baptism": {"name": "Ailany Fernanda Araujo Campos"},
   "gallery": [],
   "music": {
     "enabled": true,

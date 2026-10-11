@@ -167,3 +167,9 @@
 .openEnvelopeLayer{width:119%;margin-left:-59.5%;bottom:4%;}.sealButton{top:52%;}
 
 .openEnvelopeLayer{width:111.6%;margin-left:-55.8%;bottom:6%;}.sealButton{top:52%;}
+
+.baptism{text-align:center;background:#f3f2e8;color:#343e29;}
+.baptism svg{color:#657044;margin:0 auto 1.5rem;}
+.invitation :global(.hero__copy) .heroBaptism{margin:1rem auto;font-style:normal;font-size:1rem;line-height:1.5;}
+.heroBaptism span{font-family:var(--font-script),cursive;font-size:1.9rem;color:#d8c59b;}
+.letterBaptism{font-size:clamp(.55rem,1.8vw,.9rem);margin:.25rem 0 .75rem;}
