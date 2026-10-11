@@ -21,7 +21,7 @@ export const paulaXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con el corazón lleno de ilusión y sueños por florecer, quiero celebrar mis XV años rodeada de las personas que hacen mi vida especial. Será una alegría compartir este día contigo.",
-    "image": "/images/events/xv-paula-guadalupe/hero.png"
+    "image": "/images/events/xv-paula-guadalupe/hero-v2.png"
   },
   "ceremony": {
     "enabled": true,
@@ -44,27 +44,30 @@ export const paulaXv = {
     "url": "/audio/paulaguadalupe.mp3",
     "label": "Dancing Queen"
   },
-  "gifts": [],
+  "gifts": [{
+    "title": "Lluvia de sobres",
+    "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, agradeceré de corazón tu obsequio en efectivo dentro de un sobre."
+  }],
   "contact": {
     "phone": "6624122393",
     "whatsapp": "https://wa.me/526624122393"
   },
   "itinerary": [],
   "theme": {
-    "primary": "#38684D",
-    "dark": "#163D2C",
+    "primary": "#91AD87",
+    "dark": "#435B3F",
     "champagne": "#DFC58F",
-    "cream": "#F0F5EE",
+    "cream": "#F3F7EF",
     "ivory": "#FFFCF7",
-    "rose": "#C8D9C4",
-    "sage": "#81876A"
+    "rose": "#D8E5D2",
+    "sage": "#B9D1B5"
   },
   "dressCode": {
     "title": "Color reservado",
     "reservedColors": [
       {
         "name": "Verde",
-        "color": "#38684D"
+        "color": "#91AD87"
       }
     ]
   }
