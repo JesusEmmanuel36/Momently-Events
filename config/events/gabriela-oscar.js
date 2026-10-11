@@ -61,7 +61,11 @@ export const gabrielaOscar = {
     "url": "/audio/gabrielayoscar.mp3",
     "label": "Nuestra canción"
   },
-  "gifts": [],
+  "gifts": [{
+    "title": "Liverpool",
+    "eventNumber": "60048344",
+    "url": "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60048344"
+  }],
   "contact": {
     "phone": "7291060844",
     "whatsapp": "https://wa.me/527291060844"

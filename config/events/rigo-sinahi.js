@@ -52,9 +52,9 @@ export const rigoSinahi = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/rigoysinahi.mp3",
+    "label": "Nuestra canción"
   },
   "gifts": [],
   "contact": {
