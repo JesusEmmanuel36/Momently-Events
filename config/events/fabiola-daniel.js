@@ -14,6 +14,10 @@ export const fabiolaDaniel = {
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "rsvpEnabled": false,
+  "parents": {
+    "bride": ["Lilia Reyes González", "Paladio Alejandro Cárdenas Puebla"],
+    "groom": ["Asunción Morales Rivera", "Francisco Enrique Acuña Pavón †"]
+  },
   "godparents": ["Rigoberto Morales Rivera", "Ibett Villarreal San Juan"],
   "dateStamp": "26 · 12 · 2026",
   "dateDisplay": "Sábado · 26 de diciembre · 2026",

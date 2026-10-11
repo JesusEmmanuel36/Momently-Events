@@ -23,3 +23,5 @@
 
 .godparents > div {position:relative;max-width:650px;margin:2rem auto 0;}
 .godparents > div p {font-family:var(--font-serif),serif;font-size:clamp(1.35rem,4vw,2rem);line-height:1.6;color:var(--dark);margin:.5rem 0;}
+
+.familyGroups{display:grid;gap:2.5rem;text-align:center;}.familyGroups h3{font-family:var(--font-serif),serif;font-size:1rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin:0 0 1rem;}
