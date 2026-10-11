@@ -14,7 +14,7 @@ async function getPublishedEvent(slug) {
 }
 function ensureRsvpOpen(event, companions, ignoreDeadline = false, slug = "") {
   const settings = event.settings?.rsvp; if (!settings?.enabled) throw new AppError("Las confirmaciones no están disponibles.", 403, "rsvp_disabled");
-  const maxCompanions = slug === "esmeralda-y-antonio" ? 3 : slug === "isamara-y-wsbaldo" ? 1 : slug === "clara-y-santiago" ? 5 : Number(settings.maxCompanions || 0);
+  const maxCompanions = slug === "esmeralda-y-antonio" ? 3 : (slug === "isamara-y-wsbaldo" || slug === "mario-y-jazmin") ? 1 : slug === "clara-y-santiago" ? 5 : Number(settings.maxCompanions || 0);
   if (slug !== "yuli-y-alexis" && companions > maxCompanions) throw new ValidationError(`Puedes registrar hasta ${maxCompanions} acompañantes.`);
   const deadline = settings.deadline?.toDate?.() || (settings.deadline ? new Date(settings.deadline) : null); if (!ignoreDeadline && deadline && Date.now() > deadline.getTime()) throw new AppError("El periodo de confirmaciones ya terminó.", 403, "rsvp_closed");
 }
@@ -24,7 +24,7 @@ function allowedData(data, source = "web") {
 export async function POST(request, { params }) {
   try {
     const { slug } = await params; const raw = await request.json(); if (raw.website) return new Response(null, { status: 204 }); const parsed = publicRsvpSchemaFor(slug).safeParse(raw); if (!parsed.success) throw new ValidationError("Revisa los datos de tu confirmación.", parsed.error.flatten().fieldErrors);
-    if (supportsPersonalizedPasses(slug)) throw new AppError("Confirma tu asistencia desde el enlace de tu pase personalizado.", 403, "personalized_pass_required"); const context = await getPublishedEvent(slug); if (slug === "isamara-y-wsbaldo") parsed.data.companions = parsed.data.attending === "yes" ? 1 : 0; ensureRsvpOpen(context.event, parsed.data.companions, slug === "erick-y-erika", slug); await enforceRsvpRateLimit(request, context.eventRef.id);
+    if (supportsPersonalizedPasses(slug)) throw new AppError("Confirma tu asistencia desde el enlace de tu pase personalizado.", 403, "personalized_pass_required"); const context = await getPublishedEvent(slug); if (slug === "isamara-y-wsbaldo" || slug === "mario-y-jazmin") parsed.data.companions = parsed.data.attending === "yes" ? 1 : 0; ensureRsvpOpen(context.event, parsed.data.companions, slug === "erick-y-erika", slug); await enforceRsvpRateLimit(request, context.eventRef.id);
     const token = createSecureToken(); const ref = context.eventRef.collection("rsvps").doc(); const now = FieldValue.serverTimestamp();
     await ref.create({ ...allowedData(parsed.data), editTokenHash: hashToken(token), createdAt: now, updatedAt: now });
     return Response.json({ ok: true, rsvpId: ref.id, editToken: token }, { status: 201 });
@@ -34,7 +34,7 @@ export async function PATCH(request, { params }) {
   try {
     const { slug } = await params; const raw = await request.json(); const parsed = publicRsvpSchemaFor(slug).safeParse(raw); if (!parsed.success || !parsed.data.rsvpId) throw new ValidationError("No fue posible identificar tu confirmación.");
     const token = request.headers.get("x-rsvp-edit-token"); if (!token) throw new AppError("Token de edición requerido.", 401, "edit_token_required");
-    if (supportsPersonalizedPasses(slug)) throw new AppError("Confirma tu asistencia desde el enlace de tu pase personalizado.", 403, "personalized_pass_required"); const context = await getPublishedEvent(slug); if (slug === "isamara-y-wsbaldo") parsed.data.companions = parsed.data.attending === "yes" ? 1 : 0; ensureRsvpOpen(context.event, parsed.data.companions, slug === "erick-y-erika", slug); await enforceRsvpRateLimit(request, context.eventRef.id);
+    if (supportsPersonalizedPasses(slug)) throw new AppError("Confirma tu asistencia desde el enlace de tu pase personalizado.", 403, "personalized_pass_required"); const context = await getPublishedEvent(slug); if (slug === "isamara-y-wsbaldo" || slug === "mario-y-jazmin") parsed.data.companions = parsed.data.attending === "yes" ? 1 : 0; ensureRsvpOpen(context.event, parsed.data.companions, slug === "erick-y-erika", slug); await enforceRsvpRateLimit(request, context.eventRef.id);
     const ref = context.eventRef.collection("rsvps").doc(parsed.data.rsvpId); const snapshot = await ref.get(); if (!snapshot.exists || !safeCompareHash(token, snapshot.data().editTokenHash)) throw new AppError("No fue posible editar esta confirmación.", 403, "invalid_edit_token");
     await ref.update({ ...allowedData(parsed.data), updatedAt: FieldValue.serverTimestamp() }); return Response.json({ ok: true, rsvpId: ref.id });
   } catch (error) { return apiError(error); }

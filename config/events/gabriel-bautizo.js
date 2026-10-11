@@ -20,7 +20,7 @@ export const gabrielBautizo = {
   "askAllergies": false,
   "family": {
     "parents": ["Edgar Alejandro Robledo Gallegos", "Yanin Alejandra García Gudiño"],
-    "godparents": ["Adriana Robledo Gallegos", "Ángel Orta Mediana"]
+    "godparents": ["Adriana Robledo Gallegos", "Ángel Orta Medina"]
   },
   "hero": {
     "subtitle": "Mi bautizo",

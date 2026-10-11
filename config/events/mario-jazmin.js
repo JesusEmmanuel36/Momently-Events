@@ -15,7 +15,7 @@ export const marioJazmin = {
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
   "calendarDate": "26 de diciembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 1,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {

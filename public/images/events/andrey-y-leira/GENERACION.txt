@@ -1,0 +1,16 @@
+Elementos generados por IA para Andrey y Leira. 19 diciembre 2026.
+Cada archivo fue generado por separado.
+Portada: papel marfil con bordados y flores mexicanas, centro libre para nombres.
+Sobres: fotografía 3D de sobre marfil, bordados multicolores y sello A&L, cerrado y abierto centrados.
+Papel picado: banderines mexicanos de colores sobre fondo transparente.
+Flores: arreglo mexicano multicolor con fondo transparente.
+Muñecas: pareja artesanal mexicana, vestido bordado y guayabera sobre fondo transparente.
+Corazón: corazón milagro bordado magenta con hilo dorado y detalles florales transparente.
+Originales:
+hero: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-038ae3b8-ccfa-45e3-92a8-3377f72f1d69.png
+envelope-closed: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-4621a9d5-a996-4ffe-9ecc-236e1a307358.png
+envelope-open: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-2b27e3ad-8d2f-4c90-937e-def1b3eeb133.png
+floral: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-46613f18-e8b2-489b-bfda-ec33baf64a41.png
+papel-picado: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-e1f14a7b-852c-4e48-8912-4a188efe03a3.png
+munecas: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-5251233e-93f2-48b5-8b35-ebfbfd82ff7c.png
+corazon: /Users/jesusemmanuelestradarodriguez/.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-69765acc-a25e-4a17-898b-54127f81aaee.png
