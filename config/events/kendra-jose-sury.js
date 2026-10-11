@@ -16,7 +16,7 @@ export const kendraJoseSury = {
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
   "maxCompanions": 5,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "askAllergies": false,
   "hero": {
     "subtitle": "Nuestro bautizo",
@@ -25,20 +25,26 @@ export const kendraJoseSury = {
   },
   "ceremony": {
     "enabled": true,
-    "name": "Parroquia de San Pedro y San Pablo",
+    "name": "Parroquia de San Pedro y San Pablo Villa de Etla",
     "time": "11:00 a. m.",
     "address": "Villa de Etla",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/SH32bKxCguRStzpV8"
   },
   "reception": {
     "enabled": true,
     "name": "Nuestra celebración",
     "time": "",
     "address": "Calle Vicente Guerrero número 14, Santo Domingo Barrio Bajo, Villa de Etla",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/iEt6whXVf4n5uPfLA"
   },
   "gallery": [
-    {"src":"/images/events/kendrajoseysury/image copy 5.png","alt":"Un recuerdo de nuestra familia","width":720,"height":1600,"crop":true},
+    {
+      "src": "/images/events/kendrajoseysury/image copy 5.png",
+      "alt": "Un recuerdo de nuestra familia",
+      "width": 720,
+      "height": 1600,
+      "crop": true
+    },
     {
       "src": "/images/events/kendrajoseysury/image copy 2.png",
       "alt": "Un recuerdo de Kendra, José y Sury",
