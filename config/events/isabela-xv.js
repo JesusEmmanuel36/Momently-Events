@@ -37,6 +37,10 @@ export const isabelaXv = {
     "address": "Km 12+ de la carretera Morelia–Pátzcuaro, Uruapilla",
     "mapsUrl": "https://maps.app.goo.gl/hiJFRv5Usotn5mFc8"
   },
+  "family": {
+    "parents": ["Angélica Gutiérrez Andrade", "Carlos López Ayala"],
+    "godparents": ["Aura N. Gutiérrez Andrade", "José Ignacio Arriaga González"]
+  },
   "gallery": [],
   "music": {
     "enabled": true,

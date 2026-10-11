@@ -140,3 +140,16 @@
 .parisMoment{text-align:center;background:#fff4ef;}.parisMoment img{display:block;width:min(60vw,260px);height:auto;margin:0 auto 2rem;}.parisMoment h2{font:400 clamp(2.5rem,5vw,4rem)/1.2 var(--font-serif),serif;margin:1.5rem auto;}.parisMoment p{max-width:550px;margin:auto;line-height:1.8;}.attire{text-align:center;background:#ecab9933;}.placeCard :global(.button){margin-top:1.5rem;}.birthdayAge strong{font-size:clamp(3rem,7vw,5rem);}.birthdayAge span{font-size:1.8rem;}
 
 .openEnvelopeLayer{width:125.3%;margin-left:-62.65%;bottom:6%;}.sealButton{top:65%;}
+
+/* Petals remain inside these sections, away from interactive controls. */
+.petalSection{position:relative;overflow:hidden;isolation:isolate;}
+.petalSection> :not(.petals){position:relative;z-index:1;}
+.petals{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
+.petals span{position:absolute;top:-24px;left:var(--petal-left);width:var(--petal-size);height:calc(var(--petal-size) * 1.4);border-radius:85% 15% 75% 25%;background:linear-gradient(140deg,#f7d6cf,#e7a6a1);opacity:0;animation:cherryFall var(--petal-duration) var(--petal-delay) linear infinite;}
+@keyframes cherryFall{0%{opacity:0;transform:translate3d(-15px,0,0) rotate(0deg);}8%{opacity:.6;}50%{transform:translate3d(25px,45vh,0) rotate(170deg);}90%{opacity:.5;}100%{opacity:0;transform:translate3d(-20px,110vh,0) rotate(340deg);}}
+.family{text-align:center;background:#fffcf9;}
+.familyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem;max-width:900px;margin:2rem auto 0;}
+.familyGrid h3{font:400 2.4rem/1.3 var(--font-script),cursive;color:#b48a46;margin-bottom:1rem;}
+.familyGrid p{font:400 clamp(1.15rem,2.5vw,1.55rem)/1.6 var(--font-serif),serif;margin:.4rem 0;}
+@media(max-width:700px){.familyGrid{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){.petals span{animation:none;display:none;}}
