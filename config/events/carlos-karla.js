@@ -17,7 +17,7 @@ export const carlosKarla = {
   "dateStamp": "24 · 10 · 2026",
   "calendarDate": "24 de octubre de 2026",
   "maxCompanions": 5,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "askAllergies": false,
   "hero": {
     "subtitle": "Nuestra boda",

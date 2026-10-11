@@ -5,7 +5,6 @@ import { CalendarDays, ChevronDown, Heart, Mail, MapPin, MessageCircle, Pause, P
 import { useEffect, useRef, useState } from "react";
 import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection } from "@/components/sections/CountdownStory";
-import { RSVPSection } from "@/components/sections/GuestActions";
 import { Reveal, SectionHeading } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./CarlosKarla.module.css";
@@ -76,7 +75,7 @@ export function CarlosKarlaInvitation({ wedding }) {
       <section className={`section ${styles.gallery}`}><Reveal><SectionHeading eyebrow="Nuestros recuerdos" title="El amor en cada momento"/></Reveal><div className={styles.photoGrid}>{wedding.gallery.map((photo) => <Reveal key={photo.src}><Image src={photo.src} width={photo.src.endsWith("image copy.png") ? 931 : 1456} height={photo.src.endsWith("image copy.png") ? 941 : 1424} sizes="(max-width:800px) 90vw, 550px" alt={photo.alt}/></Reveal>)}</div></section>
       <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Mesa de regalos" title={wedding.gifts[0].title} copy={wedding.gifts[0].description}/></Reveal></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote })}>Agregar a mi calendario</button></Reveal></section>
-      <RSVPSection wedding={view}/>
+      <section className="share" id="rsvp"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Confirma tu asistencia por WhatsApp. Nos encantará celebrar contigo.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Carlos y Karla. Quiero confirmar mi asistencia a su celebración.")}`} target="_blank" rel="noreferrer"><MessageCircle size={18}/> Confirmar por WhatsApp</a></Reveal></section>
       <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Estamos para ayudarte</h2><p>Si tienes alguna duda, escríbenos.</p><div className={styles.contacts}>{wedding.contact.whatsapps.map((contact) => <a className="text-link" href={contact.whatsapp} target="_blank" rel="noreferrer" key={contact.phone}><MessageCircle size={17}/>{contact.phone}</a>)}</div><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Carlos y Karla" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte</span><h2>de nuestra historia.</h2><p>Carlos <i>&amp;</i> Karla</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>
