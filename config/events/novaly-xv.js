@@ -21,7 +21,7 @@ export const novalyXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Hay noches que brillan para siempre en el corazón. Con mucha ilusión, te invito a celebrar mis XV años y a compartir conmigo una noche llena de alegría, sueños y momentos inolvidables.",
-    "image": "/images/events/xv-novaly/image copy.png"
+    "image": "/images/events/xv-novaly/image copy 2.png"
   },
   "ceremony": {
     "enabled": true,
@@ -37,28 +37,7 @@ export const novalyXv = {
     "address": "Cedros #12, colonia Jardines del Vergel",
     "mapsUrl": ""
   },
-  "gallery": [
-    {
-      "src": "/images/events/xv-novaly/image copy.png",
-      "alt": "Novaly Kristell en su sesión de XV años"
-    },
-    {
-      "src": "/images/events/xv-novaly/image copy 2.png",
-      "alt": "Novaly Kristell en su sesión de XV años"
-    },
-    {
-      "src": "/images/events/xv-novaly/image.png",
-      "alt": "Novaly Kristell en su sesión de XV años"
-    },
-    {
-      "src": "/images/events/xv-novaly/image copy 4.png",
-      "alt": "Novaly Kristell en su sesión de XV años"
-    },
-    {
-      "src": "/images/events/xv-novaly/image copy 3.png",
-      "alt": "Novaly Kristell en su sesión de XV años"
-    }
-  ],
+  "gallery": [],
   "music": {
     "enabled": true,
     "url": "/audio/novaly.mp3",

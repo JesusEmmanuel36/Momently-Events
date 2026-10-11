@@ -81,7 +81,7 @@
   .heroEntered :global(.hero__copy > p) {animation:heroTextEnter 1.1s .9s both;}
   .heroEntered :global(.hero__botanical) {animation:heroTextEnter 1.5s .55s both;}
 }
-@keyframes heroPhotoEnter {from{transform:scale(1.1);filter:brightness(.8)}to{transform:scale(1);filter:brightness(1)}}
+@keyframes heroPhotoEnter {from{transform:scale(1.1);filter:grayscale(1) brightness(.8)}to{transform:scale(1);filter:grayscale(1) brightness(1)}}
 @keyframes heroTextEnter {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:800px){.venue{grid-template-columns:1fr;gap:3rem;padding-block:3rem;}.arch{min-height:340px;max-width:470px;margin:auto;}.venueCopy{text-align:center;}.venueCopy p{margin-inline:auto;}.introHeading{margin-bottom:1rem;}.envelopeScene{margin-top:1rem;}.letter > .eyebrow{font-size:.5rem;}}
 @media(prefers-reduced-motion:reduce){.intro{transition-duration:.01ms;transition-delay:0s;}.opening .closedEnvelope,.opening .openEnvelopeLayer,.opening .letter{animation-duration:.01ms;animation-delay:0s;}}
@@ -160,3 +160,5 @@
 
 /* Degradado rojo suave sobre la foto de portada. */
 .invitation :global(.hero__wash){background:linear-gradient(180deg,transparent 45%,rgba(105,12,28,.12) 55%,rgba(105,12,28,.48) 76%,rgba(105,12,28,.86) 100%);}
+
+.invitation :global(.hero__image img),.introPhoto,.invitation :global(.closing>img){filter:grayscale(1);}

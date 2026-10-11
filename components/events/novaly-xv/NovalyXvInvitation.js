@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { CalendarDays, ChevronDown, Heart, Cross, Gift, Mail, Wine, Utensils, Music, PartyPopper, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { GallerySection } from "@/components/sections/Gallery";
 import { RSVPSection } from "@/components/sections/GuestActions";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -75,7 +74,6 @@ export function NovalyXvInvitation({ wedding }) {
       <section className={`section ${styles.attire}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.description}/><div className={styles.reservedColor}><span style={{backgroundColor:"#000000"}} aria-label="Color negro"/><p>All Black</p></div></Reveal></section>
       <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Tu presencia es mi mejor regalo" title="Lluvia de sobres" copy={wedding.gifts[0].description}/></Reveal></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.ceremony.address || wedding.ceremony.name, details: `${wedding.hero.quote} Ceremonia: ${wedding.ceremony.time}, ${wedding.ceremony.name}. Recepción: ${wedding.reception.time}, ${wedding.reception.name}, ${wedding.reception.address}.` })}>Agregar a mi calendario</button></Reveal></section>
-      <section className={`section ${styles.photoMemories}`}><Reveal><SectionHeading eyebrow="Mis recuerdos" title="Instantes que brillan"/></Reveal><div className={styles.galleryContent}><GallerySection wedding={view}/></div></section>
       <RSVPSection wedding={view}/>
       <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Me acompañas?</h2><p>También puedes confirmar tu asistencia por WhatsApp.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Novaly. Quiero confirmar mi asistencia a tus XV años.")}`} target="_blank" rel="noreferrer">Confirmar por WhatsApp</a></Reveal></section>
       <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Comparte esta celebración</h2><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
