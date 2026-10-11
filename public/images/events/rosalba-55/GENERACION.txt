@@ -4,3 +4,5 @@ Corrección: tres imágenes independientes, con transparencia real RGBA.
 Sobre cerrado v2: rosa pastel y fucsia, borde plateado, sello R, vista frontal; exec-442f9867-7b4f-4463-a06c-48028fa968e5.png.
 Sobre abierto v2: mismo estilo, vacío, simétrico, sin carta ni fondo; exec-ea98043a-3893-4cdf-a80b-8406c980950a.png.
 Floral v2: peonías y rosas rosa pastel y fucsia, hojas plateadas y perlas, sin fondo; exec-c0d2e098-b75f-4b98-b4fa-e5135fd10efa.png.
+
+Actualización negro/dorado: sobres fotorealistas negros con cinta de satén dorada, sello R, ornamentos dorados y acentos rosa pastel. Abierto frontal centrado con solapa levantada, sin carta. Floral aislado con calas negras, hojas doradas, rosas rosa pastel y flores marfil; transparencia.

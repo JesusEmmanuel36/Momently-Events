@@ -20,7 +20,7 @@ export const rosalba55 = {
   "hero": {
     "subtitle": "Mis 55 años",
     "quote": "¿Cómo no amar a Dios y a la vida, si me han dado todo lo que he soñado?",
-    "image": "/images/events/rosalba-55/image copy 16.png"
+    "image": "/images/events/rosalba-55/PORTADA.png"
   },
   "closingImage": "/images/events/rosalba-55/image copy 9.png",
   "thought": [
@@ -39,8 +39,8 @@ export const rosalba55 = {
     "name": "Palapa Real del Bosque",
     "time": "3:30 p. m.",
     "address": "Boulevard del Parque, palapa principal. Fraccionamiento Real del Bosque, Corregidora, Querétaro. C. P. 76922.",
-    "mapsUrl": "",
-    "image": "/images/events/rosalba-55/floral-v2.png"
+    "mapsUrl": "https://maps.app.goo.gl/bf168k7T35Zf73jo7",
+    "image": "/images/events/rosalba-55/floral-black-gold.png"
   },
   "gallery": [
     {
@@ -162,6 +162,72 @@ export const rosalba55 = {
       "width": 1600,
       "height": 1333,
       "alt": "Un recuerdo especial de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 21.png",
+      "width": 1170,
+      "height": 1143,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 22.png",
+      "width": 1170,
+      "height": 1547,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 23.png",
+      "width": 1170,
+      "height": 1252,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 24.png",
+      "width": 1600,
+      "height": 1280,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 25.png",
+      "width": 1189,
+      "height": 1600,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 26.png",
+      "width": 1189,
+      "height": 1600,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 27.png",
+      "width": 739,
+      "height": 1600,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 28.png",
+      "width": 1600,
+      "height": 1326,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 29.png",
+      "width": 1600,
+      "height": 700,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 30.png",
+      "width": 1158,
+      "height": 1600,
+      "alt": "Un nuevo recuerdo de Rosalba"
+    },
+    {
+      "src": "/images/events/rosalba-55/image copy 31.png",
+      "width": 1170,
+      "height": 1600,
+      "alt": "Un nuevo recuerdo de Rosalba"
     }
   ],
   "gifts": [],
@@ -180,12 +246,12 @@ export const rosalba55 = {
     "text": "Ven con un atuendo cómodo y muchas ganas de disfrutar, ¡porque bailaremos muchísimo!"
   },
   "theme": {
-    "primary": "#bd276b",
-    "dark": "#58263e",
-    "champagne": "#d4cdd6",
-    "cream": "#fff6fa",
-    "ivory": "#f5e0eb",
-    "rose": "#eaa7c0",
-    "sage": "#8c7d8b"
+    "primary": "#D2AD61",
+    "dark": "#101010",
+    "champagne": "#E3C88F",
+    "cream": "#111111",
+    "ivory": "#1B1B1B",
+    "rose": "#EBC5D1",
+    "sage": "#25251F"
   }
 };

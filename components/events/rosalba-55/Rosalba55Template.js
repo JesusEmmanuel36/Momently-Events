@@ -11,9 +11,9 @@ import { openGoogleCalendar } from "@/lib/calendar";
 function Image(props) { return <NextImage unoptimized {...props} />; }
 
 const defaultAssets = {
-  floral: "/images/events/rosalba-55/floral-v2.png",
-  envelopeClosed: "/images/events/rosalba-55/envelope-closed-v2.png",
-  envelopeOpen: "/images/events/rosalba-55/envelope-open-v2.png",
+  floral: "/images/events/rosalba-55/floral-black-gold.png",
+  envelopeClosed: "/images/events/rosalba-55/envelope-closed-black-gold.png",
+  envelopeOpen: "/images/events/rosalba-55/envelope-open-black-gold.png",
 };
 const defaultTheme = {
   "--coral": "#b7654d", "--peach": "#df9a7e", "--olive": "#73785e", "--dark": "#432d27",
@@ -125,8 +125,8 @@ export function Rosalba55Template({ wedding, assets = defaultAssets, customTheme
       <div className={styles.introTitle}><span>{wedding.hero.subtitle}</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}><div className={styles.envelopeStage}>
         <div className={`${styles.letter} ${customStyles.letter}`}><Image src={floral} fill sizes="500px" alt="" aria-hidden="true" /><span>{wedding.hero.subtitle}</span><h2 className={`${localStyles.letterName} ${nameClassName}`}>{wedding.couple.partner1}</h2><small>{wedding.dateStamp || "28 · 11 · 2026"}</small></div>
-        <Image className={`${styles.envelopeOpenBack} ${customStyles.openEnvelope}`} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre abierto de ${names}`} />
-        <Image className={`${styles.envelopeOpenFront} ${customStyles.openEnvelope} ${customStyles.openFront}`} src={envelopeOpen} fill priority sizes="(max-width: 700px) 96vw, 680px" alt="" aria-hidden="true" />
+        <div className={`${styles.envelopeOpenBack} ${customStyles.openEnvelope}`}><Image className={customStyles.openArtwork} src={envelopeOpen} width={1634} height={963} priority sizes="(max-width: 700px) 118vw, 886px" alt={`Sobre abierto de ${names}`} /></div>
+        <div className={`${styles.envelopeOpenFront} ${customStyles.openEnvelope} ${customStyles.openFront}`} aria-hidden="true"><Image className={customStyles.openArtwork} src={envelopeOpen} width={1634} height={963} priority sizes="(max-width: 700px) 118vw, 886px" alt="" /></div>
         <Image className={styles.envelopeClosed} src={envelopeClosed} fill priority sizes="(max-width: 700px) 96vw, 680px" alt={`Sobre cerrado de ${names}`} />
         <button className={styles.sealAction} onClick={openInvitation} disabled={opening} aria-label="Romper el sello y abrir la invitación"></button>
       </div><button className={styles.openLabel} onClick={openInvitation} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}</button></div>
