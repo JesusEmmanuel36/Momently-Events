@@ -3,11 +3,11 @@ export const reynaDomingo = {
   "templateKey": "reyna-domingo-cream-lilac",
   "eventTitle": "Boda de Reyna y Domingo",
   "couple": {
-    "partner1": "Reyna Berenice Pazos Mendoza",
-    "partner2": "Domingo Campos Guillén"
+    "partner1": "Reyna",
+    "partner2": "Domingo"
   },
   "displayNames": {
-    "partner1": "Reyna Berenice",
+    "partner1": "Reyna",
     "partner2": "Domingo"
   },
   "date": "2026-12-26T18:00:00-06:00",
@@ -15,7 +15,7 @@ export const reynaDomingo = {
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
   "calendarDate": "26 de diciembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
@@ -66,5 +66,7 @@ export const reynaDomingo = {
     "ivory": "#FFFCF5",
     "rose": "#DDCBE7",
     "sage": "#909A7B"
-  }
+  },
+  "askMessage": false,
+  "rsvpDeadlineDisplay": "5 de diciembre"
 };

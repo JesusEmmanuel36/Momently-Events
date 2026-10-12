@@ -15,27 +15,27 @@ export const nahomiXv = {
   "dateDisplay": "Sábado · 28 de noviembre de 2026",
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Hoy comienza una nueva etapa llena de sueños e ilusión. Con el amor de mi familia y la alegría de tenerte cerca, quiero compartir contigo una celebración que guardaré por siempre en mi corazón.",
-    "image": "/images/events/xv-nahomi/hero.png"
+    "image": "/images/events/xv-nahomi/hero-v2.png"
   },
   "ceremony": {
     "enabled": true,
     "name": "Iglesia San Pablo",
     "time": "Cita · 12:00 p. m.",
     "address": "C. 19 #83, Ignacio Zaragoza, Venustiano Carranza, C.P. 15000, Ciudad de México.",
-    "mapsUrl": "https://share.google/EpbtMG3Hh5gLHYmBk"
+    "mapsUrl": "https://share.google/1OXYn4sDjpNetAHE8"
   },
   "reception": {
     "enabled": true,
     "name": "Salón Paraíso",
     "time": "Recepción · 2:30 p. m.",
     "address": "Calz. Ignacio Zaragoza 537, Ignacio Zaragoza, Venustiano Carranza, C.P. 15000, Ciudad de México.",
-    "mapsUrl": "https://share.google/1OXYn4sDjpNetAHE8"
+    "mapsUrl": "https://share.google/EpbtMG3Hh5gLHYmBk"
   },
   "gallery": [],
   "music": {
@@ -72,5 +72,6 @@ export const nahomiXv = {
       "Antonio Sánchez González",
       "Lizeth López López"
     ]
-  }
+  },
+  "personalizedPasses": true
 };

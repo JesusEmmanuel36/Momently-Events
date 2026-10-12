@@ -1,0 +1,12 @@
+Sobres y arreglo floral generados con la herramienta integrada image_gen para los XV años de Orly Rivka.
+Las nueve fotografías image*.png fueron aportadas por el usuario.
+
+envelope-closed.png
+Use case: product-mockup. One CLOSED elegant ivory rectangular envelope for Orly Rivka XV invitation, straight front view centered landscape1536x1024. Broad body spans90 percent width. Thin polished rose gold metallic edges, delicate blush pink satin bow ribbon, round rose gold wax seal engraved O. Small ivory roses and blush pink roses with rose gold leaves at lower corners. Entire object fully visible with small transparent margins. True transparent background, no background, no extra writing besides O, refined rose gold not yellow gold.
+
+envelope-open.png
+Use case: product-mockup. One OPEN elegant ivory rectangular envelope for a rose gold XV invitation, straight front view centered landscape1536x1024. Broad rectangular lower body spans90 percent width, symmetrical flap unfolds UP, blush pink silk interior, thin rose gold metallic edges, small ivory roses and blush pink roses with rose gold leaves at bottom corners. NO letter, no bow, no seal, no text. Natural broad envelope geometry, entire object fully visible with small transparent margins. True transparent background, no backdrop.
+
+floral.png
+Use case: stylized-concept. One beautiful photorealistic 3D horizontal airy floral garland for Orly Rivka XV invitation, ivory roses, pale blush pink roses, tiny cream flowers and delicate ROSE GOLD metallic leaves. Symmetric gently curving arrangement, entire object visible, landscape1536x1024, refined romantic rose gold palette. True transparent background, no backdrop, no frame, no writing, no yellow gold.
+

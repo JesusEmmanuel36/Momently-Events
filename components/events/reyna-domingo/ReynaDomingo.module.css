@@ -173,3 +173,5 @@
 @media(max-width:700px){.invitation :global(.hero){background:#4d385c;}.invitation :global(.hero__image){height:60svh;bottom:auto;}.invitation :global(.hero__image img){object-position:center 30%;}.invitation :global(.hero__wash){background:linear-gradient(180deg,transparent 25%,#4d385c33 40%,#4d385c 60%);}.invitation :global(.hero__copy){padding-bottom:2.7rem;}.invitation :global(.hero h1){font-size:3.7rem;}}
 
 .openEnvelopeLayer{width:113%;margin-left:-56.5%;bottom:4%;}.sealButton{top:50%;}.openFront{clip-path:inset(64% 0 0 0);}
+
+.invitation :global(.choice-row label){position:relative;}.invitation :global(.choice-row input){width:1px;height:1px;inset:0;}

@@ -44,7 +44,7 @@ export const abigailXv = {
   "gifts": [
     {
       "title": "Obsequio o lluvia de sobres",
-      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes elegir un obsequio o una aportación en efectivo dentro de un sobre. Lo recibiré con mucho cariño y gratitud."
+      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes llevar un obsequio o un sobre con una aportación en efectivo. Cualquiera de las dos opciones será recibida con mucho cariño y gratitud."
     }
   ],
   "contact": {
