@@ -65,5 +65,23 @@ export const abigailXv = {
     "title": "Formal",
     "text": "Me encantará compartir esta noche especial contigo. Te espero con tu mejor estilo."
   },
-  "personalizedPasses": true
+  "personalizedPasses": true,
+  "family": {
+    "groups": [
+      {
+        "title": "Mis papás",
+        "names": [
+          "Cruz David Martínez Oloarte",
+          "María del Ángel Cotero Reyes"
+        ]
+      },
+      {
+        "title": "Mis padrinos",
+        "names": [
+          "José Álvarez Anzaldo",
+          "Ana María Urdapilleta"
+        ]
+      }
+    ]
+  }
 };
