@@ -148,5 +148,8 @@ export const lizbethXv = {
       "title": "Llega con tiempo",
       "text": "Te sugerimos llegar 20 minutos antes."
     }
-  ]
+  ],
+  "rsvpTitle": "¿Te unirás a nuestra fiesta del té?",
+  "smileMessage": "Un mundo de sueños nos espera. Trae tu mejor sonrisa y una actitud brillante para vivir una noche mágica e inolvidable.",
+  "thankYouMessage": "Gracias por iluminar mi País de las Maravillas con tu sonrisa. Tu presencia será un recuerdo que guardaré siempre en mi corazón."
 };
