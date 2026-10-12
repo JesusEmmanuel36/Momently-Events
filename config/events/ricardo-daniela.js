@@ -1,5 +1,5 @@
 export const ricardoDaniela = {
-  "publicEnabled": false,
+  "publicEnabled": true,
   "slug": "ricardo-y-daniela",
   "templateKey": "ricardo-daniela-olive-wedding",
   "eventTitle": "Boda de Ricardo y Daniela y bautizo de Ailany Fernanda",

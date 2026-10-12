@@ -29,7 +29,7 @@ export const catalinaJorge = {
   dressCode: { title: "Formal elegante", text: "Te invitamos a acompañarnos con un atuendo formal y elegante." },
   gifts: [{ name: "Un detalle con cariño", description: "Si deseas obsequiarnos algo, cualquier detalle será recibido con mucho cariño y gratitud.", type: "text" }],
   contact: {},
-  music: { enabled: false, url: "", label: "Nuestra canción" },
+  music: { enabled: true, url: "/audio/catalinayjorge.mp3", label: "Nuestra canción" },
   itinerary: [],
   theme: { primary: "#66704b", dark: "#343d2d", champagne: "#d0bb8d", cream: "#f4eddf", ivory: "#fffdf7", rose: "#d1bfa6", sage: "#89916c" },
 };
