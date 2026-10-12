@@ -28,14 +28,20 @@ export const lorenaFrancisco = {
     "name": "Parroquia de San Esteban Promártir",
     "time": "",
     "address": "Axapusco",
-    "mapsUrl": "https://maps.app.goo.gl/rKB8evpPoeELbArb8?g_st=ic"
+    "mapsUrl": "https://maps.app.goo.gl/rKB8evpPoeELbArb8?g_st=ic",
+    "image": "/images/events/lorenayfrancisco/iglesia.png",
+    "imageWidth": 1170,
+    "imageHeight": 1323
   },
   "reception": {
     "enabled": true,
     "name": "Quinta Doña Carmelita",
     "time": "",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/NqGzhMKKDEkhTvhW8?g_st=ic"
+    "mapsUrl": "https://maps.app.goo.gl/NqGzhMKKDEkhTvhW8?g_st=ic",
+    "image": "/images/events/lorenayfrancisco/recepcion.png",
+    "imageWidth": 1170,
+    "imageHeight": 1509
   },
   "gallery": [
     {
@@ -96,7 +102,7 @@ export const lorenaFrancisco = {
   "itinerary": [],
   "theme": {
     "primary": "#A85F47",
-    "dark": "#3D4431",
+    "dark": "#683B2C",
     "champagne": "#C6AC80",
     "cream": "#F5EFE4",
     "ivory": "#FFFCF5",

@@ -67,8 +67,8 @@ export const marcelaEduardo = {
     }
   ],
   "contact": {
-    "phone": "5549257523",
-    "whatsapp": "https://wa.me/525549257523"
+    "phone": "9941044591",
+    "whatsapp": "https://wa.me/529941044591"
   },
   "itinerary": [],
   "theme": {
