@@ -56,7 +56,12 @@ export const rigoSinahi = {
     "url": "/audio/rigoysinahi.mp3",
     "label": "Nuestra canción"
   },
-  "gifts": [],
+  "gifts": [
+    {
+      "title": "Un detalle con cariño",
+      "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, puedes elegir un obsequio o una aportación en efectivo dentro de un sobre. Recibiremos cualquiera de las dos opciones con mucho cariño y gratitud."
+    }
+  ],
   "contact": {
     "phone": "6242346448",
     "whatsapp": "https://wa.me/526242346448"

@@ -29,14 +29,19 @@ export const veronicaJavier = {
     "image": "/images/events/veronica-y-javier/iglesia.png",
     "time": "2:30 p. m.",
     "address": "Av. Cuauhtémoc 868, Primera Sección, 74160 Huejotzingo, Puebla.",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Nuestra%20Se%C3%B1ora%20del%20Carmen%20Av.%20Cuauht%C3%A9moc%20868%20Huejotzingo%20Puebla"
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Nuestra%20Se%C3%B1ora%20del%20Carmen%20Av.%20Cuauht%C3%A9moc%20868%20Huejotzingo%20Puebla",
+    "imageWidth": 1600,
+    "imageHeight": 900
   },
   "reception": {
     "enabled": true,
     "name": "Salón Santa Cruz",
     "time": "4:00 a 6:00 p. m.",
     "address": "Las Huertas 38A, Segunda Sección, 74160 Huejotzingo, Puebla.",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Santa%20Cruz%20Las%20Huertas%2038A%20Huejotzingo%20Puebla"
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Santa%20Cruz%20Las%20Huertas%2038A%20Huejotzingo%20Puebla",
+    "image": "/images/events/veronica-y-javier/salon.png",
+    "imageWidth": 659,
+    "imageHeight": 696
   },
   "gallery": [
     {
@@ -108,7 +113,19 @@ export const veronicaJavier = {
   "gifts": [],
   "contact": {
     "phone": "2228711145",
-    "whatsapp": "https://wa.me/522228711145"
+    "whatsapp": "https://wa.me/522228711145",
+    "whatsapps": [
+      {
+        "phone": "2228711145",
+        "label": "222 871 1145",
+        "url": "https://wa.me/522228711145"
+      },
+      {
+        "phone": "2271060336",
+        "label": "227 106 0336",
+        "url": "https://wa.me/522271060336"
+      }
+    ]
   },
   "itinerary": [],
   "theme": {
@@ -122,5 +139,6 @@ export const veronicaJavier = {
   },
   "dressCode": {
     "title": "Formal"
-  }
+  },
+  "calendarQuote": "¿Qué es poesía?, dices mientras clavas en mi pupila tu pupila azul. ¿Qué es poesía? ¿Y tú me lo preguntas? Poesía… eres tú."
 };

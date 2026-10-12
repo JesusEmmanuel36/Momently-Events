@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Cross, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import { CalendarDays, ChevronDown, Heart, Cross, Gift, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { GallerySection } from "@/components/sections/Gallery";
 import { CountdownSection } from "@/components/sections/CountdownStory";
@@ -33,6 +33,7 @@ export function RigoSinahiInvitation({ wedding }) {
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Rosas marfil, hortensias azules y follaje verde suave"/></Reveal><CountdownSection wedding={view}/>
       <section className={`section ${styles.celebration}`} id="detalles"><Reveal><Heart className={styles.venueIcon} strokeWidth={1}/><SectionHeading eyebrow="Misa y recepción" title="Nuestra celebración"/><div className={styles.venueInfo}><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p></div></Reveal></section>
       <section className={`section ${styles.attire}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title="Semiformal"/></Reveal></section>
+      <section className="section gifts"><Reveal><Gift className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Tu presencia es nuestro mejor regalo" title="Mesa de regalos" copy={wedding.gifts[0].description}/></Reveal></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,durationHours:9,location:wedding.ceremony.name,details:`Misa y recepción en ${wedding.ceremony.name}, ${wedding.ceremony.time}.`})}>Agregar a mi calendario</button></Reveal></section>
       <GallerySection wedding={view}/><RSVPSection wedding={view}/><section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>Estamos para ayudarte</h2><p>También puedes confirmar tu asistencia por WhatsApp.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Rigo y Sinahí. Quiero confirmar mi asistencia a su boda.")}`} target="_blank" rel="noreferrer"><MessageCircle size={18}/> Confirmar por WhatsApp</a></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Rigo y Sinahí" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>nuestra historia.</h2><p>Rigo &amp; Sinahí</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>

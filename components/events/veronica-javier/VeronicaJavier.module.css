@@ -181,3 +181,9 @@
 .openEnvelopeLayer{width:104%;margin-left:-52%;bottom:13%;}.openFront{clip-path:inset(70% 0 0 0);}.sealButton{top:51%;}.letter{bottom:18%;}
 
 .venuePhoto{display:block;width:100%;height:auto;border-radius:2px;margin:1.5rem auto;}
+
+.calendarQuote{max-width:640px;margin:1.5rem auto 2rem;font-family:var(--font-serif),serif;font-style:italic;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.8;}
+
+.attireIllustration{display:block;width:min(85vw,460px);height:auto;margin:0 auto;}
+
+.confirmContacts{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1.5rem;}
