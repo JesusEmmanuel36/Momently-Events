@@ -99,7 +99,38 @@ export const lorenaFrancisco = {
     "phone": "5586716058",
     "whatsapp": "https://wa.me/525586716058"
   },
-  "itinerary": [],
+  "itinerary": [
+    {
+      "time": "3:00 p. m.",
+      "title": "Misa",
+      "icon": "church"
+    },
+    {
+      "time": "4:30 p. m.",
+      "title": "Recepción",
+      "icon": "toast"
+    },
+    {
+      "time": "5:00 p. m.",
+      "title": "Ceremonia civil",
+      "icon": "rings"
+    },
+    {
+      "time": "6:15 p. m.",
+      "title": "Banquete",
+      "icon": "meal"
+    },
+    {
+      "time": "8:00 p. m.",
+      "title": "Pastel",
+      "icon": "cake"
+    },
+    {
+      "time": "9:00 p. m.",
+      "title": "Fiesta",
+      "icon": "music"
+    }
+  ],
   "theme": {
     "primary": "#A85F47",
     "dark": "#683B2C",
@@ -128,5 +159,7 @@ export const lorenaFrancisco = {
         "note": "Reservado para la corte de la novia."
       }
     ]
-  }
+  },
+  "rsvpDeadline": "6 de febrero de 2027",
+  "itineraryNote": "Horarios por confirmar. Compartiremos los horarios definitivos cuando se confirme la hora de la misa."
 };
