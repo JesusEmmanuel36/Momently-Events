@@ -168,3 +168,5 @@
 
 /* Keep both faces visible above the cover titles. */
 .invitation :global(.hero__image img){object-position:center 30%;}
+
+.adultsOnly{text-align:center;background:#f5f2e8;}.adultsOnly>div>svg{display:block;margin:0 auto 1.5rem;color:#607766;width:32px;height:32px;}.adultsOnly :global(.section-heading){margin-bottom:0;}
