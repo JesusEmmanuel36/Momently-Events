@@ -20,3 +20,7 @@
 .bankDetails button { padding:.45rem .85rem; border:1px solid var(--olive); border-radius:5px; background:var(--ivory); color:var(--dark); cursor:pointer; }
 
 .invitation .fullNames { font-size:clamp(1.6rem,5vw,3rem); line-height:1.35; overflow-wrap:anywhere; }
+
+.schedule{--coffee-dark:var(--dark);--coffee:var(--dark);--mocha:var(--olive);--taupe:var(--muted);--champagne:var(--gold-soft);--cream:var(--paper);--text:var(--charcoal);--text-soft:var(--muted);background:var(--paper);color:var(--dark);}.schedule :global(.schedule__line){grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:900px;}.schedule :global(.schedule__number){transform:translateX(-50%);}.schedule :global(.section-heading){margin-bottom:5rem;}@media(max-width:800px){.schedule :global(.schedule__line){display:block;}.schedule :global(.schedule__item){margin-bottom:1.25rem;}.schedule :global(.section-heading){margin-bottom:3rem;}}
+
+.invitation .photoGrid button{aspect-ratio:auto;height:auto;}.invitation .photoGrid button img{position:relative!important;display:block;width:100%;height:auto;}.invitation .venueArtwork img[src*="iglesia"]{padding:0;object-fit:cover;}

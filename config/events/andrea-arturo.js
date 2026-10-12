@@ -20,7 +20,7 @@ export const andreaArturo = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Con mucha alegría y amor, queremos compartir contigo uno de los días más importantes de nuestras vidas. Nos hará muy felices que nos acompañes a celebrar nuestra unión y el comienzo de esta nueva etapa juntos.",
-    "image": "/images/events/andrea-y-arturo/hero.png"
+    "image": "/images/events/andrea-y-arturo/image copy 3.png"
   },
   "ceremony": {
     "enabled": true,
@@ -28,7 +28,7 @@ export const andreaArturo = {
     "time": "5:00 p. m.",
     "address": "Zona Centro, Monclova, Coahuila",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Parroquia%20Santiago%20Ap%C3%B3stol%20Zona%20Centro%2C%20Monclova%2C%20Coahuila",
-    "image": "/images/events/andrea-y-arturo/floral.png"
+    "image": "/images/events/andrea-y-arturo/iglesia.png"
   },
   "reception": {
     "enabled": true,
@@ -38,7 +38,98 @@ export const andreaArturo = {
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Balcones%20Eventos%20Blvd.%20Benito%20Ju%C3%A1rez%20909%2C%20Tecnol%C3%B3gico%2C%20C.P.%2025750%2C%20Monclova%2C%20Coahuila",
     "image": "/images/events/andrea-y-arturo/floral.png"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 2.png",
+      "alt": "Andrea y Arturo, recuerdo 1",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 3.png",
+      "alt": "Andrea y Arturo, recuerdo 2",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 4.png",
+      "alt": "Andrea y Arturo, recuerdo 3",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 5.png",
+      "alt": "Andrea y Arturo, recuerdo 4",
+      "width": 1599,
+      "height": 1066
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 6.png",
+      "alt": "Andrea y Arturo, recuerdo 5",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 7.png",
+      "alt": "Andrea y Arturo, recuerdo 6",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 8.png",
+      "alt": "Andrea y Arturo, recuerdo 7",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 9.png",
+      "alt": "Andrea y Arturo, recuerdo 8",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 10.png",
+      "alt": "Andrea y Arturo, recuerdo 9",
+      "width": 1599,
+      "height": 1066
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 11.png",
+      "alt": "Andrea y Arturo, recuerdo 10",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 12.png",
+      "alt": "Andrea y Arturo, recuerdo 11",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 13.png",
+      "alt": "Andrea y Arturo, recuerdo 12",
+      "width": 1080,
+      "height": 1584
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy 15.png",
+      "alt": "Andrea y Arturo, recuerdo 13",
+      "width": 1066,
+      "height": 1599
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image copy.png",
+      "alt": "Andrea y Arturo, recuerdo 14",
+      "width": 1599,
+      "height": 1066
+    },
+    {
+      "src": "/images/events/andrea-y-arturo/image.png",
+      "alt": "Andrea y Arturo, recuerdo 15",
+      "width": 1599,
+      "height": 1066
+    }
+  ],
   "dressCode": {
     "title": "Formal",
     "text": "Por favor, evita los colores verdes y el blanco en tu vestimenta. Gracias por acompañarnos con elegancia en este día tan especial."
@@ -87,5 +178,24 @@ export const andreaArturo = {
     "cream": "#fbf6eb",
     "ivory": "#eee4d0",
     "rose": "#cbd0b9"
-  }
+  },
+  "family": {
+    "groups": [
+      {
+        "title": "Padres del novio",
+        "names": [
+          "Arturo Escobedo Godoy",
+          "Yadira Jaqueline Bustos Suárez"
+        ]
+      },
+      {
+        "title": "Padres de la novia",
+        "names": [
+          "Juan José Martínez Sánchez",
+          "Cynthia Arely Guerrero de los Reyes"
+        ]
+      }
+    ]
+  },
+  "closingImage": "/images/events/andrea-y-arturo/image copy 10.png"
 };
