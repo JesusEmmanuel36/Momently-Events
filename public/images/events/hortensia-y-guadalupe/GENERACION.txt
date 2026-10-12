@@ -1,0 +1,12 @@
+Sobres y arreglo floral generados con la herramienta integrada image_gen para las bodas de oro de Hortensia y Guadalupe.
+Las fotografías image.png e image copy.png fueron aportadas por el usuario.
+
+envelope-closed.png
+Use case: product-mockup. One luxurious CLOSED ivory beige rectangular envelope for Hortensia and Guadalupe's 50th wedding anniversary. Straight front view, centered landscape1536x1024, visible body spans 90 percent width. Fine metallic gold edge, satin champagne gold ribbon bow, round golden wax seal engraved 50, ivory roses and beige orchids with gold leaves at bottom corners. Fully visible object, small transparent margins, genuine transparent background. No text other than 50, no extra objects.
+
+envelope-open.png
+Use case: product-mockup. One luxurious OPEN ivory beige rectangular envelope for a golden wedding anniversary. Straight front view centered landscape1536x1024, broad rectangular lower body spans 90 percent width, symmetrical flap unfolded upward. Champagne gold lining, thin metallic gold edges, ivory roses and beige orchids with gold leaves at bottom corners. NO letter, no bow, no seal, no text. Whole broad envelope visible with small transparent margins. Genuine transparent background, no white backdrop. Natural broad envelope geometry.
+
+floral.png
+Use case: stylized-concept. One exquisite photorealistic 3D floral garland for golden wedding anniversary invitation. Ivory roses, champagne beige orchids, fine metallic golden leaves, tiny cream flowers, elegant symmetric horizontal airy arrangement. Entire arrangement fully visible, landscape1536x1024. Genuine transparent background, no frames, no text, no shadowed backdrop.
+

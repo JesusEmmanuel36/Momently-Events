@@ -1,3 +1,4 @@
+import { hortensiaGuadalupe } from "../config/events/hortensia-guadalupe.js";
 import { abigailXv } from "../config/events/abigail-xv.js";
 import { damarisXv } from "../config/events/damaris-xv.js";
 import { alessandraXv } from "../config/events/alessandra-xv.js";
@@ -155,6 +156,7 @@ templates[catalinaJorgePlaya.slug] = catalinaJorgePlaya;
 templates[isabellaComunion.slug] = isabellaComunion;
 templates[lizbethXv.slug] = lizbethXv;
 templates[alessandraXv.slug] = alessandraXv;
+templates[hortensiaGuadalupe.slug] = hortensiaGuadalupe;
 templates[abigailXv.slug] = abigailXv;
 templates[damarisXv.slug] = damarisXv;
 templates[ricardoBelinda.slug] = ricardoBelinda;
