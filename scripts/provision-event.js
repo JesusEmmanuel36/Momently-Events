@@ -209,7 +209,8 @@ const itinerary = event.itinerary || [
   ...(reception.enabled === false ? [] : [{ time: event.slug === "lesly-y-marcelino" ? "19:00" : "15:00", title: "Recepción", description: reception.name, icon: "glass" }]),
 ];
 const gifts = event.gifts || (event.registry?.number ? [{ name: "Liverpool", description: `Mesa de regalos ${event.registry.number}`, url: event.registry.url, type: "link" }] : []);
-const rsvpDeadline = event.rsvpDeadline ? new Date(event.rsvpDeadline) : null;
+const deadlineValue = event.rsvpDeadlineISO || event.rsvpDeadline;
+const rsvpDeadline = deadlineValue ? new Date(deadlineValue) : null;
 if (rsvpDeadline && Number.isNaN(rsvpDeadline.getTime())) {
   throw new Error(`La fecha límite de RSVP no es válida para ${event.slug}: ${event.rsvpDeadline}`);
 }

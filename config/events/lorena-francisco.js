@@ -161,5 +161,6 @@ export const lorenaFrancisco = {
     ]
   },
   "rsvpDeadline": "6 de febrero de 2027",
+  "rsvpDeadlineISO": "2027-02-06T23:59:59-06:00",
   "itineraryNote": "Horarios por confirmar. Compartiremos los horarios definitivos cuando se confirme la hora de la misa."
 };

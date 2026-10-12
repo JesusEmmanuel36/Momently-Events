@@ -28,7 +28,10 @@ export const lizbethXv = {
     "name": "Parroquia del Divino Salvador",
     "time": "6:00 p. m.",
     "address": "",
-    "mapsUrl": "https://share.google/S0Yyi1KyEgGmzCubS"
+    "mapsUrl": "https://share.google/S0Yyi1KyEgGmzCubS",
+    "image": "/images/events/xv-lisbeth/iglesia.png",
+    "imageWidth": 1080,
+    "imageHeight": 1315
   },
   "reception": {
     "enabled": true,
@@ -38,14 +41,6 @@ export const lizbethXv = {
     "mapsUrl": "https://share.google/iYtibXCtoDfb8jYup"
   },
   "gallery": [
-    {
-      "src": "/images/events/xv-lisbeth/image copy 5.png",
-      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
-    },
-    {
-      "src": "/images/events/xv-lisbeth/image copy 4.png",
-      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
-    },
     {
       "src": "/images/events/xv-lisbeth/image.png",
       "alt": "Lizbeth Astrid · Recuerdos de mi historia"
@@ -60,6 +55,46 @@ export const lizbethXv = {
     },
     {
       "src": "/images/events/xv-lisbeth/image copy 3.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 4.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 5.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 6.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 7.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 8.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 9.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 10.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 11.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 12.png",
+      "alt": "Lizbeth Astrid · Recuerdos de mi historia"
+    },
+    {
+      "src": "/images/events/xv-lisbeth/image copy 13.png",
       "alt": "Lizbeth Astrid · Recuerdos de mi historia"
     }
   ],
@@ -95,11 +130,23 @@ export const lizbethXv = {
       "Adrián García"
     ],
     "godparents": [
-      "Israel Hernández",
-      "Nancy Soto"
+      "Nancy Soto",
+      "Israel Hernández"
     ]
   },
   "dressCode": {
-    "title": "Formal elegante"
-  }
+    "title": "Formal / Elegante",
+    "text": "El color rosa está reservado para la quinceañera. Gracias por elegir otro color para acompañarme en esta noche especial."
+  },
+  "askSongSuggestion": true,
+  "importantInfo": [
+    {
+      "title": "Estacionamiento",
+      "text": "Contaremos con estacionamiento y personal de apoyo."
+    },
+    {
+      "title": "Llega con tiempo",
+      "text": "Te sugerimos llegar 20 minutos antes."
+    }
+  ]
 };
