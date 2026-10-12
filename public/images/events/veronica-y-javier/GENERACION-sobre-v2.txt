@@ -1,0 +1,3 @@
+Edición con imagegen integrada del sobre abierto original.
+Archivo: envelope-open-v2.png
+Prompt: Edit this existing open wedding envelope image. Preserve its exact front-facing centered geometry, canvas 1536x1024, white paper, magenta lining, gold edges, floral corner arrangements, margins, and real transparent background. Add ONE very small discreet bougainvillea magenta satin ribbon bow at the lower center of the front envelope pocket, roughly 12 percent of envelope width, with short delicate tails. Elegant restrained detail, no big ribbon across the envelope, no seal. Keep the envelope OPEN, empty inside without letter. Do not move, resize, squash or tilt the envelope. Preserve transparency.

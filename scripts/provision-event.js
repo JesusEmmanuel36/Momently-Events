@@ -1,3 +1,6 @@
+import { marcelaEduardo } from "../config/events/marcela-eduardo.js";
+import { veronicaJavier } from "../config/events/veronica-javier.js";
+import { lorenaFrancisco } from "../config/events/lorena-francisco.js";
 import { novalyXv } from "../config/events/novaly-xv.js";
 import { rigoSinahi } from "../config/events/rigo-sinahi.js";
 import { ricardoBelinda } from "../config/events/ricardo-belinda.js";
@@ -139,6 +142,9 @@ templates[heatherXv.slug] = heatherXv;
 templates[novalyXv.slug] = novalyXv;
 templates[paulaXv.slug] = paulaXv;
 templates[rigoSinahi.slug] = rigoSinahi;
+templates[lorenaFrancisco.slug] = lorenaFrancisco;
+templates[veronicaJavier.slug] = veronicaJavier;
+templates[marcelaEduardo.slug] = marcelaEduardo;
 templates[ricardoBelinda.slug] = ricardoBelinda;
 templates[reynaDomingo.slug] = reynaDomingo;
 templates[gabrielaOscar.slug] = gabrielaOscar;
