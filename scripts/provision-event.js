@@ -1,3 +1,5 @@
+import { damarisXv } from "../config/events/damaris-xv.js";
+import { alessandraXv } from "../config/events/alessandra-xv.js";
 import { lizbethXv } from "../config/events/lizbeth-xv.js";
 import { isabellaComunion } from "../config/events/isabella-comunion.js";
 import { catalinaJorgePlaya } from "../config/events/catalina-jorge-playa.js";
@@ -151,6 +153,8 @@ templates[marcelaEduardo.slug] = marcelaEduardo;
 templates[catalinaJorgePlaya.slug] = catalinaJorgePlaya;
 templates[isabellaComunion.slug] = isabellaComunion;
 templates[lizbethXv.slug] = lizbethXv;
+templates[alessandraXv.slug] = alessandraXv;
+templates[damarisXv.slug] = damarisXv;
 templates[ricardoBelinda.slug] = ricardoBelinda;
 templates[reynaDomingo.slug] = reynaDomingo;
 templates[gabrielaOscar.slug] = gabrielaOscar;
