@@ -1,0 +1,19 @@
+Invitación: /eventos/xv-abigail
+
+Una vez activado el evento con el comando habitual, abre su panel y entra en
+"Invitados y pases". Crea un pase por persona o familia, escribe el nombre y
+asigna el total de lugares (incluyendo al titular). Copia el enlace generado
+para enviarlo. Cada enlace muestra la misma invitación de Abigail con su pase.
+
+La confirmación no permite superar los lugares asignados. Si el invitado
+vuelve a responder, se actualiza la misma confirmación en el panel.
+No hay códigos QR de acceso en los pases.
+
+El único QR es el del álbum. La subida y la galería pública se habilitan
+el 12 de diciembre de 2026 a las 00:00, hora del centro de México.
+Las fotos subidas se ven en la invitación y en el panel de Abigail,
+donde se pueden descargar en el celular.
+
+Canción: /audio/xvabigail.mp3
+No se incluyeron fotografías personales ni una hora de recepción inventada.
+Los elementos decorativos se generaron con IA; prompts en GENERACION.txt.

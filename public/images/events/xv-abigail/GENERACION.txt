@@ -1,0 +1,14 @@
+Imágenes generadas con la herramienta integrada image_gen para los XV años de Abigail.
+
+hero.png
+Use case: stylized-concept. Asset type: portrait hero artwork for Abigail's XV invitation. Photorealistic luxurious blush pink ball gown displayed on a headless dress mannequin in an ivory palace room, delicate golden crown on a pedestal and blush roses, warm gold twinkling light. Romantic pink and gold palette. Vertical 1024x1536. No real person, no face, no writing, no watermark. Spacious upper center for web typography.
+
+envelope-closed.png
+Use case: product-mockup. One elegant closed ivory rectangular envelope viewed straight front, centered, wide landscape 1536x1024, body spans 90% image width. Fine gold edges, luxurious soft pink satin ribbon bow and gold wax seal engraved A. Small blush pink and ivory roses with gold leaves at lower left and lower right corners. Entire object fully visible. Transparent background, no shadows beyond object, no extra elements.
+
+envelope-open.png
+Use case: product-mockup. One elegant OPEN ivory rectangular envelope viewed straight front, centered wide landscape 1536x1024. Its broad rectangular lower body spans 90% width, symmetrical flap unfolded UP, blush pink interior visible, fine gold edges, small blush pink ivory roses and gold leaves at bottom corners. No letter inside, no bow, no seal, no text. Entire object fully visible with small transparent margins. True transparent background. Preserve natural broad envelope geometry, not a tall narrow bag.
+
+floral.png
+Use case: stylized-concept. One elegant photorealistic 3D horizontal floral garland with blush pink roses, ivory roses and fine golden leaves for Abigail XV invitation. Full isolated arrangement, airy symmetric composition, entire object visible. Pink and gold palette, landscape 1536x1024, true transparent background, no text, no background, no frame.
+

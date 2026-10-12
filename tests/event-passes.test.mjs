@@ -88,3 +88,18 @@ test("public writes reject missing or foreign origins", () => {
   assert.doesNotThrow(()=>assertPassOrigin(input("https://example.com")));
   for(const origin of [null,"https://evil.example"])assert.throws(()=>assertPassOrigin(input(origin)),e=>e.status===403);
 });
+
+test("Abigail's passes assign seats, update one panel RSVP and stay in her event", async () => {
+  const {context,store}=fixture("xv-abigail");
+  const created=await createPass(context,{...details,allowedSeats:2});
+  assert.match(created.path,/^\/eventos\/xv-abigail\/pase\//);
+  await assert.rejects(confirmPass(created.passToken,{attending:"yes",totalPeople:3},{context}),error=>error.status===400);
+  const saved=await confirmPass(created.passToken,{attending:"yes",totalPeople:2,message:"¡Nos vemos!"},{context});
+  const updated=await confirmPass(created.passToken,{attending:"yes",totalPeople:1},{context});
+  assert.equal(saved.rsvpId,updated.rsvpId);
+  const answer=store.get(`events/test-event/rsvps/${saved.rsvpId}`);
+  assert.equal(answer.personalizedPass,true);assert.equal(answer.allowedSeats,2);assert.equal(answer.totalPeople,1);
+  const other=fixture("alejandra-y-david");
+  await assert.rejects(readPass(created.passToken,{context:other.context}),error=>error.status===404);
+  assert.equal(other.store.size,1);
+});

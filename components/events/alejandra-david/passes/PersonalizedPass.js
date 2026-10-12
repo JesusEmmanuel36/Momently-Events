@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./PersonalizedPass.module.css";
 
-export function PersonalizedPass({ pass, token, slug = "alejandra-y-david" }) {
+export function PersonalizedPass({ pass, token, slug = "alejandra-y-david", messageLabel = "Mensaje para los novios" }) {
   const [attending, setAttending] = useState(pass.response?.attending || "yes");
   const [people, setPeople] = useState(pass.response?.totalPeople || pass.allowedSeats);
   const [message, setMessage] = useState(pass.response?.message || "");
@@ -30,7 +30,7 @@ export function PersonalizedPass({ pass, token, slug = "alejandra-y-david" }) {
     {saved ? <div className={styles.success} role="status"><h3>¡Tu respuesta está guardada!</h3><p>{attending === "yes" ? `Nos acompañarán ${people} ${Number(people) === 1 ? "persona" : "personas"}. ¡Gracias por confirmar!` : "Gracias por avisarnos. Los llevamos en el corazón."}</p><button type="button" onClick={() => setSaved(false)}>Editar respuesta</button></div> : <form onSubmit={submit}>
       <fieldset disabled={busy}><legend>¿Nos acompañan?</legend><label><input type="radio" checked={attending === "yes"} onChange={() => setAttending("yes")} name="attendance" value="yes" /> Sí, asistiremos</label><label><input type="radio" checked={attending === "no"} onChange={() => setAttending("no")} name="attendance" value="no" /> No podremos asistir</label></fieldset>
       {attending === "yes" && <label>Personas que asistirán, en total<select value={people} onChange={event => setPeople(Number(event.target.value))} disabled={busy}>{Array.from({ length: pass.allowedSeats }, (_, i) => <option key={i + 1} value={i + 1}>{i + 1} {i === 0 ? "persona" : "personas"}</option>)}</select></label>}
-      <label>Mensaje para los novios<textarea rows={3} maxLength={1000} value={message} onChange={event => setMessage(event.target.value)} disabled={busy} /></label>
+      <label>{messageLabel}<textarea rows={3} maxLength={1000} value={message} onChange={event => setMessage(event.target.value)} disabled={busy} /></label>
       {error && <p className={styles.error} role="alert">{error}</p>}
       <button type="submit" disabled={busy}>{busy ? "Guardando…" : "Confirmar asistencia"}</button>
     </form>}

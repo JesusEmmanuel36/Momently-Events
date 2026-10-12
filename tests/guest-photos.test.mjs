@@ -179,3 +179,22 @@ test("Isabela opens at local midnight and her gallery excludes other events", as
   assert.equal(gallery.photos.length, 1);
   assert.equal(gallery.photos[0].id, "0");
 });
+
+test("Abigail photos unlock at her local event date and use only her storage folder", async () => {
+  const {abigailPhotos}=await import('../lib/event-photos/config.js');
+  const opens=Date.parse('2026-12-12T00:00:00-06:00');
+  assert.equal(guestPhotosAreOpen(opens-1,abigailPhotos),false);
+  assert.equal(guestPhotosAreOpen(opens,abigailPhotos),true);
+  let touched=false;
+  await assert.rejects(processGuestPhoto(request(new Blob(['test'],{type:'image/jpeg'})),{env,event:abigailPhotos,now:opens-1,rateLimit:async()=>{touched=true},upload:async()=>{touched=true}}),error=>error.code==='photos_not_open');
+  assert.equal(touched,false);
+  const {listGuestPhotos}=await import('../lib/event-photos/gallery.js');
+  const result=await listGuestPhotos('',{env,event:abigailPhotos,fetcher:async(url)=>{
+    assert.equal(new URL(url).searchParams.get('prefix'),abigailPhotos.folder+'/');
+    return Response.json({resources:[
+      {asset_id:'own',public_id:abigailPhotos.folder+'/own',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/own.jpg'},
+      {asset_id:'other',public_id:isabelaPhotos.folder+'/other',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/other.jpg'}
+    ]});
+  }});
+  assert.deepEqual(result.photos.map(photo=>photo.id),['own']);
+});
