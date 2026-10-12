@@ -2,7 +2,7 @@ import { FieldValue } from "firebase-admin/firestore";
 import { requireEventOwner } from "@/lib/auth/session";
 import { apiError, ValidationError } from "@/lib/errors";
 import { assertSameOrigin } from "@/lib/security/same-origin";
-import { panelRsvpSchemaFor } from "@/lib/rsvp/schema";
+import { panelRsvpSchemaFor, ageCountFields } from "@/lib/rsvp/schema";
 export const runtime = "nodejs";
 export async function GET(_request, { params }) {
   try {
@@ -16,6 +16,7 @@ export async function GET(_request, { params }) {
         name: data.name,
         attending: data.attending,
         companions: data.companions,
+        adults: data.adults ?? null, children: data.children ?? null,
         totalPeople: data.totalPeople,
         menuPreference: data.menuPreference,
         allergies: data.allergies,
@@ -30,4 +31,4 @@ export async function GET(_request, { params }) {
     return apiError(error);
   }
 }
-export async function POST(request, { params }) { try { assertSameOrigin(request); const { eventId } = await params; const { ref, event: ownedEvent } = await requireEventOwner(eventId); const parsed = panelRsvpSchemaFor(ownedEvent.slug).safeParse(await request.json()); if (!parsed.success) throw new ValidationError("Revisa los datos.", parsed.error.flatten().fieldErrors); const data = parsed.data; const now = FieldValue.serverTimestamp(); const rsvp = { name: data.name, nameNormalized: data.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(), attending: data.attending, companions: data.attending === "yes" ? data.companions : 0, totalPeople: data.attending === "yes" ? data.companions + 1 : 0, menuPreference: data.menuPreference || null, allergies: data.allergies, message: data.message, songSuggestion: data.songTitle || data.artist ? { title: data.songTitle, artist: data.artist } : null, source: "panel", editTokenHash: null, createdAt: now, updatedAt: now }; const created = await ref.collection("rsvps").add(rsvp); return Response.json({ id: created.id }, { status: 201 }); } catch (error) { return apiError(error); } }
+export async function POST(request, { params }) { try { assertSameOrigin(request); const { eventId } = await params; const { ref, event: ownedEvent } = await requireEventOwner(eventId); const parsed = panelRsvpSchemaFor(ownedEvent.slug).safeParse(await request.json()); if (!parsed.success) throw new ValidationError("Revisa los datos.", parsed.error.flatten().fieldErrors); const data = parsed.data; const now = FieldValue.serverTimestamp(); const rsvp = { ...ageCountFields(data, ownedEvent.slug), name: data.name, nameNormalized: data.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(), attending: data.attending, companions: data.attending === "yes" ? data.companions : 0, totalPeople: data.attending === "yes" ? data.companions + 1 : 0, menuPreference: data.menuPreference || null, allergies: data.allergies, message: data.message, songSuggestion: data.songTitle || data.artist ? { title: data.songTitle, artist: data.artist } : null, source: "panel", editTokenHash: null, createdAt: now, updatedAt: now }; const created = await ref.collection("rsvps").add(rsvp); return Response.json({ id: created.id }, { status: 201 }); } catch (error) { return apiError(error); } }
