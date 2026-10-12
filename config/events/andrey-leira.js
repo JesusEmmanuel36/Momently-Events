@@ -37,7 +37,10 @@ export const andreyLeira = {
     "address": "Calle Ignacio Pérez Sur #95, Querétaro, Qro.",
     "mapsUrl": "https://maps.app.goo.gl/Xfg5Um1hhYe21yts5"
   },
-  "godparents": ["Ulises Hernández", "Lorena Guerrero"],
+  "godparents": [
+    "Ulises Hernández",
+    "Lorena Guerrero"
+  ],
   "gallery": [],
   "music": {
     "enabled": true,
@@ -94,5 +97,33 @@ export const andreyLeira = {
         "color": "#0EA1AA"
       }
     ]
+  },
+  "lodging": {
+    "intro": "Para su comodidad, les compartimos una opción de hospedaje cercana a la iglesia y al jardín donde celebraremos nuestra boda. Así podrán disfrutar de este día especial con mayor tranquilidad.",
+    "url": "https://www.facebook.com/share/19p9L4peua/?mibextid=wwXIfr",
+    "single": {
+      "beds": "1 cama matrimonial",
+      "occupancy": "1 o 2 personas",
+      "price": "$720"
+    },
+    "double": {
+      "beds": "2 camas matrimoniales",
+      "rates": [
+        {
+          "occupancy": "Máximo 2 personas",
+          "price": "$850"
+        },
+        {
+          "occupancy": "Máximo 3 personas",
+          "price": "$1,000"
+        },
+        {
+          "occupancy": "Máximo 4 personas",
+          "price": "$1,150"
+        }
+      ]
+    },
+    "children": "Los niños de 0 a 10 años no pagan.",
+    "note": "Les recomendamos consultar disponibilidad y reservar con anticipación."
   }
 };

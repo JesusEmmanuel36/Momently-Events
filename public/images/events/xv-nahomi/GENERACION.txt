@@ -1,0 +1,15 @@
+Portada, sobres y arreglo floral generados con la herramienta integrada image_gen para los XV años de Nahomi.
+Paleta: blanco, plata y detalles azul rey. Sin fotografías personales.
+
+hero.png
+Use case: stylized-concept. Asset type: portrait hero background for Nahomi's XV invitation. Elegant photorealistic opalescent white and silver ball gown on a headless dress mannequin, iridescent fabric subtly reflecting blue and lilac, a delicate silver tiara on a small pedestal. White marble palace room with white roses and a few royal blue hydrangeas, soft silver sparkle, tall luminous windows. White silver palette with royal blue accents, refined bright mood. Vertical1024x1536. No actual person, no face, no writing, no gold, no watermark. Upper center airy, decoration fully coherent.
+
+envelope-closed.png
+Use case: product-mockup. One CLOSED elegant white rectangular invitation envelope viewed straight front, centered landscape1536x1024, broad body spans90 percent width. Silver metallic edges, rich royal blue satin bow ribbon, round SILVER wax seal engraved N. Small white roses, blue hydrangeas and silver leaves at bottom left and right corners. Entire object fully visible, small transparent margins. True transparent background, no backdrop, no gold, no extra objects, no text besides N.
+
+envelope-open.png
+Use case: product-mockup. One OPEN elegant white rectangular invitation envelope viewed straight front, centered landscape1536x1024, broad rectangular lower body spans90 percent width, symmetric flap unfolded UP. Royal blue interior lining, silver metallic edges, white roses, blue hydrangeas and silver leaves at lower corners. No letter, no bow, no seal, no text, no gold. Natural broad envelope geometry, entire object fully visible with small transparent margins. True transparent background.
+
+floral.png
+Use case: stylized-concept. One elegant photorealistic 3D horizontal floral garland for Nahomi's XV invitation. White roses, white orchids, a few royal blue hydrangeas, fine metallic silver leaves, tiny white flowers. Symmetric airy flowing arrangement, entire object visible, landscape1536x1024. White and silver with royal blue accents. True transparent background, no background, no gold, no frame, no text.
+
