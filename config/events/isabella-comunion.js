@@ -40,7 +40,7 @@ export const isabellaComunion = {
   "gallery": [],
   "music": {
     "enabled": true,
-    "url": "/audio/isabela-comunion.mp3",
+    "url": "/audio/isabela-comunion.mp3?v=9cc4b1775d3f",
     "label": "Mi canción"
   },
   "gifts": [

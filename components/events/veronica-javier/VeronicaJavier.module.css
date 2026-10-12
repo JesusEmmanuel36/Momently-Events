@@ -187,3 +187,5 @@
 .attireIllustration{display:block;width:min(85vw,460px);height:auto;margin:0 auto;}
 
 .confirmContacts{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1.5rem;}
+
+.galleryPoem{text-align:center;background:#fcf5f8;color:#4a1632;}.galleryPoem svg{display:block;margin:0 auto 2rem;color:#a52868;}.galleryPoem p{white-space:pre-line;font:400 italic clamp(1.4rem,3vw,2rem)/1.7 var(--font-serif),serif;max-width:650px;margin:0 auto;}

@@ -118,12 +118,14 @@ export const veronicaJavier = {
       {
         "phone": "2228711145",
         "label": "222 871 1145",
-        "url": "https://wa.me/522228711145"
+        "url": "https://wa.me/522228711145",
+        "name": "Vero"
       },
       {
         "phone": "2271060336",
         "label": "227 106 0336",
-        "url": "https://wa.me/522271060336"
+        "url": "https://wa.me/522271060336",
+        "name": "Javier"
       }
     ]
   },
@@ -140,5 +142,6 @@ export const veronicaJavier = {
   "dressCode": {
     "title": "Formal"
   },
-  "calendarQuote": "¿Qué es poesía?, dices mientras clavas en mi pupila tu pupila azul. ¿Qué es poesía? ¿Y tú me lo preguntas? Poesía… eres tú."
+  "calendarQuote": "¿Qué es poesía?, dices mientras clavas en mi pupila tu pupila azul. ¿Qué es poesía? ¿Y tú me lo preguntas? Poesía… eres tú.",
+  "galleryPoem": "Mi táctica es\nhablarte\ny escucharte,\nconstruir con palabras\nun puente indestructible.\n\nMi táctica es\nquedarme en tu recuerdo,\nno sé cómo ni sé\ncon qué pretexto,\npero quedarme en vos."
 };
