@@ -104,18 +104,17 @@ test("Abigail's passes assign seats, update one panel RSVP and stay in her event
   assert.equal(other.store.size,1);
 });
 
-test("Nahomi passes keep each guest's name, seat limit and confirmation isolated", async () => {
+test("Nahomi keeps personalized names and seat limits with confirmation only by WhatsApp", async () => {
   const {context,store}=fixture('xv-nahomi');
   const first=await createPass(context,{...details,displayName:'Familia de Ana',allowedSeats:2});
   const second=await createPass(context,{...details,displayName:'Familia de Luis',allowedSeats:4});
   assert.match(first.path,/^\/eventos\/xv-nahomi\/pase\//);assert.notEqual(first.passToken,second.passToken);
-  await assert.rejects(confirmPass(first.passToken,{attending:'yes',totalPeople:3},{context}),error=>error.status===400);
-  const answer=await confirmPass(first.passToken,{attending:'yes',totalPeople:2},{context});
-  const revised=await confirmPass(first.passToken,{attending:'yes',totalPeople:1},{context});
-  assert.equal(answer.rsvpId,revised.rsvpId);
-  assert.equal(store.get(`events/test-event/rsvps/${answer.rsvpId}`).allowedSeats,2);
-  assert.equal((await readPass(second.passToken,{context})).response,null);
+  const changed=await updatePass(context,first.id,{...details,displayName:'Familia de Ana',allowedSeats:3});
+  assert.equal(changed.passToken,first.passToken);
+  assert.equal((await readPass(first.passToken,{context})).allowedSeats,3);
   assert.equal((await readPass(second.passToken,{context})).displayName,'Familia de Luis');
-  const other=fixture('xv-abigail');
-  await assert.rejects(readPass(first.passToken,{context:other.context}),error=>error.status===404);
+  for(const attending of ['yes','no']) await assert.rejects(confirmPass(first.passToken,{attending,totalPeople:attending==='yes'?3:0},{context}),error=>error.code==='whatsapp_confirmation_only');
+  await assert.rejects(confirmPass(first.passToken,{attending:'yes',totalPeople:1},{slug:'xv-nahomi'}),error=>error.code==='whatsapp_confirmation_only');
+  assert.equal([...store.keys()].filter(key=>key.includes('/rsvps/')).length,0);
+  const other=fixture('xv-abigail');await assert.rejects(readPass(first.passToken,{context:other.context}),error=>error.status===404);
 });

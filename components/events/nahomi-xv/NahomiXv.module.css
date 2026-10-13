@@ -100,3 +100,8 @@
 .openEnvelopeLayer{width:98%;margin-left:-49%;bottom:7.3%;}.openFront{clip-path:inset(60.5% 0 0 0);}.sealButton{top:50.2%;}.letter{bottom:18%;}.attire :global(.eyebrow){color:#bbc3d1;}
 
 .pass{--paper:#fbfcff;--dark:#142754;--gold:#2448a5;--muted:#596981;--gold-soft:#bbc3d1;--ivory:#ebeff8;--olive:#2448a5;}.passSummary,.passNotice{padding:4rem 1.5rem;text-align:center;background:#ebeff8;color:#142754;}.passSummary h2{font:400 clamp(2.5rem,8vw,4.5rem)/1.2 var(--font-script),cursive;overflow-wrap:anywhere;margin:1rem auto;}.passSummary p{margin:1.5rem auto;}
+
+.closingVerse { background: #ebeff8; text-align: center; }
+.closingVerse blockquote { margin: 0 auto; max-width: 760px; }
+.closingVerse p { white-space: pre-line; font-family: var(--font-serif), serif; font-size: clamp(1.25rem, 3.4vw, 1.9rem); line-height: 1.8; color: #142754; }
+.closingVerse cite { display: block; margin-top: 1.5rem; color: #2448a5; font-style: normal; letter-spacing: .08em; }

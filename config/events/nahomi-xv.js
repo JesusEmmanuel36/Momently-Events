@@ -16,7 +16,7 @@ export const nahomiXv = {
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
   "maxCompanions": 0,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "askAllergies": false,
   "hero": {
     "subtitle": "Mis XV años",
@@ -46,7 +46,7 @@ export const nahomiXv = {
   "gifts": [
     {
       "title": "Lluvia de sobres",
-      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes entregarme tu regalo en efectivo dentro de un sobre el día de la celebración. Lo recibiré con mucho cariño y gratitud."
+      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, puedes entregarme tu regalo en efectivo dentro de un sobre el día de la celebración, o cualquier obsequio que nazca de tu corazón. Lo recibiré con mucho cariño y gratitud."
     }
   ],
   "contact": {
@@ -73,5 +73,10 @@ export const nahomiXv = {
       "Lizeth López López"
     ]
   },
-  "personalizedPasses": true
+  "personalizedPasses": true,
+  "confirmationMode": "whatsapp",
+  "closingVerse": {
+    "text": "Fíate de Jehová de todo tu corazón,\nY no te apoyes en tu propia prudencia.\nReconócelo en todos tus caminos,\nY él enderezará tus veredas.",
+    "reference": "Proverbios 3:5-6"
+  }
 };
