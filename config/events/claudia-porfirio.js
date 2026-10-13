@@ -22,7 +22,7 @@ export const claudiaPorfirio = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Después de tantos momentos juntos, estamos listos para comenzar una nueva historia.",
-    "image": "/images/events/claudia-y-porfirio/hero.png"
+    "image": "/images/events/claudia-y-porfirio/hero-anillos-flores.png"
   },
   "welcomeText": "Queremos compartir este día tan especial con las personas que forman parte de nuestra vida.",
   "ceremony": {
@@ -39,7 +39,20 @@ export const claudiaPorfirio = {
     "address": "Av. Tamaulipas #46, entre las calles González y Morelos, Zona Centro, C.P. 87300, H. Matamoros, Tamaulipas.",
     "mapsUrl": "https://maps.app.goo.gl/Y7TXCLRW5fNhEN6g7?g_st=aw"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/claudia-y-porfirio/manos-boda.png",
+      "alt": "Manos unidas con luz cálida y vestido de encaje"
+    },
+    {
+      "src": "/images/events/claudia-y-porfirio/anillos-boda.png",
+      "alt": "Anillos de boda sobre tela champagne"
+    },
+    {
+      "src": "/images/events/claudia-y-porfirio/detalles-boda.png",
+      "alt": "Anillos y rosas marfil con iluminación cálida"
+    }
+  ],
   "music": {
     "enabled": true,
     "url": "/audio/claudiayporfirio.mp3",

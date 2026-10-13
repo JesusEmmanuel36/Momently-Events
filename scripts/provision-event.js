@@ -1,3 +1,6 @@
+import { rosarioSanJudas } from "../config/events/rosario-san-judas.js";
+import { ximenaXv } from "../config/events/ximena-xv.js";
+import { rolandoErika } from "../config/events/rolando-erika.js";
 import { gerardoEvelyne } from "../config/events/gerardo-evelyne.js";
 import { hanniaXv } from "../config/events/hannia-xv.js";
 import { claudiaPorfirio } from "../config/events/claudia-porfirio.js";
@@ -169,6 +172,9 @@ templates[rublesterDolores.slug] = rublesterDolores;
 templates[claudiaPorfirio.slug] = claudiaPorfirio;
 templates[hanniaXv.slug] = hanniaXv;
 templates[gerardoEvelyne.slug] = gerardoEvelyne;
+templates[rolandoErika.slug] = rolandoErika;
+templates[ximenaXv.slug] = ximenaXv;
+templates[rosarioSanJudas.slug] = rosarioSanJudas;
 templates[nahomiXv.slug] = nahomiXv;
 templates[hortensiaGuadalupe.slug] = hortensiaGuadalupe;
 templates[abigailXv.slug] = abigailXv;

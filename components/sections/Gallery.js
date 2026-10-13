@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Reveal, SectionHeading } from "@/components/ui";
 
-export function GallerySection({ wedding }) {
+export function GallerySection({ wedding, heading, imageSizes = "(max-width: 768px) 50vw, 33vw" }) {
   const [active, setActive] = useState(null);
   const touch = useRef(0);
   const move = useCallback((step) => setActive((current) => current === null ? null : (current + step + wedding.images.gallery.length) % wedding.images.gallery.length), [wedding.images.gallery.length]);
@@ -13,9 +13,9 @@ export function GallerySection({ wedding }) {
     const keys = (event) => { if (event.key === "Escape") setActive(null); if (event.key === "ArrowLeft") move(-1); if (event.key === "ArrowRight") move(1); };
     document.addEventListener("keydown", keys); return () => document.removeEventListener("keydown", keys);
   }, [move]);
-  return <section className="section gallery"><Reveal><SectionHeading eyebrow="Nuestros momentos" title="Donde vive el amor" copy="Un vistazo a las memorias que nos trajeron hasta aquí." /></Reveal>
+  return <section className="section gallery"><Reveal><SectionHeading eyebrow={heading?.eyebrow || "Nuestros momentos"} title={heading?.title || "Donde vive el amor"} copy={heading?.copy || "Un vistazo a las memorias que nos trajeron hasta aquí."} /></Reveal>
     <div className="gallery__grid">{wedding.images.gallery.map((src, index) => <Reveal className={`gallery__item gallery__item--${index + 1}`} key={`${src}-${index}`}>
-      <button onClick={() => setActive(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={src} fill sizes="(max-width: 768px) 50vw, 33vw" alt={wedding.galleryItems?.[index]?.alt || `Momento de ${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></button>
+      <button onClick={() => setActive(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={src} fill sizes={imageSizes} alt={wedding.galleryItems?.[index]?.alt || `Momento de ${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></button>
     </Reveal>)}</div>
     {active !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label="Galería de fotografías" onTouchStart={(e) => { touch.current = e.touches[0].clientX; }} onTouchEnd={(e) => { const delta = e.changedTouches[0].clientX - touch.current; if (Math.abs(delta) > 45) move(delta > 0 ? -1 : 1); }}>
       <button className="icon-button lightbox__close" onClick={() => setActive(null)} aria-label="Cerrar"><X /></button>
