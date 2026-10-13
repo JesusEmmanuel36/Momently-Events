@@ -36,7 +36,7 @@ export const andreaArturo = {
     "time": "9:00 p. m.",
     "address": "Blvd. Benito Juárez 909, Tecnológico, C.P. 25750, Monclova, Coahuila",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Balcones%20Eventos%20Blvd.%20Benito%20Ju%C3%A1rez%20909%2C%20Tecnol%C3%B3gico%2C%20C.P.%2025750%2C%20Monclova%2C%20Coahuila",
-    "image": "/images/events/andrea-y-arturo/floral.png"
+    "image": "/images/events/andrea-y-arturo/salon.png"
   },
   "gallery": [
     {
@@ -132,14 +132,16 @@ export const andreaArturo = {
   ],
   "dressCode": {
     "title": "Formal",
-    "text": "Por favor, evita los colores verdes y el blanco en tu vestimenta. Gracias por acompañarnos con elegancia en este día tan especial."
+    "text": "Por favor, evita los colores verdes y el blanco en tu vestimenta. Gracias por acompañarnos con elegancia en este día tan especial.",
+    "image": "/images/events/andrea-y-arturo/vestimenta-formal.png"
   },
   "gifts": [
     {
       "name": "Lluvia de sobres",
       "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, agradeceremos tu cariño a través de una lluvia de sobres.",
       "type": "cash",
-      "url": ""
+      "url": "",
+      "image": "/images/events/andrea-y-arturo/sobre-regalos.png"
     }
   ],
   "contact": {

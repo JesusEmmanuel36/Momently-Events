@@ -1,0 +1,4 @@
+Herramienta integrada de generación de imágenes IA. Fondo transparente.
+Cerrado: sobre horizontal marfil de papel artesanal, lazo satinado rosa pastel, sello de oro rosa con D, rosas marfil y rosa pálido y eucalipto en esquinas inferiores. Fotografía realista frontal, sin textos adicionales.
+Abierto: edición usando el cerrado como referencia; mismos materiales, flores y bordes, solapa levantada, interior vacío, sin tarjeta ni sello ni moño central; bolsillo frontal en V.
+Lienzo 1536x1024, canal alfa conservado.

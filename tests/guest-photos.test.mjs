@@ -198,3 +198,22 @@ test("Abigail photos unlock at her local event date and use only her storage fol
   }});
   assert.deepEqual(result.photos.map(photo=>photo.id),['own']);
 });
+
+test("Claudia and Porfirio photos unlock at Matamoros midnight and stay in their own album", async () => {
+  const {claudiaPorfirioPhotos:event}=await import("../lib/event-photos/config.js");
+  const opens=Date.parse("2026-11-07T00:00:00-06:00");
+  assert.equal(guestPhotosAreOpen(opens-1,event),false);
+  assert.equal(guestPhotosAreOpen(opens,event),true);
+  let called=false;
+  await assert.rejects(processGuestPhoto(request(new Blob(["test"],{type:"image/jpeg"})),{env,event,now:opens-1,rateLimit:async()=>{called=true},upload:async()=>{called=true}}),error=>error.code==="photos_not_open");
+  assert.equal(called,false);
+  const {listGuestPhotos}=await import("../lib/event-photos/gallery.js");
+  const result=await listGuestPhotos("",{env,event,fetcher:async url=>{
+    assert.equal(new URL(url).searchParams.get("prefix"),event.folder+"/");
+    return Response.json({resources:[
+      {asset_id:"claudia-own",public_id:event.folder+"/own",resource_type:"image",secure_url:"https://res.cloudinary.com/test-cloud/image/upload/own.jpg"},
+      {asset_id:"other",public_id:isabelaPhotos.folder+"/other",resource_type:"image",secure_url:"https://res.cloudinary.com/test-cloud/image/upload/other.jpg"}
+    ]});
+  }});
+  assert.deepEqual(result.photos.map(photo=>photo.id),["claudia-own"]);
+});

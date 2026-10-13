@@ -1,3 +1,7 @@
+import { gerardoEvelyne } from "../config/events/gerardo-evelyne.js";
+import { hanniaXv } from "../config/events/hannia-xv.js";
+import { claudiaPorfirio } from "../config/events/claudia-porfirio.js";
+import { rublesterDolores } from "../config/events/rublester-dolores.js";
 import { debanhiXv } from "../config/events/debanhi-xv.js";
 import { orlyXv } from "../config/events/orly-xv.js";
 import { nahomiXv } from "../config/events/nahomi-xv.js";
@@ -161,6 +165,10 @@ templates[lizbethXv.slug] = lizbethXv;
 templates[alessandraXv.slug] = alessandraXv;
 templates[orlyXv.slug] = orlyXv;
 templates[debanhiXv.slug] = debanhiXv;
+templates[rublesterDolores.slug] = rublesterDolores;
+templates[claudiaPorfirio.slug] = claudiaPorfirio;
+templates[hanniaXv.slug] = hanniaXv;
+templates[gerardoEvelyne.slug] = gerardoEvelyne;
 templates[nahomiXv.slug] = nahomiXv;
 templates[hortensiaGuadalupe.slug] = hortensiaGuadalupe;
 templates[abigailXv.slug] = abigailXv;
@@ -244,7 +252,7 @@ const document = {
     hero: { subtitle: event.hero.subtitle, quote: event.hero.quote, imageUrl: event.hero.image },
     welcome: { title: "Con enorme alegría", text: event.hero.quote },
     music: event.music,
-    story: [],
+    story: event.slug === claudiaPorfirio.slug ? event.story.map(item => ({...item, imageUrl:""})) : [],
     gallery: (event.gallery || []).map((photo, index) => ({ id: `photo-${index + 1}`, url: photo.src, alt: photo.alt, order: index })),
     video: { enabled: false, url: "", posterUrl: "" },
     ceremony: { enabled: ceremony.enabled !== false, name: ceremony.name || "", time: ceremony.time || "", address: ceremony.address || "", mapsUrl: ceremony.mapsUrl || "", wazeUrl: "", imageUrl: ceremony.image || "" },
@@ -254,7 +262,7 @@ const document = {
     gifts,
     hotels: event.slug === isamaraWsbaldo.slug ? event.hotels : [], importantInfo: event.importantInfo || [], faqs: [],
     bank: event.bank || { enabled: false, bank: "", holder: "", clabe: "", account: "" },
-    sections: { story: false, gallery: Boolean(event.gallery?.length), itinerary: itinerary.length > 0, gifts: gifts.length > 0, hotels: event.slug === isamaraWsbaldo.slug, important: Boolean(event.importantInfo?.length), calendar: true, songRequest: Boolean(event.askSongSuggestion), faqs: false },
+    sections: { story: event.slug === claudiaPorfirio.slug, gallery: Boolean(event.gallery?.length), itinerary: itinerary.length > 0, gifts: gifts.length > 0, hotels: event.slug === isamaraWsbaldo.slug, important: Boolean(event.importantInfo?.length), calendar: true, songRequest: Boolean(event.askSongSuggestion), faqs: false },
     contact: { whatsapp: event.contact?.phone || "" },
     seo: { title: event.eventTitle || `${event.couple.partner1} y ${event.couple.partner2} | Nuestra boda`, description: event.hero.quote, ogImageUrl: event.hero.image },
     theme: event.theme || (event.slug === "lesly-y-marcelino" ? { primary: "#7f91ae", dark: "#5d607d", champagne: "#d8c5a5", cream: "#f7f2f8", ivory: "#fffdfb", rose: "#b494c5", sage: "#a7b6a0" } : { primary: "#65724b", dark: "#494747", champagne: "#dfc777", cream: "#f6f1e9", ivory: "#fffdf9", rose: "#df897c", sage: "#65724b" }),

@@ -100,3 +100,9 @@
 .openEnvelopeLayer{width:102.7%;margin-left:-51.35%;bottom:11.2%;}.openFront{clip-path:inset(64% 0 0 0);}.sealButton{top:50.4%;}.letter{bottom:18%;}
 
 .placeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:1000px;margin:auto}.placeCard{text-align:center;padding:3rem 1.25rem;border:1px solid #edbed1;background:#fff3f7}.placeCard>svg{margin:0 auto 1.5rem;color:#c7819a}.placeCard h2{font-size:clamp(2rem,5vw,3rem);margin:1rem 0}.placeCard strong{font-family:var(--font-serif);font-size:1.8rem;color:#663d50}.attire{text-align:center;background:#f6e0e9}.invitation :global(.hero__image img){object-position:center 30%}@media(max-width:700px){.placeGrid{grid-template-columns:1fr}}
+
+/* Match the generated open body to the closed body: 1292 / 1198. */
+.openEnvelopeLayer{width:107.85%;margin-left:-53.925%;bottom:20.9%;}
+.openFront{clip-path:polygon(10.8% 41.6%,50% 70.3%,89.2% 41.6%,89.2% 100%,10.8% 100%);}
+.sealButton{top:51.5%;}
+.letter{bottom:22%;border-color:#d4b58c;background:linear-gradient(135deg,#fffbfc,#fff3f7);}

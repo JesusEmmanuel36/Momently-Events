@@ -118,3 +118,18 @@ test("Nahomi keeps personalized names and seat limits with confirmation only by 
   assert.equal([...store.keys()].filter(key=>key.includes('/rsvps/')).length,0);
   const other=fixture('xv-abigail');await assert.rejects(readPass(first.passToken,{context:other.context}),error=>error.status===404);
 });
+
+test("Claudia and Porfirio's passes enforce assigned places and update only their panel", async () => {
+  const {context,store}=fixture("claudia-y-porfirio");
+  const created=await createPass(context,{...details,displayName:"Familia de prueba",allowedSeats:4});
+  assert.match(created.path,/^\/eventos\/claudia-y-porfirio\/pase\//);
+  await assert.rejects(confirmPass(created.passToken,{attending:"yes",totalPeople:5},{context}),error=>error.status===400);
+  const first=await confirmPass(created.passToken,{attending:"yes",totalPeople:4},{context});
+  const updated=await confirmPass(created.passToken,{attending:"yes",totalPeople:2},{context});
+  assert.equal(first.rsvpId,updated.rsvpId);
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
+  assert.equal([...store.keys()].filter(key=>key.includes("/rsvps/")).length,1);
+  const other=fixture("xv-abigail");
+  await assert.rejects(readPass(created.passToken,{context:other.context}),error=>error.status===404);
+  assert.equal(other.store.size,1);
+});

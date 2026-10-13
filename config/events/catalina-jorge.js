@@ -7,7 +7,7 @@ export const catalinaJorge = {
   displayNames: { partner1: "Catalina", partner2: "Jorge" },
   date: "2027-01-23T20:00:00-07:00",
   timezone: "America/Mazatlan",
-  maxCompanions: 0,
+  maxCompanions: 20,
   rsvpEnabled: true,
   dateStamp: "23 · 01 · 2027",
   dateDisplay: "Sábado · 23 de enero · 2027",

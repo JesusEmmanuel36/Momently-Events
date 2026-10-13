@@ -24,3 +24,7 @@
 .schedule{--coffee-dark:var(--dark);--coffee:var(--dark);--mocha:var(--olive);--taupe:var(--muted);--champagne:var(--gold-soft);--cream:var(--paper);--text:var(--charcoal);--text-soft:var(--muted);background:var(--paper);color:var(--dark);}.schedule :global(.schedule__line){grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:900px;}.schedule :global(.schedule__number){transform:translateX(-50%);}.schedule :global(.section-heading){margin-bottom:5rem;}@media(max-width:800px){.schedule :global(.schedule__line){display:block;}.schedule :global(.schedule__item){margin-bottom:1.25rem;}.schedule :global(.section-heading){margin-bottom:3rem;}}
 
 .invitation .photoGrid button{aspect-ratio:auto;height:auto;}.invitation .photoGrid button img{position:relative!important;display:block;width:100%;height:auto;}.invitation .venueArtwork img[src*="iglesia"]{padding:0;object-fit:cover;}
+
+.attireIllustration{display:block;width:min(75vw,360px);height:auto;margin:2rem auto;object-fit:contain;}
+.giftIllustration{display:block;width:min(75vw,320px);height:auto;margin:1.5rem auto;object-fit:contain;}
+.invitation .venueArtwork img[src*="salon"]{padding:0;object-fit:cover;}
