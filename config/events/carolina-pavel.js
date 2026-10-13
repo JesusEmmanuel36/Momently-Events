@@ -1,5 +1,5 @@
 export const carolinaPavel = {
-  "publicEnabled": false,
+  "publicEnabled": true,
   "slug": "carolina-y-pavel",
   "templateKey": "carolina-pavel-western-earth",
   "eventTitle": "Boda de Carolina y Pavel",
@@ -132,8 +132,8 @@ export const carolinaPavel = {
   "logo": "/images/events/carolina-y-pavel/logo-transparent.png",
   "westernArtwork": "/images/events/carolina-y-pavel/western.png",
   "dressCode": {
-    "title": "Western formal",
-    "text": "Queremos celebrar con un estilo western elegante. Combina prendas formales con botas y detalles vaqueros: vestidos elegantes para ellas; traje o conjunto formal con sombrero para ellos. Inspírate en nuestra paleta de tonos tierra y en las referencias de nuestro tablero.",
+    "title": "Riguroso Western Formal",
+    "text": "Ellas: vestidos elegantes, botas vaqueras y texana.\n\nEllos: traje western formal o jeans vaqueros con saco, botas vaqueras y texana.\n\nInspírate en nuestra paleta de tonos tierra y en las referencias de nuestro tablero.",
     "url": "https://pin.it/4exfMLJby",
     "colors": [
       {
@@ -170,17 +170,14 @@ export const carolinaPavel = {
       "clabe": "012320015136310767"
     }
   ],
-  "transferConcept": "donativo",
   "adultsOnly": {
     "title": "Celebración solo para adultos",
     "text": "Aunque queremos mucho a los pequeños, esta celebración ha sido planeada exclusivamente para adultos. Gracias por comprender y respetar nuestra decisión."
   },
   "registryUrl": "https://www.amazon.com.mx/wedding/guest-view/35J08KMHEIZIR",
   "lodging": {
-    "additionalUrl": "https://www.airbnb.mx/rooms/1713116404445594973?unique_share_id=5e413825-c53d-40cf-80d7-7e760754412f&viralityEntryPoint=1&s=76",
-    "title": "Quédate cerca",
-    "text": "Sabemos que el lugar está un poco retirado. Para tu comodidad, te compartimos algunas opciones de Airbnb cercanas. Hay pocas opciones disponibles; te sugerimos reservar con anticipación.",
-    "url": "https://www.airbnb.com/l/b4Yp4JNZ"
+    "title": "Opciones de Airbnb cercanos",
+    "text": "Para tu comodidad, puedes buscar hospedaje en Airbnb cerca del lugar de nuestra celebración. Te sugerimos consultar disponibilidad y reservar con anticipación."
   },
   "socialUrl": "https://www.wedtrove.com/event/9LUpzJTIZS"
 };

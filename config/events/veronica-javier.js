@@ -110,7 +110,12 @@ export const veronicaJavier = {
     "url": "/audio/veronicayjavier.mp3",
     "label": "Tan enamorados · Ricardo Montaner"
   },
-  "gifts": [],
+  "gifts": [
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.com.mx/wedding/share/Miregaloparatiesespecial"
+    }
+  ],
   "contact": {
     "phone": "2228711145",
     "whatsapp": "https://wa.me/522228711145",

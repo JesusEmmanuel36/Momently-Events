@@ -1,3 +1,4 @@
+import { debanhiXv } from "../config/events/debanhi-xv.js";
 import { orlyXv } from "../config/events/orly-xv.js";
 import { nahomiXv } from "../config/events/nahomi-xv.js";
 import { hortensiaGuadalupe } from "../config/events/hortensia-guadalupe.js";
@@ -159,6 +160,7 @@ templates[isabellaComunion.slug] = isabellaComunion;
 templates[lizbethXv.slug] = lizbethXv;
 templates[alessandraXv.slug] = alessandraXv;
 templates[orlyXv.slug] = orlyXv;
+templates[debanhiXv.slug] = debanhiXv;
 templates[nahomiXv.slug] = nahomiXv;
 templates[hortensiaGuadalupe.slug] = hortensiaGuadalupe;
 templates[abigailXv.slug] = abigailXv;
