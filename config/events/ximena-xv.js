@@ -1,13 +1,13 @@
 export const ximenaXv = {
   "slug": "xv-ximena",
   "templateKey": "ximena-mist-blue-silver-xv",
-  "eventTitle": "XV años de Ximena",
+  "eventTitle": "XV años de Ximena Isabel",
   "couple": {
-    "partner1": "Ximena",
+    "partner1": "Ximena Isabel",
     "partner2": ""
   },
   "displayNames": {
-    "partner1": "Ximena",
+    "partner1": "Ximena Isabel",
     "partner2": ""
   },
   "date": "2026-12-26T19:00:00-06:00",
@@ -39,44 +39,44 @@ export const ximenaXv = {
   },
   "gallery": [
     {
-      "src": "/images/events/xv-ximena/image copy 2.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 3.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 4.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 5.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 6.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 7.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 8.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
-      "src": "/images/events/xv-ximena/image copy 9.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
-    },
-    {
       "src": "/images/events/xv-ximena/image copy.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 2.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
     },
     {
       "src": "/images/events/xv-ximena/image.png",
-      "alt": "Ximena · Recuerdos de mis XV años"
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 3.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 8.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 4.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 7.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 5.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 9.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
+    },
+    {
+      "src": "/images/events/xv-ximena/image copy 6.png",
+      "alt": "Ximena Isabel · Recuerdos de mis XV años"
     }
   ],
   "music": {

@@ -40,8 +40,8 @@ export const rolandoErika = {
   "gallery": [],
   "music": {
     "enabled": true,
-    "url": "/audio/veronicayjavier.mp3",
-    "label": "Tan enamorados · Ricardo Montaner"
+    "url": "/audio/Río Roma - Caminar de Tu Mano (Official Video) ft. Fonseca.mp3",
+    "label": "Caminar de Tu Mano · Río Roma ft. Fonseca"
   },
   "gifts": [],
   "contact": {

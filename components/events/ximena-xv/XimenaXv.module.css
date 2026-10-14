@@ -107,7 +107,7 @@
 .sealButton{top:51.5%;}
 .letter{bottom:22%;border-color:#cbc5d2;background:linear-gradient(135deg,#fffcff,#f7f1fa);}
 
-.openEnvelopeLayer{width:102%;margin-left:-51%;bottom:11.8%;}.openFront{clip-path:polygon(8.5% 40%,50% 71%,91.5% 40%,91.5% 100%,8.5% 100%);}.sealButton{top:49%;}.letter{bottom:18%;}.family{text-align:center;background:#f7f1fa}.familyGroups{display:grid;gap:2.5rem;max-width:750px;margin:auto}.familyGroups h3{font:400 2rem var(--font-script),cursive;color:#8c789b;margin-bottom:1rem}.familyGroups p{font:400 clamp(1.3rem,3vw,1.8rem)/1.7 var(--font-serif),serif}.placeCard p{margin:1rem auto;line-height:1.8}.placeCard .button{margin-top:1rem}.invitation :global(.hero__image img){object-position:center center}
+.openEnvelopeLayer{width:102%;margin-left:-51%;bottom:11.8%;}.openFront{clip-path:polygon(8.5% 40%,50% 71%,91.5% 40%,91.5% 100%,8.5% 100%);}.sealButton{top:49%;}.letter{bottom:18%;}.family{text-align:center;background:#f7f1fa}.familyGroups{display:grid;gap:2.5rem;max-width:750px;margin:auto}.familyGroups h3{font:400 2rem var(--font-script),cursive;color:#8c789b;margin-bottom:1rem}.familyGroups p{font:400 clamp(1.3rem,3vw,1.8rem)/1.7 var(--font-serif),serif}.placeCard p{margin:1rem auto;line-height:1.8}.placeCard :global(.button){display:flex;width:100%;justify-content:center;margin-top:1.5rem}.invitation :global(.hero__image img){object-position:center center}
 
 .openEnvelopeLayer{width:106.55%;margin-left:-53.275%;bottom:15.8%;}.openFront{clip-path:polygon(11.8% 42.7%,50% 72.1%,88.3% 42.7%,88.3% 100%,11.8% 100%);}
 
@@ -119,3 +119,5 @@
 .attire{background:linear-gradient(120deg,#f1e9f6,#e8f1f8)}.invitation :global(.calendar){background:linear-gradient(140deg,#f2e4ef,#e5eef7);color:#52495f}.invitation :global(.calendar h2),.invitation :global(.calendar .eyebrow),.invitation :global(.calendar svg){color:#746184}.invitation :global(.calendar p){color:#52495f}.invitation :global(.calendar .button){color:#52495f;background:#fffcff;border-color:#b5a6c3}.invitation :global(.calendar .button:hover),.invitation :global(.calendar .button:focus-visible){color:#52495f;background:#f1dce5}.invitation :global(.music-player){background:#f5edf8f5;border-color:#c4b3d3;color:#52495f}.invitation :global(.music-player small){color:#746184}.invitation :global(.music-player>span:first-child){background:#e6d9ef;color:#52495f}
 .introShade{background:#f4edf3c7}.introHeading{color:#52495f}.introHeading h1{color:#746184}.openButton{border-color:#b5a6c3;color:#52495f;background:#fffcff}.placeCard{border-color:#d1c6dd;background:linear-gradient(140deg,#fff7fb,#edf5fa)}
 .openEnvelopeLayer{width:108.8%;margin-left:-54.4%;bottom:16.2%}.openFront{clip-path:polygon(7.3% 42.1%,50% 72.8%,92.7% 42.1%,92.7% 100%,7.3% 100%)}.sealButton{top:51%}.letter{bottom:18%;border-color:#cbc5d2;background:linear-gradient(140deg,#fffcff,#f7f1fa)}
+
+.placeCard>strong{display:block;width:100%;text-align:center}.placeCard>svg{display:block}

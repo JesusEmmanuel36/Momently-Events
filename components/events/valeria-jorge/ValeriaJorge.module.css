@@ -118,3 +118,11 @@
 .invitation :global(.welcome .script){display:block;max-width:850px;margin:auto;font-size:clamp(2.4rem,6vw,4rem);line-height:1.25;}
 .openEnvelopeLayer{width:100%;margin-left:-50%;bottom:10%;}
 .sealButton{top:55%;}
+
+.arch{background:linear-gradient(140deg,#fffdf7,#e9eee2);padding:1.5rem;max-width:450px;margin:auto;min-height:0}.arch img{width:100%;max-width:360px;height:auto;margin:auto;object-fit:contain}.sectionIllustration{display:block;width:min(75vw,350px);height:auto;margin:0 auto 2rem}
+
+.invitation :global(.choice-row label){position:relative}.invitation :global(.choice-row input){width:1px;height:1px;inset:0}
+
+.arch{background:transparent;min-height:360px}.arch img{width:min(100%,280px);height:auto}.lineIcon{display:block;width:85px;height:85px;margin:0 auto 2rem;color:#718568}@media(max-width:800px){.arch{min-height:300px}}
+
+.lineDivider{display:flex;justify-content:center;align-items:center;gap:1.5rem;padding:3rem 1.25rem;color:#718568;background:var(--ivory)}.lineDivider svg{width:52px;height:52px}.lineDivider svg:nth-child(2){width:70px;height:70px}.lineDivider svg:last-child{transform:scaleX(-1)}.timelineDrawing{width:60px;height:60px;margin:0 auto 1.5rem;color:#718568}.closingDrawing{display:flex;justify-content:center;gap:1.25rem;margin-bottom:2rem;color:var(--ivory)}.closingDrawing svg{width:50px;height:50px}.invitation :global(.calendar) .lineIcon{color:var(--champagne)}

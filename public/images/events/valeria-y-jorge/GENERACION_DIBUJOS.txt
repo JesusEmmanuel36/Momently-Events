@@ -1,0 +1,10 @@
+Herramienta: image_gen integrada. PNG con transparencia real, novios1024x1536, anillos y bebé1536x1024.
+
+Novios:
+Use case: stylized-concept. Elegant watercolor wedding couple illustration for sage green ivory invitation. Bride in flowing ivory wedding gown holding small white floral bouquet and groom in light sage suit, full length, standing close holding hands, turned away so faces not visible. Soft romantic painterly watercolor, muted sage green beige ivory only, sparse botanical foliage at their feet. Genuine transparent background, portrait1024x1536, entirely visible, no text no backdrop no arch frame.
+
+Anillos:
+Use case: stylized-concept. Soft elegant watercolor drawing two intertwined wedding bands resting among small ivory roses and muted sage green eucalyptus foliage, horizontal composition1536x1024 genuine transparent background. Warm champagne metal, sage beige ivory palette. Refined romantic airy illustration for wedding invitation gifts section. Full object visible with transparent margin, no text no floor no background.
+
+Bebé:
+Use case: stylized-concept. Tender elegant watercolor pair of tiny ivory knitted baby booties with sage green ribbon bows, nestled beside delicate ivory blossoms and sage eucalyptus leaves. Gender neutral wedding and baby reveal invitation illustration. Airy muted sage ivory beige watercolor, genuine transparent background horizontal1536x1024, no pink blue gender clues, no text no floor no backdrop, whole object visible.
