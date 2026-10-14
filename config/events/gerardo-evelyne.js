@@ -35,7 +35,7 @@ export const gerardoEvelyne = {
     "name": "Salón Jardín de Miguel",
     "time": "5:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/CDzGSdifmven7Tzt9?g_st=ic"
   },
   "gallery": [
     {

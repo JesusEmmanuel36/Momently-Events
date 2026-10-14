@@ -1,0 +1,12 @@
+Herramienta: image_gen integrada. Entrada PNG1024x1536 opaca; sobres PNG1536x1024 transparentes.
+
+Entrada:
+Use case: photorealistic-natural. Wedding invitation entrance image portrait1024x1536. Romantic elegant still life on warm wooden table: two wedding rings nestled among ivory white roses, deep burgundy guinda flowers and muted olive eucalyptus foliage, soft golden afternoon light, premium natural wedding photography. Palette burgundy #571B27, foliage olive #63684E, warm ivory #F3EFE5, walnut wood #89694D. No people, no readable text, no envelope or paper, no collage. Center decorative rings lower half leaving upper area softly blurred for invitation overlay. Realistic beautiful restrained composition.
+
+Sobre cerrado:
+Use case: product-mockup. Landscape1536x1024 closed elegant wedding envelope isolated genuine transparent background, centered straight-on symmetrical full object. Warm ivory paper fine champagne edging, deep burgundy guinda satin ribbon bow, elegant round champagne wax seal engraved A & G. Corner flowers mostly ivory white roses and olive foliage, a few burgundy roses. Warm wood-toned champagne accents. Wide rectangular body all visible with transparent margins. No text except A & G, no background no floor. Premium photorealistic stationery.
+
+Sobre abierto (referencia cerrado):
+Use case: product-mockup. Generate matching OPEN wedding envelope from closed reference. Landscape1536x1024 centered front-on full object with real transparent background. Same warm ivory paper champagne edge, white and burgundy roses olive leaves lower corners. Top flap extended upward, EMPTY interior, wide rectangular envelope body V front pocket. NO card NO seal NO bow NO ribbon NO text. Same colors materials and proportions as reference, no background no floor.
+
+Arreglo floral: recurso IA de Claudia y Porfirio. Fotografías de la pareja originales, portada image copy 3.png. Paleta aproximada de referencia: guinda #571B27, verde #63684E, blanco #F3EFE5, madera #89694D.

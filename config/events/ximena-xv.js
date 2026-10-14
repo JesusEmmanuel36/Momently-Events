@@ -28,14 +28,14 @@ export const ximenaXv = {
     "name": "Parroquia San Juan Bautista",
     "time": "7:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/ZTN3QgCrcwTzcayX8?g_st=aw"
   },
   "reception": {
     "enabled": true,
     "name": "Salón Santa Cecilia",
     "time": "8:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/g6eHCycm6KmN8AbVA?g_st=aw"
   },
   "gallery": [
     {
@@ -80,9 +80,9 @@ export const ximenaXv = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/Christina Perri - A Thousand Years (Piano Cello Cover).mp3",
+    "label": "A Thousand Years · Piano y cello"
   },
   "gifts": [
     {
@@ -98,16 +98,23 @@ export const ximenaXv = {
   },
   "itinerary": [],
   "theme": {
-    "primary": "#789AAF",
-    "dark": "#20334F",
-    "champagne": "#BBC7D1",
-    "cream": "#EDF3F7",
-    "ivory": "#FBFDFF",
-    "rose": "#AEC9D9",
-    "sage": "#A8B6AC"
+    "primary": "#8C789B",
+    "dark": "#52495F",
+    "champagne": "#CBC5D2",
+    "cream": "#F7F1FA",
+    "ivory": "#FFFCFF",
+    "rose": "#F1DCE5",
+    "sage": "#DDECF5"
   },
   "dressCode": {
     "title": "Formal",
     "text": "Te esperamos con vestimenta formal para compartir este día tan especial."
-  }
+  },
+  "family": {
+    "parents": [
+      "Daniel Edgardo Reyes de León",
+      "Virginia Isabel Martínez Almaguer"
+    ]
+  },
+  "galleryIntroduction": "Hoy dejo atrás mi niñez para comenzar un nuevo capítulo en mi vida rodeada del amor de quienes más quiero."
 };

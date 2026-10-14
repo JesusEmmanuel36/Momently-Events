@@ -1,3 +1,5 @@
+import { arielGabriela } from "../config/events/ariel-gabriela.js";
+import { narcisoMaritza } from "../config/events/narciso-maritza.js";
 import { rosarioSanJudas } from "../config/events/rosario-san-judas.js";
 import { ximenaXv } from "../config/events/ximena-xv.js";
 import { rolandoErika } from "../config/events/rolando-erika.js";
@@ -168,6 +170,8 @@ templates[lizbethXv.slug] = lizbethXv;
 templates[alessandraXv.slug] = alessandraXv;
 templates[orlyXv.slug] = orlyXv;
 templates[debanhiXv.slug] = debanhiXv;
+templates[arielGabriela.slug] = arielGabriela;
+templates[narcisoMaritza.slug] = narcisoMaritza;
 templates[rublesterDolores.slug] = rublesterDolores;
 templates[claudiaPorfirio.slug] = claudiaPorfirio;
 templates[hanniaXv.slug] = hanniaXv;

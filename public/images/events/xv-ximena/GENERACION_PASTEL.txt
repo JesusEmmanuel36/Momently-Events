@@ -1,0 +1,10 @@
+Herramienta: image_gen integrada. Recursos PNG transparentes 1536 x 1024. Versiones pastel, se conservan los originales.
+
+Cerrado:
+Use case: product-mockup. Landscape 1536x1024 realistic elegant quinceañera CLOSED envelope, centered front-on, genuine transparent background, entire object visible. Ivory white textured paper thin silver edging, delicate pale lilac satin ribbon bow and silver wax seal embossed X. White roses predominant with a few pastel pink roses, tiny lilac and pale sky-blue hydrangea blooms in lower corners. Airy very light pastel color palette, no dark blue, no gold, no other text, no floor/background. Wide rectangular envelope body.
+
+Abierto (referencia: cerrado):
+Use case: product-mockup. Matching OPEN envelope from reference closed envelope, landscape1536x1024 genuine transparent background. Same white ivory textured paper thin silver border and white roses with small pastel pink, lilac, sky blue flowers on bottom corners. Front-on symmetrical wide rectangular body. Top triangular flap extended UP, interior EMPTY, front V-pocket. NO card, NO ribbon, NO bow, NO seal, NO text. Entire envelope visible, no background or floor, same materials and proportions as closed reference.
+
+Arreglo floral:
+Use case: product-mockup. Landscape1536x1024 isolated floral arrangement on genuine transparent background, horizontal low crescent garland for elegant quinceañera invitation. Predominantly WHITE roses with small delicate blush pink roses, lilac blossoms and sky blue hydrangeas, soft sage foliage, airy refined romantic realistic florist photography. Entire arrangement visible, no vase no background no ribbon no letters no gold. Light colors with silver subtle accents only.

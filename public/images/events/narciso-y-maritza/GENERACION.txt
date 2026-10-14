@@ -1,0 +1,9 @@
+Herramienta: image_gen integrada. PNG transparentes 1536 x 1024.
+
+Sobre cerrado:
+Use case: product-mockup. Elegant closed wedding silver anniversary envelope, isolated actual transparent background, landscape 1536x1024. Straight-on symmetrical ivory beige textured paper rectangle, fine SILVER metallic edge, olive green satin ribbon and tasteful bow, round silver wax seal engraved N & M. Small ivory roses and olive foliage at lower corners. Entire envelope visible with generous transparent margin, no background or floor, no extra text, no gold metal. Premium realistic stationery.
+
+Sobre abierto:
+Use case: product-mockup. Using reference closed envelope, generate matching OPEN envelope for animation. Same ivory beige paper and fine silver trim, ivory roses olive leaves at bottom corners. Front-on symmetrical landscape1536x1024 entire object isolated on genuine transparent background. Top triangular flap unfolded upward; empty beige interior, V-shaped front pocket, NO inserted card, NO text, NO ribbon, NO bow, NO wax seal. Wide rectangular envelope body with clean edges, same proportions and colors as reference, silver only no gold.
+
+Arreglo floral: recurso IA existente de Claudia y Porfirio. Fotos de pareja originales, sin edición IA.

@@ -27,14 +27,15 @@ export const claudiaPorfirio = {
   "welcomeText": "Queremos compartir este día tan especial con las personas que forman parte de nuestra vida.",
   "ceremony": {
     "enabled": true,
-    "name": "Salón y Jardín Haida",
+    "name": "Salón y Jardín Ahida",
     "time": "5:30 p. m.",
     "address": "Av. Tamaulipas #46, entre las calles González y Morelos, Zona Centro, C.P. 87300, H. Matamoros, Tamaulipas.",
     "mapsUrl": "https://maps.app.goo.gl/Y7TXCLRW5fNhEN6g7?g_st=aw"
   },
   "reception": {
+    "image": "/images/events/claudia-y-porfirio/salon.png",
     "enabled": true,
-    "name": "Salón y Jardín Haida",
+    "name": "Salón y Jardín Ahida",
     "time": "6:30 p. m.",
     "address": "Av. Tamaulipas #46, entre las calles González y Morelos, Zona Centro, C.P. 87300, H. Matamoros, Tamaulipas.",
     "mapsUrl": "https://maps.app.goo.gl/Y7TXCLRW5fNhEN6g7?g_st=aw"
