@@ -48,8 +48,12 @@ export const akariXv = {
       "name": "Lluvia de sobres",
       "title": "Lluvia de sobres",
       "type": "cash",
-      "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, agradeceré que sea en un sobre, con mucho cariño."
+      "description": "Tu presencia es mi mayor regalo; lo más importante para mí es celebrar este día contigo. Si deseas tener un detalle conmigo, te lo agradecería mucho. Puedes participar en la lluvia de sobres con un sobre con efectivo para empezar mi nuevo proyecto. Cualquier obsequio que salga de tu corazón será bienvenido."
     }
+  ],
+  "family": [
+    {"title": "Mis papás", "names": ["Milton Giovanni García Bernal", "Saraí Adonai Torres Gomez"]},
+    {"title": "Mis padrinos", "names": ["Marco Antonio Torres Melendrez", "Rosalinda Gómez Almaraz"]}
   ],
   "contact": {},
   "itinerary": [],
