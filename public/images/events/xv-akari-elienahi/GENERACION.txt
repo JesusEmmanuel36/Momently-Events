@@ -1,0 +1,14 @@
+Herramienta: image_gen integrada. Portada opaca, sobres y reloj con transparencia.
+
+Portada:
+Use case: stylized-concept. Portrait1024x1536 fairytale quinceañera invitation cover in champagne beige ivory and gold. Beautiful young princess viewed entirely from behind, wearing modest elegant champagne gold ballgown with long voluminous embroidered skirt and tiny golden tiara, standing before distant dreamy ivory golden turret castle at warm sunset. Ivory roses subtle corners, delicate glowing particles. Refined romantic editorial illustration photorealistic painterly, no text, no borders, no collage, face unseen. Composition princess on lower center, castle upper background, soft light space for HTML name overlay. Inspired by golden dress and castle references.
+
+Cerrado:
+Use case: product-mockup. Landscape1536x1024 elegant quinceañera CLOSED envelope isolated on genuine transparent background. Front-on symmetrical wide rectangular ivory beige paper with gold filigree fine border. Champagne satin ribbon and refined bow, round gold wax seal with embossed letter A and tiny princess crown. Ivory beige roses and golden leaf sprigs at lower corners. Entire object visible with transparent margin, premium photoreal stationery. No pink no blue no other text no floor no background.
+
+Abierto:
+Use case: product-mockup. Matching OPEN envelope from supplied closed reference. Landscape1536x1024 real transparent background, front-on symmetrical entire object. Same ivory beige textured paper, thin gold filigree edging, small ivory roses golden leaves lower corners. Top triangular flap extended up, empty interior, wide rectangular V front pocket. No inserted card no ribbon no bow no seal no letters. Same proportions materials and colors as reference. No background floor.
+
+Reloj:
+Use case: product-mockup. Isolated ornate French fairytale tabletop clock inspired by princess invitation reference. Genuine transparent background portrait1024x1536. Gold baroque filigree case, ivory clock face Roman numerals, delicate beige roses at base and tiny gold crown-like finial. Refined warm champagne beige gold, realistic elegant illustration, whole clock visible with margins, no extra words no background no floor. Clock hands at two o'clock (event ceremony time).
+Arreglo floral: recurso IA existente de Claudia y Porfirio.

@@ -1,0 +1,8 @@
+Herramienta: image_gen integrada. Sobres transparentes1536x1024.
+
+Cerrado:
+Use case: product-mockup. Landscape1536x1024 elegant CLOSED wedding envelope isolated on genuine transparent background. Straight-on symmetrical wide white ivory textured paper rectangle with delicate champagne edge, olive green satin ribbon bow, round champagne gold wax seal engraved E & P. Small white roses with olive foliage at both lower corners. Entire envelope visible, no floor no backdrop, no text except E & P. Premium restrained romantic white and olive stationery.
+
+Abierto (referencia cerrado):
+Use case: product-mockup. Matching OPEN envelope from closed reference. Landscape1536x1024 symmetrical front-on wide white ivory paper body fine champagne edge, white roses olive foliage lower corners. Top triangular flap unfolded upward. Empty interior and V-shaped front pocket. NO card, NO bow ribbon seal or text. Entire envelope visible isolated real transparent background, same proportions materials and colors as closed reference, no floor no backdrop.
+Arreglo floral: recurso IA existente de Claudia y Porfirio. Portada: fotografía original image copy 33.png.

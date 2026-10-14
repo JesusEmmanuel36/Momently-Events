@@ -21,7 +21,7 @@ export const debanhiXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Quince años de sueños, sonrisas y recuerdos que llevo en el corazón. Con mucha ilusión, te invito a compartir conmigo este día tan especial y el comienzo de una nueva etapa.",
-    "image": "/images/events/xv-debanhi/image.png"
+    "image": "/images/events/xv-debanhi/image.png?v=0eb4d377c7"
   },
   "ceremony": {
     "enabled": true,
@@ -39,23 +39,27 @@ export const debanhiXv = {
   },
   "gallery": [
     {
-      "src": "/images/events/xv-debanhi/image copy 2.png",
+      "src": "/images/events/xv-debanhi/image.png?v=0eb4d377c7",
       "alt": "Debanhi Betel · Recuerdos especiales"
     },
     {
-      "src": "/images/events/xv-debanhi/image copy 3.png",
+      "src": "/images/events/xv-debanhi/image copy 2.png?v=fc63c34735",
       "alt": "Debanhi Betel · Recuerdos especiales"
     },
     {
-      "src": "/images/events/xv-debanhi/image copy 4.png",
+      "src": "/images/events/xv-debanhi/image copy.png?v=c6de264b29",
       "alt": "Debanhi Betel · Recuerdos especiales"
     },
     {
-      "src": "/images/events/xv-debanhi/image copy.png",
+      "src": "/images/events/xv-debanhi/image copy 3.png?v=c909a47d88",
       "alt": "Debanhi Betel · Recuerdos especiales"
     },
     {
-      "src": "/images/events/xv-debanhi/image.png",
+      "src": "/images/events/xv-debanhi/image copy 5.png?v=83ee8bcc74",
+      "alt": "Debanhi Betel · Recuerdos especiales"
+    },
+    {
+      "src": "/images/events/xv-debanhi/image copy 4.png?v=b49268cd4a",
       "alt": "Debanhi Betel · Recuerdos especiales"
     }
   ],

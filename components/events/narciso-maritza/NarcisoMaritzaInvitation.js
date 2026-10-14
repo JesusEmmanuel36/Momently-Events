@@ -4,13 +4,13 @@ import { CalendarDays, ChevronDown, Heart, MapPin, Pause, Play, Share2 } from "l
 import { useEffect, useRef, useState } from "react";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { GallerySection } from "@/components/sections/Gallery";
-import { RSVPSection } from "@/components/sections/GuestActions";
+import { PersonalizedPass } from "@/components/events/alejandra-david/passes/PersonalizedPass";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./NarcisoMaritza.module.css";
 const images = "/images/events/narciso-y-maritza";
-export function NarcisoMaritzaInvitation({ wedding }) {
+export function NarcisoMaritzaInvitation({ wedding, pass = null, passToken = "" }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -30,13 +30,14 @@ export function NarcisoMaritzaInvitation({ wedding }) {
     </div><button className={styles.openButton} onClick={open} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}<ChevronDown size={16}/></button></div></div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} unoptimized fill priority sizes="100vw" alt="Narciso y Maritza" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Bodas de plata</span><h1>Narciso <i>&amp;</i> Maritza</h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><strong className={styles.heroTime}>{wedding.ceremony.time}</strong><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
+      {pass && <Reveal className={styles.passSummary}><span className="eyebrow">Invitación personal</span><h2>{pass.displayName}</h2><p>Tenemos reservados <strong>{pass.allowedSeats} {pass.allowedSeats===1 ? "lugar" : "lugares"}</strong> para ustedes.</p><a className="button" href="#tu-pase">Confirmar asistencia</a></Reveal>}
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">25 años de amor</span><p>{wedding.hero.quote}</p><div className="signature">Narciso y Maritza</div></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Rosas marfil y follaje verde"/></Reveal><CountdownSection wedding={view}/>
       <section className="section"><Reveal><SectionHeading eyebrow="25 años juntos" title="Nuestra ceremonia y celebración"/></Reveal><div className={styles.singleVenue}><Reveal className={styles.placeCard}><MapPin strokeWidth={1}/><span className="eyebrow">Ceremonia y recepción</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><a className="button" href={wedding.ceremony.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal></div></section>
       <section className="section dress"><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title}/><p>Acompáñanos vistiendo estos colores.</p><div className={styles.colorPalette}>{wedding.dressCode.colors.map(color=><div key={color.name}><span style={{backgroundColor:color.hex}}/><small>{color.name}</small></div>)}</div></Reveal></section>
       <GallerySection wedding={view}/>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará compartir contigo esta celebración.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,end:wedding.endDate,location:wedding.ceremony.name,details:"Ceremonia y celebración de nuestras bodas de plata, de 2:00 a 7:00 p. m. Ubicación: "+wedding.ceremony.mapsUrl})}>Agregar a mi calendario</button></Reveal></section>
-      <RSVPSection wedding={view}/>
+      {pass ? <PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para Narciso y Maritza"/> : <section className={`section ${styles.passSummary}`} id="tu-pase"><Reveal><SectionHeading eyebrow="Invitación personal" title="Un lugar especial para ti" copy="En tu enlace personalizado encontrarás el nombre de tu familia, los lugares asignados y el botón para confirmar tu asistencia."/></Reveal></section>}
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Narciso y Maritza" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p>Narciso &amp; Maritza</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;

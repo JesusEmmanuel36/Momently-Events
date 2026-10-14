@@ -15,7 +15,7 @@ export const narcisoMaritza = {
   "dateDisplay": "Sábado · 28 de noviembre de 2026",
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
@@ -57,10 +57,6 @@ export const narcisoMaritza = {
     {
       "src": "/images/events/narciso-y-maritza/image copy 4.png",
       "alt": "Narciso y Maritza · Recuerdos de nuestro amor"
-    },
-    {
-      "src": "/images/events/narciso-y-maritza/image copy 5.png",
-      "alt": "Narciso y Maritza · Recuerdos de nuestro amor"
     }
   ],
   "music": {
@@ -97,5 +93,6 @@ export const narcisoMaritza = {
         "hex": "#B8AB8D"
       }
     ]
-  }
+  },
+  "personalizedPasses": true
 };

@@ -1,3 +1,5 @@
+import { edsonPaty } from "../config/events/edson-paty.js";
+import { akariXv } from "../config/events/akari-xv.js";
 import { arielGabriela } from "../config/events/ariel-gabriela.js";
 import { narcisoMaritza } from "../config/events/narciso-maritza.js";
 import { rosarioSanJudas } from "../config/events/rosario-san-judas.js";
@@ -170,6 +172,8 @@ templates[lizbethXv.slug] = lizbethXv;
 templates[alessandraXv.slug] = alessandraXv;
 templates[orlyXv.slug] = orlyXv;
 templates[debanhiXv.slug] = debanhiXv;
+templates[edsonPaty.slug] = edsonPaty;
+templates[akariXv.slug] = akariXv;
 templates[arielGabriela.slug] = arielGabriela;
 templates[narcisoMaritza.slug] = narcisoMaritza;
 templates[rublesterDolores.slug] = rublesterDolores;

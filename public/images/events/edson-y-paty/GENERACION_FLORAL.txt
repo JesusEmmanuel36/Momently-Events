@@ -1,0 +1,3 @@
+Herramienta: image_gen integrada. PNG transparente 1536x1024. Archivo floral-blanco-olivo.png.
+Prompt:
+Use case: product-mockup. Elegant horizontal wedding floral garland, white ivory roses predominating and rich muted olive green foliage, eucalyptus and olive branches, airy refined symmetric low crescent composition, premium realistic florist illustration. Genuine transparent background, landscape1536x1024. Entire arrangement visible, no vase no ribbon no text no backdrop no floor. Strict white and olive wedding palette, no pink flowers no beige flowers no gold metal.

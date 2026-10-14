@@ -133,3 +133,17 @@ test("Claudia and Porfirio's passes enforce assigned places and update only thei
   await assert.rejects(readPass(created.passToken,{context:other.context}),error=>error.status===404);
   assert.equal(other.store.size,1);
 });
+
+test("Narciso and Maritza family passes enforce assigned places and update the same panel response", async () => {
+  const {context,store}=fixture("narciso-y-maritza");
+  const pass=await createPass(context,details);
+  assert.match(pass.path,/\/eventos\/narciso-y-maritza\/pase\//);
+  await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:5},{context}),e=>e.status===400);
+  const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context});
+  const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context});
+  assert.equal(first.rsvpId,second.rsvpId);
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia López");
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
+  const other=fixture("xv-abigail");
+  await assert.rejects(readPass(pass.passToken,{context:other.context}),e=>e.status===404);
+});
