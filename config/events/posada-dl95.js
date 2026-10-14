@@ -28,9 +28,9 @@ export const posadaDl95 = {
   "gifts": [],
   "contact": {},
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/images/events/posada-d-l-95/Mariah Carey - All I Want For Christmas Is You (Official Video).mp3",
+    "label": "All I Want for Christmas Is You · Mariah Carey"
   },
   "theme": {
     "primary": "#A23D45",
