@@ -108,3 +108,15 @@
 .invitation :global(.hero){justify-content:center}.invitation :global(.hero__copy){padding-block:3rem}.floralBlessing img{animation:floralFloat 7s ease-in-out infinite}@keyframes floralFloat{50%{transform:translateY(-8px)}}@media(prefers-reduced-motion:reduce){.floralBlessing img{animation:none}}
 
 .heroTime{color:#665528}
+
+.butterfly{position:absolute;z-index:10;left:50%;top:48%;width:min(92vw,820px);aspect-ratio:600/430;transform:translate(-50%,-50%);perspective:1400px;pointer-events:none;animation:butterflyReveal 4.6s .25s both}
+.butterflyWing{position:absolute;top:0;width:50%;height:100%;transform-style:preserve-3d;filter:drop-shadow(0 10px 14px #88611738)}
+.butterflyWing svg{display:block;width:100%;height:100%;overflow:visible}
+.wingLeft{left:0;transform-origin:100% 50%;animation:wingUnfoldLeft 4.6s .25s both}
+.wingRight{right:0;transform-origin:0 50%;animation:wingUnfoldRight 4.6s .25s both}
+.wingRight svg{transform:scaleX(-1)}
+.butterflyBody{position:absolute;left:49.45%;top:44%;width:1.1%;height:27%;border-radius:70%;background:linear-gradient(90deg,#936719,#edcc73,#88601b);box-shadow:0 2px 8px #93671944}
+@keyframes wingUnfoldLeft{0%{transform:rotateY(88deg)}38%{transform:rotateY(-8deg)}55%{transform:rotateY(7deg)}70%{transform:rotateY(0)}100%{transform:rotateY(-18deg)}}
+@keyframes wingUnfoldRight{0%{transform:rotateY(-88deg)}38%{transform:rotateY(8deg)}55%{transform:rotateY(-7deg)}70%{transform:rotateY(0)}100%{transform:rotateY(18deg)}}
+@keyframes butterflyReveal{0%{opacity:0;transform:translate(-50%,-35%) scale(.5)}15%{opacity:1}45%,70%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-65%) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.butterfly{display:none}.butterflyWing{animation:none}}
