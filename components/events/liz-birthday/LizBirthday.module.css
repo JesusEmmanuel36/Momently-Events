@@ -106,3 +106,5 @@
 .openEnvelopeLayer{width:100%;margin-left:-50%;bottom:0}.openFront{clip-path:inset(48% 0 0 0)}.introShade{background:#66552866;backdrop-filter:blur(2px)}
 
 .invitation :global(.hero){justify-content:center}.invitation :global(.hero__copy){padding-block:3rem}.floralBlessing img{animation:floralFloat 7s ease-in-out infinite}@keyframes floralFloat{50%{transform:translateY(-8px)}}@media(prefers-reduced-motion:reduce){.floralBlessing img{animation:none}}
+
+.heroTime{color:#665528}

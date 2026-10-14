@@ -6,9 +6,10 @@ export const lizBirthday = {
     "partner1": "Liz",
     "partner2": ""
   },
-  "date": "",
-  "dateDisplay": "",
-  "dateStamp": "",
+  "date": "2026-10-17T15:00:00-06:00",
+  "timezone": "America/Monterrey",
+  "dateDisplay": "Sábado · 17 de octubre de 2026",
+  "dateStamp": "17 · 10 · 2026 · 3:00 p. m.",
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
@@ -26,7 +27,7 @@ export const lizBirthday = {
     "enabled": true,
     "name": "Palapa de doña Rosy",
     "address": "Cañales 2",
-    "time": "",
+    "time": "3:00 p. m.",
     "mapsUrl": ""
   },
   "contact": {
