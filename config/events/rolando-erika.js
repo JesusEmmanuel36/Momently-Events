@@ -40,7 +40,7 @@ export const rolandoErika = {
   "gallery": [],
   "music": {
     "enabled": true,
-    "url": "/audio/Río Roma - Caminar de Tu Mano (Official Video) ft. Fonseca.mp3",
+    "url": "/audio/rolando-erika-caminar-de-tu-mano.mp3",
     "label": "Caminar de Tu Mano · Río Roma ft. Fonseca"
   },
   "gifts": [],
