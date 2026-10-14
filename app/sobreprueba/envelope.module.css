@@ -1,0 +1,201 @@
+
+.demo{
+  min-height: 100svh;
+  background: radial-gradient(ellipse at 50% 42%,#fffdf9,#ede6df);
+  color: #675249;
+  padding: 2.2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  --paper: repeating-radial-gradient(ellipse at 23% 31%,#bda98c10 0 .6px,#ffffff00 .8px 3px),repeating-linear-gradient(32deg,#fff8 .2px,#dac8aa12 .7px,#fffa 1.1px,transparent 2.2px),linear-gradient(130deg,#fcf9f0,#ebe5d9 48%,#f9f5eb 80%,#e9e0d2);
+  --copper: linear-gradient(125deg,#8f482e,#f5c5a5 12%,#bd7451 24%,#eeb995 39%,#7a3d28 49%,#f6ceae 58%,#c9855e 78%,#eec3a3);
+  transition: background .6s,color .6s
+}
+.dark{
+  background: radial-gradient(ellipse at 50% 45%,#534238,#201b19);
+  color: #f3e6da
+}
+.heading{
+  text-align: center;
+  position: relative;
+  z-index: 1
+}
+.heading>span{
+  font-size: .58rem;
+  letter-spacing: .25em
+}
+.heading h1{
+  font: 400 clamp(2rem,4.5vw,3.4rem)/1.1 var(--font-serif),serif;
+  margin: 1rem 0 .5rem
+}
+.heading p{
+  font-size: .75rem;
+  color: inherit;
+  opacity: .65;
+  margin: 0
+}
+.controls{
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin-top: -1.5rem;
+  position: relative;
+  z-index: 20
+}
+.controls button{
+  border: 1px solid #b49a8866;
+  border-radius: 30px;
+  padding: .9rem 1.3rem;
+  background: #f7f0e7;
+  color: #785a4b;
+  font-size: .7rem;
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+.controls button:first-child{
+  background: #805b47;
+  border-color: #805b47;
+  color: #fff3e8
+}
+.dark .controls button{
+  border-color: #dab99b55
+}
+.note{
+  font-size: .6rem;
+  color: inherit;
+  opacity: .55;
+  text-align: center;
+  margin: 1.3rem 0 0
+}
+@media(max-width:600px){
+.demo{
+  padding-top: 3rem;
+  justify-content: center;
+  min-height: 100svh
+}
+.controls{
+  margin-top: 1rem
+}
+.heading h1{
+  font-size: 2rem
+}
+}
+@media(prefers-reduced-motion:reduce){
+.demo *{
+  transition-duration: .01ms!important;
+  transition-delay: 0ms!important;
+  animation: none!important
+}
+}
+.customizer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 850px;
+  margin: 1.3rem auto 0;
+  font-size: .65rem
+}
+.initials{
+  display: flex;
+  align-items: center;
+  gap: .6rem
+}
+.initials input{
+  width: 80px;
+  padding: .5rem;
+  border: 1px solid #b49a8877;
+  border-radius: 4px;
+  background: #fff9f0;
+  color: #785a4b;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  text-align: center
+}
+.presets{
+  display: flex;
+  justify-content: center;
+  gap: .4rem;
+  flex-wrap: wrap
+}
+.presets button{
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem .65rem;
+  border: 1px solid #b49a8855;
+  border-radius: 20px;
+  background: #f7f0e7;
+  color: #785a4b;
+  cursor: pointer;
+  font-size: .6rem;
+  min-height: 36px
+}
+.presets i{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%
+}
+.customizer details{
+  width: 100%;
+  text-align: center
+}
+.customizer summary{
+  cursor: pointer;
+  min-height: 24px
+}
+.colorInputs{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem auto
+}
+.colorInputs label{
+  display: flex;
+  align-items: center;
+  gap: .4rem
+}
+.colorInputs input{
+  width: 32px;
+  height: 28px;
+  border: 0;
+  background: none;
+  padding: 0
+}
+.preview{
+  width: min(94vw,calc((100svh - 410px)*1.12),880px);
+  min-width: 280px
+}
+.preview [data-css-envelope]{
+  width: 100%;
+  max-width: none
+}
+.controls{
+  margin-top: 0
+}
+@media(max-width:600px){
+.demo{
+  justify-content: flex-start;
+  padding-top: 2rem
+}
+.preview{
+  width: 94vw;
+  min-width: 0
+}
+.customizer{
+  gap: .6rem
+}
+.controls{
+  margin-top: 1rem
+}
+}
+
+
+.floralPreview{width:min(94vw,1000px);margin-top:3rem;text-align:center}.floralPreview h2{font:400 clamp(2rem,4vw,3rem)/1.1 var(--font-serif),serif;margin:0 0 .5rem}.floralPreview>p{font-size:.75rem;opacity:.65;margin:0 0 1.5rem}

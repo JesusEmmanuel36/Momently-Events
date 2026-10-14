@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import {CssEnvelope} from "@/components/envelope/CssEnvelope";
+import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
 import { CalendarDays, Church, Gift, MapPin, MessageCircle, Pause, Play, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/ui";
@@ -8,7 +10,6 @@ import { FAQSection, RSVPSection, SongSection } from "@/components/sections/Gues
 import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./FlexibleInvitation.module.css";
 
-function Flowers() { return <div className={styles.flowers} aria-hidden="true">{[0,1,2,3,4].map(i => <span className={styles.flower} key={i} style={{"--i":i}}>{[0,1,2,3,4,5].map(p => <i key={p} style={{"--p":p}} />)}<b /></span>)}{[0,1,2,3,4,5].map(i => <em key={i} style={{"--i":i}} />)}</div>; }
 const time = value => { const m = /^(\d{2}):(\d{2})$/.exec(value || ""); return m ? `${Number(m[1])%12||12}:${m[2]} ${Number(m[1])>=12?"p. m.":"a. m."}` : value; };
 
 export function FlexibleInvitation({ event, previewMode = false, previewEnvelope = false }) {
@@ -23,15 +24,18 @@ export function FlexibleInvitation({ event, previewMode = false, previewEnvelope
   const audio = useRef(null), timer = useRef(null);
   useEffect(() => () => clearTimeout(timer.current),[]);
   useEffect(() => { if(active === null) return; const key=e=>{if(e.key==="Escape")setActive(null);}; window.addEventListener("keydown",key); return()=>window.removeEventListener("keydown",key); },[active]);
-  const open = () => { if(opening)return; setOpening(true); audio.current?.play().catch(()=>{}); timer.current=setTimeout(()=>{setOpened(true);if(!previewMode)window.scrollTo({top:0,behavior:"instant"});},window.matchMedia("(prefers-reduced-motion: reduce)").matches?50:1800); };
+  const open = () => { setOpening(true); audio.current?.play().catch(()=>{}); };
+  const finishOpening = () => { setOpened(true); if(!previewMode)window.scrollTo({top:0,behavior:"instant"}); };
   const gallery = [...(d.gallery || [])].sort((a,b)=>a.order-b.order).filter(p=>p.url);
   const whatsapp = String(d.contact?.whatsapp || "").replace(/\D/g,"");
   const wedding = {rsvpMessageLabel:"Mensaje para los festejados",isLive:!previewMode,eventId:event.eventId,slug:event.slug,couple:{bride:names[0] || "",groom:names[1] || ""},date,rsvpSettings:event.rsvp || {},rsvpDeadline:event.rsvp?.deadline ? new Date(event.rsvp.deadline).toLocaleDateString("es-MX") : "",faqs:d.faqs || []};
   const vars = {"--coffee":d.theme?.primary,"--coffee-dark":d.theme?.dark,"--champagne":d.theme?.champagne,"--cream":d.theme?.cream,"--ivory":d.theme?.ivory,"--rose":d.theme?.rose,"--sage":d.theme?.sage,"--envelope":decoration.envelopeColor || d.theme?.rose,"--flower":decoration.flowerColor || d.theme?.rose,"--foliage":decoration.foliageColor || d.theme?.sage,"--seal":decoration.sealColor || d.theme?.champagne};
+  const materialColors = {paper:decoration.paperColor || d.theme?.ivory,ribbon:decoration.envelopeColor || d.theme?.rose,seal:decoration.sealColor || d.theme?.champagne,flowers:decoration.lightFlowerColor || d.theme?.ivory,accentFlowers:decoration.flowerColor || d.theme?.rose,leaves:decoration.foliageColor || d.theme?.sage};
+  const Flowers = () => <div className={styles.floralArrangement} aria-hidden="true"><CssFloralArrangement colors={materialColors}/></div>;
   const floral = decoration.flowers !== false;
   return <div className={styles.invitation} style={vars}>
     {d.music?.enabled && d.music.url && !previewMode && <audio ref={audio} src={d.music.url} loop preload="none" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} />}
-    {!opened && <div className={`${styles.intro} ${opening?styles.opening:""}`}><span>Una invitación para ti</span><div className={styles.envelopeScene}><div className={styles.flapBack}/><div className={styles.letter}>{floral&&<Flowers/>}<small>{d.hero?.subtitle}</small>{visible("names")&&<h2>{title}</h2>}{visible("date")&&<p>{dateLabel}</p>}</div><div className={styles.pocket}/><div className={styles.flap}/><button className={styles.seal} onClick={open} disabled={opening} aria-label="Abrir invitación">{initials}</button></div><button className={styles.openButton} onClick={open} disabled={opening}>{opening?"Abriendo…":"Abrir invitación"}</button></div>}
+    {!opened && <div className={styles.intro}><span>Una invitación para ti</span><div className={styles.cssEnvelope}><CssEnvelope colors={materialColors} monogram={decoration.monogram || initials} open={opening} onOpenChange={open} onOpened={finishOpening} showFlowers={floral} letter={{eyebrow:d.hero?.subtitle || "Una invitación para ti",title:visible("names")?title:"",message:visible("date")?dateLabel:"",footer:"Con todo nuestro cariño"}}/></div><button className={styles.openButton} onClick={open} disabled={opening}>{opening?"Abriendo…":"Abrir invitación"}</button></div>}
     {opened && <main>
       <section className={styles.hero}>{visible("hero")&&d.hero?.imageUrl&&<Image unoptimized src={d.hero.imageUrl} fill priority sizes="100vw" alt={title}/>}<div className={styles.heroShade}/>{floral&&<Flowers/>}<div className={styles.heroCopy}>{d.hero?.subtitle&&<span>{d.hero.subtitle}</span>}{visible("names")&&<h1>{names.length?names.map((name,i)=><span key={i}>{i>0&&<i>&</i>}{name}</span>):title}</h1>}{visible("date")&&dateLabel&&<p>{dateLabel}</p>}{d.hero?.quote&&<blockquote>{d.hero.quote}</blockquote>}</div></section>
       {visible("welcome")&&(d.welcome?.title||d.welcome?.text)&&<Reveal><section className={styles.section}>{floral&&<Flowers/>}<h2>{d.welcome.title}</h2><p>{d.welcome.text}</p></section></Reveal>}

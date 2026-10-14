@@ -106,3 +106,5 @@
 .openFront{clip-path:polygon(10.8% 41.6%,50% 70.3%,89.2% 41.6%,89.2% 100%,10.8% 100%);}
 .sealButton{top:51.5%;}
 .letter{bottom:22%;border-color:#d4b58c;background:linear-gradient(135deg,#fffbfc,#fff3f7);}
+
+.passSummary{text-align:center;padding:4rem 1.5rem;background:#fff3f7}.passSummary h2{font:400 clamp(2.5rem,7vw,4rem)/1.2 var(--font-script),cursive;overflow-wrap:anywhere}.passSummary p{margin:1.5rem auto}.placeCard p{max-width:360px;margin:1.5rem auto 0;line-height:1.7}

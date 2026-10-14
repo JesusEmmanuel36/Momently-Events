@@ -15,7 +15,7 @@ export const debanhiXv = {
   "dateDisplay": "Sábado · 14 de noviembre de 2026",
   "dateStamp": "14 · 11 · 2026",
   "calendarDate": "14 de noviembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
@@ -34,7 +34,7 @@ export const debanhiXv = {
     "enabled": true,
     "name": "Eventos Rodríguez",
     "time": "8:00 p. m.",
-    "address": "",
+    "address": "Av. San Nicolás 501, Las Puentes, 2.º sector.",
     "mapsUrl": ""
   },
   "gallery": [
@@ -92,5 +92,6 @@ export const debanhiXv = {
   "dressCode": {
     "title": "Formal",
     "text": "El color rosa está reservado exclusivamente para la quinceañera. Gracias por elegir otro color para acompañarme en esta noche especial."
-  }
+  },
+  "personalizedPasses": true
 };

@@ -1,5 +1,6 @@
 export const hanniaXv = {
   "slug": "xv-hannia-lopez-cruz",
+  "publicEnabled": false,
   "templateKey": "hannia-aurora-pastel-pink-xv",
   "eventTitle": "XV años de Hannia López Cruz",
   "couple": {
