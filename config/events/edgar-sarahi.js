@@ -30,10 +30,14 @@ export const edgarSarahi = {
     "enabled": true,
     "name": "En casa de la novia",
     "time": "4:30 p. m.",
-    "address": "Ciruelar II, Gpe. Victoria.",
+    "address": "Ciruelar II, Gpe. Victoria, Nuevo Jomte, San Vicente Tancuayalab, San Luis Potosí.",
     "mapsUrl": "",
     "url": ""
   },
+  "family": [
+    {"title": "Papás del novio", "names": ["Guillermo Paita Aguilar", "Emma Olguín Olguín"]},
+    {"title": "Papás de la novia", "names": ["Santos Remigio Hernandez Perez", "Maria Alonso Hernandez"]}
+  ],
   "gallery": [
     {
       "src": "/images/events/edgar-y-sarahi/image.png",

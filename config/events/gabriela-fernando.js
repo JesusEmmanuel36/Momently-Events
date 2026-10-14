@@ -32,10 +32,10 @@ export const gabrielaFernando = {
   },
   "reception": {
     "enabled": true,
-    "name": "Nuestra recepción",
+    "name": "El Terreno · Salón de Eventos",
     "time": "",
-    "address": "Rafael Oceguera Ramos 4984, Sin Asignación En Nombre de Asentamiento, Culiacán Rosales, Sinaloa.",
-    "mapsUrl": "https://maps.app.goo.gl/H684R8Ss7abHhKiQ9",
+    "address": "Rafael Oceguera, Rincón del Parque, Adolfo López Mateos, C. P. 80197, Culiacán Rosales, Sinaloa.",
+    "mapsUrl": "https://maps.app.goo.gl/cTuz1Z4Ts9BZhaBU6?g_st=ac",
     "url": ""
   },
   "gallery": [
