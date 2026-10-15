@@ -11,8 +11,8 @@ export const yeniYuliana = {
   "dateDisplay": "Viernes · 25 de diciembre de 2026",
   "dateStamp": "25 · 12 · 2026",
   "calendarDate": "25 de diciembre de 2026",
-  "rsvpEnabled": true,
-  "maxCompanions": 5,
+  "rsvpEnabled": false,
+  "maxCompanions": 0,
   "askAllergies": false,
   "hero": {
     "subtitle": "Mis XV años",
@@ -38,7 +38,7 @@ export const yeniYuliana = {
   "reception": {
     "enabled": true,
     "name": "Casa de la quinceañera",
-    "time": "",
+    "time": "A partir de las 2:00 p. m.",
     "address": "",
     "mapsUrl": ""
   },
@@ -49,7 +49,7 @@ export const yeniYuliana = {
     "label": "Mi canción · Yeni Yuliana"
   },
   "contact": {},
-  "gifts": [],
+  "gifts": [{"name": "Lluvia de sobres", "type": "cash", "description": "Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, habrá lluvia de sobres: un sobre con efectivo que recibiré con mucho cariño. Gracias por acompañarme en este día tan especial."}],
   "theme": {
     "primary": "#3D7463",
     "dark": "#102D39",
