@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 
 
+import { GallerySection } from "@/components/sections/Gallery";
 import {RSVPSection} from "@/components/sections/GuestActions";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -23,7 +24,7 @@ export function SusanIsabelXvInvitation({ wedding }) {
   const open = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({top:0,behavior:"instant"}); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000); };
   const toggleMusic = () => { if (!audioRef.current) return; if (audioRef.current.paused) audioRef.current.play().catch(() => notify("Toca de nuevo para escuchar nuestra canción.")); else audioRef.current.pause(); };
   const share = async () => { try { if (navigator.share) await navigator.share({title:wedding.eventTitle,text:wedding.hero.quote,url:window.location.href}); else { await navigator.clipboard.writeText(window.location.href); notify("Enlace copiado"); } } catch (error) { if (error.name !== "AbortError") notify("No fue posible compartir el enlace."); } };
-  const view={...wedding,isLive:true,eventId:wedding.slug,couple:{bride:"Susan Isabel",groom:""},dateLong:wedding.dateDisplay,rsvpMessageLabel:"Mensaje para Susan Isabel",rsvpSettings:{maxCompanions:wedding.maxCompanions,askMenuPreference:false,askAllergies:false,askMessage:true}};
+  const view={...wedding,isLive:true,eventId:wedding.slug,couple:{bride:"Susan Isabel",groom:""},images:{hero:wedding.hero.image,gallery:wedding.gallery.map(photo=>photo.src)},galleryItems:wedding.gallery,dateLong:wedding.dateDisplay,rsvpMessageLabel:"Mensaje para Susan Isabel",rsvpSettings:{maxCompanions:wedding.maxCompanions,askMenuPreference:false,askAllergies:false,askMessage:true}};
   return <div className={styles.invitation}>
     {wedding.music.enabled&&<audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}/>}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}><Image src={wedding.hero.image} fill priority sizes="100vw" className={styles.introPhoto} alt="Susan Isabel"/><div className={styles.introShade}/><div className={styles.introHeading}><span className="eyebrow">Mis XV años</span><h1>Una invitación para ti</h1></div><div className={styles.envelopeScene}><div className={styles.envelopeStage}>
@@ -38,6 +39,7 @@ export function SusanIsabelXvInvitation({ wedding }) {
       
       {wedding.date&&<CountdownSection wedding={{...wedding,date:wedding.date,couple:{bride:"Susan Isabel",groom:""}}}/>}
       <section className="section"><Reveal><SectionHeading eyebrow="Un día muy especial" title="Mi ceremonia y celebración"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,i)=><Reveal className={styles.placeCard} key={i}>{i===0?<Church strokeWidth={1}/>:<MapPin strokeWidth={1}/>}<span className="eyebrow">{i===0?"Ceremonia religiosa":"Comida"}</span><h2>{place.name}</h2><strong>{place.time}</strong>{place.address&&<p>{place.address}</p>}{place.mapsUrl&&<a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación</a>}</Reveal>)}</div></section>
+      {wedding.gallery.length>0&&<GallerySection wedding={view} heading={{eyebrow:"Mis recuerdos",title:"Momentos de mi infancia",copy:"Cada recuerdo es parte de la historia que hoy me trae a celebrar mis quince años."}} imageSizes="(max-width:700px) 90vw, 33vw"/>}
       <RSVPSection wedding={view}/>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Susan Isabel" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>mi historia.</h2><p>{wedding.couple.partner1}</p>{wedding.dateDisplay&&<small>{wedding.dateDisplay}</small>}<button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

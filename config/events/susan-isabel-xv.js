@@ -52,7 +52,26 @@ export const susanIsabelXv = {
     "address": "C. Niños Héroes, Barrio El Moro, El Rosario.",
     "mapsUrl": "https://maps.app.goo.gl/DFEXS7Cb3xCcb6Dc7"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/xv-susan-isabel/image copy 2.png",
+      "alt": "Un recuerdo de la infancia de Susan Isabel",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "/images/events/xv-susan-isabel/image copy.png",
+      "alt": "Un recuerdo de la infancia de Susan Isabel",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "/images/events/xv-susan-isabel/image copy 3.png",
+      "alt": "Un recuerdo de la infancia de Susan Isabel",
+      "width": 960,
+      "height": 1280
+    }
+  ],
   "music": {
     "enabled": true,
     "url": "/audio/xvsusanisabel.mp3",

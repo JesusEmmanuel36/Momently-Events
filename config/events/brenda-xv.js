@@ -18,6 +18,22 @@ export const brendaXv = {
     "quote": "Con mucha ilusión y el amor de mi familia, te invito a celebrar mis quince años. Será un día lleno de alegría, sueños y recuerdos que guardaré para siempre en mi corazón.",
     "image": "/images/events/xv-brenda-estefani/hero.png"
   },
+  "family": [
+    {
+      "title": "Mis papás",
+      "names": [
+        "Lizbeth M. Alejandres",
+        "J. Manuel Luis Cruz"
+      ]
+    },
+    {
+      "title": "Mis padrinos",
+      "names": [
+        "Tania I. Gómez Salinas",
+        "Roberto Luis Cruz"
+      ]
+    }
+  ],
   "ceremony": {
     "enabled": true,
     "name": "Parroquia Todos los Santos",
