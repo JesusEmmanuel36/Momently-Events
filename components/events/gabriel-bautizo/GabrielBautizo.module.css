@@ -121,3 +121,5 @@
 
 .family{text-align:center;background:#f7f0e6;}.family>div>svg{display:block;margin:0 auto 2rem;color:#aa8646;}.familyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem;max-width:1000px;margin:auto;}.familyGrid p{font:400 clamp(1.35rem,3vw,1.8rem)/1.5 var(--font-serif),serif;margin:1rem auto;overflow-wrap:break-word;}.familyGrid :global(.eyebrow){color:#aa8646;}
 @media(max-width:800px){.familyGrid{grid-template-columns:1fr;gap:2.5rem;}}
+
+.passSummary{text-align:center;padding:3rem 1.25rem;background:#FBF7ED}.passSummary h2{font:400 clamp(2rem,5vw,3rem)/1.2 var(--font-serif),serif;margin:1rem auto;color:#74613F}.passSummary p{font-size:1.1rem;line-height:1.8;margin:1rem auto;max-width:650px}.passSummary a{margin-top:1rem}

@@ -21,8 +21,9 @@ export const edsonPaty = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Hay momentos que se convierten en recuerdos para toda la vida. Con el amor que nos une, queremos compartir contigo la alegría de comenzar nuestra nueva historia.",
-    "image": "/images/events/edson-y-paty/image copy 33.png"
+    "image": "/images/events/edson-y-paty/primera foto.png"
   },
+  "closingImage": "/images/events/edson-y-paty/ultimafoto.png",
   "ceremony": {
     "enabled": true,
     "name": "Jardín de Eventos Ahuatlán",

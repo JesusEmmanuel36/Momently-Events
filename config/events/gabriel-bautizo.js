@@ -15,7 +15,8 @@ export const gabrielBautizo = {
   "dateDisplay": "Domingo · 15 de noviembre de 2026",
   "dateStamp": "15 · 11 · 2026",
   "calendarDate": "15 de noviembre de 2026",
-  "maxCompanions": 5,
+  "personalizedPasses": true,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "family": {
