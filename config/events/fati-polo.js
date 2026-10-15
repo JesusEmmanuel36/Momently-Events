@@ -112,8 +112,8 @@ export const fatiPolo = {
   "contacts": [
     {
       "label": "Invitados de Fati",
-      "phone": "4621803352",
-      "display": "462 180 3352"
+      "phone": "4621803351",
+      "display": "462 180 3351"
     },
     {
       "label": "Invitados de Polo",
@@ -122,7 +122,7 @@ export const fatiPolo = {
     }
   ],
   "contact": {
-    "whatsapp": "4621803352"
+    "whatsapp": "4621803351"
   },
   "gifts": [],
   "dressCode": {
