@@ -1,28 +1,28 @@
 export const posadaDl95 = {
   "slug": "posada-d-l-95",
   "templateKey": "posada-christmas-dl95",
-  "eventTitle": "Posada navideña · Delegación D-l-95",
+  "eventTitle": "Posada navideña · Delegación D-I-95",
   "couple": {
-    "partner1": "Delegación D-l-95",
+    "partner1": "Delegación D-I-95",
     "partner2": ""
   },
   "date": "2026-12-10T14:30:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Jueves · 10 de diciembre de 2026",
   "dateStamp": "10 · 12 · 2026",
-  "rsvpEnabled": false,
-  "maxCompanions": 0,
+  "rsvpEnabled": true,
+  "maxCompanions": 5,
   "hero": {
     "subtitle": "Posada navideña",
-    "quote": "La delegación D-l-95 te invita a compartir una tarde llena de alegría, unión y espíritu navideño. Reunámonos para celebrar estas fechas y crear recuerdos que nos acompañen todo el año.",
+    "quote": "Te invitamos a compartir una tarde llena de alegría, unión y espíritu navideño. Reunámonos para celebrar estas fechas y crear recuerdos que nos acompañen todo el año.",
     "image": "/images/events/posada-d-l-95/hero.png"
   },
   "reception": {
     "enabled": true,
     "name": "Finca El Galope",
-    "address": "Cocotitlán, Estado de México.",
+    "address": "Calle 5 de Mayo, barrio de Techichilco, C. P. 56680, Cocotitlán, Estado de México.",
     "time": "2:30 p. m.",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/S9q8G3a7AKeYTRpr9?g_st=afm"
   },
   "gallery": [],
   "gifts": [],

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { CalendarDays, ChevronDown, Heart, MapPin, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { CountdownSection } from "@/components/sections/CountdownStory";
 import { GallerySection } from "@/components/sections/Gallery";
 import { RSVPSection } from "@/components/sections/GuestActions";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -31,6 +32,7 @@ export function GabrielaFernandoInvitation({ wedding }) {
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">El comienzo de nuestra historia</span><p>{wedding.hero.quote}</p><div className="signature">Gabriela Abigail y Fernando Arturo</div></Reveal></section>
       <Reveal className={styles.fullNames}><p>Gabriela Abigail Domínguez Muñoz</p><i>&amp;</i><p>Fernando Arturo García Gastelum</p></Reveal>
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} unoptimized width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo floral de rosas blancas y follaje verde botella y detalles dorados"/></Reveal>
+      <CountdownSection wedding={{...view,date:wedding.date.length===10?`${wedding.date}T00:00:00-07:00`:wedding.date}}/>
       <section className="section"><Reveal><SectionHeading eyebrow="Nuestra celebración" title="Acompáñanos en este día"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,i)=><Reveal className={styles.placeCard} key={i}><MapPin strokeWidth={1}/><span className="eyebrow">{i===0?"Ceremonia religiosa":"Recepción"}</span><h2>{place.name}</h2>{place.address&&<p>{place.address}</p>}<a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>)}</div></section>
       <GallerySection wedding={view}/>
       <section className="section gifts"><Reveal><SectionHeading eyebrow="Tu presencia es nuestro mejor regalo" title="Un detalle con cariño" copy={wedding.gifts[0].description}/></Reveal></section>

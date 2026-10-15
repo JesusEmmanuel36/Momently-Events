@@ -30,9 +30,9 @@ export const luisTere = {
   },
   "gallery": [],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/luisytere.mp3",
+    "label": "Nuestra canción"
   },
   "contact": {
     "whatsapp": "3317633008"
