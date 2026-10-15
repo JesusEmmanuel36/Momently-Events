@@ -10,13 +10,13 @@ export const saraiRuben = {
     "partner1": "Sarai",
     "partner2": "Rubén"
   },
-  "date": "2026-01-16T14:00:00-06:00",
+  "date": "2027-01-16T14:00:00-06:00",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "rsvpEnabled": true,
-  "dateStamp": "16 · 01 · 2026",
-  "dateDisplay": "16 de enero de 2026",
-  "calendarDate": "16 de enero de 2026",
+  "dateStamp": "16 · 01 · 2027",
+  "dateDisplay": "16 de enero de 2027",
+  "calendarDate": "16 de enero de 2027",
   "hero": {
     "subtitle": "Nuestra boda civil",
     "quote": "Porque juntos somos mejores, hemos decidido caminar de la mano para siempre.",

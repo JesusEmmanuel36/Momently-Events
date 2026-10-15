@@ -1,6 +1,6 @@
 # Susan Isabel · XV años
 
-La fecha y el WhatsApp se omitieron por instrucción expresa del usuario. No se inventaron fecha, edad adicional ni cuenta regresiva. Se conserva formulario RSVP normal. La activación del evento mediante provision-event mantiene su validación de fecha hasta que se proporcione.
+Fecha agregada por el usuario: 7 de noviembre de 2026. Cuenta regresiva hasta la misa a la 1:30 p. m. (America/Mexico_City). Se conserva formulario RSVP normal, sin WhatsApp.
 
 Padres: Miriam Isabel Hernández Moctezuma y José Luis López Hernández. Padrinos: Anallely Hernández Moctezuma y Edvin Mijail Cruz Castillo. Misa 1:30 p. m. en Iglesia de Nuestra Señora del Rosario. Comida 3:00 p. m. en C. Niños Héroes, Barrio El Moro, El Rosario. Mapa proporcionado: https://maps.app.goo.gl/DFEXS7Cb3xCcb6Dc7. Sin código de vestimenta ni regalos proporcionados; se omiten.
 

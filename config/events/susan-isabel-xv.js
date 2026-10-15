@@ -10,11 +10,11 @@ export const susanIsabelXv = {
     "partner1": "Susan Isabel",
     "partner2": ""
   },
-  "date": "",
+  "date": "2026-11-07T13:30:00-06:00",
   "timezone": "America/Mexico_City",
-  "dateDisplay": "",
-  "dateStamp": "",
-  "calendarDate": "",
+  "dateDisplay": "Sábado · 7 de noviembre de 2026",
+  "dateStamp": "07 · 11 · 2026",
+  "calendarDate": "7 de noviembre de 2026",
   "rsvpEnabled": true,
   "maxCompanions": 5,
   "hero": {
