@@ -123,3 +123,6 @@
 .openEnvelopeLayer{width:105%;margin-left:-52.5%;bottom:0}.openFront{clip-path:polygon(7.5% 50%,24% 64%,41% 64%,46% 68%,54% 68%,60% 64%,76% 64%,92.5% 50%,92.5% 100%,7.5% 100%)}
 
 .invitation main :global(.eyebrow){font-size:clamp(.9rem,1.6vw,1.1rem);line-height:1.6;letter-spacing:.14em}.family{background:#F0F2E9;text-align:center}.familyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:950px;margin:auto}.familyGrid h3{font:400 clamp(1.8rem,4vw,2.4rem) var(--font-script),cursive;color:#69734E;margin:1rem auto}.familyGrid p{font:400 clamp(1.2rem,3vw,1.6rem)/1.7 var(--font-serif),serif}@media(max-width:700px){.familyGrid{grid-template-columns:1fr}}
+
+/* Larger labels requested for the four main sections. */
+.invitation main :global(.countdown .eyebrow),.invitation main .celebration :global(.eyebrow),.invitation main :global(.gallery .eyebrow),.invitation main :global(.calendar .eyebrow){font-size:clamp(1.25rem,2.5vw,1.65rem);line-height:1.5;letter-spacing:.08em;text-align:center;max-width:100%;overflow-wrap:break-word}
