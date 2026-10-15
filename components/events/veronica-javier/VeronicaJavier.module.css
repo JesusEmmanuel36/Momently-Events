@@ -189,3 +189,5 @@
 .confirmContacts{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1.5rem;}
 
 .galleryPoem{text-align:center;background:#fcf5f8;color:#4a1632;}.galleryPoem svg{display:block;margin:0 auto 2rem;color:#a52868;}.galleryPoem p{white-space:pre-line;font:400 italic clamp(1.4rem,3vw,2rem)/1.7 var(--font-serif),serif;max-width:650px;margin:0 auto;}
+
+.godparents{max-width:700px;margin:1.5rem auto 0;text-align:center}.godparents p{font:400 clamp(1.35rem,3vw,1.8rem)/1.7 var(--font-serif),serif;margin:.6rem auto;overflow-wrap:break-word}

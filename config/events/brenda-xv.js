@@ -1,9 +1,9 @@
 export const brendaXv = {
   "slug": "xv-brenda-estefani",
   "templateKey": "brenda-cement-green-xv",
-  "eventTitle": "XV años de Brenda Estefani",
+  "eventTitle": "XV años de Brenda Stephanie",
   "couple": {
-    "partner1": "Brenda Estefani",
+    "partner1": "Brenda Stephanie",
     "partner2": ""
   },
   "date": "2026-12-26T13:00:00-06:00",
@@ -20,17 +20,17 @@ export const brendaXv = {
   },
   "ceremony": {
     "enabled": true,
-    "name": "Misa",
+    "name": "Parroquia Todos los Santos",
     "time": "1:00 p. m.",
-    "address": "",
-    "mapsUrl": ""
+    "address": "Avenida Jardines de Morelos, sección Montes, Ecatepec de Morelos, Estado de México. Diócesis de Ecatepec.",
+    "mapsUrl": "https://maps.app.goo.gl/MfACrsamsPejtbFC9"
   },
   "reception": {
     "enabled": true,
-    "name": "Salón La Paz",
+    "name": "Salón Paz",
     "time": "2:30 p. m.",
-    "address": "",
-    "mapsUrl": ""
+    "address": "Av. Nicolás Bravo 509, Jardines de Morelos, sección Playas, Ecatepec de Morelos, Estado de México.",
+    "mapsUrl": "https://maps.app.goo.gl/R4d3RsmeaQbDGw8M8"
   },
   "gallery": [],
   "gifts": [],

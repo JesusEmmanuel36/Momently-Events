@@ -23,6 +23,10 @@ export const veronicaJavier = {
     "quote": "Nos encontramos, nos elegimos y hoy queremos dar el siguiente paso juntos. Con el corazón lleno de alegría, te invitamos a compartir el comienzo de nuestra vida como esposos.",
     "image": "/images/events/veronica-y-javier/4Y5A4058.jpg"
   },
+  "godparents": {
+    "title": "Padrinos de velación",
+    "names": ["Faustino Texcucano Gutiérrez", "Antonia Domínguez Texcucano"]
+  },
   "ceremony": {
     "enabled": true,
     "name": "Iglesia de Nuestra Señora del Carmen",
