@@ -129,3 +129,6 @@
 
 /* Calibrated visible bodies: closed 1412 px, open 1058 px on 1536 px canvases. */
 .openEnvelopeLayer{width:133.5%;margin-left:-66.75%;bottom:2.9%}.openFront{clip-path:polygon(15.6% 42%,39% 62.6%,61% 62.6%,84.5% 42%,84.5% 100%,15.6% 100%)}.sealButton{top:47%}.letter{bottom:25%}
+
+/* Gold names with a clear hierarchy above the surnames. */
+.givenNames{display:block;color:#A47722}.surnames{display:block;font-family:var(--font-serif),serif;font-size:.4em;line-height:1.6;letter-spacing:.025em;color:#A47722;margin-top:.3em}.invitation :global(.hero h1){font-size:clamp(3.1rem,10vw,6.8rem);line-height:1.15}.letter h2{font-size:clamp(1.3rem,4.8vw,2.6rem);line-height:1.12;margin:.45rem auto}.letter .surnames{font-size:.48em;margin-top:.3em}.invitation :global(.signature){font-size:clamp(2rem,6vw,3.3rem)}.closingName{font:400 clamp(2rem,6vw,3.3rem)/1.25 var(--font-script),cursive!important}.closingName .givenNames,.closingName .surnames{color:#E3C474}.familyGrid p{font-size:clamp(1.65rem,4vw,2rem);line-height:1.7}.rubyCrown{display:block;width:min(65vw,300px);height:auto;margin:0 auto 1.7rem;filter:drop-shadow(0 8px 12px #4A152622)}

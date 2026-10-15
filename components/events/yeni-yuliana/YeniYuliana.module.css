@@ -120,3 +120,5 @@
 
 /* Visible paper widths: closed 1400/1536, open 1224/1536; preserve original aspect ratio. */
 .openEnvelopeLayer{width:114.4%;margin-left:-57.2%;bottom:5.2%}.openFront{clip-path:polygon(10.15% 41.4%,50% 68%,89.85% 41.4%,89.85% 100%,10.15% 100%)}.sealButton{top:48%}
+
+.riderPortrait{display:block;width:min(100%,560px);height:auto;margin:0 auto 3rem;border-radius:240px 240px 12px 12px;border:1px solid #91A99D;box-shadow:0 18px 45px #102D3920}@media(max-width:600px){.riderPortrait{border-radius:180px 180px 10px 10px;margin-bottom:2rem}}

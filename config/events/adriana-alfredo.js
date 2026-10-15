@@ -2,6 +2,7 @@ export const adrianaAlfredo = {
   "slug": "adriana-y-alfredo",
   "templateKey": "adriana-alfredo-boho",
   "eventTitle": "Boda civil de Adriana y Alfredo",
+  "closingMessage": "Infinitas gracias por sus buenos deseos llenos de amor, apoyo y complicidad. Deseamos con el corazón que esta nueva etapa la vivan con nosotros hoy, mañana y siempre…",
   "couple": {
     "partner1": "Adriana",
     "partner2": "Alfredo"

@@ -16,7 +16,7 @@ export const nayeliXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con la bendición de Dios y el amor de mis padres, te invito a celebrar mis quince años. Será una noche para compartir sueños, alegría y recuerdos inolvidables.",
-    "image": "/images/events/xv-nayeli/hero.png"
+    "image": "/images/events/xv-nayeli/hero-red.png"
   },
   "family": [
     {

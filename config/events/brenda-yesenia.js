@@ -49,7 +49,7 @@ export const brendaYesenia = {
     "enabled": true,
     "name": "Salón Eventos Versalles",
     "time": "9:00 p. m. a 2:00 a. m.",
-    "address": "Blvd. Luis Encinas 292, entre Goce Victoria y Reforma, col. San Benito, Hermosillo.",
+    "address": "Blvd. Luis Encinas 292, entre Guadalupe Victoria y Reforma, col. San Benito, Hermosillo.",
     "mapsUrl": ""
   },
   "gallery": [],

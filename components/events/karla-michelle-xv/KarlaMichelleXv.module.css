@@ -144,3 +144,5 @@
 .openEnvelopeLayer{width:122%;margin-left:-61%;bottom:10%;}.sealButton{top:54%;}
 
 .cashEnvelope{display:block;width:min(75vw,320px);height:auto;margin:0 auto 2rem;}
+
+.passSummary{text-align:center;background:var(--ivory,#fffdf8);padding:3rem 1.25rem}.passSummary h2{font:400 clamp(2rem,6vw,3.2rem)/1.25 var(--font-serif),serif;overflow-wrap:anywhere;margin:1rem auto}.passSummary p{font-size:1.2rem;line-height:1.8;margin:1rem auto}.passSummary :global(.button){margin:1rem auto 0}
