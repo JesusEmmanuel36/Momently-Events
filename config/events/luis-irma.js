@@ -30,7 +30,7 @@ export const luisIrma = {
     "time": "4:00 p. m.",
     "address": "",
     "mapsUrl": "",
-    "image": "/images/events/luis-y-irma/floral.png"
+    "image": "/images/events/luis-y-irma/iglesia.png"
   },
   "reception": {
     "enabled": true,
@@ -46,6 +46,36 @@ export const luisIrma = {
       "alt": "Luis Enrique e Irma compartiendo un recuerdo",
       "width": 1448,
       "height": 1086
+    },
+    {
+      "src": "/images/events/luis-y-irma/image.png",
+      "alt": "Luis Enrique e Irma · Un recuerdo juntos",
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "src": "/images/events/luis-y-irma/image copy.png",
+      "alt": "Luis Enrique e Irma · Un recuerdo juntos",
+      "width": 1086,
+      "height": 650
+    },
+    {
+      "src": "/images/events/luis-y-irma/image copy 2.png",
+      "alt": "Luis Enrique e Irma · Un recuerdo juntos",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "src": "/images/events/luis-y-irma/image copy 3.png",
+      "alt": "Luis Enrique e Irma · Un recuerdo juntos",
+      "width": 1079,
+      "height": 1457
+    },
+    {
+      "src": "/images/events/luis-y-irma/image copy 4.png",
+      "alt": "Luis Enrique e Irma · Un recuerdo juntos",
+      "width": 1024,
+      "height": 1536
     }
   ],
   "dressCode": {

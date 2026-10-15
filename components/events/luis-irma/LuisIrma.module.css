@@ -49,3 +49,5 @@
 
 .invitation .photoGrid:has(>button:only-child) {grid-template-columns:minmax(0,1fr);max-width:650px;margin-inline:auto;}
 .invitation .fullNames {font-size:clamp(1.4rem,4.7vw,2.6rem);}
+
+.invitation .venueArtwork .churchPhoto{padding:0;object-fit:contain}

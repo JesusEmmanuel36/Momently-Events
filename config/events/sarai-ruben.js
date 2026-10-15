@@ -20,9 +20,9 @@ export const saraiRuben = {
   "hero": {
     "subtitle": "Nuestra boda civil",
     "quote": "Porque juntos somos mejores, hemos decidido caminar de la mano para siempre.",
-    "image": "/images/events/sarai-y-ruben/image copy 6.png"
+    "image": "/images/events/sarai-y-ruben/portada.png"
   },
-  "closingImage": "/images/events/sarai-y-ruben/image copy 6.png",
+  "closingImage": "/images/events/sarai-y-ruben/portada.png",
   "ceremony": {
     "enabled": true,
     "name": "Cortijo Sevilla",
@@ -65,12 +65,6 @@ export const saraiRuben = {
       "height": 640
     },
     {
-      "src": "/images/events/sarai-y-ruben/image copy 6.png",
-      "alt": "Un recuerdo de Sarai y Rubén",
-      "width": 853,
-      "height": 480
-    },
-    {
       "src": "/images/events/sarai-y-ruben/image copy.png",
       "alt": "Un recuerdo de Sarai y Rubén",
       "width": 853,
@@ -81,6 +75,48 @@ export const saraiRuben = {
       "alt": "Un recuerdo de Sarai y Rubén",
       "width": 480,
       "height": 640
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 8.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 9.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 960,
+      "height": 480
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 10.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 11.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 480,
+      "height": 960
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 12.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 13.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "src": "/images/events/sarai-y-ruben/image copy 14.png",
+      "alt": "Un recuerdo de Sarai y Rubén",
+      "width": 640,
+      "height": 480
     }
   ],
   "gifts": [
