@@ -118,3 +118,9 @@
 .openEnvelopeLayer{width:106%;margin-left:-53%;bottom:0}.openFront{clip-path:polygon(8% 43%,50% 70%,92% 43%,92% 100%,8% 100%)}.invitation main :global(.eyebrow){font-size:.85rem;line-height:1.6}
 
 .invitation :global(.hero h1){font-size:clamp(4.3rem,12vw,8.5rem);line-height:1.08;max-width:100%;text-wrap:balance}.invitation :global(.hero__copy>.eyebrow){font-size:1rem}.invitation :global(.hero__copy>p){font-size:clamp(1.3rem,3vw,1.65rem);line-height:1.6}.heroTime{font-size:1.8rem}.introHeading h1{font-size:clamp(3rem,7.5vw,5rem)}
+
+.familyGrid article{text-align:center}
+.familyGrid p{margin-left:auto;margin-right:auto}
+.confirmation{text-align:center}
+.confirmation :global(.button){display:flex;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;justify-content:center}
+.confirmation svg{display:block;margin-left:auto;margin-right:auto}
