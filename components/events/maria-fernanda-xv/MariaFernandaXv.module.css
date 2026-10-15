@@ -124,3 +124,5 @@
 .confirmation{text-align:center}
 .confirmation :global(.button){display:flex;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;justify-content:center}
 .confirmation svg{display:block;margin-left:auto;margin-right:auto}
+
+.silverCrown{display:block;width:min(65vw,280px);height:auto;margin:0 auto 1.5rem;filter:drop-shadow(0 8px 10px #2C4D6818)}.giftEnvelope{display:block;width:min(48vw,180px);height:auto;margin:1.5rem auto 0;filter:drop-shadow(0 8px 12px #2C4D681a)}

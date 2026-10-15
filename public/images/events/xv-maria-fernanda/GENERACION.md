@@ -9,3 +9,5 @@ Original generated files retained under Codex generated_images. Open-envelope pr
 Audio duplicated byte-for-byte from /audio/andrea-anahis.mp3 to /audio/xv-maria-fernanda.mp3. UI label and Media Session metadata identify Maria Fernanda, never Andrea Anahis. Original audio unchanged.
 Date November28,2026, mass18:00 America/Mazatlan (-07), reception20:00. User reception Maps link preserved. WhatsApp6674178693. Formal, cash-envelope gifts. Parents and godmother as supplied. Venue titles, addresses and map button use larger readable type.
 Browser QA desktop1440/mobile390: no broken images or horizontal overflow, correct dedicated audio URL, venue and WhatsApp. No personal-photo gallery placeholders.
+
+Actualización: corona-plateada.png, tiara fotorealista de plata y cristales transparentes inspirada en la referencia, reemplaza el icono sobre Un día para soñar. sobre-blanco.png, sobre blanco liso sin dinero, cintas ni adornos, debajo del mensaje de Un detalle con cariño. Ambos recursos originales generados mediante imagegen, con alfa transparente y tamaños discretos centrados.
