@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Mail, MapPin, Pause, Play, Share2 } from "lucide-react";
+import { CalendarDays, ChevronDown, Heart, MapPin, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { GallerySection } from "@/components/sections/Gallery";
@@ -35,7 +35,7 @@ export function GabrielaFernandoInvitation({ wedding }) {
       <CountdownSection wedding={{...view,date:wedding.date.length===10?`${wedding.date}T00:00:00-07:00`:wedding.date}}/>
       <section className="section"><Reveal><SectionHeading eyebrow="Nuestra celebración" title="Acompáñanos en este día"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,i)=><Reveal className={styles.placeCard} key={i}><MapPin strokeWidth={1}/><span className="eyebrow">{i===0?"Ceremonia religiosa":"Recepción"}</span><h2>{place.name}</h2>{place.address&&<p>{place.address}</p>}<a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>)}</div></section>
       <GallerySection wedding={view}/>
-      <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1} aria-hidden="true"/><SectionHeading eyebrow="Tu presencia es nuestro mejor regalo" title="Un detalle con cariño" copy={wedding.gifts[0].description}/></Reveal></section>
+      <section className="section gifts"><Reveal><Image src={`${images}/sobre-regalo-ia.png`} width={1024} height={1024} sizes="130px" className={styles.giftEnvelope} alt="Sobre de regalo marfil con detalles verde botella y dorado"/><SectionHeading eyebrow="Tu presencia es nuestro mejor regalo" title="Lluvia de sobres" copy={wedding.gifts[0].description}/></Reveal></section>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará compartir contigo esta celebración.</p><button className="button button--ivory" onClick={()=>{const params=new URLSearchParams({action:"TEMPLATE",text:wedding.eventTitle,dates:"20261204/20261205",location:wedding.reception.name+", "+wedding.reception.address,details:"Boda de Gabriela Abigail y Fernando Arturo. Consulta las ubicaciones en nuestra invitación."});const target=window.open("https://calendar.google.com/calendar/render?"+params.toString(),"_blank");if(target)target.opener=null;}}>Agregar a mi calendario</button></Reveal></section>
       <RSVPSection wedding={view}/>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Gabriela Abigail y Fernando Arturo" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p>Gabriela Abigail &amp; Fernando Arturo</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>

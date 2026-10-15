@@ -63,9 +63,9 @@ export const gabrielaFernando = {
   },
   "gifts": [
     {
-      "name": "Un detalle con cariño",
-      "type": "other",
-      "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, cualquier obsequio que nazca de tu corazón será bienvenido. Si lo prefieres, también puedes regalarnos un sobre con efectivo. Gracias por acompañarnos en esta nueva etapa."
+      "name": "Lluvia de sobres",
+      "type": "cash",
+      "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, agradeceremos que sea en un sobre con efectivo. Gracias por acompañarnos en esta nueva etapa."
     }
   ],
   "contact": {},
