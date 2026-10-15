@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Baby, Gift, Flower2, Sparkles, GlassWater, Music2, Sprout, Clock, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import { ChevronDown, MapPin, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
+import { WelcomeSection } from "@/components/sections/IntroHero";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { RSVPSection } from "@/components/sections/GuestActions";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -11,7 +11,10 @@ import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./ValeriaJorge.module.css";
 
 const images = "/images/events/valeria-y-jorge";
-const celebrationIcons = [Heart, GlassWater, Baby, Music2];
+const celebrationStickers = ["rings", "meal", "baby", "music"];
+const stickerCells = {hands:[0,0],heart:[50,0],meal:[100,0],baby:[0,50],music:[50,50],rings:[100,50],gift:[0,100],calendar:[50,100],flowers:[100,100]};
+function Sticker({kind,className="",label}){const [x,y]=stickerCells[kind];return <span className={`${styles.sticker} ${className}`} style={{"--sticker-x":`${x}%`,"--sticker-y":`${y}%`}} role={label?"img":undefined} aria-label={label} aria-hidden={label?undefined:true}/>;}
+function EventHero({wedding}){return <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.images.hero} fill priority sizes="(max-width:768px) 100vw,58vw" alt="Valeria y Jorge" className="cover"/></div><div className="hero__wash"/><Sticker kind="flowers" className={styles.heroSticker}/><Reveal className="hero__copy"><span className="eyebrow">{wedding.heroSubtitle}</span><h1><span>{wedding.couple.bride}</span><i>&amp;</i><span>{wedding.couple.groom}</span></h1><div className="hero__rule"><span/>{wedding.dateLong}<span/></div><p>{wedding.heroQuote}</p></Reveal><a className="hero__scroll" href="#bienvenida" aria-label="Continuar hacia la invitación"><ChevronDown/></a></section>;}
 export function ValeriaJorgeInvitation({ wedding }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
@@ -56,10 +59,10 @@ export function ValeriaJorgeInvitation({ wedding }) {
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}>
       <Image src={wedding.hero.image} fill priority sizes="100vw" className={styles.introPhoto} alt="Valeria y Jorge" />
       <div className={styles.introShade} />
-      <div className={styles.introHeading}><span className="eyebrow">Boda y bebé en camino</span><h1>Una invitación para ti</h1></div>
+      <div className={styles.introHeading}><span className="eyebrow">Boda civil y bebé en camino</span><h1>Una invitación para ti</h1></div>
       <div className={styles.envelopeScene}>
         <div className={styles.envelopeStage}>
-          <div className={styles.letter}><span className="eyebrow">Boda y bebé en camino</span><h2>Valeria <i>&amp;</i> Jorge</h2><small>31 · 10 · 2026</small><Heart size={18}/></div>
+          <div className={styles.letter}><span className="eyebrow">Boda civil y bebé en camino</span><h2>Valeria Cuéllar <i>&amp;</i> Jorge Cataño</h2><small>31 · 10 · 2026</small><Sticker kind="heart" className={styles.letterSticker}/></div>
           <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image src={`${images}/envelope-open.png`} width={1254} height={1254} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="Sobre abierto de Valeria y Jorge" priority /></div>
           <div className={`${styles.openEnvelopeLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${images}/envelope-open.png`} width={1254} height={1254} sizes="(max-width:700px) 90vw, 650px" className={styles.openEnvelopeArtwork} alt="" priority /></div>
           <Image src={`${images}/envelope-closed.png`} fill sizes="(max-width:700px) 98vw, 720px" className={styles.closedEnvelope} alt="Sobre marfil con listón salvia y sello VJ" priority />
@@ -69,18 +72,18 @@ export function ValeriaJorgeInvitation({ wedding }) {
       </div>
     </div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
-      <HeroSection wedding={view}/><Reveal className={styles.lineDivider}><Sprout strokeWidth={1}/><Heart strokeWidth={1}/><Sprout strokeWidth={1}/></Reveal><WelcomeSection wedding={view}/><CountdownSection wedding={view}/>
+      <EventHero wedding={view}/><Reveal className={styles.lineDivider}><Sticker kind="flowers"/><Sticker kind="heart"/><Sticker kind="flowers"/></Reveal><WelcomeSection wedding={view}/><CountdownSection wedding={view}/>
       <section className={styles.venue} id="detalles">
-        <Reveal className={styles.venueDecoration}><div className={styles.arch}><Image src={`${images}/manos-lineas.png`} unoptimized width={1024} height={1024} sizes="(max-width:800px) 65vw,280px" alt="Dibujo de líneas finas de dos manos acercándose" /></div></Reveal>
+        <Reveal className={styles.venueDecoration}><div className={styles.arch}><Sticker kind="hands" className={styles.archSticker} label="Dos manos acercándose, ilustración realista"/></div></Reveal>
         <Reveal className={styles.venueCopy}><span className="eyebrow">Nuestra celebración</span><MapPin strokeWidth={1}/><h2>{wedding.reception.name}</h2><strong>{wedding.reception.time}</strong><p>{wedding.reception.address}</p>{wedding.reception.mapsUrl && <a className="button" href={wedding.reception.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a>}</Reveal>
       </section>
-      <section className={`section ${styles.timeline}`}><Reveal><SectionHeading eyebrow="Nuestro gran día" title="Así celebraremos"/></Reveal><div className={styles.timelineGrid}>{wedding.itinerary.map((item,index) => {const Icon=celebrationIcons[index] || Clock;return <Reveal className={styles.timelineItem} key={item.time}><Icon className={styles.timelineDrawing} strokeWidth={1}/><span className="eyebrow">0{index+1}</span><h3>{item.title}</h3><p>{item.description}</p></Reveal>;})}</div></section>
-      <section className={`section ${styles.babyGifts}`}><Reveal><Baby className={styles.lineIcon} strokeWidth={1}/><SectionHeading eyebrow="Un detalle para nuestro bebé" title="¿Team niño o team niña?" copy="Elige tu equipo y acompáñanos a descubrir la sorpresa."/></Reveal><div className={styles.teamGrid}><Reveal className={styles.teamCard}><Gift strokeWidth={1}/><h3>Team niño</h3><p>Si crees que será niño, trae productos de limpieza para bebé o toallitas húmedas.</p></Reveal><Reveal className={styles.teamCard}><Gift strokeWidth={1}/><h3>Team niña</h3><p>Si crees que será niña, trae pañales para darle la bienvenida con mucho cariño.</p></Reveal></div></section>
-      <section className="section gifts"><Reveal><svg className={styles.lineIcon} viewBox="0 0 100 80" fill="none" stroke="currentColor" strokeWidth="1.5" role="img" aria-label="Anillos de boda dibujados con líneas finas"><ellipse cx="37" cy="46" rx="23" ry="25" transform="rotate(-25 37 46)"/><ellipse cx="63" cy="46" rx="23" ry="25" transform="rotate(25 63 46)"/><path d="m31 20 6-10 7 10-7 7z"/></svg><SectionHeading eyebrow="Con mucho cariño" title={wedding.gifts[1].title} copy={wedding.gifts[1].description}/></Reveal></section>
-      <section className="calendar"><Reveal><CalendarDays className={styles.lineIcon} strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote })}>Agregar a mi calendario</button></Reveal></section>
-      <Reveal className={styles.lineDivider}><Flower2 strokeWidth={1}/><Heart strokeWidth={1}/><Flower2 strokeWidth={1}/></Reveal><RSVPSection wedding={view}/>
-      <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Comparte nuestra alegría</h2><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
-      <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Valeria y Jorge" className="cover"/><div className="closing__overlay"/><Reveal><div className={styles.closingDrawing}><Sprout strokeWidth={1}/><Heart strokeWidth={1}/><Sparkles strokeWidth={1}/></div><span className="script">Gracias por ser parte</span><h2>de nuestra historia.</h2><p>Valeria <i>&amp;</i> Jorge</p><small>{wedding.dateDisplay}</small></Reveal></section>
+      <section className={`section ${styles.timeline}`}><Reveal><SectionHeading eyebrow="Nuestro gran día" title="Así celebraremos"/></Reveal><div className={styles.timelineGrid}>{wedding.itinerary.map((item,index) => {const kind=celebrationStickers[index] || "calendar";return <Reveal className={styles.timelineItem} key={item.time}><Sticker kind={kind} className={styles.timelineDrawing} label={item.title}/><span className="eyebrow">0{index+1}</span><h3>{item.title}</h3><p>{item.description}</p></Reveal>;})}</div></section>
+      <section className={`section ${styles.babyGifts}`}><Reveal><Sticker kind="baby" className={styles.lineIcon} label="Zapatitos de bebé con detalles rosas y azules"/><SectionHeading eyebrow="Un detalle para nuestro bebé" title="¿Team niño o team niña?" copy="Elige tu equipo y acompáñanos a descubrir la sorpresa."/></Reveal><div className={styles.teamGrid}><Reveal className={styles.teamCard}><Sticker kind="gift" className={styles.teamSticker}/><h3>Team niño</h3><p>Si crees que será niño, trae productos de limpieza para bebé o toallitas húmedas.</p></Reveal><Reveal className={styles.teamCard}><Sticker kind="gift" className={styles.teamSticker}/><h3>Team niña</h3><p>Si crees que será niña, trae pañales para darle la bienvenida con mucho cariño.</p></Reveal></div></section>
+      <section className="section gifts"><Reveal><Sticker kind="rings" className={styles.lineIcon} label="Anillos de boda realistas"/><SectionHeading eyebrow="Con mucho cariño" title={wedding.gifts[1].title} copy={wedding.gifts[1].description}/></Reveal></section>
+      <section className="calendar"><Reveal><Sticker kind="calendar" className={styles.lineIcon}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.reception.address, details: wedding.hero.quote })}>Agregar a mi calendario</button></Reveal></section>
+      <Reveal className={styles.lineDivider}><Sticker kind="flowers"/><Sticker kind="heart"/><Sticker kind="flowers"/></Reveal><RSVPSection wedding={view}/>
+      <section className="share"><Reveal><Sticker kind="heart" className={styles.shareSticker}/><h2>Comparte nuestra alegría</h2><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
+      <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Valeria y Jorge" className="cover"/><div className="closing__overlay"/><Reveal><div className={styles.closingDrawing}><Sticker kind="flowers"/><Sticker kind="heart"/><Sticker kind="rings"/></div><span className="script">Gracias por ser parte</span><h2>de nuestra historia.</h2><p>Valeria <i>&amp;</i> Jorge</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>
     {opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}
     <div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

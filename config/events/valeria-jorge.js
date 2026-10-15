@@ -19,7 +19,7 @@ export const valeriaJorge = {
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
-    "subtitle": "Boda civil y revelación de género",
+    "subtitle": "Boda civil y bebé en camino",
     "quote": "Dos corazones se casan y uno más viene en camino.",
     "image": "/images/events/valeria-y-jorge/hero.png"
   },
