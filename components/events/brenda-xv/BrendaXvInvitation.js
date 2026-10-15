@@ -19,6 +19,55 @@ export function BrendaXvInvitation({ wedding }) {
   const [toast, setToast] = useState("");
   const audioRef = useRef(null); const timerRef = useRef(null);
   useEffect(() => () => window.clearTimeout(timerRef.current), []);
+  useEffect(() => {
+    if (!opened) return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motion.matches) return;
+    let frame = 0;
+    let stopped = false;
+    let previousTime = null;
+    let position = window.scrollY;
+    const stop = () => {
+      stopped = true;
+      window.clearTimeout(startTimer);
+      window.cancelAnimationFrame(frame);
+    };
+    const onKey = event => {
+      if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " ", "Tab"].includes(event.key)) stop();
+    };
+    const tick = time => {
+      if (stopped) return;
+      if (document.hidden) previousTime = null;
+      else {
+        const elapsed = previousTime === null ? 0 : Math.min(time - previousTime, 100);
+        previousTime = time;
+        const bottom = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        position = Math.min(bottom, position + elapsed * 0.018);
+        window.scrollTo({ top: position, behavior: "instant" });
+        if (position >= bottom) return;
+      }
+      frame = window.requestAnimationFrame(tick);
+    };
+    // Let the cover and its text appear before moving at 18 pixels per second.
+    const startTimer = window.setTimeout(() => {
+      if (stopped) return;
+      position = window.scrollY;
+      frame = window.requestAnimationFrame(tick);
+    }, 3000);
+    window.addEventListener("wheel", stop, { passive: true });
+    window.addEventListener("touchstart", stop, { passive: true });
+    window.addEventListener("pointerdown", stop, { passive: true });
+    window.addEventListener("keydown", onKey);
+    motion.addEventListener("change", stop);
+    return () => {
+      stop();
+      window.removeEventListener("wheel", stop);
+      window.removeEventListener("touchstart", stop);
+      window.removeEventListener("pointerdown", stop);
+      window.removeEventListener("keydown", onKey);
+      motion.removeEventListener("change", stop);
+    };
+  }, [opened]);
   const notify = message => { setToast(message); window.setTimeout(() => setToast(""),2600); };
   const open = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({top:0,behavior:"instant"}); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000); };
   const toggleMusic = () => { if (!audioRef.current) return; if (audioRef.current.paused) audioRef.current.play().catch(() => notify("Toca de nuevo para escuchar nuestra canción.")); else audioRef.current.pause(); };
