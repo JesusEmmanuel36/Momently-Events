@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
-import { CalendarDays, Church, MessageCircle, MapPin, ChevronDown, Heart, Pause, Play, Share2 } from "lucide-react";
+import { CalendarDays, Crown, Church, MessageCircle, MapPin, ChevronDown, Heart, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 
 
 import { CountdownSection } from "@/components/sections/CountdownStory";
-import { openGoogleCalendar } from "@/lib/calendar";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 
@@ -32,7 +31,7 @@ export function MariaFernandaXvInvitation({ wedding }) {
     </div><button className={styles.openButton} onClick={open} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}<ChevronDown size={16}/></button></div></div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Marco floral de rosas y flores azules" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Mis XV años</span><h1>María Fernanda</h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><strong className={styles.heroTime}>{wedding.ceremony.time}</strong><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
-      <section className="section welcome" id="bienvenida"><Reveal><span className="script">Un día para soñar</span><p>{wedding.hero.quote}</p><div className="signature">María Fernanda</div></Reveal></section>
+      <section className="section welcome" id="bienvenida"><Reveal><Crown className={styles.welcomeCrown} strokeWidth={1} aria-hidden="true"/><span className="script">Un día para soñar</span><p>{wedding.hero.quote}</p><div className="signature">María Fernanda</div></Reveal></section>
       <section className={`section ${styles.family}`}><Reveal><SectionHeading eyebrow="Con la bendición y el amor de" title="Mi familia"/><div className={styles.familyGrid}>{wedding.family.map(group=><article key={group.title}><h3>{group.title}</h3>{group.names.map(name=><p key={name}>{name}</p>)}</article>)}</div></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Rosas y anémonas azules con flores blancas y hojas gris verdoso"/></Reveal>
       
@@ -40,7 +39,7 @@ export function MariaFernandaXvInvitation({ wedding }) {
       <section className="section"><Reveal><SectionHeading eyebrow="Un día muy especial" title="Mi ceremonia y celebración"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,i)=><Reveal className={styles.placeCard} key={i}>{i===0?<Church strokeWidth={1}/>:<MapPin strokeWidth={1}/>}<span className="eyebrow">{i===0?"Ceremonia religiosa":"Recepción"}</span><h2>{place.name}</h2><strong>{place.time}</strong>{place.address&&<p>{place.address}</p>}{place.mapsUrl&&<a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación</a>}</Reveal>)}</div></section>
       <section className="section dress"><Reveal><SectionHeading eyebrow="Código de vestimenta" title="Formal" copy="Acompáñame a celebrar con tu mejor sonrisa y un atuendo formal."/></Reveal></section>
       <section className="section gifts"><Reveal><SectionHeading eyebrow="Tu presencia es mi mejor regalo" title="Un detalle con cariño" copy={wedding.gifts[0].description}/></Reveal></section>
-      <section className="calendar"><Reveal><CalendarDays/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Misa · 6:00 p. m.<br/>Recepción · 8:00 p. m.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,location:wedding.ceremony.name+", "+wedding.ceremony.address,details:"Misa a las 6:00 p. m. en Iglesia La Guadalupana, Potrero de los Sánchez, Mocorito. Recepción a las 8:00 p. m. en Quinta Don Luis, Chinitos, Angostura. "+wedding.reception.mapsUrl})}>Agregar al calendario</button></Reveal></section>
+      <section className="calendar"><Reveal><CalendarDays/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Misa · 6:00 p. m.<br/>Recepción · 8:00 p. m.</p></Reveal></section>
       <section className="section"><Reveal><MessageCircle/><SectionHeading eyebrow="Confirma tu asistencia" title="¿Me acompañas?" copy="Me hará muy feliz celebrar este día contigo."/><a className="button" href={`https://wa.me/52${wedding.contact.whatsapp}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a los XV años de María Fernanda el 28 de noviembre de 2026.')}`} target="_blank" rel="noreferrer">Confirmar por WhatsApp</a></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Marco floral de rosas y flores azules" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>mi historia.</h2><p>{wedding.couple.partner1}</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

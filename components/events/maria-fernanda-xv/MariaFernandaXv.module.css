@@ -5,7 +5,8 @@
 .invitation :global(.hero h1) {font-size:clamp(4rem,10vw,7rem);}
 .invitation :global(.hero__copy) {padding-bottom:8vh;}
 .invitation :global(.welcome) {position:relative;}
-.invitation :global(.welcome)::before {content:"";display:block;width:70px;height:90px;border:1px solid #778E8088;border-bottom:0;border-radius:60px 60px 0 0;margin:0 auto 2rem;}
+.invitation :global(.welcome)::before {display:none;}
+.welcomeCrown {display:block;width:76px;height:64px;margin:0 auto 1.5rem;color:var(--blue-dark,#2C4D68);}
 .invitation :global(.dress) {background:linear-gradient(140deg,#3F5148,#778E80);}
 .invitation :global(.dress__colors) {display:flex;justify-content:center;gap:1rem;margin:2rem auto;}
 .invitation :global(.dress__colors span) {border:1px solid #C4B491;}
@@ -115,3 +116,5 @@
 
 .invitation{--coffee-dark:#2C4D68;--coffee:#688FAE;--mocha:#688FAE;--taupe:#8AA4B7;--champagne:#D2C4A4;--sand:#DCE9F1;--cream:#F0F6FA;--ivory:#FDFFFE;--rose:#AECFE4;--sage:#9CAB9C;--text:#2C4D68;--text-soft:#688194}.introShade{background:#2C4D6866}.introHeading h1{color:#F0F6FA}.invitation :global(.hero__wash){background:linear-gradient(180deg,#FDFFFE22,#FDFFFE88 48%,#FDFFFEe8)}.invitation :global(.hero__copy){color:#2C4D68;text-shadow:none}.invitation :global(.hero__copy>p){color:#2C4D68}.heroTime{color:#2C4D68}.invitation :global(.dress){background:linear-gradient(140deg,#DCE9F1,#F0F6FA);color:#2C4D68}.invitation :global(.dress h2){color:#2C4D68}.invitation :global(.calendar){background:#2C4D68}.invitation :global(.calendar h2),.invitation :global(.calendar svg){color:#AECFE4}.invitation :global(.calendar .button){background:#FDFFFE;color:#2C4D68}.placeCard{background:#F0F6FA;border-color:#AECFE4}.placeCard h2,.placeCard strong{color:#2C4D68}.placeCard h2{font-size:clamp(2.1rem,5vw,3.2rem)}.placeCard p{font-size:clamp(1.15rem,2.5vw,1.35rem);line-height:1.8}.placeCard>svg{color:#688FAE}.placeCard :global(.button){font-size:1rem;min-height:48px}.letter{background:#FDFFFE;border-color:#AECFE4}.letter>svg{color:#688FAE}.invitation :global(.closing__overlay){background:#2C4D68b8}.invitation :global(.music-player){background:#2C4D68;border-color:#AECFE4}.family{background:#F0F6FA}.familyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem;max-width:950px;margin:auto}.familyGrid h3{font:400 2.2rem var(--font-script);color:#688FAE;margin:1rem auto}.familyGrid p{font:400 clamp(1.3rem,3vw,1.6rem)/1.7 var(--font-serif)}@media(max-width:700px){.familyGrid{grid-template-columns:1fr}}
 .openEnvelopeLayer{width:106%;margin-left:-53%;bottom:0}.openFront{clip-path:polygon(8% 43%,50% 70%,92% 43%,92% 100%,8% 100%)}.invitation main :global(.eyebrow){font-size:.85rem;line-height:1.6}
+
+.invitation :global(.hero h1){font-size:clamp(4.3rem,12vw,8.5rem);line-height:1.08;max-width:100%;text-wrap:balance}.invitation :global(.hero__copy>.eyebrow){font-size:1rem}.invitation :global(.hero__copy>p){font-size:clamp(1.3rem,3vw,1.65rem);line-height:1.6}.heroTime{font-size:1.8rem}.introHeading h1{font-size:clamp(3rem,7.5vw,5rem)}

@@ -27,9 +27,10 @@ export const mariaFernandaXv = {
       ]
     },
     {
-      "title": "Mi madrina",
+      "title": "Mis padrinos",
       "names": [
-        "Bertha Azucena Rivera Villamán"
+        "Bertha Azucena Rivera Villamán",
+        "José Moreno Salomón"
       ]
     }
   ],
