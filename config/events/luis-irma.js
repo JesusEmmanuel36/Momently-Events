@@ -85,7 +85,7 @@ export const luisIrma = {
   "gifts": [
     {
       "title": "Un detalle con cariño",
-      "description": "Si deseas tener un detalle con nosotros, puedes hacerlo mediante una transferencia."
+      "description": "Nuestro hogar ya está listo con todo lo necesario, pero si quieres ayudarnos a construir nuestra siguiente etapa, agradecemos de corazón tu aportación aquí:"
     }
   ],
   "bank": {
