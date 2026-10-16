@@ -15,7 +15,8 @@ export const rublesterDolores = {
   "dateDisplay": "Sábado · 5 de diciembre de 2026",
   "dateStamp": "05 · 12 · 2026",
   "calendarDate": "5 de diciembre de 2026",
-  "maxCompanions": 5,
+  "personalizedPasses": true,
+  "maxCompanions": 0,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {

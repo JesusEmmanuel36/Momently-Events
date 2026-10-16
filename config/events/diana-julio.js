@@ -10,7 +10,7 @@ export const dianaJulio = {
     "partner1": "Diana",
     "partner2": "Julio"
   },
-  "date": "2027-07-17T00:00:00-06:00",
+  "date": "2027-07-17T18:30:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 17 de julio de 2027",
   "dateStamp": "17 · 07 · 2027",
@@ -22,18 +22,20 @@ export const dianaJulio = {
     "quote": "Queremos compartir contigo la alegría de comenzar una nueva etapa juntos. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos para siempre.",
     "image": "/images/events/diana-y-julio/hero.png"
   },
-  "closingMessage": "Gracias por ser parte de nuestra historia. Nos hará muy felices compartir este día tan especial contigo.",
+  "closingMessage": "Gracias por ser parte de esta nueva historia. Nos hará muy felices compartir este día tan especial contigo.",
   "ceremony": {
-    "enabled": false
+    "enabled": true,
+    "name": "Parroquia del Señor de la Misericordia",
+    "time": "18:30 hrs",
+    "mapsUrl": "https://maps.app.goo.gl/SpYipyRTkpDriUTL8"
   },
   "reception": {
     "enabled": true,
-    "name": "Lugar por confirmar",
+    "name": "Centro de Convenciones Tlatelolco",
     "time": "",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/7Qf4opM44XdybJDP9"
   },
-  "venuePendingMessage": "Estamos preparando cada detalle de nuestra celebración. Muy pronto compartiremos contigo el lugar donde nos acompañarás.",
   "giftsPendingMessage": "Estamos preparando nuestra mesa de regalos. Pronto compartiremos los detalles contigo.",
   "dressCode": {
     "title": "Formal",

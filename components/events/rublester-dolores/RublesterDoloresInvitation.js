@@ -4,13 +4,13 @@ import { CalendarDays, ChevronDown, Heart, Church, MapPin, MessageCircle, Pause,
 import { useEffect, useRef, useState } from "react";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { GallerySection } from "@/components/sections/Gallery";
-import { RSVPSection } from "@/components/sections/GuestActions";
+import { PersonalizedPass } from "@/components/events/alejandra-david/passes/PersonalizedPass";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./RublesterDolores.module.css";
 const images = "/images/events/rublester-y-dolores";
-export function RublesterDoloresInvitation({ wedding }) {
+export function RublesterDoloresInvitation({ wedding, pass = null, passToken = null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -30,12 +30,13 @@ export function RublesterDoloresInvitation({ wedding }) {
     </div><button className={styles.openButton} onClick={open} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}<ChevronDown size={16}/></button></div></div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Rublester y Lolita" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Bodas de plata</span><h1>Rublester <i>&amp;</i> Lolita</h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><strong className={styles.heroTime}>7:00 p. m.</strong><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
+      {pass && <Reveal className={styles.passSummary}><span className="eyebrow">Este pase es para</span><h2>{pass.displayName}</h2><p>Invitación válida para <strong>{pass.allowedSeats} {pass.allowedSeats === 1 ? "persona" : "personas"}</strong></p><a className="button" href="#tu-pase">Confirmar asistencia</a></Reveal>}
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">25 años de amor</span><p>{wedding.hero.quote}</p><div className="signature">Rublester y Lolita</div></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Flores de loto rosas y marfil con ramas plateadas"/></Reveal><CountdownSection wedding={view}/>
       <section className="section"><Reveal><SectionHeading eyebrow="Una noche especial" title="Nuestra ceremonia y celebración"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,index)=><Reveal className={styles.placeCard} key={place.name}>{index===0 ? <Church strokeWidth={1}/> : <MapPin strokeWidth={1}/>}<span className="eyebrow">{index===0 ? "Ceremonia religiosa" : "Recepción"}</span><h2>{place.name}</h2><strong>{place.time}</strong><p>{place.address}</p><a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a></Reveal>)}</div></section>
       <GallerySection wedding={view}/>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará compartir contigo esta celebración.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,location:wedding.ceremony.address,details:"Misa: 7:00 p. m., "+wedding.ceremony.name+". Recepción: 8:00 p. m., "+wedding.reception.name+", "+wedding.reception.address})}>Agregar a mi calendario</button></Reveal></section>
-      <RSVPSection wedding={view}/><section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>Confirma con nosotros</h2><p>También puedes confirmar tu asistencia por WhatsApp.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Rublester y Lolita. Quiero confirmar mi asistencia a sus bodas de plata.")}`} target="_blank" rel="noreferrer">Confirmar por WhatsApp</a></Reveal></section>
+      {pass ? <PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para Rublester y Lolita"/> : <section className={`section ${styles.passSummary}`} id="tu-pase"><Reveal><SectionHeading eyebrow="Una invitación especial para ti" title="Tu pase personalizado" copy="Abre el enlace de tu pase para ver tu nombre, los lugares reservados y confirmar tu asistencia."/></Reveal></section>}<section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Tienes alguna duda?</h2><p>Escríbenos si necesitas ayuda con tu pase.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Rublester y Lolita. Tengo una duda sobre mi pase para sus bodas de plata.")}`} target="_blank" rel="noreferrer">Contactar por WhatsApp</a></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Rublester y Lolita" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p>Rublester &amp; Dolores (Lolita)</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;

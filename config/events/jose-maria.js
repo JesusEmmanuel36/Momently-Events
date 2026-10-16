@@ -28,14 +28,14 @@ export const joseMaria = {
     "name": "Prisma salón de eventos",
     "time": "7:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/pv7fF16SQLBYuVsL6"
   },
   "reception": {
     "enabled": true,
     "name": "Prisma salón de eventos",
     "time": "8:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/pv7fF16SQLBYuVsL6"
   },
   "ceremonyType": "civil",
   "dressCode": {
@@ -55,7 +55,7 @@ export const joseMaria = {
     }
   ],
   "gallery": [],
-  "gifts": [],
+  "gifts": [{ "name": "Lluvia de sobres", "type": "cash", "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, agradeceremos con mucho cariño un sobre con efectivo." }],
   "music": {
     "enabled": true,
     "url": "/audio/jose-y-maria.mp3",
