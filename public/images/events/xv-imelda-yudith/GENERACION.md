@@ -2,7 +2,7 @@
 
 Ruta: /eventos/xv-imelda-judith. La carpeta original conserva la escritura xv-imelda-yudith; el nombre visible usa Judith, como lo indicó el usuario. Sábado 31 de octubre de 2026. Misa 7:00 p. m., Parroquia Santo Niño de Atocha. Recepción 9:00 p. m., Eventos Piedra Rubí.
 
-Se conserva la fotografía original image.png (750×984), completa y sin retoques. Sin galería duplicada. No se proporcionaron nombres de padres, código de formalidad ni regalos; no se inventaron. El rojo se reserva para la quinceañera. Se incluyeron los once grupos de padrinos, conservando las abreviaturas de apellidos proporcionadas.
+Se conserva la fotografía original image.png (750×984), completa y sin retoques. Sin galería duplicada. Padres: Manuel Eduardo Álvarez y Nydia Yessenia Durazo, en sección centrada antes de los padrinos. No se proporcionaron código de formalidad ni regalos; no se inventaron. El rojo se reserva para la quinceañera. Se incluyeron los once grupos de padrinos, conservando las abreviaturas de apellidos proporcionadas.
 
 El usuario confirmó que no hay WhatsApp, ubicaciones ni canción: solo formulario RSVP. Registro del evento habilitado para guardar las confirmaciones; no se crearon cuentas, contraseñas ni invitaciones de propietario. Zona horaria técnica America/Mexico_City al no contar con ciudad confirmada.
 

@@ -22,6 +22,7 @@ export const imeldaJudithXv = {
     "quote": "Con el amor de mi familia y el cariño de quienes me acompañan, tengo la ilusión de compartir contigo mis quince años. Celebremos juntos este día lleno de sueños, alegría y recuerdos que guardaré para siempre.",
     "image": "/images/events/xv-imelda-yudith/image.png"
   },
+  "parents": ["Manuel Eduardo Álvarez", "Nydia Yessenia Durazo"],
   "godparents": [
     [
       "José Luzania",
