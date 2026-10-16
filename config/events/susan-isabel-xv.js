@@ -77,7 +77,7 @@ export const susanIsabelXv = {
     "url": "/audio/xvsusanisabel.mp3",
     "label": "Mi canción · Susan Isabel"
   },
-  "contact": {},
+  "contact": { "phone": "772 163 6141", "whatsapp": "7721636141" },
   "gifts": [],
   "theme": {
     "primary": "#BC6E8F",
