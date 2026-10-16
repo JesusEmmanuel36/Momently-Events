@@ -2,7 +2,7 @@
 
 Ruta: /eventos/xv-imelda-judith. La carpeta original conserva la escritura xv-imelda-yudith; el nombre visible usa Judith, como lo indicó el usuario. Sábado 31 de octubre de 2026. Misa 7:00 p. m., Parroquia Santo Niño de Atocha. Recepción 9:00 p. m., Eventos Piedra Rubí.
 
-Se conserva la fotografía original image.png (750×984), completa y sin retoques. Sin galería duplicada. No se proporcionaron nombres de padres, código de formalidad ni regalos; no se inventaron. El rojo se reserva para la quinceañera. Se incluyeron los diez grupos de padrinos, conservando las abreviaturas de apellidos proporcionadas.
+Se conserva la fotografía original image.png (750×984), completa y sin retoques. Sin galería duplicada. No se proporcionaron nombres de padres, código de formalidad ni regalos; no se inventaron. El rojo se reserva para la quinceañera. Se incluyeron los once grupos de padrinos, conservando las abreviaturas de apellidos proporcionadas.
 
 El usuario confirmó que no hay WhatsApp, ubicaciones ni canción: solo formulario RSVP. Registro del evento habilitado para guardar las confirmaciones; no se crearon cuentas, contraseñas ni invitaciones de propietario. Zona horaria técnica America/Mexico_City al no contar con ciudad confirmada.
 
@@ -22,3 +22,5 @@ Paleta: rojo #A51E37, vino oscuro #4E1724, dorado #C5A063, marfil #FFFBF4 y crem
 Calibración de las capas: papel cerrado 1378px, abierto 1038px; capa abierta 132.8%, margen -66.4%, inferior 5.2%; imagen abierta con dimensiones originales y height:auto, sin deformación.
 
 Actualización de portada: foto a pantalla completa con el nombre, apellido, fecha y hora superpuestos en blanco con sombra suave. Se retiró la presentación dividida en fotografía y panel de color. Degradado oscuro transparente sobre la parte inferior de la imagen para legibilidad.
+
+Se agregaron Ramón San Vicente y Lourdes de San Vicente; Judith Valenzuela Moreno sustituye su abreviatura anterior, sin duplicarla.

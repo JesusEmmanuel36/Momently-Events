@@ -40,7 +40,7 @@ export const imeldaJudithXv = {
       "Diana de Yocupicio"
     ],
     [
-      "Judith Valenzuela M."
+      "Judith Valenzuela Moreno"
     ],
     [
       "Juan Pablo Lora",
@@ -61,6 +61,10 @@ export const imeldaJudithXv = {
     [
       "Yoselin Parra",
       "Adrián Aguilar"
+    ],
+    [
+      "Ramón San Vicente",
+      "Lourdes de San Vicente"
     ]
   ],
   "ceremony": {
