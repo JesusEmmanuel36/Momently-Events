@@ -48,10 +48,10 @@ export const tereMoreno = {
       "height": 965
     },
     {
-      "src": "/images/events/tere-moreno/recuerdo-06.webp",
+      "src": "/images/events/tere-moreno/image copy 6.png?v=f59761dbd0",
       "alt": "Tere Moreno · Un recuerdo lleno de cariño",
       "width": 720,
-      "height": 972
+      "height": 1280
     },
     {
       "src": "/images/events/tere-moreno/recuerdo-15.webp",
