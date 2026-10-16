@@ -1,6 +1,6 @@
 # Joel y Zurisadai
 
-Boda 20/12/2026. Fecha y familias transcritas de las referencias del usuario. Se prioriza recepción a las 13:00 del mensaje sobre las 14:00 de la imagen. Ceremonia 10:00. Audio joelyzurisadai.mp3. Sin fotos de personas, teléfono, regalos ni vestimenta proporcionados.
+Boda 20/12/2026. Fecha y familias transcritas de las referencias del usuario. Se prioriza recepción a las 13:00 del mensaje sobre las 14:00 de la imagen. Ceremonia 10:00. Audio joelyzuridashi.mp3. Sin fotos de personas, teléfono, regalos ni vestimenta proporcionados.
 
 ## Imágenes: herramienta integrada imagegen
 

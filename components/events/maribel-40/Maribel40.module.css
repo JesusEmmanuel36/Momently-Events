@@ -149,3 +149,10 @@
 
 /* Anchos visibles: cerrado 1136px, abierto 896px. */
 .openEnvelopeLayer{width:126.8%;margin-left:-63.4%;bottom:5.2%}.openFront{clip-path:polygon(20.7% 43.4%,44% 66.9%,50% 65.4%,56% 66.9%,79.3% 43.4%,79.3% 100%,20.7% 100%)}.sealButton{top:46%}.letter{bottom:18%}
+
+/* Fill each gallery row so absolutely positioned photos have a visible frame. */
+.invitation :global(.gallery .gallery__item){height:100%;min-height:0;align-self:stretch;position:relative;overflow:hidden}
+.invitation :global(.gallery__item button){position:relative;display:block;width:100%;height:100%}
+.invitation :global(.gallery__item img){position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover}
+
+.birthdayMessage{background:radial-gradient(ellipse at top left,#A3B39822,transparent 65%),#F4EBE0;text-align:center;padding-block:clamp(4rem,9vw,7rem)}.birthdayMessage h2{font:400 clamp(2rem,6.8vw,4.2rem)/1.25 var(--font-serif),serif;text-transform:uppercase;letter-spacing:.08em;color:#A17B3E;max-width:1000px;margin:0 auto 2rem}.birthdayVerses{max-width:900px;margin:auto}.invitation .birthdayMessage .birthdayVerses p{font:400 clamp(1.8rem,5.5vw,2.8rem)/1.5 var(--font-script),cursive;color:#354B3D;margin:.65rem auto;text-wrap:pretty}@media(max-width:600px){.birthdayMessage h2{letter-spacing:.05em}.birthdayVerses{max-width:440px}}

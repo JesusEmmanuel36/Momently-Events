@@ -28,7 +28,7 @@ export const montserratAndrei = {
     mapsUrl: "https://maps.app.goo.gl/oyjd7r3fYkwFvK8k6"
   },
   gallery: [
-    { src: "/images/events/montserrat-y-andrei/image.png", width: 960, height: 1280, alt: "Montserrat y Blair Andrei, un recuerdo juntos" },
+    { src: "/images/events/montserrat-y-andrei/portada.png", width: 1200, height: 1600, alt: "Montserrat y Blair Andrei, un recuerdo juntos" },
     { src: "/images/events/montserrat-y-andrei/image copy.png", width: 1200, height: 1601, alt: "Un pequeño recuerdo de una historia compartida" },
     { src: "/images/events/montserrat-y-andrei/image copy 2.png", width: 499, height: 666, alt: "Montserrat y Blair Andrei en Chichén Itzá" }
   ],

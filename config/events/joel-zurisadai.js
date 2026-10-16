@@ -55,7 +55,7 @@ export const joelZurisadai = {
   "gifts": [],
   "music": {
     "enabled": true,
-    "url": "/audio/joelyzurisadai.mp3",
+    "url": "/audio/joelyzuridashi.mp3",
     "label": "Nuestra canción"
   },
   "contacts": [],
