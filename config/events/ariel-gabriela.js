@@ -221,7 +221,7 @@ export const arielGabriela = {
   },
   "dressCode": {
     "title": "Formal",
-    "text": "Queremos verte increíble en nuestro gran día."
+    "text": "Nos encantará verte lucir tu mejor estilo. Con cariño, te pedimos reservar únicamente el color blanco para la novia. ¡Gracias por ayudarnos a hacer este día aún más especial!"
   },
   "askSongSuggestion": true,
   "civil": {

@@ -1,0 +1,30 @@
+# Montserrat y Blair Andrei · Bordado yucateco
+
+Ruta: /eventos/montserrat-y-andrei. Fecha: 16 de enero de 2027, recepción 2:00 p. m. en Salón de eventos Confetti. Sin misa. Zona horaria America/Mexico_City (Mérida). Dirección obtenida de la redirección del enlace de Maps proporcionado: Av. Correa Rachó 407, entre calles 13 y 15, Díaz Ordaz, Mérida, Yucatán.
+
+Se conservaron las tres fotografías originales. image.png es la portada. ref.png, ref2.png y ref3.png son las referencias de Damas; ref4.png, ref5.png y ref6.png las de Caballeros. Las referencias no se presentan como fotografías de la pareja. No se encontró un audio asociado y no se añadió una canción no indicada.
+
+## Recursos de IA
+
+Herramienta integrada image_gen, con transparencia real solicitada. Se guardaron los siete PNG originales generados en esta carpeta. No se generaron rostros de la pareja ni se alteraron sus fotografías.
+
+Prompt común: "Premium Yucatecan Mexican hand embroidered cross-stitch on linen, clearly visible tiny square X-shaped stitches, textured silk thread, geometric pixel-stepped floral edges, not smooth painted flowers. Palette ivory linen, coral pink, rose fuchsia, crimson red, forest and olive green, tiny golden yellow centers. High detail and natural thread shadows. No text, no watermark, no typography. True transparent background, no rectangular cloth backdrop, no glow outside subject. Landscape canvas 1536x1024."
+
+Variantes de sujeto:
+- envelope-closed.png: sobre cerrado de lino marfil, frontal y completo, flores de punto de cruz en esquinas, lazo rosa y sello dorado M&B. Fotografía de papelería con bordado auténtico.
+- envelope-open.png: sobre abierto frontal, solapa triangular levantada y forro rosa, flores bordadas en frente y esquinas inferiores; bolsillo vacío, sin carta, sin lazo ni sello.
+- floral.png: arreglo creciente horizontal exuberante de rosas rosas y rojas y hojas verdes, hecho completamente de bordado de punto de cruz, sin florero.
+- rosa-bordada.png: rosa rosa y roja con centro amarillo, hojas verdes y tallo, aplique bordado aislado.
+- corazon-bordado.png: corazón formado por enredaderas bordadas de pequeñas rosas rosas y rojas y hojas verdes, centro vacío.
+- aves-bordadas.png: dos aves pequeñas enfrentadas sobre una rama florida, alas coral y rosas, flores rojas, punto de cruz tradicional.
+- cenefa-bordada.png: cenefa horizontal larga con repetición de rosas rosas y rojas y hojas verdes entrelazadas, pequeños puntos amarillos, bordes geométricos escalonados.
+
+Paleta de interfaz: rosa #B8305C, rosa suave #E99BAB, verde #375D43, marfil #FFFCF6, lino #F8F1E5, dorado #BE9A55; pestaña activa morado #704166. Sin emojis.
+
+## Interacciones
+
+Sobre con carta animada, cuatro motivos distribuidos a lo largo de la invitación, arreglo floral, cuenta regresiva, fotos ampliables, calendario, mesa Liverpool 60040673 y lluvia de sobres. Confirmación por WhatsApp 9831585025.
+
+Catálogo de vestimenta: acordeón inline cerrado inicialmente, pestañas Damas/Caballeros que conservan el acordeón abierto, una imagen principal y dos secundarias, aviso de evitar ternos y jeans y reservar blanco, beige y dorado para los novios. Control mediante teclado y estado aria-expanded/aria-selected. Animación reducida según la preferencia del dispositivo.
+
+Calibración del sobre: lienzos 1536×1024; papel cerrado x60–1476, abierto x256–1280. Capa abierta 138.3%, margen izquierdo -69.15%, inferior 5.4%; imágenes abiertas con dimensiones originales, height:auto, sin estirarlas.

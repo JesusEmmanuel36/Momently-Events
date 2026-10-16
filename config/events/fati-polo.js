@@ -15,8 +15,8 @@ export const fatiPolo = {
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
   "calendarDate": "26 de diciembre de 2026",
-  "rsvpEnabled": false,
-  "maxCompanions": 0,
+  "rsvpEnabled": true,
+  "maxCompanions": 5,
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Entre todos los caminos, elegimos recorrer la vida juntos. Con la bendición de Dios y el amor de nuestras familias, queremos compartir contigo el comienzo de nuestra nueva historia.",

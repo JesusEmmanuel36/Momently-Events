@@ -90,8 +90,8 @@ export const tereMoreno = {
     "label": "Mi canción · Tere Moreno"
   },
   "contact": {
-    "phone": "55 7179 4145",
-    "whatsapp": "5571794145"
+    "phone": "55 1112 7092",
+    "whatsapp": "5511127092"
   },
   "gifts": [],
   "dressCode": {

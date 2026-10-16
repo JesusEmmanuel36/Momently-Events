@@ -1,6 +1,6 @@
 # Tere Moreno · Cumpleaños y jubilación
 
-5 de diciembre de 2026. Acción de gracias y recepción en Jardín Familia Arcos, Santa María Huehuetoca, Estado de México. Maps proporcionado: https://maps.app.goo.gl/sdZkM58djmD9WJEa7. Vestimenta formal y cómoda. WhatsApp 5571794145. No se proporcionaron edad ni horario; no se muestran ni se infieren. Cuenta regresiva al inicio del día local, sin atribuirlo como hora de ceremonia.
+5 de diciembre de 2026. Acción de gracias y recepción en Jardín Familia Arcos, Santa María Huehuetoca, Estado de México. Maps proporcionado: https://maps.app.goo.gl/sdZkM58djmD9WJEa7. Vestimenta formal y cómoda. WhatsApp 5511127092. No se proporcionaron edad ni horario; no se muestran ni se infieren. Cuenta regresiva al inicio del día local, sin atribuirlo como hora de ceremonia.
 
 Paleta tomada de la imagen: azul petróleo #1C5A5E, verde salvia #7A9375, café #4B3621; crema #F5EFE4 y dorado #B79A58. Sobre cerrado con sello T, abierto y arreglo floral creados mediante imagegen; transparencia conservada y capas calibradas a los cuerpos visibles. Fotos personales sin retoques ni alteración de identidad.
 

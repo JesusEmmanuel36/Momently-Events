@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { CalendarDays, Church, ChevronDown, Heart, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { RSVPSection } from "@/components/sections/GuestActions";
 import { GallerySection } from "@/components/sections/Gallery";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import {openGoogleCalendar} from "@/lib/calendar";
@@ -39,6 +40,7 @@ export function FatiPoloInvitation({ wedding }) {
       <section className={`section ${styles.dress}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/></Reveal></section>
       <GallerySection wedding={view}/>
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Misa · 2:00 p. m.<br/>Recepción · 6:00 p. m.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,location:wedding.ceremony.name,details:`Misa a las 2:00 p. m. en ${wedding.ceremony.name}. ${wedding.ceremony.mapsUrl} Recepción a las 6:00 p. m. en ${wedding.reception.name}. ${wedding.reception.mapsUrl}`})}>Agregar a mi calendario</button></Reveal></section>
+      <RSVPSection wedding={view}/>
       <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Confirma tu asistencia por WhatsApp con el contacto de Fati o de Polo, según corresponda.</p><div className={styles.contacts}>{wedding.contacts.map(contact=><a key={contact.phone} className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a la boda de Fati y Polo el 26 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={16}/>{contact.label} · {contact.display}</a>)}</div></Reveal></section>
       <section className="closing"><Image src={wedding.closingImage} unoptimized fill sizes="100vw" alt="Fati y Polo" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Fati &amp; Polo</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
