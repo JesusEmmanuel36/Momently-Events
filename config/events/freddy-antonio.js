@@ -79,6 +79,10 @@ export const freddyAntonio = {
     "phone": "56 5723 2223",
     "whatsapp": "5657232223"
   },
+  "contacts": [
+    { "label": "Novia", "phone": "56 5723 2223", "whatsapp": "5657232223" },
+    { "label": "Novio", "phone": "56 5150 1729", "whatsapp": "5651501729" }
+  ],
   "gifts": [],
   "theme": {
     "primary": "#A32961",

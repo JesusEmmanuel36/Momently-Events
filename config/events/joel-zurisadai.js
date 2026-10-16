@@ -58,10 +58,10 @@ export const joelZurisadai = {
     "url": "/audio/joelyzuridashi.mp3",
     "label": "Nuestra canción"
   },
-  "contacts": [],
+  "contacts": [{ "label": "Confirmar asistencia", "phone": "6647826950", "display": "664 782 6950" }],
   "contact": {
-    "phone": "",
-    "whatsapp": ""
+    "phone": "664 782 6950",
+    "whatsapp": "6647826950"
   },
   "theme": {
     "primary": "#8A7357",
