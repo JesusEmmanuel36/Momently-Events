@@ -125,3 +125,5 @@
 .invitation :global(.gallery__grid){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:1rem;max-width:1100px;margin-inline:auto}.invitation :global(.gallery .gallery__item){grid-column:auto!important;grid-row:auto!important;aspect-ratio:auto}.invitation :global(.gallery__item button){display:block;height:auto;aspect-ratio:auto}.invitation :global(.gallery__item img){position:relative!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:contain}@media(max-width:700px){.invitation :global(.gallery__grid){grid-template-columns:1fr;max-width:480px}}
 
 .whatsappContact{text-align:center;background:var(--cream)}.whatsappContact>div>svg{display:block;margin:0 auto 1.5rem;color:var(--rose)}.whatsappContact p{font-size:1.2rem;margin:0 auto 1.5rem}.whatsappContact :global(.button){display:flex;width:fit-content;max-width:100%;justify-content:center;margin:auto}
+/* Susan Isabel: encabezado de confirmación sin siglas ni inicial decorativa. */
+.invitation :global(.rsvp__aside > .eyebrow),.invitation :global(.rsvp__initials){display:none}
