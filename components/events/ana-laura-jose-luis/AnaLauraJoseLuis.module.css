@@ -133,3 +133,5 @@
 
 /* New artwork visible paper widths: closed 1388px, open 1104px on 1536px canvas. */
 .openEnvelopeLayer{width:125.7%;margin-left:-62.85%;bottom:10%}.openFront{clip-path:polygon(14% 44.9%,47% 72%,50% 73%,53% 72%,86% 44.9%,86% 100%,14% 100%)}.sealButton{top:46%}.letter{bottom:18%}.invitation :global(.hero h1 i){color:#B99A60}
+
+.placeCard .venuePhoto{display:block;width:100%;height:auto;object-fit:contain;margin:1.5rem auto;border-radius:8px}

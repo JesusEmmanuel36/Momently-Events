@@ -26,6 +26,9 @@ export const anaLauraJoseLuis = {
   "ceremony": {
     "enabled": true,
     "name": "Santuario del Señor del Sacromonte",
+    "image": "/images/events/ana-laura-y-jose-luis/iglesia.png",
+    "imageWidth": 768,
+    "imageHeight": 768,
     "time": "1:00 p. m.",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/bexr8LZNbnevsE4Z9?g_st=iw"
@@ -33,6 +36,9 @@ export const anaLauraJoseLuis = {
   "reception": {
     "enabled": true,
     "name": "Salón Las Torres",
+    "image": "/images/events/ana-laura-y-jose-luis/recepcion.png",
+    "imageWidth": 640,
+    "imageHeight": 480,
     "time": "",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/mN4NGr5r9semow84A?g_st=iw"

@@ -209,3 +209,27 @@ test("Karla Michelle passes use assigned seats, preserve prior RSVPs and stay in
   const other=fixture("xv-debanhi-betel");
   await assert.rejects(readPass(pass.passToken,{context:other.context}),e=>e.status===404);
 });
+
+test("Tere Moreno passes use assigned seats, preserve prior RSVPs and stay in the same event", async () => {
+  const {context,store}=fixture("tere-moreno");
+  const previous={name:"Confirmación anterior",attending:"yes",totalPeople:2};
+  store.set("events/test-event/rsvps/legacy-response",previous);
+  const pass=await createPass(context,{...details,displayName:"Familia de Tere",allowedSeats:4});
+  assert.match(pass.path,/^\/eventos\/tere-moreno\/pase\//);
+  await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:5},{context}),e=>e.status===400);
+  const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:4,message:"Nos vemos"},{context});
+  const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3},{context});
+  assert.equal(first.rsvpId,second.rsvpId);
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de Tere");
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,3);
+  assert.equal(store.get("events/test-event/rsvps/legacy-response"),previous);
+  assert.equal([...store.keys()].filter(key=>key.includes("/rsvps/")).length,2);
+  const renamed=await updatePass(context,pass.id,{...details,displayName:"Familia García",allowedSeats:4});
+  assert.equal(renamed.passToken,pass.passToken);
+  const publicPass=await readPass(pass.passToken,{context});
+  assert.equal(publicPass.displayName,"Familia García");
+  assert.equal(publicPass.allowedSeats,4);
+  assert.equal(publicPass.phone,undefined);
+  const other=fixture("xv-debanhi-betel");
+  await assert.rejects(readPass(pass.passToken,{context:other.context}),e=>e.status===404);
+});

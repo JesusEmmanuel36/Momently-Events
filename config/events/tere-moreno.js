@@ -15,7 +15,8 @@ export const tereMoreno = {
   "dateDisplay": "Sábado · 5 de diciembre de 2026",
   "dateStamp": "05 · 12 · 2026",
   "calendarDate": "5 de diciembre de 2026",
-  "rsvpEnabled": false,
+  "personalizedPasses": true,
+  "rsvpEnabled": true,
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mi cumpleaños y jubilación",
