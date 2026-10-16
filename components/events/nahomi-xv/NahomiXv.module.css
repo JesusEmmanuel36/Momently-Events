@@ -105,3 +105,6 @@
 .closingVerse blockquote { margin: 0 auto; max-width: 760px; }
 .closingVerse p { white-space: pre-line; font-family: var(--font-serif), serif; font-size: clamp(1.25rem, 3.4vw, 1.9rem); line-height: 1.8; color: #142754; }
 .closingVerse cite { display: block; margin-top: 1.5rem; color: #2448a5; font-style: normal; letter-spacing: .08em; }
+
+.venuePhoto{display:block;width:100%;height:auto;object-fit:contain;margin:1.5rem auto;border-radius:8px;max-height:420px}.invitation :global(.gallery__grid){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:320px;gap:1rem;max-width:850px;margin:auto;align-items:stretch}.invitation :global(.gallery .gallery__item){grid-column:auto!important;grid-row:auto!important;aspect-ratio:auto}.invitation :global(.gallery .gallery__item):nth-child(3){grid-column:1/-1!important}.invitation :global(.gallery__item button){display:block;width:100%;height:100%}.invitation :global(.gallery__item img){object-fit:cover;object-position:center 30%}.invitation :global(.gallery__item:nth-child(5) img){object-fit:contain;background:#EBEFF8}@media(max-width:700px){.invitation :global(.gallery__grid){grid-auto-rows:230px;gap:.65rem;max-width:500px}.venuePhoto{max-height:360px}}
+.invitation :global(.gallery__item:nth-child(2) img){object-position:center top}

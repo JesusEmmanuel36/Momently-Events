@@ -233,3 +233,29 @@ test("Tere Moreno passes use assigned seats, preserve prior RSVPs and stay in th
   const other=fixture("xv-debanhi-betel");
   await assert.rejects(readPass(pass.passToken,{context:other.context}),e=>e.status===404);
 });
+
+test("Montserrat and Andrei passes enforce seats, names, the inclusive December 6 deadline and event isolation", async () => {
+  const {context,store}=fixture("montserrat-y-andrei");
+  context.event.settings.rsvp.deadline="2026-12-06T23:59:59.999-06:00";
+  const previous={name:"Confirmación anterior",attending:"yes",totalPeople:2};
+  store.set("events/test-event/rsvps/legacy-response",previous);
+  const pass=await createPass(context,{...details,displayName:"Familia Reyes Arenas",allowedSeats:4});
+  assert.match(pass.path,/^\/eventos\/montserrat-y-andrei\/pase\//);
+  const before=Date.parse("2026-12-06T23:59:59.998-06:00");
+  await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:5},{context,now:before}),e=>e.status===400);
+  const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:4,displayName:"Nombre alterado"},{context,now:before});
+  const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3},{context,now:before});
+  assert.equal(first.rsvpId,second.rsvpId);
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia Reyes Arenas");
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,3);
+  const after=Date.parse("2026-12-07T00:00:00-06:00");
+  await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context,now:after}),e=>e.status===403&&e.code==="rsvp_closed");
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,3);
+  const declined=await confirmPass(pass.passToken,{attending:"no",totalPeople:0},{context,now:before});
+  assert.equal(declined.rsvpId,first.rsvpId);
+  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,0);
+  assert.equal(store.get("events/test-event/rsvps/legacy-response"),previous);
+  const publicPass=await readPass(pass.passToken,{context});
+  assert.equal(publicPass.displayName,"Familia Reyes Arenas");assert.equal(publicPass.allowedSeats,4);assert.equal(publicPass.phone,undefined);
+  await assert.rejects(readPass(pass.passToken,{context:fixture("xv-debanhi-betel").context}),e=>e.status===404);
+});

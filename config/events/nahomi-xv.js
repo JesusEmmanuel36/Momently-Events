@@ -26,6 +26,9 @@ export const nahomiXv = {
   "ceremony": {
     "enabled": true,
     "name": "Iglesia San Pablo",
+    "image": "/images/events/xv-nahomi/iglesia.png",
+    "imageWidth": 784,
+    "imageHeight": 1002,
     "time": "Cita · 12:00 p. m.",
     "address": "C. 19 #83, Ignacio Zaragoza, Venustiano Carranza, C.P. 15000, Ciudad de México.",
     "mapsUrl": "https://share.google/1OXYn4sDjpNetAHE8"
@@ -33,11 +36,45 @@ export const nahomiXv = {
   "reception": {
     "enabled": true,
     "name": "Salón Paraíso",
+    "image": "/images/events/xv-nahomi/salon.png",
+    "imageWidth": 720,
+    "imageHeight": 501,
     "time": "Recepción · 2:30 p. m.",
     "address": "Calz. Ignacio Zaragoza 537, Ignacio Zaragoza, Venustiano Carranza, C.P. 15000, Ciudad de México.",
     "mapsUrl": "https://share.google/EpbtMG3Hh5gLHYmBk"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/events/xv-nahomi/image copy 2.png",
+      "width": 372,
+      "height": 461,
+      "alt": "Nahomi con su violín"
+    },
+    {
+      "src": "/images/events/xv-nahomi/image copy 6.png",
+      "width": 250,
+      "height": 633,
+      "alt": "Nahomi, un momento especial"
+    },
+    {
+      "src": "/images/events/xv-nahomi/image copy 8.png",
+      "width": 1280,
+      "height": 960,
+      "alt": "La sonrisa de Nahomi en su infancia"
+    },
+    {
+      "src": "/images/events/xv-nahomi/image copy 7.png",
+      "width": 369,
+      "height": 634,
+      "alt": "Nahomi tocando el teclado"
+    },
+    {
+      "src": "/images/events/xv-nahomi/image.png",
+      "width": 432,
+      "height": 325,
+      "alt": "Un recuerdo de Nahomi de pequeña"
+    }
+  ],
   "music": {
     "enabled": true,
     "url": "/audio/xv-nahomi.mp3",

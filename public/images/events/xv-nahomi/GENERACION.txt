@@ -13,3 +13,5 @@ Use case: product-mockup. One OPEN elegant white rectangular invitation envelope
 floral.png
 Use case: stylized-concept. One elegant photorealistic 3D horizontal floral garland for Nahomi's XV invitation. White roses, white orchids, a few royal blue hydrangeas, fine metallic silver leaves, tiny white flowers. Symmetric airy flowing arrangement, entire object visible, landscape1536x1024. White and silver with royal blue accents. True transparent background, no background, no gold, no frame, no text.
 
+
+Actualización: se agregaron iglesia.png (784×1002) y salon.png (720×501) a sus respectivas tarjetas, conservando proporciones. Se retiró toda la sección Reserva la fecha, incluido el botón de calendario. Galería compacta con cinco fotos originales seleccionadas: image copy 2.png, image copy 6.png, image copy 8.png, image copy 7.png e image.png; incluye dos recuerdos de infancia y visor fijo. Se conservaron el panel y rutas de pases personalizados y su confirmación exclusiva por WhatsApp, sin formulario RSVP.

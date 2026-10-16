@@ -9,11 +9,14 @@ export const montserratAndrei = {
   dateDisplay: "Sábado · 16 de enero de 2027",
   dateStamp: "16 · 01 · 2027",
   calendarDate: "16 de enero de 2027",
-  rsvpEnabled: false,
+  personalizedPasses: true,
+  rsvpEnabled: true,
+  rsvpDeadline: "6 de diciembre de 2026",
+  rsvpDeadlineISO: "2026-12-06T23:59:59.999-06:00",
   maxCompanions: 0,
   hero: {
     subtitle: "Nuestra boda",
-    image: "/images/events/montserrat-y-andrei/image.png",
+    image: "/images/events/montserrat-y-andrei/portada.png",
     quote: "Como los hilos de un bordado, nuestras vidas se entrelazan para crear una historia llena de amor. Queremos celebrar contigo el comienzo de esta nueva etapa."
   },
   ceremony: { enabled: false },
@@ -28,6 +31,10 @@ export const montserratAndrei = {
     { src: "/images/events/montserrat-y-andrei/image.png", width: 960, height: 1280, alt: "Montserrat y Blair Andrei, un recuerdo juntos" },
     { src: "/images/events/montserrat-y-andrei/image copy.png", width: 1200, height: 1601, alt: "Un pequeño recuerdo de una historia compartida" },
     { src: "/images/events/montserrat-y-andrei/image copy 2.png", width: 499, height: 666, alt: "Montserrat y Blair Andrei en Chichén Itzá" }
+  ],
+  family: [
+    { title: "Padres de Montserrat", names: ["Sra. Lizbeth Briceño Medina", "C.P. Santiago José Briceño Medina"] },
+    { title: "Padres de Blair", names: ["Lic. Laura Grisel Mena Briceño", "Lic. Andrei Jesús Pérez Cetina"], deceasedName: "Lic. Andrei Jesús Pérez Cetina" }
   ],
   dressCode: {
     title: "Tradicional Regional Yucateco",
@@ -52,6 +59,6 @@ export const montserratAndrei = {
     { type: "registry", name: "Liverpool", number: "60040673", url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60040673" }
   ],
   contact: { phone: "983 158 5025", whatsapp: "9831585025" },
-  music: { enabled: false, url: "", label: "" },
+  music: { enabled: true, url: "/audio/montserratyandrei.mp3", label: "Nuestra canción · Montserrat y Blair Andrei" },
   theme: { primary: "#B8305C", dark: "#4D2634", cream: "#F8F1E5", ivory: "#FFFCF6", rose: "#E99BAB", green: "#375D43", gold: "#BE9A55", purple: "#704166" }
 };
