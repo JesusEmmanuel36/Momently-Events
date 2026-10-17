@@ -100,3 +100,5 @@
 /* Match the measured visible bodies of the new anniversary envelopes. */
 .openEnvelopeLayer{width:103.5%;margin-left:-51.75%;bottom:12.2%;}.openFront{clip-path:inset(62% 0 0 0);}.sealButton{top:47.7%;}.letter{bottom:18%;}
 .invitation :global(.choice-row label){position:relative;}.invitation :global(.choice-row input){width:1px;height:1px;inset:0;}
+
+.placeCard :global(.button){display:flex;justify-content:center;margin:1.5rem auto 0;width:100%}.invitation :global(.music-player){background:#594735f2;color:#FFFCF7;border-color:#D8BF84}

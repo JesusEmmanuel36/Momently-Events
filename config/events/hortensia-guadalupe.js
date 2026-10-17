@@ -10,7 +10,7 @@ export const hortensiaGuadalupe = {
     "partner1": "Hortensia",
     "partner2": "Guadalupe"
   },
-  "date": "2026-12-26T20:00:00-06:00",
+  "date": "2026-12-26T17:00:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
@@ -24,7 +24,10 @@ export const hortensiaGuadalupe = {
     "image": "/images/events/hortensia-y-guadalupe/image copy.png"
   },
   "ceremony": {
-    "enabled": false
+    "enabled": true,
+    "name": "Iglesia El Buen Pastor",
+    "time": "17:00 hrs",
+    "mapsUrl": "https://share.google/ny7HGdfFoSAwwWC2b"
   },
   "reception": {
     "enabled": true,
@@ -45,12 +48,24 @@ export const hortensiaGuadalupe = {
       "alt": "Un recuerdo de la boda de Hortensia y Guadalupe",
       "width": 653,
       "height": 673
+    },
+    {
+      "src": "/images/events/hortensia-y-guadalupe/image copy 2.png",
+      "width": 900,
+      "height": 1600,
+      "alt": "Hortensia y Guadalupe, un recuerdo de sus primeros años juntos"
+    },
+    {
+      "src": "/images/events/hortensia-y-guadalupe/image copy 3.png",
+      "width": 900,
+      "height": 1599,
+      "alt": "Retrato de boda de Hortensia y Guadalupe"
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/hortensiayguadalupe.mp3",
+    "label": "Nuestra canción"
   },
   "gifts": [],
   "contact": {
@@ -58,6 +73,12 @@ export const hortensiaGuadalupe = {
     "whatsapp": ""
   },
   "itinerary": [
+    {
+      "time": "17:00",
+      "title": "Ceremonia religiosa",
+      "description": "Iglesia El Buen Pastor",
+      "icon": "heart"
+    },
     {
       "time": "20:00",
       "title": "Recepción",
