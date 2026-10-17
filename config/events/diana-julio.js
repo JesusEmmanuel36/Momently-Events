@@ -19,7 +19,7 @@ export const dianaJulio = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Queremos compartir contigo la alegría de comenzar una nueva etapa juntos. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos para siempre.",
+    "quote": "Queremos compartir contigo la alegría de comenzar una nueva etapa juntos. Acompáñanos a celebrar esta nueva etapa y a crear recuerdos que guardaremos para siempre.",
     "image": "/images/events/diana-y-julio/hero.png"
   },
   "closingMessage": "Gracias por ser parte de esta nueva historia. Nos hará muy felices compartir este día tan especial contigo.",
