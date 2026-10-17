@@ -144,3 +144,8 @@
 
 /* Stronger text contrast, with gold accents suited to each background. */
 .invitation{--text:#243E50;--text-soft:#425D70;--mocha:#856022}.invitation :global(.section-heading h2),.invitation :global(.welcome .script),.invitation :global(.signature){color:#856022}.invitation :global(.welcome p),.invitation :global(.section-heading p),.dress :global(.section-heading p){color:#243E50}.invitation :global(.hero__wash){background:linear-gradient(180deg,#102A3D22 10%,#102A3D55 45%,#102A3De6)}.invitation :global(.hero h1),.invitation :global(.hero h1 i){color:#F2D394;text-shadow:0 2px 5px #102331,0 0 18px #10233188}.invitation :global(.hero__copy>p),.invitation :global(.hero__copy>.eyebrow){color:#FFF7E8;text-shadow:0 2px 5px #102331;font-weight:600}.introShade{background:#18334799}.introHeading h1{color:#F2D394;text-shadow:0 2px 5px #102331}.invitation :global(.closing__overlay){background:#183347dd}.invitation :global(.closing .script),.invitation :global(.closing h2){color:#F2D394;text-shadow:0 2px 5px #102331}.invitation :global(.closing p),.invitation :global(.closing small){color:#FFF7E8}.letter h2{color:#78551E}.invitation :global(.eyebrow){color:#425D70}
+
+/* Keep every dress-code label readable against its pale blue background. */
+.invitation .dress :global(.section-heading h2),
+.invitation .dress :global(.section-heading p),
+.invitation .dress :global(.eyebrow){color:#203B4D}
