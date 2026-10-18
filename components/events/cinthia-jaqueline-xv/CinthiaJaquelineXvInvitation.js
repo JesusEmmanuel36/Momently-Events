@@ -32,6 +32,7 @@ export function CinthiaJaquelineXvInvitation({ wedding }) {
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image unoptimized src={wedding.hero.image} fill priority sizes="100vw" alt="Cinthia Jaqueline" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Mis XV años</span><h1>Cinthia Jaqueline</h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">Un día para soñar</span><p>{wedding.hero.quote}</p><div className="signature">{wedding.couple.partner1}</div></Reveal></section>
+      <section className={`section ${styles.portrait}`}><Reveal><Image unoptimized src={wedding.hero.image} width={745} height={720} sizes="(max-width:600px) 90vw,500px" alt="Cinthia Jaqueline"/></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image unoptimized src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo de rosas rojas y marfil con hojas doradas"/></Reveal>
       
       <CountdownSection wedding={{...wedding,date:wedding.date,couple:{bride:"Cinthia Jaqueline",groom:""}}}/>

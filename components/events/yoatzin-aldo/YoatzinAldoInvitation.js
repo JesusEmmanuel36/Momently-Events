@@ -6,9 +6,11 @@ import {CountdownSection} from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 import {GallerySection} from "@/components/sections/Gallery";
+import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
+import {YoatzinAldoAlbum} from "./YoatzinAldoAlbum";
 import styles from "./YoatzinAldo.module.css";
 const images = "/images/events/yoatzin-y-aldo";
-export function YoatzinAldoInvitation({ wedding }) {
+export function YoatzinAldoInvitation({ wedding, pass = null, passToken = null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -28,6 +30,7 @@ export function YoatzinAldoInvitation({ wedding }) {
     </div><button className={styles.openButton} onClick={open} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}<ChevronDown size={16}/></button></div></div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} unoptimized fill priority sizes="100vw" alt="Yoatzin y Aldo" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Nuestra boda</span><h1><span>Yoatzin</span><i>&amp;</i><span>Aldo</span></h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
+      {pass&&<Reveal className={styles.passSummary}><span className="eyebrow">Este pase es para</span><h2>{pass.displayName}</h2><p>Invitación válida para <strong>{pass.allowedSeats} {pass.allowedSeats===1?"persona":"personas"}</strong></p><a className="button" href="#tu-pase">Confirmar asistencia</a></Reveal>}
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">El comienzo de nuestra historia</span><p>{wedding.hero.quote}</p><div className={styles.fullNames}><span>{wedding.couple.partner1}</span><i>&amp;</i><span>{wedding.couple.partner2}</span></div></Reveal></section>
       <section className={`section ${styles.personalMessage}`}><Reveal><Heart strokeWidth={1}/><p>{wedding.personalMessage}</p></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} unoptimized width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo de magnolias y rosas blancas con follaje olivo y detalles dorados"/></Reveal>
@@ -37,7 +40,9 @@ export function YoatzinAldoInvitation({ wedding }) {
       <section className={`section ${styles.scheduleSection}`}><Reveal><SectionHeading eyebrow="Cada momento contigo" title="Nuestro día"/><ol>{wedding.itinerary.map(item=>{const Icon={church:Church,dinner:Utensils,clock:Clock}[item.icon];return <li key={item.time}><Icon strokeWidth={1.4}/><div><time>{item.time==='01:00'?'1:00 a. m.':item.time==='13:00'?'1:00 p. m.':'3:30 p. m.'}</time><h3>{item.title}</h3><p>{item.description}</p></div></li>;})}</ol></Reveal></section>
       <GallerySection wedding={view} fixedOverlay imageSizes="(max-width:700px) 50vw,25vw" heading={{eyebrow:"Nuestros momentos",title:"Recuerdos que nos unen",copy:"Instantes que forman parte de nuestra historia."}}/>
       <section className={`section ${styles.giftSection}`}><Reveal><Mail strokeWidth={1}/><SectionHeading eyebrow="Tu presencia es nuestro mejor regalo" title={wedding.gifts[0].name} copy={wedding.gifts[0].description}/></Reveal></section>
-      <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Nos hará muy felices contar contigo. Confirma tu asistencia por WhatsApp.</p><div className={styles.contacts}>{wedding.contacts.map(contact=><a key={contact.phone} className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a la boda de Yoatzin y Aldo el 19 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={16}/><span>Confirmar por WhatsApp<small className={styles.phoneNumber}>{contact.display}</small></span></a>)}</div></Reveal></section>
+      <YoatzinAldoAlbum/>
+      {pass?<PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para Yoatzin y Aldo"/>:<section className={`section ${styles.passSummary}`} id="tu-pase"><Reveal><SectionHeading eyebrow="Una invitación especial para ti" title="Tu pase personalizado" copy="Abre el enlace de tu pase para ver tu nombre, los lugares reservados y confirmar tu asistencia."/></Reveal></section>}
+      <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Tienes alguna duda?</h2><p>Si necesitas ayuda con tu pase, escríbenos por WhatsApp.</p><div className={styles.contacts}>{wedding.contacts.map(contact=><a key={contact.phone} className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, tengo una duda sobre mi pase para la boda de Yoatzin y Aldo el 19 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={16}/><span>Dudas por WhatsApp<small className={styles.phoneNumber}>{contact.display}</small></span></a>)}</div></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Yoatzin y Aldo" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Yoatzin &amp; Aldo</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;

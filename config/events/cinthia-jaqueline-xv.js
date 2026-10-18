@@ -20,7 +20,7 @@ export const cinthiaJaquelineXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión, te invito a compartir conmigo la alegría de mis quince años. Será una noche para celebrar los sueños, el cariño de quienes me acompañan y el comienzo de una nueva etapa.",
-    "image": "/images/events/xv-cinthia-jaqueline/hero.png"
+    "image": "/images/events/xv-cinthia-jaqueline/image.png"
   },
   "closingMessage": "Gracias por ser parte de este día tan especial. Tu compañía hará de mis quince años un recuerdo inolvidable.",
   "ceremony": {

@@ -15,7 +15,8 @@ export const yoatzinAldo = {
   "dateDisplay": "Sábado · 19 de diciembre de 2026",
   "dateStamp": "19 · 12 · 2026",
   "calendarDate": "19 de diciembre de 2026",
-  "rsvpEnabled": false,
+  "rsvpEnabled": true,
+  "personalizedPasses": true,
   "maxCompanions": 0,
   "personalMessage": "Qué curioso que el mundo sea tan grande\ny que a veces todo lo que necesitas\nquepa en una mirada,\nen una mano que busca la tuya\no en un «ya llegué» al final del día.\nContigo entendí\nque un hogar no siempre tiene paredes;\na veces tiene nombre,\ntiene risa\ny camina a tu lado.",
   "hero": {

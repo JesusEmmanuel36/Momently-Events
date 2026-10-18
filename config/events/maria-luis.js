@@ -15,7 +15,8 @@ export const mariaLuis = {
   "dateDisplay": "Sábado · 28 de noviembre de 2026",
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
-  "rsvpEnabled": false,
+  "rsvpEnabled": true,
+  "personalizedPasses": true,
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Nuestra boda",

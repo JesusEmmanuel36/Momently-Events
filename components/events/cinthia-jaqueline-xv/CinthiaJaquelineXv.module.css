@@ -169,3 +169,5 @@
 
 /* Papel cerrado 1434px, abierto 1234px. */
 .openEnvelopeLayer{width:116.2%;margin-left:-58.1%;bottom:4.1%}.openFront{clip-path:polygon(10.3% 42.5%,48% 73.5%,50% 72.8%,52% 73.5%,89.3% 42.5%,89.3% 100%,10.3% 100%)}.sealButton{top:48%}.letter{bottom:18%}
+
+.portrait img{display:block;width:min(100%,500px);height:auto;margin:auto}.invitation :global(.hero__image img),.introPhoto,.invitation :global(.closing img){object-position:center top}
