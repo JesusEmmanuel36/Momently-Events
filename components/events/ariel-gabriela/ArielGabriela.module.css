@@ -123,3 +123,5 @@
 @media(max-width:700px){.photoCollage :global(.gallery__grid){grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:145px;gap:.45rem;max-width:500px}.fullNames{font-size:clamp(2rem,8vw,3rem)}}
 
 .invitation :global(.signature).fullNames{font:400 clamp(.95rem,4.3vw,1.55rem)/1.6 var(--font-serif),serif;letter-spacing:.04em;gap:.4rem;padding-inline:0;text-align:center}.fullNames span{white-space:nowrap;text-transform:uppercase}.fullNames i{font:400 1.1em/1.4 var(--font-serif),serif}
+
+.celebrationNotice{text-align:center;background:var(--cream);color:var(--text)}.celebrationNotice :global(.section-heading p){max-width:700px;margin-inline:auto;line-height:1.9}

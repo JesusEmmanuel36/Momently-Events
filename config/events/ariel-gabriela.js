@@ -219,6 +219,7 @@ export const arielGabriela = {
     "rose": "#89694D",
     "sage": "#63684E"
   },
+  "celebrationNotice": "Nuestra celebración será al aire libre. Con mucho cariño, hemos preparado un evento solo para adultos; agradecemos que nos acompañen sin niños.",
   "dressCode": {
     "title": "Formal",
     "text": "Nos encantará verte lucir tu mejor estilo. Con cariño, te pedimos reservar únicamente el color blanco para la novia. ¡Gracias por ayudarnos a hacer este día aún más especial!"
