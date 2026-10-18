@@ -16,7 +16,7 @@ export const luisTere = {
   "hero": {
     "subtitle": "Nuestra boda civil",
     "quote": "Con el amor que nos une, queremos compartir contigo la alegría de dar este gran paso. Acompáñanos a celebrar nuestra boda civil y el comienzo de una nueva etapa juntos.",
-    "image": "/images/events/luis-y-tere/hero.png"
+    "image": "/images/events/luis-y-tere/image copy 5.png"
   },
   "ceremony": {
     "enabled": true,
@@ -28,7 +28,44 @@ export const luisTere = {
   "reception": {
     "enabled": false
   },
-  "gallery": [],
+  "gallery": [
+  {
+    "src": "/images/events/luis-y-tere/image copy 5.png",
+    "width": 1066,
+    "height": 1600,
+    "alt": "Luis y Tere · recuerdo 1"
+  },
+  {
+    "src": "/images/events/luis-y-tere/image.png",
+    "width": 1066,
+    "height": 1599,
+    "alt": "Luis y Tere · recuerdo 2"
+  },
+  {
+    "src": "/images/events/luis-y-tere/image copy.png",
+    "width": 1600,
+    "height": 1066,
+    "alt": "Luis y Tere · recuerdo 3"
+  },
+  {
+    "src": "/images/events/luis-y-tere/image copy 2.png",
+    "width": 1600,
+    "height": 1066,
+    "alt": "Luis y Tere · recuerdo 4"
+  },
+  {
+    "src": "/images/events/luis-y-tere/image copy 3.png",
+    "width": 1600,
+    "height": 1066,
+    "alt": "Luis y Tere · recuerdo 5"
+  },
+  {
+    "src": "/images/events/luis-y-tere/image copy 4.png",
+    "width": 1066,
+    "height": 1599,
+    "alt": "Luis y Tere · recuerdo 6"
+  }
+],
   "music": {
     "enabled": true,
     "url": "/audio/luisytere.mp3",
