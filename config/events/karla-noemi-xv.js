@@ -10,7 +10,7 @@ export const karlaNoemiXv = {
     "partner1": "Karla Noemi",
     "partner2": ""
   },
-  "date": "2026-11-21T20:00:00-06:00",
+  "date": "2026-11-21T19:30:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 21 de noviembre de 2026",
   "dateStamp": "21 · 11 · 2026",
@@ -24,15 +24,15 @@ export const karlaNoemiXv = {
   },
   "family": [],
   "ceremony": {
-    "enabled": true,
+    "enabled": false,
     "name": "Salón Jhon Dany",
-    "time": "8:00 p. m.",
+    "time": "",
     "mapsUrl": "https://maps.app.goo.gl/oh4VtprAvwsYAcYB7?g_st=aw"
   },
   "reception": {
     "enabled": true,
     "name": "Salón Jhon Dany",
-    "time": "8:30 p. m.",
+    "time": "7:30 p. m.",
     "mapsUrl": "https://maps.app.goo.gl/oh4VtprAvwsYAcYB7?g_st=aw"
   },
   "gallery": [

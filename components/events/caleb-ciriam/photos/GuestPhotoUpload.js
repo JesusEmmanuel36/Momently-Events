@@ -94,7 +94,7 @@ export function GuestPhotoUpload({ initialNow, event = guestPhotos }) {
       <span className={styles.eyebrow}>{event.uploadEyebrow || "Recuerdos de nuestra boda"}</span>
       <h1>{event.partner1}{event.partner2 && <> <i>&</i> {event.partner2}</>}</h1>
       <p className={styles.intro}>{event.uploadIntro || "Comparte las fotos que tomaste y ayúdanos a guardar cada momento de este día."}</p>
-      {!isOpen && <p className={styles.message} role="status">Aún no es la fecha del evento. Podrás compartir tus fotos a partir del <strong>{event.opensDateLabel}</strong>. ¡Vuelve ese día para guardar tus recuerdos con nosotros!</p>}
+      {!isOpen && <p className={styles.message} role="status">{event.closedMessage || <>Aún no es la fecha del evento. Podrás compartir tus fotos a partir del <strong>{event.opensDateLabel}</strong>. ¡Vuelve ese día para guardar tus recuerdos con nosotros!</>}</p>}
       {isOpen && <form onSubmit={sendPhotos}>
         <label className={styles.choose} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); selectPhotos(event.dataTransfer.files); }}>
           <ImagePlus aria-hidden="true" /><strong>Seleccionar fotos</strong><span>Hasta cinco por envío · JPG, PNG o WebP</span>

@@ -55,7 +55,7 @@ export const joseMaria = {
     }
   ],
   "gallery": [],
-  "gifts": [{ "name": "Lluvia de sobres", "type": "cash", "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, agradeceremos con mucho cariño un sobre con efectivo." }],
+  "gifts": [{ "name": "Sobre o regalo", "type": "custom", "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, recibiremos con mucho cariño un sobre o regalo." }],
   "music": {
     "enabled": true,
     "url": "/audio/jose-y-maria.mp3",

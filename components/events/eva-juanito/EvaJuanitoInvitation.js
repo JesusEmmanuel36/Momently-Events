@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ChevronDown, Heart,  Pause, Play, Share2 } from "lucide-react";
+import { MapPin, ChevronDown, Heart,  Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -32,6 +32,7 @@ export function EvaJuanitoInvitation({ wedding }) {
       <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} unoptimized width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo de rosas blancas y marfil con hojas verdes y detalles dorados"/></Reveal>
       <CountdownSection wedding={view}/>
       <section className={`section ${styles.family}`}><Reveal><SectionHeading eyebrow="Con el amor de nuestras familias" title="Quienes nos acompañan"/><div className={styles.familyGrid}>{wedding.family.map(group=><article key={group.title}><h3>{group.title}</h3>{group.names.map(person=><p key={person.name}>{person.deceased&&<span className={styles.memorial} aria-label="En memoria">† </span>}{person.name}</p>)}</article>)}</div></Reveal></section>
+      <section className={`section ${styles.celebration}`}><Reveal><MapPin className={styles.pendingIcon} strokeWidth={1}/><SectionHeading eyebrow="Lugar de la celebración" title={wedding.reception.name} copy={wedding.reception.address}/></Reveal></section>
       <RSVPSection wedding={view}/>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Eva y Juanito" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Eva &amp; Juanito</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

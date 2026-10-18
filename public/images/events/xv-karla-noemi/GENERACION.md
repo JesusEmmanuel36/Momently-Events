@@ -9,3 +9,6 @@ Prompt común: Premium photorealistic quinceanera stationery in soft blush pink,
 - envelope-closed.png: Frontal CLOSED pearl ivory envelope, blush pink satin bow, champagne wax seal KN with tiny tiara engraving, blush and ivory roses at corners. Landscape 1536x1024 transparent background.
 - envelope-open.png: Frontal OPEN pearl ivory envelope with champagne blush lining and fully raised flap, empty pocket, no letter, no bow, no seal, blush and ivory roses at corners. Landscape 1536x1024 transparent background.
 - floral.png: Horizontal crescent of blush pink and ivory roses, tiny champagne buds, subtle sage leaves, delicate pearl accents. No vase. Landscape 1536x1024 transparent background.
+
+## Actualización lirios y recepción
+Solo recepción 19:30 el 21 noviembre 2026; misa omitida y contador ajustado. Edición con herramienta integrada imagegen: envelope-closed-lilies.png, envelope-open-lilies.png y floral-lilies.png. Prompt: Replace ALL roses with photorealistic pink lilies with pointed petals and natural stamens; preserve envelope geometry, ribbon, KN seal, gold accents, foliage, composition, shadows and transparent background. Archivos anteriores conservados sin uso.

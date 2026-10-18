@@ -39,8 +39,7 @@ export const isamarGuillermo = {
   },
   "ceremonyType": "religious",
   "dressCode": {
-    "title": "Formal",
-    "text": "Nos encantará verte lucir un atuendo formal para compartir esta celebración tan especial con nosotros."
+    "title": "Formal"
   },
   "itinerary": [
     {

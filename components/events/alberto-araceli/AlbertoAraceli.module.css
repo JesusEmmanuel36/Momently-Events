@@ -164,3 +164,10 @@
 
 /* Papel cerrado 1316px, abierto 1034px. */
 .openEnvelopeLayer{width:127.3%;margin-left:-63.65%;bottom:-2.4%}.openFront{clip-path:polygon(16.3% 42.4%,38% 62.4%,62% 62.4%,83.6% 42.4%,83.6% 100%,16.3% 100%)}.sealButton{top:50%}.letter{bottom:18%}
+
+.invitation :global(.hero__image img),.introPhoto,.invitation :global(.closing img){object-position:center 25%}
+.invitation :global(.gallery__grid){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:auto;gap:1rem;max-width:1000px;align-items:start}
+.invitation :global(.gallery .gallery__item){position:relative;grid-column:auto!important;grid-row:auto!important;aspect-ratio:3/4;height:auto;min-height:0;overflow:hidden}
+.invitation :global(.gallery__item button){position:absolute;inset:0;width:100%;height:100%}
+.invitation :global(.gallery__item img){position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain;background:#FFF8EF}
+@media(max-width:700px){.invitation :global(.gallery__grid){grid-template-columns:1fr;max-width:420px}}

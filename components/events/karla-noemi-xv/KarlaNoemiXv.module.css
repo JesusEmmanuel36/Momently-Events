@@ -171,3 +171,6 @@
 
 /* Papel cerrado 1376px, abierto 896px. */
 .openEnvelopeLayer{width:153.6%;margin-left:-76.8%;bottom:-1.6%}.openFront{clip-path:polygon(20.6% 40.2%,42% 64.7%,58% 64.7%,79.2% 40.2%,79.2% 100%,20.6% 100%)}.sealButton{top:49.5%}.letter{bottom:18%}
+
+/* Single reception card after removing the ceremony. */
+.placeGrid{grid-template-columns:minmax(0,600px);justify-content:center}

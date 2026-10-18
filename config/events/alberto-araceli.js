@@ -20,7 +20,7 @@ export const albertoAraceli = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Con mucha alegría, queremos compartir contigo el comienzo de una nueva etapa. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos para siempre.",
-    "image": "/images/events/alberto-y-araceli/hero.png"
+    "image": "/images/events/alberto-y-araceli/image copy.png"
   },
   "closingMessage": "Gracias por ser parte de nuestra historia. Tu compañía hará que este día sea aún más especial.",
   "ceremony": {
@@ -54,7 +54,26 @@ export const albertoAraceli = {
       "icon": "glass"
     }
   ],
-  "gallery": [],
+  "gallery": [
+  {
+    "src": "/images/events/alberto-y-araceli/image copy.png",
+    "width": 1200,
+    "height": 1600,
+    "alt": "Alberto y Araceli · recuerdo 1"
+  },
+  {
+    "src": "/images/events/alberto-y-araceli/image copy 2.png",
+    "width": 720,
+    "height": 1280,
+    "alt": "Alberto y Araceli · recuerdo 2"
+  },
+  {
+    "src": "/images/events/alberto-y-araceli/image.png",
+    "width": 720,
+    "height": 1280,
+    "alt": "Alberto y Araceli · recuerdo 3"
+  }
+],
   "gifts": [
     {
       "name": "Un detalle con cariño",

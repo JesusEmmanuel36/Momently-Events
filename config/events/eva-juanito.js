@@ -27,7 +27,11 @@ export const evaJuanito = {
     "enabled": false
   },
   "reception": {
-    "enabled": false
+    "enabled": true,
+    "name": "Malvarisco",
+    "address": "San Pedro el Alto, Oaxaca",
+    "time": "",
+    "mapsUrl": ""
   },
   "ceremonyType": "",
   "dressCode": null,

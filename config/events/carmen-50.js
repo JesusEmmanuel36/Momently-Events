@@ -21,7 +21,7 @@ export const carmen50 = {
   "hero": {
     "subtitle": "Mis 50 años",
     "quote": "Cincuenta años de vida, de sueños y de momentos que llevo en el corazón. Quiero celebrar esta nueva etapa rodeada del cariño de las personas que hacen mi vida especial. Me encantará que me acompañes.",
-    "image": "/images/events/carmen-50/hero.png"
+    "image": "/images/events/carmen-50/image.png"
   },
   "closingMessage": "Gracias por compartir conmigo la alegría de celebrar estos 50 años. Tu compañía hará de este día un recuerdo inolvidable.",
   "ceremony": {
@@ -32,7 +32,7 @@ export const carmen50 = {
     "name": "El Rinconcito",
     "time": "16:00 hrs",
     "address": "Calle Puente Los Álamos, El Cerrito, Cuautitlán Izcalli.",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/Ka1jALDJBJezbQnE8"
   },
   "gallery": [],
   "music": {

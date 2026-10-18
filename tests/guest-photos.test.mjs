@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash, randomUUID } from "node:crypto";
 import sharp from "sharp";
-import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos, zoeValentinaPhotos, isabelaPhotos } from "../lib/event-photos/config.js";
+import { guestPhotos, guestPhotosAreOpen, alejandraDavidPhotos, zoeValentinaPhotos, isabelaPhotos, lizIvannaPhotos } from "../lib/event-photos/config.js";
 import { enforcePhotoRateLimit, processGuestPhoto, uploadPhotoToCloudinary, validatePhotoFile } from "../lib/event-photos/server.js";
 
 const env = { CLOUDINARY_CLOUD_NAME: "test-cloud", CLOUDINARY_API_KEY: "test-key", CLOUDINARY_API_SECRET: "test-secret" };
@@ -216,4 +216,21 @@ test("Claudia and Porfirio photos unlock at Matamoros midnight and stay in their
     ]});
   }});
   assert.deepEqual(result.photos.map(photo=>photo.id),["claudia-own"]);
+});
+
+test("Liz Ivanna guest uploads only accept the event day in Mexico City time", async () => {
+  const opens = Date.parse(lizIvannaPhotos.opensAt);
+  const closes = Date.parse(lizIvannaPhotos.closesAt);
+  assert.equal(guestPhotosAreOpen(opens - 1, lizIvannaPhotos), false);
+  assert.equal(guestPhotosAreOpen(opens, lizIvannaPhotos), true);
+  assert.equal(guestPhotosAreOpen(closes - 1, lizIvannaPhotos), true);
+  assert.equal(guestPhotosAreOpen(closes, lizIvannaPhotos), false);
+  // Existing albums without a closing date keep their original behavior.
+  assert.equal(guestPhotosAreOpen(closes, guestPhotos), true);
+  let uploads = 0;
+  const file = new Blob([await picture()], { type: "image/png" });
+  const deps = { event: lizIvannaPhotos, env, rateLimit: async () => {}, upload: async () => { uploads++; return { ok: true, id: "liz-test" }; } };
+  for (const now of [opens - 1, closes]) await assert.rejects(processGuestPhoto(request(file), { ...deps, now }), e => e.status === 403);
+  assert.deepEqual(await processGuestPhoto(request(file), { ...deps, now: opens }), { ok: true, id: "liz-test" });
+  assert.equal(uploads, 1);
 });
