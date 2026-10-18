@@ -159,3 +159,5 @@
 
 /* Papel cerrado 1108px, abierto 856px. */
 .openEnvelopeLayer{width:129.4%;margin-left:-64.7%;bottom:3.5%}.openFront{clip-path:polygon(22% 39.3%,43.5% 61%,56% 61%,77.8% 39.3%,77.8% 100%,22% 100%)}.sealButton{top:53%}.letter{bottom:18%}
+
+.passSummary{text-align:center;background:var(--ivory);padding:3rem 1.25rem}.passSummary h2{font:400 clamp(2rem,6vw,3.2rem)/1.3 var(--font-serif),serif;overflow-wrap:anywhere;margin:1rem auto}.passSummary p{font-size:1.2rem;line-height:1.8;margin:1rem auto}.passSummary :global(.button){margin:1rem auto 0}.venues article{display:flex;flex-direction:column;align-items:center}.venues :global(.button){display:flex;width:100%;justify-content:center;margin-top:auto}

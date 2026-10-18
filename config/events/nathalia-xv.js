@@ -15,7 +15,9 @@ export const nathaliaXv = {
   "dateDisplay": "Sábado · 5 de diciembre de 2026",
   "dateStamp": "05 · 12 · 2026",
   "calendarDate": "5 de diciembre de 2026",
-  "rsvpEnabled": false,
+  "rsvpEnabled": true,
+  "personalizedPasses": true,
+  "rsvpDeadlineISO": "2026-11-08T23:59:59.999-06:00",
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
@@ -26,8 +28,8 @@ export const nathaliaXv = {
     {
       "title": "Mis padres",
       "names": [
-        "L. E. Verónica Zurita Narváez",
-        "Guillermo Perez Martínez"
+        "Guillermo Perez Martínez",
+        "L. E. Verónica Zurita Narváez"
       ]
     },
     {

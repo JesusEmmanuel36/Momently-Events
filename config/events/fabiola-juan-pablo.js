@@ -67,7 +67,9 @@ export const fabiolaJuanPablo = {
   "dressCode": {
     "title": "Formal",
     "text": "El blanco, el beige y los tonos similares están reservados para la novia. Gracias por elegir otros colores para acompañarnos en este día especial.",
-    "image": "/images/events/fabiola-y-juan-pablo/attire.png",
+    "image": "/images/events/fabiola-y-juan-pablo/attire-brown.png",
+    "imageWidth": 1145,
+    "imageHeight": 1374,
     "reservedColors": [
       {
         "name": "Blanco",
@@ -77,12 +79,22 @@ export const fabiolaJuanPablo = {
         "name": "Beige",
         "color": "#d8c4a5"
       }
+    ],
+    "paragraphs": [
+      "El blanco, el beige y los tonos similares están reservados para la novia.",
+      "Gracias por elegir otros colores para acompañarnos en este día especial."
     ]
   },
   "gifts": [
     {
       "title": "Lluvia de sobres",
       "description": "Si deseas tener un detalle con nosotros, agradeceremos de corazón tu obsequio en un sobre."
+    },
+    {
+      "title": "Mesa de regalos Liverpool",
+      "number": "60061988",
+      "url": "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60061988",
+      "type": "link"
     }
   ],
   "music": {

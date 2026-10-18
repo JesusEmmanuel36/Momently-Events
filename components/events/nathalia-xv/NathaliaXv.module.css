@@ -166,3 +166,5 @@
 
 /* Papel cerrado 1280px, abierto 960px. */
 .openEnvelopeLayer{width:133.3%;margin-left:-66.65%;bottom:-1%}.openFront{clip-path:polygon(18.6% 41.8%,43% 64.7%,56% 64.7%,81.4% 41.8%,81.4% 100%,18.6% 100%)}.sealButton{top:54.5%}.letter{bottom:18%}
+
+.passSummary{text-align:center;background:var(--ivory);padding:2rem 1.25rem}.passSummary h2{font:400 clamp(2rem,6vw,3.2rem)/1.3 var(--font-serif),serif;overflow-wrap:anywhere;margin:1rem auto}.passSummary p{font-size:1.2rem;line-height:1.8;margin:1rem auto}.passSummary :global(.button){margin:1rem auto 0}

@@ -8,3 +8,6 @@ hero: Use case: product-mockup. Vertical wedding invitation cover background, sa
 attire: Use case: illustration-story. Transparent fashion illustration for wedding formal dress code, elegant black men's tuxedo with white shirt and black bow tie beside a graceful women's long sage green evening gown. Faceless fashion forms, no real person, no labels, no text, tasteful refined editorial watercolor with crisp silhouette. Full garments visible from collar to hem, balanced pair side by side, true transparent background.
 
 Use case: precise-object-edit. Referenced sage wedding envelope: create its OPEN state by raising top triangular flap vertically, empty interior pocket, no card insert. Preserve lower body width, ivory ribbon bow, flowers, green wax seal with exact engraved 'F & J'. Frontal view, no tilt, same textures and proportions. Landscape1536x1024 full silhouette with safe margins and REAL TRANSPARENT ALPHA background. No additional text.
+
+Actualización: mesa Liverpool 60061988 añadida. Vestimenta en dos párrafos. Itinerario vertical compacto con siete momentos e iconos, orden y horas conservados.
+Imagen editada con herramienta integrada imagegen: attire-brown.png. Prompt: Change ONLY the woman dress color from sage green to warm chocolate coffee brown, preserve tuxedo, gown cut, composition, lighting, proportions and transparent background.

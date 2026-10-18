@@ -15,7 +15,8 @@ export const rosaJacob = {
   "dateDisplay": "Sábado · 19 de diciembre de 2026",
   "dateStamp": "19 · 12 · 2026",
   "calendarDate": "19 de diciembre de 2026",
-  "rsvpEnabled": false,
+  "rsvpEnabled": true,
+  "personalizedPasses": true,
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Nuestra boda",
@@ -28,14 +29,14 @@ export const rosaJacob = {
     "name": "Santa Faustina Kowalska",
     "time": "6:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/pcDYP1bVua6knNag8?g_st=iw"
   },
   "reception": {
     "enabled": true,
     "name": "Salón de Eventos La Terraza",
     "time": "8:00 p. m.",
     "address": "Crescencio Garín, 45180",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/a1VP4zyhdPEmjovv5?g_st=iw"
   },
   "ceremonyType": "religious",
   "dressCode": {
@@ -121,13 +122,13 @@ export const rosaJacob = {
   "contacts": [
     {
       "label": "Confirmar asistencia",
-      "phone": "3322085412",
-      "display": "33 2208 5412"
+      "phone": "3322085411",
+      "display": "33 2208 5411"
     }
   ],
   "contact": {
-    "phone": "33 2208 5412",
-    "whatsapp": "3322085412"
+    "phone": "33 2208 5411",
+    "whatsapp": "3322085411"
   },
   "theme": {
     "primary": "#695080",

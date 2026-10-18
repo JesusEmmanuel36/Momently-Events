@@ -11,9 +11,10 @@ import { CountdownSection } from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 
+import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
 import styles from "./NathaliaXv.module.css";
 const images = "/images/events/xv-nathalia";
-export function NathaliaXvInvitation({ wedding }) {
+export function NathaliaXvInvitation({ wedding, pass = null, passToken = null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -33,6 +34,7 @@ export function NathaliaXvInvitation({ wedding }) {
     </div><button className={styles.openButton} onClick={open} disabled={opening}>{opening ? "Abriendo…" : "Abrir invitación"}<ChevronDown size={16}/></button></div></div>}
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image unoptimized src={wedding.hero.image} fill priority sizes="100vw" alt="Nathalia Isabella" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Mis XV años</span><h1>Nathalia Isabella</h1><div className="hero__rule"><span/><Heart size={14}/><span/></div>{wedding.dateDisplay&&<p>{wedding.dateDisplay}</p>}<a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
+      {pass&&<Reveal className={styles.passSummary}><span className="eyebrow">Este pase es para</span><h2>{pass.displayName}</h2><p>Invitación válida para <strong>{pass.allowedSeats} {pass.allowedSeats===1?"persona":"personas"}</strong></p><a className="button" href="#tu-pase">Confirmar asistencia</a></Reveal>}
       <section className="section welcome" id="bienvenida"><Reveal><Image src={`${images}/crown.png`} unoptimized width={1536} height={1024} className={styles.crown} alt="Corona con cristales rosa y azul"/><span className="script">Una noche para soñar</span><p>{wedding.hero.quote}</p><div className="signature">Nathalia Isabella</div></Reveal></section>
       <section className={`section ${styles.family}`}><Reveal><SectionHeading eyebrow="Con el amor de mi familia" title="Quienes me acompañan"/><div className={styles.familyGrid}>{wedding.family.map(group=><article key={group.title}><h3>{group.title}</h3>{group.names.map(name=><p key={name}>{name}</p>)}</article>)}</div></Reveal></section>
       <Reveal className={styles.floralBlessing}><Image unoptimized src={`${images}/floral.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Rosas rosas y marfil con follaje salvia"/></Reveal>
@@ -42,7 +44,9 @@ export function NathaliaXvInvitation({ wedding }) {
       <section className={`section ${styles.attire}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/></Reveal></section>
       <GallerySection wedding={view} fixedOverlay heading={{eyebrow:'Mis recuerdos',title:'Momentos para atesorar',copy:'La ilusión de una nueva etapa llena de sueños.'}}/>
       <section className="section gifts"><Reveal><Mail strokeWidth={1} className="section-icon"/><SectionHeading eyebrow="Un detalle con cariño" title="Lluvia de sobres" copy={wedding.gifts[0].description}/></Reveal></section>
-      <section className={`section ${styles.whatsappContact}`}><Reveal><MessageCircle strokeWidth={1}/><SectionHeading eyebrow="Confirma tu asistencia" title="¿Me acompañas?"/><p className={styles.deadline}>{wedding.confirmationDeadlineText}</p><div className={styles.contactOptions}>{wedding.contacts.map(contact=><div key={contact.phone}><a className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a los XV años de Nathalia Isabella el 5 de diciembre de 2026.')}`} target="_blank" rel="noreferrer">Confirmar por WhatsApp</a><p>{contact.display}</p></div>)}</div></Reveal></section>
+      <section className={styles.passSummary}><Reveal><p className={styles.deadline}>{wedding.confirmationDeadlineText}</p></Reveal></section>
+      {pass?<PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para Nathalia Isabella"/>:<section className={`section ${styles.passSummary}`} id="tu-pase"><Reveal><SectionHeading eyebrow="Una invitación especial para ti" title="Tu pase personalizado" copy="Abre el enlace de tu pase para ver tu nombre, los lugares reservados y confirmar tu asistencia."/></Reveal></section>}
+      <section className={`section ${styles.whatsappContact}`}><Reveal><MessageCircle strokeWidth={1}/><SectionHeading eyebrow="¿Tienes alguna duda?" title="Escríbenos"/><div className={styles.contactOptions}>{wedding.contacts.map(contact=><div key={contact.phone}><a className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, tengo una duda sobre mi pase para los XV años de Nathalia Isabella.')}`} target="_blank" rel="noreferrer">Contactar por WhatsApp</a><p>{contact.display}</p></div>)}</div></Reveal></section>
       <section className="closing"><Image unoptimized src={wedding.hero.image} fill sizes="100vw" alt="Nathalia Isabella" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>mi historia.</h2><p>{wedding.couple.partner1}</p>{wedding.dateDisplay&&<small>{wedding.dateDisplay}</small>}<button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;

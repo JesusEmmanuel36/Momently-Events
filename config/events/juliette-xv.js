@@ -16,11 +16,11 @@ export const julietteXv = {
   "dateStamp": "19 · 12 · 2026",
   "calendarDate": "19 de diciembre de 2026",
   "rsvpEnabled": true,
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Mi mamá y yo te invitamos con mucho cariño a celebrar mis quince años. Prepárate para una pool party llena de alegría y momentos inolvidables.",
-    "image": "/images/events/xv-juliette-maldonado/image.png"
+    "image": "/images/events/xv-juliette-maldonado/image copy.png"
   },
   "family": [
     {
