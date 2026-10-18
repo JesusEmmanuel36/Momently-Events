@@ -27,14 +27,14 @@ export const dianaJulio = {
     "enabled": true,
     "name": "Parroquia del Señor de la Misericordia",
     "time": "18:30 hrs",
-    "mapsUrl": "https://www.google.com/maps/place/Parroquia+del+Se%C3%B1or+de+la+Misericordia/@19.4886195,-99.1264366,872m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85d1f9a20cc7d7df:0xf7aa6c7c6d8240fa!8m2!3d19.4886145!4d-99.1238617!16s%2Fg%2F1wt3nrx8"
+    "mapsUrl": "https://maps.app.goo.gl/K4AwTEd9MPYsoPeFA?g_st=iw"
   },
   "reception": {
     "enabled": true,
     "name": "Centro de Convenciones Tlatelolco",
     "time": "",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/7Qf4opM44XdybJDP9"
+    "mapsUrl": "https://share.google/BXRaE7SyiFQ7JxeGe"
   },
   "giftsPendingMessage": "Estamos preparando nuestra mesa de regalos. Pronto compartiremos los detalles contigo.",
   "dressCode": {
