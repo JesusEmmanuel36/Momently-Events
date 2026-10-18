@@ -43,7 +43,7 @@ export const julietteXv = {
   "gallery": [],
   "music": {
     "enabled": true,
-    "url": "/audio/xv-juliette.maldonado.mp3",
+    "url": "/audio/xv-juliette.mp3",
     "label": "Mi canción"
   },
   "contact": {
