@@ -1,13 +1,13 @@
 export const aurelioYuliza = {
   "slug": "aurelio-y-yuliza",
   "templateKey": "aurelio-yuliza-blue-wedding",
-  "eventTitle": "Boda de Aurelio Sebastián y Yuliza",
+  "eventTitle": "Boda de Sebastián y Yuliza",
   "couple": {
     "partner1": "Aurelio Sebastián Casimiro Solar",
     "partner2": "Yuliza Arteaga Marin"
   },
   "displayNames": {
-    "partner1": "Aurelio",
+    "partner1": "Sebastián",
     "partner2": "Yuliza"
   },
   "date": "2026-11-28T17:00:00-06:00",
@@ -61,35 +61,35 @@ export const aurelioYuliza = {
       "width": 1303,
       "height": 1600,
       "rotation": 0,
-      "alt": "Aurelio y Yuliza · recuerdo 1"
+      "alt": "Sebastián y Yuliza · recuerdo 1"
     },
     {
       "src": "/images/events/aurelio-y-yuliza/image.png",
       "width": 1024,
       "height": 1536,
       "rotation": 0,
-      "alt": "Aurelio y Yuliza · recuerdo 2"
+      "alt": "Sebastián y Yuliza · recuerdo 2"
     },
     {
       "src": "/images/events/aurelio-y-yuliza/image copy 3.png",
       "width": 650,
       "height": 1033,
       "rotation": -90,
-      "alt": "Aurelio y Yuliza · recuerdo 3"
+      "alt": "Sebastián y Yuliza · recuerdo 3"
     },
     {
       "src": "/images/events/aurelio-y-yuliza/image copy 2.png",
       "width": 1080,
       "height": 720,
       "rotation": -90,
-      "alt": "Aurelio y Yuliza · recuerdo 4"
+      "alt": "Sebastián y Yuliza · recuerdo 4"
     },
     {
       "src": "/images/events/aurelio-y-yuliza/image copy.png",
       "width": 955,
       "height": 645,
       "rotation": -90,
-      "alt": "Aurelio y Yuliza · recuerdo 5"
+      "alt": "Sebastián y Yuliza · recuerdo 5"
     }
   ],
   "gifts": [],
