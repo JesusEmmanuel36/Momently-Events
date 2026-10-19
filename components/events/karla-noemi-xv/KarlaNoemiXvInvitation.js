@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { MapPin, MessageCircle, ChevronDown, Heart, Mail, Pause, Play, Share2 } from "lucide-react";
+import { MapPin, MessageCircle, ChevronDown, Heart, Mail, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 
@@ -23,7 +23,6 @@ export function KarlaNoemiXvInvitation({ wedding }) {
   const notify = message => { setToast(message); window.setTimeout(() => setToast(""),2600); };
   const open = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({top:0,behavior:"instant"}); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000); };
   const toggleMusic = () => { if (!audioRef.current) return; if (audioRef.current.paused) audioRef.current.play().catch(() => notify("Toca de nuevo para escuchar nuestra canción.")); else audioRef.current.pause(); };
-  const share = async () => { try { if (navigator.share) await navigator.share({title:wedding.eventTitle,text:wedding.hero.quote,url:window.location.href}); else { await navigator.clipboard.writeText(window.location.href); notify("Enlace copiado"); } } catch (error) { if (error.name !== "AbortError") notify("No fue posible compartir el enlace."); } };
   const view={...wedding,isLive:true,eventId:wedding.slug,couple:{bride:"Karla Noemi",groom:""},images:{hero:wedding.hero.image,gallery:wedding.gallery.map(photo=>photo.src)},galleryItems:wedding.gallery,dateLong:wedding.dateDisplay,rsvpMessageLabel:"Mensaje para Karla Noemi",rsvpSettings:{maxCompanions:wedding.maxCompanions,askCompanions:false,askMenuPreference:false,askAllergies:false,askMessage:true}};
   return <div className={styles.invitation}>
     {wedding.music.enabled&&<audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}/>}
@@ -44,7 +43,7 @@ export function KarlaNoemiXvInvitation({ wedding }) {
       <section className="section gifts"><Reveal><Mail strokeWidth={1} className="section-icon"/><SectionHeading eyebrow="Un detalle con cariño" title={wedding.gifts[0].name} copy={wedding.gifts[0].description}/></Reveal></section>
       <RSVPSection wedding={view}/>
       <section className={`section ${styles.whatsappContact}`}><Reveal><MessageCircle strokeWidth={1}/><SectionHeading eyebrow="También puedes escribirnos" title="Confirma por WhatsApp"/><p>{wedding.contact.phone}</p><a className="button" href={`https://wa.me/52${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, quiero confirmar mi asistencia a los XV años de Karla Noemi el 21 de noviembre de 2026.")}`} target="_blank" rel="noreferrer">Confirmar por WhatsApp</a></Reveal></section>
-      <section className="closing"><Image unoptimized src={wedding.hero.image} fill sizes="100vw" alt="Karla Noemi" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>mi historia.</h2><p>{wedding.couple.partner1}</p>{wedding.dateDisplay&&<small>{wedding.dateDisplay}</small>}<button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
+      <section className="closing"><Image unoptimized src={wedding.hero.image} fill sizes="100vw" alt="Karla Noemi" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte de</span><h2>mi historia.</h2><p>{wedding.couple.partner1}</p>{wedding.dateDisplay&&<small>{wedding.dateDisplay}</small>}</Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;
 }

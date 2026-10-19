@@ -15,7 +15,7 @@ export const carlosSandra = {
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
   "calendarDate": "26 de diciembre de 2026",
-  "rsvpEnabled": false,
+  "rsvpEnabled": true,
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Nuestra boda",
