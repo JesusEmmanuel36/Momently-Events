@@ -16,7 +16,7 @@ export const fernandaXimenaXv = {
   "dateStamp": "21 · 11 · 2026",
   "calendarDate": "21 de noviembre de 2026",
   "rsvpEnabled": true,
-  "maxCompanions": 5,
+  "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Te invito a celebrar conmigo este día tan especial. Con mucha ilusión, quiero compartir contigo la alegría de mis quince años y el comienzo de una nueva etapa.",

@@ -29,14 +29,14 @@ export const aurelioYuliza = {
     "name": "Parroquia San Juan Diego Cuautlatoazin",
     "time": "5:00 p. m.",
     "address": "Calle Guadalupe Victoria Mz. 190 Lt. 14, Margarita Maza de Juárez, 52926 Ciudad López Mateos, Méx.",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/gXD48gmXziHdiusA8?g_st=aw"
   },
   "reception": {
     "enabled": true,
     "name": "Salón Frizon",
     "time": "6:30 a 7:00 p. m.",
     "address": "Miguel Lerdo de Tejada, Manzana 010, San Francisco Tepojaco, 54745 Cuautitlán Izcalli, Méx.",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/wzTxo3z3KyenZreo9?g_st=aw"
   },
   "ceremonyType": "religious",
   "dressCode": {
