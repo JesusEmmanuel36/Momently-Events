@@ -108,7 +108,7 @@ export const carlosSandra = {
   ],
   "music": {
     "enabled": true,
-    "url": "/audio/carlosysandranuevo.mp3",
+    "url": "/audio/carlosysandra2.mp3",
     "label": "Nuestra canción"
   },
   "contacts": [
