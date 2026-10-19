@@ -45,8 +45,8 @@ export const dianaJulio = {
   "gifts": [],
   "music": {
     "enabled": true,
-    "url": "/audio/dianayjulio.mp3",
-    "label": "La boda · Camilo"
+    "url": "/audio/dianayjulio2.mp3",
+    "label": "Nuestra canción"
   },
   "contacts": [
     {
