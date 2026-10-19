@@ -108,8 +108,8 @@ export const carlosSandra = {
   ],
   "music": {
     "enabled": true,
-    "url": "/audio/carlosysandra.mp3",
-    "label": "Antes que el mío"
+    "url": "/audio/carlosysandranuevo.mp3",
+    "label": "Nuestra canción"
   },
   "contacts": [
     {
