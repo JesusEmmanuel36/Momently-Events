@@ -1,18 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Camera, Download, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
+import { CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Heart, MapPin, MessageCircle, Pause, Play, Share2, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/components/events/ivan-ernestina/IvanErnestinaInvitation.module.css";
 import localStyles from "@/components/events/sara-blase/SaraBlaseInvitation.module.css";
 import customStyles from "@/components/events/caleb-ciriam/CalebCiriam.module.css";
 import enlaceStyles from "./CalebCiriamEnlace.module.css";
 import { RSVPSection } from "@/components/sections/GuestActions";
-import { calebCiriamEnlacePhotos } from "@/lib/event-photos/config";
 import { openGoogleCalendar } from "@/lib/calendar";
 
-import { GuestPhotoGallery } from "@/components/events/caleb-ciriam/photos/GuestPhotoGallery";
 
 const defaultAssets = {
   floral: "/images/events/caleb-y-ciriam/floral.png",
@@ -30,12 +27,6 @@ function getCountdown(date) {
   const remaining = new Date(date).getTime() - Date.now();
   if (remaining <= 0) return null;
   return [["Días", Math.floor(remaining / 86400000)], ["Horas", Math.floor((remaining / 3600000) % 24)], ["Minutos", Math.floor((remaining / 60000) % 60)], ["Segundos", Math.floor((remaining / 1000) % 60)]];
-}
-
-function displayTime(value) {
-  if (!/^\d{2}:\d{2}$/.test(value || "")) return [value || "Por confirmar", ""];
-  const [hours, minutes] = value.split(":").map(Number);
-  return [`${hours % 12 || 12}:${String(minutes).padStart(2, "0")}`, hours >= 12 ? "p. m." : "a. m."];
 }
 
 export function CalebCiriamEnlaceTemplate({ wedding, assets = defaultAssets, customTheme = {}, nameClassName = "", heroFramed = false }) {
@@ -152,13 +143,11 @@ export function CalebCiriamEnlaceTemplate({ wedding, assets = defaultAssets, cus
 
 
       <section className={`${styles.location} ${enlaceStyles.location}`} data-je-reveal><div className={styles.locationImage}><Image src={floral} fill sizes="(max-width:800px) 100vw,55vw" alt="Arreglo floral de nuestra ceremonia" style={{objectFit:'contain'}}/></div><article><Heart/><span>Ceremonia de enlace matrimonial</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><p>{wedding.ceremony.address}</p></article></section>
-      <section className={styles.timeline} data-je-reveal><span>{wedding.timelineDate || "7 de noviembre"}</span><h2>Nos vemos muy pronto</h2><div>{wedding.itinerary.map((item) => { const [time, period] = displayTime(item.time); return <article key={`${item.time}-${item.title}`}><time>{time}</time><small>{period}</small><i /><h3>{item.title}</h3><p>{item.description}</p></article>; })}</div></section>
 
       {wedding.nextDayEvent && <section className={localStyles.nextDay} data-je-reveal><Image src={floral} width={760} height={507} alt="" aria-hidden="true" /><span>La celebración continúa</span><h2>{wedding.nextDayEvent.title}</h2><strong>{wedding.nextDayEvent.date}</strong><p>A partir de las {wedding.nextDayEvent.time}</p><small>{wedding.nextDayEvent.place}</small><a href={wedding.nextDayEvent.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin /></a></section>}
 
       {wedding.dressCode && <section className={styles.dress} data-je-reveal><span>Boda de jardín</span><h2>{wedding.dressCode.title}</h2><p>{wedding.dressCode.text}</p><div className={customStyles.colorPalette}>{wedding.dressCode.colors.map(color => <figure key={color.name}><span className={customStyles.colorSwatch} style={{backgroundColor:color.hex}} role="img" aria-label={color.name}/><figcaption>{color.name}</figcaption></figure>)}</div></section>}
       {wedding.gifts?.length > 0 && <section className={styles.gifts} data-je-reveal><Heart /><span>Un detalle con cariño</span><h2>Tu presencia es nuestro mejor regalo</h2><p>{wedding.gifts[0].description}</p>{wedding.bank?.enabled && <div className={customStyles.bankDetails}><h3>Datos para transferencia</h3><dl>{wedding.bank.bank && <div><dt>Banco</dt><dd>{wedding.bank.bank}</dd></div>}<div><dt>A nombre de</dt><dd>{wedding.bank.holder}</dd></div>{[["Cuenta", wedding.bank.account], ["CLABE", wedding.bank.clabe]].map(([label, value]) => <div key={label}><dt>{label}</dt><dd className={customStyles.bankNumber}>{value}</dd><button type="button" aria-label={`Copiar ${label}`} onClick={async () => { try { await navigator.clipboard.writeText(value); notify(`${label} copiada`); } catch { notify("No fue posible copiar. Puedes seleccionar el número."); } }}>Copiar</button></div>)}</dl></div>}</section>}
-      <section className={customStyles.guestPhotos} data-je-reveal><Camera aria-hidden="true" /><span>Recuerdos compartidos</span><h2>Nuestra boda, a través de tus ojos</h2><p>Nos encantará guardar las fotos que tomes en este día. Escanea el código o toca el botón para compartirlas con nosotros a partir del 15 de noviembre de 2026.</p><Image src="/eventos/caleb-y-ciriam-enlace/fotos/qr" width={220} height={220} unoptimized alt="Código QR para subir fotos de la boda de Caleb y Ciriam" /><div><Link href="/eventos/caleb-y-ciriam-enlace/fotos"><Camera size={18} /> Subir fotos</Link><a href="/eventos/caleb-y-ciriam-enlace/fotos/qr?download=1" download><Download size={18} /> Descargar QR</a></div><GuestPhotoGallery event={calebCiriamEnlacePhotos}/></section>
 
       <RSVPSection wedding={{...wedding,isLive:true,eventId:wedding.slug,couple:{bride:wedding.couple.partner1,groom:wedding.couple.partner2},rsvpMessageLabel:"Mensaje para Caleb y Ciriam",rsvpSettings:{maxCompanions:0,askCompanions:false,askMenuPreference:false,askAllergies:false,askMessage:true}}}/>
       <section className={styles.calendar} data-je-reveal><CalendarDays /><span>Reserva la fecha</span><h2>{wedding.calendarDate || "7 de noviembre de 2026"}</h2><div className={styles.calendarActions}><button onClick={addCalendar} disabled={!wedding.date}>Agregar a mi calendario</button>{whatsappContacts.map((contact) => <a key={contact.whatsapp} href={`${contact.whatsapp}?text=${encodeURIComponent("Hola, quiero confirmar mi asistencia al enlace matrimonial de Caleb y Ciriam el 15 de noviembre de 2026 a las 6:00 p. m. en Casa de Paz.")}`} target="_blank" rel="noreferrer"><MessageCircle size={16} /> Confirmar por WhatsApp</a>)}</div></section>

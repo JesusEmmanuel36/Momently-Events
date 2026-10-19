@@ -98,7 +98,7 @@ export const calebCiriamEnlace = {
   },
   "music": {
     "enabled": true,
-    "url": "/audio/SpotiDownloader.com - Un Pacto con dios - Música Cristiana.mp3",
+    "url": "/audio/caleb-ciriam-enlace.mp3",
     "label": "Un Pacto con Dios"
   },
   "itinerary": [
