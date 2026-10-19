@@ -22,20 +22,22 @@ export const albertoAraceli = {
     "quote": "Con mucha alegría, queremos compartir contigo el comienzo de una nueva etapa. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos para siempre.",
     "image": "/images/events/alberto-y-araceli/image copy.png"
   },
+  "parents": ["René Calandreli Valles", "Claudia P. Cruz Juarez", "Juan A. Rios Rdgz", "Gabriela Hidrogo Suárez"],
+  "adultsOnlyMessage": "Con mucho cariño, hemos preparado una celebración solo para adultos. Agradecemos que nos acompañen sin niños.",
   "closingMessage": "Gracias por ser parte de nuestra historia. Tu compañía hará que este día sea aún más especial.",
   "ceremony": {
     "enabled": true,
     "name": "Capillita de Nuestra Madre de Guadalupe",
     "time": "7:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/Jqth58mwX2vkLH179?g_st=aw"
   },
   "reception": {
     "enabled": true,
     "name": "Salón de Eventos Monarca",
     "time": "9:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/vorwdQjMpx2PPvq4A?g_st=aw"
   },
   "ceremonyType": "religious",
   "dressCode": {

@@ -29,9 +29,9 @@ export const nayeliXv = {
   ],
   "ceremony": {
     "enabled": true,
-    "name": "Misa · Por confirmar",
+    "name": "Iglesia Católica San Lázaro",
     "time": "",
-    "address": "Próximamente compartiré los detalles.",
+    "address": "Avenida Caoba #57, El Cipres",
     "mapsUrl": ""
   },
   "reception": {
