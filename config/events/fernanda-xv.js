@@ -28,14 +28,14 @@ export const fernandaXv = {
     "name": "Capilla de Aida Palace Recepciones",
     "time": "7:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/k8s34rFdWqn3KqMg8?g_st=ac"
   },
   "reception": {
     "enabled": true,
     "name": "Aida Palace Recepciones",
     "time": "8:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/k8s34rFdWqn3KqMg8?g_st=ac"
   },
   "gallery": [],
   "music": {
@@ -83,15 +83,15 @@ export const fernandaXv = {
     {
       "title": "Mis papás",
       "names": [
-        "Ricardo Fernández",
-        "María Elena Otero"
+        "Ricardo Fernández Muñoz",
+        "María Elena Otero Cruz"
       ]
     },
     {
       "title": "Mis padrinos",
       "names": [
-        "Adrián García",
-        "Cecilia Cruz"
+        "Adrián García Sánchez",
+        "Cecilia Cruz Vázquez"
       ]
     }
   ],
