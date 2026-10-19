@@ -1,0 +1,9 @@
+# Eloísa y Jesús · Bodas de rubí
+
+Assets generados con imagegen. Paleta: rubí, marfil y dorado. Fotos originales seleccionadas de `../rubiyjesus/`; música `/audio/RubiYjesus.mp3`.
+
+Photorealistic luxury 40th wedding anniversary invitation envelope cutout transparent background landscape1536x1024. Straight-on centered wide rectangular deep ruby wine-red velvet-textured paper envelope, triangular closed flap thin antique-gold edge, champagne satin horizontal ribbon and elegant bow, gold wax seal E&J with delicate laurel. Compact ivory roses, deep burgundy roses and white orchids at lower corners, muted dark foliage, tiny golden sprigs. Refined ruby anniversary ivory gold palette, realistic fine textures, dimensional petals, satin sheen, soft shadows. Entire envelope visible with transparent margins, approximate paper x160..1376 y250..900. No text except E&J.
+
+Photorealistic open luxury ruby wedding anniversary envelope cutout transparent background landscape1536x1024. Straight-on centered deep ruby wine-red textured rectangular body x280..1256 y460..930, triangular flap raised to y90 with ivory interior. Empty envelope no protruding card. Champagne satin horizontal ribbon and bow, gold wax seal E&J on lower body. Compact ivory and burgundy roses with white orchids at bottom corners, muted dark foliage and golden sprigs. Ultra detailed paper and silk, natural petals, realistic soft shadows, entire object visible. No text except E&J.
+
+Photorealistic 40th wedding anniversary floral arrangement cutout transparent background landscape1536x1024. Graceful dense horizontal crescent with ivory roses, deep ruby wine-red roses, white orchids, muted emerald leaves and tiny antique-gold branches. Elegant mature romantic ruby anniversary aesthetic. Organic detailed petals and leaf veins, dimensional shadows and soft highlights. No vase no text no people, whole arrangement visible with generous transparent margins.
