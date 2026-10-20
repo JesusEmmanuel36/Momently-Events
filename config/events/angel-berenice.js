@@ -52,19 +52,49 @@ export const angelBerenice = {
     }
   ],
   "gallery": [
-    {
-      "src": "/images/events/angel-y-berenice/image copy.png",
-      "width": 1110,
-      "height": 1280,
-      "alt": "Ángel Miguel y Berenice juntos"
-    },
-    {
-      "src": "/images/events/angel-y-berenice/image.png",
-      "width": 1189,
-      "height": 1600,
-      "alt": "Un recuerdo juntos junto al mar"
-    }
-  ],
+  {
+    "src": "/images/events/angel-y-berenice/image copy.png",
+    "width": 1110,
+    "height": 1280,
+    "alt": "Ángel Miguel y Berenice juntos"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image.png",
+    "width": 1189,
+    "height": 1600,
+    "alt": "Un recuerdo juntos junto al mar"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image copy 2.png",
+    "width": 960,
+    "height": 1164,
+    "alt": "Ángel Miguel y Berenice · recuerdo 3"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image copy 3.png",
+    "width": 1170,
+    "height": 1495,
+    "alt": "Ángel Miguel y Berenice · recuerdo 4"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image copy 4.png",
+    "width": 720,
+    "height": 1280,
+    "alt": "Ángel Miguel y Berenice · recuerdo 5"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image copy 5.png",
+    "width": 898,
+    "height": 1199,
+    "alt": "Ángel Miguel y Berenice · recuerdo 6"
+  },
+  {
+    "src": "/images/events/angel-y-berenice/image copy 6.png",
+    "width": 1600,
+    "height": 1207,
+    "alt": "Ángel Miguel y Berenice · recuerdo 7"
+  }
+],
   "gifts": [],
   "music": {
     "enabled": true,
