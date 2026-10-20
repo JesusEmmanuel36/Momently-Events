@@ -147,3 +147,5 @@
 @keyframes forestLeafFlutter{from{transform:perspective(200px) rotateY(-30deg) rotate(-12deg)}to{transform:perspective(200px) rotateY(45deg) rotate(16deg)}}
 @media(max-width:650px){.leafTrail:nth-child(n+11){display:none}.forestLeaf{opacity:.45}}
 @media(prefers-reduced-motion:reduce){.fallingLeaves{display:none}}
+
+.godparents{text-align:center}.godparents p{font:400 clamp(1.4rem,3.5vw,1.9rem)/1.7 var(--font-serif);margin:.4rem auto;color:#253D30}.godparents span{display:block;font:400 2rem var(--font-script);color:#4F6950}

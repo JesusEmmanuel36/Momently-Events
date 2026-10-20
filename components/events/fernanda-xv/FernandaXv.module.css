@@ -181,3 +181,6 @@
 .invitation :global(.hero__image img),.introPhoto{object-position:center top}
 
 @media(min-width:900px){.invitation :global(.hero__image img){object-position:center 13%}}
+
+/* Más luz blush y dorada alrededor de los datos de la celebración. */
+.celebration{background:radial-gradient(ellipse at 10% 20%,#E6B7BE44,transparent 48%),radial-gradient(ellipse at 88% 75%,#D7B77833,transparent 50%),#FFF8F4}.celebration .sectionSparkles span{background:linear-gradient(140deg,#F3D7DB,#C5A15C,#E6B7BE);width:16px;height:23px}.celebration .sectionSparkles span:nth-child(3n){width:9px;height:14px}.celebration .sectionSparkles span:nth-child(4n){width:22px;height:30px}.celebration .sectionSparkles span:nth-child(5n){clip-path:none;border-radius:50%;width:4px;height:4px;background:#C5A15C;box-shadow:0 0 8px #D7B77888}.celebration .venueGrid article{background:#FFF8F4E8;box-shadow:0 8px 28px #B980720D}@media(max-width:700px){.celebration .sectionSparkles span:nth-child(4n){width:16px;height:23px}}

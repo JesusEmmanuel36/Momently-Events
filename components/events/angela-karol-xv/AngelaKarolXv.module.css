@@ -21,3 +21,5 @@
 @keyframes letterEmerge{0%{opacity:0;transform:translateY(0)}20%{opacity:1}100%{opacity:1;transform:translateY(-88%)}}@media(max-width:700px){.envelopeStage{width:86vw}}
 
 .photoAlbum{--olive:#752A40;--charcoal:#48252E;text-align:center;padding:3rem 1.3rem;background:#F2E8DC}.photoAlbum>svg{display:block;margin:0 auto 1.5rem;color:#A07C45}.photoAlbum h2{font:400 clamp(2.5rem,6vw,3.5rem)/1.2 var(--font-script);color:#752A40;margin-bottom:1rem}.photoAlbum>p{max-width:600px;line-height:1.8;margin:1rem auto 1.5rem}.photoAlbum>img{display:block;width:220px;height:220px;margin:1.5rem auto}.photoDate{font-size:.9rem;color:#725C55}.photoActions{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.photoActions a{display:inline-flex;gap:.6rem;align-items:center;justify-content:center;padding:.9rem 1.2rem;border:1px solid #B99559;background:#FFFAF2;color:#48252E;text-decoration:none;font-size:.85rem}
+
+.attireArtwork{display:block;width:min(100%,520px);height:auto;margin:1.5rem auto 0;object-fit:contain}

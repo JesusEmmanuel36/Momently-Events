@@ -38,6 +38,7 @@ export const fatiPolo = {
     "address": "Camino a la Nueva Colonia El Copalillo, GTO / Irapuato 983, 36823 Irapuato, Guanajuato.",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hacienda%20Filadelfia%20Camino%20a%20la%20Nueva%20Colonia%20El%20Copalillo%2C%20GTO%20%2F%20Irapuato%20983%2C%2036823%20Irapuato%2C%20Guanajuato."
   },
+  "godparents": ["Consuelo Ortíz", "Víctor Alatorre"],
   "family": [
     {
       "title": "Papás de la novia",
