@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ChevronDown, Heart, Mail, Church, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import { ChevronDown, Heart, Mail, Church, MapPin, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
@@ -38,7 +38,6 @@ export function CarlosSandraInvitation({ wedding }) {
       <GallerySection wedding={view} fixedOverlay imageSizes="(max-width:700px) 90vw,33vw" heading={{eyebrow:"Nuestros momentos",title:"Recuerdos que nos unen",copy:"Instantes que forman parte de nuestra historia."}}/>
       <section className={`section ${styles.registry}`}><Reveal><Mail strokeWidth={1}/><SectionHeading eyebrow="Un detalle con cariño" title={wedding.gifts[0].name} copy={wedding.gifts[0].description}/></Reveal></section>
       {wedding.rsvpEnabled && <RSVPSection wedding={view}/>}
-      <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Nos hará muy felices contar contigo. Confirma tu asistencia por WhatsApp.</p><div className={styles.contacts}>{wedding.contacts.map(contact=><a key={contact.phone} className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a la boda de Carlos y Sandra el 26 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={16}/>Confirmar por WhatsApp</a>)}</div></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Carlos y Sandra" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Carlos &amp; Sandra</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;
