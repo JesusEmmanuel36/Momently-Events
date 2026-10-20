@@ -35,7 +35,7 @@ export const fernandaXv = {
     "name": "Aida Palace Recepciones",
     "time": "8:00 p. m.",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/k8s34rFdWqn3KqMg8?g_st=ac"
+    "mapsUrl": "https://maps.app.goo.gl/Dv5XrGgC2fFpzVdW8"
   },
   "gallery": [],
   "music": {
