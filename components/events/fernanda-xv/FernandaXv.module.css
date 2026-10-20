@@ -176,3 +176,8 @@
 .openEnvelopeLayer{width:133.4%;margin-left:-66.7%;bottom:-3.5%}.openFront{clip-path:polygon(17.8% 41%,42.5% 62%,58.5% 62%,82.2% 41%,82.2% 100%,17.8% 100%)}.sealButton{top:50.8%}.letter{bottom:18%}
 
 .sparkleSection{position:relative;isolation:isolate;overflow:hidden}.sectionSparkles{position:absolute;inset:0;z-index:-1;pointer-events:none}.sectionSparkles span{position:absolute;width:13px;height:19px;background:linear-gradient(140deg,#E6B7BE,#B98072,#F8ECEB);clip-path:polygon(50% 0,60% 38%,100% 50%,60% 62%,50% 100%,40% 62%,0 50%,40% 38%);opacity:.28;animation:gentleSparkle 6s ease-in-out infinite}.sectionSparkles span:nth-child(3n){width:8px;height:11px}.locationButton{display:inline-flex;margin:2rem auto 0;justify-content:center;gap:.6rem}@keyframes gentleSparkle{0%,100%{opacity:.16;transform:scale(.8) rotate(0deg)}50%{opacity:.55;transform:scale(1.15) rotate(12deg)}}@media(prefers-reduced-motion:reduce){.sectionSparkles span{animation:none;opacity:.28}}
+
+/* Encuadre de Fernanda de niña, con espacio para el texto de portada. */
+.invitation :global(.hero__image img),.introPhoto{object-position:center top}
+
+@media(min-width:900px){.invitation :global(.hero__image img){object-position:center 13%}}

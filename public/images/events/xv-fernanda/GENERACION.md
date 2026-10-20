@@ -10,3 +10,12 @@ Prompt común: Premium photorealistic quinceanera stationery, blush pink #E6B7BE
 - envelope-closed.png: Landscape 1536x1024 frontal CLOSED blush paper envelope, blush satin bow, rose gold wax seal F with tiny tiara, ivory and blush roses with rose gold leaves corners. Transparent background.
 - envelope-open.png: Landscape 1536x1024 frontal OPEN blush envelope, fully raised rose gold ivory lined triangular flap, empty pocket, no letter, no bow, no seal, blush roses and rose gold leaves corners. Transparent background.
 - floral.png: Landscape 1536x1024 horizontal crescent bouquet of blush and ivory roses with rose gold foliage, delicate pearls and tiny warm light reflections, no vase. Transparent background.
+
+
+## Portada Fernanda de niña
+
+`hero-nina.png`: edición con imagegen integrado de la foto adjunta. Paleta rosa, champán, oro rosa y luz cálida. Original `hero.png` conservado.
+
+Prompt final:
+
+Use case: identity-preserve. EDIT the attached photograph of Fernanda as a little girl into a polished portrait cover image for her quinceañera invitation. The attached image is the edit target and palette reference. Preserve the child's exact identity, face, facial proportions, age, skin tone, expression, dark hairstyle, pink floral tiara and modest sleeveless pink princess dress. Do not age her or change her face. Palette: soft blush pink, rosy pink, champagne and rose gold, with warm golden-brown ambient light, matching the reference. Refine the environment into an elegant softly lit rose-pink and champagne interior with pink roses and delicate warm bokeh. Photorealistic, warm natural portrait, real skin texture, no airbrushed face. Output vertical portrait 1024x1536 composition, child centered with entire head well inside upper 40% and breathing room above; extend lower skirt and surrounding set naturally to provide quiet lower space for website white lettering. Remove the thin decorative border and corner scrollwork from the reference, no text, no watermarks. Keep dress and child faithful to reference; refine only background, palette grading and portrait framing. Child remains fully clothed, age appropriate.

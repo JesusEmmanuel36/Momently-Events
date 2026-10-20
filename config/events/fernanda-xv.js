@@ -20,8 +20,9 @@ export const fernandaXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión, quiero compartir contigo la alegría de mis quince años. Acompáñame a celebrar una noche llena de sueños, luz y momentos que guardaré siempre en el corazón.",
-    "image": "/images/events/xv-fernanda/hero.png"
+    "image": "/images/events/xv-fernanda/hero-nina.png"
   },
+  "closingImage": "/images/events/xv-fernanda/hero.png",
   "closingMessage": "Gracias por ser parte de mis sueños y por acompañarme en esta noche tan especial.",
   "ceremony": {
     "enabled": true,

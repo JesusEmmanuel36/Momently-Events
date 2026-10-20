@@ -1,0 +1,13 @@
+# Mabel y Sammy
+
+Sobre cerrado, abierto, arreglo de pampas y referencia de vestimenta generados con imagegen integrado. PNG transparentes. Paleta marfil, arena, café, salvia y terracota. Fotos originales conservadas, portada `image.png`, música `/audio/mabel-y-sammy.mp3`.
+
+## Prompts finales
+
+Landscape1536x1024 transparent background product photo. One CLOSED horizontal ivory parchment wedding envelope straight-on front view. Rustic boho western style, terracotta linen ribbon and bow, aged champagne gold wax seal with monogram M&S, ivory roses, small terracotta roses and feathery beige pampas on opposite lower corners, subtle natural twine detail. Elegant realistic paper, no wooden background, no border, no text except M&S, full object centered with transparent padding.
+
+Landscape1536x1024 transparent background product photo. One OPEN horizontal ivory parchment wedding envelope straight-on front view, triangular flap raised, empty ivory interior no letter or card. Rustic boho western style matching a closed envelope, terracotta linen ribbon and bow on front pocket, aged champagne gold wax seal with monogram M&S, ivory roses, small terracotta roses and feathery beige pampas at opposite lower corners, subtle natural twine. Elegant realistic materials, no background, no border, no text except M&S, full object centered with transparent padding.
+
+Landscape1536x1024 transparent background botanical cutout. Elegant airy horizontal boho western wedding floral arrangement with soft beige pampas plumes, ivory roses, a few terracotta roses, dried wheat, subtle sage eucalyptus. Warm realistic fine feathery details, restrained rustic elegance, no vase, no background, no words, no border, all visible, spacious natural shape.
+
+Landscape1536x1024 transparent background editorial fashion cutout for western wedding dress code. Four adult guests standing side by side with space between: a man in cream cowboy hat light beige western shirt denim jeans and brown cowboy boots; woman in flowing terracotta cocktail maxi dress brown cowboy boots and tan hat; woman in refined sage blouse denim skirt and brown boots; man in dark cowboy hat subtle brown checked shirt dark jeans leather belt cowboy boots. Full figures heads to feet visible, stylish natural body proportions, photorealistic high end catalogue, neutral warm light, no background scenery, no text, no props outside clothing, relaxed modest elegant poses. Palette ivory camel brown sage terracotta denim.
