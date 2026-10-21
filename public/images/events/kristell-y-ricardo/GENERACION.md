@@ -1,6 +1,6 @@
 # Kristell y Ricardo
 
-Blanco y verde olivo. Música Brillas · León Larregui (kristell-y-ricardo.mp3). Ocho fotos seleccionadas; portada image copy 6.png. Misa 8:00 p. m. confirmada; recepción sin horario proporcionado. Padrina de anillos: Ana Silvia Fernández Tamayo.
+Blanco y verde olivo. Música Brillas · León Larregui (kristell-y-ricardo.mp3). Ocho fotos seleccionadas; portada image copy 6.png. Misa 8:00 p. m. confirmada; recepción 9:30 p. m.. Padrina de anillos: Ana Silvia Fernández Tamayo.
 
 Imágenes generadas con imagegen integrado, fondo transparente.
 
@@ -15,3 +15,7 @@ Use case: product-mockup. Elegant romantic wedding invitation isolated asset, wh
 ## floral
 
 Use case: product-mockup. Elegant romantic wedding invitation isolated asset, white ivory and muted olive green, fine champagne gold accents. Photorealistic delicate textures, transparent background, landscape 1536x1024. No watermark. One airy horizontal botanical arrangement of ivory and white roses, small white blossoms, olive branches and soft muted olive green leaves, tiny champagne accents. No vase no envelope no text. Centered with transparent margins.
+
+## Álbum e itinerario
+
+QR y galería de invitados activos para subidas desde el 26 de diciembre de 2026 a las 00:00 hasta el 27 de diciembre a las 03:00, hora de México. Fotos descargables desde el panel autorizado. Misa 20:00, recepción 21:30, primer baile 22:30, cena 23:30, fiesta 00:00 del día siguiente y cierre 03:00. Celebración sin niños.

@@ -33,7 +33,7 @@ export const kristellRicardo = {
   "reception": {
     "enabled": true,
     "name": "Hacienda Yu’um Beh",
-    "time": "",
+    "time": "9:30 p. m.",
     "address": "Calle 28, lote 6, entre 1 y 3, Santa Rosa, Kanasín",
     "mapsUrl": ""
   },
@@ -59,7 +59,44 @@ export const kristellRicardo = {
       }
     ]
   },
-  "itinerary": [],
+  "itinerary": [
+    {
+      "time": "20:00",
+      "title": "Misa",
+      "icon": "church",
+      "nextDay": false
+    },
+    {
+      "time": "21:30",
+      "title": "Recepción",
+      "icon": "arrival",
+      "nextDay": false
+    },
+    {
+      "time": "22:30",
+      "title": "Primer baile",
+      "icon": "dance",
+      "nextDay": false
+    },
+    {
+      "time": "23:30",
+      "title": "Cena",
+      "icon": "meal",
+      "nextDay": false
+    },
+    {
+      "time": "00:00",
+      "title": "Fiesta",
+      "icon": "party",
+      "nextDay": true
+    },
+    {
+      "time": "03:00",
+      "title": "Fin de la fiesta",
+      "icon": "end",
+      "nextDay": true
+    }
+  ],
   "gallery": [
     {
       "src": "/images/events/kristell-y-ricardo/image copy 2.png",
@@ -167,5 +204,11 @@ export const kristellRicardo = {
         ]
       }
     ]
-  }
+  },
+  "importantInfo": [
+    {
+      "title": "Celebración sin niños",
+      "text": "Con cariño, hemos preparado una celebración solo para adultos. Gracias por su comprensión."
+    }
+  ]
 };

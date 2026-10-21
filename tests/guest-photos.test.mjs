@@ -262,3 +262,17 @@ test("Andrey and Leira photos accept uploads only on her event day and isolate h
   const result=await listGuestPhotos('',{env,event,fetcher:async url=>{assert.equal(url.searchParams.get('prefix'),event.folder+'/');return Response.json({resources:[{asset_id:'own',public_id:event.folder+'/one',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/one.jpg'},{asset_id:'other',public_id:guestPhotos.folder+'/one',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/other.jpg'}]});}});
   assert.deepEqual(result.photos.map(p=>p.id),['own']);
 });
+
+test("Kristell and Ricardo photos stay open through their celebration ending at 3am", async () => {
+  const {kristellRicardoPhotos:event}=await import('../lib/event-photos/config.js');
+  const opens=Date.parse('2026-12-26T00:00:00-06:00'),closes=Date.parse('2026-12-27T03:00:00-06:00');
+  for(const [now,expected] of [[opens-1,false],[opens,true],[closes-1,true],[closes,false]]) assert.equal(guestPhotosAreOpen(now,event),expected);
+  let touched=false;
+  for(const now of [opens-1,closes])await assert.rejects(processGuestPhoto(request(new Blob(['test'],{type:'image/jpeg'})),{env,event,now,rateLimit:async()=>{touched=true},upload:async()=>{touched=true}}),e=>e.status===403&&e.code==='photos_not_open');
+  assert.equal(touched,false);
+  const photo=new Blob([await picture()],{type:'image/png'});
+  assert.deepEqual(await processGuestPhoto(request(photo),{env,event,now:opens,rateLimit:async()=>{},upload:async(file,id,options)=>{assert.equal(options.event.folder,event.folder);return{ok:true,id:'kristell-photo'}}}),{ok:true,id:'kristell-photo'});
+  const {listGuestPhotos}=await import('../lib/event-photos/gallery.js');
+  const result=await listGuestPhotos('',{env,event,fetcher:async url=>{assert.equal(url.searchParams.get('prefix'),event.folder+'/');return Response.json({resources:[{asset_id:'own',public_id:event.folder+'/one',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/one.jpg'},{asset_id:'other',public_id:guestPhotos.folder+'/one',resource_type:'image',secure_url:'https://res.cloudinary.com/test-cloud/image/upload/other.jpg'}]});}});
+  assert.deepEqual(result.photos.map(p=>p.id),['own']);
+});

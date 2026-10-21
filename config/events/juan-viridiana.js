@@ -1,4 +1,5 @@
 export const juanViridiana = {
+  "publicEnabled": false,
   "slug": "juan-y-viridiana",
   "templateKey": "juan-viridiana-ivory-gold-butter-wedding",
   "eventTitle": "Boda de Juan Emilio y Viridiana",

@@ -1,4 +1,5 @@
 export const vivianAholanyXv = {
+  "publicEnabled": false,
   "slug": "xv-vivian-aholany",
   "templateKey": "vivian-aholany-compact-xv",
   "eventTitle": "Vivian Aholany · Mis XV años",

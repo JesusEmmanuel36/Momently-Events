@@ -28,7 +28,7 @@ export const alissonXv = {
       ],
       [
         "Rosa E. Yocupicio",
-        "Abram Martínez"
+        "Abraham Martínez"
       ],
       [
         "Carolina Cebreros",
@@ -36,7 +36,7 @@ export const alissonXv = {
       ]
     ],
     "godparents": [
-      "Carmen Silva",
+      "Carmen Valenzuela",
       "Filiberto Felix"
     ]
   },
@@ -61,22 +61,10 @@ export const alissonXv = {
   },
   "gallery": [
     {
-      "src": "/images/events/xv-alisson/image copy 2.png",
-      "width": 1066,
-      "height": 1600,
-      "alt": "Alisson · Mis XV años · Fotografía 1"
-    },
-    {
       "src": "/images/events/xv-alisson/image copy.png",
       "width": 1066,
       "height": 1600,
       "alt": "Alisson · Mis XV años · Fotografía 2"
-    },
-    {
-      "src": "/images/events/xv-alisson/image.png",
-      "width": 720,
-      "height": 1600,
-      "alt": "Alisson · Mis XV años · Fotografía 3"
     }
   ],
   "gifts": [],
