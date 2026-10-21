@@ -28,14 +28,14 @@ export const angelBerenice = {
     "name": "Rancho Vaquería Santo Domingo",
     "time": "12:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/Jvv9XAhCxQJCAhrj6?g_st=iw"
   },
   "reception": {
     "enabled": true,
     "name": "Rancho Vaquería Santo Domingo",
     "time": "1:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/Jvv9XAhCxQJCAhrj6?g_st=iw"
   },
   "ceremonyType": "civil",
   "dressCode": null,

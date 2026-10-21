@@ -39,7 +39,7 @@ export const jeamyErick = {
   },
   "dressCode": {
     "title": "Formal y elegante",
-    "text": "Celebremos juntos este día tan especial con un atuendo formal y elegante."
+    "text": "Celebremos juntos este día tan especial"
   },
   "itinerary": [
     {
@@ -59,12 +59,6 @@ export const jeamyErick = {
       "width": 1080,
       "height": 1058,
       "alt": "Jeamy y Erick · Recuerdo 1"
-    },
-    {
-      "src": "/images/events/jeamy-y-erick/image copy 5.png",
-      "width": 1080,
-      "height": 1426,
-      "alt": "Jeamy y Erick · Recuerdo 2"
     },
     {
       "src": "/images/events/jeamy-y-erick/image copy 2.png",
@@ -89,12 +83,6 @@ export const jeamyErick = {
       "width": 923,
       "height": 1600,
       "alt": "Jeamy y Erick · Recuerdo 6"
-    },
-    {
-      "src": "/images/events/jeamy-y-erick/image copy 6.png",
-      "width": 1080,
-      "height": 1073,
-      "alt": "Jeamy y Erick · Recuerdo 7"
     }
   ],
   "gifts": [],
@@ -115,5 +103,11 @@ export const jeamyErick = {
     "ivory": "#FFFCF6",
     "rose": "#EE9DBB",
     "sage": "#64724A"
+  },
+  "familyPhoto": {
+    "src": "/images/events/jeamy-y-erick/image copy 6.png",
+    "width": 1080,
+    "height": 1073,
+    "alt": "Familia Mendoza Garcia · Jeamy y Erick con su familia"
   }
 };
