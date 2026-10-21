@@ -71,8 +71,8 @@ export const roxanaGerardo = {
 ],
   "music": {
     "enabled": true,
-    "url": "/audio/roxanaygerardo.mp3",
-    "label": "Nuestra canción"
+    "url": "/audio/caleb-ciriam-enlace.mp3",
+    "label": "Un Pacto con Dios"
   },
   "contact": {
     "phone": "8444516531",
