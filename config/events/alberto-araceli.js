@@ -1,4 +1,5 @@
 export const albertoAraceli = {
+  "publicEnabled": true,
   "slug": "alberto-y-araceli",
   "templateKey": "alberto-araceli-burgundy-country",
   "eventTitle": "Boda de Alberto y Araceli",

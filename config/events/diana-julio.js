@@ -10,7 +10,7 @@ export const dianaJulio = {
     "partner1": "Diana",
     "partner2": "Julio"
   },
-  "date": "2027-07-17T18:30:00-06:00",
+  "date": "2027-07-17T19:45:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 17 de julio de 2027",
   "dateStamp": "17 · 07 · 2027",
@@ -26,7 +26,7 @@ export const dianaJulio = {
   "ceremony": {
     "enabled": true,
     "name": "Parroquia del Señor de la Misericordia",
-    "time": "18:30 hrs",
+    "time": "7:45 p. m.",
     "mapsUrl": "https://maps.app.goo.gl/K4AwTEd9MPYsoPeFA?g_st=iw"
   },
   "reception": {
@@ -36,16 +36,23 @@ export const dianaJulio = {
     "address": "",
     "mapsUrl": "https://share.google/BXRaE7SyiFQ7JxeGe"
   },
-  "giftsPendingMessage": "Estamos preparando nuestra mesa de regalos. Pronto compartiremos los detalles contigo.",
   "dressCode": {
     "title": "Formal",
     "text": "Nos encantará verte lucir un atuendo formal para compartir este día tan especial con nosotros."
   },
   "gallery": [],
-  "gifts": [],
+  "gifts": [
+    {
+      "name": "Liverpool",
+      "type": "link",
+      "number": "60065214",
+      "description": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, puedes encontrar nuestra mesa de regalos en Liverpool.",
+      "url": "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60065214"
+    }
+  ],
   "music": {
     "enabled": true,
-    "url": "/audio/dianayjulio2.mp3",
+    "url": "/audio/diana-y-julio.mp3",
     "label": "Nuestra canción"
   },
   "contacts": [

@@ -35,18 +35,49 @@ export const lizIvannaXv = {
     "name": "Salón Finca Los Pinos",
     "time": "14:00 hrs",
     "address": "Calle del Parque 3478, Bajada de San Martín",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/Eq3Sj3etNJmGTn5r7?g_st=aw"
   },
-  "parents": ["Sergio Iván Delgado Pantoja", "Lisbed Alejandra Ojeda Olvera"],
+  "parents": [
+    "Sergio Iván Delgado Pantoja",
+    "Lisbed Alejandra Ojeda Olvera"
+  ],
   "godmother": "Soledad Pantoja Pérez",
   "itinerary": [
-    {"time":"13:00", "title":"Misa", "icon":"church"},
-    {"time":"14:00", "title":"Ingreso a la fiesta", "icon":"arrival"},
-    {"time":"15:30", "title":"Comida", "icon":"meal"},
-    {"time":"16:30", "title":"Mariachi y coronación", "icon":"crown"},
-    {"time":"17:30", "title":"Vals", "icon":"dance"},
-    {"time":"18:30", "title":"Pista abierta", "icon":"party"},
-    {"time":"22:00", "title":"Banda en vivo", "icon":"music"}
+    {
+      "time": "13:00",
+      "title": "Misa",
+      "icon": "church"
+    },
+    {
+      "time": "14:00",
+      "title": "Ingreso a la fiesta",
+      "icon": "arrival"
+    },
+    {
+      "time": "15:30",
+      "title": "Comida",
+      "icon": "meal"
+    },
+    {
+      "time": "16:30",
+      "title": "Mariachi y coronación",
+      "icon": "crown"
+    },
+    {
+      "time": "17:30",
+      "title": "Vals",
+      "icon": "dance"
+    },
+    {
+      "time": "18:30",
+      "title": "Pista abierta",
+      "icon": "party"
+    },
+    {
+      "time": "22:00",
+      "title": "Banda en vivo",
+      "icon": "music"
+    }
   ],
   "gallery": [],
   "music": {

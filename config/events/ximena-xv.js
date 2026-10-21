@@ -33,7 +33,7 @@ export const ximenaXv = {
   "reception": {
     "enabled": true,
     "name": "Salón Santa Secilia",
-    "time": "8:00 p. m.",
+    "time": "7:40 p. m.",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/g6eHCycm6KmN8AbVA?g_st=aw"
   },
