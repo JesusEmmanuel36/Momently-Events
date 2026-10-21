@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import {useEffect,useRef,useState} from "react";
-import {Church,MapPin,Utensils,ChevronDown,Pause,Play,MessageCircle} from "lucide-react";
+import {Church,MapPin,Utensils,ChevronDown,Pause,Play} from "lucide-react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import {GallerySection} from "@/components/sections/Gallery";
 import styles from "./AlissonXv.module.css";
@@ -27,9 +27,9 @@ export function AlissonXvInvitation({wedding}){
  <CountdownSection wedding={wedding}/>
  <section className={styles.celebration}><DecorativeButterflies/><h2>Itinerario</h2><div className={styles.venues}>{[[wedding.ceremony,"Misa",Church],[wedding.dinner,"Cena",Utensils],[wedding.reception,"Recepción",MapPin]].map(([place,label,Icon])=><article key={label}><Icon size={30} strokeWidth={1}/><span>{label}</span><strong>{place.time}</strong><h2>{place.name}</h2>{place.address&&<p>{place.address}</p>}<a href={place.mapsUrl} target="_blank" rel="noopener noreferrer"><MapPin size={15}/>Ver ubicación</a></article>)}</div></section>
  <GallerySection wedding={{...wedding,images:{gallery:wedding.gallery.map(p=>p.src)},galleryItems:wedding.gallery,couple:{bride:"Alisson",groom:""}}} fixedOverlay heading={{eyebrow:"Mis recuerdos",title:"Momentos que brillan",copy:"Con ilusión, me preparo para celebrar contigo."}}/>
- <section className={styles.attire}><DecorativeButterflies/><h2>{wedding.dressCode.title}</h2><span>Código de vestimenta</span><p>{wedding.dressCode.text}</p></section>
- <section className={styles.confirmation}><MessageCircle size={32} strokeWidth={1}/><h2>¿Me acompañas?</h2><p>Confirma tu asistencia por WhatsApp. ¡Me encantará celebrar contigo!</p><a href={`https://wa.me/52${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, quiero confirmar mi asistencia a los XV años de Alisson el 13 de noviembre de 2026.")}`} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/>Confirmar por WhatsApp</a></section>
- <footer className={styles.footer}>¡Te esperamos!</footer></main>}
+ <section className={styles.attire}><DecorativeButterflies/><h2>{wedding.dressCode.title}</h2><span>Código de vestimenta</span><p>{wedding.dressCode.intro}</p><p>{wedding.dressCode.text}</p></section>
+
+ <footer className={styles.footer}><h2>Una noche para brillar</h2><p>{wedding.closingMessage}</p></footer></main>}
  {opened&&<button className={styles.music} onClick={toggleMusic} aria-label={playing?"Pausar música":"Reproducir música"}>{playing?<Pause size={18}/>:<Play size={18}/>}<span>{wedding.music.label}</span></button>}
  </div>;
 }

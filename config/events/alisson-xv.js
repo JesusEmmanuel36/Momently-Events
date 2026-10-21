@@ -55,8 +55,9 @@ export const alissonXv = {
     "mapsUrl": "https://maps.app.goo.gl/dhDzNTHr1B4fUNxf7"
   },
   "dressCode": {
-    "title": "Colores reservados",
-    "text": "El color lila está reservado para la quinceañera y el rosa para su corte. ¡Nos encantará verte celebrar en otros colores!"
+    "title": "Guapos, guapas y mucho ambiente",
+    "text": "El color lila está reservado para la quinceañera y el rosa para su corte. ¡Nos encantará verte celebrar en otros colores!",
+    "intro": "¡Aquí se viene a brillar y a bailar!"
   },
   "gallery": [
     {
@@ -119,5 +120,6 @@ export const alissonXv = {
   "contact": {
     "phone": "6424830336",
     "whatsapp": "6424830336"
-  }
+  },
+  "closingMessage": "Que esta noche nos regale sonrisas, abrazos y recuerdos inolvidables. Ven con tu mejor sonrisa y muchas ganas de bailar. ¡Te esperamos para celebrar juntos!"
 };
