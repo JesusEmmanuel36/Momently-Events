@@ -34,14 +34,14 @@ export const mariaYareliXv = {
     "name": "Parroquia Santos Mártires Mexicanos",
     "time": "6:00 p. m.",
     "address": "San Pedro Apóstol #887, Lomas de San Miguel, San Pedro Tlaquepaque, Jalisco",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/xiUoUTdkwRpUqALb6?g_st=aw"
   },
   "reception": {
     "enabled": true,
     "name": "Terraza Los Pitayos #798",
     "time": "8:00 p. m.",
     "address": "Las Huertas, San Pedro Tlaquepaque, Jalisco",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/PEkDMc1uhBzA8VK46?g_st=aw"
   },
   "dressCode": {
     "title": "Formal · Todos de negro",
