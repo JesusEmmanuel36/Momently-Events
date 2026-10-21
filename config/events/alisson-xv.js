@@ -10,7 +10,7 @@ export const alissonXv = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Viernes · 13 de noviembre de 2026",
   "dateStamp": "13 · 11 · 2026",
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "maxCompanions": 0,
   "askAllergies": false,
   "askMessage": false,
@@ -20,7 +20,7 @@ export const alissonXv = {
     "image": "/images/events/xv-alisson/image copy 2.png"
   },
   "family": {
-    "name": "Cebreros Frayjo",
+    "name": "Cebreros Fraijo",
     "baptismGodparents": [
       [
         "Ana Gortari",
@@ -56,7 +56,7 @@ export const alissonXv = {
   },
   "dressCode": {
     "title": "Colores reservados",
-    "text": "El lila y el morado están reservados para la quinceañera. ¡Nos encantará verte celebrar en otros colores!"
+    "text": "El color lila está reservado para la quinceañera y el rosa para su corte. ¡Nos encantará verte celebrar en otros colores!"
   },
   "gallery": [
     {
@@ -115,5 +115,9 @@ export const alissonXv = {
     "name": "Casa de mi nanita Marina",
     "time": "7:00 p. m.",
     "mapsUrl": "https://maps.app.goo.gl/dhDzNTHr1B4fUNxf7"
+  },
+  "contact": {
+    "phone": "6424830336",
+    "whatsapp": "6424830336"
   }
 };

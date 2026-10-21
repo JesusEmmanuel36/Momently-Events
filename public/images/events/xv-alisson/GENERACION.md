@@ -1,6 +1,6 @@
 # Alisson · XV años
 
-Datos extraídos de la invitación de la familia Cebreros Frayjo. Viernes 13 de noviembre de 2026. Paleta lila, morado amatista y plata. Música xv-alisson.mp3. Tres fotos originales. Seis mariposas estáticas distribuidas en las secciones de familia, celebración y vestimenta; sin animación ni interacción.
+Datos extraídos de la invitación de la familia Cebreros Fraijo. Viernes 13 de noviembre de 2026. Paleta lila, morado amatista y plata. Música xv-alisson.mp3. Tres fotos originales. Seis mariposas estáticas distribuidas en las secciones de familia, celebración y vestimenta; sin animación ni interacción.
 
 Imágenes generadas con imagegen integrado, fondo transparente.
 

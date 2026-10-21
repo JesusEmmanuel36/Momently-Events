@@ -20,7 +20,7 @@ export const jeamyErick = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Con mucha alegría, queremos compartir contigo el inicio de una nueva etapa. Acompáñanos a celebrar nuestro amor y a crear recuerdos que guardaremos siempre en el corazón.",
-    "image": "/images/events/jeamy-y-erick/image copy 5.png"
+    "image": "/images/events/jeamy-y-erick/portada.png"
   },
   "closingMessage": "Gracias por acompañarnos y ser parte de nuestra historia. Tu presencia hará que este día sea aún más especial.",
   "ceremony": {
@@ -109,5 +109,6 @@ export const jeamyErick = {
     "width": 1080,
     "height": 1073,
     "alt": "Familia Mendoza Garcia · Jeamy y Erick con su familia"
-  }
+  },
+  "closingImage": "/images/events/jeamy-y-erick/image copy 5.png"
 };
