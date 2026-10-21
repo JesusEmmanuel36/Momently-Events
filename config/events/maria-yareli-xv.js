@@ -105,9 +105,9 @@ export const mariaYareliXv = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/fabiola-y-daniel.mp3",
+    "label": "Photograph · Ed Sheeran"
   },
   "theme": {
     "primary": "#A44770",

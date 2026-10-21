@@ -1,17 +1,20 @@
 "use client";
 import Image from "next/image";
 import {useEffect,useRef,useState} from "react";
-import {Church,MapPin,Mail,ChevronDown} from "lucide-react";
+import {Church,MapPin,Mail,ChevronDown,Pause,Play} from "lucide-react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import {RSVPSection} from "@/components/sections/GuestActions";
 import {GallerySection} from "@/components/sections/Gallery";
 import styles from "./MariaYareliXv.module.css";
 export function MariaYareliXvInvitation({wedding}){
+ const audio=useRef(null);const [playing,setPlaying]=useState(false);
+ const toggleMusic=()=>{if(audio.current?.paused)audio.current.play().catch(()=>setPlaying(false));else audio.current?.pause();};
  const [opened,setOpened]=useState(false);const [opening,setOpening]=useState(false);const timer=useRef(null);
  useEffect(()=>()=>clearTimeout(timer.current),[]);
  useEffect(()=>{if(opened)return;const previous=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=previous;};},[opened]);
- const open=()=>{if(opening)return;setOpening(true);timer.current=setTimeout(()=>{setOpened(true);window.scrollTo({top:0,behavior:"instant"});},window.matchMedia("(prefers-reduced-motion: reduce)").matches?0:4200);};
+ const open=()=>{if(opening)return;setOpening(true);audio.current?.play().catch(()=>setPlaying(false));timer.current=setTimeout(()=>{setOpened(true);window.scrollTo({top:0,behavior:"instant"});},window.matchMedia("(prefers-reduced-motion: reduce)").matches?0:4200);};
  return <div className={styles.invitation}>
+ <audio ref={audio} src={wedding.music.url} loop preload="auto" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)}/>
  {!opened&&<div className={`${styles.intro} ${opening?styles.opening:""}`}><Image unoptimized src={wedding.hero.image} fill priority sizes="100vw" className={styles.introPhoto} alt=""/><div className={styles.introShade}/><div className={styles.introHeading}><span>Mis XV años</span><h2>Una invitación para ti</h2></div><div className={styles.envelopeStage}>
  <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image unoptimized src="/images/events/xv-maria-yareli/envelope-open.png" width={1536} height={1024} className={styles.openEnvelopeArtwork} sizes="(max-width:700px) 98vw,720px" alt="Sobre rosa abierto" priority/></div>
  <div className={styles.letter}><span>Mis XV años</span><h2>María Yareli</h2><small>14 · 11 · 2026</small></div>
@@ -27,5 +30,6 @@ export function MariaYareliXvInvitation({wedding}){
  <section className={styles.gifts}><Mail size={36} strokeWidth={1}/><h2>Lluvia de sobres</h2><p>{wedding.gifts[0].description}</p></section>
  {wedding.rsvpEnabled&&<RSVPSection wedding={{...wedding,isLive:true,eventId:wedding.slug,couple:{bride:"María Yareli",groom:""},rsvpSettings:{maxCompanions:0,askCompanions:false,askMenuPreference:false,askAllergies:false,askMessage:false,askSongSuggestion:false}}}/>}
  <footer className={styles.footer}>¡Gracias por celebrar conmigo!</footer></main>}
+ {opened&&<button className={styles.music} onClick={toggleMusic} aria-label={playing?"Pausar música":"Reproducir música"}>{playing?<Pause size={18}/>:<Play size={18}/>}<span>{wedding.music.label}</span></button>}
  </div>;
 }
