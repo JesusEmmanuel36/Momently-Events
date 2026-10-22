@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createPass, updatePass, deletePass, readPass, confirmPass, passTokenPattern, assertPassOrigin } from "../lib/event-passes/server.js";
+import { createPass, updatePass, deletePass, readPass, confirmPass, passTokenPattern, assertPassOrigin, publishedPassEvent, passPath } from "../lib/event-passes/server.js";
 
 function fixture(slug = "alejandra-y-david") {
   const store = new Map(); let counter = 0; let queue = Promise.resolve();
@@ -16,7 +16,7 @@ function fixture(slug = "alejandra-y-david") {
       return { docs, empty: !docs.length };
     } }) }; },
   });
-  const db = { runTransaction: callback => {
+  const db = { collection, runTransaction: callback => {
     const run = queue.then(async () => {
       const writes = []; const result = await callback({ get: async ref => snap(ref),
         update: (ref, value) => writes.push([ref, value, true]), set: (ref, value, opts) => writes.push([ref, value, opts?.merge]),
@@ -258,4 +258,31 @@ test("Montserrat and Andrei passes enforce seats, names, the inclusive December 
   const publicPass=await readPass(pass.passToken,{context});
   assert.equal(publicPass.displayName,"Familia Reyes Arenas");assert.equal(publicPass.allowedSeats,4);assert.equal(publicPass.phone,undefined);
   await assert.rejects(readPass(pass.passToken,{context:fixture("xv-debanhi-betel").context}),e=>e.status===404);
+});
+
+test("Fabiola and César passes confirm assigned places without an open RSVP form", async()=>{
+ const {context,store}=fixture("fabiola-y-cesar");
+ const pass=await createPass(context,{...details,displayName:"Familia de prueba",allowedSeats:3});
+ assert.match(pass.path,/^\/eventos\/fabiola-y-cesar\/pase\//);
+ await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context}),e=>e.status===400);
+ const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3,name:"Nombre alterado"},{context});
+ const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context});
+ assert.equal(first.rsvpId,second.rsvpId);
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de prueba");
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
+});
+
+test("creator passes use saved opt-in for either template and respect publication and disablement",async()=>{
+ for(const templateKey of ["flexible-celebration","brown-romance"]){
+  const {context,store}=fixture("creator-test-invitation");context.event.templateKey=templateKey;context.event.settings.personalizedPasses={enabled:true};
+  store.set("slugs/creator-test-invitation",{eventId:"test-event"});
+  const resolved=await publishedPassEvent({db:context.ref.firestore,slug:context.event.slug});assert.equal(resolved.event.templateKey,templateKey);
+  const pass=await createPass(resolved,{...details,allowedSeats:3});assert.match(pass.path,/^\/eventos\/creator-test-invitation\/pase\//);
+  await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context:resolved}),e=>e.status===400);
+  const result=await confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context:resolved});assert.equal(store.get(`events/test-event/rsvps/${result.rsvpId}`).totalPeople,2);
+  const other=fixture("another-created-event");other.context.event.templateKey=templateKey;other.context.event.settings.personalizedPasses={enabled:true};await assert.rejects(readPass(pass.passToken,{context:other.context}),e=>e.status===404);
+  context.event.settings.personalizedPasses.enabled=false;await assert.rejects(readPass(pass.passToken,{context}),e=>e.status===404);await assert.rejects(publishedPassEvent({db:context.ref.firestore,slug:context.event.slug}),e=>e.status===404);
+  context.event.settings.personalizedPasses.enabled=true;context.event.status="draft";await assert.rejects(publishedPassEvent({db:context.ref.firestore,slug:context.event.slug}),e=>e.status===404);
+ }
+ assert.throws(()=>passPath("token","creator-test-invitation"),e=>e.status===404);
 });

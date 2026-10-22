@@ -91,7 +91,20 @@ test("section colors and floral switches persist independently",()=>{
 
 test("envelope background and shared-cover toggle persist",()=>{
  const data=buildEventDocument(eventInputSchema.parse({...base,introImageUrl:"https://example.com/envelope.jpg",introKeepForHero:true}),"admin").publicData;
- assert.deepEqual(data.intro,{imageUrl:"https://example.com/envelope.jpg",keepForHero:true});
+ assert.deepEqual(data.intro,{imageUrl:"https://example.com/envelope.jpg",keepForHero:true,gradientEnabled:true});
  assert.equal(eventInputSchema.parse(base).introKeepForHero,false);
  assert.equal(eventInputSchema.safeParse({...base,introImageUrl:"javascript:alert(1)"}).success,false);
+});
+
+test("envelope and name-cover gradients save independently",()=>{
+ for(const introGradientEnabled of [true,false])for(const heroGradientEnabled of [true,false]){
+  const data=buildEventDocument(eventInputSchema.parse({...base,introGradientEnabled,heroGradientEnabled}),"admin").publicData;
+  assert.equal(data.intro.gradientEnabled,introGradientEnabled);assert.equal(data.hero.gradientEnabled,heroGradientEnabled);
+ }
+});
+
+test("creator pass toggle persists independently of RSVP availability",()=>{
+ const enabled=buildEventDocument(eventInputSchema.parse({...base,personalizedPassesEnabled:true,rsvpEnabled:false}),"admin");
+ assert.equal(enabled.settings.personalizedPasses.enabled,true);assert.equal(enabled.settings.rsvp.enabled,false);
+ assert.equal(buildEventDocument(eventInputSchema.parse(base),"admin").settings.personalizedPasses.enabled,false);
 });

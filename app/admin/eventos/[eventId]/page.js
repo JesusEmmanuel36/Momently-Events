@@ -1,3 +1,5 @@
+import {supportsPersonalizedPasses} from "@/lib/event-passes/config";
+import {PersonalizedPassManager} from "@/components/panel/PersonalizedPassManager";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { EventActions, PublishControl } from "@/components/admin/EventActions";
@@ -28,6 +30,10 @@ export default async function AdminEvent({ params }) {
   const editable = ["flexible-celebration", "brown-romance"].includes(event.templateKey);
   const editorEvent = editable ? JSON.parse(JSON.stringify({ ...event, settings: { ...event.settings, rsvp: { ...event.settings?.rsvp, deadline: event.settings?.rsvp?.deadline?.toDate?.()?.toISOString?.() || event.settings?.rsvp?.deadline || null } } })) : null;
 
+  const passesEnabled=supportsPersonalizedPasses(event);
+  const guestSnapshot=passesEnabled?await snapshot.ref.collection("guests").orderBy("createdAt","desc").limit(500).get():null;
+  const guests=guestSnapshot?.docs.map(doc=>{const data=doc.data();return {id:doc.id,displayName:data.displayName,allowedSeats:data.allowedSeats,phone:data.phone||"",groupName:data.groupName||"",notes:data.notes||"",passToken:data.passToken||""};}) || [];
+
   return <DashboardShell area="admin" user={user}>
     <header className="dashboard-header">
       <div><span className="dashboard-eyebrow">Administrar evento</span><h1>{title}</h1><p>Estado: <span className={`status status--${event.status}`}>{eventStatusLabel(event.status)}</span></p></div>
@@ -46,6 +52,7 @@ export default async function AdminEvent({ params }) {
     </section>
 
     {editable && <EventForm event={editorEvent} />}
+    {passesEnabled&&<section className="dashboard-card" id="invitados-y-pases"><h2>Invitados y pases</h2><p>Crea los pases con nombre y lugares asignados y copia el enlace para cada invitado.</p>{event.status!=="published"&&<p>Los enlaces estarán disponibles para los invitados cuando publiques la invitación.</p>}<PersonalizedPassManager eventId={event.id} initialGuests={guests} slug={event.slug} confirmationMode={event.slug==="xv-nahomi"?"whatsapp":"panel"}/></section>}
     <OwnerAccount eventId={event.id} />
     <OwnerInvite eventId={event.id} ownerUids={event.ownerUids || []} />
   </DashboardShell>;

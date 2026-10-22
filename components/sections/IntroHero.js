@@ -1,4 +1,5 @@
 "use client";
+import {introBackgroundSettings} from "@/lib/wedding/backgrounds";
 import {heroTextStyle} from "@/lib/wedding/hero-typography";
 
 import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
@@ -11,8 +12,8 @@ import { Botanical, Reveal } from "@/components/ui";
 export function IntroScreen({ wedding, onOpen, leaving }) {
   const brideInitial = wedding.couple.bride.trim().charAt(0).toUpperCase(); const groomInitial = wedding.couple.groom.trim().charAt(0).toUpperCase();
   return <div className={`intro ${leaving ? "intro--leaving" : ""}`}>
-    {wedding.introSettings?.imageUrl ? <CoverBackground src={wedding.introSettings.imageUrl} theme={wedding.theme} settings={wedding.heroSettings}/> : <Image src={wedding.images.hero} alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} fill priority sizes="100vw" className="cover" />}
-    <div className="intro__overlay" />
+    {wedding.introSettings?.imageUrl ? <CoverBackground src={wedding.introSettings.imageUrl} theme={wedding.theme} settings={introBackgroundSettings({intro:wedding.introSettings,hero:wedding.heroSettings})}/> : <Image src={wedding.images.hero} alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} fill priority sizes="100vw" className="cover" />}
+    {!wedding.introSettings?.imageUrl && (wedding.introSettings?.gradientEnabled ?? wedding.heroSettings?.gradientEnabled ?? true) && <div className="intro__overlay" />}
     <Botanical className="intro__branch intro__branch--left" />
     <Botanical className="intro__branch intro__branch--right" />
     <div className="intro__content">

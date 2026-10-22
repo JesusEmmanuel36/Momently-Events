@@ -1,14 +1,14 @@
 export const oscarBrenda = {
   "slug": "oscar-y-brenda",
   "templateKey": "oscar-brenda-white-gold-wedding",
-  "eventTitle": "Boda de Óscar Oswaldo y Brenda Uitziry",
+  "eventTitle": "Boda de Óscar Oswaldo y Brenda Mitziry",
   "couple": {
     "partner1": "Óscar Oswaldo Díaz García",
-    "partner2": "Brenda Uitziry Sosa Valencia"
+    "partner2": "Brenda Mitziry Sosa Valencia"
   },
   "displayNames": {
     "partner1": "Óscar Oswaldo",
-    "partner2": "Brenda Uitziry"
+    "partner2": "Brenda Mitziry"
   },
   "date": "2026-11-21T10:00:00-06:00",
   "timezone": "America/Mexico_City",
@@ -63,9 +63,9 @@ export const oscarBrenda = {
       "alt": "Óscar y Brenda · Recuerdo 2"
     },
     {
-      "src": "/images/events/oscar-y-brenda/image copy 2.png",
-      "width": 1080,
-      "height": 1450,
+      "src": "/images/events/oscar-y-brenda/image copy 4.png",
+      "width": 1204,
+      "height": 1600,
       "alt": "Óscar y Brenda · Recuerdo 3"
     },
     {

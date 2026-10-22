@@ -8,3 +8,7 @@ El usuario ha reportado varias veces que el sobre abierto aparece en una esquina
 - Calibrar el ancho y la posición inferior según el cuerpo visible de cada imagen y su margen transparente; no copiar porcentajes entre imágenes distintas.
 - Comprobar que el cuerpo abierto quede centrado, tenga un ancho similar al cerrado y conserve sus proporciones en móvil y escritorio.
 - Si solo se pide corregir el abierto, conservar la imagen y presentación del sobre cerrado.
+
+## Recursos de invitaciones de clientes
+
+Por indicación del usuario, las nuevas invitaciones de clientes deben usar imágenes generadas con IA para los sobres y arreglos florales, como las invitaciones anteriores. No sustituirlos por `CssEnvelope` ni `CssFloralArrangement`; esos componentes se reservan para el creador de invitaciones del admin. Conservar las fotografías proporcionadas por el cliente. Esta preferencia no autoriza cambios retroactivos en otras invitaciones.

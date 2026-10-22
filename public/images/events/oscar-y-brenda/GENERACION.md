@@ -1,4 +1,4 @@
-# Óscar Oswaldo y Brenda Uitziry
+# Óscar Oswaldo y Brenda Mitziry
 
 Blanco y dorado, 21 de noviembre de 2026. Misa 10:00 a. m.; recepción 5:00 p. m. Música oscarybrenda.mp3 (Que me alcance la vida · Sin Bandera). Cuatro fotos originales; portada image copy 3.png. Confirmación por WhatsApp sin RSVP.
 
