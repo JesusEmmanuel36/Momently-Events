@@ -43,7 +43,7 @@ export function HeroSection({ wedding }) {
     <div className="hero__image"><Image src={wedding.images.hero} fill priority sizes="(max-width: 768px) 100vw, 58vw" alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></div>
     <div className="hero__wash" />
     </>}
-    <Botanical className="hero__botanical" />
+    {wedding.heroSettings?.flowers !== false && <Botanical className="hero__botanical" />}
     <Reveal className="hero__copy">
       <span className="eyebrow">{wedding.heroSubtitle}</span>
       <h1><span>{wedding.couple.bride}</span><i>&</i><span>{wedding.couple.groom}</span></h1>

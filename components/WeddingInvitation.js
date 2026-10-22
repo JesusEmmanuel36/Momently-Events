@@ -26,7 +26,7 @@ export function WeddingInvitation({ wedding, previewMode = false }) {
     {!previewMode && <audio ref={audioRef} src={wedding.music.src} loop preload="none" onError={() => setPlaying(false)} />}
     {!opened && <IntroScreen wedding={wedding} onOpen={openInvitation} leaving={leaving} />}
     <main className={!opened ? "invitation invitation--locked" : "invitation"}>
-      <HeroSection wedding={wedding} /><WelcomeSection wedding={wedding} /><CountdownSection wedding={wedding} />
+      <HeroSection key={wedding.heroSettings ? String(opened) : "hero"} wedding={wedding} /><WelcomeSection wedding={wedding} /><CountdownSection wedding={wedding} />
       {wedding.features.story && <StorySection wedding={wedding} />}{wedding.features.gallery && <GallerySection wedding={wedding} />}{wedding.features.video && <VideoSection wedding={wedding} />}
       {(wedding.features.ceremony || wedding.features.reception) && <LocationsSection wedding={wedding} />}{wedding.features.itinerary && <ScheduleSection wedding={wedding} />}{wedding.features.dressCode && <DressCodeSection wedding={wedding} />}
       {wedding.features.gifts && <GiftRegistrySection wedding={wedding} onToast={showToast} />}{wedding.features.hotels && <HotelsSection wedding={wedding} />}{wedding.features.important && <ImportantSection wedding={wedding} />}{wedding.features.calendar && <CalendarSection wedding={wedding} onToast={showToast} />}

@@ -55,3 +55,16 @@ test("creator retains independent cover colors, gallery order, gift copy and dis
  assert.equal(data.hero.gradientEnabled,false);assert.deepEqual(data.hero.colors,colors);assert.equal(data.galleryLayout,"collage");assert.equal(data.gallery[0].alt,"Second");assert.equal(data.giftMessage,"Sobre o regalo, con cariño.");assert.equal(data.sections.contact,false);
  assert.equal(eventInputSchema.safeParse({...base,heroColors:{names:"red"}}).success,false);assert.equal(eventInputSchema.safeParse({...base,galleryLayout:"unknown"}).success,false);
 });
+
+test("cover flowers and gradient color save independently of the overall theme",()=>{
+ const data=buildEventDocument(eventInputSchema.parse({...base,heroFlowers:false,heroGradientColor:"#582966"}),"admin").publicData;
+ assert.equal(data.hero.flowers,false);assert.equal(data.hero.gradientColor,"#582966");assert.deepEqual(data.theme,base.theme);
+ assert.equal(eventInputSchema.parse(base).heroFlowers,true);
+ assert.equal(eventInputSchema.safeParse({...base,heroGradientColor:"purple"}).success,false);
+});
+
+test("cover crop survives saving and rejects out-of-range zoom or position",()=>{
+ const hero=buildEventDocument(eventInputSchema.parse({...base,heroZoom:1.75,heroPositionX:20,heroPositionY:80}),"admin").publicData.hero;
+ assert.equal(hero.zoom,1.75);assert.equal(hero.positionX,20);assert.equal(hero.positionY,80);
+ for(const settings of [{heroZoom:.5},{heroZoom:3},{heroPositionX:-1},{heroPositionY:101}]) assert.equal(eventInputSchema.safeParse({...base,...settings}).success,false);
+});

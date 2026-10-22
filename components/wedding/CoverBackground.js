@@ -13,10 +13,10 @@ function CoverImage({ src, theme, settings, onReady }) {
   const [failed, setFailed] = useState(false);
   const ready = loaded || failed;
   const animated = settings.animated !== false;
-  const style = { "--cover-shade": coverShade(theme), "--cover-opacity": settings.gradientOpacity ?? .85, "--cover-blur": `${settings.blur ?? 6}px` };
+  const style = { "--cover-zoom": settings.zoom ?? 1, "--cover-x": `${settings.positionX ?? 50}%`, "--cover-y": `${settings.positionY ?? 35}%`, "--cover-shade": settings.gradientColor || coverShade(theme), "--cover-opacity": settings.gradientOpacity ?? .85, "--cover-blur": `${settings.blur ?? 6}px` };
   return <div className={`${styles.background} ${ready ? styles.ready : ""} ${animated ? styles.animated : ""}`} style={style} data-cover-background data-loaded={ready}>
     {!ready && <div className={styles.loading} role="status"><span className={styles.spinner}/><span className={styles.loadingLabel}>Cargando portada…</span></div>}
-    {!failed && <Image unoptimized src={src} fill priority sizes="100vw" alt="" className={styles.image} onLoad={() => {setLoaded(true); onReady?.();}} onError={() => {setFailed(true); onReady?.();}}/>}
+    {!failed && <div className={styles.frame}><Image unoptimized src={src} fill priority sizes="100vw" alt="" className={styles.image} onLoad={() => {setLoaded(true); onReady?.();}} onError={() => {setFailed(true); onReady?.();}}/></div>}
     {settings.gradientEnabled !== false && <><div className={styles.blur}/><div className={styles.gradient}/></>}
   </div>;
 }

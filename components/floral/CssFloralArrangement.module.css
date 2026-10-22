@@ -27,3 +27,5 @@
 .fillerCluster>b{position:absolute;left:38%;top:39%;width:26%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,var(--flower-highlight),var(--accent-flower-base),var(--accent-flower-shadow));box-shadow:0 .04cqw .07cqw #69473855}
 .pearls{position:absolute;inset:0;z-index:4}.pearls>i{position:absolute;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 22%,#fff,var(--flower-highlight) 17%,var(--accent-flower-light) 47%,var(--accent-flower-shadow) 90%);box-shadow:.07cqw .12cqw .09cqw #66503a40}
 @media(max-width:600px){.drawing{filter:drop-shadow(0 .4cqw .3cqw #5f483326)}.petal::after,.leaf::before{opacity:.25}}
+
+.lightweight{contain:layout style}.lightweight .drawing,.lightweight .rose,.lightweight .fillerCluster{filter:none}.lightweight .petal{box-shadow:inset 0 .1cqw .16cqw #fff6}.lightweight .petal::before,.lightweight .petal::after,.lightweight .leaf::before{display:none}.lightweight .leaf{box-shadow:none}
