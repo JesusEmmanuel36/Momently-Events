@@ -1,17 +1,18 @@
 "use client";
 
+import {WeddingSection} from "@/components/wedding/InvitationSection";
 import Image from "next/image";
 import { CalendarDays, Camera, Car, Clock, ExternalLink, GlassWater, Heart, MapPin, Music, Navigation, Sparkles, Trees, Umbrella, Users } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";
 
 export function LocationsSection({ wedding }) {
-  return <section className="locations" id="detalles">{[wedding.ceremony, wedding.reception].filter((place) => place.enabled !== false).map((place, index) => <article className={`location ${index ? "location--reverse" : ""}`} key={place.label}>
+  return <section className="locations" id="detalles">{[wedding.ceremony, wedding.reception].filter((place) => place.enabled !== false).map((place, index) => <WeddingSection wedding={wedding} name={place === wedding.ceremony ? "ceremony" : "reception"} key={place.label}><article className={`location ${index ? "location--reverse" : ""}`}>
     <div className="location__image"><Image src={place.image} fill sizes="(max-width: 768px) 100vw, 50vw" alt={place.name} className="cover" /></div>
     <Reveal className="location__content"><span className="eyebrow">{place.label}</span><MapPin className="location__icon" strokeWidth={1} /><h2>{place.name}</h2><strong>{place.time}</strong><p>{place.address}</p>
       {!place.hideMapLinks && <div className="button-row"><a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <ExternalLink size={15} /></a><a className="text-link" href={place.wazeUrl} target="_blank" rel="noreferrer"><Navigation size={15} /> Abrir en Waze</a></div>}
     </Reveal>
-  </article>)}</section>;
+  </article></WeddingSection>)}</section>;
 }
 
 const itineraryIcons = { heart: Heart, camera: Camera, glass: GlassWater, music: Music, sparkles: Sparkles };

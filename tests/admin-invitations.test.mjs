@@ -68,3 +68,30 @@ test("cover crop survives saving and rejects out-of-range zoom or position",()=>
  assert.equal(hero.zoom,1.75);assert.equal(hero.positionX,20);assert.equal(hero.positionY,80);
  for(const settings of [{heroZoom:.5},{heroZoom:3},{heroPositionX:-1},{heroPositionY:101}]) assert.equal(eventInputSchema.safeParse({...base,...settings}).success,false);
 });
+
+test("independent cover sizes and shadow persist with validation",()=>{
+ const sizes={subtitle:16,names:64,date:20,quote:22},shadow={enabled:true,intensity:.75,color:"#334455"};
+ const data=buildEventDocument(eventInputSchema.parse({...base,heroFontSizes:sizes,heroTextShadow:shadow}),"admin").publicData.hero;
+ assert.deepEqual(data.fontSizes,sizes);assert.deepEqual(data.textShadow,shadow);
+ for(const settings of [{heroFontSizes:{names:200}},{heroTextShadow:{intensity:2}},{heroTextShadow:{color:"red"}}])assert.equal(eventInputSchema.safeParse({...base,...settings}).success,false);
+});
+
+test("cover, heading and body font choices persist and reject unknown fonts",()=>{
+ const typography={cover:"script",headings:"georgia",body:"sans"};
+ const data=buildEventDocument(eventInputSchema.parse({...base,typography}),"admin").publicData;
+ assert.deepEqual(data.typography,typography);assert.equal(eventInputSchema.safeParse({...base,typography:{cover:"unknown"}}).success,false);
+});
+
+test("section colors and floral switches persist independently",()=>{
+ const sectionAppearance={welcome:{colorsEnabled:true,flowers:false,background:"#102030",text:"#FFFFFF",headings:"#D8C3A5",icons:"#AABBCC",button:"#332211",buttonText:"#FFFFFF"},gifts:{colorsEnabled:false,flowers:true}};
+ const data=buildEventDocument(eventInputSchema.parse({...base,sectionAppearance}),"admin").publicData;
+ assert.deepEqual(data.sectionAppearance,sectionAppearance);assert.equal(data.sectionAppearance.welcome.flowers,false);assert.equal(data.sectionAppearance.gifts.flowers,true);
+ assert.equal(eventInputSchema.safeParse({...base,sectionAppearance:{welcome:{background:"red"}}}).success,false);
+});
+
+test("envelope background and shared-cover toggle persist",()=>{
+ const data=buildEventDocument(eventInputSchema.parse({...base,introImageUrl:"https://example.com/envelope.jpg",introKeepForHero:true}),"admin").publicData;
+ assert.deepEqual(data.intro,{imageUrl:"https://example.com/envelope.jpg",keepForHero:true});
+ assert.equal(eventInputSchema.parse(base).introKeepForHero,false);
+ assert.equal(eventInputSchema.safeParse({...base,introImageUrl:"javascript:alert(1)"}).success,false);
+});

@@ -1,5 +1,7 @@
 "use client";
+import {heroTextStyle} from "@/lib/wedding/hero-typography";
 
+import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
 import Image from "next/image";
 import {CoverBackground} from "@/components/wedding/CoverBackground";
 import coverStyles from "@/components/wedding/CoverBackground.module.css";
@@ -9,7 +11,7 @@ import { Botanical, Reveal } from "@/components/ui";
 export function IntroScreen({ wedding, onOpen, leaving }) {
   const brideInitial = wedding.couple.bride.trim().charAt(0).toUpperCase(); const groomInitial = wedding.couple.groom.trim().charAt(0).toUpperCase();
   return <div className={`intro ${leaving ? "intro--leaving" : ""}`}>
-    <Image src={wedding.images.hero} alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} fill priority sizes="100vw" className="cover" />
+    {wedding.introSettings?.imageUrl ? <CoverBackground src={wedding.introSettings.imageUrl} theme={wedding.theme} settings={wedding.heroSettings}/> : <Image src={wedding.images.hero} alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} fill priority sizes="100vw" className="cover" />}
     <div className="intro__overlay" />
     <Botanical className="intro__branch intro__branch--left" />
     <Botanical className="intro__branch intro__branch--right" />
@@ -38,8 +40,8 @@ export function IntroScreen({ wedding, onOpen, leaving }) {
 }
 
 export function HeroSection({ wedding }) {
-  return <section className={`hero ${wedding.heroSettings ? `${coverStyles.creatorHero} ${wedding.heroSettings.animated === false ? coverStyles.staticHero : ""}` : ""}`} style={wedding.heroSettings ? Object.fromEntries(Object.entries(wedding.heroSettings.colors || {}).map(([key,value])=>[`--cover-${key}`,value])) : undefined} id="inicio">
-    {wedding.heroSettings ? <CoverBackground src={wedding.images.hero} theme={wedding.theme} settings={wedding.heroSettings}/> : <>
+  return <section className={`hero ${wedding.heroSettings ? `${coverStyles.creatorHero} ${wedding.heroSettings.animated === false ? coverStyles.staticHero : ""}` : ""}`} style={wedding.heroSettings ? heroTextStyle(wedding.heroSettings) : undefined} id="inicio">
+    {wedding.heroSettings ? <CoverBackground src={wedding.heroBackgroundUrl || wedding.images.hero} theme={wedding.theme} settings={wedding.heroSettings}/> : <>
     <div className="hero__image"><Image src={wedding.images.hero} fill priority sizes="(max-width: 768px) 100vw, 58vw" alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></div>
     <div className="hero__wash" />
     </>}
@@ -51,6 +53,7 @@ export function HeroSection({ wedding }) {
       {wedding.heroQuoteReference && <span className="hero__quote-reference">{wedding.heroQuoteReference}</span>}
       <p>{wedding.heroQuote}</p>
     </Reveal>
+    {wedding.heroSettings && wedding.creatorAppearanceData?.decorations?.flowers !== false && (wedding.creatorAppearanceData?.sectionAppearance?.hero?.flowers ?? wedding.heroSettings.flowers) !== false && <div className={coverStyles.heroFlowers} aria-hidden="true"><CssFloralArrangement lightweight colors={{flowers:wedding.creatorAppearanceData?.decorations?.lightFlowerColor || wedding.theme?.ivory,accentFlowers:wedding.creatorAppearanceData?.decorations?.flowerColor || wedding.theme?.rose,leaves:wedding.creatorAppearanceData?.decorations?.foliageColor || wedding.theme?.sage}}/></div>}
     <a className="hero__scroll" href="#bienvenida" aria-label="Continuar hacia la invitación"><ChevronDown /></a>
   </section>;
 }

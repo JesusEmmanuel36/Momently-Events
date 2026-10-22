@@ -18,3 +18,10 @@
 @media(prefers-reduced-motion:reduce){.animated.ready .image{animation:none;filter:none}}
 
 .frame{position:absolute;inset:0;transform:scale(var(--cover-zoom,1));transform-origin:var(--cover-x,50%) var(--cover-y,35%)}.frame .image{object-position:var(--cover-x,50%) var(--cover-y,35%)}
+
+.creatorHero :global(.hero__copy){text-shadow:var(--cover-text-shadow,none)}.creatorHero :global(.hero__copy .eyebrow){font-size:var(--cover-size-subtitle,.85rem)}.creatorHero :global(.hero__copy h1){font-size:var(--cover-size-names,clamp(2.8rem,8vw,6rem));overflow-wrap:anywhere}.creatorHero :global(.hero__rule){font-size:var(--cover-size-date,.85rem)}.creatorHero :global(.hero__copy p){font-size:var(--cover-size-quote,1.1rem)}
+
+.creatorShell{font-family:var(--invitation-body-font,var(--font-sans)),sans-serif}.creatorShell :global(h1),.creatorShell :global(h2),.creatorShell :global(h3){font-family:var(--invitation-headings-font,var(--font-serif)),serif}.creatorHero :global(.hero__copy),.creatorHero :global(.hero__copy h1){font-family:var(--invitation-cover-font,var(--font-serif)),serif}
+.creatorHero :global(.hero__copy p),.creatorHero :global(.hero__copy h1 i){font-family:var(--invitation-cover-font,var(--font-serif)),serif}.creatorShell :global(.section-heading h2),.creatorShell :global(.script){font-family:var(--invitation-headings-font,var(--font-script)),serif}.creatorShell :global(.welcome p){font-family:var(--invitation-body-font,var(--font-serif)),serif}
+
+.heroFlowers{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,620px);pointer-events:none;opacity:.7}
