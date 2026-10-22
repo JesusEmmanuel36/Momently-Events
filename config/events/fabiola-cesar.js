@@ -41,7 +41,7 @@ export const fabiolaCesar = {
     "name": "Rancho Santa Rita",
     "time": "4:00 p. m.",
     "address": "",
-    "mapsUrl": "https://maps.app.goo.gl/Pxesw7ePHGb36b2G",
+    "mapsUrl": "https://maps.app.goo.gl/K55hfDbeRe6NXE2z9",
     "illustration": "/images/events/fabiola-y-cesar/rancho.svg"
   },
   "itinerary": [
