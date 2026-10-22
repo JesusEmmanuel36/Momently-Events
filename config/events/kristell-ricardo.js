@@ -117,12 +117,6 @@ export const kristellRicardo = {
       "alt": "Kristell y Ricardo · Recuerdo 3"
     },
     {
-      "src": "/images/events/kristell-y-ricardo/image copy 4.png",
-      "width": 1066,
-      "height": 1600,
-      "alt": "Kristell y Ricardo · Recuerdo 4"
-    },
-    {
       "src": "/images/events/kristell-y-ricardo/image copy 10.png",
       "width": 1066,
       "height": 1600,
@@ -156,8 +150,8 @@ export const kristellRicardo = {
   ],
   "music": {
     "enabled": true,
-    "url": "/audio/kristell-y-ricardo.mp3",
-    "label": "Brillas · León Larregui"
+    "url": "/audio/Christina Perri - A Thousand Years [Official Music Video].mp3",
+    "label": "Nuestra canción"
   },
   "contact": {
     "phone": "9995683055",

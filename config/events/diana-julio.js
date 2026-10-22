@@ -25,9 +25,9 @@ export const dianaJulio = {
   "closingMessage": "Gracias por ser parte de esta nueva historia. Nos hará muy felices compartir este día tan especial contigo.",
   "ceremony": {
     "enabled": true,
-    "name": "Parroquia del Señor de la Misericordia",
+    "name": "Parroquia de la Divina Providencia",
     "time": "7:45 p. m.",
-    "mapsUrl": "https://maps.app.goo.gl/K4AwTEd9MPYsoPeFA?g_st=iw"
+    "mapsUrl": "https://maps.app.goo.gl/Cqq63GgNrdT3Nm6o8?g_st=iw"
   },
   "reception": {
     "enabled": true,

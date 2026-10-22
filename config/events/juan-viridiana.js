@@ -1,14 +1,14 @@
 export const juanViridiana = {
-  "publicEnabled": false,
+  "publicEnabled": true,
   "slug": "juan-y-viridiana",
   "templateKey": "juan-viridiana-ivory-gold-butter-wedding",
-  "eventTitle": "Boda de Juan Emilio y Viridiana",
+  "eventTitle": "Boda de Emilio y Viridiana",
   "couple": {
-    "partner1": "Juan Emilio Rodríguez Ibarra",
+    "partner1": "Emilio Rodríguez Ibarra",
     "partner2": "Viridiana Hernández Barranco"
   },
   "displayNames": {
-    "partner1": "Juan Emilio",
+    "partner1": "Emilio",
     "partner2": "Viridiana"
   },
   "date": "2027-04-03T12:30:00-06:00",
@@ -60,61 +60,61 @@ export const juanViridiana = {
       "src": "/images/events/juan-y-viridiana/image copy.png",
       "width": 900,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 1"
+      "alt": "Emilio y Viridiana · recuerdo 1"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 14.png",
       "width": 1200,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 2"
+      "alt": "Emilio y Viridiana · recuerdo 2"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 15.png",
       "width": 1280,
       "height": 960,
-      "alt": "Juan Emilio y Viridiana · recuerdo 3"
+      "alt": "Emilio y Viridiana · recuerdo 3"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 16.png",
       "width": 1280,
       "height": 960,
-      "alt": "Juan Emilio y Viridiana · recuerdo 4"
+      "alt": "Emilio y Viridiana · recuerdo 4"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 4.png",
       "width": 900,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 5"
+      "alt": "Emilio y Viridiana · recuerdo 5"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 5.png",
       "width": 900,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 6"
+      "alt": "Emilio y Viridiana · recuerdo 6"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 8.png",
       "width": 900,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 7"
+      "alt": "Emilio y Viridiana · recuerdo 7"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 9.png",
       "width": 1200,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 8"
+      "alt": "Emilio y Viridiana · recuerdo 8"
     },
     {
       "src": "/images/events/juan-y-viridiana/image copy 3.png",
       "width": 900,
       "height": 1600,
-      "alt": "Juan Emilio y Viridiana · recuerdo 9"
+      "alt": "Emilio y Viridiana · recuerdo 9"
     },
     {
       "src": "/images/events/juan-y-viridiana/image.png",
       "width": 1042,
       "height": 1290,
-      "alt": "Juan Emilio y Viridiana · recuerdo 10"
+      "alt": "Emilio y Viridiana · recuerdo 10"
     }
   ],
   "gifts": [],
