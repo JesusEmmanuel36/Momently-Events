@@ -50,3 +50,9 @@ Sin `open`, el componente maneja su propia apertura al tocar el sello. `defaultO
 El componente ocupa el ancho disponible y reserva el espacio superior necesario para abrir la solapa. El contenedor padre controla su posición dentro de una invitación. Su ancho máximo predeterminado es 880px.
 
 La ruta `/sobreprueba` permite probar iniciales, cuatro paletas y cada uno de los seis colores. Las invitaciones existentes conservan sus sobres actuales hasta que se integre explícitamente este componente en cada una.
+
+## Variante sencilla
+
+Usar `variant="simple"` para papel plano, moño de color sólido, sello detallado, sombra interior y sombra leve en el cierre; sin flores ni texturas en el papel. `showBow={false}` oculta el moño conservando el sello como botón. En el creador, el interruptor se guarda como `decorations.envelopeBow`. Conserva la apertura y accesibilidad. `colors.paper`, `colors.ribbon`, `colors.seal` y `colors.sealText` controlan papel, moño, botón e iniciales. En admin se guarda como `decorations.envelopeVariant`; la variante anterior sigue siendo la predeterminada. Disponible en la plantilla flexible y en `/sobreprueba`.
+
+El color de la hoja que sale del sobre se controla con `colors.letter`, independientemente del papel exterior, en ambas variantes. En el creador corresponde a `decorations.letterColor` (selector “Hoja interior del sobre”); en `/sobreprueba`, a “Hoja interior”. Si no se configura, conserva el aspecto anterior.

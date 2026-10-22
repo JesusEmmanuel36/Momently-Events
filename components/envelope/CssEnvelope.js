@@ -12,8 +12,8 @@ function Flowers({right=false}){
 
 /** Pure CSS envelope. `color` sets the ribbon and accent roses; `colors` overrides individual materials. */
 export function CssEnvelope({
-  color, colors, monogram="D", letter={}, children, open, defaultOpen=false,
-  onOpenChange, onOpened, showFlowers=true, maxWidth=880, className="",
+  variant="classic", color, colors, monogram="D", letter={}, children, open, defaultOpen=false,
+  onOpenChange, onOpened, showBow=true, showFlowers=true, maxWidth=880, className="",
   openLabel="Abrir invitación", disabled=false,
 }) {
   const [internalOpen,setInternalOpen]=useState(defaultOpen);
@@ -31,17 +31,17 @@ export function CssEnvelope({
   const letters=Array.from(text).length;
   const title=letter.title ?? "Momentos que\nse quedan.";
   const variables={...createEnvelopeTheme({color,colors}),"--envelope-width":typeof maxWidth==="number"?`${maxWidth}px`:maxWidth,"--monogram-size":letters===1?"8.1cqw":letters<=3?"4.7cqw":letters<=5?"3.8cqw":"3cqw"};
-  return <div className={`${styles.stage} ${className}`} style={variables} data-css-envelope data-open={isOpen}>
+  return <div className={`${styles.stage} ${variant === "simple" ? styles.simple : ""} ${className}`} style={variables} data-css-envelope data-bow={variant !== "simple" || showBow} data-variant={variant === "simple" ? "simple" : "classic"} data-open={isOpen}>
     <div className={`${styles.envelope} ${isOpen?styles.open:""}`}>
       <div className={styles.back}/><div className={styles.inner}/>
       <div className={styles.card} aria-hidden={!isOpen}>{children ?? <><span>{letter.eyebrow??"UNA INVITACIÓN PARA TI"}</span><h2>{title}</h2><div className={styles.cardRule}/><p>{letter.message??"Con todo nuestro cariño"}</p><strong>{letter.footer??"Momently Events"}</strong></>}</div>
       <div className={styles.pocketLeft}/><div className={styles.pocketRight}/><div className={styles.pocketBottom}/>
       <div className={styles.flap}><div className={styles.flapFront}/><div className={styles.flapBack}/></div>
-      <div className={styles.decoration}><div className={styles.ribbonBand}/><div className={styles.bow}>
+      <div className={`${styles.decoration} ${variant === "simple" && !showBow ? styles.noBow : ""}`}><div className={styles.ribbonBand}/><div className={styles.bow}>
         <div className={`${styles.tail} ${styles.tailLeft}`}/><div className={`${styles.tail} ${styles.tailRight}`}/>
         <div className={`${styles.loop} ${styles.loopLeft}`}/><div className={`${styles.loop} ${styles.loopRight}`}/><div className={styles.knot}/>
         <button className={styles.seal} onClick={reveal} disabled={disabled||isOpen} aria-label={openLabel} aria-expanded={isOpen}><span className={styles.sealRim}/><span className={styles.sealInner}/><span className={styles.monogram}>{text}</span></button>
-      </div></div>{showFlowers&&<><Flowers/><Flowers right/></>}
+      </div></div>{showFlowers&&variant!=="simple"&&<><Flowers/><Flowers right/></>}
     </div>
   </div>;
 }

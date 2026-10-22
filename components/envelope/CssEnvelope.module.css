@@ -100,7 +100,7 @@
   width: 70%;
   height: 85%;
   bottom: 5%;
-  background: var(--paper);
+  background: var(--letter-color,var(--paper));
   border: 1px solid var(--seal-base);
   box-shadow: 0 4px 15px #80684c35;
   display: flex;
@@ -504,3 +504,24 @@
 }
 }
 
+
+/* Flat alternative: single paper color, no texture or ambient shadow. */
+.simple{--paper:var(--paper-base);--copper:var(--seal-base)}
+.simple .envelope,.simple .bow,.simple .tail{filter:none}
+.simple .back,.simple .back::after,.simple .inner,.simple .pocketLeft,.simple .pocketRight,.simple .pocketBottom{background:var(--paper-base);box-shadow:none;border:0;filter:none;border-radius:0}
+.simple .back::after{display:none}
+.simple .pocketLeft,.simple .pocketRight,.simple .pocketBottom{inset:0}
+.simple .flap{filter:drop-shadow(0 2px 1px #0002);height:57%}
+.simple .flapFront,.simple .flapBack{background:var(--paper-base);clip-path:polygon(0 0,100% 0,50% 100%)}
+.simple .flapFront::after,.simple .flapBack::after{display:none}
+.simple .ribbonBand,.simple .loop,.simple .tail,.simple .knot{background:var(--ribbon-base);box-shadow:none;border:0}
+.simple .ribbonBand::after,.simple .loop::before,.simple .loop::after,.simple .tail::after{display:none}
+.simple .bow{left:30%;width:40%;top:29%;height:58%}
+.simple .loop{border:1px solid color-mix(in srgb,var(--ribbon-base),#000 9%)}
+.simple .seal{background:linear-gradient(125deg,var(--seal-shadow),var(--seal-highlight) 18%,var(--seal-base) 42%,var(--seal-light) 65%,var(--seal-shadow));border-radius:48% 51% 46% 52%/49% 47% 53% 50%}
+.simple .seal::after,.simple .sealRim,.simple .sealInner{display:block}
+.simple .monogram{color:var(--seal-text,var(--seal-deep))}
+.simple .card{box-shadow:0 4px 12px #0002;background:var(--letter-color,var(--paper-base))}
+
+.simple .inner{background:linear-gradient(180deg,color-mix(in srgb,var(--paper-base),#000 15%),var(--paper-base) 72%);box-shadow:inset 0 8px 14px #0002}
+.simple .noBow .ribbonBand,.simple .noBow .loop,.simple .noBow .tail,.simple .noBow .knot{display:none}

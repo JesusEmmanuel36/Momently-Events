@@ -22,7 +22,7 @@ export const fabiolaCesar = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "El amor nos encontró, el tiempo nos unió y hoy elegimos caminar juntos para siempre.",
-    "image": "/images/events/fabiola-y-cesar/ramas.svg"
+    "image": "/images/events/fabiola-y-cesar/hero.webp"
   },
   "verse": {
     "text": "De manera que ya no son dos, sino una sola carne. Pues bien, lo que Dios ha unido, no lo separe el hombre.",

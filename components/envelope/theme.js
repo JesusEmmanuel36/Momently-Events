@@ -14,6 +14,8 @@ export function createEnvelopeTheme({color,colors={}}={}){
     variables[`--${name}-shadow`]=mix(base,"#302018",.24);
     variables[`--${name}-deep`]=mix(base,"#302018",.42);
   }
+  if(colors.letter)variables["--letter-color"]=normalize(colors.letter,normalize(palette.paper,defaultEnvelopeColors.paper));
+  if(colors.sealText)variables["--seal-text"]=normalize(colors.sealText,"#303822");
   variables["--paper"]= "repeating-radial-gradient(ellipse at 23% 31%,#bda98c10 0 .6px,#ffffff00 .8px 3px),repeating-linear-gradient(32deg,#fff8 .2px,#dac8aa12 .7px,#fffa 1.1px,transparent 2.2px),linear-gradient(130deg,var(--paper-highlight),var(--paper-base) 48%,var(--paper-light) 80%,var(--paper-base))";
   variables["--copper"]= "linear-gradient(125deg,var(--seal-deep),var(--seal-highlight) 12%,var(--seal-shadow) 24%,var(--seal-light) 39%,var(--seal-deep) 49%,var(--seal-highlight) 58%,var(--seal-base) 78%,var(--seal-light))";
   return variables;
