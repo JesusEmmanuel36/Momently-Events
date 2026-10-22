@@ -2,11 +2,13 @@
 
 import { Check, ChevronDown, Copy, Gift, Heart, MessageCircle, Music2, Share2 } from "lucide-react";
 import { useState } from "react";
+import { GiftContent } from "@/components/wedding/GiftContent";
 import { Modal, Reveal, SectionHeading } from "@/components/ui";
 
 export function GiftRegistrySection({ wedding, onToast }) {
   const [bankOpen, setBankOpen] = useState(false);
   const copy = async () => { await navigator.clipboard.writeText(wedding.bank.clabe.replaceAll(" ", "")); onToast("CLABE copiada"); };
+  if (wedding.giftMessage !== undefined) return <section className="section gifts"><Reveal><GiftContent message={wedding.giftMessage} gifts={wedding.gifts} bank={wedding.bank}/></Reveal></section>;
   return <section className="section gifts"><Reveal><Gift strokeWidth={1} className="section-icon" /><SectionHeading eyebrow="Mesa de regalos" title="Tu presencia es nuestro mejor regalo" copy="Pero si deseas tener un detalle con nosotros, hemos preparado las siguientes opciones." /></Reveal>
     <Reveal className="gifts__links">{wedding.gifts.map((gift) => <a href={gift.url} target="_blank" rel="noreferrer" key={gift.name}>{gift.name}<span>↗</span></a>)}{wedding.bank.enabled && <button onClick={() => setBankOpen(true)}>Transferencia <span>＋</span></button>}</Reveal>
     {wedding.bank.enabled && <Modal open={bankOpen} onClose={() => setBankOpen(false)} label="Datos para transferencia"><span className="eyebrow">Transferencia</span><h2>Gracias por tu cariño</h2><dl className="bank-data"><div><dt>Banco</dt><dd>{wedding.bank.bank}</dd></div><div><dt>Titular</dt><dd>{wedding.bank.holder}</dd></div><div><dt>CLABE</dt><dd>{wedding.bank.clabe}</dd></div><div><dt>Cuenta</dt><dd>{wedding.bank.account}</dd></div></dl><button className="button" onClick={copy}><Copy size={16} /> Copiar CLABE</button></Modal>}
@@ -64,5 +66,5 @@ export function ShareContact({ wedding, onToast }) {
     const data = { title: `Boda de ${wedding.couple.bride} y ${wedding.couple.groom}`, text: wedding.heroQuote, url: window.location.href };
     try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); onToast("Enlace copiado"); } } catch (error) { if (error?.name !== "AbortError") onToast("No fue posible compartir el enlace"); }
   };
-  return <section className="share"><Reveal><Heart strokeWidth={1} /><h2>¿Tienes alguna duda?</h2><p>Estamos felices de ayudarte con cualquier detalle.</p><div className="button-row"><button className="button" onClick={share}><Share2 size={16} /> Compartir invitación</button>{wedding.whatsapp && <a className="text-link" href={wedding.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Contactar por WhatsApp</a>}</div></Reveal></section>;
+  return <section className="share"><Reveal><Heart strokeWidth={1} /><h2>¿Tienes alguna duda?</h2><p>Estamos felices de ayudarte con cualquier detalle.</p><div className="button-row"><button className="button" onClick={share}><Share2 size={16} /> Compartir invitación</button>{wedding.whatsapp && <a className="text-link" href={wedding.whatsappConfirmation ? `${wedding.whatsapp}${wedding.whatsapp.includes("?") ? "&" : "?"}text=${encodeURIComponent(`Hola, quiero confirmar mi asistencia a ${wedding.couple.bride} y ${wedding.couple.groom}.`)}` : wedding.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17} /> {wedding.whatsappConfirmation ? "Confirmar por WhatsApp" : "Contactar por WhatsApp"}</a>}</div></Reveal></section>;
 }

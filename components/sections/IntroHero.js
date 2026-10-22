@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import {CoverBackground} from "@/components/wedding/CoverBackground";
+import coverStyles from "@/components/wedding/CoverBackground.module.css";
 import { ChevronDown, Heart } from "lucide-react";
 import { Botanical, Reveal } from "@/components/ui";
 
@@ -36,9 +38,11 @@ export function IntroScreen({ wedding, onOpen, leaving }) {
 }
 
 export function HeroSection({ wedding }) {
-  return <section className="hero" id="inicio">
+  return <section className={`hero ${wedding.heroSettings ? `${coverStyles.creatorHero} ${wedding.heroSettings.animated === false ? coverStyles.staticHero : ""}` : ""}`} style={wedding.heroSettings ? Object.fromEntries(Object.entries(wedding.heroSettings.colors || {}).map(([key,value])=>[`--cover-${key}`,value])) : undefined} id="inicio">
+    {wedding.heroSettings ? <CoverBackground src={wedding.images.hero} theme={wedding.theme} settings={wedding.heroSettings}/> : <>
     <div className="hero__image"><Image src={wedding.images.hero} fill priority sizes="(max-width: 768px) 100vw, 58vw" alt={`${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></div>
     <div className="hero__wash" />
+    </>}
     <Botanical className="hero__botanical" />
     <Reveal className="hero__copy">
       <span className="eyebrow">{wedding.heroSubtitle}</span>

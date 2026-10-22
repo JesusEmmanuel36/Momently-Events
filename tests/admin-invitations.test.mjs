@@ -37,3 +37,21 @@ test("creator cannot shadow existing file-based invitations",()=>{
   assert.throws(()=>assertAvailableTemplatePath("alejandra-y-david"),e=>e.status===409);
   assert.doesNotThrow(()=>assertAvailableTemplatePath("new-invitation-unique-test"));
 });
+
+
+test("cover gradient, blur and animation settings survive saving; invalid values are rejected",()=>{
+  const parsed=eventInputSchema.parse({...base,heroImageUrl:"https://example.com/background.jpg",heroGradientOpacity:.7,heroBlur:12,heroAnimated:false});
+  const hero=buildEventDocument(parsed,"admin").publicData.hero;
+  assert.equal(hero.imageUrl,"https://example.com/background.jpg");assert.equal(hero.gradientOpacity,.7);assert.equal(hero.blur,12);assert.equal(hero.animated,false);
+  assert.equal(eventInputSchema.safeParse({...base,heroBlur:30}).success,false);
+  assert.equal(eventInputSchema.safeParse({...base,heroGradientOpacity:2}).success,false);
+  assert.equal(eventInputSchema.parse(base).heroAnimated,true);
+});
+
+test("creator retains independent cover colors, gallery order, gift copy and disabled WhatsApp",()=>{
+ const colors={subtitle:"#112233",names:"#223344",date:"#334455",quote:"#445566"};
+ const parsed=eventInputSchema.parse({...base,heroGradientEnabled:false,heroColors:colors,galleryLayout:"collage",gallery:[{id:"second",url:"https://example.com/second.jpg",alt:"Second",order:0},{id:"first",url:"https://example.com/first.jpg",alt:"First",order:1}],giftMessage:"Sobre o regalo, con cariño.",sections:{...base.sections,contact:false}});
+ const data=buildEventDocument(parsed,"admin").publicData;
+ assert.equal(data.hero.gradientEnabled,false);assert.deepEqual(data.hero.colors,colors);assert.equal(data.galleryLayout,"collage");assert.equal(data.gallery[0].alt,"Second");assert.equal(data.giftMessage,"Sobre o regalo, con cariño.");assert.equal(data.sections.contact,false);
+ assert.equal(eventInputSchema.safeParse({...base,heroColors:{names:"red"}}).success,false);assert.equal(eventInputSchema.safeParse({...base,galleryLayout:"unknown"}).success,false);
+});

@@ -8,20 +8,29 @@ function MobileCanvas({children}) {
   const frame = useRef(null);
   const [target,setTarget] = useState(null);
   useEffect(() => {
-    const doc=frame.current?.contentDocument;
-    if(!doc)return;
-    doc.documentElement.lang="es";
-    doc.body.style.margin="0";
-    const copyStyles=()=>{
-      doc.head.querySelectorAll('[data-preview-style]').forEach(node=>node.remove());
-      document.head.querySelectorAll('style,link[rel="stylesheet"]').forEach(node=>{const copy=node.cloneNode(true);copy.setAttribute('data-preview-style','');doc.head.appendChild(copy);});
-      doc.documentElement.className=document.documentElement.className;
-      doc.body.className=document.body.className;
+    const iframe = frame.current;
+    if (!iframe) return;
+    let observer;
+    const mount = () => {
+      const doc = iframe.contentDocument;
+      if (!doc?.body) return;
+      observer?.disconnect();
+      doc.documentElement.lang = "es";
+      doc.body.style.margin = "0";
+      const copyStyles = () => {
+        doc.head.querySelectorAll('[data-preview-style]').forEach(node => node.remove());
+        document.head.querySelectorAll('style,link[rel="stylesheet"]').forEach(node => {const copy=node.cloneNode(true);copy.setAttribute('data-preview-style','');doc.head.appendChild(copy);});
+        doc.documentElement.className=document.documentElement.className;
+        doc.body.className=document.body.className;
+      };
+      copyStyles();
+      setTarget(doc.body);
+      observer=new MutationObserver(copyStyles);
+      observer.observe(document.head,{childList:true,subtree:true,characterData:true});
     };
-    copyStyles();setTarget(doc.body);
-    const observer=new MutationObserver(copyStyles);
-    observer.observe(document.head,{childList:true,subtree:true,characterData:true});
-    return()=>observer.disconnect();
+    iframe.addEventListener("load", mount);
+    if (iframe.contentDocument?.readyState === "complete") mount();
+    return () => {iframe.removeEventListener("load", mount);observer?.disconnect();};
   },[]);
   return <><iframe ref={frame} title="Vista previa de la invitación en celular" className="live-preview__phone"/>{target&&createPortal(children,target)}</>;
 }

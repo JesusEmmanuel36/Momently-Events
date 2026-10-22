@@ -46,7 +46,7 @@ export function GallerySection({ wedding, heading, imageSizes = "(max-width: 768
       <span>{String(active + 1).padStart(2, "0")} / {String(wedding.images.gallery.length).padStart(2, "0")}</span>
     </div>) : null;
   return <section className="section gallery"><Reveal><SectionHeading eyebrow={heading?.eyebrow || "Nuestros momentos"} title={heading?.title || "Donde vive el amor"} copy={heading?.copy || "Un vistazo a las memorias que nos trajeron hasta aquí."} /></Reveal>
-    <div className="gallery__grid">{wedding.images.gallery.map((src, index) => <Reveal className={`gallery__item gallery__item--${index + 1}`} key={`${src}-${index}`}>
+    <div className={`gallery__grid ${wedding.galleryLayout ? `gallery__grid--${wedding.galleryLayout}` : ""}`}>{wedding.images.gallery.map((src, index) => <Reveal className={`gallery__item gallery__item--${index + 1}`} key={`${src}-${index}`}>
       <button onClick={() => setActive(index)} aria-label={`Abrir fotografía ${index + 1}`}><Image src={src} fill sizes={imageSizes} alt={wedding.galleryItems?.[index]?.alt || `Momento de ${wedding.couple.bride} y ${wedding.couple.groom}`} className="cover" /></button>
     </Reveal>)}</div>
     {fixedOverlay && lightbox ? createPortal(lightbox, document.body) : lightbox}
