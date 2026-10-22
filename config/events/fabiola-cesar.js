@@ -82,12 +82,12 @@ export const fabiolaCesar = {
     "label": "Nuestra canción"
   },
   "theme": {
-    "primary": "#526449",
-    "dark": "#303E2F",
-    "champagne": "#B39A5E",
-    "cream": "#EAE2D1",
-    "ivory": "#F8F4EB",
-    "rose": "#DED1B7",
-    "sage": "#8D9B79"
+    "primary": "#657044",
+    "dark": "#303822",
+    "champagne": "#dac9a5",
+    "cream": "#fbf6eb",
+    "ivory": "#eee4d0",
+    "rose": "#cbd0b9",
+    "sage": "#a3aa8c"
   }
 };

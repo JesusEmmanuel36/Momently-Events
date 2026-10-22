@@ -2,8 +2,7 @@
 import Image from "next/image";
 import {useEffect,useRef,useState} from "react";
 import {ChevronDown,Church,Heart,MapPin,Pause,Play,Utensils} from "lucide-react";
-import {CssEnvelope} from "@/components/envelope/CssEnvelope";
-import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
+import {PhotographicEnvelope} from "@/components/events/shared/PhotographicEnvelope";
 import {Reveal} from "@/components/ui";
 import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
 import styles from "./FabiolaCesar.module.css";
@@ -16,16 +15,15 @@ function Countdown({date}){
 }
 export function FabiolaCesarInvitation({wedding,pass=null,passToken=null}){
  const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[playing,setPlaying]=useState(false),[musicError,setMusicError]=useState(false);const audio=useRef(null);
- const colors={paper:'#F4ECDD',ribbon:'#647557',seal:'#BA9D58',flowers:'#F8F4EB',accentFlowers:'#DBD0B8',leaves:'#81916B'};
  const open=()=>{if(opening)return;setOpening(true);audio.current?.play().catch(()=>{});};
  const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'});};
  const toggleMusic=()=>{if(playing)audio.current?.pause();else audio.current?.play().catch(()=>setMusicError(true));};
  return <div className={styles.invitation}>
   <audio ref={audio} src={wedding.music.url} loop preload="none" onPlay={()=>{setPlaying(true);setMusicError(false);}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>
-  {!opened?<section className={styles.intro}><div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1><p>Fabiola y César</p></div><div className={styles.envelope}><CssEnvelope colors={colors} monogram="F&C" open={opening} onOpenChange={open} onOpened={finish} maxWidth={680} letter={{eyebrow:'Nos casamos',title:'Fabiola y César',message:wedding.dateDisplay,footer:'Con todo nuestro cariño'}}/></div><button className={styles.button} onClick={open} disabled={opening}>{opening?'Abriendo…':'Abrir invitación'}</button></section>:<main>
+  {!opened?<section className={styles.intro}><div className={styles.introTitle}><span>Nuestra boda</span><h1>Una invitación para ti</h1><p>Fabiola y César</p></div><div className={styles.envelope}><PhotographicEnvelope assets="/images/events/fabiola-y-cesar" opening={opening} onOpen={open} onOpened={finish} title="Fabiola y César" subtitle="Nos casamos" date={wedding.dateDisplay} openWidth={130} openBottom={-5} sealTop={55}/></div><button className={styles.button} onClick={open} disabled={opening}>{opening?'Abriendo…':'Abrir invitación'}</button></section>:<main>
    <section className={styles.hero} id="inicio"><div className={styles.heroFrame}><span>Nuestra boda</span><h1><span>Fabiola</span><i>&amp;</i><span>César</span></h1><div className={styles.goldRule}/><p>Sábado</p><p className={styles.date}>14 de noviembre de 2026</p><Heart size={20} strokeWidth={1}/></div><a href="#nuestra-union" className={styles.scroll} aria-label="Descubrir invitación"><ChevronDown/></a></section>
    {pass&&<section className={styles.passNote}><p>Una invitación para <strong>{pass.displayName}</strong></p><span>{pass.allowedSeats} {pass.allowedSeats===1?'lugar reservado':'lugares reservados'}</span><a className={styles.button} href="#tu-pase">Confirmar asistencia</a></section>}
-   <section className={styles.section} id="nuestra-union"><Reveal><span className={styles.kicker}>El comienzo de nuestra vida juntos</span><h2>Nos elegimos para siempre</h2><p className={styles.quote}>“{wedding.hero.quote}”</p><div className={styles.floral} aria-hidden="true"><CssFloralArrangement lightweight colors={colors}/></div><p>{wedding.couple.partner1}<br/>&amp;<br/>{wedding.couple.partner2}</p></Reveal></section>
+   <section className={styles.section} id="nuestra-union"><Reveal><span className={styles.kicker}>El comienzo de nuestra vida juntos</span><h2>Nos elegimos para siempre</h2><p className={styles.quote}>“{wedding.hero.quote}”</p><div className={styles.floral} aria-hidden="true"><Image src="/images/events/fabiola-y-cesar/floral.webp" alt="" width={1536} height={1024} sizes="(max-width:700px) 90vw,420px"/></div><p>{wedding.couple.partner1}<br/>&amp;<br/>{wedding.couple.partner2}</p></Reveal></section>
    <section className={`${styles.section} ${styles.verse}`}><Reveal><Heart size={24} strokeWidth={1}/><p>{wedding.verse.text}</p><span>{wedding.verse.reference}</span></Reveal></section>
    <section className={styles.section}><Reveal><span className={styles.kicker}>Con la bendición de Dios</span><h2>Y de nuestros padres</h2><div className={styles.parents}>{[['Papás de la novia',wedding.family.brideParents],['Papás del novio',wedding.family.groomParents]].map(([label,names])=><article key={label}><h3>{label}</h3>{names.map(name=><p key={name}>{name}</p>)}</article>)}</div></Reveal></section>
    <section className={`${styles.section} ${styles.sageSection}`}><Reveal><span className={styles.kicker}>El gran día está cerca</span><h2>Nos vemos en…</h2><Countdown date={wedding.date}/></Reveal></section>

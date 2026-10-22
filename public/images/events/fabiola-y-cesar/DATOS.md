@@ -6,7 +6,7 @@ Misa: Parroquia de San Andrés Jilotepec, 14:00. Recepción: Rancho Santa Rita, 
 
 Audio existente: `/audio/fabiolaycesar.mp3`.
 
-Las ilustraciones SVG de iglesia, rancho y ramas se crearon para esta invitación. Sobre CSS con apertura y arreglo floral CSS ligero. Frase y Mateo 19:6 con mayúsculas y minúsculas normales, sin cursivas.
+Las ilustraciones SVG de iglesia, rancho y ramas se crearon para esta invitación. Sobre generado con IA con sello F&C y arreglo floral de IA de Caleb y Ciriam. Misma paleta verde olivo, beige champaña y dorado, incluido el papel del sobre. Frase y Mateo 19:6 con mayúsculas y minúsculas normales, sin cursivas.
 
 Para vincular una cuenta, usar `node scripts/provision-event.js fabiola-y-cesar CORREO` cuando se proporcione el correo. No se ha inventado contacto de WhatsApp.
 
