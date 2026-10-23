@@ -18,3 +18,5 @@ Sin familiares, padrinos ni regalos inventados. No se creó cuenta ni registro F
 - Se tomó como referencia Caleb y Ciriam: foto desenfocada detrás del sobre, encabezado «Una invitación para ti», portada con nombre centrado y arreglo floral al abrir.
 - Se mantienen los sobres de IA, su calibración y el contenido restante.
 - Audio conectado a `/audio/yamileth-princesa-de-papa.mp3`, copia sin espacios ni caracteres Unicode de la canción solicitada. Se conserva la fuente original. Precarga automática para la reproducción al abrir.
+
+Papás: Héctor Vázquez Juárez y Maritza de los Santos Galán. Padrino: Eustaquio de los Santos Pérez. Sección agregada después de la bienvenida.

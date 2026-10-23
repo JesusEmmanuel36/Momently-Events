@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import {useEffect,useState} from "react";
-import {Compass,Drum,Footprints,GlassWater,Headphones,Heart,MapPin,Mic,Moon,Sparkles,Utensils,X} from "lucide-react";
+import {useEffect,useRef,useState} from "react";
+import {Compass,Drum,Footprints,GlassWater,Headphones,Heart,MapPin,Mic,Moon,Pause,Play,Sparkles,Utensils,X} from "lucide-react";
 import {TraditionalIntro,TraditionalHero} from "@/components/events/shared/TraditionalCover";
 import {RSVPSection} from "@/components/sections/GuestActions";
 import {Reveal} from "@/components/ui";
@@ -10,11 +10,13 @@ const assets='/images/events/giselle-y-victor';
 const icons={rings:Heart,toast:GlassWater,food:Utensils,mic:Mic,heart:Heart,drum:Drum,headphones:Headphones,sparkles:Sparkles,moon:Moon};
 function Countdown({date}){const [remaining,setRemaining]=useState(null);useEffect(()=>{const tick=()=>setRemaining(Math.max(0,new Date(date).getTime()-Date.now()));tick();const timer=setInterval(tick,1000);return()=>clearInterval(timer)},[date]);const seconds=Math.floor((remaining||0)/1000),values=[Math.floor(seconds/86400),Math.floor(seconds/3600)%24,Math.floor(seconds/60)%60,seconds%60];return <div className={styles.countdown}>{['Días','Horas','Minutos','Segundos'].map((label,i)=><div key={label}><strong>{remaining===null?'—':String(values[i]).padStart(2,'0')}</strong><span>{label}</span></div>)}</div>}
 export function GisselaVictorInvitation({wedding}){
- const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[photo,setPhoto]=useState(null);
+ const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[photo,setPhoto]=useState(null),[playing,setPlaying]=useState(false),[musicError,setMusicError]=useState(false);const audio=useRef(null);
  useEffect(()=>{if(!photo)return;const key=e=>{if(e.key==='Escape')setPhoto(null)};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[photo]);
- const open=()=>{if(!opening)setOpening(true)};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
+ const playMusic=()=>audio.current?.play().catch(()=>setMusicError(true));
+ const open=()=>{if(opening)return;setOpening(true);playMusic()};const toggleMusic=()=>{if(playing)audio.current?.pause();else playMusic()};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
  const rsvp={isLive:true,eventId:wedding.slug,slug:wedding.slug,couple:{bride:'Gissela',groom:'Víctor'},rsvpDisplayName:'G',rsvpTitle:'¿Nos acompañas?',rsvpMessageLabel:'Un mensaje para Gissela y Víctor',rsvpSettings:{askCompanions:false,maxCompanions:0,askMenuPreference:false,askAllergies:false,askMessage:true,askSongSuggestion:false}};
  return <div className={styles.invitation}>
+ {wedding.music.enabled&&<audio ref={audio} src={wedding.music.url} loop preload="auto" onPlay={()=>{setPlaying(true);setMusicError(false)}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>}
  {!opened?<TraditionalIntro image={wedding.hero.image} assets={assets} names={["Gissela", "Víctor"]} subtitle="Nuestra boda" date={wedding.dateDisplay} opening={opening} onOpen={open} onOpened={finish} openWidth={125} openBottom={2.3} sealTop={58}/>:<main>
  <TraditionalHero image={wedding.hero.image} assets={assets} names={["Gissela", "Víctor"]} subtitle="Nuestra boda" date={wedding.dateDisplay} href="#nuestra-historia"/>
  <section className={`${styles.section} ${styles.welcome}`} id="nuestra-historia"><Reveal><Image src={`${assets}/floral.webp`} alt="Rosas marfil y rosa suave, eucalipto y pampas" width={1536} height={1024} sizes="(max-width:700px) 92vw,560px" className={styles.floral} unoptimized/><span className={styles.kicker}>El inicio de nuestra historia</span><h2>Una aventura juntos</h2><p className={styles.quote}>{wedding.hero.quote}</p><div className={styles.names}><span>Gissela Méndez</span><Heart size={19} strokeWidth={1}/><span>Víctor Quiroz</span></div></Reveal></section>
@@ -26,6 +28,7 @@ export function GisselaVictorInvitation({wedding}){
  <div className={styles.rsvp}><RSVPSection wedding={rsvp}/></div>
  <section className={`${styles.section} ${styles.closing}`}><Reveal><Image src={`${assets}/floral.webp`} alt="" width={1536} height={1024} sizes="(max-width:700px) 80vw,420px" className={styles.closingFloral} unoptimized/><h2>Será un honor<br/>que nos acompañes</h2><p>Con cariño,</p><p className={styles.signature}>Gissela &amp; Víctor</p><span>28 · Noviembre · 2026</span></Reveal></section>
  </main>}
+ {opened&&wedding.music.enabled&&<button type="button" className={styles.music} onClick={toggleMusic} aria-label={playing?'Pausar música':'Reproducir música'}>{playing?<Pause size={17}/>:<Play size={17}/>}<span>{musicError?'Toca para reintentar':wedding.music.label}</span></button>}
  {photo&&<div className={styles.lightbox} role="dialog" aria-modal="true" aria-label="Fotografía ampliada" onClick={()=>setPhoto(null)}><button type="button" autoFocus onClick={()=>setPhoto(null)} aria-label="Cerrar fotografía"><X/></button><Image src={photo.url} alt={photo.alt} fill sizes="100vw" onClick={e=>e.stopPropagation()}/></div>}
  </div>
 }

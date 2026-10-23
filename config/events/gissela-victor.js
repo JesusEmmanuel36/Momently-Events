@@ -102,30 +102,6 @@ export const gisselaVictor = {
   ],
   "gallery": [
     {
-      "url": "/images/events/giselle-y-victor/image copy 10.png",
-      "width": 1600,
-      "height": 1067,
-      "alt": "Gissela y Víctor celebrando su amor"
-    },
-    {
-      "url": "/images/events/giselle-y-victor/image copy 11.png",
-      "width": 1600,
-      "height": 1067,
-      "alt": "Un abrazo de Gissela y Víctor"
-    },
-    {
-      "url": "/images/events/giselle-y-victor/image copy 9.png",
-      "width": 1067,
-      "height": 1600,
-      "alt": "Gissela y Víctor: la aventura nos espera"
-    },
-    {
-      "url": "/images/events/giselle-y-victor/image copy 8.png",
-      "width": 1179,
-      "height": 777,
-      "alt": "La pareja en su celebración"
-    },
-    {
       "url": "/images/events/giselle-y-victor/image copy 7.png",
       "width": 1067,
       "height": 1600,
@@ -163,9 +139,9 @@ export const gisselaVictor = {
     }
   ],
   "music": {
-    "enabled": false,
-    "url": "",
-    "label": ""
+    "enabled": true,
+    "url": "/audio/gisella-y-victor.mp3",
+    "label": "Nuestra canción"
   },
   "theme": {
     "primary": "#566B50",

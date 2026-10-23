@@ -47,6 +47,10 @@ export const yamilethXv = {
     "askCompanions": true,
     "channel": "whatsapp"
   },
+  "family": {
+    "parents": ["Héctor Vázquez Juárez", "Maritza de los Santos Galán"],
+    "godfather": "Eustaquio de los Santos Pérez"
+  },
   "gallery": [],
   "music": {
     "enabled": true,

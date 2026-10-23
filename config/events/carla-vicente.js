@@ -57,7 +57,7 @@ export const carlaVicente = {
     }
   ],
   "contact": {
-    "phone": "7774288498"
+    "phone": "7776243957"
   },
   "music": {
     "enabled": true,

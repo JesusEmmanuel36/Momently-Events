@@ -16,3 +16,7 @@ RSVP breve: nombre, asistencia y mensaje opcional. Sin acompañantes ni alergias
 
 ## Corrección de estructura de portada
 Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.
+
+Música agregada: `/audio/gisella-y-victor.mp3`. Reproducción al abrir, bucle y botón para pausar o reintentar.
+
+Galería de la pareja actualizada: únicamente `image copy 7.png`. Se conservan la portada `image copy 9.png` y las siete imágenes de montañas/paisajes.
