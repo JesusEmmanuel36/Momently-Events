@@ -28,14 +28,14 @@ export const kristellRicardo = {
     "name": "Iglesia María Inmaculada",
     "time": "8:00 p. m.",
     "address": "Calle 22 S/N, entre 19 y 21, Centro, Kanasín",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/5gu3ViJveScowgGu8?g_st=iw"
   },
   "reception": {
     "enabled": true,
     "name": "Hacienda Yu’um Beh",
     "time": "9:30 p. m.",
     "address": "Calle 28, lote 6, entre 1 y 3, Santa Rosa, Kanasín",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/BXU1Mo9nN9Ai4Vcq9?g_st=iw"
   },
   "dressCode": {
     "title": "Vestido largo",

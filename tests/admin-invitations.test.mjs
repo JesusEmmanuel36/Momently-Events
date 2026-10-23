@@ -108,3 +108,11 @@ test("creator pass toggle persists independently of RSVP availability",()=>{
  assert.equal(enabled.settings.personalizedPasses.enabled,true);assert.equal(enabled.settings.rsvp.enabled,false);
  assert.equal(buildEventDocument(eventInputSchema.parse(base),"admin").settings.personalizedPasses.enabled,false);
 });
+
+test("creator saves independent dark surfaces and detailed section colors without rewriting legacy data",()=>{
+ const legacy=eventInputSchema.parse(base);assert.equal(legacy.theme.surfaceDark,undefined);assert.deepEqual(legacy.theme,base.theme);
+ const input={...base,theme:{...base.theme,dark:"#FF0000",surfaceDark:"#123456"},sectionAppearance:{countdown:{colorsEnabled:true,numbers:"#112233",labels:"#AABBCC"},intro:{colorsEnabled:true,paper:"#ABCDEF",letter:"#FEDCBA"},rsvp:{colorsEnabled:true,asideBackground:"#445566",asideText:"#FFFFFF",inputText:"#123456"}}};
+ const doc=buildEventDocument(eventInputSchema.parse(input),"admin");
+ assert.equal(doc.publicData.theme.surfaceDark,"#123456");assert.equal(doc.publicData.theme.dark,"#FF0000");assert.equal(doc.publicData.sectionAppearance.countdown.labels,"#AABBCC");assert.equal(doc.publicData.sectionAppearance.intro.paper,"#ABCDEF");assert.equal(doc.publicData.sectionAppearance.rsvp.asideBackground,"#445566");
+ assert.equal(eventInputSchema.safeParse({...input,sectionAppearance:{countdown:{labels:"bad"}}}).success,false);
+});

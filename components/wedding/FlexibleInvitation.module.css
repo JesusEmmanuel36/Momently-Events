@@ -19,3 +19,5 @@
 .invitation{font-family:var(--invitation-body-font,var(--font-sans)),sans-serif}.invitation h1,.invitation h2,.invitation h3{font-family:var(--invitation-headings-font,var(--font-serif)),serif}.hero .heroCopy,.hero .heroCopy h1{font-family:var(--invitation-cover-font,var(--font-serif)),serif}
 
 .intro{position:relative;isolation:isolate}.intro>span,.intro>.cssEnvelope,.intro>.openButton{position:relative;z-index:2}.photoIntro>span{color:var(--section-text,#fff);text-shadow:0 2px 10px #0006}
+
+.invitation :global(.countdown),.invitation :global(.rsvp__aside){background:var(--surface-dark,var(--coffee-dark))}

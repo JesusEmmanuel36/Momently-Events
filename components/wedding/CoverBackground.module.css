@@ -25,3 +25,5 @@
 .creatorHero :global(.hero__copy p),.creatorHero :global(.hero__copy h1 i){font-family:var(--invitation-cover-font,var(--font-serif)),serif}.creatorShell :global(.section-heading h2),.creatorShell :global(.script){font-family:var(--invitation-headings-font,var(--font-script)),serif}.creatorShell :global(.welcome p){font-family:var(--invitation-body-font,var(--font-serif)),serif}
 
 .heroFlowers{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,620px);pointer-events:none;opacity:.7}
+
+.creatorShell :global(.countdown),.creatorShell :global(.rsvp__aside){background:var(--surface-dark,var(--coffee-dark))}
