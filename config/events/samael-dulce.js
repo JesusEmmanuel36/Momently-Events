@@ -19,7 +19,7 @@ export const samaelDulce = {
   "hero": {
     "subtitle": "¡Nos casamos!",
     "quote": "Y queremos que formes parte de este día tan especial.",
-    "image": "/images/events/samael-y-dulce/hero.webp"
+    "image": "/images/events/samael-y-dulce/image.png"
   },
   "welcome": "Porque has sido parte de nuestro camino, queremos que también lo seas de nuestro destino. Nos encantaría que nos acompañes a celebrar nuestra boda. ¡Hagamos de este día un recuerdo inolvidable!",
   "guestMessage": "¡Ya tenemos la comida, los refrescos y el pastel, solo falta lo más importante y eres tú!",

@@ -13,3 +13,5 @@ Mensajes de bienvenida, principal, invitados y recordatorio conservados. Itinera
 
 ## Corrección de estructura de portada
 Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.
+
+Portada actualizada por solicitud: fotografía de niños `image.png`, también como fondo del sobre. Se retira su repetición en la sección de recuerdos, conservando el mensaje para invitados.

@@ -20,3 +20,7 @@ Sin familiares, padrinos ni regalos inventados. No se creó cuenta ni registro F
 - Audio conectado a `/audio/yamileth-princesa-de-papa.mp3`, copia sin espacios ni caracteres Unicode de la canción solicitada. Se conserva la fuente original. Precarga automática para la reproducción al abrir.
 
 Papás: Héctor Vázquez Juárez y Maritza de los Santos Galán. Padrino: Eustaquio de los Santos Pérez. Sección agregada después de la bienvenida.
+
+Recepción confirmada: 5:00 p. m. en el Salón de la Caja Yanga, Yanga, Veracruz.
+
+Pases personalizados activados en Firebase y habilitados en el panel. Ruta privada `/eventos/xv-yamileth/pase/[token]`: muestra nombre y lugares asignados, contando a la persona titular. Confirmación exclusivamente por WhatsApp 2714147794; no se habilita RSVP persistente y la API de confirmación de pases rechaza el guardado para este evento. Sin cuentas ni invitados de prueba creados. Fecha límite visible: antes del 3 de noviembre. Es necesario publicar los cambios de código en Vercel.

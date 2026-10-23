@@ -286,3 +286,19 @@ test("creator passes use saved opt-in for either template and respect publicatio
  }
  assert.throws(()=>passPath("token","creator-test-invitation"),e=>e.status===404);
 });
+
+
+test("Yamileth keeps personalized names and seat limits with confirmation only by WhatsApp", async () => {
+  const {context,store}=fixture('xv-yamileth');
+  const first=await createPass(context,{...details,displayName:'Familia de Ana',allowedSeats:2});
+  const second=await createPass(context,{...details,displayName:'Familia de Luis',allowedSeats:4});
+  assert.match(first.path,/^\/eventos\/xv-yamileth\/pase\//);assert.notEqual(first.passToken,second.passToken);
+  const changed=await updatePass(context,first.id,{...details,displayName:'Familia de Ana',allowedSeats:3});
+  assert.equal(changed.passToken,first.passToken);
+  assert.equal((await readPass(first.passToken,{context})).allowedSeats,3);
+  assert.equal((await readPass(second.passToken,{context})).displayName,'Familia de Luis');
+  for(const attending of ['yes','no']) await assert.rejects(confirmPass(first.passToken,{attending,totalPeople:attending==='yes'?3:0},{context}),error=>error.code==='whatsapp_confirmation_only');
+  await assert.rejects(confirmPass(first.passToken,{attending:'yes',totalPeople:1},{slug:'xv-yamileth'}),error=>error.code==='whatsapp_confirmation_only');
+  assert.equal([...store.keys()].filter(key=>key.includes('/rsvps/')).length,0);
+  const other=fixture('xv-abigail');await assert.rejects(readPass(first.passToken,{context:other.context}),error=>error.status===404);
+});

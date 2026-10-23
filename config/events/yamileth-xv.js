@@ -10,6 +10,7 @@ export const yamilethXv = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Domingo 8 de noviembre de 2026",
   "dateStamp": "08 · 11 · 2026",
+  "personalizedPasses": true,
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
@@ -27,7 +28,7 @@ export const yamilethXv = {
   "reception": {
     "enabled": true,
     "name": "Salón de la Caja Yanga",
-    "time": "",
+    "time": "5:00 p. m.",
     "address": "Yanga, Veracruz",
     "mapsUrl": ""
   },
