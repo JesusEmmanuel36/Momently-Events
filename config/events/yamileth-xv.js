@@ -10,7 +10,7 @@ export const yamilethXv = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Domingo 8 de noviembre de 2026",
   "dateStamp": "08 · 11 · 2026",
-  "personalizedPasses": true,
+  "personalizedPasses": false,
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {

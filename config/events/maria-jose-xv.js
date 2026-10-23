@@ -10,6 +10,7 @@ export const mariaJoseXv = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Miércoles 23 de diciembre de 2026",
   "dateStamp": "23 · 12 · 2026",
+  "personalizedPasses": true,
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
@@ -21,14 +22,14 @@ export const mariaJoseXv = {
     "enabled": true,
     "name": "Salón Dorado",
     "time": "6:00 p. m.",
-    "address": "9 Poniente, entre 4 y 5 Sur, Cintalapa, Chiapas",
+    "address": "9 Poniente, entre 9 y 10 Sur, Cintalapa, Chiapas",
     "mapsUrl": ""
   },
   "reception": {
     "enabled": true,
     "name": "Salón Dorado",
     "time": "6:00 p. m.",
-    "address": "9 Poniente, entre 4 y 5 Sur, Cintalapa, Chiapas",
+    "address": "9 Poniente, entre 9 y 10 Sur, Cintalapa, Chiapas",
     "mapsUrl": ""
   },
   "dressCode": {

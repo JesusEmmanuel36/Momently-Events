@@ -24,3 +24,5 @@ Papás: Héctor Vázquez Juárez y Maritza de los Santos Galán. Padrino: Eustaq
 Recepción confirmada: 5:00 p. m. en el Salón de la Caja Yanga, Yanga, Veracruz.
 
 Pases personalizados activados en Firebase y habilitados en el panel. Ruta privada `/eventos/xv-yamileth/pase/[token]`: muestra nombre y lugares asignados, contando a la persona titular. Confirmación exclusivamente por WhatsApp 2714147794; no se habilita RSVP persistente y la API de confirmación de pases rechaza el guardado para este evento. Sin cuentas ni invitados de prueba creados. Fecha límite visible: antes del 3 de noviembre. Es necesario publicar los cambios de código en Vercel.
+
+Actualización: pases personalizados retirados por solicitud. Desactivados en Firebase, eliminada su vista personalizada y ruta anterior devuelve 404. No se borraron registros de invitados. Se conserva confirmación general por WhatsApp con nombre y acompañantes.

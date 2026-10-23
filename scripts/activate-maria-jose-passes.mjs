@@ -1,7 +1,7 @@
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 const root=fileURLToPath(new URL('../',import.meta.url));const require=createRequire(import.meta.url);require('@next/env').loadEnvConfig(root);
-const {yamilethXv:event}=await import('../config/events/yamileth-xv.js');
+const {mariaJoseXv:event}=await import('../config/events/maria-jose-xv.js');
 if(!process.argv.includes('--activate')){console.log(JSON.stringify({slug:event.slug,action:'enable-passes-with-whatsapp-only',ownerAccountCreated:false,dryRun:true}));process.exit(0)}
 const {initializeApp,cert,getApps}=require('firebase-admin/app');const {getFirestore,FieldValue}=require('firebase-admin/firestore');
 const app=getApps()[0]||initializeApp({credential:cert({projectId:process.env.FIREBASE_PROJECT_ID,clientEmail:process.env.FIREBASE_CLIENT_EMAIL,privateKey:process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g,'\n')})});
@@ -11,3 +11,5 @@ const document={schemaVersion:2,slug:event.slug,publicPath:'/eventos/'+event.slu
 let result='created-and-activated',id;
 await db.runTransaction(async tx=>{const slug=await tx.get(slugRef);if(slug.exists){const ref=db.collection('events').doc(slug.data().eventId),snapshot=await tx.get(ref);if(!snapshot.exists||snapshot.data().slug!==event.slug)throw Error('Registro inconsistente; no se modificó.');tx.update(ref,{'settings.personalizedPasses.enabled':true,updatedAt:now});id=ref.id;result='passes-enabled';return;}tx.create(eventRef,document);tx.create(slugRef,{eventId:eventRef.id,createdAt:now,updatedAt:now});id=eventRef.id;});
 const checked=await db.collection('events').doc(id).get();if(checked.data()?.status!=='published'||checked.data()?.settings?.personalizedPasses?.enabled!==true)throw Error('No se verificó la activación.');console.log(JSON.stringify({slug:event.slug,result,personalizedPasses:true,confirmation:"whatsapp",ownerAccountCreated:false}));
+const priorSlug=await db.collection('slugs').doc('xv-yamileth').get();
+if(priorSlug.exists){const priorRef=db.collection('events').doc(priorSlug.data().eventId),prior=await priorRef.get();if(!prior.exists||prior.data().slug!=='xv-yamileth')throw Error('Registro de Yamileth inconsistente.');await priorRef.update({'settings.personalizedPasses.enabled':false,updatedAt:FieldValue.serverTimestamp()});console.log(JSON.stringify({slug:'xv-yamileth',personalizedPasses:false,guestRecordsDeleted:false}));}
