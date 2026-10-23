@@ -19,8 +19,8 @@ export const emiFest = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Te invito a mi party",
-    "quote": "Una noche para celebrar, bailar y crear buenos recuerdos. ¡Me encantará que seas parte de Emi Fest!",
-    "image": "/images/events/xv-emiliano/image.png"
+    "quote": "Una noche para celebrar, bailar y crear buenos recuerdos. ¡Me encantará que seas parte de este día!",
+    "image": "/images/events/xv-emiliano/hero-party.webp"
   },
   "ceremony": {
     "enabled": false,

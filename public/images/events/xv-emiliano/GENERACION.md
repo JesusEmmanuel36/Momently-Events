@@ -19,3 +19,11 @@ Edit this exact envelope into ONE OPEN envelope for animation. Preserve the same
 
 ### Arreglo floral
 Use case: product-mockup. ONE photorealistic airy horizontal floral arrangement cutout on a truly transparent background, landscape1536x1024. Rich navy blue hydrangeas and ivory roses with subtle royal blue blossoms, elegant fine metallic gold leaves and dark navy foliage. Tasteful compact horizontal arrangement for a premium masculine birthday party invitation called Emi Fest. Luxurious but youthful, navy #09192F royal blue #163C68 champagne gold #C5AA64 ivory #FCF8EF. Entire arrangement visible with transparent margin, soft studio lighting, realistic petal and metallic detail. No text, no vase, no envelope, no crown, no age number, no background.
+
+## Portada de cumpleaños — actualización
+Herramienta: `image_gen`, generación nueva sin referencias. Archivos: `hero-party.png` y versión optimizada `hero-party.webp`. Sustituye la fotografía únicamente como fondo de portada; se conserva el archivo original.
+
+Prompt:
+> Create a polished portrait background artwork for Emiliano's 15th birthday invitation, blue and gold palette. Elegant youthful party atmosphere, deep midnight navy blue backdrop, sculptural metallic champagne gold and royal blue balloons clustered along upper right and lower corners, delicate floating gold confetti and warm bokeh, tasteful dimensional ribbons. Beautiful soft cinematic lighting, realistic premium event decoration photography, uncluttered dark blue negative space in center and lower center for website title overlay. No people, no faces, no text, no numbers, no logos, no watermarks. Portrait 2:3 composition.
+
+Textos actualizados según solicitud: «Mi cumple EMILIANO», hoja con «Te invito a festejar conmigo mi cumple # 15», bienvenida y cierre nuevos. Audio inicia en el segundo 3, también al repetir.

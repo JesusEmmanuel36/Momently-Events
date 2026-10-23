@@ -1,0 +1,14 @@
+# Gissela Méndez y Víctor Quiroz
+
+Ruta: /eventos/gissela-y-victor. Nombre transcrito de la imagen; la carpeta existente usa giselle-y-victor.
+Fecha asumida: sábado 28 de noviembre de 2026. Llegada: 12:30 p. m., Grupo Diamante, Calle Emiliano Zapata 5, 50010 Santa Cruz Atzcapotzaltongo, Estado de México. El mapa es una búsqueda por dirección, no un pin verificado.
+Aclarado por el cliente: todo es en el mismo lugar. Ceremonia civil en Jardín Hilden, comida dentro del Salón Grupo Diamante.
+
+Frase: Juntos en este gran día, queremos compartir contigo el inicio de nuestra historia.
+Cierre: Será un honor que nos acompañes.
+Itinerario: 13:00 ceremonia civil (Jardín Hilden), 14:00 recepción, 15:00 entrada de novios y comida (Salón Grupo Diamante), 17:00 cantante, 18:30 baile de los novios, 19:00 batucada y animador, 19:30 DJ y pista iluminada, 21:30 tornafiesta, 23:00 fin del evento. Se normalizó 13:00 PM a 1:00 p. m. y los demás horarios de igual forma.
+
+Paleta: crema #F5ECDC, marfil #FCF7ED, verde bosque #304B3C, salvia #8C9B82, rosa empolvado #D8A6A1, dorado antiguo #94703F. Tema aventura de montaña, naturaleza, cuerda rústica, rosas y pampas.
+Fotos de pareja: image copy 7, 8, 9, 10, 11; la 9 en portada. Paisajes: image, image copy, image copy 2, 3, 4, 5, 6; intro, cuenta regresiva y sección de paisajes separada. Las originales no se alteraron.
+Sin música: no se encontró un audio con sus nombres. Sin datos inventados de vestimenta, regalos, familia ni WhatsApp.
+RSVP breve: nombre, asistencia y mensaje opcional. Sin acompañantes ni alergias. Registro Firebase publicado y RSVP habilitado el 22 de octubre de 2026. No se creó cuenta de cliente ni confirmaciones de prueba; QA con API simulada. Despliegue en Vercel pendiente.
