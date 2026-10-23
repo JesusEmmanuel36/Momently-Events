@@ -13,3 +13,8 @@ Sin familiares, padrinos ni regalos inventados. No se creó cuenta ni registro F
 - Apertura del sobre de IA calibrada; fotografía original y música cargadas correctamente (prueba silenciada).
 - Formulario validado sin enviar mensajes: nombre obligatorio, acompañantes y mensaje dirigido a WhatsApp 2714147794.
 - Sin errores de JavaScript. ESLint y `git diff --check` correctos.
+
+## Corrección de portada y música
+- Se tomó como referencia Caleb y Ciriam: foto desenfocada detrás del sobre, encabezado «Una invitación para ti», portada con nombre centrado y arreglo floral al abrir.
+- Se mantienen los sobres de IA, su calibración y el contenido restante.
+- Audio conectado a `/audio/yamileth-princesa-de-papa.mp3`, copia sin espacios ni caracteres Unicode de la canción solicitada. Se conserva la fuente original. Precarga automática para la reproducción al abrir.

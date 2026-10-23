@@ -45,7 +45,7 @@ export const mariaJoseXv = {
   },
   "music": {
     "enabled": true,
-    "url": "/audio/Miel%20San%20Marcos%20-%20Princesa%20de%20Papa%CC%81%20%28Letra%29%20Musica%20Cristiana.mp3",
+    "url": "/audio/maria-jose-princesa-de-papa.mp3",
     "label": "Princesa de Papá · Miel San Marcos"
   },
   "theme": {

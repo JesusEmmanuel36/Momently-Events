@@ -9,7 +9,7 @@ export function PhotographicEnvelope({assets,opening,onOpen,onOpened,title,subti
   <div className={`${styles.openLayer} ${styles.openBack}`}><Image src={`${assets}/envelope-open.webp`} width={1536} height={1024} className={styles.openArtwork} sizes="(max-width:700px) 96vw,720px" alt="Sobre abierto con arreglo floral" unoptimized priority draggable={false}/></div>
   <div className={styles.letter}>{letterContent??<><span>{subtitle}</span><h2>{title}</h2><p>{date}</p><small>Una invitación para ti</small></>}</div>
   <div className={`${styles.openLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${assets}/envelope-open.webp`} width={1536} height={1024} className={styles.openArtwork} sizes="(max-width:700px) 96vw,720px" alt="" unoptimized priority draggable={false}/></div>
-  <Image src={`${assets}/envelope-closed.webp`} fill sizes="(max-width:700px) 96vw,720px" className={styles.closed} alt="Sobre de invitación con lazo, sello y flores" unoptimized priority draggable={false}/>
+  <Image src={`${assets}/envelope-closed.webp`} width={1536} height={1024} sizes="(max-width:700px) 96vw,720px" className={styles.closed} alt="Sobre de invitación con lazo, sello y flores" unoptimized priority draggable={false}/>
   <button type="button" className={styles.seal} onClick={onOpen} disabled={opening} aria-label={openLabel}/>
  </div>;
 }

@@ -10,3 +10,7 @@ Canción solicitada: Perdóname (Estrellita). Usuario confirmó el nombre y se e
 Sin datos inventados de regalos, familiares ni padrinos. Despliegue Vercel pendiente.
 
 Verificado en móvil y escritorio: apertura de sobres IA, foto actual y tres recuerdos, lightbox, música real silenciada y pausa, los dos mapas exactos, enlaces WhatsApp al número correcto, vestimenta formal y ausencia de horarios, fecha límite y formularios. Sin escrituras a Firebase ni envío de mensajes.
+
+
+## Corrección de estructura de portada
+Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.

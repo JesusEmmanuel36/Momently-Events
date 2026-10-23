@@ -9,3 +9,9 @@ RSVP breve: nombre, asistencia y mensaje opcional. Sin acompañantes, alergias, 
 Despliegue en Vercel pendiente.
 
 Verificado en móvil/escritorio: sobre IA y caja con apertura/cierre, foto de personas ausente, QR ausente mientras está pendiente, canción real silenciada y pausa, fecha/lugar y vestimenta pastel, formulario RSVP y ancho móvil.
+
+
+## Corrección de estructura de portada
+Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.
+
+Horario actualizado: 1:00 p. m. a 8:00 p. m. el 11 de noviembre de 2026.

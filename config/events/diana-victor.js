@@ -7,6 +7,7 @@ export const dianaVictor = {
     "partner2": "Víctor"
   },
   "date": "2026-11-11T13:00:00-06:00",
+  "endDate": "2026-11-11T20:00:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Miércoles 11 de noviembre de 2026",
   "dateStamp": "11 · 11 · 2026",
@@ -32,6 +33,7 @@ export const dianaVictor = {
     "enabled": true,
     "name": "La Perla",
     "time": "1:00 p. m.",
+    "endTime": "8:00 p. m.",
     "address": "S/N, carretera a Valladolid, frente al balneario Valladolid",
     "mapsUrl": ""
   },

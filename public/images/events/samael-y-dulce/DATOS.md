@@ -9,3 +9,7 @@ Música reutilizada existente /audio/lesly-marcelino-perfect.mp3, Perfect · Ed 
 Vestimenta: colores neutros. Blanco reservado para la novia. Los círculos muestran beige, taupe, café y gris, omitiendo blanco como sugerencia.
 RSVP: nombre, asistencia y mensaje opcional. Sin acompañantes, menú, alergias ni canciones sugeridas. Registro Firebase publicado y RSVP habilitado el 22 de octubre de 2026. Sin cuenta de cliente ni confirmaciones de prueba; QA con API simulada. Despliegue en Vercel pendiente.
 Mensajes de bienvenida, principal, invitados y recordatorio conservados. Itinerario de dos momentos. Sin datos pendientes visibles.
+
+
+## Corrección de estructura de portada
+Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.

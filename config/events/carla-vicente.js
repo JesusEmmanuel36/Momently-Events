@@ -61,7 +61,7 @@ export const carlaVicente = {
   },
   "music": {
     "enabled": true,
-    "url": "/audio/Perdo%CC%81name.mp3",
+    "url": "/audio/carla-vicente-perdoname.mp3",
     "label": "Perdóname · Estrellita"
   },
   "theme": {

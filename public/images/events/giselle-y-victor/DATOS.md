@@ -12,3 +12,7 @@ Paleta: crema #F5ECDC, marfil #FCF7ED, verde bosque #304B3C, salvia #8C9B82, ros
 Fotos de pareja: image copy 7, 8, 9, 10, 11; la 9 en portada. Paisajes: image, image copy, image copy 2, 3, 4, 5, 6; intro, cuenta regresiva y sección de paisajes separada. Las originales no se alteraron.
 Sin música: no se encontró un audio con sus nombres. Sin datos inventados de vestimenta, regalos, familia ni WhatsApp.
 RSVP breve: nombre, asistencia y mensaje opcional. Sin acompañantes ni alergias. Registro Firebase publicado y RSVP habilitado el 22 de octubre de 2026. No se creó cuenta de cliente ni confirmaciones de prueba; QA con API simulada. Despliegue en Vercel pendiente.
+
+
+## Corrección de estructura de portada
+Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.

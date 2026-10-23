@@ -10,3 +10,7 @@ Música: archivo existente Miel San Marcos - Princesa de Papá (Letra) Musica Cr
 Sin datos inventados de familiares, regalos ni padrinos. Despliegue Vercel pendiente.
 
 Verificado: apertura en móvil/escritorio, canción real en modo silenciado y pausa, ausencia de formularios, dos enlaces WhatsApp al número correcto con mensaje precargado, colores de vestimenta, ancho móvil y movimiento reducido. Sin escrituras a Firebase ni envío de mensajes.
+
+
+## Corrección de estructura de portada
+Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.

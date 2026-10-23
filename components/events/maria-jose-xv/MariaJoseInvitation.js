@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import {useEffect,useRef,useState} from "react";
-import {CalendarDays,ChevronDown,Crown,Heart,MapPin,MessageCircle,Pause,Play,Shirt,Sparkles} from "lucide-react";
-import {PhotographicEnvelope} from "@/components/events/shared/PhotographicEnvelope";
+import {CalendarDays,Heart,MapPin,MessageCircle,Pause,Play,Shirt,Sparkles} from "lucide-react";
+import {TraditionalIntro,TraditionalHero} from "@/components/events/shared/TraditionalCover";
 import {Reveal} from "@/components/ui";
 import styles from "./MariaJose.module.css";
 const assets='/images/events/xv-mariajose';
@@ -13,9 +13,9 @@ export function MariaJoseInvitation({event}){
  const open=()=>{if(opening)return;setOpening(true);audio.current?.play().catch(()=>setMusicError(true))};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};const toggleMusic=()=>{if(playing)audio.current?.pause();else audio.current?.play().catch(()=>setMusicError(true))};
  const whatsapp=`https://wa.me/52${event.contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a los XV de María José el 23 de diciembre de 2026.')}`;
  return <div className={styles.invitation}>
- <audio ref={audio} src={event.music.url} loop preload="none" onPlay={()=>{setPlaying(true);setMusicError(false)}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>
- {!opened?<section className={styles.intro}><Glitter/><header className={styles.introTitle}><Crown size={29} strokeWidth={1}/><span>Mis XV años</span><h1>Una invitación para ti</h1><p>María José</p></header><div className={styles.envelope}><PhotographicEnvelope assets={assets} title="María José" subtitle="Mis XV años" date={event.dateDisplay} opening={opening} onOpen={open} onOpened={finish} openWidth={117} openBottom={4.8} sealTop={50}/></div><button className={styles.button} onClick={open} disabled={opening}>{opening?'Abriendo…':'Abrir invitación'}</button></section>:<main>
- <section className={styles.hero}><div className={styles.portrait}><Image src={event.hero.image} alt="María José con su vestido rojo de quinceañera" fill priority sizes="(max-width:700px) 100vw,60vw" className={styles.photo}/></div><div className={styles.heroShade}/><Glitter/><div className={styles.heroCopy}><Crown size={32} strokeWidth={1}/><span className={styles.kicker}>Mis XV años</span><h1>María <span>José</span></h1><div className={styles.heroDate}><span>Miércoles</span><strong>23</strong><span>Diciembre · 2026</span></div><a className={styles.button} href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={17}/>Confirmar asistencia</a></div><a className={styles.scroll} href="#mis-quince" aria-label="Descubrir invitación"><ChevronDown/></a></section>
+ <audio ref={audio} src={event.music.url} loop preload="auto" onPlay={()=>{setPlaying(true);setMusicError(false)}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>
+ {!opened?<TraditionalIntro image={event.hero.image} assets={assets} names={["María José"]} subtitle="Mis XV años" date={event.dateDisplay} opening={opening} onOpen={open} onOpened={finish} openWidth={117} openBottom={4.8} sealTop={50}/>:<main>
+ <TraditionalHero image={event.hero.image} assets={assets} names={["María José"]} subtitle="Mis XV años" date={event.dateDisplay} href="#mis-quince"><Glitter/></TraditionalHero>
  <section className={`${styles.section} ${styles.welcome}`} id="mis-quince"><Reveal><Image src={`${assets}/floral.webp`} alt="Rosas rojo profundo y flores marfil con detalles dorados" width={1536} height={1024} sizes="(max-width:700px) 92vw,560px" className={styles.floral} unoptimized/><span className={styles.kicker}>Una noche para recordar</span><h2>Mis quince, mi gran ilusión</h2><p className={styles.quote}>{event.hero.quote}</p><span className={styles.signature}>María José</span></Reveal></section>
  <section className={styles.countdownSection}><Glitter/><Reveal><Sparkles size={29} strokeWidth={1}/><span className={styles.kicker}>La cuenta regresiva comenzó</span><h2>Nos vemos en…</h2><Countdown date={event.date}/><p>{event.dateDisplay}</p></Reveal></section>
  <section className={`${styles.section} ${styles.location}`}><Reveal><MapPin size={33} strokeWidth={1}/><span className={styles.kicker}>Mi celebración</span><h2>Salón Dorado</h2><p className={styles.locationType}>Ceremonia y recepción</p><div className={styles.eventTime}><CalendarDays size={24} strokeWidth={1}/><div><strong>6:00 p. m.</strong><span>23 de diciembre de 2026</span></div></div><p>{event.reception.address}</p><div className={styles.venueLine}/><span className={styles.kicker}>Cintalapa, Chiapas</span></Reveal></section>
