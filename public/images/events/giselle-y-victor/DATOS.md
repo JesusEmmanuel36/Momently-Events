@@ -20,3 +20,5 @@ Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del so
 Música agregada: `/audio/gisella-y-victor.mp3`. Reproducción al abrir, bucle y botón para pausar o reintentar.
 
 Galería de la pareja actualizada: únicamente `image copy 7.png`. Se conservan la portada `image copy 9.png` y las siete imágenes de montañas/paisajes.
+
+La canción comienza en el segundo 41; al repetirse vuelve a ese punto. Pausar y reanudar conserva la posición de reproducción.

@@ -11,6 +11,9 @@ export const carlaVicente = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
+  "personalizedPasses": true,
+  "confirmationDeadline": "2026-12-01T00:00:00-06:00",
+  "confirmationDeadlineText": "Confirma tu asistencia a más tardar el 30 de noviembre de 2026.",
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {

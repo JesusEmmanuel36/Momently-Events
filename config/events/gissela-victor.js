@@ -141,6 +141,7 @@ export const gisselaVictor = {
   "music": {
     "enabled": true,
     "url": "/audio/gisella-y-victor.mp3",
+    "startAt": 41,
     "label": "Nuestra canción"
   },
   "theme": {

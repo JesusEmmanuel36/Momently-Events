@@ -13,3 +13,5 @@ Google Maps: búsquedas por el nombre del recinto + Puerto Vallarta, Jalisco, si
 Vercel: publicación pendiente.
 
 Verificación local completada: portada y apertura del sobre de IA, datos y cinco horarios, dos enlaces de Maps, destino de WhatsApp, ausencia de fotos de personas, música y formulario RSVP. Móvil 390 px y escritorio 1440 px sin desbordamiento horizontal ni errores JS. ESLint y git diff --check correctos. Sobre abierto calibrado en ancho 122%, posición inferior 8.5%, conservando proporciones naturales y centrado.
+
+Actualización: Bodas de plata. Frase «Veinticinco años después y seguimos eligiéndonos cada día.» Portada y hoja del sobre sin fecha junto a los nombres; fecha conservada en cuenta regresiva. Confirmación y texto fijo para 2 lugares, sin pases personalizados.
