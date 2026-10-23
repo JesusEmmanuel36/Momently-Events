@@ -15,6 +15,7 @@ export const kristellRicardo = {
   "dateDisplay": "Sábado · 26 de diciembre de 2026",
   "dateStamp": "26 · 12 · 2026",
   "calendarDate": "26 de diciembre de 2026",
+  "personalizedPasses": true,
   "rsvpEnabled": true,
   "maxCompanions": 0,
   "askCompanions": false,

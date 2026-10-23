@@ -9,12 +9,13 @@ import { useEffect, useRef, useState } from "react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
 
-import {RSVPSection,SongSection} from "@/components/sections/GuestActions";
+import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
+import {SongSection} from "@/components/sections/GuestActions";
 import { GallerySection } from "@/components/sections/Gallery";
 import styles from "./KristellRicardo.module.css";
 const scheduleIcons={church:Church,arrival:MapPin,dance:Footprints,meal:Utensils,party:Music2,end:Clock};
 const images = "/images/events/kristell-y-ricardo";
-export function KristellRicardoInvitation({ wedding }) {
+export function KristellRicardoInvitation({ wedding, pass=null, passToken=null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -45,9 +46,9 @@ export function KristellRicardoInvitation({ wedding }) {
       <section className={`section ${styles.attireSection}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/><div className={styles.reservedColors}>{wedding.dressCode.colors.map(color=><div key={color.name}><span style={{background:color.color}}/><small>{color.name}</small></div>)}</div></Reveal></section>
       <GallerySection wedding={view} fixedOverlay imageSizes="(max-width:700px) 90vw,33vw" heading={{eyebrow:"Nuestros momentos",title:"Recuerdos que nos unen",copy:"Instantes que forman parte de nuestra historia."}}/>
       {wedding.gifts.length>0&&<section className={`section ${styles.registry}`}><Reveal><Mail strokeWidth={1}/><SectionHeading eyebrow="Un detalle con cariño" title={wedding.gifts[0].name} copy={wedding.gifts[0].description}/></Reveal></section>}
-      <RSVPSection wedding={view}/>
+      {pass?<PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para los novios"/>:<section className={styles.confirmation} id="tu-pase"><h2>Tu pase personalizado</h2><p>Abre el enlace de tu pase para ver tu nombre, consultar tus lugares reservados y confirmar tu asistencia.</p></section>}
       <section className={styles.confirmation}><MessageCircle size={32} strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Nos hará muy felices compartir este día contigo.</p><a className="button" href={`https://wa.me/52${wedding.contact.whatsapp}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a la boda de Kristell y Ricardo el 26 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={17}/>Confirmar por WhatsApp</a></section>
-      <SongSection wedding={view}/>
+      <SongSection wedding={view} passToken={passToken}/>
       <section className={styles.photoAlbum} id="fotos-del-evento"><Camera size={34} strokeWidth={1}/><h2>Recuerdos de nuestra boda</h2><p>Escanea el QR o entra al álbum para compartir tus fotos y guardar juntos los mejores momentos.</p><Image unoptimized src={`${kristellRicardoPhotos.path}/qr`} width={220} height={220} alt="QR para compartir fotos de Kristell y Ricardo"/><p>Disponible el 26 de diciembre de 2026 y hasta las 3:00 a. m. del día siguiente.</p><div className={styles.photoActions}><Link href={kristellRicardoPhotos.path}><Camera size={17}/>Compartir fotos</Link><a href={`${kristellRicardoPhotos.path}/qr?download`} download><Download size={17}/>Descargar QR</a></div><GuestPhotoGallery event={kristellRicardoPhotos}/></section>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Kristell y Ricardo" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Kristell &amp; Ricardo</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>

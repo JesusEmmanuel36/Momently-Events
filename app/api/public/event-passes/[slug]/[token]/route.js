@@ -1,6 +1,8 @@
 import {apiError} from "@/lib/errors";
-import {readPass,confirmPass,assertPassOrigin,publishedPassEvent} from "@/lib/event-passes/server";
+import {readPass,confirmPass,suggestPassSong,assertPassOrigin,publishedPassEvent} from "@/lib/event-passes/server";
 import {enforceRsvpRateLimit} from "@/lib/security/rate-limit";
 export const runtime="nodejs";
 export async function GET(_request,{params}){try{const {slug,token}=await params;return Response.json(await readPass(token,{slug}),{headers:{"Cache-Control":"no-store"}});}catch(error){return apiError(error);}}
 export async function POST(request,{params}){try{assertPassOrigin(request);const {slug,token}=await params;const raw=await request.json();const context=await publishedPassEvent({slug});await enforceRsvpRateLimit(request,context.ref.id);return Response.json(await confirmPass(token,raw,{context}),{headers:{"Cache-Control":"no-store"}});}catch(error){return apiError(error);}}
+
+export async function PATCH(request,{params}){try{assertPassOrigin(request);const {slug,token}=await params;const context=await publishedPassEvent({slug});await enforceRsvpRateLimit(request,context.ref.id);return Response.json(await suggestPassSong(token,await request.json(),{context}),{headers:{"Cache-Control":"no-store"}});}catch(error){return apiError(error);}}

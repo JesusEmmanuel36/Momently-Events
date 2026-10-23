@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createPass, updatePass, deletePass, readPass, confirmPass, passTokenPattern, assertPassOrigin, publishedPassEvent, passPath } from "../lib/event-passes/server.js";
+import { createPass, updatePass, deletePass, readPass, confirmPass, passTokenPattern, assertPassOrigin, publishedPassEvent, passPath, suggestPassSong } from "../lib/event-passes/server.js";
 
 function fixture(slug = "alejandra-y-david") {
   const store = new Map(); let counter = 0; let queue = Promise.resolve();
@@ -319,4 +319,20 @@ test("Carla y Vicente keeps personalized names and seat limits with confirmation
   await assert.rejects(confirmPass(first.passToken,{attending:'yes',totalPeople:1},{slug:'carla-y-vicente'}),error=>error.code==='whatsapp_confirmation_only');
   assert.equal([...store.keys()].filter(key=>key.includes('/rsvps/')).length,0);
   const other=fixture('xv-abigail');await assert.rejects(readPass(first.passToken,{context:other.context}),error=>error.status===404);
+});
+
+test("Kristell passes preserve assigned seats and song suggestions in one RSVP",async()=>{
+ const {context,store}=fixture("kristell-y-ricardo");context.event.settings.rsvp.askSongSuggestion=true;
+ const pass=await createPass(context,{...details,allowedSeats:3});
+ assert.match(pass.path,/\/eventos\/kristell-y-ricardo\/pase\//);
+ await assert.rejects(suggestPassSong(pass.passToken,{songTitle:"Perfect",artist:"Ed Sheeran"},{context}),e=>e.status===400);
+ await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context}),e=>e.status===400);
+ const result=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3,message:"Felicidades"},{context});
+ await suggestPassSong(pass.passToken,{songTitle:"Perfect",artist:"Ed Sheeran",totalPeople:20},{context});
+ const path=`events/test-event/rsvps/${result.rsvpId}`;
+ assert.equal(store.get(path).totalPeople,3);assert.equal(store.get(path).message,"Felicidades");assert.deepEqual(store.get(path).songSuggestion,{title:"Perfect",artist:"Ed Sheeran"});
+ await confirmPass(pass.passToken,{attending:"yes",totalPeople:2,message:"Nos vemos"},{context});
+ assert.deepEqual(store.get(path).songSuggestion,{title:"Perfect",artist:"Ed Sheeran"});
+ assert.equal([...store.keys()].filter(k=>k.startsWith("events/test-event/rsvps/")).length,1);
+ await assert.rejects(suggestPassSong(pass.passToken,{songTitle:" ",artist:"Ed Sheeran"},{context}),e=>e.status===400);
 });
