@@ -16,3 +16,5 @@ Verificado en móvil y escritorio: apertura de sobres IA, foto actual y tres rec
 Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.
 
 Pases personalizados habilitados, con nombre y lugares asignados y confirmación exclusiva por WhatsApp 7776243957. Fecha límite inclusiva: 30 de noviembre de 2026, horario de México; botón de confirmación deja de mostrarse el 1 de diciembre. Arreglo floral de la esquina retirado únicamente de la portada principal. Sobres y arreglos de las otras secciones conservados.
+
+Vista previa de pases corregida: Open Graph y Twitter dicen «Carla y Vicente | Nuestra celebración» y usan `/images/events/carla-vicente/envelope-closed.webp`. Se retiró el título incorrecto «Mis XV años» y se corrigió la ruta de imagen.

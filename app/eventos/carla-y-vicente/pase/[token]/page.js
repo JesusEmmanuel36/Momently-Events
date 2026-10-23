@@ -4,7 +4,13 @@ import { carlaVicente } from "@/config/events/carla-vicente";
 import { readPass } from "@/lib/event-passes/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Tu pase | Carla y Vicente", robots: { index: false, follow: false }, openGraph: { title: "Carla y Vicente | Mis XV años", images: ["/images/events/carla-y-vicente/envelope-closed.png"] } };
+export const metadata = {
+  title: "Tu pase | Carla y Vicente",
+  description: "Tu invitación personalizada a la celebración de Carla y Vicente · 26 de diciembre de 2026.",
+  robots: { index: false, follow: false },
+  openGraph: { type: "website", title: "Carla y Vicente | Nuestra celebración", description: "26 de diciembre de 2026 · Una invitación especial para ti.", images: ["/images/events/carla-vicente/envelope-closed.webp"] },
+  twitter: { card: "summary_large_image", title: "Carla y Vicente | Nuestra celebración", description: "26 de diciembre de 2026 · Una invitación especial para ti.", images: ["/images/events/carla-vicente/envelope-closed.webp"] }
+};
 export default async function Page({ params }) {
   const { token } = await params;
   let pass;

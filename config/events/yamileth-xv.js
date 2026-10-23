@@ -55,8 +55,8 @@ export const yamilethXv = {
   "gallery": [],
   "music": {
     "enabled": true,
-    "url": "/audio/yamileth-princesa-de-papa.mp3",
-    "label": "Princesa de Papá · Miel San Marcos"
+    "url": "/audio/lesly-marcelino-perfect.mp3",
+    "label": "Perfect · Ed Sheeran"
   },
   "theme": {
     "primary": "#8F62B4",
