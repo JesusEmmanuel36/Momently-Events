@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import {useEffect,useState} from "react";
-import {Church,GlassWater,Heart,Mail,MapPin,MessageCircle,Music,Shirt,Utensils} from "lucide-react";
+import {useEffect,useRef,useState} from "react";
+import {Church,GlassWater,Heart,Mail,MapPin,MessageCircle,Music,Pause,Play,Shirt,Utensils} from "lucide-react";
 import {TraditionalIntro,TraditionalHero} from "@/components/events/shared/TraditionalCover";
 import {Reveal} from "@/components/ui";
 import styles from "./SalvadorAngelica.module.css";
@@ -9,10 +9,12 @@ const assets="/images/events/salvador-y-angelica";
 const icons={church:Church,toast:GlassWater,heart:Heart,food:Utensils,music:Music};
 function Countdown({date}){const [left,setLeft]=useState(null);useEffect(()=>{const tick=()=>setLeft(Math.max(0,new Date(date).getTime()-Date.now()));tick();const timer=setInterval(tick,1000);return()=>clearInterval(timer)},[date]);const seconds=Math.floor((left||0)/1000);return <div className={styles.countdown}>{[Math.floor(seconds/86400),Math.floor(seconds/3600)%24,Math.floor(seconds/60)%60,seconds%60].map((value,i)=><div key={i}><strong>{left===null?'—':String(value).padStart(2,'0')}</strong><span>{['Días','Horas','Minutos','Segundos'][i]}</span></div>)}</div>}
 export function SalvadorAngelicaInvitation({event}){
- const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false);
- const open=()=>{if(!opening)setOpening(true)};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
+ const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[playing,setPlaying]=useState(false),[musicError,setMusicError]=useState(false);const audio=useRef(null);
+ const playMusic=()=>audio.current?.play().catch(()=>setMusicError(true));
+ const open=()=>{if(opening)return;setOpening(true);playMusic()};const toggleMusic=()=>{if(playing)audio.current?.pause();else playMusic()};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
  const whatsapp=`https://wa.me/52${event.contact.phone}?text=${encodeURIComponent('Hola, Salvador y Angélica. Quiero confirmar mi asistencia a sus bodas de plata el 14 de noviembre de 2026. Estamos considerados para 2 personas.')}`;
- return <div className={styles.invitation}>{!opened?<TraditionalIntro image={event.hero.image} assets={assets} names={["Salvador","Angélica"]} subtitle={event.hero.subtitle} date="" opening={opening} onOpen={open} onOpened={finish} openWidth={122} openBottom={8.5} sealTop={57}/>:<main>
+ return <div className={styles.invitation}>{event.music.enabled&&<audio ref={audio} src={event.music.url} preload="auto" loop onPlay={()=>{setPlaying(true);setMusicError(false)}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>}
+ {!opened?<TraditionalIntro image={event.hero.image} assets={assets} names={["Salvador","Angélica"]} subtitle={event.hero.subtitle} date="" opening={opening} onOpen={open} onOpened={finish} openWidth={122} openBottom={8.5} sealTop={57}/>:<main>
  <TraditionalHero image={event.hero.image} assets={assets} names={["Salvador","Angélica"]} subtitle={event.hero.subtitle} date="" href="#bienvenida" light/>
  <section className={styles.section} id="bienvenida"><Reveal><Heart size={30} strokeWidth={1}/><span className={styles.kicker}>Con todo nuestro amor</span><h2>Un día para recordar</h2><p className={styles.quote}>{event.anniversaryMessage}</p><p>{event.hero.quote}</p><Image src={`${assets}/floral.webp`} width={1536} height={1024} sizes="(max-width:700px) 90vw,500px" alt="Rosas blancas, follaje plateado y detalles rojos" className={styles.floral} unoptimized/></Reveal></section>
  <section className={`${styles.section} ${styles.dateSection}`}><Reveal><span className={styles.kicker}>Cada vez falta menos</span><h2>Para nuestro gran día</h2><p>{event.dateDisplay}</p><Countdown date={event.date}/></Reveal></section>
@@ -23,5 +25,5 @@ export function SalvadorAngelicaInvitation({event}){
  <section className={styles.section}><Reveal><Heart size={30} strokeWidth={1}/><h2>Una noche para adultos</h2><p>{event.adultsOnlyMessage}</p></Reveal></section>
  <section className={`${styles.section} ${styles.confirmation}`}><Reveal><MessageCircle size={32} strokeWidth={1}/><span className={styles.kicker}>Nos encantará verte</span><h2>Confirma tu asistencia</h2><p className={styles.reservedPlaces}>Hemos reservado <strong>{event.reservedSeats} lugares</strong> para ustedes.</p><p>Será una alegría compartir contigo este día. Confírmanos por WhatsApp.</p><a className={styles.button} href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/>Confirmar por WhatsApp</a><p className={styles.phone}>322 305 0001</p></Reveal></section>
  <section className={`${styles.section} ${styles.closing}`}><Reveal><Image src={`${assets}/floral.webp`} width={1536} height={1024} alt="" sizes="(max-width:700px) 85vw,420px" className={styles.floral} unoptimized/><h2>Gracias por ser parte<br/>de nuestra historia</h2><p>Con cariño,</p><span className={styles.signature}>Salvador &amp; Angélica</span><p>Celebramos 25 años de amor</p></Reveal></section>
- </main>}</div>
+ </main>}{opened&&event.music.enabled&&<button type="button" className={styles.music} onClick={toggleMusic} aria-label={playing?"Pausar música":"Reproducir música"}>{playing?<Pause size={17}/>:<Play size={17}/>}<span>{musicError?"Toca para reintentar":event.music.label}</span></button>}</div>
 }

@@ -10,6 +10,6 @@ export const salvadorAngelica = {
   dressCode:{title:"Formal elegante",text:"El blanco y el rojo están reservados. Gracias por elegir otros colores para acompañarnos en este día tan especial."},
   gifts:[{title:"Lluvia de sobres",description:"Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, un sobre con cariño nos ayudará a construir nuevos sueños juntos."}],
   adultsOnly:true,adultsOnlyMessage:"Para que todos disfruten de una noche especial, nuestra celebración será solo para adultos. Gracias por acompañarnos y por su comprensión.",
-  contact:{phone:"3223050001"},rsvpEnabled:false,maxCompanions:0,gallery:[],music:{enabled:false,url:"",label:""},
+  contact:{phone:"3223050001"},rsvpEnabled:false,maxCompanions:0,gallery:[],music:{enabled:true,url:"/audio/salvador-angelica-pacto-sax.mp3",label:"Un pacto con Dios · Sax cover"},
   theme:{primary:"#8D2438",dark:"#423C43",champagne:"#B8B6BF",cream:"#F0EEF1",ivory:"#FCFAFB",rose:"#E1D7DC",sage:"#9C9EA5"}
 };
