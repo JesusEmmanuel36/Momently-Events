@@ -22,3 +22,7 @@ Música agregada: `/audio/gisella-y-victor.mp3`. Reproducción al abrir, bucle y
 Galería de la pareja actualizada: únicamente `image copy 7.png`. Se conservan la portada `image copy 9.png` y las siete imágenes de montañas/paisajes.
 
 La canción comienza en el segundo 41; al repetirse vuelve a ese punto. Pausar y reanudar conserva la posición de reproducción.
+
+## Dirección y confirmación por edades
+Dirección corregida: Calle Emiliano Zapata 5, La Magdalena, 50010 Santa Cruz Atzcapotzaltongo, EDOMEX, México. Botón Google Maps con búsqueda por esa dirección exacta; sustituye la búsqueda por nombre anterior. Enlace Apple facilitado por el cliente: https://maps.apple/p/SLbpEBAHfeRBQS (no verificable con la herramienta web).
+Formulario con Adultos (incluyendo a quien confirma) y Niños; se conserva el mensaje adicional. El total se calcula sumando ambos y acompañantes restando una persona titular. Guardado y edición mediante API pública/panel, listado, estadísticas y exportación CSV con desglose. Se conservan respuestas antiguas sin inventar sus edades. Límite técnico habitual: 20 acompañantes / 21 personas. Firebase actualizado sin borrar registros ni crear confirmaciones de prueba. 14 pruebas de esquema y compatibilidad correctas, ESLint y diff correctos. Publicación en Vercel pendiente.

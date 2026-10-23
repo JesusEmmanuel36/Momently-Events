@@ -11,7 +11,7 @@ export const gisselaVictor = {
   "dateDisplay": "Sábado 28 de noviembre de 2026",
   "dateStamp": "28 · 11 · 2026",
   "rsvpEnabled": true,
-  "maxCompanions": 0,
+  "maxCompanions": 20,
   "askCompanions": false,
   "askMenuPreference": false,
   "askAllergies": false,
@@ -32,8 +32,8 @@ export const gisselaVictor = {
     "enabled": true,
     "name": "Grupo Diamante",
     "time": "12:30 p. m.",
-    "address": "Calle Emiliano Zapata 5, 50010 Santa Cruz Atzcapotzaltongo, Edo. Méx., México",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Grupo%20Diamante%20Calle%20Emiliano%20Zapata%205%20Santa%20Cruz%20Atzcapotzaltongo"
+    "address": "Calle Emiliano Zapata 5, La Magdalena, 50010 Santa Cruz Atzcapotzaltongo, EDOMEX, México",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Calle%20Emiliano%20Zapata%205%2C%20La%20Magdalena%2C%2050010%20Santa%20Cruz%20Atzcapotzaltongo%2C%20Estado%20de%20M%C3%A9xico%2C%20M%C3%A9xico"
   },
   "itinerary": [
     {
