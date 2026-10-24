@@ -21,3 +21,8 @@ Publicación en Vercel pendiente.
 
 Verificación local completada: sobre cerrado/abierto centrados y proporciones naturales; nombres, fecha, horario y ambas frases completos; enlace de Maps correcto; formulario breve sin campos adicionales. Se probó validación y confirmación interceptando la petición en navegador: sin registros reales de prueba. Sin errores JS ni desbordamiento en 390 px y 1440 px. Portada completa en escritorio. ESLint y git diff --check correctos. Sobre abierto calibrado a 130% de ancho y 7% de posición inferior según el cuerpo visible de las imágenes.
 Corrección local de accesibilidad/posición de radios del RSVP: tamaños invisibles limitados y etiquetas posicionadas dentro de este módulo, sin cambiar estilos globales. Prueba completa repetida tras el ajuste: móvil/escritorio y confirmación simulada correctos.
+
+
+## Música y foto
+
+Se agregó /audio/darielbenjamin.mp3 con reproducción al abrir el sobre y control para pausar/reanudar. La foto image.png se muestra completa en galería como familia.webp; la portada de IA hero.webp se conserva.

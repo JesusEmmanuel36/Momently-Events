@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import {useEffect,useState} from "react";
-import {ChevronDown,Heart,MapPin,Star} from "lucide-react";
+import {useEffect,useRef,useState} from "react";
+import {ChevronDown,Heart,MapPin,Pause,Play,Star} from "lucide-react";
 import {TraditionalIntro} from "@/components/events/shared/TraditionalCover";
 import {RSVPSection} from "@/components/sections/GuestActions";
 import {Reveal} from "@/components/ui";
@@ -9,18 +9,22 @@ import styles from "./DarielBabyshower.module.css";
 const assets="/images/events/dariel-benjamin-babyshower";
 function Countdown({date}){const [remaining,setRemaining]=useState(null);useEffect(()=>{const tick=()=>setRemaining(Math.max(0,new Date(date).getTime()-Date.now()));tick();const timer=setInterval(tick,1000);return()=>clearInterval(timer)},[date]);const seconds=Math.floor((remaining||0)/1000);return <div className={styles.countdown}>{[Math.floor(seconds/86400),Math.floor(seconds/3600)%24,Math.floor(seconds/60)%60,seconds%60].map((value,i)=><div key={i}><strong>{remaining===null?'—':String(value).padStart(2,'0')}</strong><span>{['Días','Horas','Minutos','Segundos'][i]}</span></div>)}</div>}
 export function DarielBabyshowerInvitation({event}){
- const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false);
- const open=()=>{if(!opening)setOpening(true)};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
+ const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[playing,setPlaying]=useState(false),[musicError,setMusicError]=useState(false);const audio=useRef(null);
+ const playMusic=()=>audio.current?.play().catch(()=>setMusicError(true));const toggleMusic=()=>{if(playing)audio.current?.pause();else playMusic()};
+ const open=()=>{if(opening)return;setOpening(true);playMusic()};const finish=()=>{setOpened(true);window.scrollTo({top:0,behavior:'instant'})};
  const rsvp={isLive:true,eventId:event.slug,slug:event.slug,couple:{bride:'Dariel Benjamin',groom:''},rsvpDisplayName:'D B',rsvpTitle:'¿Nos acompañas?',rsvpMessageLabel:'Un mensajito para Dariel y sus papás',rsvpSettings:{askCompanions:false,maxCompanions:0,askMenuPreference:false,askAllergies:false,askMessage:true,askSongSuggestion:false}};
  return <div className={styles.invitation}>
+ {event.music.enabled&&<audio ref={audio} src={event.music.url} preload="auto" loop onPlay={()=>{setPlaying(true);setMusicError(false)}} onPause={()=>setPlaying(false)} onError={()=>setMusicError(true)}/>}
  {!opened?<TraditionalIntro image={event.hero.image} assets={assets} names={["Dariel Benjamin"]} subtitle="Baby shower" date={event.dateDisplay} opening={opening} onOpen={open} onOpened={finish} openWidth={130} openBottom={7} sealTop={42}/>:<main>
  <section className={styles.hero}><Image src={event.hero.image} fill priority sizes="100vw" alt="Patito con moño verde olivo entre nubes y cuadros vichy" className={styles.heroBackground} unoptimized/><div className={styles.heroCopy}><span className={styles.kicker}>Un pedacito de cielo viene en camino</span><p className={styles.heroEyebrow}>Baby shower</p><h1>Dariel <span>Benjamin</span></h1><p className={styles.heroDate}>28 de noviembre de 2026</p></div><a className={styles.scroll} href="#bienvenida" aria-label="Descubrir la invitación"><ChevronDown/></a></section>
  <section className={`${styles.section} ${styles.welcome}`} id="bienvenida"><Reveal><Star size={26} strokeWidth={1}/><span className={styles.kicker}>La dulce espera se celebra juntos</span><blockquote>{event.hero.quote}</blockquote><Image src={`${assets}/floral.webp`} width={1536} height={1024} sizes="(max-width:700px) 92vw,500px" alt="Moño de cuadros verde olivo, nubes y pequeñas margaritas blancas" className={styles.floral} unoptimized/></Reveal></section>
  <section className={`${styles.section} ${styles.parents}`}><Reveal><span className={styles.kicker}>Con todo nuestro amor</span><h2>Te esperamos para celebrar<br/>la llegada de nuestro bebé</h2><div className={styles.parentsLayout}><Image src={`${assets}/duck.webp`} width={1024} height={1024} sizes="(max-width:700px) 75vw,350px" alt="Tierno patito blanco con moño de cuadros verde olivo" className={styles.duck} unoptimized/><div className={styles.parentsCopy}><p>Con cariño, sus papás</p><div className={styles.parentsNames}><span>{event.parents.mother}</span><i>&amp;</i><span>{event.parents.father}</span></div><Heart size={24} strokeWidth={1}/></div></div></Reveal></section>
  <section className={`${styles.section} ${styles.dateSection}`}><Reveal><span className={styles.kicker}>Guarda esta fecha</span><h2>Nos vemos muy pronto</h2><div className={styles.dateCard}><span>Sábado</span><strong>28</strong><span>Noviembre · 2026</span><i/><b>3:00 p. m.</b></div><Countdown date={event.date}/></Reveal></section>
  <section className={`${styles.section} ${styles.location}`}><Reveal><MapPin size={32} strokeWidth={1}/><span className={styles.kicker}>Aquí celebraremos</span><h2>{event.reception.name}</h2><p>Sábado 28 de noviembre de 2026<br/><strong>3:00 p. m.</strong></p><a className={styles.button} href={event.reception.mapsUrl} target="_blank" rel="noopener noreferrer"><MapPin size={18}/>Ver ubicación</a></Reveal></section>
+ {event.gallery.length>0&&<section className={`${styles.section} ${styles.gallery}`} id="galeria"><Reveal><span className={styles.kicker}>La dulce espera</span><h2>Un recuerdo lleno de amor</h2><div className={styles.galleryPhotos}>{event.gallery.map(photo=><Image key={photo.url} src={photo.url} width={photo.width} height={photo.height} sizes="(max-width:700px) 90vw,480px" alt={photo.alt} className={styles.galleryPhoto}/>)}</div></Reveal></section>}
  <div className={styles.rsvp}><RSVPSection wedding={rsvp}/></div>
  <section className={`${styles.section} ${styles.closing}`}><Reveal><Image src={`${assets}/floral.webp`} width={1536} height={1024} sizes="(max-width:700px) 90vw,460px" alt="" className={styles.closingFloral} unoptimized/><span className={styles.kicker}>Las bendiciones llegan en el momento adecuado</span><h2>{event.closing.title}</h2><p className={styles.closingQuote}>{event.closing.text}</p><p className={styles.thanks}>{event.closing.thanks}</p><Heart size={26} strokeWidth={1}/><span className={styles.signature}>Dariel Benjamin</span><p className={styles.closingParents}>Con amor, Gisel y Edgar</p></Reveal></section>
  </main>}
+ {opened&&event.music.enabled&&<button type="button" className={styles.music} onClick={toggleMusic} aria-label={playing?"Pausar música":"Reproducir música"}>{playing?<Pause size={18}/>:<Play size={18}/>}<span>{musicError?"Toca para reintentar":event.music.label}</span></button>}
  </div>
 }
