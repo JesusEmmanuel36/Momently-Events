@@ -1,0 +1,14 @@
+export const luisErika = {
+ slug:"luis-y-erika",templateKey:"luis-erika-oaxaca-blue-white",eventTitle:"Luis Antonio y Erika | Nuestra boda",
+ couple:{partner1:"Luis Antonio Marín López",partner2:"Erika Mendoza Castellanos"},displayNames:{partner1:"Luis Antonio",partner2:"Erika"},
+ date:"2027-06-27T00:00:00-06:00",dateOnly:true,timezone:"America/Mexico_City",dateDisplay:"Domingo · 27 de junio · 2027",dateStamp:"27 · 06 · 2027",
+ personalizedPasses:true,rsvpEnabled:true,maxCompanions:0,askCompanions:false,askMenuPreference:false,askAllergies:false,askMessage:true,
+ hero:{subtitle:"Nuestra boda",image:"/images/events/luis-y-erika/hero.webp",quote:"Con nuestras raíces en el corazón y el amor como camino, queremos compartir contigo un día lleno de alegría, tradición y recuerdos para siempre."},
+ ceremony:{enabled:true,name:"Parroquia de Santa María de la Natividad",time:"10:00 a. m. · Por confirmar",address:"Santa María Zaachila, Oaxaca",mapsUrl:"https://maps.app.goo.gl/RB3TGKeGbFBc2hwF7?g_st=iw"},
+ reception:{enabled:true,name:"Salón Los Encinos",time:"1:00 p. m.",address:"Calle Zetobaa 514, San Jacinto, 71310 Villa de Zaachila, Oaxaca",mapsUrl:"https://maps.app.goo.gl/jeQijnSPW3iLp4eT7?g_st=iw"},
+ calenda:{time:"11:30 a. m.",note:"Si se confirma la misa a las 10:00 a. m., la calenda saldrá de la iglesia a las 11:30 a. m. rumbo al salón.",message:"¡Tu presencia en la calenda es muy importante! Acompáñanos en el recorrido de la iglesia al salón: queremos vivir nuestra tradición rodeados de todos ustedes y guardar en video este momento tan especial."},
+ family:{groups:[{title:"Papás del novio",names:["Jesús Marín Velazco","Josefina López García"]},{title:"Mamá de la novia",names:["Victorina Mendoza Castellanos"]},{title:"Tíos de la novia",names:["Edith Coache Mendoza","José Eduardo Ormachea Mendoza"]},{title:"Padrinos de velación",names:["Javier Monroy Carreño","Ana María Maza Barrera"]}]},
+ itinerary:[{time:"10:00",displayTime:"10:00 a. m.",title:"Misa",note:"Horario por confirmar",icon:"church"},{time:"11:30",displayTime:"11:30 a. m.",title:"Calenda",note:"Sujeta a la confirmación del horario de misa",icon:"calenda"},{time:"13:00",displayTime:"1:00 p. m.",title:"Recepción",icon:"arrival"},{time:"14:00",displayTime:"2:00 p. m.",title:"Comida",icon:"food"},{time:"16:00",displayTime:"4:00 p. m.",title:"Brindis",icon:"toast"},{time:"16:30",displayTime:"4:30 p. m.",title:"Baile de los novios",icon:"heart"},{time:"18:00",displayTime:"6:00 p. m.",title:"Apertura de la pista",icon:"music"}],
+ gallery:[],gifts:[],music:{enabled:true,url:"/audio/luis-y-erika.mp3",label:"Nuestra canción"},
+ theme:{primary:"#255BA5",dark:"#142F52",champagne:"#8CAAD0",cream:"#EDF3FA",ivory:"#FFFDFA",rose:"#C9D8EB",sage:"#718B80"}
+};

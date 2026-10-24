@@ -336,3 +336,15 @@ test("Kristell passes preserve assigned seats and song suggestions in one RSVP",
  assert.equal([...store.keys()].filter(k=>k.startsWith("events/test-event/rsvps/")).length,1);
  await assert.rejects(suggestPassSong(pass.passToken,{songTitle:" ",artist:"Ed Sheeran"},{context}),e=>e.status===400);
 });
+
+test("Luis and Erika passes keep assigned places and update one confirmation",async()=>{
+ const {context,store}=fixture("luis-y-erika");
+ const pass=await createPass(context,{...details,displayName:"Familia de prueba",allowedSeats:4});
+ assert.match(pass.path,/^\/eventos\/luis-y-erika\/pase\//);
+ assert.equal((await readPass(pass.passToken,{context})).allowedSeats,4);
+ await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:5},{context}),e=>e.status===400);
+ const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:4,message:"Nos vemos en la calenda"},{context});
+ const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3,message:"Allá estaremos"},{context});
+ assert.equal(first.rsvpId,second.rsvpId);assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,3);
+ const another=fixture("kristell-y-ricardo");await assert.rejects(readPass(pass.passToken,{context:another.context}),e=>e.status===404);
+});
