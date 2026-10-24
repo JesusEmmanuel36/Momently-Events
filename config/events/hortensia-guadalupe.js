@@ -21,8 +21,9 @@ export const hortensiaGuadalupe = {
   "hero": {
     "subtitle": "Nuestras bodas de oro",
     "quote": "Cincuenta años han tejido nuestra historia,\ncon días de alegría y otros de dificultad.\nNo fue un camino perfecto ni siempre lleno de rosas;\nhubo pruebas y momentos de soledad.\n\nPero algo más fuerte que el orgullo nos mantuvo unidos,\nporque el amor verdadero no es aquel que nunca tropieza,\nsino aquel que, a pesar de las caídas,\nsiempre encuentra razones para continuar.",
-    "image": "/images/events/hortensia-y-guadalupe/image copy.png"
+    "image": "/images/events/hortensia-y-guadalupe/image copy 10.png"
   },
+  "closingImage": "/images/events/hortensia-y-guadalupe/image copy.png",
   "ceremony": {
     "enabled": true,
     "name": "Iglesia El Buen Pastor",
