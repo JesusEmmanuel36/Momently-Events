@@ -22,7 +22,7 @@ export const openHouse = {
   "hero": {
     "subtitle": "Open House",
     "quote": "Un nuevo hogar, una nueva historia",
-    "image": "/images/events/open-house/hero-modern.webp"
+    "image": "/images/events/open-house/portada-cielo.webp"
   },
   "ceremony": {
     "enabled": false,
@@ -87,11 +87,11 @@ export const openHouse = {
     "title": "Un toque de azul",
     "text": "Nos encantará que nos acompañes luciendo alguna prenda en azul de tu preferencia.",
     "colors": [
-      "#E0FAFC",
-      "#BCEEF2",
-      "#86DEE5",
-      "#57CDD8",
-      "#35B6C5"
+      "#E8F5FF",
+      "#B8DFFF",
+      "#85C7FB",
+      "#56AFF5",
+      "#2998EF"
     ]
   },
   "gifts": [
@@ -110,12 +110,12 @@ export const openHouse = {
     "label": ""
   },
   "theme": {
-    "primary": "#168C99",
-    "dark": "#246873",
-    "champagne": "#A7E3E9",
-    "cream": "#ECFAFB",
-    "ivory": "#FAFEFF",
-    "rose": "#CCF0F1",
-    "sage": "#68BCC5"
+    "primary": "#1874B8",
+    "dark": "#235F89",
+    "champagne": "#B8DFFF",
+    "cream": "#EDF7FF",
+    "ivory": "#FAFDFF",
+    "rose": "#D8ECFD",
+    "sage": "#69B9F7"
   }
 };

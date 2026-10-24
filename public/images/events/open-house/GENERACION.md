@@ -59,3 +59,20 @@ Edit this invitation artwork ONLY to change the palette from navy and royal blue
 Edit this invitation artwork ONLY to change the palette from navy and royal blue to soft turquoise, aqua and light sky blue. Replace ALL navy elements, dark blue leaves, royal blue ribbon or lining and any dark wax seal with medium turquoise teal #42B9C3 and light aqua #B9E8E9. Preserve the exact object geometry, size, placement, flowers, ribbon or open state as shown. Keep white roses white. Same original aspect ratio and margins, actual transparent background. No additional objects or text. Keep embossed OH if present.
 
 Verificación final: móvil 390px y escritorio 1440px; apertura centrada, casa moderna cargada, horarios de comienzo correctos, copa Wine, cinco tonos claros y RSVP sin textarea. Envío simulado interceptado sin crear respuestas reales. Registro de RSVP creado con fecha límite original conservada mediante scripts/update-open-house-turquoise.mjs --activate.
+
+
+## Revisión azul cielo de PORTADANUEVA
+
+Se usa la imagen proporcionada PORTADANUEVA.png como portada, optimizada sin alterarla a portada-cielo.webp. Paleta tomada de su cielo: #2998EF, #69B9F7, #B8DFFF y #EDF7FF; azul de texto #235F89 para contraste, sin azul marino ni turquesas. Sobre cerrado y abierto editados con IA a sky/envelope-closed y sky/envelope-open; floral-sky. Originales anteriores conservados. Horarios de inicio, copa Wine y RSVP sin mensaje se mantienen.
+
+### envelope-closed
+
+Edit this invitation asset palette to match the vibrant clear BLUE SKY of reference image 2. Image 1 is the edit target; image 2 is only a color reference, do not insert its house. Replace turquoise, teal, royal and navy blue accents with luminous sky blue #2998EF, soft cornflower sky #69B9F7 and pale cloud blue #D9EFFF. Preserve EXACTLY the original dimensions, object size, position and geometry, open or closed envelope state, white flowers, transparent margins and all original details. Medium sky-blue ribbon, wax seal and lining where present, blue leaves rather than teal. NO navy, NO turquoise, no dark backdrop. Actual transparent background. No new text or objects. White cloud and bright blue sky palette.
+
+### envelope-open
+
+Edit this invitation asset palette to match the vibrant clear BLUE SKY of reference image 2. Image 1 is the edit target; image 2 is only a color reference, do not insert its house. Replace turquoise, teal, royal and navy blue accents with luminous sky blue #2998EF, soft cornflower sky #69B9F7 and pale cloud blue #D9EFFF. Preserve EXACTLY the original dimensions, object size, position and geometry, open or closed envelope state, white flowers, transparent margins and all original details. Medium sky-blue ribbon, wax seal and lining where present, blue leaves rather than teal. NO navy, NO turquoise, no dark backdrop. Actual transparent background. No new text or objects. White cloud and bright blue sky palette.
+
+### floral
+
+Edit this invitation asset palette to match the vibrant clear BLUE SKY of reference image 2. Image 1 is the edit target; image 2 is only a color reference, do not insert its house. Replace turquoise, teal, royal and navy blue accents with luminous sky blue #2998EF, soft cornflower sky #69B9F7 and pale cloud blue #D9EFFF. Preserve EXACTLY the original dimensions, object size, position and geometry, open or closed envelope state, white flowers, transparent margins and all original details. Medium sky-blue ribbon, wax seal and lining where present, blue leaves rather than teal. NO navy, NO turquoise, no dark backdrop. Actual transparent background. No new text or objects. White cloud and bright blue sky palette.
