@@ -1,3 +1,5 @@
+import {aiPhotoConfig} from '@/lib/event-photos/dynamic-config';
+import {IsabelaGuestPhotos} from '@/components/panel/IsabelaGuestPhotos';
 import {supportsPersonalizedPasses} from "@/lib/event-passes/config";
 import {PersonalizedPassManager} from "@/components/panel/PersonalizedPassManager";
 import Link from "next/link";
@@ -41,7 +43,7 @@ export default async function AdminEvent({ params }) {
     </header>
 
     <section className="dashboard-card">
-      <div className="dashboard-card__title"><div><h2>Información esencial</h2><p>{editable ? "Edita la invitación y guarda los cambios desde este panel." : "Esta invitación usa una plantilla específica del proyecto."}</p></div></div>
+      <div className="dashboard-card__title"><div><h2>Información esencial</h2><p>{editable ? "Edita la invitación y guarda los cambios desde este panel." : event.templateKey === "ai-designed" ? "Esta invitación se edita desde Crear con IA." : "Esta invitación usa una plantilla específica del proyecto."}</p></div></div>
       <dl className="event-summary">
         <div><dt>Enlace público</dt><dd>{invitationPath}</dd></div>
         <div><dt>Fecha</dt><dd>{event.publicData?.weddingDate?.iso?.slice(0, 10) || "Sin fecha"}</dd></div>
@@ -51,6 +53,8 @@ export default async function AdminEvent({ params }) {
       <EventActions showManage={false} event={{ id: event.id, slug: event.slug, status: event.status, publicPath: event.publicPath }} />
     </section>
 
+    {event.templateKey==="ai-designed"&&<section className="dashboard-card"><h2>Invitación creada con IA</h2><Link className="button" href={`/admin/crear-con-ia?eventId=${event.id}`}>Editar con IA</Link></section>}
+    {aiPhotoConfig(event)&&<IsabelaGuestPhotos eventId={event.id} opensDateLabel={aiPhotoConfig(event).opensDateLabel} title="Fotos de nuestros invitados"/>}
     {editable && <EventForm event={editorEvent} />}
     {passesEnabled&&<section className="dashboard-card" id="invitados-y-pases"><h2>Invitados y pases</h2><p>Crea los pases con nombre y lugares asignados y copia el enlace para cada invitado.</p>{event.status!=="published"&&<p>Los enlaces estarán disponibles para los invitados cuando publiques la invitación.</p>}<PersonalizedPassManager eventId={event.id} initialGuests={guests} slug={event.slug} confirmationMode={event.slug==="xv-nahomi"?"whatsapp":"panel"}/></section>}
     <OwnerAccount eventId={event.id} />

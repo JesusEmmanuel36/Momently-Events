@@ -5,6 +5,8 @@ export function HexColorField({name,defaultValue="#000000"}) {
  const [value,setValue]=useState(defaultValue.toUpperCase()),[hsv,setHsv]=useState(()=>hexToHsv(defaultValue)),[open,setOpen]=useState(false);
  const root=useRef(null),input=useRef(null),id=useId();
  const valid=/^#[0-9a-f]{6}$/i.test(value);
+ useEffect(()=>{const element=input.current;const apply=e=>{const next=String(e.detail?.value||"").toUpperCase();if(!/^#[0-9A-F]{6}$/.test(next))return;setValue(next);setHsv(hexToHsv(next));};element?.addEventListener("momently:set-color",apply);return()=>element?.removeEventListener("momently:set-color",apply)},[]);
+
  useEffect(()=>{input.current?.dispatchEvent(new Event("input",{bubbles:true}));},[value]);
  useEffect(()=>{if(!open)return;const close=e=>{if(!root.current?.contains(e.target))setOpen(false);};const key=e=>{if(e.key==="Escape"){setOpen(false);root.current?.querySelector("button")?.focus();}};document.addEventListener("pointerdown",close);document.addEventListener("keydown",key);return()=>{document.removeEventListener("pointerdown",close);document.removeEventListener("keydown",key);};},[open]);
  const update=next=>{setHsv(next);setValue(hsvToHex(next));};

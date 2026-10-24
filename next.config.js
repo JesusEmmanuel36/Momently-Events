@@ -10,7 +10,7 @@ const nextConfig = {
   },
   outputFileTracingRoot: process.cwd(),
   async headers() {
-    return [{
+    return [{source:"/fonts/:path*",headers:[{key:"Access-Control-Allow-Origin",value:"*"}]},{
       source: "/(.*)",
       headers: [
         { key: "X-Content-Type-Options", value: "nosniff" },

@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {paperBodyBounds,alignEnvelopeBodies} from '../lib/ai/envelope-layout.js';
+function paper(left,right,top,bottom){const width=100,height=100,data=new Uint8ClampedArray(width*height*4);for(let y=top;y<bottom;y++)for(let x=left;x<right;x++)data[(y*width+x)*4+3]=255;return{data,width,height}}
+test('detecta papel opaco sin confundir márgenes transparentes',()=>{assert.deepEqual(paperBodyBounds(paper(10,90,45,88)),{width:.8,bottom:.88});assert.equal(paperBodyBounds(paper(0,0,0,0)),null)});
+test('calibra el ancho y fondo del abierto contra el cerrado',()=>{assert.deepEqual(alignEnvelopeBodies({width:.8,bottom:.88},{width:.8,bottom:.93}),{openWidth:100,openBottom:5});assert.deepEqual(alignEnvelopeBodies({width:.8,bottom:.88},{width:.64,bottom:.92}),{openWidth:125,openBottom:2})});
+test('rechaza mediciones insuficientes o correcciones excesivas',()=>{assert.equal(alignEnvelopeBodies(null,{}),null);assert.equal(alignEnvelopeBodies({width:1,bottom:.9},{width:.3,bottom:.9}),null)});

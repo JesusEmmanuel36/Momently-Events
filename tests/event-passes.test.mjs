@@ -348,3 +348,12 @@ test("Luis and Erika passes keep assigned places and update one confirmation",as
  assert.equal(first.rsvpId,second.rsvpId);assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,3);
  const another=fixture("kristell-y-ricardo");await assert.rejects(readPass(pass.passToken,{context:another.context}),e=>e.status===404);
 });
+
+test("AI passes keep assigned seats and ignore disabled message fields on the server",async()=>{
+ const {context,store}=fixture('evento-nuevo-ia');context.event.templateKey='ai-designed';context.event.settings.personalizedPasses={enabled:true};context.event.settings.rsvp.askMessage=false;
+ const pass=await createPass(context,{displayName:'Familia Ejemplo',allowedSeats:3});
+ const saved=await confirmPass(pass.passToken,{attending:'yes',totalPeople:2,message:'Campo desactivado'},{context});
+ assert.equal(store.get(`events/test-event/rsvps/${saved.rsvpId}`).message,'');
+ assert.equal(store.get(`events/test-event/rsvps/${saved.rsvpId}`).totalPeople,2);
+ await assert.rejects(confirmPass(pass.passToken,{attending:'yes',totalPeople:4},{context}),error=>error.status===400);
+});

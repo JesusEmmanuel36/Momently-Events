@@ -89,7 +89,7 @@ export function GuestPhotoUpload({ initialNow, event = guestPhotos }) {
   return <main className={styles.page} style={event.photoTheme}>
     <div className={styles.card}>
       <Link className={styles.back} href={`/eventos/${event.slug}`}>← Ver invitación</Link>
-      <Image className={styles.flowers} src={event.floral} width={560} height={373} alt="" aria-hidden="true" />
+      {event.floral&&<Image className={styles.flowers} src={event.floral} width={560} height={373} alt="" aria-hidden="true" />}
       <Camera className={styles.camera} aria-hidden="true" />
       <span className={styles.eyebrow}>{event.uploadEyebrow || "Recuerdos de nuestra boda"}</span>
       <h1>{event.partner1}{event.partner2 && <> <i>&</i> {event.partner2}</>}</h1>
