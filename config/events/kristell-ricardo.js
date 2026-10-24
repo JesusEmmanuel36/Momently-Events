@@ -44,26 +44,9 @@ export const kristellRicardo = {
     "mapsUrl": "https://maps.app.goo.gl/BXU1Mo9nN9Ai4Vcq9?g_st=iw"
   },
   "dressCode": {
-    "title": "Vestido largo",
-    "text": "Los colores azul pavo, verde esmeralda, blanco y rojo están reservados. Te pedimos elegir otros tonos para acompañarnos en este día tan especial.",
-    "colors": [
-      {
-        "name": "Azul pavo",
-        "color": "#087DA3"
-      },
-      {
-        "name": "Verde esmeralda",
-        "color": "#006B50"
-      },
-      {
-        "name": "Blanco",
-        "color": "#FFFFFF"
-      },
-      {
-        "name": "Rojo",
-        "color": "#BE2435"
-      }
-    ]
+    "title": "Código de vestimenta: Formal",
+    "text": "Con cariño les pedimos evitar estos colores, reservados para los novios y cortejo nupcial: azul pavo, verde esmeralda, blanco y rojo.",
+    "colors": []
   },
   "itinerary": [
     {
