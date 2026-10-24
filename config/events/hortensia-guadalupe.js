@@ -125,7 +125,7 @@ export const hortensiaGuadalupe = {
   ],
   "music": {
     "enabled": true,
-    "url": "/audio/hortensiayguadalupe.mp3",
+    "url": "/audio/hortensiayguadalupe2.mp3",
     "label": "Nuestra canción"
   },
   "gifts": [],

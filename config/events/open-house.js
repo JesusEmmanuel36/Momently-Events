@@ -36,7 +36,7 @@ export const openHouse = {
     "name": "Mi nuevo hogar",
     "time": "4:00 p. m.",
     "address": "Cda. Valle Paraíso, Fraccionamiento Hda. Santo Tomás, Nicolás Romero",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cda.%20Valle%20Para%C3%ADso%2C%20Fraccionamiento%20Hda.%20Santo%20Tom%C3%A1s%2C%20Nicol%C3%A1s%20Romero"
+    "mapsUrl": "https://maps.app.goo.gl/147ZnjyYjaZ11mZVA"
   },
   "itinerary": [
     {
