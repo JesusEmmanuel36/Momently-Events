@@ -2,8 +2,8 @@
 
 - Sábado 7 de noviembre de 2026.
 - Ceremonia: Nápoles, 11:00 a. m. No se proporcionó domicilio ni enlace.
-- Recepción: Fonda Argentina, Plaza Vía Alta León Sur, 2:00 p. m.
-- Vestimenta: formal y semiformal.
+- Recepción y comida: Fonda Argentina, Plaza Vía Alta León Sur, 2:00 p. m. Menú de tres tiempos. Se solicita puntualidad para comenzar todos juntos el servicio.
+- Sin sección de código de vestimenta; en su lugar se explica el horario de comida.
 - Mesa de regalos: sección general; tienda, número y enlace pendientes.
 - Música: Idea 10 — Gibran Alcocer, `/audio/saulyalejandra.mp3`.
 - Paleta: verde olivo y beige. Sin fotos; portada, sobres y arreglo generados con IA.
