@@ -2,6 +2,10 @@
 
 El creador clásico permanece disponible en `/admin/bodas/nueva`. El estudio `/admin/crear-con-ia` genera código y permite guardar y publicar eventos independientes con la plantilla `ai-designed`.
 
+## Botón de música
+
+El prompt puede solicitar explícitamente cambiar el botón de música a iconos play/pausa, texto o ambos, tamaño acotado, borde redondeado, sombra y posición izquierda/derecha. La respuesta `musicControl` solo admite colores HEX y opciones delimitadas, nunca código ejecutable. El endpoint conserva la geometría anterior o la original cuando el prompt no pide expresamente un cambio de diseño del reproductor; únicamente actualiza sus colores. El estilo se conserva en el borrador y publicación y se muestra también en la vista previa. Reproducción, pausa, apertura y errores siguen en el reproductor nativo.
+
 ## Apariencia y campos de las funciones
 
 Cada generación ahora devuelve `featureAppearance` con estilos para RSVP, pases y fotos, aunque estén apagados. El prompt principal puede cambiar la paleta, fuentes, superficies, bordes, botones, radios y espaciado. Los tres estilos se guardan dentro del diseño y se aplican inmediatamente al activar los toggles, sin otra llamada a OpenAI. En borradores antiguos sin ese objeto, se muestra una indicación para modificar el diseño con IA una vez.

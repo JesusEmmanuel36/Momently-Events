@@ -9,6 +9,7 @@ import { publicRsvpSchemaFor, ageCountFields } from "@/lib/rsvp/schema";
 
 export const runtime = "nodejs";
 function ensureRsvpOpen(event, companions, ignoreDeadline = false, slug = "") {
+  if (slug === "xv-zoe-valentina") throw new AppError("Confirma tu asistencia por WhatsApp desde la invitación.", 403, "whatsapp_confirmation_only");
   if (slug === "xv-nahomi") throw new AppError("Confirma tu asistencia por WhatsApp desde la invitación.", 403, "whatsapp_confirmation_only");
   const settings = event.settings?.rsvp; if (!settings?.enabled) throw new AppError("Las confirmaciones no están disponibles.", 403, "rsvp_disabled");
   const maxCompanions = slug === "esmeralda-y-antonio" ? 3 : (slug === "isamara-y-wsbaldo" || slug === "mario-y-jazmin") ? 1 : slug === "clara-y-santiago" ? 5 : Number(settings.maxCompanions || 0);

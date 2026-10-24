@@ -3,3 +3,7 @@
 .musicControl{position:absolute;bottom:14px;left:14px;z-index:20;max-width:260px}.musicControl button{border:1px solid #d6c6ae;border-radius:24px;background:#fffcf5;color:#493a2d;padding:10px 16px;box-shadow:0 3px 12px #0002;cursor:pointer;font:500 12px Manrope,Arial,sans-serif}.musicControl small{display:block;background:#fffcf5;color:#493a2d;padding:6px;font-size:11px}
 
 .public{width:100%;height:auto;min-height:100svh;box-shadow:none}.public:has(.intro){height:100svh}.public .hero{animation:heroArrive 1s both}.public .musicControl{position:fixed;bottom:16px;left:16px}
+
+.musicControl button{background:var(--music-bg,#fffcf5);color:var(--music-text,#493a2d);border-color:var(--music-border,#d6c6ae);border-radius:var(--music-radius,24px);font-size:var(--music-font-size,12px);box-shadow:var(--music-shadow,0 3px 12px #0002);display:inline-flex;align-items:center;justify-content:center;gap:8px}.musicControl[data-variant=icons] button{width:var(--music-size,36px);height:var(--music-size,36px);min-width:32px;min-height:32px;padding:0}.musicControl[data-variant=icons-text] button{min-height:var(--music-size,36px)}.musicControl[data-position=right]{left:auto;right:14px}.public .musicControl[data-position=right]{left:auto;right:16px}.musicControl button:focus-visible{outline:2px solid var(--music-text,#493a2d);outline-offset:3px}.musicControl small{background:var(--music-bg,#fffcf5);color:var(--music-text,#493a2d)}
+
+.musicControl button{min-height:var(--music-size,36px)}

@@ -1,13 +1,16 @@
 "use client";
+import {Play,Pause} from 'lucide-react';
+import {musicControlStyle} from '@/lib/ai/music-control';
 import Image from 'next/image';
 import {useEffect,useRef,useState} from 'react';
 import styles from './AiCoverPreview.module.css';
 
-export function AiCoverPreview({document,imageUrl,musicUrl='',closedUrl,openUrl,title,subtitle,date,layout,desktop=false,interactive=false,publicMode=false,onOpened}){
+export function AiCoverPreview({document,imageUrl,musicUrl='',musicControl,closedUrl,openUrl,title,subtitle,date,layout,desktop=false,interactive=false,publicMode=false,onOpened}){
  const[phase,setPhase]=useState('closed'),[loaded,setLoaded]=useState({closed:false,open:false}),[failed,setFailed]=useState(false);
  const frameRef=useRef(null);const[frameHeight,setFrameHeight]=useState(844);
  useEffect(()=>{if(!publicMode)return;const receive=event=>{if(event.source!==frameRef.current?.contentWindow)return;if(event.data?.type==='momently:height'){const height=Number(event.data.height);if(Number.isFinite(height)&&height>0&&height<=100000)setFrameHeight(height)}if(event.data?.type==='momently:confirm')window.document.getElementById('ai-confirmation')?.scrollIntoView({behavior:'smooth'})};window.addEventListener('message',receive);return()=>window.removeEventListener('message',receive)},[publicMode]);
  useEffect(()=>{if(phase==='cover'||!closedUrl)onOpened?.()},[phase,closedUrl,onOpened]);
+ const musicAppearance=musicControlStyle(musicControl);
  const audioRef=useRef(null);
  const[playing,setPlaying]=useState(false),[audioError,setAudioError]=useState('');
  const playMusic=()=>{if(!audioRef.current)return;setAudioError('');audioRef.current.play().catch(()=>setAudioError('Pulsa reproducir para escuchar la música.'))};
@@ -16,7 +19,7 @@ export function AiCoverPreview({document,imageUrl,musicUrl='',closedUrl,openUrl,
  const open=()=>{if(phase==='closed'&&openUrl&&loaded.closed&&loaded.open&&!failed){setPhase('opening');playMusic()}};
  const ready=Boolean(openUrl&&loaded.closed&&loaded.open&&!failed);
  return <div className={`${styles.viewport} ${publicMode?styles.public:desktop?styles.desktop:styles.mobile}`} data-cover-preview-phase={!hasEnvelope?'cover':phase}>
- {musicUrl&&<><audio key={musicUrl} ref={audioRef} src={musicUrl} preload="none" loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onError={()=>setAudioError('No se pudo cargar el audio. Vuelve a subirlo.')} /><div className={styles.musicControl}><button type="button" onClick={()=>{if(audioRef.current?.paused)playMusic();else audioRef.current?.pause()}}>{playing?'Pausar música':'Reproducir música'}</button>{audioError&&<small role="status">{audioError}</small>}</div></>}
+ {musicUrl&&<><audio key={musicUrl} ref={audioRef} src={musicUrl} preload="none" loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onError={()=>setAudioError('No se pudo cargar el audio. Vuelve a subirlo.')} /><div className={styles.musicControl} style={musicAppearance.style} data-variant={musicAppearance.control.variant} data-position={musicAppearance.control.position}><button type="button" aria-label={playing?'Pausar música':'Reproducir música'} aria-pressed={playing} onClick={()=>{if(audioRef.current?.paused)playMusic();else audioRef.current?.pause()}}>{musicAppearance.control.variant!=='text'&&(playing?<Pause size={18} aria-hidden="true"/>:<Play size={18} aria-hidden="true"/>)}{musicAppearance.control.variant!=='icons'&&(playing?'Pausar música':'Reproducir música')}</button>{audioError&&<small role="status">{audioError}</small>}</div></>}
  {hasEnvelope&&phase!=='cover'?<section className={`${styles.intro} ${phase==='opening'?styles.opening:''}`} aria-label="Apertura de la invitación">
  {imageUrl&&<Image src={imageUrl} fill unoptimized priority alt="" aria-hidden="true" className={styles.background}/>}<div className={styles.shade}/>
  <header className={styles.header}><span>{subtitle||'Una invitación especial'}</span><h2>Una invitación para ti</h2></header>

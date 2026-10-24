@@ -7,7 +7,7 @@ export const zoeValentinaXv = {
   date: "2026-11-21T18:00:00-06:00",
   timezone: "America/Mexico_City",
   maxCompanions: 0,
-  rsvpEnabled: true,
+  rsvpEnabled: false,
   dateStamp: "21 · 11 · 2026",
   dateDisplay: "Sábado · 21 de noviembre · 2026",
   calendarDate: "21 de noviembre de 2026",
@@ -56,7 +56,7 @@ export const zoeValentinaXv = {
     },
   ],
   contact: { phone: "477 816 8915", whatsapp: "https://wa.me/524778168915?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Zo%C3%A9%20Valentina." },
-  music: { enabled: false, url: "", label: "Mi canción" },
+  music: { enabled: true, url: "/audio/zoevalentinaxv.mp3", label: "Mi canción" },
   itinerary: [
     { time: "18:00", title: "Misa", description: "La Haciendita", icon: "heart" },
   ],
