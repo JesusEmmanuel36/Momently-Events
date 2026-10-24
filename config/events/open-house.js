@@ -16,13 +16,13 @@ export const openHouse = {
   "maxCompanions": 0,
   "askMenuPreference": false,
   "askAllergies": false,
-  "askMessage": true,
+  "askMessage": false,
   "askSongSuggestion": false,
   "rsvpDeadlineISO": "2026-11-14T23:59:59.999-06:00",
   "hero": {
     "subtitle": "Open House",
     "quote": "Un nuevo hogar, una nueva historia",
-    "image": "/images/events/open-house/hero.webp"
+    "image": "/images/events/open-house/hero-modern.webp"
   },
   "ceremony": {
     "enabled": false,
@@ -41,45 +41,45 @@ export const openHouse = {
   "itinerary": [
     {
       "time": "16:00",
-      "range": "4:00 a 4:30 p. m.",
       "title": "¡Bienvenidos a mi nuevo hogar!",
       "description": "Recepción de invitados y entrega de kit de fiesta.",
-      "icon": "home"
+      "icon": "home",
+      "displayTime": "4:00 p. m."
     },
     {
       "time": "16:30",
-      "range": "4:30 a 5:00 p. m.",
       "title": "Corte de listón y brindis",
       "description": "Celebremos juntos este nuevo comienzo.",
-      "icon": "toast"
+      "icon": "wine",
+      "displayTime": "4:30 p. m."
     },
     {
       "time": "17:00",
-      "range": "5:00 a 5:30 p. m.",
       "title": "Fotos y buenos recuerdos",
       "description": "Lluvia de sobres y foto del recuerdo.",
-      "icon": "camera"
+      "icon": "camera",
+      "displayTime": "5:00 p. m."
     },
     {
       "time": "17:30",
-      "range": "5:30 a 7:00 p. m.",
       "title": "Momento de compartir los alimentos",
       "description": "Comida y convivencia.",
-      "icon": "food"
+      "icon": "food",
+      "displayTime": "5:30 p. m."
     },
     {
       "time": "19:00",
-      "range": "7:00 a 10:00 p. m.",
       "title": "Grupo “Los primos ADC”",
       "description": "¡Momento para sacar tus mejores pasos!",
-      "icon": "music"
+      "icon": "music",
+      "displayTime": "7:00 p. m."
     },
     {
       "time": "22:00",
-      "range": "10:00 p. m. a 2:00 a. m.",
       "title": "Sonido Constelación",
       "description": "La celebración continúa hasta las 2:00 a. m. del domingo 6 de diciembre.",
-      "icon": "sparkles"
+      "icon": "sparkles",
+      "displayTime": "10:00 p. m."
     }
   ],
   "dressCode": {
@@ -87,12 +87,11 @@ export const openHouse = {
     "title": "Un toque de azul",
     "text": "Nos encantará que nos acompañes luciendo alguna prenda en azul de tu preferencia.",
     "colors": [
-      "#D9F5FC",
-      "#93DBF4",
-      "#34B7EE",
-      "#168BE0",
-      "#1269BA",
-      "#12385E"
+      "#E0FAFC",
+      "#BCEEF2",
+      "#86DEE5",
+      "#57CDD8",
+      "#35B6C5"
     ]
   },
   "gifts": [
@@ -111,12 +110,12 @@ export const openHouse = {
     "label": ""
   },
   "theme": {
-    "primary": "#1269BA",
-    "dark": "#12385E",
-    "champagne": "#8FCBEA",
-    "cream": "#EAF7FF",
-    "ivory": "#FAFDFF",
-    "rose": "#B6E4F8",
-    "sage": "#6CA5D1"
+    "primary": "#168C99",
+    "dark": "#246873",
+    "champagne": "#A7E3E9",
+    "cream": "#ECFAFB",
+    "ivory": "#FAFEFF",
+    "rose": "#CCF0F1",
+    "sage": "#68BCC5"
   }
 };

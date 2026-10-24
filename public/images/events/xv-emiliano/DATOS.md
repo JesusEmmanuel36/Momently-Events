@@ -9,3 +9,8 @@ No se proporcionó enlace exacto de Maps: el botón “Buscar ubicación” busc
 
 ## Corrección de estructura de portada
 Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del sobre, encabezado superior, portada centrada y arreglo floral al abrir. Se conservaron los sobres de IA y sus proporciones. Verificado en 390 px y 1440 px, apertura y música silenciada cuando existe. Sin envíos de RSVP ni mensajes de WhatsApp de prueba.
+
+
+## Ajuste de portada y cierre
+
+La portada muestra «Te invito a mi Cumple» y «EMILIANO», sin fecha. Se conserva la imagen de IA. El cierre muestra «¡TE ESPERAMOS!» con la fecha y hora pequeñas debajo, sin repetir la fecha en el título. Se mantiene el enlace /eventos/emi-fest para no romper invitaciones compartidas.

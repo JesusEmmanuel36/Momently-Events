@@ -4,3 +4,5 @@
 .floral{display:block;width:min(100%,520px);height:auto;margin:1.5rem auto -1.5rem;pointer-events:none}
 
 .introTitle h1{font-family:var(--font-script),cursive;font-weight:400;font-size:clamp(3.4rem,10vw,6rem);letter-spacing:0;line-height:1.2}.introTitle p{font-family:var(--font-script),cursive;font-size:2rem;line-height:1.2}.envelope .letterMessage{font-family:var(--font-sans),Arial,sans-serif;font-size:clamp(.8rem,2.8vw,1.35rem);font-weight:500;line-height:1.45;margin:auto;max-width:95%}.portrait{width:100%}.photo{object-position:center}
+
+.invitation [data-traditional-hero] h1{font-size:clamp(2rem,10vw,6.5rem);line-height:1.1}

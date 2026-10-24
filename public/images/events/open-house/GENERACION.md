@@ -21,7 +21,7 @@ Open House. “Un nuevo hogar, una nueva historia”. Sábado 5 de diciembre de 
 - 7:00–10:00 p. m.: Grupo “Los primos ADC”.
 - 10:00 p. m.–2:00 a. m.: Sonido Constelación; termina el domingo 6 de diciembre.
 
-Temática: “Un toque de azul”. Lluvia de sobres con un mensaje o deseo bonito. Confirmación antes del 15 de noviembre de 2026, por formulario breve al no existir número de contacto. El límite de backend es el 14 de noviembre a las 23:59:59.999 en America/Mexico_City. El registro de Firebase para recibir confirmaciones sigue pendiente de activación. Sin fotografías personales ni música.
+Temática: “Un toque de azul”. Lluvia de sobres con un mensaje o deseo bonito. Confirmación antes del 15 de noviembre de 2026, por formulario breve al no existir número de contacto. El límite de backend es el 14 de noviembre a las 23:59:59.999 en America/Mexico_City. El registro publicado de Firebase está habilitado para recibir confirmaciones, sin campo de mensaje. Sin fotografías personales ni música.
 
 ## Prompts finales
 
@@ -36,3 +36,26 @@ Use case: product-mockup. ONE photorealistic horizontal floral arrangement as a 
 
 ### Portada
 Use case: stylized-concept. Premium dreamy photorealistic architectural artwork for an elegant blue Open House digital invitation, portrait1024x1536. A welcoming beautiful new home in pale blue and ivory, arched navy front door, gentle sky-blue hydrangeas and white roses around the doorway, soft warm interior light suggesting a new beginning. No people. Airy, tasteful refined blue-themed celebration, powder blue, cyan highlights, royal blue and deep navy accents. House sits mostly in upper-middle frame, restrained pale blue sky and wall area with generous visual breathing room, darker soft blue lower area for later HTML text overlay. No letters, no typography, no logos, no collage or spreadsheet. Realistic textures, fine architectural details, high-end invitation artwork, beautiful natural lighting.
+
+
+## Revisión: turquesas y casa moderna
+
+La portada se cambió a una casa contemporánea conceptual, sin representar el domicilio real. Se conservaron los originales anteriores. Nuevos recursos: hero-modern, floral-turquoise y turquoise/envelope-closed + envelope-open (PNG y WebP). Sin detalles azul marino. Los horarios del itinerario muestran solo el comienzo; corte de listón usa el icono Wine. Se eliminó la frase «Hay historias que comienzan…» y el campo de mensaje del RSVP. El deseo de la sección de regalos se conserva como indicación para acompañar el sobre físico.
+
+### hero-modern
+
+Create an elegant photorealistic architectural illustration for an Open House invitation, vertical 2:3. A distinctly MODERN contemporary two-story home, flat roofs, clean cubic white stucco volumes, large clear glass windows, pale natural stone and light wood accents, sleek turquoise entrance door, bright welcoming daylight, soft cyan sky. Delicate white roses and light turquoise hydrangeas frame the lower sides tastefully. House primarily in upper two thirds; lower third open pale aqua courtyard for overlaid invitation text. Airy light turquoise, sky blue, white palette. No navy blue, no dark blue roof, no traditional pitched roofs, no arches, no text or people. This is conceptual artwork, not a real venue photograph.
+
+### envelope-closed-turquoise
+
+Edit this invitation artwork ONLY to change the palette from navy and royal blue to soft turquoise, aqua and light sky blue. Replace ALL navy elements, dark blue leaves, royal blue ribbon or lining and any dark wax seal with medium turquoise teal #42B9C3 and light aqua #B9E8E9. Preserve the exact object geometry, size, placement, flowers, ribbon or open state as shown. Keep white roses white. Same original aspect ratio and margins, actual transparent background. No additional objects or text. Keep embossed OH if present.
+
+### envelope-open-turquoise
+
+Edit this invitation artwork ONLY to change the palette from navy and royal blue to soft turquoise, aqua and light sky blue. Replace ALL navy elements, dark blue leaves, royal blue ribbon or lining and any dark wax seal with medium turquoise teal #42B9C3 and light aqua #B9E8E9. Preserve the exact object geometry, size, placement, flowers, ribbon or open state as shown. Keep white roses white. Same original aspect ratio and margins, actual transparent background. No additional objects or text. Keep embossed OH if present.
+
+### floral-turquoise
+
+Edit this invitation artwork ONLY to change the palette from navy and royal blue to soft turquoise, aqua and light sky blue. Replace ALL navy elements, dark blue leaves, royal blue ribbon or lining and any dark wax seal with medium turquoise teal #42B9C3 and light aqua #B9E8E9. Preserve the exact object geometry, size, placement, flowers, ribbon or open state as shown. Keep white roses white. Same original aspect ratio and margins, actual transparent background. No additional objects or text. Keep embossed OH if present.
+
+Verificación final: móvil 390px y escritorio 1440px; apertura centrada, casa moderna cargada, horarios de comienzo correctos, copa Wine, cinco tonos claros y RSVP sin textarea. Envío simulado interceptado sin crear respuestas reales. Registro de RSVP creado con fecha límite original conservada mediante scripts/update-open-house-turquoise.mjs --activate.

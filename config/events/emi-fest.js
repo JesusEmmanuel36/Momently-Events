@@ -1,13 +1,13 @@
 export const emiFest = {
   "slug": "emi-fest",
   "templateKey": "emi-fest-blue-gold-party",
-  "eventTitle": "Emi Fest",
+  "eventTitle": "Cumple de Emiliano",
   "couple": {
     "partner1": "Emiliano",
     "partner2": ""
   },
   "displayNames": {
-    "partner1": "Emi Fest",
+    "partner1": "Emiliano",
     "partner2": ""
   },
   "date": "2026-11-08T18:00:00-06:00",
@@ -18,7 +18,7 @@ export const emiFest = {
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
-    "subtitle": "Te invito a mi party",
+    "subtitle": "Te invito a mi Cumple",
     "quote": "Una noche para celebrar, bailar y crear buenos recuerdos. ¡Me encantará que seas parte de este día!",
     "image": "/images/events/xv-emiliano/hero-party.webp"
   },
@@ -39,7 +39,7 @@ export const emiFest = {
   "itinerary": [
     {
       "time": "18:00",
-      "title": "Emi Fest",
+      "title": "Cumple de Emiliano",
       "icon": "party"
     }
   ],
