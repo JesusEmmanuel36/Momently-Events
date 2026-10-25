@@ -40,3 +40,11 @@ Se publican solo los WebP optimizados, conservando el alfa. Los PNG de la herram
 Bienvenida y firma comprobadas en navegador, tres fotos originales, diez horarios e iconos, enlaces de Amazon/Maps y calendario con cierre a medianoche. Sobres alineados en móvil con diferencia inferior a un píxel entre sus cuerpos visibles. Música real comprobada con el navegador silenciado. RSVP probado con respuesta interceptada sin registros ficticios y registro del evento habilitado con `scripts/activate-liz-eduardo-rsvp.mjs --activate`, sin crear cuentas de propietario. Sin ceremonia ni sección de información importante.
 
 Pendiente desplegar el código y recursos a Vercel.
+
+## Actualización: familia y fotos de invitados
+
+Padres del novio: Ivonne Pelayo Flores y Erick Ramírez Ponce. Padres de la novia: † Mauro Franco Palacios y † Brenda Lerma Bautista, con “CON AMOR HASTA EL CIELO” y “Presentes eternamente en nuestros corazones.” en un bloque conmemorativo separado. Los datos familiares también se sincronizaron con el registro del evento, conservando el RSVP y propietarios existentes.
+
+QR disponible en `/eventos/liz-y-eduardo/fotos/qr`, incluida descarga, con destino a `/eventos/liz-y-eduardo/fotos`. Cargas y álbum bloqueados en servidor hasta el 12 de diciembre de 2026 a las 00:00, centro de México. Carpeta exclusiva Cloudinary `momently-events/liz-y-eduardo/guest-photos`. Galería pública en la invitación y descarga individual de fotos desde el panel con autenticación del propietario.
+
+Verificado en navegador: nombres y homenaje, QR PNG, descarga, destino de subida, bloqueo de formulario y API antes del evento, móvil/escritorio sin desbordes. No se subieron fotos reales durante las pruebas.

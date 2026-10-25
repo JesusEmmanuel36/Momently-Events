@@ -5,6 +5,7 @@ export const lizEduardo={
  date:'2026-12-12T17:30:00-06:00',endDate:'2026-12-13T00:00:00-06:00',timezone:'America/Mexico_City',dateDisplay:'Sábado · 12 de diciembre · 2026',dateLong:'Sábado, 12 de diciembre de 2026',dateStamp:'12 · 12 · 2026',
  heroSubtitle:'Nuestra boda',heroQuote:'Nos encantará compartir contigo este día tan especial.',
  welcomeTitle:base.welcomeTitle,welcome:[...base.welcome],
+ family:[{title:'Padres del novio',names:['Ivonne Pelayo Flores','Erick Ramírez Ponce']},{title:'Padres de la novia',tribute:'CON AMOR HASTA EL CIELO',names:['† Mauro Franco Palacios','† Brenda Lerma Bautista'],closing:'Presentes eternamente en nuestros corazones.'}],
  images:{hero:'/images/events/liz-y-eduardo/image.png',gallery:['/images/events/liz-y-eduardo/image copy.png','/images/events/liz-y-eduardo/image.png']},
  galleryItems:[{src:'/images/events/liz-y-eduardo/image copy.png',alt:'Liz y Eduardo disfrutando de un viaje juntos',width:1600,height:1066},{src:'/images/events/liz-y-eduardo/image.png',alt:'Liz y Eduardo compartiendo una cena',width:1200,height:1600}],
  memory:{src:'/images/events/liz-y-eduardo/image copy 2.png',alt:'Un recuerdo de la infancia',width:832,height:1248},
