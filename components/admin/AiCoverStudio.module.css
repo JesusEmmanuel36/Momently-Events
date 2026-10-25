@@ -7,3 +7,5 @@
 .studio :global(.ai-publishing-controls){display:grid;gap:.8rem}.studio :global(.ai-publishing-controls) input[type=checkbox]{width:18px;height:18px;accent-color:#4d3b30}.studio :global(.ai-publishing-controls) label:has(input[type=checkbox]){display:flex;align-items:center;gap:.6rem}.studio :global(.ai-publishing-controls) a{text-decoration:underline}
 
 .newInvitation{display:grid;gap:.5rem;padding-bottom:1rem;border-bottom:1px solid #e4dace}.studio .newInvitation button{background:#4d3b30;color:#fff;font-weight:600}
+
+.galleryEditor :global(.gallery-editor__filename){font-size:.67rem;overflow-wrap:anywhere}.galleryEditor :global(.gallery-editor__filename small){font-size:.56rem;overflow-wrap:anywhere}

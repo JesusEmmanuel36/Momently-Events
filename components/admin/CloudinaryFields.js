@@ -68,14 +68,15 @@ export function CloudinaryAssetField({ name, defaultValue = "", eventId, kind = 
   </div>;
 }
 
-export function GalleryEditor({ items, eventId, onChange }) {
+export function GalleryEditor({ items, eventId, onChange, showFileNames = false }) {
   const update = (index, patch) => onChange(items.map((item, itemIndex) => itemIndex === index ? { ...item, ...patch } : item));
   const move = (index, step) => { const next = [...items]; const target = index + step; if (target < 0 || target >= next.length) return; [next[index], next[target]] = [next[target], next[index]]; onChange(next.map((item, order) => ({ ...item, order }))); };
   return <div className="visual-editor">
-    <div className="visual-editor__toolbar"><span>{items.length} {items.length === 1 ? "fotografía" : "fotografías"}</span><CloudinaryUploadButton eventId={eventId} multiple label="Agregar fotografías" onUploaded={(asset, file) => onChange((current) => [...current, { id: `photo-${crypto.randomUUID()}`, url: asset.url, alt: file.name.replace(/\.[^.]+$/, ""), order: current.length }])} /></div>
+    <div className="visual-editor__toolbar"><span>{items.length} {items.length === 1 ? "fotografía" : "fotografías"}</span><CloudinaryUploadButton eventId={eventId} multiple label="Agregar fotografías" onUploaded={(asset, file) => onChange((current) => [...current, { id: `photo-${crypto.randomUUID()}`, url: asset.url, fileName:file.name.slice(0,255), alt: file.name.replace(/\.[^.]+$/, ""), order: current.length }])} /></div>
     {!items.length && <div className="visual-editor__empty"><ImagePlus /><strong>La galería está vacía</strong><span>Selecciona una o varias fotografías para comenzar.</span></div>}
     <div className="gallery-editor__grid">{items.map((item, index) => <article className="gallery-editor__item" key={item.id || `${item.url}-${index}`}>
       <div className="gallery-editor__image" style={{ backgroundImage: `url("${String(item.url).replaceAll('"', "%22")}")` }} />
+      {showFileNames&&<label className="gallery-editor__filename">Foto {index+1} · nombre para el prompt<input aria-label={`Nombre de referencia de fotografía ${index+1}`} value={item.fileName||""} maxLength={255} onChange={event=>update(index,{fileName:event.target.value})}/><small>Referencia: {item.id}</small></label>}
       <input aria-label={`Descripción de fotografía ${index + 1}`} value={item.alt || ""} onChange={(event) => update(index, { alt: event.target.value })} placeholder="Describe brevemente la fotografía" />
       <div><button type="button" onClick={() => move(index, -1)} disabled={index === 0} aria-label="Mover antes"><ArrowUp size={14} /></button><button type="button" onClick={() => move(index, 1)} disabled={index === items.length - 1} aria-label="Mover después"><ArrowDown size={14} /></button><button type="button" onClick={() => onChange(items.filter((_, itemIndex) => itemIndex !== index))} aria-label="Eliminar fotografía"><Trash2 size={14} /></button></div>
     </article>)}</div>

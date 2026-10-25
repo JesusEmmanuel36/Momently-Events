@@ -2,6 +2,16 @@
 
 El creador clásico permanece disponible en `/admin/bodas/nueva`. El estudio `/admin/crear-con-ia` genera código y permite guardar y publicar eventos independientes con la plantilla `ai-designed`.
 
+## Fotos por nombre en secciones personalizadas
+
+Las nuevas cargas conservan `fileName` con extensión y un `id` estable. En el editor de galería de IA aparecen nombre de referencia editable, descripción y orden. El prompt puede pedir «Pon foto-1.jpg en una sección titulada Este día nos conocimos». La IA recibe solo `id`, índice, nombre y descripción; no recibe los píxeles ni URLs de galería. No debe inferir el contenido visual que no se haya descrito.
+
+El HTML puede usar `data-gallery-photo="ID"` en una imagen o contenedor; el runtime coloca la original de Cloudinary y permite ampliarla. `data-photo-section` marca la sección que se retira si se elimina esa foto. Los grupos pueden usar `data-gallery-ids="ID1,ID2"`; una galería sin lista muestra solo las fotos no colocadas ya, evitando repeticiones. `data-gallery-include-used="true"` permite repetirlas cuando se solicita expresamente.
+
+Se guardan IDs y nombres en servidor y borrador local. Cambiar el orden o el nombre conserva la referencia. Los borradores antiguos sin IDs se migran determinísticamente por URL y siguen mostrando su galería; se puede ajustar el nombre de referencia si ya no se conoce el archivo original. Los nombres técnicos no se convierten en títulos públicos automáticamente.
+
+Verificación: generación real con nombres ficticios; navegador con cargas/API interceptadas verifica nombre de archivo, ID al modelo sin URL, foto individual con título, resto en galería, visor, reordenamiento, recarga y eliminación. No se publicaron eventos ni se subieron fotos reales en estas pruebas.
+
 ## Botón de música
 
 El prompt puede solicitar explícitamente cambiar el botón de música a iconos play/pausa, texto o ambos, tamaño acotado, borde redondeado, sombra y posición izquierda/derecha. La respuesta `musicControl` solo admite colores HEX y opciones delimitadas, nunca código ejecutable. El endpoint conserva la geometría anterior o la original cuando el prompt no pide expresamente un cambio de diseño del reproductor; únicamente actualiza sus colores. El estilo se conserva en el borrador y publicación y se muestra también en la vista previa. Reproducción, pausa, apertura y errores siguen en el reproductor nativo.
