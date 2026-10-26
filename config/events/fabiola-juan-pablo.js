@@ -127,6 +127,12 @@ export const fabiolaJuanPablo = {
       "icon": "dinner"
     },
     {
+      "time": "18:00",
+      "title": "Ritual holístico",
+      "description": "",
+      "icon": "ritual"
+    },
+    {
       "time": "18:30",
       "title": "Brindis",
       "description": "Brindemos por nuestro amor.",

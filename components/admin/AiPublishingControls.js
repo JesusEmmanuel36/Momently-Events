@@ -1,6 +1,6 @@
 "use client";
 import {normalizeSlugInput} from '@/lib/wedding/slug';
-export function AiPublishingControls({settings,onChange,saved,busy,hasDesign,onSave,onPublish,onNew}){
+export function AiPublishingControls({settings,onChange,saved,busy,hasDesign,onSave,onPublish,onNew,hideActions=false}){
  const set=(key,value)=>onChange({...settings,[key]:value});
  const toggle=(key,value)=>set('features',{...settings.features,[key]:value});
  return <section className="ai-publishing-controls"><h3>Enlace y funciones</h3><label>Enlace de la invitación<input aria-label="Slug de la invitación" value={settings.slug} disabled={Boolean(saved?.id)} onChange={e=>set('slug',normalizeSlugInput(e.target.value))} placeholder="luis-y-maria"/></label><small>/eventos/{settings.slug||'tu-invitacion'}{saved?.id&&' · El enlace guardado se conserva para proteger los pases y el QR.'}</small><label>Fecha del evento<input type="date" value={settings.eventDate} onChange={e=>set('eventDate',e.target.value)}/></label><small>La fecha permite programar la apertura de fotos, en horario del centro de México.</small>
@@ -11,7 +11,7 @@ export function AiPublishingControls({settings,onChange,saved,busy,hasDesign,onS
  <label><input type="checkbox" checked={settings.features.photos} onChange={e=>toggle('photos',e.target.checked)}/> Activar fotos con QR y galería de invitados</label>
  {settings.features.photos&&<label>¿Cuándo permitir subir fotos?<select value={settings.features.photoOpening||'event'} onChange={e=>set('features',{...settings.features,photoOpening:e.target.value,photosLocked:e.target.value!=='now'})}><option value="event">El día del evento</option><option value="week-before">Una semana antes del evento</option><option value="now">Desde ahora</option></select></label>}<small>La IA prepara el diseño de RSVP, pases y fotos aunque estén desactivados. Al activarlos usarán esa misma apariencia.</small>
  <p>Guardar crea un borrador. Publicar habilita el enlace, las confirmaciones y las funciones elegidas. Las fotos se podrán descargar desde el panel.</p>
- <button type="button" disabled={busy||!hasDesign} onClick={onSave}>{busy?'Guardando…':saved?.status==='published'?'Guardar cambios publicados':'Guardar borrador'}</button>{saved?.status!=='published'&&<button type="button" disabled={busy||!hasDesign} onClick={onPublish}>Guardar y publicar invitación</button>}
- <button type="button" disabled={busy} onClick={onNew}>Empezar otra invitación</button>{saved?.id&&<p><a href={`/admin/eventos/${saved.id}`}>Administrar evento y pases</a>{saved.status==='published'&&<> · <a href={`/eventos/${saved.slug}`} target="_blank" rel="noopener noreferrer">Ver invitación publicada</a></>}</p>}
+ {!hideActions&&<><button type="button" disabled={busy||!hasDesign} onClick={onSave}>{busy?'Guardando…':saved?.status==='published'?'Guardar cambios publicados':'Guardar borrador'}</button>{saved?.status!=='published'&&<button type="button" disabled={busy||!hasDesign} onClick={onPublish}>Guardar y publicar invitación</button>}
+ <button type="button" disabled={busy} onClick={onNew}>Empezar otra invitación</button></>}{saved?.id&&<p><a href={`/admin/eventos/${saved.id}`}>Administrar evento y pases</a>{saved.status==='published'&&<> · <a href={`/eventos/${saved.slug}`} target="_blank" rel="noopener noreferrer">Ver invitación publicada</a></>}</p>}
  </section>;
 }

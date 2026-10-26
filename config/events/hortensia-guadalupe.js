@@ -17,6 +17,7 @@ export const hortensiaGuadalupe = {
   "calendarDate": "26 de diciembre de 2026",
   "maxCompanions": 5,
   "rsvpEnabled": true,
+  "personalizedPasses": true,
   "askAllergies": false,
   "hero": {
     "subtitle": "Nuestras bodas de oro",

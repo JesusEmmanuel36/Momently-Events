@@ -369,3 +369,15 @@ test("Fabiola and Juan Pablo passes enforce places and update one confirmation",
  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de prueba");
  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
 });
+
+test("Hortensia and Guadalupe passes enforce places and update one confirmation", async()=>{
+ const {context,store}=fixture("hortensia-y-guadalupe");
+ const pass=await createPass(context,{...details,displayName:"Familia de prueba",allowedSeats:3});
+ assert.match(pass.path,/^\/eventos\/hortensia-y-guadalupe\/pase\//);
+ await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context}),e=>e.status===400);
+ const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3,name:"Nombre alterado"},{context});
+ const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context});
+ assert.equal(first.rsvpId,second.rsvpId);
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de prueba");
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
+});

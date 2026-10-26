@@ -4,13 +4,13 @@ import { CalendarDays, ChevronDown, Heart, Church, Pause, Play, Wine, UtensilsCr
 import { useEffect, useRef, useState } from "react";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { GallerySection } from "@/components/sections/Gallery";
-import { RSVPSection } from "@/components/sections/GuestActions";
+import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
 import { Reveal, SectionHeading } from "@/components/ui";
 
 import { openGoogleCalendar } from "@/lib/calendar";
 import styles from "./HortensiaGuadalupe.module.css";
 const images = "/images/events/hortensia-y-guadalupe";
-export function HortensiaGuadalupeInvitation({ wedding }) {
+export function HortensiaGuadalupeInvitation({ wedding, pass=null, passToken=null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [toast, setToast] = useState("");
@@ -37,7 +37,7 @@ export function HortensiaGuadalupeInvitation({ wedding }) {
       <section className={`section ${styles.celebration}`} id="detalles"><Reveal><SectionHeading eyebrow="26 de diciembre" title="Nuestra celebración"/></Reveal><div className={styles.placeGrid}><Reveal className={styles.placeCard}><Church strokeWidth={1}/><span className="eyebrow">Ceremonia religiosa</span><h2>{wedding.ceremony.name}</h2><strong>{wedding.ceremony.time}</strong><a className="button" href={wedding.ceremony.mapsUrl}>Ver ubicación</a></Reveal><Reveal className={styles.placeCard}><Wine strokeWidth={1}/><span className="eyebrow">Recepción</span><h2>{wedding.reception.name}</h2><strong>8:00 p. m.</strong><div className={styles.dinner}><UtensilsCrossed strokeWidth={1}/><span>Cena · 8:00 p. m.</span></div></Reveal></div></section>
       {wedding.galleryGroups.map(group=><div className={styles.galleryGroup} data-gallery-group={group.layout} key={group.title}><GallerySection wedding={{...view,images:{...view.images,gallery:group.photos.map(photo=>photo.src)},galleryItems:group.photos}} heading={{eyebrow:group.eyebrow,title:group.title,copy:group.copy}} imageSizes="(max-width:700px) 90vw, 45vw" fixedOverlay/></div>)}
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,location:wedding.reception.name,details:"Ceremonia religiosa a las 17:00 hrs en Iglesia El Buen Pastor. Recepción y cena a las 8:00 p. m. en Salón Anthea."})}>Agregar a mi calendario</button></Reveal></section>
-      <RSVPSection wedding={view}/>
+      {pass?<div className={styles.passSection}><PersonalizedPass pass={pass} token={passToken} slug={wedding.slug} messageLabel="Mensaje para Hortensia y Guadalupe"/></div>:<section className={styles.passNotice} id="tu-pase"><Reveal><Heart size={30} strokeWidth={1}/><span>Una invitación especial para ti</span><h2>Tu pase personalizado</h2><p>Abre el enlace personal que te compartimos para consultar tu nombre, los lugares reservados y confirmar tu asistencia.</p></Reveal></section>}
       <section className="closing"><Image src={wedding.closingImage || wedding.hero.image} fill sizes="100vw" alt="Hortensia y Guadalupe" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por acompañarnos en</span><h2>nuestra historia.</h2><p>Hortensia <i>&amp;</i> Guadalupe</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && <button className="music-player" onClick={toggleMusic} aria-label={playing?"Pausar música":"Reproducir música"}><span>{playing?<Pause/>:<Play/>}</span><span><small>{playing?"Reproduciendo":"Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;

@@ -93,3 +93,8 @@ También se probó una generación real con solo nombre y estilo, sin fecha, lug
 
 ## Costos de la sesión
 El creador muestra tokens de texto y el costo estimado de cada generación completada de código, portada, sobre cerrado, sobre abierto y arreglo floral. Usa el consumo que devuelve OpenAI y tarifas estándar verificadas el 25 de octubre de 2026. Cada sobre cuenta por separado. Se muestra el acumulado de la pantalla actual, incluso antes de generar código. Se reinicia al recargar; no es historial de facturación y no incluye solicitudes fallidas, generaciones anteriores, impuestos ni Cloudinary. Si falta el desglose de tokens o la tarifa del modelo, informa costo no disponible. `AI_USD_TO_MXN` permite cambiar la conversión de referencia (19 por defecto). El cobro definitivo se consulta en OpenAI Usage.
+
+
+## Videos y espacio de trabajo
+El creador admite hasta 10 videos de Cloudinary (150 MB por archivo), título editable y orden. El prompt recibe nombres e identificadores; `data-video-id` coloca el original mediante el runtime confiable, con controles, sin autoplay. Los videos no colocados por el diseño aparecen al final para no perder recursos subidos. Se conservan al guardar, publicar, recargar y editar; las invitaciones anteriores usan una lista vacía.
+Las acciones de guardar, publicar y empezar otra invitación están en la barra superior. Un botón flotante avisa de cambios sin guardar y desaparece tras guardar correctamente; errores de guardado lo conservan. En escritorio los campos y la vista previa tienen desplazamiento independiente, ajustado a la altura disponible. En móvil se mantiene el desplazamiento de la página.
