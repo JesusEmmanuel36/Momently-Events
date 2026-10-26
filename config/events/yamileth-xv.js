@@ -16,7 +16,7 @@ export const yamilethXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Hay sueños que florecen y momentos que se guardan para siempre. Me encantará celebrar contigo mis quince años.",
-    "image": "/images/events/xv-yamileth/image.png"
+    "image": "/images/events/xv-yamileth/portada-mariposas.webp"
   },
   "ceremony": {
     "enabled": true,

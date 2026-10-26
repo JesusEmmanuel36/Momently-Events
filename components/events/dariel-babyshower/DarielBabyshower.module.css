@@ -3,3 +3,21 @@
 .rsvp fieldset label{position:relative}.rsvp input[type=radio]{width:1px;height:1px;padding:0;clip-path:inset(50%)}.rsvp input[type=radio]:focus-visible+span{outline:2px solid #7D8860;outline-offset:3px}
 
 .gallery{background:#FFFEFA}.galleryPhotos{max-width:480px;margin:2.5rem auto 0}.galleryPhoto{display:block;width:100%;height:auto;border:8px solid #F0F2E7;border-radius:160px 160px 12px 12px}.music{position:fixed;bottom:1rem;left:1rem;z-index:30;display:flex;align-items:center;gap:.6rem;max-width:calc(100vw - 2rem);padding:.85rem 1.1rem;border:1px solid #BBC69B;border-radius:30px;background:#4F5C41f5;color:white;font:inherit;font-size:.7rem;cursor:pointer;box-shadow:0 4px 14px #0002}.music svg{flex-shrink:0}.music:focus-visible{outline:2px solid #3F4B36;outline-offset:3px}
+
+/* Legibilidad de la invitación y de los textos sobre la portada. */
+.invitation{font-size:18px}
+.invitation .kicker{font-size:.9rem;letter-spacing:.1em;color:#61704F}
+.hero .kicker{font-size:clamp(1.1rem,2.5vw,1.4rem);max-width:420px;margin:auto;line-height:1.55;text-transform:none;letter-spacing:.04em;color:#4F5C41}
+.hero .heroDate{font-size:clamp(1rem,2vw,1.2rem);letter-spacing:.06em;color:#4F5C41}
+.heroEyebrow{font-size:1.8rem}
+.section p{font-size:1.125rem;color:#61704F}
+.parentsCopy>p{font-size:1.1rem}
+.parentsNames{font-size:clamp(3.2rem,6vw,4.5rem);overflow-wrap:break-word}
+.dateCard>span{font-size:1rem;color:#61704F}
+.dateCard b{font-size:1.65rem}
+.countdown span{font-size:.85rem;letter-spacing:.03em;color:#61704F}
+.button{font-size:1rem}
+.closing .closingParents{font-size:1.1rem;color:#61704F}
+.rsvp :global(label),.rsvp :global(.form__help){font-size:1rem}
+.rsvp :global(input),.rsvp :global(textarea),.rsvp :global(select),.rsvp :global(button){font-size:1rem}
+@media(max-width:700px){.hero .kicker{max-width:310px;font-size:1.1rem}.hero .heroDate{font-size:1rem}.heroEyebrow{font-size:1.6rem}.countdown span{font-size:.8rem}.parentsCopy{max-width:100%}}

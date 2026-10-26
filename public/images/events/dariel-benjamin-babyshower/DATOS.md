@@ -26,3 +26,6 @@ Corrección local de accesibilidad/posición de radios del RSVP: tamaños invisi
 ## Música y foto
 
 Se agregó /audio/darielbenjamin.mp3 con reproducción al abrir el sobre y control para pausar/reanudar. La foto image.png se muestra completa en galería como familia.webp; la portada de IA hero.webp se conserva.
+
+
+Actualización 25 octubre 2026: papás Gisel Reyes & Edgar Rivera; recepción Salón Los Pirules. Se retiró el enlace anterior de la iglesia porque no identifica el nuevo salón; pendiente recibir el enlace correcto. Texto general y especialmente frase/fecha de portada ampliados para legibilidad.

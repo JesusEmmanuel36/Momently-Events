@@ -18,7 +18,7 @@ Padrinos de velación: Javier Monroy Carreño y Ana María Maza Barrera.
 
 ## Diseño y recursos
 Temática oaxaqueña inspirada en Guelaguetza, azul y blanco, bordados, calenda y textil. Sobres cerrado/abierto y cinco elementos IA: portada, arreglo floral, calenda, iglesia conceptual y franja textil. La ilustración de iglesia no se presenta como fotografía exacta de la parroquia.
-Sin fotografías personales. Música existente `/audio/luis-y-erika.mp3`, etiqueta «Nuestra canción», reproducción al abrir y control de pausa. No se inventó título del audio de TikTok.
+Se incorporaron las seis fotografías personales en una galería ampliable, conservando la portada ilustrada de IA. Música existente `/audio/luis-y-erika.mp3`, etiqueta «Nuestra canción», reproducción al abrir y control de pausa. No se inventó título del audio de TikTok.
 No se proporcionaron vestimenta, regalos ni contacto: se omiten.
 
 ## Pases y fotografías

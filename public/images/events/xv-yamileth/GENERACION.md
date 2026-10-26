@@ -13,3 +13,8 @@ Use case: product-mockup. ONE airy horizontal floral arrangement isolated on act
 ## open
 
 Use case: precise-object-edit. Create the OPEN counterpart of this exact quinceañera envelope. ONE single front-facing envelope, landscape 3:2, genuine transparent background. Keep identical lavender lilac paper, silver embossed botanical ornaments, ivory satin ribbon and bow, silver crown YA seal, lavender roses and white flowers, matching lower rectangular body proportions. Raise the back triangular flap straight upward exposing warm ivory interior. The front pocket must have a wide V-shaped top edge revealing an empty ivory cavity, with NO lowered closed lilac flap across the cavity. No separate letter/card because HTML will provide one, no other envelope, no extra text, no backdrop, no people. Whole envelope and raised flap visible with transparent margins.
+
+
+## Portada de mariposas — 25 octubre 2026
+Generada con la herramienta integrada image_gen. Archivo: `portada-mariposas.webp`. Sustituye la fotografía de portada; original conservado.
+Prompt: Portada vertical elegante para XV años, morado y lila, mariposas delicadas, rosas, tul lavanda, tiara plateada y destellos suaves; centro despejado para los nombres blancos de la invitación. Sin personas, letras ni marcas de agua.
