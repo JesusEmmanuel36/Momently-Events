@@ -18,3 +18,6 @@ Se recuperó la composición de Caleb y Ciriam: fondo desenfocado detrás del so
 Pases personalizados habilitados, con nombre y lugares asignados y confirmación exclusiva por WhatsApp 7776243957. Fecha límite inclusiva: 30 de noviembre de 2026, horario de México; botón de confirmación deja de mostrarse el 1 de diciembre. Arreglo floral de la esquina retirado únicamente de la portada principal. Sobres y arreglos de las otras secciones conservados.
 
 Vista previa de pases corregida: Open Graph y Twitter dicen «Carla y Vicente | Nuestra celebración» y usan `/images/events/carla-vicente/envelope-closed.webp`. Se retiró el título incorrecto «Mis XV años» y se corrigió la ruta de imagen.
+
+
+Actualización 25 octubre 2026: celebración de Bodas de oro · 50 años, visible en sobre y portada, y mensaje «50 años de amor». Ceremonia a las 2:00 p. m. Sin horario inventado de recepción.

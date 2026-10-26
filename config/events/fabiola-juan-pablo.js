@@ -14,6 +14,7 @@ export const fabiolaJuanPablo = {
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "rsvpEnabled": true,
+  "personalizedPasses": true,
   "dateStamp": "06 · 12 · 2026",
   "dateDisplay": "Domingo · 6 de diciembre · 2026",
   "calendarDate": "6 de diciembre de 2026",

@@ -1,7 +1,7 @@
 export const carlaVicente = {
   "slug": "carla-y-vicente",
   "templateKey": "carla-vicente-navy-gold-wedding",
-  "eventTitle": "Carla y Vicente",
+  "eventTitle": "Carla y Vicente | Bodas de oro",
   "couple": {
     "partner1": "Carla",
     "partner2": "Vicente"
@@ -17,14 +17,14 @@ export const carlaVicente = {
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
-    "subtitle": "Celebra con nosotros",
+    "subtitle": "Bodas de oro · 50 años",
     "quote": "Hay historias que se llenan de recuerdos y un amor que sigue escribiendo nuevos capítulos. Nos encantará compartir contigo este día tan especial.",
     "image": "/images/events/carla-vicente/image.png"
   },
   "ceremony": {
     "enabled": true,
     "name": "Parroquia (Capilla) Santiago Apóstol",
-    "time": "",
+    "time": "2:00 p. m.",
     "address": "Calle 20 de Noviembre Sur 1, Jiutepec Centro, Morelos",
     "mapsUrl": "https://maps.app.goo.gl/9aukeV6CoRTiozub9?g_st=iw"
   },

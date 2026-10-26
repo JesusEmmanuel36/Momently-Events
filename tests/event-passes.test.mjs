@@ -357,3 +357,15 @@ test("AI passes keep assigned seats and ignore disabled message fields on the se
  assert.equal(store.get(`events/test-event/rsvps/${saved.rsvpId}`).totalPeople,2);
  await assert.rejects(confirmPass(pass.passToken,{attending:'yes',totalPeople:4},{context}),error=>error.status===400);
 });
+
+test("Fabiola and Juan Pablo passes enforce places and update one confirmation", async()=>{
+ const {context,store}=fixture("fabiola-y-juan-pablo");
+ const pass=await createPass(context,{...details,displayName:"Familia de prueba",allowedSeats:3});
+ assert.match(pass.path,/^\/eventos\/fabiola-y-juan-pablo\/pase\//);
+ await assert.rejects(confirmPass(pass.passToken,{attending:"yes",totalPeople:4},{context}),e=>e.status===400);
+ const first=await confirmPass(pass.passToken,{attending:"yes",totalPeople:3,name:"Nombre alterado"},{context});
+ const second=await confirmPass(pass.passToken,{attending:"yes",totalPeople:2},{context});
+ assert.equal(first.rsvpId,second.rsvpId);
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de prueba");
+ assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
+});
