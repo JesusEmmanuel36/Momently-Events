@@ -1,6 +1,21 @@
 /* Trusted Momently preview runtime. Generated code never executes JavaScript. */
 (()=>{'use strict';
  const live=document.body.dataset.momentlyLive==='true';
+ const floralUrl=document.body.dataset.momentlyFloral;
+ if(floralUrl){
+  const root=document.querySelector('main')||document.body;
+  const sections=[...root.querySelectorAll('section')].filter(section=>!section.parentElement.closest('section'));
+  let welcome=sections[1];
+  if(!welcome){welcome=document.createElement('section');welcome.style.cssText='padding:3rem 1.5rem;text-align:center';if(sections[0])sections[0].after(welcome);else root.append(welcome)}
+  let slot=welcome.querySelector('[data-floral-slot]');
+  if(!slot){slot=document.createElement('div');slot.setAttribute('data-floral-slot','');welcome.prepend(slot)}
+  document.querySelectorAll('[data-floral-slot]').forEach(other=>{if(other!==slot)other.remove()});
+  welcome.querySelectorAll('svg').forEach(svg=>{if(!svg.closest('a,button'))svg.remove()});
+  document.querySelectorAll('img').forEach(img=>{if(img.getAttribute('src')===floralUrl||img.classList.contains('momently-floral-artwork'))img.remove()});
+  slot.classList.add('momently-floral-slot');slot.replaceChildren();
+  const floral=document.createElement('img');floral.src=floralUrl;floral.alt='';floral.setAttribute('aria-hidden','true');floral.className='momently-floral-artwork';floral.loading='lazy';slot.append(floral);
+ }else document.querySelectorAll('[data-floral-slot]').forEach(slot=>slot.remove());
+
  if(live){document.querySelectorAll('form').forEach(form=>{const section=form.closest('section');if(section&&section.querySelectorAll('h1,[data-calendar],[data-gallery]').length===0)section.remove();else form.remove()});
  const sendHeight=()=>parent.postMessage({type:'momently:height',height:Math.ceil(document.documentElement.getBoundingClientRect().height)},'*');
  new ResizeObserver(sendHeight).observe(document.body);window.addEventListener('load',sendHeight);
