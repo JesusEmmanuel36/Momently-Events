@@ -10,7 +10,7 @@ export const andreyLeira = {
     "partner1": "Andrey",
     "partner2": "Leira"
   },
-  "date": "2026-12-19T17:30:00-06:00",
+  "date": "2026-12-19T17:00:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 19 de diciembre de 2026",
   "dateStamp": "19 · 12 · 2026",
@@ -26,7 +26,7 @@ export const andreyLeira = {
   "ceremony": {
     "enabled": true,
     "name": "Catedral de Querétaro · San Felipe de Neri",
-    "time": "5:30 p. m.",
+    "time": "5:00 p. m.",
     "address": "Santiago de Querétaro, Qro.",
     "mapsUrl": "https://share.google/FRdkB0ABvHyXVpSQQ"
   },
@@ -47,7 +47,7 @@ export const andreyLeira = {
     "url": "/audio/andrey-y-leira.mp3",
     "label": "Nuestra canción"
   },
-  "gifts": [],
+  "gifts": [{"name":"Liverpool","eventNumber":"60068234","url":"https://mesaderegalos.liverpool.com.mx/milistaderegalos/60068234"}],
   "contact": {
     "phone": "5530470564",
     "whatsapp": "https://wa.me/525530470564"
