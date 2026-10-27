@@ -5,7 +5,7 @@ export const leslyMarcelino = {
   date: "2026-12-27T19:00:00-06:00",
   endDate: "2026-12-28T01:00:00-06:00",
   timezone: "America/Monterrey",
-  rsvpDeadline: "2026-12-20T23:59:00-06:00",
+  rsvpDeadline: "2026-12-08T23:59:59.999-06:00",
   maxCompanions: 5,
   hero: {
     subtitle: "Nuestra boda",
@@ -24,10 +24,6 @@ export const leslyMarcelino = {
     time: "7:00 p. m. – 1:00 a. m.",
     address: "Anacleta Jardín de Eventos",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Anacleta+Jardin+de+Eventos",
-  },
-  dressCode: {
-    title: "Tonos pastel",
-    text: "Para las mujeres, sugerimos una paleta de colores pastel que acompañe la atmósfera romántica de nuestra celebración.",
   },
   contact: {
     phone: "8714156226",

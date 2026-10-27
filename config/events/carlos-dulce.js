@@ -40,8 +40,9 @@ export const carlosDulce = {
     "mapsUrl": "https://maps.app.goo.gl/kLqXGTFz9LfH1JpVA?g_st=iw"
   },
   "dressCode": {
-    "title": "Elegante",
-    "text": ""
+    "title": "Estilo vaquero",
+    "text": "Acompáñanos con tu mejor estilo vaquero. Inspírate en esta referencia para elegir tu vestimenta.",
+    "image": "/images/events/carlos-y-dulce/image copy 5.png"
   },
   "gifts": [],
   "gallery": [
@@ -50,12 +51,6 @@ export const carlosDulce = {
       "width": 1108,
       "height": 1600,
       "alt": "Carlos y Dulce · Recuerdo 1"
-    },
-    {
-      "src": "/images/events/carlos-y-dulce/image copy 5.png",
-      "width": 1280,
-      "height": 1600,
-      "alt": "Carlos y Dulce · Recuerdo 2"
     },
     {
       "src": "/images/events/carlos-y-dulce/image copy 3.png",
@@ -85,7 +80,7 @@ export const carlosDulce = {
   "itinerary": [],
   "music": {
     "enabled": true,
-    "url": "/audio/carlosydulce.mp3",
+    "url": "/audio/Sin%20Bandera%20-%20Que%20Me%20Alcance%20La%20Vida%20(Video)%20(1).mp3",
     "label": "Nuestra canción"
   },
   "theme": {

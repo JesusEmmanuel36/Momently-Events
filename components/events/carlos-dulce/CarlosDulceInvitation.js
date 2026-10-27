@@ -1,5 +1,9 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import {Camera,Download} from "lucide-react";
+import {carlosDulcePhotos} from "@/lib/event-photos/config";
+import {GuestPhotoGallery} from "@/components/events/caleb-ciriam/photos/GuestPhotoGallery";
 import { ChevronDown, Heart, Mail, Church, MapPin, Pause, Play, Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {CountdownSection} from "@/components/sections/CountdownStory";
@@ -31,14 +35,15 @@ export function CarlosDulceInvitation({ wedding }) {
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} unoptimized fill priority sizes="100vw" alt="Carlos y Dulce" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Nuestra boda</span><h1><span>Carlos</span><i>&amp;</i><span>Dulce</span></h1><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><a href="#bienvenida" aria-label="Descubrir invitación"><ChevronDown/></a></Reveal></section>
       <section className="section welcome" id="bienvenida"><Reveal><span className="script">El comienzo de nuestra historia</span><p>{wedding.hero.quote}</p><div className={styles.fullNames}><span>{wedding.couple.partner1}</span><i>&amp;</i><span>{wedding.couple.partner2}</span></div></Reveal></section>
-      <Reveal className={styles.floralBlessing}><Image src={`${images}/floral.png`} unoptimized width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo de rosas marfil y azul marino con hojas doradas"/></Reveal>
+      <Reveal className={styles.floralBlessing}><Image src={`${images}/floral-tierra.webp`} unoptimized width={1536} height={1024} sizes="(max-width:800px) 90vw,550px" alt="Arreglo floral en café, chedrón y beige con pampas y follaje seco"/></Reveal>
       <CountdownSection wedding={view}/>
       <section className={`section ${styles.celebration}`}><Reveal><SectionHeading eyebrow="Celebra con nosotros" title="Nuestra celebración"/><div className={styles.venues}>{[[wedding.ceremony,'Ceremonia religiosa',Church],[wedding.reception,'Recepción',MapPin]].map(([place,label,Icon])=><article key={label}><Icon strokeWidth={1}/><span className="eyebrow">{label}</span><h3>{place.name}</h3>{place.time&&<strong>{place.time}</strong>}<p>{place.address}</p><a className="button" href={place.mapsUrl} target="_blank" rel="noopener noreferrer"><MapPin size={16}/>Ver ubicación</a></article>)}</div></Reveal></section>
-      <section className={`section ${styles.attireSection}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/></Reveal></section>
+      <section className={`section ${styles.attireSection}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/><Image src={wedding.dressCode.image} width={1280} height={1600} sizes="(max-width:700px) 90vw,480px" alt="Referencia de vestimenta vaquera: vestido con sombrero y camisa, jeans y sombrero" className={styles.attireReference}/></Reveal></section>
       <GallerySection wedding={view} fixedOverlay imageSizes="(max-width:700px) 90vw,33vw" heading={{eyebrow:"Nuestros momentos",title:"Recuerdos que nos unen",copy:"Instantes que forman parte de nuestra historia."}}/>
       {wedding.gifts.length>0&&<section className={`section ${styles.registry}`}><Reveal><Mail strokeWidth={1}/><SectionHeading eyebrow="Un detalle con cariño" title={wedding.gifts[0].name} copy={wedding.gifts[0].description}/></Reveal></section>}
       <RSVPSection wedding={view}/>
 
+      <section className={styles.photoAlbum} id="fotos-del-evento"><Reveal><Camera size={32} strokeWidth={1}/><h2>Los recuerdos de nuestra boda</h2><p>Guarda este QR para compartir tus fotos. La carga estará disponible a partir del <strong>21 de noviembre de 2026</strong>, día de nuestra boda.</p><Image unoptimized src={`${carlosDulcePhotos.path}/qr`} width={220} height={220} alt="QR para compartir fotos de Carlos y Dulce"/><div className={styles.photoActions}><Link href={carlosDulcePhotos.path}><Camera size={17}/>Compartir fotos</Link><a href={`${carlosDulcePhotos.path}/qr?download`} download><Download size={17}/>Descargar QR</a></div></Reveal><GuestPhotoGallery event={carlosDulcePhotos}/></section>
       <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Carlos y Dulce" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Carlos &amp; Dulce</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
     </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;
