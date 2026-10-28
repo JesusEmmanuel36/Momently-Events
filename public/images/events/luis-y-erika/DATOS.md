@@ -31,3 +31,6 @@ Vista móvil 390 px y escritorio 1440 px sin desbordamiento; sobre abierto centr
 Publicación de código en Vercel pendiente.
 
 Pase probado en navegador con datos ficticios de 4 lugares y petición interceptada: selección limitada a los lugares asignados y estado de confirmación guardada correcto. Sin escrituras reales. Ruta temporal de QA retirada al terminar.
+
+
+Actualización 27 octubre 2026: las seis fotos anteriores fueron sustituidas por las nuevas proporcionadas, optimizadas a WebP y con nombres versionados `recuerdo-2026-10-27-N.webp` para evitar caché de las anteriores. Portada ilustrada conservada. El panel incorpora número de mesa opcional en invitados y pases; se conserva al editar/generar enlaces y puede vaciarse. Dato organizativo del panel, no se expone en el pase público.

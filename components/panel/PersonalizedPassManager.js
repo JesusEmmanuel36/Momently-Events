@@ -32,7 +32,7 @@ export function PersonalizedPassManager({ eventId, initialGuests, slug = "alejan
   async function generate(guest) {
     if (busy) return; setBusy(true); setError("");
     try {
-      const response = await fetch(`${endpoint}/${guest.id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ displayName: guest.displayName, allowedSeats: guest.allowedSeats, phone: guest.phone || "", groupName: guest.groupName || "", notes: guest.notes || "" }) });
+      const response = await fetch(`${endpoint}/${guest.id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ displayName: guest.displayName, allowedSeats: guest.allowedSeats, phone: guest.phone || "", groupName: guest.groupName || "", tableNumber: guest.tableNumber || "", notes: guest.notes || "" }) });
       const result = await response.json();
       if (!response.ok || !result.passToken) throw new Error(result.error || "No pudimos generar el enlace.");
       setGuests(current => current.map(item => item.id === guest.id ? result : item));setNotice("Enlace generado.");router.refresh();
@@ -86,6 +86,7 @@ ${guest.displayName}, aquí tienes tu pase personalizado con ${guest.allowedSeat
         <label>{confirmationMode === "whatsapp" ? "Número de invitados por pase, en total" : "Lugares asignados, en total"}<input name="allowedSeats" type="number" min={1} max={20} required defaultValue={editing?.allowedSeats || 1} /></label>
         <label>Teléfono (opcional)<input name="phone" maxLength={30} defaultValue={editing?.phone || ""} /></label>
         <label>Grupo o familia (opcional)<input name="groupName" maxLength={100} defaultValue={editing?.groupName || ""} /></label>
+        <label>Número de mesa (opcional)<input name="tableNumber" type="number" min={1} max={999999} step={1} defaultValue={editing?.tableNumber || ""} placeholder="Sin asignar" /></label>
         <label>Notas privadas<textarea name="notes" maxLength={500} defaultValue={editing?.notes || ""} /></label>
         {error && <p className="form__error" role="alert">{error}</p>}
         <button className="button" disabled={busy}>{busy ? "Guardando…" : editing ? "Guardar cambios" : "Crear pase"}</button>
@@ -97,7 +98,7 @@ ${guest.displayName}, aquí tienes tu pase personalizado con ${guest.allowedSeat
     </section>
     <section className="dashboard-card"><h2>Pases personalizados</h2><p>{confirmationMode === "whatsapp" ? "Cada enlace muestra el nombre y los lugares asignados. La confirmación llega por WhatsApp; puedes registrarla manualmente en el resumen del evento." : "Cada enlace permite confirmar hasta los lugares asignados. Si vuelven a responder, se actualiza la misma confirmación."}</p>
       {!guests.length && <div className="empty-state"><h3>Aún no hay pases</h3><p>Crea el primero con un nombre y sus lugares.</p></div>}
-      <div className={styles.list}>{guests.map(guest => <article key={guest.id}><strong>{guest.displayName}</strong><p>{guest.allowedSeats} {guest.allowedSeats === 1 ? "lugar asignado" : "lugares asignados"}</p><div className={styles.actions}>
+      <div className={styles.list}>{guests.map(guest => <article key={guest.id}><strong>{guest.displayName}</strong><p>{guest.allowedSeats} {guest.allowedSeats === 1 ? "lugar asignado" : "lugares asignados"}</p>{guest.tableNumber&&<p>Mesa {guest.tableNumber}</p>}<div className={styles.actions}>
         {guest.passToken ? <><button type="button" className="button button--small" onClick={() => copy(guest)}>Copiar enlace</button><a className="button button--outline button--small" href={path(guest.passToken)} target="_blank" rel="noreferrer">Ver pase</a><button type="button" className="button button--outline button--small" onClick={() => share(guest)}>Compartir pase</button></> : <button type="button" className="button button--small" disabled={busy} onClick={() => generate(guest)}>Generar enlace</button>}
         <button type="button" className="button button--outline button--small" disabled={busy} onClick={() => { setEditing(guest);setError(""); }}>Editar</button><button type="button" className="button button--outline button--small" disabled={busy} onClick={() => remove(guest)}>Eliminar</button>
       </div></article>)}</div>

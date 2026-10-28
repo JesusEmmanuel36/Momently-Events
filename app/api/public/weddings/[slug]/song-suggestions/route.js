@@ -9,7 +9,7 @@ const schema = z.object({ title: z.string().trim().min(1).max(120), artist: z.st
 export async function POST(request, { params }) {
   try {
     const { slug } = await params;
-    if (!["joanna-y-ruben", "xv-lizbeth-astrid"].includes(slug)) throw new NotFoundError();
+    if (!["joanna-y-ruben", "xv-lizbeth-astrid", "miriam-y-nicolas"].includes(slug)) throw new NotFoundError();
     const parsed = schema.safeParse(await request.json());
     if (!parsed.success) throw new ValidationError("Escribe el nombre de la canción (máximo 120 caracteres).");
     if (parsed.data.website) return new Response(null, { status: 204 });

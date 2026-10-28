@@ -381,3 +381,21 @@ test("Hortensia and Guadalupe passes enforce places and update one confirmation"
  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).name,"Familia de prueba");
  assert.equal(store.get(`events/test-event/rsvps/${first.rsvpId}`).totalPeople,2);
 });
+
+
+test("optional table assignment survives edits and link generation, can be cleared and stays private", async()=>{
+ const {context,store}=fixture("luis-y-erika");
+ const pass=await createPass(context,{...details,tableNumber:"8"});
+ const key=`events/test-event/guests/${pass.id}`;
+ assert.equal(store.get(key).tableNumber,"8");
+ const changed=await updatePass(context,pass.id,{...details,tableNumber:12});
+ assert.equal(changed.tableNumber,"12");assert.equal(changed.passToken,pass.passToken);
+ const legacy=await updatePass(context,pass.id,details);
+ assert.equal(legacy.tableNumber,"12");assert.equal(store.get(key).tableNumber,"12");
+ await confirmPass(pass.passToken,{attending:"yes",totalPeople:2,tableNumber:"999"},{context});
+ assert.equal(store.get(key).tableNumber,"12");
+ assert.equal((await readPass(pass.passToken,{context})).tableNumber,undefined);
+ await updatePass(context,pass.id,{...details,tableNumber:""});assert.equal(store.get(key).tableNumber,"");
+ const old=await createPass(context,details);assert.equal(old.tableNumber,undefined);
+ for(const tableNumber of ["0","-1","1.5","mesa uno","1000000","<script>",false])await assert.rejects(createPass(context,{...details,tableNumber}),e=>e.status===400);
+});
