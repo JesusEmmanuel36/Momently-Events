@@ -16,6 +16,7 @@ export const miriamNicolas={
  giftMessage:'Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, pueden hacerlo mediante lluvia de sobres o transferencia.',gifts:[{name:'Lluvia de sobres',description:'Un detalle con cariño para este nuevo comienzo.'}],
  bank:{enabled:true,bank:'BanCoppel',holder:'Miriam Hernández',clabe:'137475105374295643',account:''},
  verses:[{reference:'Cantar de los Cantares 8:6',text:'Ponme como un sello sobre tu corazón, como una marca sobre tu brazo'},{reference:'Cantar de los Cantares 2:16',text:'Mi amado es mío, y yo suya;'}],
+ additionalBank:{enabled:true,bank:'Mercado Pago W',holder:'Nicolas Hernandez Villagomez',clabe:'722969016723778187',account:''},
  whatsapp:'https://wa.me/527531420676',phone:'753 142 0676',
  personalizedPasses:true,
  features:{rsvp:false,songRequest:true,story:false},

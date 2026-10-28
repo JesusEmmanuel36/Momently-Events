@@ -7,7 +7,8 @@ import {TraditionalIntro} from '@/components/events/shared/TraditionalCover';
 import {WelcomeSection} from '@/components/sections/IntroHero';
 import {CountdownSection} from '@/components/sections/CountdownStory';
 import {GallerySection} from '@/components/sections/Gallery';
-import {GiftRegistrySection,SongSection} from '@/components/sections/GuestActions';
+import {GiftContent} from '@/components/wedding/GiftContent';
+import {SongSection} from '@/components/sections/GuestActions';
 import {Reveal,SectionHeading} from '@/components/ui';
 import {openGoogleCalendar} from '@/lib/calendar';
 import styles from './MiriamNicolas.module.css';
@@ -33,7 +34,7 @@ export function MiriamNicolasInvitation({wedding,pass=null,passToken=null}){
  <section className={`section ${styles.itinerary}`} id="itinerario"><Reveal><SectionHeading eyebrow="El gran día" title="Itinerario" copy="Cada momento fue pensado para compartirlo contigo."/></Reveal><ol>{wedding.itinerary.map(item=>{const Icon=icons[item.icon];return <li key={item.time}><Reveal className={styles.timelineRow}><time>{item.time}</time><span><Icon size={30} strokeWidth={1.2}/></span><h3>{item.title}</h3></Reveal></li>})}</ol></section>
  <section className={`section ${styles.dress}`}><Reveal><Shirt size={32} strokeWidth={1}/><SectionHeading eyebrow="Código de vestimenta" title="Un detalle especial"/><p>{wedding.dressCode.note}</p></Reveal></section>
  <Reveal className={styles.floral}><Image src={`${assets}/floral-swag.webp`} width={1774} height={887} sizes="(max-width:700px) 92vw,580px" alt="" unoptimized/></Reveal>
- <GiftRegistrySection wedding={view}/>
+ <section className="section gifts"><Reveal><GiftContent message={wedding.giftMessage} gifts={wedding.gifts} banks={[wedding.bank,wedding.additionalBank]}/></Reveal></section>
  <section className="calendar"><Reveal><CalendarDays size={32} strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.dateLong}</h2><p>No queremos celebrar este momento sin ti.</p><button className="button button--ivory" onClick={()=>openGoogleCalendar({title:wedding.eventTitle,start:wedding.date,durationHours:8,location:wedding.ceremony.name+', '+wedding.ceremony.address,details:'Discurso 3:00 p. m. · Recepción 4:00 p. m. '+wedding.reception.mapsUrl})}>Agregar a mi calendario</button></Reveal></section>
  <section className={`section ${styles.confirmation}`} id="confirmar"><Reveal><MessageCircle size={32} strokeWidth={1}/><SectionHeading eyebrow="Nos encantará verte" title="Confirma tu asistencia" copy="Será una alegría compartir este día contigo. Confírmanos directamente por WhatsApp."/><a className="button" href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/>Confirmar por WhatsApp</a><p>{wedding.phone}</p></Reveal></section>
  {pass?<div className={styles.passSection}><PersonalizedPass pass={pass} token={passToken} slug={wedding.slug}/></div>:<section className={styles.passNotice} id="tu-pase"><Reveal><Heart size={30} strokeWidth={1}/><h2>Tu pase personalizado</h2><p>Abre el enlace personal que te compartimos para consultar tu nombre, los lugares reservados y confirmar tu asistencia.</p></Reveal></section>}
