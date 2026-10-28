@@ -14,3 +14,8 @@ Prompt: arreglo horizontal de rosas marfil, dalias beige, flores champagne, hoja
 Original: `.codex/generated_images/01a0dad2-7345-7bb2-8f92-545958b109b2/exec-b924a743-2e7e-4f1f-820a-3ab679427d4f.png`.
 
 Portada: fotografía proporcionada `portada.png`, no regenerada.
+
+## Dos arreglos adicionales — 28 de octubre de 2026
+Generados con la herramienta integrada image_gen y convertidos a WebP conservando transparencia.
+- floral-swag.webp: guirnalda asimétrica horizontal de rosas marfil, dalias beige champagne y hojas café y oro antiguo, ilustración botánica acuarela, sin texto ni fondo. Colocada antes de regalos. Original exec-34d814ad-0046-4581-969a-765cbeeb556b.png.
+- floral-bouquet.webp: ramo vertical de peonías marfil, rosas crema, flores champagne y follaje beige, café y oro, acuarela delicada, sin texto ni fondo. Colocado junto al versículo de cierre. Original exec-168aba7d-3e89-45ec-9167-171f426ef0a2.png.

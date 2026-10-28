@@ -12,10 +12,12 @@ export const miriamNicolas={
  ceremony:{label:'Discurso',name:'Salón del Reino de los Testigos de Jehová',time:'3:00 p. m.',address:'Río Mezcala 283, Campamento Obrero, 60992 Las Guacamayas, Mich.',mapsUrl:'https://maps.app.goo.gl/MAaPuxQn73RCSspk6?g_st=aw'},
  reception:{label:'Recepción',name:'HR Hacienda de Rodríguez',time:'4:00 p. m.',address:'Palmira 55, colonia Aeropuerto, Las Guacamayas, Mich.',mapsUrl:'https://maps.app.goo.gl/SJAUUhjT1HcFk9eh7?g_st=aw'},
  itinerary:[{time:'3:00 p. m.',title:'Discurso',icon:'speech'},{time:'4:00 p. m.',title:'Recepción',icon:'arrival'},{time:'5:00 p. m.',title:'Comida',icon:'meal'},{time:'6:00 p. m.',title:'Primer baile',icon:'dance'},{time:'8:00 p. m.',title:'Pastel',icon:'cake'}],
- dressCode:{note:'El color blanco está reservado para la novia.'},
+ dressCode:{note:'El color blanco está reservado para la novia. Los colores café y beige están reservados para la familia.'},
  giftMessage:'Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, pueden hacerlo mediante lluvia de sobres o transferencia.',gifts:[{name:'Lluvia de sobres',description:'Un detalle con cariño para este nuevo comienzo.'}],
  bank:{enabled:true,bank:'BanCoppel',holder:'Miriam Hernández',clabe:'137475105374295643',account:''},
+ verses:[{reference:'Cantar de los Cantares 8:6',text:'Ponme como un sello sobre tu corazón, como una marca sobre tu brazo'},{reference:'Cantar de los Cantares 2:16',text:'Mi amado es mío, y yo suya;'}],
  whatsapp:'https://wa.me/527531420676',phone:'753 142 0676',
+ personalizedPasses:true,
  features:{rsvp:false,songRequest:true,story:false},
  theme:{primary:'#977849',dark:'#3B2B22',champagne:'#CBB58E',cream:'#F2EADF',ivory:'#FBF8F2',rose:'#C9B5A2',sage:'#9A9480'}
 };
