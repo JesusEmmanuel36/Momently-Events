@@ -36,7 +36,7 @@ export const hortensiaGuadalupe = {
     "name": "Salón Anthea",
     "time": "Recepción y cena · 8:00 p. m.",
     "address": "",
-    "mapsUrl": ""
+    "mapsUrl": "https://maps.app.goo.gl/8KMafL3h1zWmmZkA7?g_st=aw"
   },
   "gallery": [
     {

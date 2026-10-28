@@ -33,7 +33,7 @@ export const andreyLeira = {
   "reception": {
     "enabled": true,
     "name": "Jardín del Bosque",
-    "time": "5:30 p. m.",
+    "time": "6:30 p. m.",
     "address": "Calle Ignacio Pérez Sur #95, Querétaro, Qro.",
     "mapsUrl": "https://maps.app.goo.gl/Xfg5Um1hhYe21yts5"
   },

@@ -25,3 +25,8 @@ Use case: product-mockup. One elegant gold metallic quinceanera figurine silhoue
 ### attire
 
 Use case: product-mockup. Elegant quinceanera dress code illustration matching emerald green, muted sage, ivory and champagne gold invitation. One emerald long party dress and one beige formal suit on invisible mannequins side by side, tasteful celebratory fashion, small white rose and olive foliage clusters around bottom corners. Transparent background, landscape 1536x1024, centered full length outfits, no people faces no text no logos. Soft realistic fabric detail.
+
+## Portada con vestido dorado — 27 octubre 2026
+Herramienta integrada image_gen, edición de `hero.png` con referencia de silueta de vestido dorado. Archivo final `hero-vestido-dorado.webp`, original anterior conservado.
+Prompt: conservar exactamente el marco de rosas marfil, cortinaje esmeralda, hojas y ornamentos dorados; añadir únicamente al centro verde una silueta original dorada de quinceañera con corona, cabello ondulado y vestido amplio con líneas de pliegues. Dejar libre el centro inferior para el nombre; sin letras, logos, marcas de agua ni interfaz de la referencia.
+Recepción: se verificó que el botón Ver ubicación usa https://maps.app.goo.gl/Eq3Sj3etNJmGTn5r7?g_st=aw .

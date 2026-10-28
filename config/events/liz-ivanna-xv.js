@@ -20,7 +20,7 @@ export const lizIvannaXv = {
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Hay días que se sueñan y recuerdos que se guardan para siempre. Con mucha ilusión, te invito a compartir conmigo la alegría de mis quince años y el comienzo de una nueva etapa.",
-    "image": "/images/events/xv-liz-ivanna/hero.png"
+    "image": "/images/events/xv-liz-ivanna/hero-vestido-dorado.webp"
   },
   "closingMessage": "Gracias por acompañarme en este día tan especial. Tu cariño hará que mis quince años sean un recuerdo inolvidable.",
   "ceremony": {
