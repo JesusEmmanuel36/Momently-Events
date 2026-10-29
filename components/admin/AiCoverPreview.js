@@ -1,11 +1,12 @@
 "use client";
+import {envelopeLetterStyle} from '@/lib/ai/envelope-letter';
 import {Play,Pause} from 'lucide-react';
 import {musicControlStyle} from '@/lib/ai/music-control';
 import Image from 'next/image';
 import {useEffect,useRef,useState} from 'react';
 import styles from './AiCoverPreview.module.css';
 
-export function AiCoverPreview({document,imageUrl,musicUrl='',musicControl,closedUrl,openUrl,title,subtitle,date,layout,desktop=false,interactive=false,publicMode=false,onOpened}){
+export function AiCoverPreview({document,imageUrl,musicUrl='',musicControl,envelopeLetter,closedUrl,openUrl,title,subtitle,date,layout,desktop=false,interactive=false,publicMode=false,onOpened}){
  const[phase,setPhase]=useState('closed'),[loaded,setLoaded]=useState({closed:false,open:false}),[failed,setFailed]=useState(false);
  const frameRef=useRef(null);const[frameHeight,setFrameHeight]=useState(844);
  useEffect(()=>{if(!publicMode)return;const receive=event=>{if(event.source!==frameRef.current?.contentWindow)return;if(event.data?.type==='momently:height'){const height=Number(event.data.height);if(Number.isFinite(height)&&height>0&&height<=100000)setFrameHeight(height)}if(event.data?.type==='momently:confirm')window.document.getElementById('ai-confirmation')?.scrollIntoView({behavior:'smooth'})};window.addEventListener('message',receive);return()=>window.removeEventListener('message',receive)},[publicMode]);
@@ -25,7 +26,7 @@ export function AiCoverPreview({document,imageUrl,musicUrl='',musicControl,close
  <header className={styles.header}><span>{subtitle||'Una invitación especial'}</span><h2>Una invitación para ti</h2></header>
  <div className={styles.scene} data-preview-envelope style={{'--open-width':(layout?.openWidth||100)+'%','--open-offset':(-(layout?.openWidth||100)/2)+'%','--open-bottom':(layout?.openBottom||0)+'%'}}>
  {openUrl&&<div className={`${styles.openLayer} ${styles.back}`}><Image src={openUrl} width={1536} height={1024} className={styles.openImage} unoptimized priority alt="Sobre abierto" onLoad={()=>setLoaded(v=>({...v,open:true}))} onError={()=>setFailed(true)} draggable={false}/></div>}
- <div className={styles.letter} data-preview-letter><span>{subtitle}</span><h3>{title||'Tu celebración'}</h3>{date&&<p>{date}</p>}<small>Con mucho cariño</small></div>
+ <div className={styles.letter} data-preview-letter style={envelopeLetterStyle(envelopeLetter)}>{envelopeLetter?.ornament&&envelopeLetter.ornament!=='none'&&<span aria-hidden="true">{envelopeLetter.ornament==='heart'?'♡':'✦'}</span>}<span>{subtitle}</span><h3>{title||'Tu celebración'}</h3>{date&&<p>{date}</p>}<small>{envelopeLetter?.footerText??'Con mucho cariño'}</small></div>
  {openUrl&&<div className={`${styles.openLayer} ${styles.front}`} aria-hidden="true"><Image src={openUrl} width={1536} height={1024} className={styles.openImage} unoptimized priority alt="" draggable={false}/></div>}
  <Image src={closedUrl} width={1536} height={1024} className={styles.closedImage} unoptimized priority alt="Sobre cerrado de la invitación" onLoad={()=>setLoaded(v=>({...v,closed:true}))} onError={()=>setFailed(true)} draggable={false}/>
  <button type="button" className={styles.seal} onClick={open} disabled={!ready||phase!=='closed'} aria-label="Abrir sobre"/>
