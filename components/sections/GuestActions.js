@@ -18,8 +18,8 @@ export function GiftRegistrySection({ wedding, onToast }) {
 import {hasAgeCounts,maxAgeCountPeople} from "@/lib/rsvp/age-counts";
 
 export function RSVPSection({ wedding }) {
-  const splitAges = hasAgeCounts(wedding.slug);
-  const maxPeople = maxAgeCountPeople(wedding.slug);
+  const splitAges = hasAgeCounts(wedding.templateKey==='ai-designed'?{slug:wedding.slug,templateKey:wedding.templateKey,settings:{rsvp:wedding.rsvpSettings}}:wedding.slug);
+  const maxPeople = maxAgeCountPeople(wedding.templateKey==='ai-designed'?{slug:wedding.slug,templateKey:wedding.templateKey,settings:{rsvp:wedding.rsvpSettings}}:wedding.slug);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
