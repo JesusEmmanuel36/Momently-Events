@@ -36,7 +36,7 @@ export const miriamJair = {
   family: {
     brideParents: ["Félix Velázquez P.", "Fabiola Flores H."],
     groomParents: ["Alonso Acevedo M.", "Eutiquia Patiño A."],
-    godparents: ["José Armando García J.", "Jessica Martínez Castillo"],
+    godparents: ["Jorge Armando García J.", "Jessica Martínez Castillo"],
   },
   gallery: [
     { src: `${images}/image copy.png`, width: 480, height: 502, alt: "Miriam y Jair juntos" },
