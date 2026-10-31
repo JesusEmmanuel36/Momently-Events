@@ -10,7 +10,7 @@ export const angelBereniceReligiosa = {
     "partner1": "Ángel Miguel",
     "partner2": "Berenice"
   },
-  "date": "2026-12-20T11:00:00-06:00",
+  "date": "2026-12-20T12:00:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Domingo · 20 de diciembre de 2026",
   "dateStamp": "20 · 12 · 2026",
@@ -26,7 +26,7 @@ export const angelBereniceReligiosa = {
   "ceremony": {
     "enabled": true,
     "name": "Templo en San Bartolo el Pinal",
-    "time": "11:00 a. m.",
+    "time": "12:00 p. m.",
     "address": "San Bartolo el Pinal",
     "mapsUrl": "https://maps.google.com/maps/search/El%20Buen%20Pastor/@19.161447525024414,-97.93333435058594,17z?hl=es"
   },
@@ -41,7 +41,7 @@ export const angelBereniceReligiosa = {
   "dressCode": null,
   "itinerary": [
     {
-      "time": "11:00",
+      "time": "12:00",
       "title": "Ceremonia religiosa",
       "icon": "church"
     },
@@ -51,7 +51,12 @@ export const angelBereniceReligiosa = {
       "icon": "glass"
     }
   ],
-  "gallery": [],
+  "gallery": [
+    {"src":"/images/events/angel-y-berenice/religiosa-r1.webp","width":1170,"height":1557,"alt":"Ángel y Berenice caminando juntos al atardecer"},
+    {"src":"/images/events/angel-y-berenice/religiosa-r2.webp","width":1170,"height":1548,"alt":"Ángel y Berenice frente a frente al atardecer"},
+    {"src":"/images/events/angel-y-berenice/religiosa-r3.webp","width":1170,"height":1559,"alt":"Ángel y Berenice bailando bajo el cielo del atardecer"},
+    {"src":"/images/events/angel-y-berenice/religiosa-r4.webp","width":1170,"height":1559,"alt":"Un recuerdo de Ángel y Berenice bailando juntos"}
+  ],
   "gifts": [],
   "music": {
     "enabled": true,
@@ -84,7 +89,7 @@ export const angelBereniceReligiosa = {
       "Mayra Rojas Robles"
     ],
     "brideParents": [
-      "Filadelfia Manzano",
+      "Filadelfia Manzano Martínez",
       "Bernardino Daza Villavicencio"
     ]
   }
