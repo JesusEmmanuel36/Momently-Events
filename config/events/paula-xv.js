@@ -71,9 +71,9 @@ export const paulaXv = {
     "reservedColors": [
       {
         "name": "Verde",
-        "color": "#91AD87"
+        "color": "#C5DABD"
       },
-      {"name": "Lila", "color": "#B9A0D4"}
+      {"name": "Lila", "color": "#DDCFF0"}
     ]
   }
 };
