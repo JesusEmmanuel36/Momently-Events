@@ -1,4 +1,4 @@
-.invitation {--coffee-dark:#435b3f;--coffee:#435b3f;--mocha:#71906a;--taupe:#71906a;--champagne:#dfc58f;--sand:#f2e2d7;--cream:#fffcf7;--ivory:#fffcf7;--rose:#71906a;--sage:#71906a;--text:#435b3f;--text-soft:#6c655c;background:var(--ivory);color:var(--text);}
+.invitation {color-scheme:only light;--coffee-dark:#435b3f;--coffee:#435b3f;--mocha:#71906a;--taupe:#71906a;--champagne:#dfc58f;--sand:#f2e2d7;--cream:#fffcf7;--ivory:#fffcf7;--rose:#71906a;--sage:#71906a;--text:#435b3f;--text-soft:#6c655c;background:var(--ivory);color:var(--text);}
 .invitation :global(.invitation--locked) {visibility:hidden;}
 .invitation :global(.hero__wash) {background:linear-gradient(180deg,#435b3f00 20%,#435b3f33 45%,#435b3fcc 100%);}
 .invitation :global(.hero__image img) {object-position:center 65%;}
