@@ -16,7 +16,7 @@ export const paulaXv = {
   "dateStamp": "28 · 11 · 2026",
   "calendarDate": "28 de noviembre de 2026",
   "maxCompanions": 5,
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "askAllergies": false,
   "hero": {
     "subtitle": "Mis XV años",
@@ -67,12 +67,13 @@ export const paulaXv = {
     "sage": "#B9D1B5"
   },
   "dressCode": {
-    "title": "Color reservado",
+    "title": "Colores reservados",
     "reservedColors": [
       {
         "name": "Verde",
         "color": "#91AD87"
-      }
+      },
+      {"name": "Lila", "color": "#B9A0D4"}
     ]
   }
 };

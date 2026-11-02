@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDays, ChevronDown, Heart, Cross, Gift, Mail, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import { CalendarDays, ChevronDown, Heart, Cross, Gift, Mail, MapPin, MessageCircle, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { RSVPSection } from "@/components/sections/GuestActions";
 import { CountdownSection } from "@/components/sections/CountdownStory";
 import { Reveal, SectionHeading } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";
@@ -31,13 +30,7 @@ export function PaulaXvInvitation({ wedding }) {
     if (audioRef.current.paused) audioRef.current.play().catch(() => notify("Toca de nuevo para escuchar nuestra canción."));
     else audioRef.current.pause();
   };
-  const share = async () => {
-    try {
-      if (navigator.share) await navigator.share({ title: wedding.eventTitle, text: wedding.hero.quote, url: window.location.href });
-      else { await navigator.clipboard.writeText(window.location.href); notify("Enlace copiado"); }
-    } catch (error) { if (error.name !== "AbortError") notify("No fue posible compartir el enlace."); }
-  };
-  // Reuse the home invitation sections with this event's data and working RSVP endpoint.
+  // Keep the existing countdown and invitation data.
   const view = {
     ...wedding, isLive: true, eventId: wedding.slug,
     couple: { bride: wedding.displayNames.partner1, groom: wedding.displayNames.partner2 },
@@ -70,11 +63,10 @@ export function PaulaXvInvitation({ wedding }) {
     <main className={`invitation ${opened ? styles.heroEntered : "invitation--locked"}`}>
       <section className="hero" id="inicio"><div className="hero__image"><Image src={wedding.hero.image} fill priority sizes="100vw" alt="Paula Guadalupe" className="cover"/></div><div className="hero__wash"/><Reveal className="hero__copy"><span className="eyebrow">Mis XV años</span><h1>Paula<br/>Guadalupe</h1><div className={styles.birthdayAge}><strong>XV</strong><span>años</span></div><div className="hero__rule"><span/><Heart size={14}/><span/></div><p>{wedding.dateDisplay}</p><a href="#bienvenida" aria-label="Descubrir la invitación"><ChevronDown/></a></Reveal></section><section className="section welcome" id="bienvenida"><Reveal><span className="script">{view.welcomeTitle}</span>{view.welcome.map(text=><p key={text}>{text}</p>)}<div className="signature">Paula Guadalupe</div></Reveal></section><Reveal className={styles.floralBlessing}><Image src={`${images}/floral-v2.png`} width={1536} height={1024} sizes="(max-width:800px) 90vw, 550px" alt="Flores marfil y follaje verde"/></Reveal><section className={`section ${styles.family}`}><Reveal><SectionHeading eyebrow="Con el amor y la compañía de" title="Mis padres y mis padrinos"/><div className={styles.familyGroup}><h3>Mis padres</h3>{wedding.family.parents.map(name=><p key={name}>{name}</p>)}</div><div className={styles.familyGroup}><h3>Mis padrinos</h3>{wedding.family.godparents.map(name=><p key={name}>{name}</p>)}</div></Reveal></section><CountdownSection wedding={view}/>
       <section className={`section ${styles.celebration}`} id="detalles"><Reveal><SectionHeading eyebrow="Reserva este día" title="Te espero con mucha ilusión"/></Reveal><div className={styles.placeGrid}>{[wedding.ceremony,wedding.reception].map((place,index)=><Reveal className={styles.placeCard} key={place.name}>{index?<MapPin strokeWidth={1}/>:<Cross strokeWidth={1}/>}<span className="eyebrow">{index?"Recepción":"Ceremonia religiosa"}</span><h2>{place.name}</h2><strong>{place.time}</strong>{place.address && <p>{place.address}</p>}{place.officiant && <p>Oficiará la misa el {place.officiant.toLowerCase().startsWith("párroco") ? place.officiant.replace("Párroco", "párroco") : place.officiant}.</p>}{place.mapsUrl && <a className="button" href={place.mapsUrl} target="_blank" rel="noreferrer">Ver ubicación <MapPin size={16}/></a>}</Reveal>)}</div></section>
-      <section className={`section ${styles.attire}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title="Color reservado" copy="El color verde está reservado para la quinceañera. Gracias por elegir otro tono para acompañarme en este día tan especial."/><div className={styles.reservedColor}><span style={{backgroundColor:"#91AD87"}} aria-label="Color verde"/><p>Verde</p></div></Reveal></section>
+      <section className={`section ${styles.attire}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title="Colores reservados" copy="Los colores verde y lila están reservados para la quinceañera. Gracias por elegir otro tono para acompañarme en este día tan especial."/><div className={styles.reservedColors}>{wedding.dressCode.reservedColors.map(color=><div key={color.name} className={styles.reservedColor}><span style={{backgroundColor:color.color}} aria-label={`Color ${color.name}`}/><p>{color.name}</p></div>)}</div></Reveal></section>
       {wedding.gifts.length > 0 && <section className="section gifts"><Reveal><Mail className="section-icon" strokeWidth={1}/><SectionHeading eyebrow="Tu presencia es mi mejor regalo" title="Lluvia de sobres" copy={wedding.gifts[0].description}/></Reveal></section>}
       <section className="calendar"><Reveal><CalendarDays strokeWidth={1}/><span className="eyebrow">Reserva la fecha</span><h2>{wedding.calendarDate}</h2><p>Nos encantará celebrar contigo.</p><button className="button button--ivory" onClick={() => openGoogleCalendar({ title: wedding.eventTitle, start: wedding.date, durationHours: 8, location: wedding.ceremony.address || wedding.ceremony.name, details: `${wedding.hero.quote} Ceremonia: ${wedding.ceremony.time}, ${wedding.ceremony.name}. Recepción: ${wedding.reception.time}, ${wedding.reception.name}, ${wedding.reception.address}.` })}>Agregar a mi calendario</button></Reveal></section>
-      <RSVPSection wedding={view}/><section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>Confirma por WhatsApp</h2><p>Me encantará saber que me acompañarás.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Paula. Quiero confirmar mi asistencia a tus XV años.")}`} target="_blank" rel="noreferrer">Confirmar asistencia <MessageCircle size={18}/></a></Reveal></section>
-      <section className="share"><Reveal><Heart strokeWidth={1}/><h2>Comparte esta celebración</h2><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
+      <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>Confirma por WhatsApp</h2><p>Me encantará saber que me acompañarás.</p><a className="button" href={`${wedding.contact.whatsapp}?text=${encodeURIComponent("Hola, Paula. Quiero confirmar mi asistencia a tus XV años.")}`} target="_blank" rel="noreferrer">Confirmar asistencia <MessageCircle size={18}/></a></Reveal></section>
       <section className="closing"><Image src={wedding.hero.image} fill sizes="100vw" alt="Paula Guadalupe" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por ser parte</span><h2>de mi historia.</h2><p>{wedding.couple.partner1}</p><small>{wedding.dateDisplay}</small></Reveal></section>
     </main>
     {opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}
