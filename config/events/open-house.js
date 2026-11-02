@@ -17,7 +17,7 @@ export const openHouse = {
   "askMenuPreference": false,
   "askAllergies": false,
   "askMessage": false,
-  "askSongSuggestion": false,
+  "askSongSuggestion": true,
   "rsvpDeadlineISO": "2026-11-14T23:59:59.999-06:00",
   "hero": {
     "subtitle": "Open House",

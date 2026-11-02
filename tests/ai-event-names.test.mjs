@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {resolveAiEventNames} from '../lib/ai/event-names.js';
+import {aiPublishSchema,buildAiEvent} from '../lib/ai/publishing.js';
+const input={slug:'serna-moreno',name1:'',name2:'',occasion:'',dateLabel:'',eventDate:'',cover:{summary:'Prueba',html:'<main>Invitación</main>',css:'main{color:#123}',warnings:[]},envelopeLayout:{openWidth:101,openBottom:4},features:{rsvp:false,passes:false,photos:false}};
+test('Blank names can save the existing design using the slug title without regenerating',()=>{const parsed=aiPublishSchema.parse(input);assert.equal(parsed.name1,'Serna Moreno');assert.equal(parsed.name2,'');const event=buildAiEvent(parsed,'admin');assert.equal(event.publicData.eventTitle,'Serna Moreno');assert.equal(event.publicData.aiDesign.cover.html,input.cover.html);});
+test('Explicit names take precedence, then extracted names, then the slug title',()=>{assert.deepEqual(resolveAiEventNames({...input,name1:'  Ana ',name2:'Luis',cover:{event:{name1:'Otro',name2:'Nombre'}}}),{name1:'Ana',name2:'Luis'});assert.deepEqual(resolveAiEventNames({...input,cover:{event:{name1:'Miriam',name2:'Jair'}}}),{name1:'Miriam',name2:'Jair'});});
