@@ -1,0 +1,19 @@
+/* Admin-only selectors and unique tokens: never redefine invitation palette variables. */
+.admin-theme{min-height:100svh}.admin-theme-toggle{position:fixed;top:12px;right:16px;z-index:95;display:flex;align-items:center;gap:8px;min-height:42px;padding:9px 13px;border:1px solid #cbbba9;border-radius:24px;background:#fbf8f3;color:#493a2d;box-shadow:0 3px 12px #0001;font:500 12px var(--font-sans),Arial,sans-serif;cursor:pointer}.admin-theme-toggle:focus-visible{outline:2px solid #b38b54;outline-offset:3px}.admin-theme .dashboard-header{padding-top:2rem}
+.admin-theme[data-admin-theme=dark]{background:#10151d;color:#e8edf5;--admin-bg:#10151d;--admin-surface:#1a2330;--admin-input:#111a26;--admin-border:#3a495c;--admin-text:#e8edf5;--admin-muted:#b4c0d0;--admin-accent:#dec49d}
+.admin-theme[data-admin-theme=dark] :is(.dashboard,.auth-page){background:var(--admin-bg);color:var(--admin-text)}
+.admin-theme[data-admin-theme=dark] .dashboard-sidebar{background:#111923;color:#e8edf5}
+.admin-theme[data-admin-theme=dark] :is(.dashboard-card,.admin-section,.stats-grid article,.auth-card,.visual-editor,.gallery-editor__item,.invite-result,.media-uploader,.preview-controls){background:var(--admin-surface);color:var(--admin-text);border-color:var(--admin-border)}
+.admin-theme[data-admin-theme=dark] :is(h1,h2,h3,h4,p,small,label,legend,summary,th,td):not(:where([data-admin-preview],[data-admin-preview] *)){color:var(--admin-text)}
+.admin-theme[data-admin-theme=dark] :is(p,small,th,.dashboard-eyebrow):not(:where([data-admin-preview],[data-admin-preview] *)){color:var(--admin-muted)}
+.admin-theme[data-admin-theme=dark] :is(input,textarea,select):not(:where([data-admin-preview],[data-admin-preview] *)){background:var(--admin-input)!important;color:var(--admin-text)!important;border-color:var(--admin-border)!important;color-scheme:dark}
+.admin-theme[data-admin-theme=dark] :is(input,textarea):not(:where([data-admin-preview],[data-admin-preview] *))::placeholder{color:#91a1b5}
+.admin-theme[data-admin-theme=dark] :is(button,.button):not(:where([data-admin-preview],[data-admin-preview] *)){background:#2b3a4e;color:#f2f5fa;border-color:#51627a}
+.admin-theme[data-admin-theme=dark] :is(button,.button):not(:where([data-admin-preview],[data-admin-preview] *)):hover{background:#3a4c65;color:white}
+.admin-theme[data-admin-theme=dark] :is(details,fieldset,td,th):not(:where([data-admin-preview],[data-admin-preview] *)){border-color:var(--admin-border)}
+.admin-theme[data-admin-theme=dark] :is(.table-actions a,.table-actions button,.admin-section a,.dashboard-card a):not(:where([data-admin-preview],[data-admin-preview] *)){color:var(--admin-accent)}
+.admin-theme[data-admin-theme=dark] .status--published{background:#203d30;color:#bbefcf}.admin-theme[data-admin-theme=dark] .status--draft{background:#473b23;color:#f2d9a6}.admin-theme[data-admin-theme=dark] .status--archived{background:#42313a;color:#f0c5d8}
+.admin-theme[data-admin-theme=dark] :is(.config-warning,.ai-proposal,.visual-editor__empty){background:#273345;color:var(--admin-text);border-color:var(--admin-border)}
+/* Protect native envelope preview, which lives outside the invitation iframe. */
+.admin-theme [data-admin-preview]{color-scheme:only light;color:#3a2a24}
+@media(max-width:600px){.admin-theme-toggle{top:auto;bottom:12px;left:12px;right:auto}.admin-theme .dashboard-header{padding-top:0}}

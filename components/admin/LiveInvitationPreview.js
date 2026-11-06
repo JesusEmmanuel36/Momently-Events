@@ -57,7 +57,7 @@ export function LiveInvitationPreview({ event }) {
       <span>Celular · 390 px</span>
     </div>
     {event?.templateKey === "flexible-celebration" && <div className="preview-controls"><button type="button" onClick={() => setEnvelope(false)} aria-pressed={!envelope}>Invitación</button><button type="button" onClick={() => setEnvelope(true)} aria-pressed={envelope}>Probar sobre</button>{!desktop && <button type="button" onClick={() => setShowMobile(false)}>Cerrar vista previa</button>}</div>}
-    <div className="live-preview__viewport">
+    <div className="live-preview__viewport" data-admin-preview>
       {event ? <MobileCanvas><div inert={event.templateKey !== "flexible-celebration"}><WeddingRenderer key={`${event.templateKey}-${envelope}`} event={event} previewMode previewEnvelope={envelope} /></div></MobileCanvas> : <div className="live-preview__loading">Preparando invitación…</div>}
     </div>
     <p>Los cambios aparecen automáticamente. Guarda el borrador para conservarlos.</p>

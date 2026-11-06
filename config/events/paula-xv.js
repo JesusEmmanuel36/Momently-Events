@@ -40,7 +40,7 @@ export const paulaXv = {
   },
   "family": {
     "parents": ["Ramón Gerardo Ibarra Valenzuela", "Maribel Álvarez Valenzuela"],
-    "godparents": ["Marco Antonio Canales Valenzuela", "Brenda Alicia Quiñonez Medina", "Ramón Alberto Zamudio Ibarra", "Nancy Noemí Peralta Ramos", "Juan Francisco Barrera Zanzur", "Ana María Robles Esquer"]
+    "godparents": ["Marco Antonio Canales Valenzuela", "Brenda Alicia Quiñonez Medina", "Ramón Alberto Zamudio Ibarra", "Nancy Noemí Peralta Santos", "Juan Francisco Barrera Zanzur", "Ana María Robles Esquer"]
   },
   "gallery": [],
   "music": {
