@@ -399,3 +399,18 @@ test("optional table assignment survives edits and link generation, can be clear
  const old=await createPass(context,details);assert.equal(old.tableNumber,undefined);
  for(const tableNumber of ["0","-1","1.5","mesa uno","1000000","<script>",false])await assert.rejects(createPass(context,{...details,tableNumber}),e=>e.status===400);
 });
+
+test('AI passes expose an assigned table only to that pass; empty tables are omitted and guests cannot change them',async()=>{
+ const {context,store}=fixture('evento-mesas-ia');context.event.templateKey='ai-designed';context.event.settings.personalizedPasses={enabled:true};
+ const first=await createPass(context,{...details,tableNumber:' 12 '});
+ const second=await createPass(context,{...details,displayName:'Otra familia',tableNumber:'7'});
+ const initial=await readPass(first.passToken,{context});assert.equal(initial.tableNumber,'12');assert.equal(initial.phone,undefined);assert.equal(initial.notes,undefined);
+ assert.equal((await readPass(second.passToken,{context})).tableNumber,'7');
+ await confirmPass(first.passToken,{attending:'yes',totalPeople:2,tableNumber:'999'},{context});
+ assert.equal((await readPass(first.passToken,{context})).tableNumber,'12');
+ await updatePass(context,first.id,{...details,tableNumber:'20'});assert.equal((await readPass(first.passToken,{context})).tableNumber,'20');
+ await updatePass(context,first.id,{...details,tableNumber:''});assert.equal((await readPass(first.passToken,{context})).tableNumber,undefined);
+ const noTable=await createPass(context,details);assert.equal((await readPass(noTable.passToken,{context})).tableNumber,undefined);
+ // Existing malformed legacy values never reach the public UI.
+ const key=`events/test-event/guests/${noTable.id}`;store.set(key,{...store.get(key),tableNumber:'<script>bad</script>'});assert.equal((await readPass(noTable.passToken,{context})).tableNumber,undefined);
+});

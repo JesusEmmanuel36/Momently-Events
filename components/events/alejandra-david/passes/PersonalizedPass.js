@@ -1,4 +1,5 @@
 "use client";
+import {PassTable} from "@/components/wedding/PassTable";
 import { useState } from "react";
 import styles from "./PersonalizedPass.module.css";
 
@@ -27,6 +28,7 @@ export function PersonalizedPass({ pass, token, slug = "alejandra-y-david", mess
     <span>Tu pase personal</span><h2>{pass.displayName}</h2>
     <p>Tenemos reservados <strong>{pass.allowedSeats} {pass.allowedSeats === 1 ? "lugar" : "lugares"}</strong> para ustedes.</p>
     <small>Los lugares incluyen a la persona titular del pase. Agradecemos respetar el número asignado.</small>
+    <PassTable tableNumber={pass.tableNumber}/>
     {saved ? <div className={styles.success} role="status"><h3>¡Tu respuesta está guardada!</h3><p>{attending === "yes" ? `Nos acompañarán ${people} ${Number(people) === 1 ? "persona" : "personas"}. ¡Gracias por confirmar!` : "Gracias por avisarnos. Los llevamos en el corazón."}</p><button type="button" onClick={() => setSaved(false)}>Editar respuesta</button></div> : <form onSubmit={submit}>
       <fieldset disabled={busy}><legend>¿Nos acompañan?</legend><label><input type="radio" checked={attending === "yes"} onChange={() => setAttending("yes")} name="attendance" value="yes" /> Sí, asistiremos</label><label><input type="radio" checked={attending === "no"} onChange={() => setAttending("no")} name="attendance" value="no" /> No podremos asistir</label></fieldset>
       {attending === "yes" && <label>Personas que asistirán, en total<select value={people} onChange={event => setPeople(Number(event.target.value))} disabled={busy}>{Array.from({ length: pass.allowedSeats }, (_, i) => <option key={i + 1} value={i + 1}>{i + 1} {i === 0 ? "persona" : "personas"}</option>)}</select></label>}

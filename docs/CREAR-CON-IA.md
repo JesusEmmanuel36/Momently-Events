@@ -102,3 +102,6 @@ Las acciones de guardar, publicar y empezar otra invitación están en la barra 
 ### Generar imágenes adicionales para galería
 En Galería, abre «Generar una imagen para la galería con IA». Escribe un nombre de referencia y describe la imagen; «Generar imagen y añadir a galería» la guarda en Cloudinary y la agrega al borrador con un ID estable. Los nombres repetidos reciben un sufijo. Se puede renombrar, ordenar o quitar igual que una imagen subida.
 Para colocarla en otra sección, usa su nombre exacto en Datos y diseño y pulsa Modificar invitación con IA; por ejemplo: «Pon iglesia-acuarela.webp en la sección de ceremonia». La generación usa el modelo de imágenes configurado, suma su costo al consumo de la sesión y no publica automáticamente.
+
+### Mesa en los pases
+El número de mesa opcional se asigna desde el panel de invitados. En invitaciones del creador IA, el enlace personal muestra «Tu mesa» junto al número únicamente si existe una asignación válida. Las modificaciones se reflejan al volver a abrir el mismo pase y no requieren regenerarlo. El invitado no puede editar ese dato.
