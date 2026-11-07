@@ -15,7 +15,7 @@ export const akariXv = {
   "dateDisplay": "Viernes · 27 de noviembre de 2026",
   "dateStamp": "27 · 11 · 2026",
   "calendarDate": "27 de noviembre de 2026",
-  "maxCompanions": 5,
+  "maxCompanions": 10,
   "rsvpEnabled": true,
   "askAllergies": false,
   "hero": {
