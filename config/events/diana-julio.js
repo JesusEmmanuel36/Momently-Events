@@ -83,6 +83,7 @@ export const dianaJulio = {
     "rose": "#91ABBD",
     "sage": "#8299A5"
   },
+  "godparents": ["Naitze Azenet Vera Lara", "Neyzer Patricio Vera Lara"],
   "story": [
     {
       "title": "Así comenzó nuestra historia",

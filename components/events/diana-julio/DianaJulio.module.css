@@ -170,3 +170,5 @@
 .timeline h3{font:400 1.7rem/1.3 var(--font-serif),serif;margin:.35rem 0}
 .adults{background:#EAF0F5}.adults>div>svg{margin:0 auto 1.5rem}
 @media(max-width:700px){.historyItem{grid-template-columns:1fr;gap:1.5rem}.historyItem:nth-child(even)>div{order:0}.historyList{gap:3rem}}
+
+.godparents{background:#EAF0F5;text-align:center}.godparents>div>svg{display:block;margin:0 auto 1.5rem;color:#856022}.godparents p{font:400 clamp(1.6rem,4vw,2.2rem)/1.5 var(--font-serif),serif;color:#243E50}.godparentsAnd{display:block;font-family:var(--font-script),cursive;color:#856022;margin:.5rem auto}
