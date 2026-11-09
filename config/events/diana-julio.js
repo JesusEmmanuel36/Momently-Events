@@ -46,7 +46,7 @@ export const dianaJulio = {
   "dressCode": {
     "title": "Formal",
     "text": "Nos encantará verte lucir un atuendo formal para compartir este día tan especial con nosotros.",
-    "image": "/images/events/diana-y-julio/vestimenta.png"
+    "image": "/images/events/diana-y-julio/image%20copy.png"
   },
   "gallery": [],
   "gifts": [

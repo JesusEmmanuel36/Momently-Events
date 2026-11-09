@@ -162,7 +162,7 @@
 .locationPhoto{margin:1rem auto 1.5rem;max-height:480px;object-fit:contain}
 .address{font-size:1rem;line-height:1.7;margin:0 auto 1.5rem}
 .attirePhoto{max-width:650px;margin:2rem auto 0}
-.invitation .dress :global(.eyebrow),.invitation .dress :global(.section-heading h2),.invitation .dress :global(.section-heading p){color:#243E50}
+.invitation .dress :global(.eyebrow),.invitation .dress :global(.section-heading h2),.invitation .dress :global(.section-heading p){color:#FFFFFF}
 .timeline{list-style:none;max-width:650px;padding:0;margin:2rem auto;text-align:left}
 .timeline li{display:flex;gap:1.5rem;padding:1rem 0 1rem 1.5rem;border-left:1px solid #8299A5;align-items:center}
 .timeline svg{flex-shrink:0;color:#856022}
