@@ -99,7 +99,7 @@ export const dianaJulio = {
     },
     {
       "title": "Juntos formamos una familia",
-      "description": "Dios nos regaló lo mejor de la vida, juntos formamos una familia.",
+      "description": "Dios nos regaló lo mejor de la vida.",
       "image": "/images/events/diana-y-julio/familia.png",
       "width": 960,
       "height": 568
