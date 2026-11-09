@@ -117,3 +117,7 @@
 .invitation :global(.rsvp .choice-row label){position:relative}.invitation :global(.rsvp .choice-row input[type="radio"]){position:absolute;width:1px;max-width:1px;height:1px;padding:0;border:0;opacity:0;inset:0}
 
 .associationLogo{display:block;width:min(70vw,280px);height:auto;margin:2rem auto;mix-blend-mode:multiply}.invitation :global(.hero__copy>.eyebrow){max-width:650px;margin-inline:auto;line-height:1.7;letter-spacing:.08em}.invitation :global(.countdown .eyebrow){color:#fff}
+
+.coverPrice{max-width:520px;margin:1.5rem auto 2rem;padding:1.2rem 1rem;border:1px solid #C8A765;background:#F7F3E9;color:#244C3C;font:600 clamp(1.2rem,3vw,1.6rem)/1.5 var(--font-serif),serif;text-align:center}
+
+.confirmation{text-align:center;background:#E7EDE4}.confirmation>div>svg{display:block;margin:0 auto 1.5rem;color:#244C3C}.confirmation p{margin:1.5rem auto}.confirmation :global(.button){margin-top:1rem}

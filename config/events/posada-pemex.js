@@ -10,13 +10,14 @@ export const posadaPemex = {
   "timezone": "America/Mexico_City",
   "dateDisplay": "Jueves · 17 de diciembre de 2026",
   "dateStamp": "17 · 12 · 2026",
-  "rsvpEnabled": true,
+  "rsvpEnabled": false,
   "maxCompanions": 5,
   "hero": {
     "subtitle": "Posada navideña",
     "quote": "Te invitamos a compartir una noche llena de alegría, unión y espíritu navideño. Reunámonos para celebrar estas fechas y crear recuerdos que nos acompañen todo el año.",
     "image": "/images/events/posada-d-l-95/hero.png"
   },
+  "coverText": "Costo del platillo: $600 por persona",
   "reception": {
     "enabled": true,
     "name": "Salón Madeiras del Hotel Posada Casa Blanca",
@@ -26,7 +27,7 @@ export const posadaPemex = {
   },
   "gallery": [],
   "gifts": [],
-  "contact": {},
+  "contact": {"name": "Nancy Aracely Flores Vega", "whatsapp": "8338492533", "display": "833 849 2533"},
   "music": {
     "enabled": true,
     "url": "/images/events/posada-d-l-95/Mariah Carey - All I Want For Christmas Is You (Official Video).mp3",

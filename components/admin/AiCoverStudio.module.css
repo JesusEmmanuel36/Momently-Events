@@ -20,10 +20,10 @@
 :global(.admin-theme[data-admin-theme=dark]) .studio{color:var(--admin-text)}
 :global(.admin-theme[data-admin-theme=dark]) :is(.controls,.workspace,.quickActions,.artworkItem,.videoEditor article){background:var(--admin-surface);color:var(--admin-text);border-color:var(--admin-border)}
 :global(.admin-theme[data-admin-theme=dark]) :is(.toolbar,.studio details,.newInvitation){border-color:var(--admin-border)}
-:global(.admin-theme[data-admin-theme=dark]) .stage{background:#0b1018}
-:global(.admin-theme[data-admin-theme=dark]) .empty{background:linear-gradient(145deg,#1a2330,#111923);color:var(--admin-text)}
+:global(.admin-theme[data-admin-theme=dark]) .stage{background:#181818}
+:global(.admin-theme[data-admin-theme=dark]) .empty{background:linear-gradient(145deg,#252526,#1e1e1e);color:var(--admin-text)}
 :global(.admin-theme[data-admin-theme=dark]) .studio .promptHighlight{background:#443821;color:#ffe2a9;border-color:#c49a52}
 :global(.admin-theme[data-admin-theme=dark]) .controls .error{background:#43252a;color:#ffced3;border-color:#8c4c58}
-:global(.admin-theme[data-admin-theme=dark]) .viewInvitation{background:#2b3a4e;color:var(--admin-text);border-color:var(--admin-border)}
+:global(.admin-theme[data-admin-theme=dark]) .viewInvitation{background:#37373d;color:var(--admin-text);border-color:var(--admin-border)}
 
 :global(.admin-theme[data-admin-theme=dark]) :is(.badge,.prompt>span,.artworkItem a){color:var(--admin-muted)}
