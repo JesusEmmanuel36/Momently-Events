@@ -20,7 +20,7 @@ export const dianaJulio = {
   "hero": {
     "subtitle": "Nuestra boda",
     "quote": "Y después de 25 años decidimos decir “sí”.",
-    "image": "/images/events/diana-y-julio/image.png"
+    "image": "/images/events/diana-y-julio/ASICOMENZO.png"
   },
   "closingMessage": "Gracias por ser parte de esta nueva historia. Nos hará muy felices compartir este día tan especial contigo.",
   "ceremony": {
@@ -86,9 +86,9 @@ export const dianaJulio = {
   "story": [
     {
       "title": "Así comenzó nuestra historia",
-      "image": "/images/events/diana-y-julio/ASICOMENZO.png",
-      "width": 1024,
-      "height": 1536
+      "image": "/images/events/diana-y-julio/image.png",
+      "width": 960,
+      "height": 1100
     },
     {
       "title": "Nuestra primera boda, el inicio de una vida juntos",
