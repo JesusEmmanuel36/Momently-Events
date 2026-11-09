@@ -149,3 +149,24 @@
 .invitation .dress :global(.section-heading h2),
 .invitation .dress :global(.section-heading p),
 .invitation .dress :global(.eyebrow){color:#FFFFFF}
+
+/* Customer story and venue photos retain their natural proportions. */
+.invitation :global(.countdown .eyebrow){color:#fff}
+.historyList{max-width:1100px;margin:0 auto;display:grid;gap:4rem}
+.historyItem{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem;text-align:center}
+.historyItem:nth-child(even)>div{order:2}
+.historyItem h3{font:400 clamp(2rem,5vw,3rem)/1.25 var(--font-serif),serif;color:#856022;margin-bottom:1rem}
+.historyItem p{font-size:1.2rem;line-height:1.8}
+.historyItem img,.locationPhoto,.attirePhoto{display:block;width:100%;height:auto}
+.historyItem img{max-height:650px;object-fit:contain}
+.locationPhoto{margin:1rem auto 1.5rem;max-height:480px;object-fit:contain}
+.address{font-size:1rem;line-height:1.7;margin:0 auto 1.5rem}
+.attirePhoto{max-width:650px;margin:2rem auto 0}
+.invitation .dress :global(.eyebrow),.invitation .dress :global(.section-heading h2),.invitation .dress :global(.section-heading p){color:#243E50}
+.timeline{list-style:none;max-width:650px;padding:0;margin:2rem auto;text-align:left}
+.timeline li{display:flex;gap:1.5rem;padding:1rem 0 1rem 1.5rem;border-left:1px solid #8299A5;align-items:center}
+.timeline svg{flex-shrink:0;color:#856022}
+.timeline time{font-size:1rem;color:#425D70}
+.timeline h3{font:400 1.7rem/1.3 var(--font-serif),serif;margin:.35rem 0}
+.adults{background:#EAF0F5}.adults>div>svg{margin:0 auto 1.5rem}
+@media(max-width:700px){.historyItem{grid-template-columns:1fr;gap:1.5rem}.historyItem:nth-child(even)>div{order:0}.historyList{gap:3rem}}

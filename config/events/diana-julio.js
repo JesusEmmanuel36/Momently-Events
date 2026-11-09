@@ -19,26 +19,34 @@ export const dianaJulio = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Nuestra boda",
-    "quote": "Queremos compartir contigo la alegría de comenzar una nueva etapa juntos. Acompáñanos a celebrar esta nueva etapa y a crear recuerdos que guardaremos para siempre.",
-    "image": "/images/events/diana-y-julio/hero.png"
+    "quote": "Y después de 25 años decidimos decir “sí”.",
+    "image": "/images/events/diana-y-julio/image.png"
   },
   "closingMessage": "Gracias por ser parte de esta nueva historia. Nos hará muy felices compartir este día tan especial contigo.",
   "ceremony": {
     "enabled": true,
-    "name": "Parroquia de la Divina Providencia",
+    "name": "Parroquia de la Divina Providencia · “El Pañuelito”",
     "time": "7:45 p. m.",
-    "mapsUrl": "https://maps.app.goo.gl/Cqq63GgNrdT3Nm6o8?g_st=iw"
+    "mapsUrl": "https://maps.app.goo.gl/Cqq63GgNrdT3Nm6o8?g_st=iw",
+    "address": "Cienfuegos 1012, Residencial Zacatenco (junto a Lindavista), alcaldía Gustavo A. Madero, Ciudad de México.",
+    "image": "/images/events/diana-y-julio/iglesia.png",
+    "width": 960,
+    "height": 639
   },
   "reception": {
     "enabled": true,
     "name": "Centro de Convenciones Tlatelolco",
-    "time": "",
+    "time": "9:00 a 9:30 p. m.",
     "address": "",
-    "mapsUrl": "https://share.google/BXRaE7SyiFQ7JxeGe"
+    "mapsUrl": "https://share.google/BXRaE7SyiFQ7JxeGe",
+    "image": "/images/events/diana-y-julio/salon.png",
+    "width": 960,
+    "height": 1285
   },
   "dressCode": {
     "title": "Formal",
-    "text": "Nos encantará verte lucir un atuendo formal para compartir este día tan especial con nosotros."
+    "text": "Nos encantará verte lucir un atuendo formal para compartir este día tan especial con nosotros.",
+    "image": "/images/events/diana-y-julio/vestimenta.png"
   },
   "gallery": [],
   "gifts": [
@@ -74,5 +82,85 @@ export const dianaJulio = {
     "ivory": "#F9FBFC",
     "rose": "#91ABBD",
     "sage": "#8299A5"
-  }
+  },
+  "story": [
+    {
+      "title": "Así comenzó nuestra historia",
+      "image": "/images/events/diana-y-julio/ASICOMENZO.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "title": "Nuestra primera boda, el inicio de una vida juntos",
+      "image": "/images/events/diana-y-julio/boda.png",
+      "width": 838,
+      "height": 1177
+    },
+    {
+      "title": "Juntos formamos una familia",
+      "description": "Dios nos regaló lo mejor de la vida, juntos formamos una familia.",
+      "image": "/images/events/diana-y-julio/familia.png",
+      "width": 960,
+      "height": 568
+    }
+  ],
+  "itinerary": [
+    {
+      "time": "7:45 p. m.",
+      "title": "Misa"
+    },
+    {
+      "time": "9:00 a 9:30 p. m.",
+      "title": "Recepción en el salón"
+    },
+    {
+      "time": "9:45 a 10:45 p. m.",
+      "title": "Cena"
+    },
+    {
+      "time": "",
+      "title": "Música de sonido"
+    },
+    {
+      "time": "",
+      "title": "Batucada"
+    },
+    {
+      "time": "",
+      "title": "Grupo musical"
+    },
+    {
+      "time": "",
+      "title": "La víbora"
+    },
+    {
+      "time": "",
+      "title": "Tornafiesta"
+    },
+    {
+      "time": "",
+      "title": "Grupo musical"
+    },
+    {
+      "time": "",
+      "title": "Sonido"
+    },
+    {
+      "time": "",
+      "title": "Grupo musical"
+    },
+    {
+      "time": "",
+      "title": "Sonido"
+    },
+    {
+      "time": "",
+      "title": "Grupo musical"
+    },
+    {
+      "time": "3:30 a. m.",
+      "title": "Fin de la fiesta"
+    }
+  ],
+  "adultsMessage": "Hemos preparado esta celebración con mucho cariño, pensando en compartirla en un ambiente solo para adultos. ¡Gracias por su comprensión!"
 };
