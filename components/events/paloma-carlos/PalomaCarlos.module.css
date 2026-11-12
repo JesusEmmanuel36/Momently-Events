@@ -158,3 +158,7 @@
 .invitation :global(.gallery__grid){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.7rem,2vw,1.5rem);align-items:start}.invitation :global(.gallery .gallery__item){grid-column:auto!important;grid-row:auto!important;aspect-ratio:auto}.invitation :global(.gallery__item button){height:auto}.invitation :global(.gallery__item img){position:relative!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:contain}
 
 .verse{text-align:center;background:#F3EBDD}.verse svg{margin:0 auto 1.5rem;color:#7F9276}.verse p{max-width:750px;margin:0 auto 1.5rem;font:400 clamp(1.6rem,4vw,2.3rem)/1.6 var(--font-serif),serif}.verse small{font-size:1rem}.godparents{text-align:center;margin:3rem auto 0}.godparents h3{font:400 2rem var(--font-script),cursive;margin-bottom:1rem}.godparents p{font:400 1.4rem/1.7 var(--font-serif),serif}.dressCode{background:#F3EBDD}.invitation :global(.countdown .eyebrow){color:white}
+
+/* A single photograph centered at its natural ratio, full width on mobile. */
+.invitation :global(.gallery__grid){grid-template-columns:minmax(0,1fr);width:100%;max-width:700px;margin-inline:auto}
+@media(max-width:700px){.invitation :global(.gallery){padding-inline:0}.invitation :global(.gallery>.reveal){padding-inline:1.25rem}.invitation :global(.gallery__grid){max-width:none;gap:0}.invitation :global(.gallery .gallery__item){width:100%;grid-column:1 / -1!important}}

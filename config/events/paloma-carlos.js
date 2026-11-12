@@ -18,7 +18,7 @@ export const palomaCarlos = {
   "rsvpEnabled": false,
   "maxCompanions": 0,
   "hero": {
-    "subtitle": "Nuestra boda religiosa",
+    "subtitle": "Nuestra boda",
     "quote": "Con la bendición de Dios y de nuestros padres, queremos compartir contigo la alegría de unir nuestras vidas en matrimonio. Acompáñanos a celebrar nuestra unión y a crear recuerdos que guardaremos siempre en el corazón.",
     "image": "/images/events/angel-y-berenice/floral.png"
   },
