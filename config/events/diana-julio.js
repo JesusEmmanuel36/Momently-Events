@@ -86,13 +86,8 @@ export const dianaJulio = {
   "godparents": ["Naitze Azenet Vera Lara", "Neyzer Patricio Vera Lara"],
   "story": [
     {
-      "title": "Así comenzó nuestra historia",
-      "image": "/images/events/diana-y-julio/image.png",
-      "width": 960,
-      "height": 1100
-    },
-    {
-      "title": "Nuestra primera boda, el inicio de una vida juntos",
+      "eyebrow": "Una vida juntos",
+      "title": "Nuestra historia",
       "image": "/images/events/diana-y-julio/boda.png",
       "width": 838,
       "height": 1177
