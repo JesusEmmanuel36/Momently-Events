@@ -35,10 +35,10 @@ export const liaSofiaComunion = {
   },
   "reception": {
     "enabled": true,
-    "name": "Celebración en el jardín",
+    "name": "Salón Santa María",
     "time": "",
-    "address": "Avenida Prolongación Primero de Mayo S/N, colonia Señor de los Milagros, Melchor Ocampo, Estado de México",
-    "mapsUrl": "https://maps.app.goo.gl/xDMdQWBeJdLZCUVQ6"
+    "address": "",
+    "mapsUrl": "https://share.google/3UI360jMtCsCYfep1"
   },
   "contact": {
     "phone": "5632465807",
