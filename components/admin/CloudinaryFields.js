@@ -2,12 +2,9 @@
 
 import { ArrowDown, ArrowUp, ImagePlus, Plus, Trash2, Upload } from "lucide-react";
 import { useRef, useState } from "react";
+import {cloudinaryUploadSettings,mpegPlaybackUrl} from "@/lib/cloudinary/media-upload";
 
-const uploadSettings = {
-  images: { accept: "image/jpeg,image/png,image/webp,image/avif", max: 15 * 1024 * 1024, resourceType: "image" },
-  audio: { accept: "audio/*", max: 25 * 1024 * 1024, resourceType: "video" },
-  video: { accept: "video/*", max: 150 * 1024 * 1024, resourceType: "video" },
-};
+const uploadSettings = cloudinaryUploadSettings;
 
 function uploadToCloudinary(file, signed, resourceType, onProgress) {
   return new Promise((resolve, reject) => {
@@ -45,7 +42,7 @@ export function CloudinaryUploadButton({ eventId, kind = "images", multiple = fa
       if (!response.ok) throw new Error(signed.error || "No fue posible autorizar la carga.");
       for (let index = 0; index < files.length; index += 1) {
         const asset = await uploadToCloudinary(files[index], signed, settings.resourceType, (fileProgress) => setProgress(Math.round(((index + fileProgress / 100) / files.length) * 100)));
-        onUploaded(asset, files[index]);
+        onUploaded({...asset,url:mpegPlaybackUrl(asset.url,files[index],kind)}, files[index]);
       }
       setProgress(100);
     } catch (cause) { setError(cause.message); } finally { setBusy(false); }

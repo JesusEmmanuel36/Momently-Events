@@ -17,7 +17,7 @@ export const nathaliaXv = {
   "calendarDate": "5 de diciembre de 2026",
   "rsvpEnabled": true,
   "personalizedPasses": true,
-  "rsvpDeadlineISO": "2026-11-08T23:59:59.999-06:00",
+  "rsvpDeadlineISO": "",
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
@@ -110,5 +110,5 @@ export const nathaliaXv = {
       "display": "936 122 1039"
     }
   ],
-  "confirmationDeadlineText": "Por favor, confirma tu asistencia a más tardar el 8 de noviembre de 2026."
+  "confirmationDeadlineText": "Por favor, confirma tu asistencia."
 };
