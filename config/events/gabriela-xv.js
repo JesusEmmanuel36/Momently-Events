@@ -6,21 +6,21 @@ export const gabrielaXv = {
     "partner1": "Gabriela Elizabeth González Flores",
     "partner2": "Mis XV"
   },
-  "date": "2026-10-31T14:00:00-06:00",
+  "date": "2026-11-29T13:00:00-06:00",
   "endDate": null,
-  "dateShort": "31 · 10 · 2026",
-  "dateDisplay": "Sábado · 31 de octubre · 2026",
+  "dateShort": "29 · 11 · 2026",
+  "dateDisplay": "Domingo · 29 de noviembre · 2026",
   "timezone": "America/Mexico_City",
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Mis XV años",
     "quote": "Con mucha ilusión y el cariño de mi familia, te invito a celebrar mis quince años. Me hará muy feliz compartir contigo este día lleno de sueños y momentos inolvidables.",
-    "image": "/images/events/gabriela-xv/825312132_2150813805821602_6844887846241968836_n.webp"
+    "image": "/images/events/gabriela-xv/portada-lila-xv.webp"
   },
   "ceremony": {
     "enabled": true,
-    "name": "La Hermita de Guadalupe",
-    "time": "2:00 p. m.",
+    "name": "Parroquia de Nuestra Señora del Refugio",
+    "time": "1:00 p. m.",
     "address": "",
     "mapsUrl": "",
     "image": "/images/events/gabriela-xv/floral.png"
@@ -35,9 +35,9 @@ export const gabrielaXv = {
   },
   "itinerary": [
     {
-      "time": "14:00",
+      "time": "13:00",
       "title": "Ceremonia religiosa",
-      "description": "La Hermita de Guadalupe",
+      "description": "Parroquia de Nuestra Señora del Refugio",
       "icon": "heart"
     },
     {
@@ -59,20 +59,7 @@ export const gabrielaXv = {
       ]
     ]
   },
-  "gallery": [
-    {
-      "src": "/images/events/gabriela-xv/825312132_2150813805821602_6844887846241968836_n.webp",
-      "width": 480,
-      "height": 640,
-      "alt": "Gabriela Elizabeth, fotografía 1"
-    },
-    {
-      "src": "/images/events/gabriela-xv/829356001_1091106046801230_8396555708700410261_n.webp",
-      "width": 480,
-      "height": 853,
-      "alt": "Gabriela Elizabeth, fotografía 2"
-    }
-  ],
+  "gallery": [],
   "gifts": [],
   "contact": {
     "phone": "4922919766",

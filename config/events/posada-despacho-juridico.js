@@ -14,7 +14,7 @@ export const posadaDespachoJuridico = {
   "maxCompanions": 0,
   "hero": {
     "subtitle": "Posada navideña",
-    "quote": "Te invitamos como invitado de honor a nuestra tradicional posada. Compartamos una noche llena de alegría, unión y espíritu navideño.",
+    "quote": "Será un honor contar con tu presencia en nuestra tradicional posada. Compartamos una noche llena de alegría, unión y espíritu navideño.",
     "image": "/images/events/posada-d-l-95/hero.png"
   },
   "reception": {

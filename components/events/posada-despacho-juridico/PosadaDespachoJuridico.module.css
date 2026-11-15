@@ -123,3 +123,19 @@
 .confirmation{text-align:center;background:#E7EDE4}.confirmation>div>svg{display:block;margin:0 auto 1.5rem;color:#244C3C}.confirmation p{margin:1.5rem auto}.confirmation :global(.button){margin-top:1rem}
 
 .associationLogo{width:min(100%,650px);height:auto;margin:2rem auto}.invitation :global(.hero h1){font-size:clamp(3.3rem,9vw,6.5rem)}
+
+/* Centered, readable cover with a separate scroll control. */
+.invitation :global(.hero){display:grid;grid-template-columns:minmax(0,1fr);place-items:center;min-height:100svh;padding:5rem 0 7rem}
+.invitation :global(.hero__copy){width:min(calc(100% - 2.5rem),900px);min-width:0;padding:0;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.invitation :global(.hero__copy>.eyebrow){font-size:clamp(.9rem,2vw,1.2rem);line-height:1.6;letter-spacing:.08em;max-width:580px;color:#244C3C;text-wrap:balance}
+.invitation :global(.hero h1){font:400 clamp(5rem,12vw,8.5rem)/1.05 var(--font-script),cursive;text-transform:none;letter-spacing:0;margin:1.5rem auto;color:#244C3C;max-width:100%;text-wrap:balance}
+.invitation :global(.hero h1 span:first-child){font:400 clamp(1.65rem,4.5vw,3rem)/1.35 var(--font-serif),serif;margin-bottom:.5rem}
+.invitation :global(.hero__rule){margin:.5rem auto}.invitation :global(.hero__rule span){background:#A23D4566}.invitation :global(.hero__rule svg){color:#A23D45}
+.invitation :global(.hero__copy>p){font:400 clamp(1.2rem,3vw,1.6rem)/1.5 var(--font-serif),serif;color:#244C3C;margin:1.5rem auto 0;text-wrap:balance}
+.heroTime{font:500 clamp(1.6rem,4vw,2rem)/1.4 var(--font-serif),serif;margin:.75rem auto 0;color:#244C3C}
+.heroScroll{position:absolute;z-index:3;left:50%;bottom:1.5rem;transform:translateX(-50%);display:grid;place-items:center;width:48px;height:48px;border:1px solid #244C3C66;border-radius:50%;color:#244C3C;background:#FFFCF4cc}
+.heroScroll svg{animation:scrollHint 2s ease-in-out infinite}.heroScroll:focus-visible{outline:2px solid #A23D45;outline-offset:4px}
+@keyframes scrollHint{50%{transform:translateY(4px)}}
+.introHeading h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.2;text-wrap:balance}
+@media(max-width:600px){.invitation :global(.hero){padding:4rem 0 6rem}.invitation :global(.hero__copy){width:calc(100% - 2rem)}.invitation :global(.hero h1){font-size:clamp(4.7rem,22vw,6rem)}.introHeading{max-width:95%;padding-inline:1rem}}
+@media(prefers-reduced-motion:reduce){.heroScroll svg{animation:none}}

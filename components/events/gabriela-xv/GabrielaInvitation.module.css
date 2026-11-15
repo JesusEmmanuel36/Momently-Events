@@ -96,3 +96,5 @@
 
 .eventCardImage { background:radial-gradient(ellipse at center,#fcf9ff 0%,#eadbf5 65%,#cbb2df 100%); }
 .eventCardImage img { object-fit:contain; padding:clamp(1.25rem,3vw,2.5rem); }
+
+.generatedHero{align-items:end}.generatedHero>img:first-child{object-position:center top}.generatedHero .heroCopyCentered{padding:1.5rem 1rem 5.5rem;align-self:end}.generatedHero .heroName{font-size:clamp(3.2rem,10vw,6rem)!important}.generatedHero .heroCopyCentered p{letter-spacing:.12em}

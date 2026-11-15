@@ -190,7 +190,7 @@ export const arielGabriela = {
       "icon": "heart"
     },
     {
-      "time": "7:30 p. m.",
+      "time": "4:30 p. m.",
       "title": "Ceremonia civil",
       "icon": "heart"
     },
@@ -227,6 +227,6 @@ export const arielGabriela = {
   "askSongSuggestion": true,
   "civil": {
     "name": "Campestre María Bonita",
-    "time": "7:30 p. m."
+    "time": "4:30 p. m."
   }
 };
