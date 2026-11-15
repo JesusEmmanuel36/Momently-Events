@@ -1,4 +1,5 @@
 export const posadaDespachoJuridico = {
+  "publicEnabled": false,
   "slug": "posada-despacho-juridico",
   "templateKey": "posada-christmas-despacho-juridico",
   "eventTitle": "Posada navideña · Gutiérrez & Asociados Jalisco C.S.",
