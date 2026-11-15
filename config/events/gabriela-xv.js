@@ -54,8 +54,8 @@ export const gabrielaXv = {
     ],
     "godparents": [
       [
-        "Rocío",
-        "Oswaldo"
+        "Rocío Flores",
+        "Daniel Castro"
       ]
     ]
   },
