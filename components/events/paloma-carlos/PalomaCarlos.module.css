@@ -162,3 +162,5 @@
 /* A single photograph centered at its natural ratio, full width on mobile. */
 .invitation :global(.gallery__grid){grid-template-columns:minmax(0,1fr);width:100%;max-width:700px;margin-inline:auto}
 @media(max-width:700px){.invitation :global(.gallery){padding-inline:0}.invitation :global(.gallery>.reveal){padding-inline:1.25rem}.invitation :global(.gallery__grid){max-width:none;gap:0}.invitation :global(.gallery .gallery__item){width:100%;grid-column:1 / -1!important}}
+
+.guestPhotos{text-align:center;background:#F3EBDD}.guestPhotos>div>svg,.guestPhotos>div>img{display:block;margin:0 auto 1.5rem}.guestPhotos p{max-width:650px;margin:1.5rem auto;line-height:1.7}

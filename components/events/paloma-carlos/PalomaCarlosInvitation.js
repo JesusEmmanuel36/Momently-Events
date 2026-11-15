@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
-import { ChevronDown, Heart, MapPin, MessageCircle, Pause, Play, Share2 } from "lucide-react";
+import {PersonalizedPass} from "@/components/events/alejandra-david/passes/PersonalizedPass";
+import {GuestPhotoGallery} from "@/components/events/caleb-ciriam/photos/GuestPhotoGallery";
+import {palomaCarlosPhotos} from "@/lib/event-photos/config";
+import { ChevronDown, Heart, MapPin, MessageCircle, Camera, Download } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {GallerySection} from "@/components/sections/Gallery";
 import {CountdownSection} from "@/components/sections/CountdownStory";
@@ -8,21 +11,18 @@ import { Reveal, SectionHeading } from "@/components/ui";
 
 import styles from "./PalomaCarlos.module.css";
 const images = "/images/events/angel-y-berenice";
-export function PalomaCarlosInvitation({ wedding }) {
+export function PalomaCarlosInvitation({ wedding, pass = null, passToken = null }) {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
-  const [playing, setPlaying] = useState(false);
   const [toast, setToast] = useState("");
   const audioRef = useRef(null); const timerRef = useRef(null);
   useEffect(() => () => window.clearTimeout(timerRef.current), []);
   useEffect(()=>{if(opened)return;const previous=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=previous;};},[opened]);
-  const notify = message => { setToast(message); window.setTimeout(() => setToast(""),2600); };
-  const open = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => setPlaying(false)); timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({top:0,behavior:"instant"}); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000); };
-  const toggleMusic = () => { if (!audioRef.current) return; if (audioRef.current.paused) audioRef.current.play().catch(() => notify("Toca de nuevo para escuchar nuestra canción.")); else audioRef.current.pause(); };
-  const share = async () => { try { if (navigator.share) await navigator.share({title:wedding.eventTitle,text:wedding.hero.quote,url:window.location.href}); else { await navigator.clipboard.writeText(window.location.href); notify("Enlace copiado"); } } catch (error) { if (error.name !== "AbortError") notify("No fue posible compartir el enlace."); } };
+  
+  const open = () => { if (opening) return; setOpening(true); audioRef.current?.play().catch(() => {}); timerRef.current = window.setTimeout(() => { setOpened(true); window.scrollTo({top:0,behavior:"instant"}); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 5000); };
   const view = {...wedding,isLive:true,eventId:wedding.slug,couple:{bride:"Paloma",groom:"Carlos"},images:{hero:wedding.hero.image,gallery:wedding.gallery.map(photo=>photo.src)},galleryItems:wedding.gallery,dateLong:wedding.dateDisplay,rsvpMessageLabel:"Mensaje para Paloma y Carlos",rsvpSettings:{maxCompanions:wedding.maxCompanions,askMenuPreference:false,askAllergies:false,askMessage:true}};
   return <div className={styles.invitation}>
-    {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}/>}
+    {wedding.music.enabled && <audio ref={audioRef} src={wedding.music.url} loop preload="auto"/>}
     {!opened && <div className={`${styles.intro} ${opening ? styles.opening : ""}`}><Image src={wedding.hero.image} unoptimized fill priority sizes="100vw" className={styles.introPhoto} alt="Arreglo de flores marfil y follaje salvia"/><div className={styles.introShade}/><div className={styles.introHeading}><span className="eyebrow">Nuestra boda</span><h1>Una invitación para ti</h1></div><div className={styles.envelopeScene}><div className={styles.envelopeStage}>
       <div className={styles.letter}><span className="eyebrow">Nuestra boda</span><h2><span>Paloma</span><i>&amp;</i><span>Carlos</span></h2><small>{wedding.dateStamp}</small><Heart size={18}/></div>
       <div className={`${styles.openEnvelopeLayer} ${styles.openBack}`}><Image src={`${images}/envelope-open.png`} unoptimized width={1536} height={1024} sizes="(max-width:700px) 90vw,650px" className={styles.openEnvelopeArtwork} alt="Sobre abierto salvia y marfil" priority/></div><div className={`${styles.openEnvelopeLayer} ${styles.openFront}`} aria-hidden="true"><Image src={`${images}/envelope-open.png`} unoptimized width={1536} height={1024} sizes="(max-width:700px) 90vw,650px" className={styles.openEnvelopeArtwork} alt="" priority/></div><Image src="/images/events/palomaycarlos/envelope-closed-pc.webp" unoptimized fill sizes="(max-width:700px) 98vw,720px" className={styles.closedEnvelope} alt="Sobre salvia con flores blancas, lazo marfil y sello P y C" priority/><button className={styles.sealButton} onClick={open} disabled={opening} aria-label="Abrir invitación de Paloma y Carlos"/>
@@ -38,9 +38,11 @@ export function PalomaCarlosInvitation({ wedding }) {
       <section className={`section ${styles.celebration}`}><Reveal><SectionHeading eyebrow="Nuestra celebración" title="Acompáñanos"/><div className={styles.religiousPlaces}>{[[wedding.ceremony,"Ceremonia religiosa",wedding.date],[wedding.reception,"Recepción y boda civil","2026-12-18T19:00:00-06:00"]].map(([place,label,iso])=><article key={label}><MapPin strokeWidth={1}/><span className="eyebrow">{label}</span><h3>{place.name}</h3><time dateTime={iso}>{place.time}</time>{place.address&&<p>{place.address}</p>}{place.mapsUrl&&<a className="button" href={place.mapsUrl} target="_blank" rel="noopener noreferrer"><MapPin size={16}/>Ver ubicación</a>}</article>)}</div></Reveal></section>
       <section className={`section ${styles.dressCode}`}><Reveal><SectionHeading eyebrow="Código de vestimenta" title={wedding.dressCode.title} copy={wedding.dressCode.text}/></Reveal></section>
       <section className="section"><Reveal><SectionHeading eyebrow="Con mucho cariño" title="Regalo libre" copy={wedding.giftMessage}/></Reveal></section>
+      {pass?<PersonalizedPass pass={pass} token={passToken} slug={wedding.slug}/>:<section className="section"><Reveal><SectionHeading title="Tu pase personalizado" copy="Abre el enlace de tu pase para consultar los lugares reservados a tu nombre y confirmar tu asistencia."/></Reveal></section>}
+      <section className={`section ${styles.guestPhotos}`}><Reveal><Camera size={30}/><SectionHeading title="Los recuerdos de nuestra boda" copy="Comparte tus fotos y ayúdanos a guardar estos momentos."/><Image unoptimized src={palomaCarlosPhotos.path+'/qr'} width={220} height={220} alt="QR para compartir fotos de Paloma y Carlos"/><p>La carga estará disponible el 18 de diciembre de 2026, día de nuestra boda.</p><div className={styles.contacts}><a className="button" href={palomaCarlosPhotos.path}>Compartir fotos</a><a className="button" href={palomaCarlosPhotos.path+'/qr?download'} download><Download size={16}/>Descargar QR</a></div></Reveal><GuestPhotoGallery event={palomaCarlosPhotos}/></section>
       <section className="share"><Reveal><MessageCircle strokeWidth={1}/><h2>¿Nos acompañas?</h2><p>Nos hará muy felices contar contigo. Confirma tu asistencia por WhatsApp con Paloma Marcial (novia).</p><div className={styles.contacts}>{wedding.contacts.map(contact=><a key={contact.phone} className="button" href={`https://wa.me/52${contact.phone}?text=${encodeURIComponent('Hola, quiero confirmar mi asistencia a la boda de Paloma y Carlos el 18 de diciembre de 2026.')}`} target="_blank" rel="noreferrer"><MessageCircle size={16}/>Confirmar por WhatsApp</a>)}</div></Reveal></section>
-      <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Arreglo de flores marfil y follaje salvia" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Paloma &amp; Carlos</p><small>{wedding.dateDisplay}</small><button className="button" onClick={share}><Share2 size={16}/> Compartir invitación</button></Reveal></section>
-    </main>{opened && wedding.music.enabled && <button className="music-player" onClick={toggleMusic} aria-label={playing ? "Pausar música" : "Reproducir música"}><span>{playing ? <Pause/> : <Play/>}</span><span><small>{playing ? "Reproduciendo" : "Escuchar"}</small>{wedding.music.label}</span></button>}<div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
+      <section className="closing"><Image src={wedding.hero.image} unoptimized fill sizes="100vw" alt="Arreglo de flores marfil y follaje salvia" className="cover"/><div className="closing__overlay"/><Reveal><span className="script">Gracias por celebrar con nosotros</span><h2>nuestro amor.</h2><p className={styles.thankYou}>{wedding.closingMessage}</p><p>Paloma &amp; Carlos</p><small>{wedding.dateDisplay}</small></Reveal></section>
+    </main><div className={`toast ${toast ? "toast--show" : ""}`} role="status">{toast}</div>
   </div>;
 }
 
