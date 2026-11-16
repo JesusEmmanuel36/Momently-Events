@@ -18,7 +18,7 @@ export const openHouse = {
   "askAllergies": false,
   "askMessage": false,
   "askSongSuggestion": true,
-  "rsvpDeadlineISO": "2026-11-14T23:59:59.999-06:00",
+  "rsvpDeadlineISO": "",
   "hero": {
     "subtitle": "Open House",
     "quote": "Un nuevo hogar, una nueva historia",
