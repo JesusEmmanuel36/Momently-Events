@@ -1,7 +1,7 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { useEffect, useRef, useState } from "react";
 import { guestPhotos } from "@/lib/event-photos/config";
 import styles from "./GuestPhotoGallery.module.css";

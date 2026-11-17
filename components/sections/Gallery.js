@@ -1,6 +1,7 @@
 "use client";
+import {OptimizedVideo} from "@/components/media/OptimizedMedia";
 
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -56,6 +57,6 @@ export function GallerySection({ wedding, heading, imageSizes = "(max-width: 768
 export function VideoSection({ wedding }) {
   const [failed, setFailed] = useState(false);
   return <section className="section video-section"><Reveal><SectionHeading eyebrow="Un mensaje para ti" title="Guarda este momento" /></Reveal>
-    <Reveal className="video-frame">{failed || !wedding.video?.url ? <div className="video-placeholder"><span>{wedding.couple.bride.charAt(0)} & {wedding.couple.groom.charAt(0)}</span><p>Próximamente compartiremos algo especial</p></div> : <video controls preload="metadata" poster={wedding.video.posterUrl || wedding.images.couple} onError={() => setFailed(true)}><source src={wedding.video.url} /></video>}</Reveal>
+    <Reveal className="video-frame">{failed || !wedding.video?.url ? <div className="video-placeholder"><span>{wedding.couple.bride.charAt(0)} & {wedding.couple.groom.charAt(0)}</span><p>Próximamente compartiremos algo especial</p></div> : <OptimizedVideo controls preload="none" src={wedding.video.url} poster={wedding.video.posterUrl || wedding.images.couple} onError={() => setFailed(true)}/>}</Reveal>
   </section>;
 }

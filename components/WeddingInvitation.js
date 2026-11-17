@@ -2,7 +2,8 @@
 
 import {WeddingSection} from "@/components/wedding/InvitationSection";
 import {CreatorPass} from "@/components/wedding/CreatorPass";
-import Image from "next/image";
+import Image from "@/components/media/OptimizedImage";
+import {OptimizedAudio} from "@/components/media/OptimizedMedia";
 import { Heart, Pause, Play, Volume2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { IntroScreen, HeroSection, WelcomeSection } from "@/components/sections/IntroHero";
@@ -25,7 +26,7 @@ export function WeddingInvitation({ wedding, previewMode = false, previewEnvelop
   const toggleMusic = () => { if (!audioRef.current) return; if (playing) { audioRef.current.pause(); setPlaying(false); } else audioRef.current.play().then(() => setPlaying(true)).catch(() => showToast("Agrega /audio/wedding-song.mp3 para activar la música")); };
   useEffect(() => () => document.body.style.overflow = "", []);
   return <>
-    {!previewMode && <audio ref={audioRef} src={wedding.music.src} loop preload="none" onError={() => setPlaying(false)} />}
+    {!previewMode && <OptimizedAudio ref={audioRef} src={wedding.music.src} loop preload="none" onError={() => setPlaying(false)} />}
     {!opened && <WeddingSection wedding={wedding} name="intro"><IntroScreen wedding={wedding} onOpen={openInvitation} leaving={leaving} /></WeddingSection>}
     <main className={!opened ? "invitation invitation--locked" : "invitation"}>
       <WeddingSection wedding={wedding} name="hero"><HeroSection key={wedding.heroSettings ? String(opened) : "hero"} wedding={wedding} /></WeddingSection><WeddingSection wedding={wedding} name="welcome"><WelcomeSection wedding={wedding} /></WeddingSection><WeddingSection wedding={wedding} name="countdown"><CountdownSection wedding={wedding} /></WeddingSection>

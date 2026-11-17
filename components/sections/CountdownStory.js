@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { useEffect, useState } from "react";
 import { Reveal, SectionHeading } from "@/components/ui";
 

@@ -1,10 +1,11 @@
 "use client";
+import {OptimizedAudio,OptimizedVideo} from '@/components/media/OptimizedMedia';
 import {invitationBackgrounds,introBackgroundSettings} from "@/lib/wedding/backgrounds";
 import {InvitationSection} from "./InvitationSection";
 import {typographyStyle} from "@/lib/wedding/typography";
 import {heroTextStyle} from "@/lib/wedding/hero-typography";
 import {CreatorPass} from "./CreatorPass";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import {CoverBackground} from "./CoverBackground";
 import {CssEnvelope} from "@/components/envelope/CssEnvelope";
 import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
@@ -43,7 +44,7 @@ export function FlexibleInvitation({ event, previewMode = false, previewEnvelope
   const Flowers = () => <div className={styles.floralArrangement} aria-hidden="true"><CssFloralArrangement lightweight colors={materialColors}/></div>;
   const floral = decoration.flowers !== false;
   return <div className={styles.invitation} style={vars}>
-    {d.music?.enabled && d.music.url && !previewMode && <audio ref={audio} src={d.music.url} loop preload="none" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} />}
+    {d.music?.enabled && d.music.url && !previewMode && <OptimizedAudio ref={audio} src={d.music.url} loop preload="none" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} />}
     {!opened && <InvitationSection name="intro" data={d}><div className={`${styles.intro} ${backgrounds.intro ? styles.photoIntro : ""}`}>{backgrounds.intro&&<CoverBackground src={backgrounds.intro} theme={d.theme} settings={introBackgroundSettings(d)}/>}<span>Una invitación para ti</span><div className={styles.cssEnvelope}><CssEnvelope variant={decoration.envelopeVariant} showBow={decoration.envelopeBow !== false} colors={{...materialColors,letter:decoration.letterColor,sealText:decoration.sealTextColor,...(d.sectionAppearance?.intro?.colorsEnabled ? Object.fromEntries(["paper","letter","ribbon","seal","sealText"].filter(key=>d.sectionAppearance.intro[key]).map(key=>[key,d.sectionAppearance.intro[key]])) : {})}} monogram={decoration.monogram || initials} open={opening} onOpenChange={open} onOpened={finishOpening} showFlowers={floral && d.sectionAppearance?.intro?.flowers !== false} letter={{eyebrow:d.hero?.subtitle || "Una invitación para ti",title:visible("names")?title:"",message:visible("date")?dateLabel:"",footer:"Con todo nuestro cariño"}}/></div><button className={styles.openButton} onClick={open} disabled={opening}>{opening?"Abriendo…":"Abrir invitación"}</button></div></InvitationSection>}
     {opened && <main className={d.hero?.animated === false ? styles.noEntrance : undefined}>
       <InvitationSection name="hero" data={d}><section style={heroTextStyle(d.hero)} className={`${styles.hero} ${visible("hero")&&backgrounds.hero ? styles.photoHero : ""} ${d.hero?.animated !== false ? styles.animatedHero : ""}`}>{visible("hero")&&backgrounds.hero&&<CoverBackground src={backgrounds.hero} theme={d.theme} settings={d.hero}/>}{!(visible("hero")&&backgrounds.hero)&&<div className={styles.heroShade}/>}{floral&&(d.sectionAppearance?.hero?.flowers ?? d.hero?.flowers) !== false&&<Flowers/>}<div className={styles.heroCopy}>{d.hero?.subtitle&&<span>{d.hero.subtitle}</span>}{visible("names")&&<h1>{names.length?names.map((name,i)=><span key={i}>{i>0&&<i>&</i>}{name}</span>):title}</h1>}{visible("date")&&dateLabel&&<p>{dateLabel}</p>}{d.hero?.quote&&<blockquote>{d.hero.quote}</blockquote>}</div><a className={styles.scrollHint} href="#invitation-content" aria-label="Descubrir invitación"><ChevronDown size={24}/></a></section></InvitationSection><div id="invitation-content"/>
@@ -59,7 +60,7 @@ export function FlexibleInvitation({ event, previewMode = false, previewEnvelope
       {visible("gifts")&&<Reveal><InvitationSection name="gifts" data={d}><section className={styles.section}><GiftContent message={d.giftMessage ?? DEFAULT_GIFT_MESSAGE} gifts={d.gifts || []} bank={d.bank}/></section></InvitationSection></Reveal>}
       {visible("hotels")&&d.hotels?.length>0&&<Reveal><InvitationSection name="hotels" data={d}><section className={styles.section}><h2>Hospedaje</h2>{d.hotels.map((h,i)=><article className={styles.family} key={i}><h3>{h.name}</h3><p>{h.detail}</p><p>{h.address}</p><div className={styles.actions}>{h.url&&<a href={h.url} target="_blank" rel="noreferrer">Ver hospedaje</a>}{h.mapsUrl&&<a href={h.mapsUrl} target="_blank" rel="noreferrer">Ubicación</a>}</div></article>)}</section></InvitationSection></Reveal>}
       {visible("important")&&d.importantInfo?.length>0&&<Reveal><InvitationSection name="important" data={d}><section className={styles.section}><h2>Avisos importantes</h2>{d.importantInfo.map((p,i)=><article key={i}><h3>{p.title}</h3><p>{p.description}</p></article>)}</section></InvitationSection></Reveal>}
-      {d.video?.enabled&&d.video.url&&<InvitationSection name="video" data={d}><section className={styles.section}><video className={styles.video} controls src={d.video.url} poster={d.video.posterUrl||undefined}/></section></InvitationSection>}
+      {d.video?.enabled&&d.video.url&&<InvitationSection name="video" data={d}><section className={styles.section}><OptimizedVideo className={styles.video} controls src={d.video.url} poster={d.video.posterUrl||undefined}/></section></InvitationSection>}
       {visible("calendar")&&date&&<Reveal><InvitationSection name="calendar" data={d}><section className={styles.section}><CalendarDays/><h2>Reserva la fecha</h2><p>{dateLabel}</p><button onClick={()=>openGoogleCalendar({title,start:date,durationHours:6,location:d.reception?.address||d.ceremony?.address||"",details:d.hero?.quote||""})}>Agregar al calendario</button></section></InvitationSection></Reveal>}
       {event.personalizedPasses&&<InvitationSection name="rsvp" data={d}><CreatorPass pass={pass} token={passToken} slug={event.slug} confirmationEnabled={event.rsvp?.enabled}/></InvitationSection>}
       {!event.personalizedPasses&&event.rsvp?.enabled&&<InvitationSection name="rsvp" data={d}><RSVPSection wedding={wedding}/></InvitationSection>}

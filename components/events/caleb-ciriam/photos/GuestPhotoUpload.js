@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import Link from "next/link";
 import { Camera, Check, ImagePlus, LoaderCircle, Upload, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

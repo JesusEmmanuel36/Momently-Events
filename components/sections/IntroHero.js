@@ -3,7 +3,7 @@ import {introBackgroundSettings} from "@/lib/wedding/backgrounds";
 import {heroTextStyle} from "@/lib/wedding/hero-typography";
 
 import {CssFloralArrangement} from "@/components/floral/CssFloralArrangement";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import {CoverBackground} from "@/components/wedding/CoverBackground";
 import coverStyles from "@/components/wedding/CoverBackground.module.css";
 import { ChevronDown, Heart } from "lucide-react";

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '@/components/media/OptimizedImage';
 import styles from './Cinematic.module.css';
 
 export function SceneWrapper({ scene, children, className = '' }) {

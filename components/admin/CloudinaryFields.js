@@ -1,4 +1,5 @@
 "use client";
+import Image from "@/components/media/OptimizedImage";
 
 import { ArrowDown, ArrowUp, ImagePlus, Plus, Trash2, Upload } from "lucide-react";
 import { useRef, useState } from "react";
@@ -60,7 +61,7 @@ export function CloudinaryAssetField({ name, defaultValue = "", eventId, kind = 
   const update = (next) => { setUrl(next); window.setTimeout(() => onAssetChange?.(), 0); };
   return <div className="cloud-asset-field">
     <input type="hidden" name={name} value={url} />
-    {url && (kind === "images" ? <div className="cloud-asset-field__preview" style={{ backgroundImage: `url("${url.replaceAll('"', "%22")}")` }} /> : <div className="cloud-asset-field__file">Archivo cargado correctamente</div>)}
+    {url && (kind === "images" ? <div className="cloud-asset-field__preview" style={{position:"relative"}}><Image src={url} fill sizes="480px" style={{objectFit:"cover"}} alt="Vista previa del recurso"/></div> : <div className="cloud-asset-field__file">Archivo cargado correctamente</div>)}
     <div className="cloud-asset-field__actions"><CloudinaryUploadButton eventId={eventId} kind={kind} label={url ? "Cambiar archivo" : label} compact onUploaded={(asset) => update(asset.url)} />{url && <button type="button" className="cloud-remove" onClick={() => update("")}><Trash2 size={14} /> Quitar</button>}</div>
   </div>;
 }
@@ -72,7 +73,7 @@ export function GalleryEditor({ items, eventId, onChange, showFileNames = false 
     <div className="visual-editor__toolbar"><span>{items.length} {items.length === 1 ? "fotografía" : "fotografías"}</span><CloudinaryUploadButton eventId={eventId} multiple label="Agregar fotografías" onUploaded={(asset, file) => onChange((current) => [...current, { id: `photo-${crypto.randomUUID()}`, url: asset.url, fileName:file.name.slice(0,255), alt: file.name.replace(/\.[^.]+$/, ""), order: current.length }])} /></div>
     {!items.length && <div className="visual-editor__empty"><ImagePlus /><strong>La galería está vacía</strong><span>Selecciona una o varias fotografías para comenzar.</span></div>}
     <div className="gallery-editor__grid">{items.map((item, index) => <article className="gallery-editor__item" key={item.id || `${item.url}-${index}`}>
-      <div className="gallery-editor__image" style={{ backgroundImage: `url("${String(item.url).replaceAll('"', "%22")}")` }} />
+      <div className="gallery-editor__image" style={{position:"relative"}}><Image src={item.url} fill sizes="480px" style={{objectFit:"cover"}} alt={item.alt||"Foto de galería"}/></div>
       {showFileNames&&<label className="gallery-editor__filename">Foto {index+1} · nombre para el prompt<input aria-label={`Nombre de referencia de fotografía ${index+1}`} value={item.fileName||""} maxLength={255} onChange={event=>update(index,{fileName:event.target.value})}/><small>Referencia: {item.id}</small></label>}
       <input aria-label={`Descripción de fotografía ${index + 1}`} value={item.alt || ""} onChange={(event) => update(index, { alt: event.target.value })} placeholder="Describe brevemente la fotografía" />
       <div><button type="button" onClick={() => move(index, -1)} disabled={index === 0} aria-label="Mover antes"><ArrowUp size={14} /></button><button type="button" onClick={() => move(index, 1)} disabled={index === items.length - 1} aria-label="Mover después"><ArrowDown size={14} /></button><button type="button" onClick={() => onChange(items.filter((_, itemIndex) => itemIndex !== index))} aria-label="Eliminar fotografía"><Trash2 size={14} /></button></div>
@@ -89,7 +90,7 @@ export function StoryEditor({ items, eventId, onChange }) {
       <div className="story-editor__heading"><strong>Momento {index + 1}</strong><button type="button" onClick={() => onChange(items.filter((_, itemIndex) => itemIndex !== index))}><Trash2 size={14} /> Eliminar</button></div>
       <div className="admin-grid"><label><span>Año</span><input value={item.year || ""} onChange={(event) => update(index, { year: event.target.value })} placeholder="2024" /></label><label><span>Título</span><input value={item.title || ""} onChange={(event) => update(index, { title: event.target.value })} placeholder="La propuesta" /></label></div>
       <label><span>Descripción</span><textarea rows="3" value={item.description || ""} onChange={(event) => update(index, { description: event.target.value })} placeholder="Cuenta brevemente este momento…" /></label>
-      {item.imageUrl && <div className="story-editor__image" style={{ backgroundImage: `url("${String(item.imageUrl).replaceAll('"', "%22")}")` }} />}
+      {item.imageUrl && <div className="story-editor__image" style={{position:"relative"}}><Image src={item.imageUrl} fill sizes="480px" style={{objectFit:"cover"}} alt={item.title||"Foto de la historia"}/></div>}
       <div className="cloud-asset-field__actions"><CloudinaryUploadButton eventId={eventId} label={item.imageUrl ? "Cambiar fotografía" : "Agregar fotografía"} compact onUploaded={(asset) => update(index, { imageUrl: asset.url })} />{item.imageUrl && <button type="button" className="cloud-remove" onClick={() => update(index, { imageUrl: "" })}><Trash2 size={14} /> Quitar</button>}</div>
     </article>)}
   </div>;

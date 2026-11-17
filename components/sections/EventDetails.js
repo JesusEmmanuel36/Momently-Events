@@ -1,7 +1,7 @@
 "use client";
 
 import {WeddingSection} from "@/components/wedding/InvitationSection";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { CalendarDays, Camera, Car, Clock, ExternalLink, GlassWater, Heart, MapPin, Music, Navigation, Sparkles, Trees, Umbrella, Users } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/ui";
 import { openGoogleCalendar } from "@/lib/calendar";

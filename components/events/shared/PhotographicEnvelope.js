@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/media/OptimizedImage";
 import {useEffect,useRef} from "react";
 import styles from "./PhotographicEnvelope.module.css";
 export function PhotographicEnvelope({assets,opening,onOpen,onOpened,title,subtitle,date,openLabel="Abrir invitación",openWidth=100,openBottom=0,sealTop=55,letterContent,closedAlt="Sobre de invitación con lazo, sello y flores",openAlt="Sobre abierto con arreglo floral"}){

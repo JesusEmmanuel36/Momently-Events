@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/media/OptimizedImage";
 import {ChevronDown} from "lucide-react";
 import {PhotographicEnvelope} from "./PhotographicEnvelope";
 import styles from "./TraditionalCover.module.css";

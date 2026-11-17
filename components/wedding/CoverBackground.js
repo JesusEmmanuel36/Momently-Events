@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { useState } from "react";
 import { coverShade } from "@/lib/wedding/creator-theme";
 import styles from "./CoverBackground.module.css";

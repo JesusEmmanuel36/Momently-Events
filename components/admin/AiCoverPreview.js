@@ -1,8 +1,9 @@
 "use client";
+import {OptimizedAudio} from '@/components/media/OptimizedMedia';
 import {envelopeLetterStyle} from '@/lib/ai/envelope-letter';
 import {Play,Pause} from 'lucide-react';
 import {musicControlStyle} from '@/lib/ai/music-control';
-import Image from 'next/image';
+import Image from '@/components/media/OptimizedImage';
 import {useEffect,useRef,useState} from 'react';
 import styles from './AiCoverPreview.module.css';
 
@@ -20,15 +21,15 @@ export function AiCoverPreview({document,imageUrl,musicUrl='',musicControl,envel
  const open=()=>{if(phase==='closed'&&openUrl&&loaded.closed&&loaded.open&&!failed){setPhase('opening');playMusic()}};
  const ready=Boolean(openUrl&&loaded.closed&&loaded.open&&!failed);
  return <div className={`${styles.viewport} ${publicMode?styles.public:desktop?styles.desktop:styles.mobile}`} data-admin-preview data-cover-preview-phase={!hasEnvelope?'cover':phase}>
- {musicUrl&&<><audio key={musicUrl} ref={audioRef} src={musicUrl} preload="none" loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onError={()=>setAudioError('No se pudo cargar el audio. Vuelve a subirlo.')} /><div className={styles.musicControl} style={musicAppearance.style} data-variant={musicAppearance.control.variant} data-position={musicAppearance.control.position}><button type="button" aria-label={playing?'Pausar música':'Reproducir música'} aria-pressed={playing} onClick={()=>{if(audioRef.current?.paused)playMusic();else audioRef.current?.pause()}}>{musicAppearance.control.variant!=='text'&&(playing?<Pause size={18} aria-hidden="true"/>:<Play size={18} aria-hidden="true"/>)}{musicAppearance.control.variant!=='icons'&&(playing?'Pausar música':'Reproducir música')}</button>{audioError&&<small role="status">{audioError}</small>}</div></>}
+ {musicUrl&&<><OptimizedAudio key={musicUrl} ref={audioRef} src={musicUrl} preload="none" loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onError={()=>setAudioError('No se pudo cargar el audio. Vuelve a subirlo.')} /><div className={styles.musicControl} style={musicAppearance.style} data-variant={musicAppearance.control.variant} data-position={musicAppearance.control.position}><button type="button" aria-label={playing?'Pausar música':'Reproducir música'} aria-pressed={playing} onClick={()=>{if(audioRef.current?.paused)playMusic();else audioRef.current?.pause()}}>{musicAppearance.control.variant!=='text'&&(playing?<Pause size={18} aria-hidden="true"/>:<Play size={18} aria-hidden="true"/>)}{musicAppearance.control.variant!=='icons'&&(playing?'Pausar música':'Reproducir música')}</button>{audioError&&<small role="status">{audioError}</small>}</div></>}
  {hasEnvelope&&phase!=='cover'?<section className={`${styles.intro} ${phase==='opening'?styles.opening:''}`} aria-label="Apertura de la invitación">
  {imageUrl&&<Image src={imageUrl} fill unoptimized priority alt="" aria-hidden="true" className={styles.background}/>}<div className={styles.shade}/>
  <header className={styles.header}><span>{subtitle||'Una invitación especial'}</span><h2>Una invitación para ti</h2></header>
  <div className={styles.scene} data-preview-envelope style={{'--open-width':(layout?.openWidth||100)+'%','--open-offset':(-(layout?.openWidth||100)/2)+'%','--open-bottom':(layout?.openBottom||0)+'%'}}>
- {openUrl&&<div className={`${styles.openLayer} ${styles.back}`}><Image src={openUrl} width={1536} height={1024} className={styles.openImage} unoptimized priority alt="Sobre abierto" onLoad={()=>setLoaded(v=>({...v,open:true}))} onError={()=>setFailed(true)} draggable={false}/></div>}
+ {openUrl&&<div className={`${styles.openLayer} ${styles.back}`}><Image src={openUrl} width={1536} height={1024} className={styles.openImage} sizes="(max-width:700px) 100vw,800px" unoptimized priority alt="Sobre abierto" onLoad={()=>setLoaded(v=>({...v,open:true}))} onError={()=>setFailed(true)} draggable={false}/></div>}
  <div className={styles.letter} data-preview-letter style={envelopeLetterStyle(envelopeLetter)}>{envelopeLetter?.ornament&&envelopeLetter.ornament!=='none'&&<span aria-hidden="true">{envelopeLetter.ornament==='heart'?'♡':'✦'}</span>}<span>{subtitle}</span><h3>{title||'Tu celebración'}</h3>{date&&<p>{date}</p>}<small>{envelopeLetter?.footerText??'Con mucho cariño'}</small></div>
- {openUrl&&<div className={`${styles.openLayer} ${styles.front}`} aria-hidden="true"><Image src={openUrl} width={1536} height={1024} className={styles.openImage} unoptimized priority alt="" draggable={false}/></div>}
- <Image src={closedUrl} width={1536} height={1024} className={styles.closedImage} unoptimized priority alt="Sobre cerrado de la invitación" onLoad={()=>setLoaded(v=>({...v,closed:true}))} onError={()=>setFailed(true)} draggable={false}/>
+ {openUrl&&<div className={`${styles.openLayer} ${styles.front}`} aria-hidden="true"><Image src={openUrl} width={1536} height={1024} className={styles.openImage} sizes="(max-width:700px) 100vw,800px" unoptimized priority alt="" draggable={false}/></div>}
+ <Image src={closedUrl} width={1536} height={1024} className={styles.closedImage} sizes="(max-width:700px) 100vw,800px" unoptimized priority alt="Sobre cerrado de la invitación" onLoad={()=>setLoaded(v=>({...v,closed:true}))} onError={()=>setFailed(true)} draggable={false}/>
  <button type="button" className={styles.seal} onClick={open} disabled={!ready||phase!=='closed'} aria-label="Abrir sobre"/>
  </div>
  <div className={styles.action}><button type="button" className={styles.openButton} disabled={!ready||phase!=='closed'} onClick={open}>{phase==='opening'?'Abriendo…':!openUrl?'Falta el sobre abierto':failed?'No se pudo cargar el sobre':ready?'Abrir invitación':'Cargando sobre…'}</button><p role="status">{failed?'Revisa las imágenes generadas y vuelve a repetir la apertura.':!openUrl?'Genera el sobre abierto para ver la secuencia completa.':phase==='opening'?'Preparando tu invitación…':'Toca el sello o el botón para abrir.'}</p></div>

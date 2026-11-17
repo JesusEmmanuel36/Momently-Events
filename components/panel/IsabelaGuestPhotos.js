@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from '@/components/media/OptimizedImage';
 import { useState } from "react";
 import styles from "./IsabelaGuestPhotos.module.css";
 export function IsabelaGuestPhotos({ eventId, opensDateLabel = "14 de marzo de 2027", title = "Fotos de mis invitados" }) {
