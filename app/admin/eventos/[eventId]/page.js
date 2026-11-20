@@ -53,7 +53,7 @@ export default async function AdminEvent({ params }) {
       <EventActions showManage={false} event={{ id: event.id, slug: event.slug, status: event.status, publicPath: event.publicPath }} />
     </section>
 
-    {event.templateKey==="ai-designed"&&<section className="dashboard-card"><h2>Invitación creada con IA</h2><Link className="button" href={`/admin/crear-con-ia?eventId=${event.id}`}>Editar con IA</Link></section>}
+    {event.templateKey==="ai-designed"&&<section className="dashboard-card"><h2>Invitación creada con IA</h2><Link className="button" href={`/admin/crear-con-ia?eventId=${event.id}`}>Editar con IA</Link><Link className="button button--outline" href={`/admin/crear-con-ia-v2?eventId=${event.id}`}>Editar con IA V2</Link></section>}
     {aiPhotoConfig(event)&&<IsabelaGuestPhotos eventId={event.id} opensDateLabel={aiPhotoConfig(event).opensDateLabel} title="Fotos de nuestros invitados"/>}
     {editable && <EventForm event={editorEvent} />}
     {passesEnabled&&<section className="dashboard-card" id="invitados-y-pases"><h2>Invitados y pases</h2><p>Crea los pases con nombre y lugares asignados y copia el enlace para cada invitado.</p>{event.status!=="published"&&<p>Los enlaces estarán disponibles para los invitados cuando publiques la invitación.</p>}<PersonalizedPassManager eventId={event.id} initialGuests={guests} slug={event.slug} confirmationMode={event.slug==="xv-nahomi"?"whatsapp":"panel"}/></section>}

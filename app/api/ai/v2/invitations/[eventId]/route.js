@@ -1,0 +1,5 @@
+import {workerActor,privateHeaders} from '@/lib/ai/worker/http';
+import {getAdminDb} from '@/lib/firebase/admin';
+import {apiError,NotFoundError,ValidationError} from '@/lib/errors';
+export const runtime='nodejs';export const dynamic='force-dynamic';
+export async function GET(request,{params}){try{await workerActor(request);const {eventId}=await params;if(!/^[\w-]{1,128}$/.test(eventId||''))throw new NotFoundError();const snap=await getAdminDb().collection('events').doc(eventId).get();if(!snap.exists)throw new NotFoundError();const event=snap.data();if(event.templateKey!=='ai-designed')throw new ValidationError('Solo invitaciones IA V1/V2.');const base=new URL(request.url).origin;return Response.json({eventId,slug:event.slug,status:event.status,revision:snap.updateTime.toMillis(),invitationUrl:`${base}/eventos/${event.slug}`,editUrl:`${base}/admin/crear-con-ia-v2?eventId=${eventId}`,design:event.publicData.aiDesign,editor:{prompt:event.aiEditor?.prompt||'',imagePrompt:event.aiEditor?.imagePrompt||''}},{headers:privateHeaders})}catch(error){return apiError(error)}}

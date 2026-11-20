@@ -10,7 +10,7 @@ export const fernandaXv = {
     "partner1": "Fernanda",
     "partner2": ""
   },
-  "date": "2026-12-12T19:00:00-06:00",
+  "date": "2026-12-12T18:00:00-06:00",
   "timezone": "America/Mexico_City",
   "dateDisplay": "Sábado · 12 de diciembre de 2026",
   "dateStamp": "12 · 12 · 2026",
@@ -27,17 +27,27 @@ export const fernandaXv = {
   "ceremony": {
     "enabled": true,
     "name": "Capilla de Aida Palace Recepciones",
-    "time": "7:00 p. m.",
+    "time": "6:00 p. m.",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/k8s34rFdWqn3KqMg8?g_st=ac"
   },
   "reception": {
     "enabled": true,
     "name": "Aida Palace Recepciones",
-    "time": "8:00 p. m.",
+    "time": "7:00 p. m.",
     "address": "",
     "mapsUrl": "https://maps.app.goo.gl/Dv5XrGgC2fFpzVdW8"
   },
+  "itinerary": [
+    { "time": "6:00 p. m.", "title": "Santa Misa", "description": "Celebración religiosa en la capilla del salón.", "icon": "church" },
+    { "time": "Al término de la misa", "title": "Música de banda", "description": "¡Comenzamos la celebración!", "icon": "music" },
+    { "time": "7:00 p. m.", "title": "Recepción", "description": "Bienvenida a nuestros invitados.", "icon": "toast" },
+    { "time": "8:03 p. m.", "title": "Cena", "description": "Disfrutemos juntos de una deliciosa cena.", "icon": "dinner" },
+    { "time": "9:00 p. m.", "title": "Vals", "description": "Un momento especial.", "icon": "dance" },
+    { "time": "9:45 p. m.", "title": "¡Que comience la fiesta!", "description": "Inicia el baile y la celebración.", "icon": "party" },
+    { "time": "11:30 p. m.", "title": "Chilaquiles", "description": "Un delicioso antojito para continuar la noche.", "icon": "food" },
+    { "time": "1:00 a. m.", "title": "Desocupación del salón", "description": "Domingo 13 de diciembre.", "icon": "exit" }
+  ],
   "gallery": [],
   "music": {
     "enabled": true,
@@ -96,5 +106,5 @@ export const fernandaXv = {
       ]
     }
   ],
-  "confirmationDeadlineText": "Por favor, confirma tu asistencia antes del 15 de noviembre de 2026."
+  "confirmationDeadlineText": "Por favor, confirma tu asistencia a más tardar el 25 de noviembre de 2026."
 };

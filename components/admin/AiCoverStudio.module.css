@@ -27,3 +27,7 @@
 :global(.admin-theme[data-admin-theme=dark]) .viewInvitation{background:#37373d;color:var(--admin-text);border-color:var(--admin-border)}
 
 :global(.admin-theme[data-admin-theme=dark]) :is(.badge,.prompt>span,.artworkItem a){color:var(--admin-muted)}
+
+.editorColumn{min-width:0;display:grid;gap:1rem}.studio details.legacyDetails{display:contents}.legacyDetails>summary{display:none}.studio details.advanced{padding:0;border:1px solid #d8cabc;min-width:0}.advanced>summary{padding:1rem;margin:0}.advanced>.controls{border:0;border-radius:0}.editorColumn .advanced .controls{background:transparent}
+
+.controlsLock{display:contents;border:0;padding:0;margin:0;min-width:0}

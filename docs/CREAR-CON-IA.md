@@ -105,3 +105,35 @@ Para colocarla en otra sección, usa su nombre exacto en Datos y diseño y pulsa
 
 ### Mesa en los pases
 El número de mesa opcional se asigna desde el panel de invitados. En invitaciones del creador IA, el enlace personal muestra «Tu mesa» junto al número únicamente si existe una asignación válida. Las modificaciones se reflejan al volver a abrir el mismo pase y no requieren regenerarlo. El invitado no puede editar ese dato.
+
+## Creador IA V2
+
+Ruta: `/admin/crear-con-ia-v2`, con botón propio en Administración y enlace de edición en cada evento IA. El clásico y `/admin/crear-con-ia` permanecen disponibles. La V2 usa el mismo modelo de eventos, vistas previas, componentes nativos y transacciones de publicación; no migra ni modifica invitaciones existentes al abrirse.
+
+Flujo: pegar encargo → subir fotos/música/videos opcionales → elegir base visual opcional → Crear invitación completa. Un plan estructurado extrae nombres, ocasión, fecha con año, estilo, funciones y slug. El servidor comprueba rutas estáticas y el registro de slugs. Recursos en orden: portada si falta, sobre cerrado, abierto a partir del cerrado, floral y código completo. Las omisiones como sin flores/sin sobre se respetan. La carga QR programada requiere una fecha; si falta, el flujo se detiene antes de generar imágenes hasta corregirla o elegir desde ahora.
+
+La interfaz indica hasta cuatro imágenes nuevas con costo y permite desactivar recursos. Cada generación usa las rutas existentes de OpenAI/Cloudinary. Una corrección de diseño usa el código anterior y no regenera imágenes. Las referencias visuales subidas (hasta tres) pueden enviarse a OpenAI para extraer datos y estilo y no se incorporan a la galería. Las fotos de galería conservan nombres e IDs para ubicarlas por prompt. Se puede elegir una foto existente como portada.
+
+Los pasos guardan checkpoints locales inmediatamente después de cada recurso. Continuar lo que falta reutiliza los recursos completados. Al terminar se guarda automáticamente un borrador de servidor; nunca se publica automáticamente. Guardar y publicar sigue siendo una acción explícita. Si falla el guardado, queda el diseño visible y se puede reintentar con Guardar borrador. Los borradores V2 usan una clave local separada del original, con claves por evento al editar.
+
+El slug es editable hasta guardar. Si otro proceso lo ocupa, el guardado de un evento nuevo reintenta hasta tres veces con una alternativa comprobada; la transacción original es la autoridad final. Los enlaces de eventos ya guardados nunca se cambian. Los pases y QR siguen usando el mismo eventId.
+
+Una invitación IA existente se puede elegir como referencia. Solo se consulta su estructura visual sin textos, fotos, enlaces ni atributos de datos; se conservan los estilos. La lista descarga únicamente ID, título, slug y estado, y se carga cuando se usa el selector, no al abrir cada pantalla. La referencia predeterminada mantiene las instrucciones originales de estilo Momently/Fabiola y Juan Pablo.
+
+Ajustes avanzados conserva controles originales: generación individual de recursos, galería IA por prompt, orden y nombres de fotos, videos, música, código, apertura, RSVP/campos, pases, QR y fecha de apertura. La vista previa no es sticky y el scroll sigue siendo de toda la página. Se bloquean controles durante la automatización para no perder cambios simultáneos.
+
+Límites: se mantienen los límites actuales de solicitudes; no se amplían cuotas de API. Las generaciones fallidas pueden tener costo de proveedor, aunque no haya resultado. El registro de costo mostrado conserva el alcance de sesión del creador original.
+
+Verificación: `tests/ai-v2.test.mjs` cubre fechas inválidas, normalización, colisiones de slug, referencias sin datos de otra pareja, orden de generación, payload publicable, reanudación sin regenerar recursos, omisiones y guardado concurrente. QA de interfaz con respuestas simuladas: fallo del abierto/reintento, colisión 409/alternativa, borrador sin publicación, modificaciones sin imágenes nuevas, móvil 390px y escritorio 1440px sin desbordamiento, V1 intacta. No se ejecutaron generaciones pagadas ni se crearon eventos reales durante QA.
+
+### Portadas con personas y espacios de texto (V1 y V2)
+
+El editor conserva `coverImageSource` (`uploaded`, `generated`, `unknown`) en el borrador local, envío al modelo y guardado del evento. Las generaciones automáticas V2 y las manuales marcan `generated`; las portadas subidas marcan `uploaded`. Las imágenes generadas para galería conservan `source` al elegirse como portada. Eventos antiguos sin metadatos quedan `unknown`, sin inferir su procedencia ni cambiar su diseño.
+
+El prompt compartido pide analizar visualmente las portadas subidas y aplicar degradado de un color solicitado, desde abajo hasta aproximadamente la mitad, solo cuando hay personas y una zona libre segura. El texto debe contrastar y tener sombra discreta, sin cubrir caras. Las portadas generadas quedan excluidas de ese tratamiento automático. La evaluación visual la realiza el modelo; no es un detector geométrico de rostros ni una garantía de encuadre perfecto. No hay migración ni regeneración automática de eventos publicados.
+
+Se exigen espacios literales entre palabras y spans animados. `text-spacing.js` corrige solo combinaciones claras de frases comunes en la respuesta del modelo, conservando atributos, URLs, SVG, código y nombres. Esta corrección se ejecuta tanto al crear como al modificar, antes de validar la respuesta; no altera CSS ni recorre datos publicados.
+
+### API para un trabajador IA
+
+El V2 también dispone de una API privada para crear, editar, generar recursos temáticos, subir medios y publicar mediante trabajos persistentes. Mantiene el mismo formato editable en V1/V2. Ver [AI-WORKER-API.md](AI-WORKER-API.md) para configurar `MOMENTLY_WORKER_API_KEY`, usar el cliente de servidor y consultar rutas, ejemplos y límites. El trabajador externo debe conducir las etapas; no se instala un proceso de fondo ni se activa publicación automática.
